@@ -44,4 +44,7 @@ app.post("/v1/analyze", (req, res) => {
 
 // ✅ Render provides PORT automatically
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`🚀 AgroCore API running on port ${PORT}`));
+
+app.listen(PORT, () => {
+  console.log(`AgroCore listening on ${PORT}`);
+});
