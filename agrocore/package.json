@@ -2,7 +2,6 @@
   "name": "nutripilot-agrocore",
   "version": "0.6.0",
   "private": true,
-  "type": "module",
   "engines": { "node": "20.x" },
   "main": "agrocore-server.js",
   "scripts": {
