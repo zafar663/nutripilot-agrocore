@@ -1,16 +1,21 @@
 {
   "name": "nutripilot-agrocore",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
-  "engines": { "node": "20.x" },
+  "type": "commonjs",
+  "engines": {
+    "node": "20.x"
+  },
   "main": "agrocore-server.js",
   "scripts": {
     "start": "node agrocore-server.js"
   },
   "dependencies": {
     "axios": "^1.6.8",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "file-type": "^19.0.0",
+    "multer": "^1.4.5-lts.1",
     "pdf-parse": "^1.1.1",
     "tesseract.js": "^5.0.5",
     "xlsx": "^0.18.5"
