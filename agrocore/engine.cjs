@@ -1,4 +1,4 @@
-const { analyzeFormula } = require("../core/engine/analyzeFormula");
+﻿const { analyzeFormula } = require("../core/engine/analyzeFormula");
 
 function preprocessFormulaText(text) {
   if (!text || typeof text !== "string") return "";
@@ -23,3 +23,4 @@ function analyzeFromText(text) {
 }
 
 module.exports = { analyzeFromText };
+

@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+agrocore/node_modules/
+
+# env
+.env
+.env.*
+
+# logs
+*.log
+
+# local tests
+test-formula.txt
+
+# OS
+.DS_Store
+Thumbs.db

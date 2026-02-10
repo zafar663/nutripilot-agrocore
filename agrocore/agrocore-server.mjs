@@ -1,23 +1,25 @@
-const express = require("express");
-const cors = require("cors");
-const multer = require("multer");
+﻿import express from "express";
+import cors from "cors";
+import multer from "multer";
+import { createRequire } from "module";
 
-// ✅ adapter that preprocesses text and calls the real engine
-const { analyzeFromText } = require("./engine");
+// If ./engine.cjs is CommonJS (module.exports), this works:
+const require = createRequire(import.meta.url);
+const { analyzeFromText } = require("./engine.cjs");
 
-// ✅ ingest helpers (already in your repo)
-const { ingestFileToFormulaText } = require("../core/ingest/ingestFileToFormulaText");
+// core ingest is ESM (uses import), so we import it normally:
+import { ingestFileToFormulaText } from "../core/ingest/ingestFileToFormulaText.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("AgroCore API running ✅");
+  res.send("AgroCore API running âœ…");
 });
 
 app.get("/v1/health", (req, res) => {
-  res.json({ ok: true, message: "AgroCore API running ✅" });
+  res.json({ ok: true, message: "AgroCore API running âœ…" });
 });
 
 /**
@@ -41,49 +43,50 @@ app.post("/v1/analyze", (req, res) => {
     const result = analyzeFromText(text);
     return res.json(result);
   } catch (err) {
-    console.error("AgroCore error:", err.message);
-    return res.status(400).json({ ok: false, error: err.message });
+    console.error("AgroCore error:", err?.message || err);
+    return res.status(400).json({ ok: false, error: err?.message || String(err) });
   }
 });
 
-// -------------------- NEW: /v1/ingest --------------------
+// ---- /v1/ingest (multipart) ----
 const upload = multer({ storage: multer.memoryStorage() });
 
-/**
- * POST /v1/ingest (multipart/form-data)
- * Field: file
- * Returns: { ok:true, text:"...", ingest:{...} }
- */
 app.post("/v1/ingest", upload.single("file"), async (req, res) => {
   try {
     if (!req.file?.buffer) {
       return res.status(400).json({ ok: false, error: "Missing file (multipart field name: 'file')" });
     }
 
-    const originalName = req.file.originalname || "upload.bin";
-    const mime = req.file.mimetype || "application/octet-stream";
+    const filename = req.file.originalname || "upload.bin";
+    const contentType = req.file.mimetype || "application/octet-stream";
 
     const out = await ingestFileToFormulaText({
       buffer: req.file.buffer,
-      filename: originalName,
-      contentType: mime
+      filename,
+      contentType
     });
 
     return res.json({
       ok: true,
-      text: out?.text || "",
-      ingest: out?.meta || { filename: originalName, contentType: mime }
+      formula_text: out?.formula_text || "",
+      ingest: out || { filename, contentType }
     });
   } catch (err) {
     console.error("AgroCore ingest error:", err?.message || err);
-    return res.status(400).json({ ok: false, error: err?.message || "ingest failed" });
+    return res.status(400).json({ ok: false, error: err?.message || String(err) });
   }
 });
-// ---------------------------------------------------------
 
-// ✅ Render provides PORT automatically
+// Render provides PORT automatically
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log(`AgroCore listening on ${PORT}`);
 });
+
+
+
+
+
+
+
