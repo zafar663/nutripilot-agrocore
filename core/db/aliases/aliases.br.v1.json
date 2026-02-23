@@ -1,0 +1,98 @@
+{
+  "_LOCK": {
+    "status": "LOCKED",
+    "message": "Only ADD new aliases. Do not delete or rename existing ones.",
+    "schema": "nutripilot.aliases.v1",
+    "region": "BR",
+    "generated_at": "2026-02-12"
+  },
+  "meta": {
+    "region": "BR",
+    "rules": [
+      "All alias keys should be lowercase.",
+      "Strip punctuation in resolver before lookup.",
+      "Strip % and grade tokens in resolver before lookup (e.g., 'sbm 48%' → 'sbm 48').",
+      "If an alias is ambiguous, map it to the most common ingredient and let user override later."
+    ]
+  },
+  "aliases": {
+    "corn": "corn_grain_avg",
+    "maize": "corn_grain_avg",
+    "milho": "corn_grain_avg",
+    "yellow corn": "corn_grain_avg",
+    "corn grain": "corn_grain_avg",
+    "ground corn": "corn_grain_avg",
+    "broken corn": "corn_grain_avg",
+
+    "corn oil": "corn_oil",
+    "maize oil": "corn_oil",
+
+    "ddgs": "corn_ddgs_6_9_ee",
+    "corn ddgs": "corn_ddgs_6_9_ee",
+    "distillers dried grains": "corn_ddgs_6_9_ee",
+    "distillers grains": "corn_ddgs_6_9_ee",
+    "dried distillers grains": "corn_ddgs_6_9_ee",
+    "ddgs 6-9": "corn_ddgs_6_9_ee",
+
+    "sbm": "soybean_meal_48_cp",
+    "soybean meal": "soybean_meal_48_cp",
+    "soya meal": "soybean_meal_48_cp",
+    "soy meal": "soybean_meal_48_cp",
+    "soja farelo": "soybean_meal_48_cp",
+    "farelo de soja": "soybean_meal_48_cp",
+
+    "sbm 44": "soybean_meal_44_5_cp",
+    "soybean meal 44": "soybean_meal_44_5_cp",
+    "sbm 45": "soybean_meal_45_6_cp_avg",
+    "sbm 46": "soybean_meal_46_5_cp",
+    "sbm 48": "soybean_meal_48_cp",
+
+    "full fat soy": "soybean_fullfat_extruded",
+    "fullfat soybean": "soybean_fullfat_extruded",
+    "extruded full fat soy": "soybean_fullfat_extruded",
+    "roasted soybeans": "soybean_fullfat_roasted",
+    "micronized soybeans": "soybean_fullfat_micronized",
+
+    "soy hulls": "soybean_hulls",
+    "soybean hulls": "soybean_hulls",
+
+    "fish meal": "fish_meal_62_cp",
+    "fishmeal": "fish_meal_62_cp",
+    "fishmeal 62": "fish_meal_62_cp",
+    "fishmeal 54": "fish_meal_54_cp",
+
+    "mbm": "bovine_meat_bone_meal_48_cp",
+    "meat and bone meal": "bovine_meat_bone_meal_48_cp",
+    "bovine mbm": "bovine_meat_bone_meal_48_cp",
+
+    "blood meal": "blood_meal",
+    "plasma": "blood_plasma",
+
+    "poultry by product meal": "poultry_byproduct_meal",
+    "pbm": "poultry_byproduct_meal",
+    "poultry fat": "poultry_fat",
+    "chicken fat": "poultry_fat",
+
+    "rice bran": "rice_bran",
+    "defatted rice bran": "rice_defatted_bran",
+    "broken rice": "rice_broken",
+
+    "wheat": "wheat_grain",
+    "wheat bran": "wheat_bran",
+    "wheat midds": "wheat_bran",
+
+    "sunflower meal": "sunflower_meal",
+    "canola meal": "canola_meal",
+    "rapeseed meal": "canola_meal",
+
+    "molasses": "sugarcane_molasses",
+    "dried molasses": "sugarcane_molasses_dried",
+
+    "tallow": "tallow",
+    "lard": "lard",
+    "lecithin": "lecithin",
+
+    "brewers yeast": "yeast_brewers",
+    "distillers yeast": "yeast_alcohol_distillers"
+  }
+}

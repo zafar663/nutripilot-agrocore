@@ -1,0 +1,27 @@
+﻿{
+  "_LOCK": {
+    "meta": {
+      "schema": "requirements_profile.v1",
+      "note": "BOOTSTRAP PLACEHOLDER to unblock analyzer. Replace with real breeder/strain requirements later.",
+      "species": "poultry",
+      "type": "broiler",
+      "breed": "generic",
+      "region": "us",
+      "version": "v1",
+      "phase": "starter"
+    }
+  },
+  "me": 3000,
+  "cp": 22.0,
+  "lys": 1.20,
+  "met": 0.55,
+  "met_cys": 0.90,
+  "thr": 0.80,
+  "trp": 0.22,
+  "arg": 1.25,
+  "ca": 0.90,
+  "avp": 0.45,
+  "na": 0.20,
+  "k": 0.90,
+  "cl": 0.20
+}

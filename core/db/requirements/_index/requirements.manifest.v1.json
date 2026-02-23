@@ -1,0 +1,8 @@
+{
+  "version": "v1",
+  "items": {
+    "poultry__broiler__generic__us__v1__starter": "poultry/broiler/v1/us/starter.json",
+    "poultry__broiler_breeder__ross__us__v1__prepeak": "poultry/broiler_breeder/ross/v1/us/prepeak.json",
+    "poultry__layer__hyline__us__v1__peak": "poultry/layer/hyline/v1/us/peak.json"
+  }
+}

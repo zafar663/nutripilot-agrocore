@@ -1,0 +1,22 @@
+﻿{
+  "_LOCK": {
+    "id": "variant_sources.poultry.us.v1",
+    "note": "Tracks scientific and commercial source references for each variant.",
+    "mode": "structured"
+  },
+  "sources": {
+    "brazilian_tables_2024_5e": {
+      "title": "Brazilian Tables for Poultry and Swine (5th Edition, 2024)",
+      "short": "BR-Tables-2024"
+    },
+    "commercial_poultry_nutrition": {
+      "title": "Commercial Poultry Nutrition - Leeson & Summers",
+      "short": "CPN"
+    },
+    "evonik_sid": {
+      "title": "Evonik Digestible Amino Acid Data",
+      "short": "Evonik"
+    }
+  },
+  "variant_sources": {}
+}

@@ -1,0 +1,25 @@
+{
+  "poultry_broiler_starter": {
+    "me": 3000,
+    "cp": 22.0,
+
+    "lys": 1.25,
+    "met": 0.50,
+    "met_cys": null,
+    "thr": 0.80,
+    "trp": null,
+    "arg": null,
+
+    "ile": null,
+    "leu": null,
+    "val": null,
+
+    "ca": 0.90,
+    "avp": 0.45,
+    "na": 0.18,
+    "k": null,
+    "cl": null,
+
+    "deb": null
+  }
+}

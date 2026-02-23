@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "ingredients_mode": "structured",
+    "ingredients_file": "core\\db\\ingredients\\poultry\\us\\v1\\ingredients.poultry.us.sid.v1.json",
+    "keys": [
+      "me",
+      "cp",
+      "lys",
+      "met",
+      "met_cys",
+      "thr",
+      "trp",
+      "arg",
+      "ca",
+      "avp",
+      "na",
+      "k",
+      "cl"
+    ]
+  },
+  "ingredients": {
+    "corn": {
+      "present": [
+        "me",
+        "cp",
+        "ca",
+        "avp",
+        "na"
+      ],
+      "present_alt": [
+        {
+          "key": "lys",
+          "found_as": "sid_lys"
+        },
+        {
+          "key": "met",
+          "found_as": "sid_met"
+        },
+        {
+          "key": "met_cys",
+          "found_as": "sid_metcys"
+        },
+        {
+          "key": "thr",
+          "found_as": "sid_thr"
+        },
+        {
+          "key": "trp",
+          "found_as": "sid_trp"
+        },
+        {
+          "key": "arg",
+          "found_as": "sid_arg"
+        }
+      ],
+      "missing": [
+        "k",
+        "cl"
+      ],
+      "raw_keys": [
+        "me",
+        "cp",
+        "sid_lys",
+        "sid_met",
+        "sid_metcys",
+        "sid_thr",
+        "sid_trp",
+        "sid_arg",
+        "ca",
+        "avp",
+        "na"
+      ]
+    },
+    "soybean_meal": {
+      "present": [
+        "me",
+        "cp",
+        "ca",
+        "avp",
+        "na"
+      ],
+      "present_alt": [
+        {
+          "key": "lys",
+          "found_as": "sid_lys"
+        },
+        {
+          "key": "met",
+          "found_as": "sid_met"
+        },
+        {
+          "key": "met_cys",
+          "found_as": "sid_metcys"
+        },
+        {
+          "key": "thr",
+          "found_as": "sid_thr"
+        },
+        {
+          "key": "trp",
+          "found_as": "sid_trp"
+        },
+        {
+          "key": "arg",
+          "found_as": "sid_arg"
+        }
+      ],
+      "missing": [
+        "k",
+        "cl"
+      ],
+      "raw_keys": [
+        "me",
+        "cp",
+        "sid_lys",
+        "sid_met",
+        "sid_metcys",
+        "sid_thr",
+        "sid_trp",
+        "sid_arg",
+        "ca",
+        "avp",
+        "na"
+      ]
+    }
+  }
+}

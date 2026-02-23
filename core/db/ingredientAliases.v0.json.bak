@@ -1,0 +1,149 @@
+{
+  "_meta": {
+    "db": "ingredientAliases.v0",
+    "note": "STR PDF aliases (2026-02-16) + PATCH: underscore tokens + oil + limestone"
+  },
+
+  "corn": [
+    "corn",
+    "maize",
+    "maize grain",
+    "corn grain",
+    "yellow corn",
+    "ground corn"
+  ],
+
+  "soybean_meal": [
+    "sbm",
+    "sbm 44",
+    "sbm 44%",
+    "sbm 44 percent",
+    "sbm 46",
+    "sbm 46%",
+    "sbm 48",
+    "sbm 48%",
+    "soybean meal",
+    "soya meal",
+    "soy meal",
+
+    "sbm_44",
+    "sbm_46",
+    "sbm_48",
+    "sbm_44_percent",
+    "sbm_46_percent",
+    "sbm_48_percent"
+  ],
+
+  "rice_broken": [
+    "rice broken",
+    "broken rice",
+    "rice_broken",
+    "broken_rice"
+  ],
+
+  "fish_meal": [
+    "fish meal",
+    "fish meal 54",
+    "fish meal 54%",
+    "fishmeal",
+    "fish_meal",
+    "fish_meal_54",
+    "fishmeal_54"
+  ],
+
+  "canola_meal": [
+    "canola meal",
+    "canola meal 36",
+    "canola meal 36%",
+    "canola_meal",
+    "canola_meal_36"
+  ],
+
+  "sunflower_meal": [
+    "sunflower meal",
+    "sunflower meal 26-28",
+    "sunflower meal 26-28%",
+    "sunflower meal 26 28",
+    "sunflower meal 26 28%",
+    "sunflower_meal",
+    "sunflower_meal_26_28"
+  ],
+
+  "millet": [
+    "millet",
+    "bajra",
+    "millet/bajra",
+    "millet_bajra"
+  ],
+
+  "soybean_oil": [
+    "soyabean oil",
+    "soybean oil",
+    "soy oil",
+    "soya oil",
+    "vegetable oil",
+    "veg oil",
+    "oil",
+    "soybean_oil",
+    "vegetable_oil",
+    "veg_oil"
+  ],
+
+  "corn_gluten": [
+    "c.g",
+    "cg",
+    "c.g 60",
+    "c.g 60%",
+    "corn gluten",
+    "corn gluten meal",
+    "corn_gluten",
+    "c.g_60",
+    "cg_60",
+    "corn_gluten_meal"
+  ],
+
+  "dl_methionine": [
+    "dlm",
+    "dlm 99",
+    "dlm 99%",
+    "dl-methionine",
+    "dl_methionine",
+    "dlm_99"
+  ],
+
+  "salt": [
+    "salt",
+    "common salt",
+    "nacl",
+    "na cl",
+    "sodium chloride",
+    "salt_nacl",
+    "sodium_chloride"
+  ],
+
+  "limestone": [
+    "limestone",
+    "lime stone",
+    "limestone grit",
+    "calcite",
+    "calcium carbonate",
+    "caco3",
+    "limestone_grit",
+    "calcium_carbonate"
+  ],
+
+  "choline_chloride": [
+    "choline chloride",
+    "choline_chloride"
+  ],
+
+  "vitamin_premix": [
+    "vitamin premix",
+    "vitamin_premix"
+  ],
+
+  "mineral_premix": [
+    "mineral premix",
+    "mineral_premix"
+  ]
+}

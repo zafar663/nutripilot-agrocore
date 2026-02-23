@@ -1,0 +1,286 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "engine": "NutriPilot",
+    "description": "Universal Nutrient Registry (CORE v1.1 foundation)",
+    "internal_unit_standard": "canonical",
+    "created_by": "NutriPilot Core",
+    "locked": false
+  },
+  "nutrients": [
+    {
+      "id": "energy.me_kcal_kg",
+      "display_name": "ME",
+      "category": "energy",
+      "unit_canonical": "kcal/kg",
+      "unit_display_options": ["kcal/kg", "MJ/kg", "Mcal/kg"],
+      "basis": "as_fed",
+      "derived": false,
+      "species_roles": {
+        "poultry": "primary",
+        "swine": "secondary",
+        "dairy": "secondary",
+        "beef": "secondary",
+        "equine": "secondary",
+        "pet": "primary"
+      },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": null,
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "protein.cp_pct",
+      "display_name": "CP",
+      "category": "protein",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "total",
+      "derived": false,
+      "species_roles": {
+        "poultry": "secondary",
+        "swine": "secondary",
+        "dairy": "secondary",
+        "beef": "secondary",
+        "equine": "secondary",
+        "pet": "secondary"
+      },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "monitor_only", "pro": "monitor_only", "elite": "monitor_only" },
+      "ratio_group": null,
+      "risk_weight_default": 0.5
+    },
+
+    {
+      "id": "aa.sid_lys_pct",
+      "display_name": "SID Lys",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "primary", "swine": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": "lysine_reference",
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "aa.sid_met_pct",
+      "display_name": "SID Met",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "primary", "swine": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": "met_group",
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "aa.sid_met_cys_pct",
+      "display_name": "SID Met+Cys",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "primary", "swine": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": "met_group",
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "aa.sid_thr_pct",
+      "display_name": "SID Thr",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "primary", "swine": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": null,
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "aa.sid_trp_pct",
+      "display_name": "SID Trp",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "primary", "swine": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": null,
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "aa.sid_arg_pct",
+      "display_name": "SID Arg",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": "lysine_reference",
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "aa.sid_ile_pct",
+      "display_name": "SID Ile",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "secondary", "swine": "secondary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "monitor_only", "pro": "monitor_only", "elite": "monitor_only" },
+      "ratio_group": null,
+      "risk_weight_default": 0.3,
+      "evaluatable": false,
+      "default_in_evaluation_keys": false
+    },
+
+    {
+      "id": "aa.sid_leu_pct",
+      "display_name": "SID Leu",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "secondary", "swine": "secondary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "monitor_only", "pro": "monitor_only", "elite": "monitor_only" },
+      "ratio_group": null,
+      "risk_weight_default": 0.3,
+      "evaluatable": false,
+      "default_in_evaluation_keys": false
+    },
+
+    {
+      "id": "aa.sid_val_pct",
+      "display_name": "SID Val",
+      "category": "amino_acid",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "SID",
+      "derived": false,
+      "species_roles": { "poultry": "secondary", "swine": "secondary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "monitor_only", "pro": "monitor_only", "elite": "monitor_only" },
+      "ratio_group": null,
+      "risk_weight_default": 0.3,
+      "evaluatable": false,
+      "default_in_evaluation_keys": false
+    },
+
+    {
+      "id": "min.ca_pct",
+      "display_name": "Ca",
+      "category": "mineral",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "total",
+      "derived": false,
+      "species_roles": { "poultry": "primary", "swine": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": "ca_p_group",
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "min.p_avail_pct",
+      "display_name": "Available P",
+      "category": "mineral",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "available",
+      "derived": false,
+      "species_roles": { "poultry": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_min", "pro": "hard_min", "elite": "hard_min" },
+      "ratio_group": "ca_p_group",
+      "risk_weight_default": 1.0
+    },
+
+    {
+      "id": "min.na_pct",
+      "display_name": "Na",
+      "category": "mineral",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "total",
+      "derived": false,
+      "species_roles": { "poultry": "primary", "swine": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_range", "pro": "hard_range", "elite": "hard_range" },
+      "ratio_group": null,
+      "risk_weight_default": 0.8
+    },
+
+    {
+      "id": "min.k_pct",
+      "display_name": "K",
+      "category": "mineral",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "total",
+      "derived": false,
+      "species_roles": { "poultry": "secondary", "swine": "secondary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "monitor_only", "pro": "monitor_only", "elite": "monitor_only" },
+      "ratio_group": null,
+      "risk_weight_default": 0.3
+    },
+
+    {
+      "id": "min.cl_pct",
+      "display_name": "Cl",
+      "category": "mineral",
+      "unit_canonical": "%",
+      "unit_display_options": ["%"],
+      "basis": "total",
+      "derived": false,
+      "species_roles": { "poultry": "secondary", "swine": "secondary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "monitor_only", "pro": "monitor_only", "elite": "monitor_only" },
+      "ratio_group": null,
+      "risk_weight_default": 0.3
+    },
+
+    {
+      "id": "elec.deb_meq_kg",
+      "display_name": "DEB",
+      "category": "electrolyte",
+      "unit_canonical": "mEq/kg",
+      "unit_display_options": ["mEq/kg"],
+      "basis": "derived",
+      "derived": true,
+      "species_roles": { "poultry": "primary" },
+      "plan_access": { "basic": true, "core": true, "pro": true, "elite": true },
+      "solver_role": { "core": "hard_range", "pro": "hard_range", "elite": "hard_range" },
+      "ratio_group": null,
+      "risk_weight_default": 0.8
+    }
+  ]
+}

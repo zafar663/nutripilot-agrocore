@@ -1,0 +1,398 @@
+{
+    "_LOCK":  true,
+    "meta":  {
+                 "region":  "US",
+                 "species":  "poultry",
+                 "version":  "v1",
+                 "note":  "US commercial poultry alias map. Conservative. Exact alias match only. No auto-guessing. CP/grade enforcement handled by parser (needs_clarification) or explicit tier keys."
+             },
+    "aliases":  {
+                    "corn":  [
+                                 "corn",
+                                 "yellow corn",
+                                 "maize",
+                                 "maize grain",
+                                 "corn grain",
+                                 "ground corn",
+                                 "cracked corn",
+                                 "whole corn"
+                             ],
+                    "wheat":  [
+                                  "wheat",
+                                  "feed wheat",
+                                  "wheat grain",
+                                  "winter wheat",
+                                  "spring wheat"
+                              ],
+                    "wheat_10_5":  [
+                                       "wheat 10.5",
+                                       "wheat 10.5%",
+                                       "wheat cp 10.5",
+                                       "wheat cp 10.5%"
+                                   ],
+                    "wheat_13":  [
+                                     "wheat 13",
+                                     "wheat 13%",
+                                     "wheat cp 13",
+                                     "wheat cp 13%"
+                                 ],
+                    "wheat_15":  [
+                                     "wheat 15",
+                                     "wheat 15%",
+                                     "wheat cp 15",
+                                     "wheat cp 15%"
+                                 ],
+                    "barley":  [
+                                   "barley",
+                                   "feed barley",
+                                   "barley grain"
+                               ],
+                    "barley_spring":  [
+                                          "spring barley",
+                                          "barley spring"
+                                      ],
+                    "millet":  [
+                                   "millet",
+                                   "bajra",
+                                   "pearl millet"
+                               ],
+                    "sorghum":  [
+                                    "sorghum",
+                                    "milo"
+                                ],
+                    "soybean_meal":  [
+                                         "soybean meal",
+                                         "soy bean meal",
+                                         "sbm",
+                                         "soya bean meal",
+                                         "soya meal"
+                                     ],
+                    "sbm_48":  [
+                                   "sbm 48",
+                                   "sbm 48%",
+                                   "soybean meal 48",
+                                   "soybean meal 48%",
+                                   "hi pro sbm",
+                                   "high pro sbm",
+                                   "high protein sbm",
+                                   "soybean meal hi pro",
+                                   "soybean meal high protein",
+                                   "soybean meal 47",
+                                   "soybean meal 47%",
+                                   "sbm 47",
+                                   "sbm 47%"
+                               ],
+                    "sbm_46":  [
+                                   "sbm 46",
+                                   "sbm 46%",
+                                   "soybean meal 46",
+                                   "soybean meal 46%",
+                                   "low pro sbm",
+                                   "low protein sbm",
+                                   "soybean meal low protein"
+                               ],
+                    "sbm_44":  [
+                                   "sbm 44",
+                                   "sbm 44%",
+                                   "soybean meal 44",
+                                   "soybean meal 44%"
+                               ],
+                    "soy_full_fat":  [
+                                         "full fat soybean",
+                                         "full-fat soybean",
+                                         "ffsb",
+                                         "ff soya",
+                                         "extruded soybean",
+                                         "roasted soybean",
+                                         "soybean full fat",
+                                         "full fat soy"
+                                     ],
+                    "soy_oil":  [
+                                    "soy oil",
+                                    "soybean oil",
+                                    "soya oil"
+                                ],
+                    "canola_meal":  [
+                                        "canola meal",
+                                        "canola",
+                                        "canola meal 00",
+                                        "00 rapeseed meal",
+                                        "rapeseed meal 00",
+                                        "double zero rapeseed",
+                                        "double-zero rapeseed",
+                                        "00 rapeseed"
+                                    ],
+                    "canola_meal_34":  [
+                                           "canola meal 34",
+                                           "canola meal 34%",
+                                           "canola 34"
+                                       ],
+                    "canola_meal_36":  [
+                                           "canola meal 36",
+                                           "canola meal 36%",
+                                           "canola 36"
+                                       ],
+                    "canola_meal_38":  [
+                                           "canola meal 38",
+                                           "canola meal 38%",
+                                           "canola 38"
+                                       ],
+                    "rapeseed_meal":  [
+                                          "rapeseed meal",
+                                          "rapeseed",
+                                          "rapeseed meal low protein"
+                                      ],
+                    "rapeseed_meal_28":  [
+                                             "rapeseed meal 28",
+                                             "rapeseed meal 28%"
+                                         ],
+                    "rapeseed_meal_30":  [
+                                             "rapeseed meal 30",
+                                             "rapeseed meal 30%"
+                                         ],
+                    "sunflower_meal":  [
+                                           "sunflower meal",
+                                           "sunflower",
+                                           "sunmeal"
+                                       ],
+                    "sunflower_meal_30":  [
+                                              "sunflower meal 30",
+                                              "sunflower meal 30%",
+                                              "sunmeal 30"
+                                          ],
+                    "sunflower_meal_36":  [
+                                              "sunflower meal 36",
+                                              "sunflower meal 36%",
+                                              "sunmeal 36"
+                                          ],
+                    "sunflower_meal_47":  [
+                                              "sunflower meal 47",
+                                              "sunflower meal 47%",
+                                              "sunmeal 47"
+                                          ],
+                    "sunflower_expeller":  [
+                                               "sunflower expeller",
+                                               "sunflower expeller meal",
+                                               "sunflower presscake"
+                                           ],
+                    "ddgs":  [
+                                 "ddgs",
+                                 "distillers dried grains",
+                                 "distillers grains",
+                                 "ddg"
+                             ],
+                    "ddgs_corn":  [
+                                      "corn ddgs",
+                                      "ddgs corn"
+                                  ],
+                    "ddgs_corn_high_starch":  [
+                                                  "ddgs high starch",
+                                                  "high starch ddgs",
+                                                  "corn ddgs high starch",
+                                                  "high-starch ddgs"
+                                              ],
+                    "ddgs_wheat":  [
+                                       "wheat ddgs",
+                                       "ddgs wheat"
+                                   ],
+                    "ddgs_barley":  [
+                                        "barley ddgs",
+                                        "ddgs barley"
+                                    ],
+                    "corn_gluten_meal":  [
+                                             "corn gluten meal",
+                                             "cgm",
+                                             "cg meal"
+                                         ],
+                    "corn_gluten_meal_40":  [
+                                                "corn gluten meal 40",
+                                                "corn gluten meal 40%",
+                                                "cgm 40",
+                                                "cg meal 40"
+                                            ],
+                    "corn_gluten_meal_60":  [
+                                                "corn gluten meal 60",
+                                                "corn gluten meal 60%",
+                                                "cgm 60",
+                                                "cg meal 60"
+                                            ],
+                    "corn_gluten_feed":  [
+                                             "corn gluten feed",
+                                             "cgf"
+                                         ],
+                    "corn_germ_meal":  [
+                                           "corn germ meal",
+                                           "corn germ"
+                                       ],
+                    "corn_germ_meal_deoiled":  [
+                                                   "deoiled corn germ meal",
+                                                   "de-oiled corn germ meal",
+                                                   "corn germ meal deoiled"
+                                               ],
+                    "bakery_meal":  [
+                                        "bakery meal",
+                                        "bakery byproduct",
+                                        "bakery by-product",
+                                        "bakery waste"
+                                    ],
+                    "rice_bran":  [
+                                      "rice bran",
+                                      "stabilized rice bran"
+                                  ],
+                    "wheat_bran":  [
+                                       "wheat bran"
+                                   ],
+                    "wheat_middlings":  [
+                                            "wheat middlings",
+                                            "wheat midds",
+                                            "middlings",
+                                            "wheat shorts"
+                                        ],
+                    "mill_run":  [
+                                     "mill run",
+                                     "wheat mill run",
+                                     "wheat by product",
+                                     "wheat by-product"
+                                 ],
+                    "meat_bone_meal":  [
+                                           "meat and bone meal",
+                                           "meat bone meal",
+                                           "mbm"
+                                       ],
+                    "meat_bone_meal_45":  [
+                                              "mbm 45",
+                                              "meat bone meal 45",
+                                              "meat and bone meal 45",
+                                              "meat bone meal cp 45",
+                                              "meat and bone meal cp 45"
+                                          ],
+                    "meat_bone_meal_50":  [
+                                              "mbm 50",
+                                              "meat bone meal 50",
+                                              "meat and bone meal 50",
+                                              "meat bone meal cp 50",
+                                              "meat and bone meal cp 50"
+                                          ],
+                    "poultry_byproduct_meal":  [
+                                                   "poultry by product meal",
+                                                   "poultry by-product meal",
+                                                   "poultry byproduct meal",
+                                                   "pbm",
+                                                   "poultry meal"
+                                               ],
+                    "poultry_byproduct_meal_hatchery_rich":  [
+                                                                 "poultry by product hatchery rich",
+                                                                 "hatchery byproduct meal",
+                                                                 "hatchery meal"
+                                                             ],
+                    "poultry_byproduct_meal_feather_rich":  [
+                                                                "poultry by product feather rich",
+                                                                "feather rich pbm"
+                                                            ],
+                    "feather_meal":  [
+                                         "feather meal",
+                                         "hydrolyzed feather meal",
+                                         "hydrolysed feather meal"
+                                     ],
+                    "blood_meal":  [
+                                       "blood meal"
+                                   ],
+                    "blood_meal_80":  [
+                                          "blood meal 80",
+                                          "blood meal 80%",
+                                          "blood meal cp 80",
+                                          "blood meal cp 80%"
+                                      ],
+                    "hemoglobin_powder":  [
+                                              "hemoglobin powder",
+                                              "haemoglobin powder"
+                                          ],
+                    "plasma_protein":  [
+                                           "plasma protein",
+                                           "spray dried plasma",
+                                           "spray-dried plasma",
+                                           "sd plasma"
+                                       ],
+                    "limestone":  [
+                                      "limestone",
+                                      "limestone grit",
+                                      "calcite",
+                                      "calcium carbonate",
+                                      "caco3"
+                                  ],
+                    "mcp":  [
+                                "mcp",
+                                "mono calcium phosphate",
+                                "monocalcium phosphate",
+                                "mono-calcium phosphate"
+                            ],
+                    "dcp":  [
+                                "dcp",
+                                "di calcium phosphate",
+                                "dicalcium phosphate",
+                                "di-calcium phosphate"
+                            ],
+                    "salt":  [
+                                 "salt",
+                                 "nacl",
+                                 "sodium chloride",
+                                 "feed salt"
+                             ],
+                    "dl_met":  [
+                                   "dl met",
+                                   "dl-met",
+                                   "dl methionine",
+                                   "dl-methionine",
+                                   "methionine",
+                                   "met"
+                               ],
+                    "l_thr":  [
+                                  "l thr",
+                                  "l-thr",
+                                  "l threonine",
+                                  "l-threonine",
+                                  "threonine"
+                              ],
+                    "l_trp":  [
+                                  "l trp",
+                                  "l-trp",
+                                  "l tryptophan",
+                                  "l-tryptophan",
+                                  "tryptophan"
+                              ],
+                    "l_val":  [
+                                  "l val",
+                                  "l-val",
+                                  "l valine",
+                                  "l-valine",
+                                  "valine"
+                              ],
+                    "l_ile":  [
+                                  "l ile",
+                                  "l-ile",
+                                  "l isoleucine",
+                                  "l-isoleucine",
+                                  "isoleucine"
+                              ],
+                    "l_leu":  [
+                                  "l leu",
+                                  "l-leu",
+                                  "l leucine",
+                                  "l-leucine",
+                                  "leucine"
+                              ],
+                    "lys_sulfate":  [
+                                        "lysine sulfate",
+                                        "l-lysine sulfate",
+                                        "lys sulfate"
+                                    ],
+                    "l lys hcl":  "l_lys_hcl",
+                    "l-lys hcl":  "l_lys_hcl",
+                    "l lysine hcl":  "l_lys_hcl",
+                    "l-lysine hcl":  "l_lys_hcl",
+                    "lys hcl":  "l_lys_hcl",
+                    "l_lys_hcl":  "l_lys_hcl",
+                    "Oil":  "soy_oil",
+                    "veg oil":  "soy_oil"
+                }
+}

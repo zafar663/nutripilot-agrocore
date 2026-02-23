@@ -1,0 +1,5 @@
+key,name,source,ee,starch,ndf,adf,ash,zn_mgkg,cu_mgkg,mn_mgkg,fe_mgkg,se_mgkg,i_mgkg,choline_mgkg,folate_mgkg,biotin_mgkg
+corn,corn,us_sid_v1,3.5,,,,,,,,,,,,,
+soybean_meal_48,Soybean meal 48,brazilian_tables_5e,,,,,,,,,,,,,,
+canola_meal,Canola meal,brazilian_tables_5e,,,,,,,,,,,,,,
+fish_meal,Fish meal,brazilian_tables_5e,,,,,,,,,,,,,,

@@ -1,0 +1,37 @@
+{
+    "map":  {
+                "generic":  {
+                                "prestarter":  "poultry_quail_meat_generic_prestarter_v1",
+                                "grower":  "poultry_quail_meat_generic_grower_v1",
+                                "finisher":  "poultry_quail_meat_generic_finisher_v1",
+                                "starter":  "poultry_quail_meat_generic_starter_v1"
+                            },
+                "japanese_meat":  {
+                                      "prestarter":  "poultry_quail_meat_japanese_meat_prestarter_v1",
+                                      "grower":  "poultry_quail_meat_japanese_meat_grower_v1",
+                                      "finisher":  "poultry_quail_meat_japanese_meat_finisher_v1",
+                                      "starter":  "poultry_quail_meat_japanese_meat_starter_v1"
+                                  },
+                "coturnix":  {
+                                 "prestarter":  "poultry_quail_meat_coturnix_prestarter_v1",
+                                 "grower":  "poultry_quail_meat_coturnix_grower_v1",
+                                 "finisher":  "poultry_quail_meat_coturnix_finisher_v1",
+                                 "starter":  "poultry_quail_meat_coturnix_starter_v1"
+                             },
+                "japanese_layer":  {
+                                       "prestarter":  "poultry_quail_meat_japanese_layer_prestarter_v1",
+                                       "grower":  "poultry_quail_meat_japanese_layer_grower_v1",
+                                       "finisher":  "poultry_quail_meat_japanese_layer_finisher_v1",
+                                       "starter":  "poultry_quail_meat_japanese_layer_starter_v1"
+                                   }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "meat",
+                  "type":  "quail",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

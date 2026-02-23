@@ -1,0 +1,224 @@
+﻿✅ REQUIREMENTS VERIFIED (Option-B canonical)
+
+reqKey: poultry_broiler_ross308_starter_v1
+requirements_mode: option_b
+
+wrap/index: core\db\requirements\poultry\broiler\v1\requirements.index.poultry.broiler.v1.json
+library:    core\db\requirements\poultry\broiler\v1\requirements.library.poultry.broiler.v1.json
+
+evaluation_keys_defined_by_profile == evaluation_keys_used:
+me, cp, ca, avp, na, sid_lys, sid_met, sid_metcys, sid_thr, sid_trp, sid_arg
+
+mapping_applied: True
+raw_keys_used: me_kcal_per_kg, cp_pct, ca_pct, avp_pct, na_pct, sid_*_pct
+mapped_keys_used: me, cp, ca, avp, na, sid_*
+
+--- targets_raw ---
+
+
+me         : 3000
+cp         : 21.5
+ca         : 0.95
+avp        : 0.45
+na         : 0.2
+sid_lys    : 1.2
+sid_met    : 0.56
+sid_metcys : 0.9
+sid_thr    : 0.78
+sid_trp    : 0.2
+sid_arg    : 1.27
+
+
+
+
+
+--- targets_raw (JSON) ---
+{
+    "me":  3000,
+    "cp":  21.5,
+    "ca":  0.95,
+    "avp":  0.45,
+    "na":  0.2,
+    "sid_lys":  1.2,
+    "sid_met":  0.56,
+    "sid_metcys":  0.9,
+    "sid_thr":  0.78,
+    "sid_trp":  0.2,
+    "sid_arg":  1.27
+}
+✅ LAYER CHECK
+
+--- layer meta ---
+{
+    "dm_scale_mode_used":  "ME_ONLY",
+    "cp_apply_mode_used":  "NONE",
+    "locale":  "US",
+    "species":  "poultry",
+    "type":  "layer",
+    "breed":  "hyline_w36",
+    "phase":  "peak",
+    "region":  "us",
+    "version":  "v1",
+    "normalize":  true,
+    "reqKey":  null,
+    "production":  "layer",
+    "production_inferred":  false,
+    "ingredients_mode":  "structured",
+    "ingredients_file":  "core\\db\\ingredients\\poultry\\us\\v1\\ingredients.poultry.us.sid.v1.json",
+    "dm_overrides_applied":  [
+
+                             ],
+    "cp_overrides_applied":  [
+
+                             ],
+    "needs_clarification":  null,
+    "clarification_text":  null,
+    "clarification_examples":  null,
+    "resolution_map":  [
+                           {
+                               "raw":  "corn",
+                               "canonical":  "corn",
+                               "via":  "direct",
+                               "found_in_db":  true,
+                               "inclusion":  58.541778
+                           },
+                           {
+                               "raw":  "sbm_48",
+                               "canonical":  "sbm_48",
+                               "via":  "direct",
+                               "found_in_db":  true,
+                               "inclusion":  26.609899
+                           },
+                           {
+                               "raw":  "limestone",
+                               "canonical":  "limestone",
+                               "via":  "direct",
+                               "found_in_db":  true,
+                               "inclusion":  9.579564
+                           },
+                           {
+                               "raw":  "Oil",
+                               "canonical":  "oil",
+                               "via":  "snake",
+                               "found_in_db":  true,
+                               "inclusion":  3.193188
+                           },
+                           {
+                               "raw":  "dcp",
+                               "canonical":  "dcp",
+                               "via":  "direct",
+                               "found_in_db":  true,
+                               "inclusion":  1.703034
+                           },
+                           {
+                               "raw":  "salt",
+                               "canonical":  "salt",
+                               "via":  "direct",
+                               "found_in_db":  true,
+                               "inclusion":  0.372539
+                           }
+                       ],
+    "enterprise_targets":  null,
+    "requirements_mode":  null,
+    "requirements_wrap_file":  null,
+    "requirements_index_file":  null,
+    "requirements_library_file":  null,
+    "requirements_targets_raw_keys_used":  null,
+    "requirements_targets_mapped_keys_used":  null,
+    "requirements_targets_mapping_applied":  null
+}
+
+--- layer targets_raw (JSON) ---
+
+✅ LAYER VERIFIED (Option-B canonical)
+
+reqKey: poultry_layer_hyline_w36_peak_v1
+requirements_mode: option_b
+
+wrap/index: core\db\requirements\poultry\layer\v1\requirements.index.poultry.layer.v1.json
+library:    core\db\requirements\poultry\layer\v1\requirements.library.poultry.layer.v1.json
+
+evaluation_keys_defined_by_profile == evaluation_keys_used:
+me, cp, ca, avp, na, sid_lys, sid_met, sid_metcys, sid_thr, sid_trp, sid_arg
+
+raw_keys_used:
+me_kcal_per_kg, cp_pct, ca_pct, avp_pct, na_pct, sid_*_pct
+
+mapped_keys_used:
+me, cp, ca, avp, na, sid_*
+
+--- layer targets_raw ---
+
+
+
+me         : 2750
+cp         : 17
+ca         : 4.05
+avp        : 0.4
+na         : 0.17
+sid_lys    : 0.74
+sid_met    : 0.35
+sid_metcys : 0.58
+sid_thr    : 0.55
+sid_trp    : 0.15
+sid_arg    : 0.86
+
+
+
+
+
+--- layer targets_raw (JSON) ---
+
+{
+    "me":  2750,
+    "cp":  17,
+    "ca":  4.05,
+    "avp":  0.4,
+    "na":  0.17,
+    "sid_lys":  0.74,
+    "sid_met":  0.35,
+    "sid_metcys":  0.58,
+    "sid_thr":  0.55,
+    "sid_trp":  0.15,
+    "sid_arg":  0.86
+}
+
+
+✅ LAYER VERIFIED (Option-B canonical)
+
+reqKey: poultry_layer_hyline_w36_peak_v1
+requirements_mode: option_b
+
+wrap/index: core\db\requirements\poultry\layer\v1\requirements.index.poultry.layer.v1.json
+library:    core\db\requirements\poultry\layer\v1\requirements.library.poultry.layer.v1.json
+
+evaluation_keys_defined_by_profile == evaluation_keys_used:
+me, cp, ca, avp, na, sid_lys, sid_met, sid_metcys, sid_thr, sid_trp, sid_arg
+
+
+✅ BREEDER VERIFIED (Option-B canonical)
+
+wrap/index: core\db\requirements\poultry\broiler_breeder\v1\requirements.index.poultry.broiler_breeder.v1.json
+library:    core\db\requirements\poultry\broiler_breeder\v1\requirements.library.poultry.broiler_breeder.v1.json
+
+evaluation_keys_defined_by_profile == evaluation_keys_used:
+me, cp, ca, avp, na, sid_lys, sid_met, sid_metcys, sid_thr, sid_trp, sid_arg
+
+mapping_applied: True
+raw_keys_used: me_kcal_per_kg, cp_pct, ca_pct, avp_pct, na_pct, sid_lys_pct, sid_met_pct, sid_metcys_pct, sid_thr_pct, sid_trp_pct, sid_arg_pct
+mapped_keys_used: me, cp, ca, avp, na, sid_*
+
+--- breeder targets_raw ---
+me         : 2850
+cp         : 15.5
+ca         : 3
+avp        : 0.4
+na         : 0.17
+sid_lys    : 0.81
+sid_met    : 0.38
+sid_metcys : 0.65
+sid_thr    : 0.55
+sid_trp    : 0.17
+sid_arg    : 0.9
+
+

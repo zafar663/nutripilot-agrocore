@@ -1,0 +1,30 @@
+﻿{
+    "phases":  {
+                   "prelay":  {
+                                  "generic":  "poultry_turkey_layer_generic_prelay_v1"
+                              },
+                   "early":  {
+                                 "generic":  "poultry_turkey_layer_generic_early_v1"
+                             },
+                   "peak":  {
+                                "generic":  "poultry_turkey_layer_generic_peak_v1"
+                            },
+                   "late":  {
+                                "generic":  "poultry_turkey_layer_generic_late_v1"
+                            }
+               },
+    "_LOCK":  {
+                  "note":  "Option-B index for poultry/turkey layer. Placeholder targets until handbook values are inserted.",
+                  "mode":  "option_b",
+                  "created_utc":  "2026-02-19T16:23:25.1379931Z",
+                  "version":  "v1"
+              },
+    "map":  {
+                "generic":  {
+                                "prelay":  "poultry_turkey_layer_generic_prelay_v1",
+                                "early":  "poultry_turkey_layer_generic_early_v1",
+                                "peak":  "poultry_turkey_layer_generic_peak_v1",
+                                "late":  "poultry_turkey_layer_generic_late_v1"
+                            }
+            }
+}

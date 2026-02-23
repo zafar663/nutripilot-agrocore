@@ -1,0 +1,751 @@
+{
+    "_LOCK":  {
+                  "status":  "LOCKED",
+                  "message":  "Do not rename IDs. Only fill numeric values under nutrients.* and keep source refs.",
+                  "schema":  "nutripilot.ingredients.v1",
+                  "region":  "BR",
+                  "generated_at":  "2026-02-12"
+              },
+    "meta":  {
+                 "region":  "BR",
+                 "species_supported":  [
+                                           "poultry",
+                                           "swine"
+                                       ],
+                 "basis_default":  "as_fed",
+                 "energy_systems":  [
+                                        "ME_poultry_kcal_kg",
+                                        "ME_hens_kcal_kg",
+                                        "DE_swine_kcal_kg",
+                                        "ME_swine_kcal_kg",
+                                        "NE_swine_kcal_kg"
+                                    ],
+                 "notes":  "Ingredient universe is seeded from the book\u0027s Feedstuff List. Values will be filled from the book\u0027s per-ingredient tables in later steps."
+             },
+    "ingredients":  {
+                        "albumin":  {
+                                        "display_name":  "Albumin",
+                                        "category":  "animal_protein",
+                                        "nutrients":  {
+
+                                                      }
+                                    },
+                        "algae_spirulina_platensis":  {
+                                                          "display_name":  "Algae (Spirulina platensis)",
+                                                          "category":  "single_cell_protein",
+                                                          "nutrients":  {
+
+                                                                        }
+                                                      },
+                        "algaroba_flour":  {
+                                               "display_name":  "Algaroba, Flour",
+                                               "category":  "plant_byproduct",
+                                               "nutrients":  {
+
+                                                             }
+                                           },
+                        "babassu_meal":  {
+                                             "display_name":  "Babassu, Meal",
+                                             "category":  "oilseed_meal",
+                                             "nutrients":  {
+
+                                                           }
+                                         },
+                        "babassu_starch_flour":  {
+                                                     "display_name":  "Babassu, Starch Flour",
+                                                     "category":  "starch_source",
+                                                     "nutrients":  {
+
+                                                                   }
+                                                 },
+                        "bakery_byproducts":  {
+                                                  "display_name":  "Bakery, By-products",
+                                                  "category":  "bakery_byproduct",
+                                                  "nutrients":  {
+
+                                                                }
+                                              },
+                        "barley_grain":  {
+                                             "display_name":  "Barley, Grain",
+                                             "category":  "cereal_grain",
+                                             "nutrients":  {
+
+                                                           }
+                                         },
+                        "blood_meal":  {
+                                           "display_name":  "Blood, Meal",
+                                           "category":  "animal_protein",
+                                           "nutrients":  {
+
+                                                         }
+                                       },
+                        "blood_plasma":  {
+                                             "display_name":  "Blood, Plasma",
+                                             "category":  "animal_protein",
+                                             "nutrients":  {
+
+                                                           }
+                                         },
+                        "blood_red_cells":  {
+                                                "display_name":  "Blood, Red Cells",
+                                                "category":  "animal_protein",
+                                                "nutrients":  {
+
+                                                              }
+                                            },
+                        "bovine_meat_bone_meal_38_cp":  {
+                                                            "display_name":  "Bovine Meat and Bone, Meal 38% CP",
+                                                            "category":  "animal_protein",
+                                                            "nutrients":  {
+
+                                                                          }
+                                                        },
+                        "bovine_meat_bone_meal_43_cp":  {
+                                                            "display_name":  "Bovine Meat and Bone, Meal 43% CP",
+                                                            "category":  "animal_protein",
+                                                            "nutrients":  {
+
+                                                                          }
+                                                        },
+                        "bovine_meat_bone_meal_48_cp":  {
+                                                            "display_name":  "Bovine Meat and Bone, Meal 48% CP",
+                                                            "category":  "animal_protein",
+                                                            "nutrients":  {
+
+                                                                          }
+                                                        },
+                        "bovine_meat_bone_meal_52_cp":  {
+                                                            "display_name":  "Bovine Meat and Bone, Meal 52% CP",
+                                                            "category":  "animal_protein",
+                                                            "nutrients":  {
+
+                                                                          }
+                                                        },
+                        "bovine_meat_bone_meal_58_cp":  {
+                                                            "display_name":  "Bovine Meat and Bone, Meal 58% CP",
+                                                            "category":  "animal_protein",
+                                                            "nutrients":  {
+
+                                                                          }
+                                                        },
+                        "bread_byproducts":  {
+                                                 "display_name":  "Bread, By-products",
+                                                 "category":  "bakery_byproduct",
+                                                 "nutrients":  {
+
+                                                               }
+                                             },
+                        "canola_meal":  {
+                                            "display_name":  "Canola, Meal",
+                                            "category":  "oilseed_meal",
+                                            "nutrients":  {
+
+                                                          }
+                                        },
+                        "canola_oil":  {
+                                           "display_name":  "Canola, Oil",
+                                           "category":  "oil_fat",
+                                           "nutrients":  {
+
+                                                         }
+                                       },
+                        "casein":  {
+                                       "display_name":  "Casein",
+                                       "category":  "dairy_protein",
+                                       "nutrients":  {
+
+                                                     }
+                                   },
+                        "cassava_whole":  {
+                                              "display_name":  "Cassava, Whole",
+                                              "category":  "root_tuber",
+                                              "nutrients":  {
+
+                                                            }
+                                          },
+                        "castor_plant_meal":  {
+                                                  "display_name":  "Castor Plant, Meal",
+                                                  "category":  "oilseed_meal",
+                                                  "nutrients":  {
+
+                                                                }
+                                              },
+                        "citrus_pulp":  {
+                                            "display_name":  "Citrus Pulp",
+                                            "category":  "plant_byproduct",
+                                            "nutrients":  {
+
+                                                          }
+                                        },
+                        "coconut_meal":  {
+                                             "display_name":  "Coconut, Meal",
+                                             "category":  "oilseed_meal",
+                                             "nutrients":  {
+
+                                                           }
+                                         },
+                        "coconut_oil":  {
+                                            "display_name":  "Coconut, Oil",
+                                            "category":  "oil_fat",
+                                            "nutrients":  {
+
+                                                          }
+                                        },
+                        "corn_bran_with_solubles":  {
+                                                        "display_name":  "Corn, Bran with Solubles",
+                                                        "category":  "cereal_byproduct",
+                                                        "nutrients":  {
+
+                                                                      }
+                                                    },
+                        "corn_ddgs_6_9_ee":  {
+                                                 "display_name":  "Corn, DDGS - 6 to 9% of EE",
+                                                 "category":  "cereal_byproduct",
+                                                 "nutrients":  {
+                                                                   "basis":  "as_fed",
+                                                                   "dm_pct":  90.2,
+                                                                   "cp_pct":  30.5,
+                                                                   "ee_pct":  7.68,
+                                                                   "cf_pct":  7.9,
+                                                                   "na_pct":  0.03,
+                                                                   "ca_pct":  0.04,
+                                                                   "p_total_pct":  0.38,
+                                                                   "p_avail_pct":  0.12,
+                                                                   "me_poultry_kcal_kg":  2410,
+                                                                   "me_hens_kcal_kg":  2504
+                                                               }
+                                             },
+                        "corn_hp_ddg":  {
+                                            "display_name":  "Corn, HP-DDG",
+                                            "category":  "cereal_byproduct",
+                                            "nutrients":  {
+
+                                                          }
+                                        },
+                        "corn_germ":  {
+                                          "display_name":  "Corn, Germ",
+                                          "category":  "cereal_byproduct",
+                                          "nutrients":  {
+
+                                                        }
+                                      },
+                        "corn_gluten_feed_21_cp":  {
+                                                       "display_name":  "Corn, Gluten Feed 21% CP",
+                                                       "category":  "cereal_byproduct",
+                                                       "nutrients":  {
+
+                                                                     }
+                                                   },
+                        "corn_gluten_meal_60_cp":  {
+                                                       "display_name":  "Corn, Gluten Meal 60% CP",
+                                                       "category":  "cereal_byproduct",
+                                                       "nutrients":  {
+
+                                                                     }
+                                                   },
+                        "corn_grain_dm_minus_1sd":  {
+                                                        "display_name":  "Corn, Grain (- 1 SD of DM)",
+                                                        "category":  "cereal_grain",
+                                                        "nutrients":  {
+
+                                                                      }
+                                                    },
+                        "corn_grain_avg":  {
+                                               "display_name":  "Corn, Grain (Average)",
+                                               "category":  "cereal_grain",
+                                               "nutrients":  {
+
+                                                             }
+                                           },
+                        "corn_grain_dm_plus_1sd":  {
+                                                       "display_name":  "Corn, Grain (+ 1 SD of DM)",
+                                                       "category":  "cereal_grain",
+                                                       "nutrients":  {
+
+                                                                     }
+                                                   },
+                        "corn_high_lysine_grain":  {
+                                                       "display_name":  "Corn, High-lysine Grain",
+                                                       "category":  "cereal_grain",
+                                                       "nutrients":  {
+
+                                                                     }
+                                                   },
+                        "corn_high_oil_grain":  {
+                                                    "display_name":  "Corn, High-oil Grain",
+                                                    "category":  "cereal_grain",
+                                                    "nutrients":  {
+
+                                                                  }
+                                                },
+                        "corn_precooked":  {
+                                               "display_name":  "Corn, Pre-cooked",
+                                               "category":  "cereal_grain",
+                                               "nutrients":  {
+
+                                                             }
+                                           },
+                        "corn_oil":  {
+                                         "display_name":  "Corn, Oil",
+                                         "category":  "oil_fat",
+                                         "nutrients":  {
+
+                                                       }
+                                     },
+                        "cottonseed_meal_28_cp":  {
+                                                      "display_name":  "Cottonseed, Meal 28% CP",
+                                                      "category":  "oilseed_meal",
+                                                      "nutrients":  {
+
+                                                                    }
+                                                  },
+                        "cottonseed_meal_38_cp":  {
+                                                      "display_name":  "Cottonseed, Meal 38% CP",
+                                                      "category":  "oilseed_meal",
+                                                      "nutrients":  {
+
+                                                                    }
+                                                  },
+                        "cottonseed_meal_43_cp":  {
+                                                      "display_name":  "Cottonseed, Meal 43% CP",
+                                                      "category":  "oilseed_meal",
+                                                      "nutrients":  {
+
+                                                                    }
+                                                  },
+                        "dende_palm_oil":  {
+                                               "display_name":  "Dendê Palm, Oil",
+                                               "category":  "oil_fat",
+                                               "nutrients":  {
+
+                                                             }
+                                           },
+                        "feather_meal_76_cp":  {
+                                                   "display_name":  "Feather, Meal 76% CP",
+                                                   "category":  "animal_protein",
+                                                   "nutrients":  {
+
+                                                                 }
+                                               },
+                        "feather_meal_84_cp":  {
+                                                   "display_name":  "Feather, Meal 84% CP",
+                                                   "category":  "animal_protein",
+                                                   "nutrients":  {
+
+                                                                 }
+                                               },
+                        "fish_meal_54_cp":  {
+                                                "display_name":  "Fish, Meal 54% CP",
+                                                "category":  "animal_protein",
+                                                "nutrients":  {
+
+                                                              }
+                                            },
+                        "fish_meal_62_cp":  {
+                                                "display_name":  "Fish, Meal 62% CP",
+                                                "category":  "animal_protein",
+                                                "nutrients":  {
+
+                                                              }
+                                            },
+                        "glucose":  {
+                                        "display_name":  "Glucose",
+                                        "category":  "simple_sugar",
+                                        "nutrients":  {
+
+                                                      }
+                                    },
+                        "lactose":  {
+                                        "display_name":  "Lactose",
+                                        "category":  "simple_sugar",
+                                        "nutrients":  {
+
+                                                      }
+                                    },
+                        "lard":  {
+                                     "display_name":  "Lard",
+                                     "category":  "oil_fat",
+                                     "nutrients":  {
+
+                                                   }
+                                 },
+                        "lecithin":  {
+                                         "display_name":  "Lecithin",
+                                         "category":  "oil_fat",
+                                         "nutrients":  {
+
+                                                       }
+                                     },
+                        "milk_skimmed_powder":  {
+                                                    "display_name":  "Milk Skimmed, Powder",
+                                                    "category":  "dairy",
+                                                    "nutrients":  {
+
+                                                                  }
+                                                },
+                        "milk_whey_powder":  {
+                                                 "display_name":  "Milk Whey, Powder",
+                                                 "category":  "dairy",
+                                                 "nutrients":  {
+
+                                                               }
+                                             },
+                        "milk_whey_permeate":  {
+                                                   "display_name":  "Milk Whey, Permeate",
+                                                   "category":  "dairy",
+                                                   "nutrients":  {
+
+                                                                 }
+                                               },
+                        "milk_whole_powder":  {
+                                                  "display_name":  "Milk Whole, Powder",
+                                                  "category":  "dairy",
+                                                  "nutrients":  {
+
+                                                                }
+                                              },
+                        "millet_grain":  {
+                                             "display_name":  "Millet, Grain",
+                                             "category":  "cereal_grain",
+                                             "nutrients":  {
+
+                                                           }
+                                         },
+                        "oats_grain":  {
+                                           "display_name":  "Oats, Grain",
+                                           "category":  "cereal_grain",
+                                           "nutrients":  {
+
+                                                         }
+                                       },
+                        "ouricuri_meal":  {
+                                              "display_name":  "Ouricuri (Syagrus coronata), Meal",
+                                              "category":  "oilseed_meal",
+                                              "nutrients":  {
+
+                                                            }
+                                          },
+                        "pasta_spaghetti_byproduct":  {
+                                                          "display_name":  "Pasta/Spaghetti, By-product",
+                                                          "category":  "cereal_byproduct",
+                                                          "nutrients":  {
+
+                                                                        }
+                                                      },
+                        "peanuts_meal":  {
+                                             "display_name":  "Peanuts, Meal",
+                                             "category":  "oilseed_meal",
+                                             "nutrients":  {
+
+                                                           }
+                                         },
+                        "pork_meat_bone_meal":  {
+                                                    "display_name":  "Pork Meat and Bone, Meal",
+                                                    "category":  "animal_protein",
+                                                    "nutrients":  {
+
+                                                                  }
+                                                },
+                        "poultry_byproduct_meal":  {
+                                                       "display_name":  "Poultry, By-product Meal",
+                                                       "category":  "animal_protein",
+                                                       "nutrients":  {
+
+                                                                     }
+                                                   },
+                        "poultry_byproduct_highfat_meal":  {
+                                                               "display_name":  "Poultry, By-product High-fat Meal",
+                                                               "category":  "animal_protein",
+                                                               "nutrients":  {
+
+                                                                             }
+                                                           },
+                        "poultry_fat":  {
+                                            "display_name":  "Poultry, Fat",
+                                            "category":  "oil_fat",
+                                            "nutrients":  {
+
+                                                          }
+                                        },
+                        "poultry_feather_byprod_meal":  {
+                                                            "display_name":  "Poultry Feather and By-prod. Meal",
+                                                            "category":  "animal_protein",
+                                                            "nutrients":  {
+
+                                                                          }
+                                                        },
+                        "rice_bran":  {
+                                          "display_name":  "Rice, Bran",
+                                          "category":  "cereal_byproduct",
+                                          "nutrients":  {
+
+                                                        }
+                                      },
+                        "rice_broken":  {
+                                            "display_name":  "Rice, Broken",
+                                            "category":  "cereal_grain",
+                                            "nutrients":  {
+
+                                                          }
+                                        },
+                        "rice_defatted_bran":  {
+                                                   "display_name":  "Rice, Defatted Bran",
+                                                   "category":  "cereal_byproduct",
+                                                   "nutrients":  {
+
+                                                                 }
+                                               },
+                        "rye_grain":  {
+                                          "display_name":  "Rye, Grain",
+                                          "category":  "cereal_grain",
+                                          "nutrients":  {
+
+                                                        }
+                                      },
+                        "shrimp_byproduct_meal":  {
+                                                      "display_name":  "Shrimp, By-product Meal",
+                                                      "category":  "animal_protein",
+                                                      "nutrients":  {
+
+                                                                    }
+                                                  },
+                        "sorghum_grain":  {
+                                              "display_name":  "Sorghum, Grain",
+                                              "category":  "cereal_grain",
+                                              "nutrients":  {
+
+                                                            }
+                                          },
+                        "sorghum_grain_high_tannin":  {
+                                                          "display_name":  "Sorghum, Grain High Tannin",
+                                                          "category":  "cereal_grain",
+                                                          "nutrients":  {
+
+                                                                        }
+                                                      },
+                        "soybean_acid_oil":  {
+                                                 "display_name":  "Soybean, Acid Oil",
+                                                 "category":  "oil_fat",
+                                                 "nutrients":  {
+
+                                                               }
+                                             },
+                        "soybean_degummed_oil":  {
+                                                     "display_name":  "Soybean, Degummed Oil",
+                                                     "category":  "oil_fat",
+                                                     "nutrients":  {
+
+                                                                   }
+                                                 },
+                        "soybean_fullfat_extruded":  {
+                                                         "display_name":  "Soybean, Full-fat Extruded",
+                                                         "category":  "soy_fullfat",
+                                                         "nutrients":  {
+
+                                                                       }
+                                                     },
+                        "soybean_fullfat_micronized":  {
+                                                           "display_name":  "Soybean, Full-fat Micronized",
+                                                           "category":  "soy_fullfat",
+                                                           "nutrients":  {
+
+                                                                         }
+                                                       },
+                        "soybean_fullfat_roasted":  {
+                                                        "display_name":  "Soybean, Full-fat Roasted",
+                                                        "category":  "soy_fullfat",
+                                                        "nutrients":  {
+
+                                                                      }
+                                                    },
+                        "soybean_hulls":  {
+                                              "display_name":  "Soybean, Hulls",
+                                              "category":  "fiber_byproduct",
+                                              "nutrients":  {
+
+                                                            }
+                                          },
+                        "soybean_meal_44_5_cp":  {
+                                                     "display_name":  "Soybean, Meal 44.5% CP",
+                                                     "category":  "oilseed_meal",
+                                                     "nutrients":  {
+
+                                                                   }
+                                                 },
+                        "soybean_meal_45_6_cp_avg":  {
+                                                         "display_name":  "Soybean, Meal 45.6% CP (Aver.)",
+                                                         "category":  "oilseed_meal",
+                                                         "nutrients":  {
+
+                                                                       }
+                                                     },
+                        "soybean_meal_46_5_cp":  {
+                                                     "display_name":  "Soybean, Meal 46.5% CP",
+                                                     "category":  "oilseed_meal",
+                                                     "nutrients":  {
+
+                                                                   }
+                                                 },
+                        "soybean_meal_48_cp":  {
+                                                   "display_name":  "Soybean, Meal 48% CP",
+                                                   "category":  "oilseed_meal",
+                                                   "nutrients":  {
+
+                                                                 }
+                                               },
+                        "soy_protein_concentrate":  {
+                                                        "display_name":  "Soybean, Protein Concentrate",
+                                                        "category":  "soy_protein",
+                                                        "nutrients":  {
+
+                                                                      }
+                                                    },
+                        "soy_protein_isolate":  {
+                                                    "display_name":  "Soybean, Protein Isolate",
+                                                    "category":  "soy_protein",
+                                                    "nutrients":  {
+
+                                                                  }
+                                                },
+                        "soy_semi_defatted_extruded":  {
+                                                           "display_name":  "Soybean, Semi-defatted Extruded",
+                                                           "category":  "soy_processed",
+                                                           "nutrients":  {
+
+                                                                         }
+                                                       },
+                        "soy_semi_defatted_roasted":  {
+                                                          "display_name":  "Soybean, Semi-defatted Roasted",
+                                                          "category":  "soy_processed",
+                                                          "nutrients":  {
+
+                                                                        }
+                                                      },
+                        "starch":  {
+                                       "display_name":  "Starch",
+                                       "category":  "starch_source",
+                                       "nutrients":  {
+
+                                                     }
+                                   },
+                        "sugar":  {
+                                      "display_name":  "Sugar",
+                                      "category":  "simple_sugar",
+                                      "nutrients":  {
+
+                                                    }
+                                  },
+                        "sugarcane_juice":  {
+                                                "display_name":  "Sugarcane, Juice",
+                                                "category":  "sugar_byproduct",
+                                                "nutrients":  {
+
+                                                              }
+                                            },
+                        "sugarcane_molasses":  {
+                                                   "display_name":  "Sugarcane, Molasses",
+                                                   "category":  "sugar_byproduct",
+                                                   "nutrients":  {
+
+                                                                 }
+                                               },
+                        "sugarcane_molasses_dried":  {
+                                                         "display_name":  "Sugarcane, Molasses Dried",
+                                                         "category":  "sugar_byproduct",
+                                                         "nutrients":  {
+
+                                                                       }
+                                                     },
+                        "sunflower_meal":  {
+                                               "display_name":  "Sunflower, Meal",
+                                               "category":  "oilseed_meal",
+                                               "nutrients":  {
+
+                                                             }
+                                           },
+                        "sweet_potato_flour":  {
+                                                   "display_name":  "Sweet Potato, Flour",
+                                                   "category":  "root_tuber",
+                                                   "nutrients":  {
+
+                                                                 }
+                                               },
+                        "tallow":  {
+                                       "display_name":  "Tallow",
+                                       "category":  "oil_fat",
+                                       "nutrients":  {
+
+                                                     }
+                                   },
+                        "triticale_grain":  {
+                                                "display_name":  "Triticale, Grain",
+                                                "category":  "cereal_grain",
+                                                "nutrients":  {
+
+                                                              }
+                                            },
+                        "wheat_bran":  {
+                                           "display_name":  "Wheat, Bran",
+                                           "category":  "cereal_byproduct",
+                                           "nutrients":  {
+
+                                                         }
+                                       },
+                        "wheat_dark_flour":  {
+                                                 "display_name":  "Wheat, Dark Flour",
+                                                 "category":  "cereal_byproduct",
+                                                 "nutrients":  {
+
+                                                               }
+                                             },
+                        "wheat_flour":  {
+                                            "display_name":  "Wheat, Flour",
+                                            "category":  "cereal_byproduct",
+                                            "nutrients":  {
+
+                                                          }
+                                        },
+                        "wheat_germ":  {
+                                           "display_name":  "Wheat, Germ",
+                                           "category":  "cereal_byproduct",
+                                           "nutrients":  {
+
+                                                         }
+                                       },
+                        "wheat_gluten":  {
+                                             "display_name":  "Wheat, Gluten",
+                                             "category":  "plant_protein",
+                                             "nutrients":  {
+
+                                                           }
+                                         },
+                        "wheat_grain":  {
+                                            "display_name":  "Wheat, Grain",
+                                            "category":  "cereal_grain",
+                                            "nutrients":  {
+
+                                                          }
+                                        },
+                        "wheat_screenings":  {
+                                                 "display_name":  "Wheat, Screenings",
+                                                 "category":  "cereal_byproduct",
+                                                 "nutrients":  {
+
+                                                               }
+                                             },
+                        "yeast_alcohol_distillers":  {
+                                                         "display_name":  "Yeast, Alcohol Distiller’s",
+                                                         "category":  "microbial_protein",
+                                                         "nutrients":  {
+
+                                                                       }
+                                                     },
+                        "yeast_brewers":  {
+                                              "display_name":  "Yeast, Brewer’s",
+                                              "category":  "microbial_protein",
+                                              "nutrients":  {
+
+                                                            }
+                                          }
+                    }
+}

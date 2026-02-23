@@ -1,0 +1,484 @@
+{
+  "sample": [
+    {
+      "title": "Table 2.07........",
+      "page": 1,
+      "heading_raw": "",
+      "heading_method": "missing"
+    },
+    {
+      "title": "Table 2.15...",
+      "page": 2,
+      "heading_raw": "Performance Female Broilers Using The Equations In",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 3.21..........................................................",
+      "page": 7,
+      "heading_raw": "Equations in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 3.55.............................................",
+      "page": 9,
+      "heading_raw": "Using the Equations in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 5.07 ....................",
+      "page": 10,
+      "heading_raw": "Genetic Potential Using the Equations in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 5.15 .............................",
+      "page": 11,
+      "heading_raw": "Potential Using The Equations In",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 5.23................................",
+      "page": 12,
+      "heading_raw": "Potential Using the Equations in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.02) and DE, ME, and NE values for swine and, in particular, for",
+      "page": 13,
+      "heading_raw": "Protein Requirements of Swine Breeders: Lactation.....................",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.11 presents the composition of",
+      "page": 16,
+      "heading_raw": "high levels of heavy metals.",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.14).",
+      "page": 17,
+      "heading_raw": "were determined by the company ABVista, according to the methodology",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 18,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 19,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 20,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 21,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 22,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 23,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 24,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 25,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 26,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 27,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 28,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 29,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 30,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 31,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 32,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 33,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 34,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 35,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 36,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 37,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 38,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 39,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 40,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 41,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 42,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 43,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 44,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 45,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 46,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 47,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 48,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 49,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 50,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 51,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 52,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 53,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 54,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 55,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 56,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 57,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 58,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 59,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 60,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 61,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 62,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 63,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 64,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 65,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 66,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 67,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 68,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 69,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 70,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 71,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 72,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 73,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 74,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 75,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 76,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 77,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 78,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 79,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 80,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 81,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 82,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 83,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 84,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 85,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 86,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    },
+    {
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "page": 87,
+      "heading_raw": "the equations to obtain energy values similar to those presented in",
+      "heading_method": "fulltext_fallback_lastline"
+    }
+  ]
+}

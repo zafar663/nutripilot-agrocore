@@ -1,0 +1,554 @@
+[
+  {
+    "raw": "Tallow",
+    "norm": "tallow",
+    "count": 6,
+    "id": "tallow"
+  },
+  {
+    "raw": "Starch",
+    "norm": "starch",
+    "count": 6,
+    "id": "starch"
+  },
+  {
+    "raw": "Milk Whey, Permeate",
+    "norm": "milk whey permeate",
+    "count": 3,
+    "id": "milk_whey_permeate"
+  },
+  {
+    "raw": "Bakery, By-products",
+    "norm": "bakery by products",
+    "count": 3,
+    "id": "bakery_byproducts"
+  },
+  {
+    "raw": "Blood, Meal",
+    "norm": "blood meal",
+    "count": 3,
+    "id": "blood_meal"
+  },
+  {
+    "raw": "Lard",
+    "norm": "lard",
+    "count": 3,
+    "id": "lard"
+  },
+  {
+    "raw": "Millet, Grain",
+    "norm": "millet grain",
+    "count": 3,
+    "id": "millet_grain"
+  },
+  {
+    "raw": "Soybean, Hulls",
+    "norm": "soybean hulls",
+    "count": 3,
+    "id": "soybean_hulls"
+  },
+  {
+    "raw": "Yeast, Brewer’s",
+    "norm": "yeast brewer s",
+    "count": 3,
+    "id": "yeast_brewers"
+  },
+  {
+    "raw": "Albumin",
+    "norm": "albumin",
+    "count": 2,
+    "id": "albumin"
+  },
+  {
+    "raw": "Algae (Spirulina platensis)",
+    "norm": "algae spirulina platensis",
+    "count": 2,
+    "id": "algae_spirulina_platensis"
+  },
+  {
+    "raw": "Algaroba, Flour",
+    "norm": "algaroba flour",
+    "count": 2,
+    "id": "algaroba_flour"
+  },
+  {
+    "raw": "Babassu, Meal",
+    "norm": "babassu meal",
+    "count": 2,
+    "id": "babassu_meal"
+  },
+  {
+    "raw": "Barley, Grain",
+    "norm": "barley grain",
+    "count": 2,
+    "id": "barley_grain"
+  },
+  {
+    "raw": "Blood, Plasma",
+    "norm": "blood plasma",
+    "count": 2,
+    "id": "blood_plasma"
+  },
+  {
+    "raw": "Blood, Red Cells",
+    "norm": "blood red cells",
+    "count": 2,
+    "id": "blood_red_cells"
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 38% CP",
+    "norm": "bovine meat and bone meal 38% cp",
+    "count": 2,
+    "id": "bovine_meat_bone_meal_38_cp"
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 43% CP",
+    "norm": "bovine meat and bone meal 43% cp",
+    "count": 2,
+    "id": "bovine_meat_bone_meal_43_cp"
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 48% CP",
+    "norm": "bovine meat and bone meal 48% cp",
+    "count": 2,
+    "id": "bovine_meat_bone_meal_48_cp"
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 52% CP",
+    "norm": "bovine meat and bone meal 52% cp",
+    "count": 2,
+    "id": "bovine_meat_bone_meal_52_cp"
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 58% CP",
+    "norm": "bovine meat and bone meal 58% cp",
+    "count": 2,
+    "id": "bovine_meat_bone_meal_58_cp"
+  },
+  {
+    "raw": "Bread, By-products",
+    "norm": "bread by products",
+    "count": 2,
+    "id": "bread_byproducts"
+  },
+  {
+    "raw": "Canola, Meal",
+    "norm": "canola meal",
+    "count": 2,
+    "id": "canola_meal"
+  },
+  {
+    "raw": "Canola, Oil",
+    "norm": "canola oil",
+    "count": 2,
+    "id": "canola_oil"
+  },
+  {
+    "raw": "Casein",
+    "norm": "casein",
+    "count": 2,
+    "id": "casein"
+  },
+  {
+    "raw": "Cassava, Whole",
+    "norm": "cassava whole",
+    "count": 2,
+    "id": "cassava_whole"
+  },
+  {
+    "raw": "Castor Plant, Meal",
+    "norm": "castor plant meal",
+    "count": 2,
+    "id": "castor_plant_meal"
+  },
+  {
+    "raw": "Citrus Pulp",
+    "norm": "citrus pulp",
+    "count": 2,
+    "id": "citrus_pulp"
+  },
+  {
+    "raw": "Coconut, Meal",
+    "norm": "coconut meal",
+    "count": 2,
+    "id": "coconut_meal"
+  },
+  {
+    "raw": "Coconut, Oil",
+    "norm": "coconut oil",
+    "count": 2,
+    "id": "coconut_oil"
+  },
+  {
+    "raw": "Corn, Bran with Solubles",
+    "norm": "corn bran with solubles",
+    "count": 2,
+    "id": "corn_bran_with_solubles"
+  },
+  {
+    "raw": "Corn, Germ",
+    "norm": "corn germ",
+    "count": 2,
+    "id": "corn_germ"
+  },
+  {
+    "raw": "Corn, Gluten Feed 21% CP",
+    "norm": "corn gluten feed 21% cp",
+    "count": 2,
+    "id": "corn_gluten_feed_21_cp"
+  },
+  {
+    "raw": "Corn, Gluten Meal 60% CP",
+    "norm": "corn gluten meal 60% cp",
+    "count": 2,
+    "id": "corn_gluten_meal_60_cp"
+  },
+  {
+    "raw": "Corn, Grain (Average)",
+    "norm": "corn grain average",
+    "count": 2,
+    "id": "corn_grain_avg"
+  },
+  {
+    "raw": "Corn, Pre-cooked",
+    "norm": "corn pre cooked",
+    "count": 2,
+    "id": "corn_precooked"
+  },
+  {
+    "raw": "Corn, Oil",
+    "norm": "corn oil",
+    "count": 2,
+    "id": "corn_oil"
+  },
+  {
+    "raw": "Cottonseed, Meal 28% CP",
+    "norm": "cottonseed meal 28% cp",
+    "count": 2,
+    "id": "cottonseed_meal_28_cp"
+  },
+  {
+    "raw": "Cottonseed, Meal 38% CP",
+    "norm": "cottonseed meal 38% cp",
+    "count": 2,
+    "id": "cottonseed_meal_38_cp"
+  },
+  {
+    "raw": "Cottonseed, Meal 43% CP",
+    "norm": "cottonseed meal 43% cp",
+    "count": 2,
+    "id": "cottonseed_meal_43_cp"
+  },
+  {
+    "raw": "Dendê Palm, Oil",
+    "norm": "dende palm oil",
+    "count": 2,
+    "id": "dende_palm_oil"
+  },
+  {
+    "raw": "Feather, Meal 76% CP",
+    "norm": "feather meal 76% cp",
+    "count": 2,
+    "id": "feather_meal_76_cp"
+  },
+  {
+    "raw": "Feather, Meal 84% CP",
+    "norm": "feather meal 84% cp",
+    "count": 2,
+    "id": "feather_meal_84_cp"
+  },
+  {
+    "raw": "Fish, Meal 54% CP",
+    "norm": "fish meal 54% cp",
+    "count": 2,
+    "id": "fish_meal_54_cp"
+  },
+  {
+    "raw": "Fish, Meal 62% CP",
+    "norm": "fish meal 62% cp",
+    "count": 2,
+    "id": "fish_meal_62_cp"
+  },
+  {
+    "raw": "Lecithin",
+    "norm": "lecithin",
+    "count": 2,
+    "id": "lecithin"
+  },
+  {
+    "raw": "Milk Skimmed, Powder",
+    "norm": "milk skimmed powder",
+    "count": 2,
+    "id": "milk_skimmed_powder"
+  },
+  {
+    "raw": "Milk Whey, Powder",
+    "norm": "milk whey powder",
+    "count": 2,
+    "id": "milk_whey_powder"
+  },
+  {
+    "raw": "Milk Whole, Powder",
+    "norm": "milk whole powder",
+    "count": 2,
+    "id": "milk_whole_powder"
+  },
+  {
+    "raw": "Oats, Grain",
+    "norm": "oats grain",
+    "count": 2,
+    "id": "oats_grain"
+  },
+  {
+    "raw": "Ouricuri (Syagrus coronata), Meal",
+    "norm": "ouricuri syagrus coronata meal",
+    "count": 2,
+    "id": "ouricuri_meal"
+  },
+  {
+    "raw": "Peanuts, Meal",
+    "norm": "peanuts meal",
+    "count": 2,
+    "id": "peanuts_meal"
+  },
+  {
+    "raw": "Pork Meat and Bone, Meal",
+    "norm": "pork meat and bone meal",
+    "count": 2,
+    "id": "pork_meat_bone_meal"
+  },
+  {
+    "raw": "Poultry, By-product Meal",
+    "norm": "poultry by product meal",
+    "count": 2,
+    "id": "poultry_byproduct_meal"
+  },
+  {
+    "raw": "Poultry, By-product High-fat Meal",
+    "norm": "poultry by product high fat meal",
+    "count": 2,
+    "id": "poultry_byproduct_highfat_meal"
+  },
+  {
+    "raw": "Poultry, Fat",
+    "norm": "poultry fat",
+    "count": 2,
+    "id": "poultry_fat"
+  },
+  {
+    "raw": "Rice, Bran",
+    "norm": "rice bran",
+    "count": 2,
+    "id": "rice_bran"
+  },
+  {
+    "raw": "Rice, Broken",
+    "norm": "rice broken",
+    "count": 2,
+    "id": "rice_broken"
+  },
+  {
+    "raw": "Rice, Defatted Bran",
+    "norm": "rice defatted bran",
+    "count": 2,
+    "id": "rice_defatted_bran"
+  },
+  {
+    "raw": "Rye, Grain",
+    "norm": "rye grain",
+    "count": 2,
+    "id": "rye_grain"
+  },
+  {
+    "raw": "Shrimp, By-product Meal",
+    "norm": "shrimp by product meal",
+    "count": 2,
+    "id": "shrimp_byproduct_meal"
+  },
+  {
+    "raw": "Sorghum, Grain",
+    "norm": "sorghum grain",
+    "count": 2,
+    "id": "sorghum_grain"
+  },
+  {
+    "raw": "Sorghum, Grain High Tannin",
+    "norm": "sorghum grain high tannin",
+    "count": 2,
+    "id": "sorghum_grain_high_tannin"
+  },
+  {
+    "raw": "Soybean, Acid Oil",
+    "norm": "soybean acid oil",
+    "count": 2,
+    "id": "soybean_acid_oil"
+  },
+  {
+    "raw": "Soybean, Degummed Oil",
+    "norm": "soybean degummed oil",
+    "count": 2,
+    "id": "soybean_degummed_oil"
+  },
+  {
+    "raw": "Soybean, Full-fat Extruded",
+    "norm": "soybean full fat extruded",
+    "count": 2,
+    "id": "soybean_fullfat_extruded"
+  },
+  {
+    "raw": "Soybean, Full-fat Micronized",
+    "norm": "soybean full fat micronized",
+    "count": 2,
+    "id": "soybean_fullfat_micronized"
+  },
+  {
+    "raw": "Soybean, Full-fat Roasted",
+    "norm": "soybean full fat roasted",
+    "count": 2,
+    "id": "soybean_fullfat_roasted"
+  },
+  {
+    "raw": "Soybean, Meal 44.5% CP",
+    "norm": "soybean meal 44.5% cp",
+    "count": 2,
+    "id": "soybean_meal_44_5_cp"
+  },
+  {
+    "raw": "Soybean, Meal 46.5% CP",
+    "norm": "soybean meal 46.5% cp",
+    "count": 2,
+    "id": "soybean_meal_46_5_cp"
+  },
+  {
+    "raw": "Soybean, Meal 48% CP",
+    "norm": "soybean meal 48% cp",
+    "count": 2,
+    "id": "soybean_meal_48_cp"
+  },
+  {
+    "raw": "Soybean, Protein Concentrate",
+    "norm": "soybean protein concentrate",
+    "count": 2,
+    "id": "soy_protein_concentrate"
+  },
+  {
+    "raw": "Soybean, Protein Isolate",
+    "norm": "soybean protein isolate",
+    "count": 2,
+    "id": "soy_protein_isolate"
+  },
+  {
+    "raw": "Soybean, Semi-defatted Extruded",
+    "norm": "soybean semi defatted extruded",
+    "count": 2,
+    "id": "soy_semi_defatted_extruded"
+  },
+  {
+    "raw": "Soybean, Semi-defatted Roasted",
+    "norm": "soybean semi defatted roasted",
+    "count": 2,
+    "id": "soy_semi_defatted_roasted"
+  },
+  {
+    "raw": "Sugar",
+    "norm": "sugar",
+    "count": 2,
+    "id": "sugar"
+  },
+  {
+    "raw": "Sugarcane, Juice",
+    "norm": "sugarcane juice",
+    "count": 2,
+    "id": "sugarcane_juice"
+  },
+  {
+    "raw": "Sugarcane, Molasses",
+    "norm": "sugarcane molasses",
+    "count": 2,
+    "id": "sugarcane_molasses"
+  },
+  {
+    "raw": "Sugarcane, Molasses Dried",
+    "norm": "sugarcane molasses dried",
+    "count": 2,
+    "id": "sugarcane_molasses_dried"
+  },
+  {
+    "raw": "Sunflower, Meal",
+    "norm": "sunflower meal",
+    "count": 2,
+    "id": "sunflower_meal"
+  },
+  {
+    "raw": "Sweet Potato, Flour",
+    "norm": "sweet potato flour",
+    "count": 2,
+    "id": "sweet_potato_flour"
+  },
+  {
+    "raw": "Triticale, Grain",
+    "norm": "triticale grain",
+    "count": 2,
+    "id": "triticale_grain"
+  },
+  {
+    "raw": "Wheat, Bran",
+    "norm": "wheat bran",
+    "count": 2,
+    "id": "wheat_bran"
+  },
+  {
+    "raw": "Wheat, Dark Flour",
+    "norm": "wheat dark flour",
+    "count": 2,
+    "id": "wheat_dark_flour"
+  },
+  {
+    "raw": "Wheat, Flour",
+    "norm": "wheat flour",
+    "count": 2,
+    "id": "wheat_flour"
+  },
+  {
+    "raw": "Wheat, Germ",
+    "norm": "wheat germ",
+    "count": 2,
+    "id": "wheat_germ"
+  },
+  {
+    "raw": "Wheat, Gluten",
+    "norm": "wheat gluten",
+    "count": 2,
+    "id": "wheat_gluten"
+  },
+  {
+    "raw": "Wheat, Grain",
+    "norm": "wheat grain",
+    "count": 2,
+    "id": "wheat_grain"
+  },
+  {
+    "raw": "Wheat, Screenings",
+    "norm": "wheat screenings",
+    "count": 2,
+    "id": "wheat_screenings"
+  },
+  {
+    "raw": "Yeast, Alcohol Distiller’s",
+    "norm": "yeast alcohol distiller s",
+    "count": 2,
+    "id": "yeast_alcohol_distillers"
+  },
+  {
+    "raw": "Glucose",
+    "norm": "glucose",
+    "count": 1,
+    "id": "glucose"
+  },
+  {
+    "raw": "Lactose",
+    "norm": "lactose",
+    "count": 1,
+    "id": "lactose"
+  }
+]

@@ -1,0 +1,180 @@
+{
+    "profiles":  {
+                     "generic":  {
+                                     "targets_by_phase":  {
+                                                              "late":  {
+                                                                           "cp_pct":  17.5,
+                                                                           "sid_trp_pct":  0.16,
+                                                                           "sid_met_pct":  0.38,
+                                                                           "me_kcal_per_kg":  2800,
+                                                                           "sid_thr_pct":  0.56,
+                                                                           "na_pct":  0.18,
+                                                                           "cl_pct":  0.19,
+                                                                           "ca_pct":  3.9,
+                                                                           "k_pct":  0.82,
+                                                                           "sid_metcys_pct":  0.67,
+                                                                           "sid_lys_pct":  0.82,
+                                                                           "deb_meq_per_kg":  240,
+                                                                           "sid_arg_pct":  0.9,
+                                                                           "avp_pct":  0.44
+                                                                       },
+                                                              "early":  {
+                                                                            "cp_pct":  18,
+                                                                            "sid_trp_pct":  0.16,
+                                                                            "sid_met_pct":  0.39,
+                                                                            "me_kcal_per_kg":  2800,
+                                                                            "sid_thr_pct":  0.57,
+                                                                            "na_pct":  0.18,
+                                                                            "cl_pct":  0.19,
+                                                                            "ca_pct":  3.5,
+                                                                            "k_pct":  0.82,
+                                                                            "sid_metcys_pct":  0.69,
+                                                                            "sid_lys_pct":  0.84,
+                                                                            "deb_meq_per_kg":  240,
+                                                                            "sid_arg_pct":  0.9,
+                                                                            "avp_pct":  0.45
+                                                                        },
+                                                              "starter":  {
+                                                                              "cp_pct":  19,
+                                                                              "sid_trp_pct":  0.16,
+                                                                              "sid_met_pct":  0.42,
+                                                                              "me_kcal_per_kg":  2850,
+                                                                              "sid_thr_pct":  0.62,
+                                                                              "na_pct":  0.18,
+                                                                              "cl_pct":  0.19,
+                                                                              "ca_pct":  1,
+                                                                              "k_pct":  0.82,
+                                                                              "sid_metcys_pct":  0.75,
+                                                                              "sid_lys_pct":  0.95,
+                                                                              "deb_meq_per_kg":  240,
+                                                                              "sid_arg_pct":  0.9,
+                                                                              "avp_pct":  0.5
+                                                                          },
+                                                              "mid":  {
+                                                                          "cp_pct":  18,
+                                                                          "sid_trp_pct":  0.16,
+                                                                          "sid_met_pct":  0.4,
+                                                                          "me_kcal_per_kg":  2825,
+                                                                          "sid_thr_pct":  0.58,
+                                                                          "na_pct":  0.18,
+                                                                          "cl_pct":  0.19,
+                                                                          "ca_pct":  3.85,
+                                                                          "k_pct":  0.82,
+                                                                          "sid_metcys_pct":  0.7,
+                                                                          "sid_lys_pct":  0.84,
+                                                                          "deb_meq_per_kg":  240,
+                                                                          "sid_arg_pct":  0.9,
+                                                                          "avp_pct":  0.45
+                                                                      },
+                                                              "developer":  {
+                                                                                "cp_pct":  17,
+                                                                                "sid_trp_pct":  0.16,
+                                                                                "sid_met_pct":  0.36,
+                                                                                "me_kcal_per_kg":  2750,
+                                                                                "sid_thr_pct":  0.55,
+                                                                                "na_pct":  0.18,
+                                                                                "cl_pct":  0.19,
+                                                                                "ca_pct":  1.2,
+                                                                                "k_pct":  0.82,
+                                                                                "sid_metcys_pct":  0.66,
+                                                                                "sid_lys_pct":  0.8,
+                                                                                "deb_meq_per_kg":  240,
+                                                                                "sid_arg_pct":  0.9,
+                                                                                "avp_pct":  0.46
+                                                                            },
+                                                              "grower":  {
+                                                                             "cp_pct":  18,
+                                                                             "sid_trp_pct":  0.16,
+                                                                             "sid_met_pct":  0.38,
+                                                                             "me_kcal_per_kg":  2800,
+                                                                             "sid_thr_pct":  0.58,
+                                                                             "na_pct":  0.18,
+                                                                             "cl_pct":  0.19,
+                                                                             "ca_pct":  1.1,
+                                                                             "k_pct":  0.82,
+                                                                             "sid_metcys_pct":  0.7,
+                                                                             "sid_lys_pct":  0.85,
+                                                                             "deb_meq_per_kg":  240,
+                                                                             "sid_arg_pct":  0.9,
+                                                                             "avp_pct":  0.48
+                                                                         },
+                                                              "peak":  {
+                                                                           "cp_pct":  18.5,
+                                                                           "sid_trp_pct":  0.16,
+                                                                           "sid_met_pct":  0.41,
+                                                                           "me_kcal_per_kg":  2850,
+                                                                           "sid_thr_pct":  0.59,
+                                                                           "na_pct":  0.18,
+                                                                           "cl_pct":  0.19,
+                                                                           "ca_pct":  3.8,
+                                                                           "k_pct":  0.82,
+                                                                           "sid_metcys_pct":  0.71,
+                                                                           "sid_lys_pct":  0.86,
+                                                                           "deb_meq_per_kg":  250,
+                                                                           "sid_arg_pct":  0.9,
+                                                                           "avp_pct":  0.46
+                                                                       },
+                                                              "prelay":  {
+                                                                             "cp_pct":  17.5,
+                                                                             "sid_trp_pct":  0.16,
+                                                                             "sid_met_pct":  0.37,
+                                                                             "me_kcal_per_kg":  2750,
+                                                                             "sid_thr_pct":  0.56,
+                                                                             "na_pct":  0.18,
+                                                                             "cl_pct":  0.19,
+                                                                             "ca_pct":  2.25,
+                                                                             "k_pct":  0.82,
+                                                                             "sid_metcys_pct":  0.67,
+                                                                             "sid_lys_pct":  0.82,
+                                                                             "deb_meq_per_kg":  240,
+                                                                             "sid_arg_pct":  0.9,
+                                                                             "avp_pct":  0.45
+                                                                         }
+                                                          },
+                                     "targets_override":  {
+
+                                                          },
+                                     "mode":  "baseline_generic_v1"
+                                 },
+                     "pekin":  {
+                                   "targets_override":  {
+
+                                                        },
+                                   "inherits":  "generic"
+                               },
+                     "muleard":  {
+                                     "targets_override":  {
+
+                                                          },
+                                     "inherits":  "generic"
+                                 },
+                     "grimaud":  {
+                                     "targets_override":  {
+
+                                                          },
+                                     "inherits":  "generic"
+                                 },
+                     "muscovy":  {
+                                     "targets_override":  {
+
+                                                          },
+                                     "inherits":  "generic"
+                                 },
+                     "cherry_valley":  {
+                                           "targets_override":  {
+
+                                                                },
+                                           "inherits":  "generic"
+                                       }
+                 },
+    "_LOCK":  {
+                  "version":  "v1",
+                  "production":  "layer",
+                  "species":  "poultry",
+                  "type":  "duck",
+                  "kind":  "requirements_library",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready",
+                  "note":  "PLACEHOLDER numeric targets (NON-ZERO). Replace with finalized commercial tables."
+              }
+}

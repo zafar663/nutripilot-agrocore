@@ -1,0 +1,779 @@
+{
+  "meta": {
+    "tables": 427,
+    "rowsSeen": 11370
+  },
+  "reason_counts": {
+    "no_heading": 6038,
+    "key_null_or_missing": 1587,
+    "eligible_row": 3745
+  },
+  "samples": {
+    "no_heading": [
+      {
+        "table_no": "2.07",
+        "page": 1,
+        "title": "Table 2.07........",
+        "heading": "",
+        "row": {
+          "label_raw": "Female Broilers Using the Equations In Tables",
+          "label_norm": "female broilers using the equations in tables",
+          "key": null,
+          "values": [
+            2.09,
+            2.1,
+            2.12
+          ]
+        }
+      },
+      {
+        "table_no": "2.07",
+        "page": 1,
+        "title": "Table 2.07........",
+        "heading": "",
+        "row": {
+          "label_raw": "Female Broilers Using the Equations in Tables",
+          "label_norm": "female broilers using the equations in tables",
+          "key": null,
+          "values": [
+            2.09,
+            2.1,
+            2.12
+          ]
+        }
+      },
+      {
+        "table_no": "2.15",
+        "page": 2,
+        "title": "Table 2.15...",
+        "heading": "",
+        "row": {
+          "label_raw": "Straight-Run Broilers Using Equations in Tables",
+          "label_norm": "straight-run broilers using equations in tables",
+          "key": null,
+          "values": [
+            2.01,
+            2.02,
+            2.04
+          ]
+        }
+      },
+      {
+        "table_no": "2.15",
+        "page": 2,
+        "title": "Table 2.15...",
+        "heading": "",
+        "row": {
+          "label_raw": "and",
+          "label_norm": "and",
+          "key": null,
+          "values": [
+            2.09
+          ]
+        }
+      },
+      {
+        "table_no": "2.15",
+        "page": 2,
+        "title": "Table 2.15...",
+        "heading": "",
+        "row": {
+          "label_raw": "Straight-Run Broilers Using the Equations In Tables",
+          "label_norm": "straight-run broilers using the equations in tables",
+          "key": null,
+          "values": [
+            2.01,
+            2.02
+          ]
+        }
+      },
+      {
+        "table_no": "2.15",
+        "page": 2,
+        "title": "Table 2.15...",
+        "heading": "",
+        "row": {
+          "label_raw": "2.04 And",
+          "label_norm": "2.04 and",
+          "key": null,
+          "values": [
+            2.04,
+            2.09
+          ]
+        }
+      },
+      {
+        "table_no": "2.15",
+        "page": 2,
+        "title": "Table 2.15...",
+        "heading": "",
+        "row": {
+          "label_raw": "Reared at",
+          "label_norm": "reared at",
+          "key": null,
+          "values": [
+            26,
+            21,
+            -31
+          ]
+        }
+      },
+      {
+        "table_no": "2.15",
+        "page": 2,
+        "title": "Table 2.15...",
+        "heading": "",
+        "row": {
+          "label_raw": "Reared at",
+          "label_norm": "reared at",
+          "key": null,
+          "values": [
+            26,
+            21,
+            -31
+          ]
+        }
+      },
+      {
+        "table_no": "2.15",
+        "page": 2,
+        "title": "Table 2.15...",
+        "heading": "",
+        "row": {
+          "label_raw": "Reared at",
+          "label_norm": "reared at",
+          "key": null,
+          "values": [
+            26,
+            21,
+            -31
+          ]
+        }
+      },
+      {
+        "table_no": "2.15",
+        "page": 2,
+        "title": "Table 2.15...",
+        "heading": "",
+        "row": {
+          "label_raw": "3.01,",
+          "label_norm": "3.01,",
+          "key": null,
+          "values": [
+            3.01,
+            3.02,
+            3.04
+          ]
+        }
+      },
+      {
+        "table_no": "3.21",
+        "page": 7,
+        "title": "Table 3.21..........................................................",
+        "heading": "",
+        "row": {
+          "label_raw": "Using the Equations in Tables",
+          "label_norm": "using the equations in tables",
+          "key": null,
+          "values": [
+            3.4,
+            3.41,
+            3.42
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "(01 to",
+          "label_norm": "01 to",
+          "key": null,
+          "values": [
+            1,
+            14,
+            15,
+            35
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "(g/bird/day) of Japanese Quails During the Grower (01 to",
+          "label_norm": "g/bird/day of japanese quails during the grower 01 to",
+          "key": null,
+          "values": [
+            1,
+            14
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "and Developer (15 to",
+          "label_norm": "and developer 15 to",
+          "key": null,
+          "values": [
+            15,
+            35
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "(mg/bird/day) of Japanese Quails During The Grower (01 to",
+          "label_norm": "mg/bird/day of japanese quails during the grower 01 to",
+          "key": null,
+          "values": [
+            1,
+            14
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "days) and Developer (15 to",
+          "label_norm": "days and developer 15 to",
+          "key": null,
+          "values": [
+            15,
+            35
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "(01 to",
+          "label_norm": "01 to",
+          "key": null,
+          "values": [
+            1,
+            14,
+            15,
+            35
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "Grower (01 to",
+          "label_norm": "grower 01 to",
+          "key": null,
+          "values": [
+            1,
+            14,
+            15,
+            35
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "5.01,",
+          "label_norm": "5.01,",
+          "key": null,
+          "values": [
+            5.01,
+            5.02,
+            5.04
+          ]
+        }
+      },
+      {
+        "table_no": "3.55",
+        "page": 9,
+        "title": "Table 3.55.............................................",
+        "heading": "",
+        "row": {
+          "label_raw": "5.01,",
+          "label_norm": "5.01,",
+          "key": null,
+          "values": [
+            5.01,
+            5.02,
+            5.04
+          ]
+        }
+      }
+    ],
+    "key_null_or_missing": [
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Albumin",
+          "label_norm": "albumin",
+          "key": null,
+          "values": [
+            11,
+            113
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Algae (Spirulina platensis)",
+          "label_norm": "algae spirulina platensis",
+          "key": null,
+          "values": [
+            13,
+            115
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Algaroba, Flour",
+          "label_norm": "algaroba, flour",
+          "key": null,
+          "values": [
+            15,
+            117
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Babassu, Meal",
+          "label_norm": "babassu, meal",
+          "key": null,
+          "values": [
+            17,
+            119
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Bakery, By-products",
+          "label_norm": "bakery, by-products",
+          "key": null,
+          "values": [
+            21,
+            123
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Barley, Grain",
+          "label_norm": "barley, grain",
+          "key": null,
+          "values": [
+            23,
+            125
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Blood, Meal",
+          "label_norm": "blood, meal",
+          "key": null,
+          "values": [
+            25,
+            127
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Blood, Plasma",
+          "label_norm": "blood, plasma",
+          "key": null,
+          "values": [
+            27,
+            129
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Blood, Red Cells",
+          "label_norm": "blood, red cells",
+          "key": null,
+          "values": [
+            29,
+            131
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Bovine Meat and Bone, Meal",
+          "label_norm": "bovine meat and bone, meal",
+          "key": null,
+          "values": [
+            38,
+            31,
+            133
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Bovine Meat and Bone, Meal",
+          "label_norm": "bovine meat and bone, meal",
+          "key": null,
+          "values": [
+            43,
+            33,
+            135
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Bovine Meat and Bone, Meal",
+          "label_norm": "bovine meat and bone, meal",
+          "key": null,
+          "values": [
+            48,
+            35,
+            137
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Bovine Meat and Bone, Meal",
+          "label_norm": "bovine meat and bone, meal",
+          "key": null,
+          "values": [
+            52,
+            37,
+            139
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Bovine Meat and Bone, Meal",
+          "label_norm": "bovine meat and bone, meal",
+          "key": null,
+          "values": [
+            58,
+            39,
+            141
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Bread, By-products",
+          "label_norm": "bread, by-products",
+          "key": null,
+          "values": [
+            41,
+            143
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Canola, Meal",
+          "label_norm": "canola, meal",
+          "key": null,
+          "values": [
+            43,
+            145
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Canola, Oil",
+          "label_norm": "canola, oil",
+          "key": null,
+          "values": [
+            45,
+            147
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Casein",
+          "label_norm": "casein",
+          "key": null,
+          "values": [
+            47,
+            149
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Cassava, Whole",
+          "label_norm": "cassava, whole",
+          "key": null,
+          "values": [
+            49,
+            151
+          ]
+        }
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "title": "Table 1.14).",
+        "heading": "Milk Whey, Permeate",
+        "row": {
+          "label_raw": "Castor Plant, Meal",
+          "label_norm": "castor plant, meal",
+          "key": null,
+          "values": [
+            51,
+            153
+          ]
+        }
+      }
+    ],
+    "eligible_row": [
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "heading": "Milk Whey, Permeate",
+        "key": "starch",
+        "value": 19
+      },
+      {
+        "table_no": "1.14",
+        "page": 17,
+        "heading": "Milk Whey, Permeate",
+        "key": "total_lys",
+        "value": 77
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "dm",
+        "value": 91.4
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "cp",
+        "value": 85.7
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "ge",
+        "value": 4700
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "me",
+        "value": 3757
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "mn_mg_kg",
+        "value": 2.26
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "fe_mg_kg",
+        "value": 27.5
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "k",
+        "value": 6.19
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "cu_mg_kg",
+        "value": 1
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "na",
+        "value": 6.16
+      },
+      {
+        "table_no": "1.01",
+        "page": 18,
+        "heading": "Albumin",
+        "key": "zn_mg_kg",
+        "value": 1
+      },
+      {
+        "table_no": "1.01",
+        "page": 19,
+        "heading": "Albumin",
+        "key": "cp",
+        "value": 85.7
+      },
+      {
+        "table_no": "1.01",
+        "page": 19,
+        "heading": "Albumin",
+        "key": "total_lys",
+        "value": 5.22
+      },
+      {
+        "table_no": "1.01",
+        "page": 19,
+        "heading": "Albumin",
+        "key": "total_met",
+        "value": 2.79
+      },
+      {
+        "table_no": "1.01",
+        "page": 19,
+        "heading": "Albumin",
+        "key": "total_metcys",
+        "value": 4.9
+      },
+      {
+        "table_no": "1.01",
+        "page": 19,
+        "heading": "Albumin",
+        "key": "total_thr",
+        "value": 3.69
+      },
+      {
+        "table_no": "1.01",
+        "page": 19,
+        "heading": "Albumin",
+        "key": "total_trp",
+        "value": 1
+      },
+      {
+        "table_no": "1.01",
+        "page": 19,
+        "heading": "Albumin",
+        "key": "total_arg",
+        "value": 4.41
+      },
+      {
+        "table_no": "1.01",
+        "page": 19,
+        "heading": "Albumin",
+        "key": "total_gly_ser",
+        "value": 9.32
+      }
+    ]
+  }
+}

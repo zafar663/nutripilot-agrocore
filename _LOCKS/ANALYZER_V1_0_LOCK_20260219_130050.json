@@ -1,0 +1,27 @@
+﻿{
+    "analyzer":  {
+                     "scope":  [
+                                   "Requirements resolution via index+library (Option-B inheritance-ready tree)",
+                                   "Registry-driven evaluation keys allow-list (+ SID union)",
+                                   "Deterministic evaluation thresholds (FAIL\u003c-5%, WARN\u003c-2%)",
+                                   "Engine-side normalize option"
+                               ],
+                     "non_goals":  [
+                                       "No least-cost optimization",
+                                       "No automatic reformulation",
+                                       "No adaptive requirement shifting unless enterprise lys curve explicitly enabled"
+                                   ],
+                     "file":  "core/engine/analyzeFormula.cjs",
+                     "intent":  "Analyzer-only: parse → resolve aliases → load ingredients → load requirements → compute nutrients → PASS/WARN/FAIL; no optimization."
+                 },
+    "repo":  "C:\\Users\\Administrator\\My Drive\\NutriPilot\\nutripilot-agrocore",
+    "lock_id":  "ANALYZER_V1_0_LOCK_20260219_130050",
+    "evidence":  {
+                     "evidence_log":  "ANALYZER_V1_0_LOCK_20260219_130050.evidence.log"
+                 },
+    "guardrails":  {
+                       "whatsapp_deps":  "None required for analyzer lock",
+                       "enterprise_lys_curve_gating":  "If enterprise.lys_curve.enabled === true then require performance inputs; otherwise do not guess."
+                   },
+    "locked_at":  "2026-02-19T13:00:50.6999179-05:00"
+}

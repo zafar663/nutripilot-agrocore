@@ -1,0 +1,21 @@
+{
+    "productions":  {
+                        "breeder":  {
+                                        "library_file":  "..\\breeder\\library.poultry_turkey_breeder.v1.json",
+                                        "index_file":  "..\\breeder\\index.poultry_turkey_breeder.v1.json"
+                                    },
+                        "meat":  {
+                                     "library_file":  "..\\meat\\library.poultry_turkey_meat.v1.json",
+                                     "index_file":  "..\\meat\\index.poultry_turkey_meat.v1.json"
+                                 }
+                    },
+    "_meta":  {
+                  "description":  "Routes production to Option-B index+library for poultry/turkey",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "version":  "v1",
+                  "kind":  "requirements_option_b_wrapper"
+              },
+    "version":  "v1",
+    "type":  "turkey",
+    "species":  "poultry"
+}

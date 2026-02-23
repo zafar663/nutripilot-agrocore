@@ -1,0 +1,213 @@
+﻿"use strict";
+
+/**
+ * core/engine/requirements/LOAD_REQUIREMENTS_PROFILE.cjs
+ *
+ * v1.1.2 - Pass-through wrapper for Option-B requirements loader + key mapping.
+ *
+ * Goal:
+ * - Delegate to core/db/requirements/_index/LOAD_REQUIREMENTS.cjs
+ * - Preserve rich debug metadata (source paths + resolved selection)
+ *   so analyzeFormula.cjs can surface:
+ *   meta.requirements_* fields and requirements_source.* fields.
+ *
+ * Added (minimum safe changes):
+ * - Populate meta.requirements_targets_raw_keys_used (+ mapped keys)
+ * - Map library-style keys (me_kcal_per_kg, cp_pct, sid_lys_pct, ...)
+ *   into registry/evaluation keys (me, cp, sid_lys, ...)
+ */
+
+const { loadRequirementsProfile } = require("../../db/requirements/_index/LOAD_REQUIREMENTS.cjs");
+
+function isObj(x) {
+  return x && typeof x === "object" && !Array.isArray(x);
+}
+
+function extractNumericFlat(obj) {
+  // Keep only finite numbers (or numeric strings) at top level.
+  // (We keep this shallow on purpose for safety.)
+  const out = {};
+  if (!isObj(obj)) return out;
+
+  for (const [k, v] of Object.entries(obj)) {
+    let n = NaN;
+    if (typeof v === "number") n = v;
+    else if (typeof v === "string") {
+      const m = v.trim().match(/-?\d+(\.\d+)?/);
+      if (m) n = Number(m[0]);
+    } else if (isObj(v)) {
+      // handle common wrappers: {value}, {target}, {min}, {max}
+      const candidate =
+        v.value ??
+        v.target ??
+        v.recommended ??
+        v.req ??
+        v.minimum ??
+        v.min ??
+        v.maximum ??
+        v.max;
+
+      if (typeof candidate === "number") n = candidate;
+      else if (typeof candidate === "string") {
+        const m = candidate.trim().match(/-?\d+(\.\d+)?/);
+        if (m) n = Number(m[0]);
+      }
+    }
+
+    if (Number.isFinite(n)) out[k] = n;
+  }
+  return out;
+}
+
+function mapLibraryKeysToRegistry(reqRaw) {
+  const raw = extractNumericFlat(reqRaw);
+
+  // If it already looks like registry keys, don’t touch it.
+  const looksRegistry =
+    Object.prototype.hasOwnProperty.call(raw, "me") ||
+    Object.prototype.hasOwnProperty.call(raw, "cp") ||
+    Object.prototype.hasOwnProperty.call(raw, "sid_lys");
+
+  // If it looks like library keys, map them.
+  const looksLibrary =
+    Object.prototype.hasOwnProperty.call(raw, "me_kcal_per_kg") ||
+    Object.prototype.hasOwnProperty.call(raw, "cp_pct") ||
+    Object.prototype.hasOwnProperty.call(raw, "sid_lys_pct");
+
+  if (looksRegistry && !looksLibrary) {
+    return { mapped: raw, applied: false, rawKeys: Object.keys(raw), mappedKeys: Object.keys(raw) };
+  }
+
+  const keyMap = {
+    me_kcal_per_kg: "me",
+    cp_pct: "cp",
+    ca_pct: "ca",
+    avp_pct: "avp",
+    na_pct: "na",
+    k_pct: "k",
+    cl_pct: "cl",
+
+    sid_lys_pct: "sid_lys",
+    sid_met_pct: "sid_met",
+    sid_metcys_pct: "sid_metcys",
+    sid_thr_pct: "sid_thr",
+    sid_trp_pct: "sid_trp",
+    sid_arg_pct: "sid_arg",
+  };
+
+  const mapped = {};
+  for (const [k, v] of Object.entries(raw)) {
+    const nk = keyMap[k] || k; // keep unknown numeric keys as-is
+    mapped[nk] = v;
+  }
+
+  return { mapped, applied: looksLibrary, rawKeys: Object.keys(raw), mappedKeys: Object.keys(mapped) };
+}
+
+function resolveRequirements(selectors = {}) {
+  // Normalize incoming selectors from analyzeFormula payload
+  const input = {
+    species: selectors.species || "poultry",
+    type: selectors.type || "broiler",
+    breed: selectors.breed || "generic",
+    phase: selectors.phase || "starter",
+    region: selectors.region || "global",
+    version: selectors.version || "v1",
+    production:
+      selectors.production ||
+      selectors.production_type ||
+      selectors.productionType ||
+      "",
+  };
+
+  const r = loadRequirementsProfile(input);
+
+  // Keep the same response contract analyzeFormula expects
+  if (!r || r.ok !== true) {
+    return {
+      ok: false,
+      error: r?.error || "REQUIREMENTS_LOAD_FAILED",
+      message: r?.message || "Requirements could not be loaded.",
+      details: r?.details || null,
+      key: r?.key || null,
+      reqKey: r?.reqKey || null,
+      reqFilePath: r?.reqFilePath || null,
+      selectors: input,
+
+      // Preserve any debug metadata if present
+      source: r?.source || r?.sources || r?.meta?.source || null,
+      sources: r?.sources || r?.source || r?.meta?.source || null,
+      resolved: r?.resolved || r?.meta?.resolved || null,
+      doc_meta: r?.doc_meta || r?.meta?.doc_meta || null,
+      profile: r?.profile || r?.meta?.profile || null,
+    };
+  }
+
+  // ---- Normalize source metadata (paths can be stored under many keys) ----
+  const srcObj =
+    (r.sources && typeof r.sources === "object" && r.sources) ||
+    (r.source && typeof r.source === "object" && r.source) ||
+    (r.meta && typeof r.meta.source === "object" && r.meta.source) ||
+    {};
+
+  // If loader returns a string path in r.source/r.sources, keep it (don't drop debug info)
+  const srcRaw =
+    (typeof r.sources === "string" && r.sources) ||
+    (typeof r.source === "string" && r.source) ||
+    (typeof r.meta?.source === "string" && r.meta.source) ||
+    null;
+
+  // Some loaders store paths directly at top level; fold them in if present
+  // IMPORTANT: never spread null/undefined (use {}), to avoid runtime TypeError.
+  const mergedSource = {
+    ...srcObj,
+    ...(srcRaw ? { source_raw: srcRaw } : {}),
+    ...(typeof r.wrapPath === "string" ? { wrapPath: r.wrapPath } : {}),
+    ...(typeof r.indexPath === "string" ? { indexPath: r.indexPath } : {}),
+    ...(typeof r.libPath === "string" ? { libPath: r.libPath } : {}),
+    ...(typeof r.libraryPath === "string" ? { libPath: r.libraryPath } : {}),
+    ...(typeof r.mode === "string" ? { mode: r.mode } : {}),
+  };
+
+  // --- requirements: map library keys -> registry keys, and add meta instrumentation ---
+  const reqRaw = r.requirements || r.targets || (r.profile && r.profile.targets) || {};
+  const mapped = mapLibraryKeysToRegistry(reqRaw);
+
+  // Attach meta for analyzeFormula to surface (non-breaking: just extra fields)
+  const meta = isObj(r.meta) ? { ...r.meta } : {};
+  meta.requirements_targets_raw = extractNumericFlat(reqRaw);
+  meta.requirements_targets_raw_keys_used = mapped.rawKeys;
+  meta.requirements_targets_mapped_keys_used = mapped.mappedKeys;
+  meta.requirements_targets_mapping_applied = mapped.applied;
+
+  // analyzeFormula expects:
+  // - reqKey
+  // - requirements (targets object)
+  // - profile (optional: label/tolerance/evaluation_keys)
+  // - sources/resolved (for debugging + meta fields)
+  return {
+    ok: true,
+    reqKey: r.reqKey || r.key || null,
+
+    // mapped requirements for engine/evaluation
+    requirements: mapped.mapped,
+
+    // pass through profile if present (helps label/tolerance/evaluation_keys)
+    profile: r.profile || null,
+
+    // normalized debug metadata
+    source: mergedSource,
+    sources: mergedSource,
+    resolved: r.resolved || r.meta?.resolved || null,
+
+    // keep any additional metadata
+    phase: r.phase || input.phase,
+    breed: r.breed || input.breed,
+    doc_meta: r.doc_meta || r.meta?.doc_meta || null,
+
+    // NEW: meta is passed through for analyzeFormula to echo into response.meta
+    meta,
+  };
+}
+
+module.exports = { resolveRequirements };

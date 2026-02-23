@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "dry_run": true,
+  "db": "C:\\Users\\Administrator\\My Drive\\NutriPilot\\nutripilot-agrocore\\core\\db\\ingredients\\poultry\\br\\v1\\ingredients.poultry.br.sid.v1.json",
+  "coeff": "C:\\Users\\Administrator\\My Drive\\NutriPilot\\nutripilot-agrocore\\core\\db\\digestibility\\poultry\\evonik_broiler_sid_coeffs.v1.json",
+  "ingredients_seen": 102,
+  "ingredients_touched": 77,
+  "totals_seen": 1466,
+  "sid_writes": 1466,
+  "per_aa": {
+    "lys": {
+      "totals_present": 77,
+      "coeff_present": 77,
+      "writes": 77
+    },
+    "met": {
+      "totals_present": 76,
+      "coeff_present": 76,
+      "writes": 76
+    },
+    "thr": {
+      "totals_present": 76,
+      "coeff_present": 76,
+      "writes": 76
+    },
+    "trp": {
+      "totals_present": 76,
+      "coeff_present": 76,
+      "writes": 76
+    },
+    "arg": {
+      "totals_present": 76,
+      "coeff_present": 76,
+      "writes": 76
+    },
+    "val": {
+      "totals_present": 76,
+      "coeff_present": 76,
+      "writes": 76
+    },
+    "leu": {
+      "totals_present": 76,
+      "coeff_present": 76,
+      "writes": 76
+    },
+    "ile": {
+      "totals_present": 74,
+      "coeff_present": 74,
+      "writes": 74
+    },
+    "his": {
+      "totals_present": 75,
+      "coeff_present": 75,
+      "writes": 75
+    },
+    "cys": {
+      "totals_present": 75,
+      "coeff_present": 75,
+      "writes": 75
+    },
+    "phe": {
+      "totals_present": 76,
+      "coeff_present": 76,
+      "writes": 76
+    },
+    "tyr": {
+      "totals_present": 75,
+      "coeff_present": 75,
+      "writes": 75
+    },
+    "gly": {
+      "totals_present": 73,
+      "coeff_present": 73,
+      "writes": 73
+    },
+    "ser": {
+      "totals_present": 73,
+      "coeff_present": 73,
+      "writes": 73
+    },
+    "ala": {
+      "totals_present": 72,
+      "coeff_present": 72,
+      "writes": 72
+    },
+    "asp": {
+      "totals_present": 70,
+      "coeff_present": 70,
+      "writes": 70
+    },
+    "glu": {
+      "totals_present": 70,
+      "coeff_present": 70,
+      "writes": 70
+    },
+    "asn": {
+      "totals_present": 71,
+      "coeff_present": 71,
+      "writes": 71
+    },
+    "gln": {
+      "totals_present": 61,
+      "coeff_present": 61,
+      "writes": 61
+    },
+    "pro": {
+      "totals_present": 68,
+      "coeff_present": 68,
+      "writes": 68
+    }
+  },
+  "unresolved_sample": []
+}

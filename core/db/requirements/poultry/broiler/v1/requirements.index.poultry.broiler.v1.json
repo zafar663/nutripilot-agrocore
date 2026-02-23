@@ -1,0 +1,101 @@
+﻿{
+  "_LOCK": {
+    "version": "v1",
+    "mode": "option_b_production_index",
+    "note": "Canonical Option-B: production -> breed -> phase -> reqKey.",
+    "meta": {
+      "name": "poultry_broiler_requirements_index",
+      "version": "v1",
+      "notes": "Canonical Option-B: production -> breed -> phase -> reqKey."
+    }
+  },
+  "defaults": {
+    "production": "meat",
+    "breed": "generic",
+    "phase": "starter"
+  },
+  "region_defaults": {
+    "us": "us",
+    "global": "global"
+  },
+  "phases": [
+    "starter",
+    "grower",
+    "finisher"
+  ],
+  "production_aliases": {
+    "meat": "meat",
+    "broiler": "meat",
+    "growout": "meat",
+    "growth": "meat"
+  },
+  "phase_aliases": {
+    "start": "starter",
+    "starter": "starter",
+    "grow": "grower",
+    "grower": "grower",
+    "finish": "finisher",
+    "finisher": "finisher"
+  },
+  "breed_aliases": {
+    "generic": "generic",
+
+    "ross308": "ross_308",
+    "ross-308": "ross_308",
+    "ross 308": "ross_308",
+    "ross_308": "ross_308",
+
+    "cobb500": "cobb_500",
+    "cobb-500": "cobb_500",
+    "cobb 500": "cobb_500",
+    "cobb_500": "cobb_500",
+
+    "hubbard": "hubbard",
+    "hubbard_efficiency_plus": "hubbard",
+    "efficiency_plus": "hubbard",
+
+    "aa": "aa",
+    "arbor_acres": "aa",
+    "arbor acres": "aa",
+
+    "ir": "ir",
+    "indian_river": "ir",
+    "indian river": "ir"
+  },
+  "productions": {
+    "meat": {
+      "breeds": {
+        "generic": {
+          "starter": "poultry_broiler_generic_starter_v1",
+          "grower": "poultry_broiler_generic_grower_v1",
+          "finisher": "poultry_broiler_generic_finisher_v1"
+        },
+        "ross_308": {
+          "starter": "poultry_broiler_ross308_starter_v1",
+          "grower": "poultry_broiler_ross308_grower_v1",
+          "finisher": "poultry_broiler_ross308_finisher_v1"
+        },
+        "cobb_500": {
+          "starter": "poultry_broiler_cobb500_starter_v1",
+          "grower": "poultry_broiler_cobb500_grower_v1",
+          "finisher": "poultry_broiler_cobb500_finisher_v1"
+        },
+        "hubbard": {
+          "starter": "poultry_broiler_hubbard_starter_v1",
+          "grower": "poultry_broiler_hubbard_grower_v1",
+          "finisher": "poultry_broiler_hubbard_finisher_v1"
+        },
+        "aa": {
+          "starter": "poultry_broiler_aa_starter_v1",
+          "grower": "poultry_broiler_aa_grower_v1",
+          "finisher": "poultry_broiler_aa_finisher_v1"
+        },
+        "ir": {
+          "starter": "poultry_broiler_ir_starter_v1",
+          "grower": "poultry_broiler_ir_grower_v1",
+          "finisher": "poultry_broiler_ir_finisher_v1"
+        }
+      }
+    }
+  }
+}

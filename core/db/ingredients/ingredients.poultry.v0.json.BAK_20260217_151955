@@ -1,0 +1,314 @@
+﻿{
+  "_meta": {
+    "db": "ingredients.poultry.v0",
+    "note": "Patched 2026-02-17: added direct dbKeys for parsed PDF items (dlm, fish meal, rice broken, millet/bajra, soyabean oil, etc.) to avoid unknowns in legacy mode."
+  },
+
+  "corn": {
+    "me": 3350,
+    "cp": 8.5,
+    "sid_lys": 0.24,
+    "sid_met": 0.18,
+    "sid_metcys": 0.35,
+    "sid_thr": 0.27,
+    "sid_trp": 0.06,
+    "sid_arg": 0.32,
+    "ca": 0.02,
+    "avp": 0.08,
+    "na": 0.02
+  },
+
+  "sbm_48": {
+    "me": 2450,
+    "cp": 48,
+    "sid_lys": 2.8,
+    "sid_met": 0.62,
+    "sid_metcys": 1.25,
+    "sid_thr": 1.75,
+    "sid_trp": 0.62,
+    "sid_arg": 3.1,
+    "ca": 0.3,
+    "avp": 0.22,
+    "na": 0.03
+  },
+
+  "sbm_46": {
+    "me": 2450,
+    "cp": 46,
+    "sid_lys": 2.75,
+    "sid_met": 0.62,
+    "sid_metcys": 1.35,
+    "sid_thr": 1.75,
+    "sid_trp": 0.62,
+    "sid_arg": 3.05,
+    "ca": 0.29,
+    "avp": 0.23,
+    "na": 0.02
+  },
+
+  "sbm_44": {
+    "me": 2450,
+    "cp": 44,
+    "sid_lys": 2.6,
+    "sid_met": 0.6,
+    "sid_metcys": 1.3,
+    "sid_thr": 1.65,
+    "sid_trp": 0.58,
+    "sid_arg": 2.9,
+    "ca": 0.29,
+    "avp": 0.23,
+    "na": 0.02
+  },
+
+  "canola_meal_36": {
+    "me": 2100,
+    "cp": 36,
+    "sid_lys": 1.65,
+    "sid_met": 0.6,
+    "sid_metcys": 1.15,
+    "sid_thr": 1.3,
+    "sid_trp": 0.45,
+    "sid_arg": 1.85,
+    "ca": 0.7,
+    "avp": 0.35,
+    "na": 0.02
+  },
+
+  "rice broken": {
+    "me": 3200,
+    "cp": 7.5,
+    "sid_lys": 0.25,
+    "sid_met": 0.17,
+    "sid_metcys": 0.34,
+    "sid_thr": 0.24,
+    "sid_trp": 0.06,
+    "sid_arg": 0.33,
+    "ca": 0.02,
+    "avp": 0.08,
+    "na": 0.02
+  },
+
+  "millet/bajra": {
+    "me": 3200,
+    "cp": 11.0,
+    "sid_lys": 0.3,
+    "sid_met": 0.22,
+    "sid_metcys": 0.45,
+    "sid_thr": 0.3,
+    "sid_trp": 0.09,
+    "sid_arg": 0.35,
+    "ca": 0.03,
+    "avp": 0.1,
+    "na": 0.02
+  },
+
+  "fish meal": {
+    "me": 2900,
+    "cp": 54.0,
+    "sid_lys": 3.9,
+    "sid_met": 1.4,
+    "sid_metcys": 2.1,
+    "sid_thr": 2.3,
+    "sid_trp": 0.55,
+    "sid_arg": 3.1,
+    "ca": 5.0,
+    "avp": 2.8,
+    "na": 0.6
+  },
+
+  "fish meal 54": {
+    "me": 2900,
+    "cp": 54.0,
+    "sid_lys": 3.9,
+    "sid_met": 1.4,
+    "sid_metcys": 2.1,
+    "sid_thr": 2.3,
+    "sid_trp": 0.55,
+    "sid_arg": 3.1,
+    "ca": 5.0,
+    "avp": 2.8,
+    "na": 0.6
+  },
+
+  "dl_met": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 99,
+    "sid_metcys": 99,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "dlm": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 99,
+    "sid_metcys": 99,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "dlm 99": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 99,
+    "sid_metcys": 99,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "oil": {
+    "me": 8800,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "soyabean oil": {
+    "me": 8800,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "salt": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 39.3
+  },
+
+  "l acid": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "choline chloride": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "anti coccidial": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "toxin binder": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "phytase": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "nsps": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  },
+
+  "protease": {
+    "me": 0,
+    "cp": 0,
+    "sid_lys": 0,
+    "sid_met": 0,
+    "sid_metcys": 0,
+    "sid_thr": 0,
+    "sid_trp": 0,
+    "sid_arg": 0,
+    "ca": 0,
+    "avp": 0,
+    "na": 0
+  }
+}

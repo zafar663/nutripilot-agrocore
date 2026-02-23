@@ -1,0 +1,3818 @@
+{
+  "sample": [
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Dry Matter",
+      "inferred_key": "dm",
+      "values": [
+        86.3,
+        1,
+        83.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein (CP)",
+      "inferred_key": "cp",
+      "values": [
+        1.91,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Fiber (CF)",
+      "inferred_key": "cf",
+      "values": [
+        9.69,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. CF Swine - Ether Extract (EE)",
+      "inferred_key": "ee",
+      "values": [
+        0.29,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "NDF",
+      "inferred_key": "ndf",
+      "values": [
+        37.1,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "ADF",
+      "inferred_key": "adf",
+      "values": [
+        15.1,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "N-Free Extract (NFE)",
+      "inferred_key": "nfe",
+      "values": [
+        71.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gross Energy",
+      "inferred_key": "ge",
+      "values": [
+        3687,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        1731
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 26,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Ash, %",
+      "inferred_key": "ash",
+      "values": [
+        2.5,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein, %",
+      "inferred_key": "cp",
+      "values": [
+        1.91,
+        100
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Lysine, %",
+      "inferred_key": "total_lys",
+      "values": [
+        0.1,
+        5.24
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Methionine, %",
+      "inferred_key": "total_met",
+      "values": [
+        0.03,
+        1.57
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Met + Cys, %",
+      "inferred_key": "total_metcys",
+      "values": [
+        0.08,
+        4.19
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Threonine, %",
+      "inferred_key": "total_thr",
+      "values": [
+        0.11,
+        5.76
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Arginine, %",
+      "inferred_key": "total_arg",
+      "values": [
+        0.11,
+        5.76
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gly + Ser, %",
+      "inferred_key": "total_gly_ser",
+      "values": [
+        0.26,
+        13.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Valine, %",
+      "inferred_key": "total_val",
+      "values": [
+        0.11,
+        5.76
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Isoleucine, %",
+      "inferred_key": "total_ile",
+      "values": [
+        0.08,
+        4.19
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Leucine, %",
+      "inferred_key": "total_leu",
+      "values": [
+        0.16,
+        8.38
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Histidine, %",
+      "inferred_key": "total_his",
+      "values": [
+        0.05,
+        2.62
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phenylalanine, %",
+      "inferred_key": "total_phe",
+      "values": [
+        0.1,
+        5.24
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phe + Tyr, %",
+      "inferred_key": "total_phe_tyr",
+      "values": [
+        0.17,
+        8.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Alanine, %",
+      "inferred_key": "total_ala",
+      "values": [
+        0.12,
+        6.28
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Tyrosine, %",
+      "inferred_key": "total_tyr",
+      "values": [
+        0.07,
+        3.66
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glycine, %",
+      "inferred_key": "total_gly",
+      "values": [
+        0.13,
+        6.81
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Serine, %",
+      "inferred_key": "total_ser",
+      "values": [
+        0.13,
+        6.81
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glutamic Acid², %",
+      "inferred_key": "total_glu",
+      "values": [
+        0.08,
+        4.04
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Asparagine², %",
+      "inferred_key": "total_asn",
+      "values": [
+        0.09,
+        4.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 27,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Aspartic Acid², %",
+      "inferred_key": "total_asp",
+      "values": [
+        0.11,
+        5.77
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Dry Matter",
+      "inferred_key": "dm",
+      "values": [
+        90.2,
+        13,
+        1.43,
+        86.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein (CP)",
+      "inferred_key": "cp",
+      "values": [
+        30.5,
+        13,
+        1.67,
+        66.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Fiber (CF)",
+      "inferred_key": "cf",
+      "values": [
+        7.9,
+        7,
+        1.99,
+        28.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. CF Swine - Ether Extract (EE)",
+      "inferred_key": "ee",
+      "values": [
+        7.68,
+        13,
+        0.91
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "NDF",
+      "inferred_key": "ndf",
+      "values": [
+        48.5,
+        6,
+        7.81,
+        88.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. NDF Swine - Digestible EE Poultry",
+      "inferred_key": "ee",
+      "values": [
+        6.79
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "ADF",
+      "inferred_key": "adf",
+      "values": [
+        11.9,
+        2,
+        3.43,
+        85
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. ADF Swine - Digestible EE Swine",
+      "inferred_key": "ee",
+      "values": [
+        6.53
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "N-Free Extract (NFE)",
+      "inferred_key": "nfe",
+      "values": [
+        40.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. NFE Poultry",
+      "inferred_key": "nfe",
+      "values": [
+        42
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Digestible NFE Poultry",
+      "inferred_key": "nfe",
+      "values": [
+        17.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Undig. NFE + CF Poultry",
+      "inferred_key": "cf",
+      "values": [
+        31.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gross Energy",
+      "inferred_key": "ge",
+      "values": [
+        4779,
+        8,
+        152
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Poultry Digestible Energy",
+      "inferred_key": "de_poultry",
+      "values": [
+        3123
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        2410,
+        2930
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Metab. Energy - Net Energy",
+      "inferred_key": "amen",
+      "values": [
+        1970
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Net Energy",
+      "inferred_key": "ne",
+      "values": [
+        1948
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Hens Digestible Energy",
+      "inferred_key": "de_hens",
+      "values": [
+        3381
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        2504,
+        3148
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Net Energy",
+      "inferred_key": "ne",
+      "values": [
+        2042,
+        2129
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Ash, %",
+      "inferred_key": "ash",
+      "values": [
+        3.43,
+        13,
+        1.15
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Manganese (Mn)",
+      "inferred_key": "mn_mg_kg",
+      "values": [
+        9.33,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Iron (Fe)",
+      "inferred_key": "fe_mg_kg",
+      "values": [
+        402.7,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Potassium (K)",
+      "inferred_key": "k",
+      "values": [
+        0.17,
+        1,
+        4.38,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Sodium (Na)",
+      "inferred_key": "na",
+      "values": [
+        0.03,
+        2,
+        0.01,
+        36.9,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Chlorine (Cl)",
+      "inferred_key": "cl",
+      "values": [
+        0.14,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Sulfur (S)",
+      "inferred_key": "s",
+      "values": [
+        0.29,
+        2,
+        0.02
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Magnesium (Mg)",
+      "inferred_key": "mg",
+      "values": [
+        0.06,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Total Calcium (Ca)",
+      "inferred_key": "ca",
+      "values": [
+        0.04,
+        3,
+        0.05
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Total Phosphorus (P)",
+      "inferred_key": "p_total",
+      "values": [
+        0.38,
+        3,
+        0.14
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phytate P",
+      "inferred_key": "p_phytate",
+      "values": [
+        0.26,
+        2,
+        0.01
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 68,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Available P (Pav)",
+      "inferred_key": "avp",
+      "values": [
+        0.12
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein, %",
+      "inferred_key": "cp",
+      "values": [
+        30.5,
+        100,
+        24.9,
+        81.4,
+        23.1,
+        75.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Lysine, %",
+      "inferred_key": "total_lys",
+      "values": [
+        0.77,
+        2.51,
+        0.53,
+        69.6,
+        0.45,
+        59.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Methionine, %",
+      "inferred_key": "total_met",
+      "values": [
+        0.38,
+        1.24,
+        0.32,
+        85,
+        0.31,
+        81.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Met + Cys, %",
+      "inferred_key": "total_metcys",
+      "values": [
+        0.76,
+        2.49,
+        0.68,
+        89.8,
+        0.63,
+        83.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Threonine, %",
+      "inferred_key": "total_thr",
+      "values": [
+        1.07,
+        3.5,
+        0.79,
+        73.6,
+        0.73,
+        68
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Tryptophan, %",
+      "inferred_key": "total_trp",
+      "values": [
+        0.16,
+        0.51,
+        0.13,
+        85.3,
+        0.11,
+        73.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Arginine, %",
+      "inferred_key": "total_arg",
+      "values": [
+        1.19,
+        3.88,
+        0.99,
+        83.3,
+        0.95,
+        80.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gly + Ser, %",
+      "inferred_key": "total_gly_ser",
+      "values": [
+        2.48,
+        8.12,
+        1.93,
+        77.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Valine, %",
+      "inferred_key": "total_val",
+      "values": [
+        1.51,
+        4.93,
+        1.19,
+        79.1,
+        1.1,
+        73.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Isoleucine, %",
+      "inferred_key": "total_ile",
+      "values": [
+        1.13,
+        3.68,
+        0.91,
+        80.6,
+        0.83,
+        74.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Leucine, %",
+      "inferred_key": "total_leu",
+      "values": [
+        3.95,
+        12.9,
+        3.38,
+        85.5,
+        3.26,
+        82.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Histidine, %",
+      "inferred_key": "total_his",
+      "values": [
+        0.83,
+        2.7,
+        0.65,
+        78.8,
+        0.6,
+        73.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phenylalanine, %",
+      "inferred_key": "total_phe",
+      "values": [
+        1.55,
+        5.06,
+        1.29,
+        83.5,
+        1.24,
+        80.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phe + Tyr, %",
+      "inferred_key": "total_phe_tyr",
+      "values": [
+        2.57,
+        8.42,
+        2.09,
+        81.2,
+        2.05,
+        79.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Alanine, %",
+      "inferred_key": "total_ala",
+      "values": [
+        2.29,
+        7.48,
+        1.9,
+        83.1,
+        1.77,
+        77.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Cysteine, %",
+      "inferred_key": "total_cys",
+      "values": [
+        0.47,
+        1.54,
+        0.36,
+        76.5,
+        0.32,
+        68.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Tyrosine, %",
+      "inferred_key": "total_tyr",
+      "values": [
+        1.02,
+        3.32,
+        0.8,
+        78.5,
+        0.81,
+        80
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glycine, %",
+      "inferred_key": "total_gly",
+      "values": [
+        1.1,
+        3.6,
+        0.81,
+        73.2,
+        0.68,
+        61.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Serine, %",
+      "inferred_key": "total_ser",
+      "values": [
+        1.38,
+        4.52,
+        1.12,
+        81.5,
+        1.03,
+        74.3
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Proline, %",
+      "inferred_key": "total_pro",
+      "values": [
+        2.8,
+        9.16,
+        2.28,
+        81.5,
+        2.09,
+        74.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glutamine², %",
+      "inferred_key": "total_gln",
+      "values": [
+        3.55,
+        11.6,
+        3.04,
+        85.8,
+        2.78,
+        78.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glutamic Acid², %",
+      "inferred_key": "total_glu",
+      "values": [
+        2.23,
+        7.29,
+        1.91,
+        85.8,
+        1.74,
+        78.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Asparagine², %",
+      "inferred_key": "total_asn",
+      "values": [
+        0.88,
+        2.87,
+        0.64,
+        73.6,
+        0.59,
+        66.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 69,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Aspartic Acid², %",
+      "inferred_key": "total_asp",
+      "values": [
+        1.08,
+        3.52,
+        0.79,
+        73.6,
+        0.72,
+        66.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Dry Matter",
+      "inferred_key": "dm",
+      "values": [
+        91.6,
+        14,
+        1.11,
+        89
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein (CP)",
+      "inferred_key": "cp",
+      "values": [
+        42.1,
+        14,
+        1.01,
+        76
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Fiber (CF)",
+      "inferred_key": "cf",
+      "values": [
+        6.87,
+        8,
+        1.07,
+        21.3
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. CF Swine - Ether Extract (EE)",
+      "inferred_key": "ee",
+      "values": [
+        11.9,
+        12,
+        0.85
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "NDF",
+      "inferred_key": "ndf",
+      "values": [
+        30.1,
+        4,
+        5.44,
+        88.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. NDF Swine",
+      "inferred_key": "ndf",
+      "values": [
+        79.5,
+        10.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "ADF",
+      "inferred_key": "adf",
+      "values": [
+        17,
+        4,
+        1.4,
+        85
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. ADF Swine",
+      "inferred_key": "adf",
+      "values": [
+        83.5,
+        10.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "N-Free Extract (NFE)",
+      "inferred_key": "nfe",
+      "values": [
+        28
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. NFE Poultry",
+      "inferred_key": "nfe",
+      "values": [
+        45
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Digestible NFE Poultry",
+      "inferred_key": "nfe",
+      "values": [
+        12.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Undig. NFE + CF Poultry",
+      "inferred_key": "cf",
+      "values": [
+        22.3
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gross Energy",
+      "inferred_key": "ge",
+      "values": [
+        5313,
+        6,
+        37
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Poultry Digestible Energy",
+      "inferred_key": "de_poultry",
+      "values": [
+        4060
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        3060,
+        3620
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Metab. Energy - Net Energy",
+      "inferred_key": "amen",
+      "values": [
+        2456
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Net Energy",
+      "inferred_key": "ne",
+      "values": [
+        2484
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Hens Digestible Energy",
+      "inferred_key": "de_hens",
+      "values": [
+        4079
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        3126,
+        3781
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Net Energy",
+      "inferred_key": "ne",
+      "values": [
+        2550,
+        2573
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Ash, %",
+      "inferred_key": "ash",
+      "values": [
+        2.62,
+        8,
+        0.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Manganese (Mn)",
+      "inferred_key": "mn_mg_kg",
+      "values": [
+        7.23,
+        5,
+        1.61
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Iron (Fe)",
+      "inferred_key": "fe_mg_kg",
+      "values": [
+        126.4,
+        5,
+        31.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Potassium (K)",
+      "inferred_key": "k",
+      "values": [
+        0.51,
+        5,
+        0.1,
+        8.39,
+        5,
+        2.01
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Sodium (Na)",
+      "inferred_key": "na",
+      "values": [
+        0.07,
+        5,
+        0.02,
+        58.4,
+        5,
+        16.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Magnesium (Mg)",
+      "inferred_key": "mg",
+      "values": [
+        0.1,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Total Calcium (Ca)",
+      "inferred_key": "ca",
+      "values": [
+        0.01,
+        6,
+        0.01
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Total Phosphorus (P)",
+      "inferred_key": "p_total",
+      "values": [
+        0.48,
+        6,
+        0.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phytate P",
+      "inferred_key": "p_phytate",
+      "values": [
+        0.21,
+        1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Available P (Pav)",
+      "inferred_key": "avp",
+      "values": [
+        0.27
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. P Swine",
+      "inferred_key": "dig_p",
+      "values": [
+        48
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 70,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Dig. P Swine",
+      "inferred_key": "dig_p",
+      "values": [
+        0.23
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein, %",
+      "inferred_key": "cp",
+      "values": [
+        42.1,
+        100,
+        36.1,
+        85.8,
+        32.6,
+        83.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Lysine, %",
+      "inferred_key": "total_lys",
+      "values": [
+        1.32,
+        3.13,
+        1.06,
+        80.3,
+        0.82,
+        79.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Methionine, %",
+      "inferred_key": "total_met",
+      "values": [
+        0.79,
+        1.86,
+        0.71,
+        90.5,
+        0.68,
+        89.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Met + Cys, %",
+      "inferred_key": "total_metcys",
+      "values": [
+        1.56,
+        3.69,
+        1.33,
+        85.3,
+        1.26,
+        87.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Threonine, %",
+      "inferred_key": "total_thr",
+      "values": [
+        1.56,
+        3.69,
+        1.18,
+        75.6,
+        1.14,
+        78.3
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Tryptophan, %",
+      "inferred_key": "total_trp",
+      "values": [
+        0.23,
+        0.55,
+        0.18,
+        78,
+        0.18,
+        92.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Arginine, %",
+      "inferred_key": "total_arg",
+      "values": [
+        1.74,
+        4.13,
+        1.56,
+        89.6,
+        1.42,
+        86.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gly + Ser, %",
+      "inferred_key": "total_gly_ser",
+      "values": [
+        3.48,
+        8.25,
+        2.72,
+        78.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Valine, %",
+      "inferred_key": "total_val",
+      "values": [
+        2.02,
+        4.78,
+        1.73,
+        85.8,
+        1.47,
+        80.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Isoleucine, %",
+      "inferred_key": "total_ile",
+      "values": [
+        1.49,
+        3.54,
+        1.29,
+        86.4,
+        1.08,
+        80.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Leucine, %",
+      "inferred_key": "total_leu",
+      "values": [
+        4.78,
+        11.3,
+        4.33,
+        90.6,
+        3.75,
+        85.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Histidine, %",
+      "inferred_key": "total_his",
+      "values": [
+        1.19,
+        2.81,
+        1.01,
+        84.9,
+        0.89,
+        83.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phenylalanine, %",
+      "inferred_key": "total_phe",
+      "values": [
+        2.06,
+        4.89,
+        1.83,
+        88.7,
+        1.53,
+        84.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phe + Tyr, %",
+      "inferred_key": "total_phe_tyr",
+      "values": [
+        3.71,
+        8.8,
+        3.29,
+        88.6,
+        2.76,
+        84.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Alanine, %",
+      "inferred_key": "total_ala",
+      "values": [
+        3.04,
+        7.2,
+        2.67,
+        88,
+        2.45,
+        83.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Cysteine, %",
+      "inferred_key": "total_cys",
+      "values": [
+        0.77,
+        1.83,
+        0.61,
+        79.3,
+        0.58,
+        84.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Tyrosine, %",
+      "inferred_key": "total_tyr",
+      "values": [
+        1.65,
+        3.92,
+        1.46,
+        88.6,
+        1.23,
+        84.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glycine, %",
+      "inferred_key": "total_gly",
+      "values": [
+        1.56,
+        3.69,
+        1.17,
+        75.4,
+        1.41,
+        75.3
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Serine, %",
+      "inferred_key": "total_ser",
+      "values": [
+        1.92,
+        4.56,
+        1.55,
+        80.5,
+        1.54,
+        83.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Proline, %",
+      "inferred_key": "total_pro",
+      "values": [
+        3.6,
+        8.54,
+        3.13,
+        87,
+        1.95,
+        81
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glutamine², %",
+      "inferred_key": "total_gln",
+      "values": [
+        4.4,
+        10.4,
+        3.91,
+        88.9,
+        3.43,
+        85
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glutamic Acid², %",
+      "inferred_key": "total_glu",
+      "values": [
+        2.76,
+        6.55,
+        2.45,
+        88.9,
+        2.16,
+        85
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Asparagine², %",
+      "inferred_key": "total_asn",
+      "values": [
+        1.19,
+        2.83,
+        0.93,
+        77.7,
+        0.83,
+        81.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 71,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Aspartic Acid², %",
+      "inferred_key": "total_asp",
+      "values": [
+        1.47,
+        3.48,
+        1.14,
+        77.7,
+        1.02,
+        81.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Dry Matter",
+      "inferred_key": "dm",
+      "values": [
+        86.8,
+        85.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein (CP)",
+      "inferred_key": "cp",
+      "values": [
+        7.65,
+        86.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Fiber (CF)",
+      "inferred_key": "cf",
+      "values": [
+        1.69,
+        11.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. CF Swine",
+      "inferred_key": "cf",
+      "values": [
+        41.4,
+        3.65
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "NDF",
+      "inferred_key": "ndf",
+      "values": [
+        13.5,
+        92
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. NDF Swine",
+      "inferred_key": "ndf",
+      "values": [
+        66.4,
+        3.36
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "ADF",
+      "inferred_key": "adf",
+      "values": [
+        3.1,
+        90
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. ADF Swine",
+      "inferred_key": "adf",
+      "values": [
+        68.2,
+        3.29
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "N-Free Extract (NFE)",
+      "inferred_key": "nfe",
+      "values": [
+        72.7,
+        1.87
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. NFE Poultry",
+      "inferred_key": "nfe",
+      "values": [
+        89.2,
+        0.03
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Digestible NFE Poultry",
+      "inferred_key": "nfe",
+      "values": [
+        64.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Undig. NFE + CF Poultry",
+      "inferred_key": "cf",
+      "values": [
+        9.54
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gross Energy",
+      "inferred_key": "ge",
+      "values": [
+        3850
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Poultry Digestible Energy",
+      "inferred_key": "de_poultry",
+      "values": [
+        3373
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        3296,
+        3292
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Metab. Energy",
+      "inferred_key": "amen",
+      "values": [
+        3411,
+        2613
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Net Energy",
+      "inferred_key": "ne",
+      "values": [
+        2656
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Hens Digestible Energy",
+      "inferred_key": "de_hens",
+      "values": [
+        3455
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        3324,
+        3379
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Net Energy",
+      "inferred_key": "ne",
+      "values": [
+        2684,
+        2677
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Ash, %",
+      "inferred_key": "ash",
+      "values": [
+        1.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Manganese (Mn)",
+      "inferred_key": "mn_mg_kg",
+      "values": [
+        6.75
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Iron (Fe)",
+      "inferred_key": "fe_mg_kg",
+      "values": [
+        22.3
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Potassium (K)",
+      "inferred_key": "k",
+      "values": [
+        0.31,
+        2.18
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Sodium (Na)",
+      "inferred_key": "na",
+      "values": [
+        0.01,
+        21.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Chlorine (Cl)",
+      "inferred_key": "cl",
+      "values": [
+        0.09,
+        0.07
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Sulfur (S)",
+      "inferred_key": "s",
+      "values": [
+        0.08
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Magnesium (Mg)",
+      "inferred_key": "mg",
+      "values": [
+        0.11
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Total Calcium (Ca)",
+      "inferred_key": "ca",
+      "values": [
+        0.01
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Total Phosphorus (P)",
+      "inferred_key": "p_total",
+      "values": [
+        0.22
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phytate P",
+      "inferred_key": "p_phytate",
+      "values": [
+        0.18
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Available P (Pav)",
+      "inferred_key": "avp",
+      "values": [
+        0.05
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. P Poultry",
+      "inferred_key": "dig_p",
+      "values": [
+        40.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Dig. P Poultry",
+      "inferred_key": "dig_p",
+      "values": [
+        0.09
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. P Swine",
+      "inferred_key": "dig_p",
+      "values": [
+        44
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 78,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Dig. P Swine",
+      "inferred_key": "dig_p",
+      "values": [
+        0.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein, %",
+      "inferred_key": "cp",
+      "values": [
+        7.65,
+        100,
+        6.88,
+        89.9,
+        6.58,
+        86
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Lysine, %",
+      "inferred_key": "total_lys",
+      "values": [
+        0.25,
+        3.23,
+        0.2,
+        82.5,
+        0.2,
+        78.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Methionine, %",
+      "inferred_key": "total_met",
+      "values": [
+        0.15,
+        2.02,
+        0.14,
+        93.4,
+        0.13,
+        86.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Met + Cys, %",
+      "inferred_key": "total_metcys",
+      "values": [
+        0.32,
+        4.19,
+        0.28,
+        88.3,
+        0.28,
+        88.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Threonine, %",
+      "inferred_key": "total_thr",
+      "values": [
+        0.3,
+        3.87,
+        0.28,
+        93.9,
+        0.23,
+        78.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Tryptophan, %",
+      "inferred_key": "total_trp",
+      "values": [
+        0.06,
+        0.81,
+        0.06,
+        95.2,
+        0.05,
+        75.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Arginine, %",
+      "inferred_key": "total_arg",
+      "values": [
+        0.38,
+        5.03,
+        0.35,
+        91,
+        0.34,
+        89.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gly + Ser, %",
+      "inferred_key": "total_gly_ser",
+      "values": [
+        0.71,
+        9.22,
+        0.56,
+        78.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Valine, %",
+      "inferred_key": "total_val",
+      "values": [
+        0.39,
+        5.06,
+        0.34,
+        87.3,
+        0.34,
+        88.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Isoleucine, %",
+      "inferred_key": "total_ile",
+      "values": [
+        0.27,
+        3.52,
+        0.25,
+        94,
+        0.24,
+        89.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Leucine, %",
+      "inferred_key": "total_leu",
+      "values": [
+        0.94,
+        12.2,
+        0.89,
+        95.4,
+        0.84,
+        89.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Histidine, %",
+      "inferred_key": "total_his",
+      "values": [
+        0.23,
+        3.01,
+        0.21,
+        93.3,
+        0.2,
+        86.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phenylalanine, %",
+      "inferred_key": "total_phe",
+      "values": [
+        0.36,
+        4.64,
+        0.32,
+        90.5,
+        0.32,
+        89.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phe + Tyr, %",
+      "inferred_key": "total_phe_tyr",
+      "values": [
+        0.64,
+        8.36,
+        0.59,
+        92.7,
+        0.58,
+        91
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Alanine, %",
+      "inferred_key": "total_ala",
+      "values": [
+        0.59,
+        7.72,
+        0.48,
+        81,
+        0.51,
+        85.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Cysteine, %",
+      "inferred_key": "total_cys",
+      "values": [
+        0.17,
+        2.18,
+        0.14,
+        83.6,
+        0.15,
+        89.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Tyrosine, %",
+      "inferred_key": "total_tyr",
+      "values": [
+        0.28,
+        3.71,
+        0.27,
+        95.4,
+        0.26,
+        92.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glycine, %",
+      "inferred_key": "total_gly",
+      "values": [
+        0.31,
+        4.1,
+        0.24,
+        76,
+        0.25,
+        79.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Serine, %",
+      "inferred_key": "total_ser",
+      "values": [
+        0.39,
+        5.12,
+        0.32,
+        81.2,
+        0.33,
+        83.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Proline, %",
+      "inferred_key": "total_pro",
+      "values": [
+        0.75,
+        9.8,
+        0.71,
+        94.5,
+        0.62,
+        82.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glutamine², %",
+      "inferred_key": "total_gln",
+      "values": [
+        0.89,
+        11.6,
+        0.84,
+        94.4,
+        0.78,
+        87.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Glutamic Acid², %",
+      "inferred_key": "total_glu",
+      "values": [
+        0.56,
+        7.27,
+        0.53,
+        94.4,
+        0.49,
+        87.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Asparagine², %",
+      "inferred_key": "total_asn",
+      "values": [
+        0.27,
+        3.52,
+        0.22,
+        82.4,
+        0.22,
+        81.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 79,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Aspartic Acid², %",
+      "inferred_key": "total_asp",
+      "values": [
+        0.33,
+        4.33,
+        0.27,
+        82.4,
+        0.27,
+        81.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Dry Matter",
+      "inferred_key": "dm",
+      "values": [
+        90.5,
+        89.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein (CP)",
+      "inferred_key": "cp",
+      "values": [
+        7.98,
+        86.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Fiber (CF)",
+      "inferred_key": "cf",
+      "values": [
+        1.76,
+        12.2
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. CF Swine",
+      "inferred_key": "cf",
+      "values": [
+        41.4,
+        3.81
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "NDF",
+      "inferred_key": "ndf",
+      "values": [
+        14.1,
+        92
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. NDF Swine",
+      "inferred_key": "ndf",
+      "values": [
+        66.4,
+        3.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "ADF",
+      "inferred_key": "adf",
+      "values": [
+        3.23,
+        90
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. ADF Swine",
+      "inferred_key": "adf",
+      "values": [
+        68.2,
+        3.43
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "N-Free Extract (NFE)",
+      "inferred_key": "nfe",
+      "values": [
+        75.8,
+        1.95
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. NFE Poultry",
+      "inferred_key": "nfe",
+      "values": [
+        89.2,
+        0.03
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Digestible NFE Poultry",
+      "inferred_key": "nfe",
+      "values": [
+        67.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Undig. NFE + CF Poultry",
+      "inferred_key": "cf",
+      "values": [
+        9.95
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gross Energy",
+      "inferred_key": "ge",
+      "values": [
+        4014
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Poultry Digestible Energy",
+      "inferred_key": "de_poultry",
+      "values": [
+        3517
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        3437,
+        3433
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Metab. Energy",
+      "inferred_key": "amen",
+      "values": [
+        3556,
+        2725
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Net Energy",
+      "inferred_key": "ne",
+      "values": [
+        2766
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Hens Digestible Energy",
+      "inferred_key": "de_hens",
+      "values": [
+        3604
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Metabolizable Energy",
+      "inferred_key": "me",
+      "values": [
+        3463,
+        3525
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Net Energy",
+      "inferred_key": "ne",
+      "values": [
+        2796,
+        2793
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Ash, %",
+      "inferred_key": "ash",
+      "values": [
+        1.14
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Manganese (Mn)",
+      "inferred_key": "mn_mg_kg",
+      "values": [
+        7.03
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Iron (Fe)",
+      "inferred_key": "fe_mg_kg",
+      "values": [
+        23.3
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Potassium (K)",
+      "inferred_key": "k",
+      "values": [
+        0.33,
+        2.27
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Sodium (Na)",
+      "inferred_key": "na",
+      "values": [
+        0.01,
+        22
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Chlorine (Cl)",
+      "inferred_key": "cl",
+      "values": [
+        0.09,
+        0.07
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Sulfur (S)",
+      "inferred_key": "s",
+      "values": [
+        0.08
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Magnesium (Mg)",
+      "inferred_key": "mg",
+      "values": [
+        0.11
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Total Calcium (Ca)",
+      "inferred_key": "ca",
+      "values": [
+        0.02
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Total Phosphorus (P)",
+      "inferred_key": "p_total",
+      "values": [
+        0.23
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Phytate P",
+      "inferred_key": "p_phytate",
+      "values": [
+        0.18
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Available P (Pav)",
+      "inferred_key": "avp",
+      "values": [
+        0.05
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. P Poultry",
+      "inferred_key": "dig_p",
+      "values": [
+        40.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Dig. P Poultry",
+      "inferred_key": "dig_p",
+      "values": [
+        0.09
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Coef. Dig. P Swine",
+      "inferred_key": "dig_p",
+      "values": [
+        44
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 82,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Std. Dig. P Swine",
+      "inferred_key": "dig_p",
+      "values": [
+        0.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Crude Protein, %",
+      "inferred_key": "cp",
+      "values": [
+        7.98,
+        100,
+        7.17,
+        89.9,
+        6.86,
+        86
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Lysine, %",
+      "inferred_key": "total_lys",
+      "values": [
+        0.26,
+        3.23,
+        0.21,
+        82.5,
+        0.2,
+        78.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Methionine, %",
+      "inferred_key": "total_met",
+      "values": [
+        0.16,
+        2.02,
+        0.15,
+        93.4,
+        0.14,
+        86.4
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Met + Cys, %",
+      "inferred_key": "total_metcys",
+      "values": [
+        0.33,
+        4.19,
+        0.3,
+        88.3,
+        0.29,
+        88.1
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Threonine, %",
+      "inferred_key": "total_thr",
+      "values": [
+        0.31,
+        3.87,
+        0.29,
+        93.9,
+        0.24,
+        78.8
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Tryptophan, %",
+      "inferred_key": "total_trp",
+      "values": [
+        0.06,
+        0.81,
+        0.06,
+        95.2,
+        0.05,
+        75.7
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Arginine, %",
+      "inferred_key": "total_arg",
+      "values": [
+        0.4,
+        5.03,
+        0.36,
+        91,
+        0.36,
+        89.6
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Gly + Ser, %",
+      "inferred_key": "total_gly_ser",
+      "values": [
+        0.74,
+        9.22,
+        0.58,
+        78.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Valine, %",
+      "inferred_key": "total_val",
+      "values": [
+        0.4,
+        5.06,
+        0.35,
+        87.3,
+        0.36,
+        88.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Isoleucine, %",
+      "inferred_key": "total_ile",
+      "values": [
+        0.28,
+        3.52,
+        0.26,
+        94,
+        0.25,
+        89.9
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Leucine, %",
+      "inferred_key": "total_leu",
+      "values": [
+        0.98,
+        12.2,
+        0.93,
+        95.4,
+        0.87,
+        89.5
+      ]
+    },
+    {
+      "mode": "row_fallback_unresolved",
+      "table_no": "1.01",
+      "page": 83,
+      "title": "Table 1.01 - Chemical Composition, Digestibility, and Energy",
+      "heading_raw": null,
+      "heading_method": "none",
+      "row_label_raw": "Histidine, %",
+      "inferred_key": "total_his",
+      "values": [
+        0.24,
+        3.01,
+        0.22,
+        93.3,
+        0.21,
+        86.5
+      ]
+    }
+  ]
+}

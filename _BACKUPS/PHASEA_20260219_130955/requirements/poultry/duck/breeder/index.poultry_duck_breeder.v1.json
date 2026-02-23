@@ -1,0 +1,67 @@
+{
+    "map":  {
+                "generic":  {
+                                "late":  "poultry_duck_breeder_generic_late_v1",
+                                "prebreed":  "poultry_duck_breeder_generic_prebreed_v1",
+                                "postpeak":  "poultry_duck_breeder_generic_postpeak_v1",
+                                "starter":  "poultry_duck_breeder_generic_starter_v1",
+                                "grower":  "poultry_duck_breeder_generic_grower_v1",
+                                "peak":  "poultry_duck_breeder_generic_peak_v1",
+                                "developer":  "poultry_duck_breeder_generic_developer_v1"
+                            },
+                "pekin":  {
+                              "late":  "poultry_duck_breeder_pekin_late_v1",
+                              "prebreed":  "poultry_duck_breeder_pekin_prebreed_v1",
+                              "postpeak":  "poultry_duck_breeder_pekin_postpeak_v1",
+                              "starter":  "poultry_duck_breeder_pekin_starter_v1",
+                              "grower":  "poultry_duck_breeder_pekin_grower_v1",
+                              "peak":  "poultry_duck_breeder_pekin_peak_v1",
+                              "developer":  "poultry_duck_breeder_pekin_developer_v1"
+                          },
+                "muleard":  {
+                                "late":  "poultry_duck_breeder_muleard_late_v1",
+                                "prebreed":  "poultry_duck_breeder_muleard_prebreed_v1",
+                                "postpeak":  "poultry_duck_breeder_muleard_postpeak_v1",
+                                "starter":  "poultry_duck_breeder_muleard_starter_v1",
+                                "grower":  "poultry_duck_breeder_muleard_grower_v1",
+                                "peak":  "poultry_duck_breeder_muleard_peak_v1",
+                                "developer":  "poultry_duck_breeder_muleard_developer_v1"
+                            },
+                "grimaud":  {
+                                "late":  "poultry_duck_breeder_grimaud_late_v1",
+                                "prebreed":  "poultry_duck_breeder_grimaud_prebreed_v1",
+                                "postpeak":  "poultry_duck_breeder_grimaud_postpeak_v1",
+                                "starter":  "poultry_duck_breeder_grimaud_starter_v1",
+                                "grower":  "poultry_duck_breeder_grimaud_grower_v1",
+                                "peak":  "poultry_duck_breeder_grimaud_peak_v1",
+                                "developer":  "poultry_duck_breeder_grimaud_developer_v1"
+                            },
+                "muscovy":  {
+                                "late":  "poultry_duck_breeder_muscovy_late_v1",
+                                "prebreed":  "poultry_duck_breeder_muscovy_prebreed_v1",
+                                "postpeak":  "poultry_duck_breeder_muscovy_postpeak_v1",
+                                "starter":  "poultry_duck_breeder_muscovy_starter_v1",
+                                "grower":  "poultry_duck_breeder_muscovy_grower_v1",
+                                "peak":  "poultry_duck_breeder_muscovy_peak_v1",
+                                "developer":  "poultry_duck_breeder_muscovy_developer_v1"
+                            },
+                "cherry_valley":  {
+                                      "late":  "poultry_duck_breeder_cherry_valley_late_v1",
+                                      "prebreed":  "poultry_duck_breeder_cherry_valley_prebreed_v1",
+                                      "postpeak":  "poultry_duck_breeder_cherry_valley_postpeak_v1",
+                                      "starter":  "poultry_duck_breeder_cherry_valley_starter_v1",
+                                      "grower":  "poultry_duck_breeder_cherry_valley_grower_v1",
+                                      "peak":  "poultry_duck_breeder_cherry_valley_peak_v1",
+                                      "developer":  "poultry_duck_breeder_cherry_valley_developer_v1"
+                                  }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "breeder",
+                  "type":  "duck",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

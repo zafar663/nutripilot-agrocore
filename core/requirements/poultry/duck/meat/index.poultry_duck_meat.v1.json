@@ -1,0 +1,55 @@
+{
+    "map":  {
+                "generic":  {
+                                "prestarter":  "poultry_duck_meat_generic_prestarter_v1",
+                                "grower":  "poultry_duck_meat_generic_grower_v1",
+                                "finisher":  "poultry_duck_meat_generic_finisher_v1",
+                                "withdrawal":  "poultry_duck_meat_generic_withdrawal_v1",
+                                "starter":  "poultry_duck_meat_generic_starter_v1"
+                            },
+                "pekin":  {
+                              "prestarter":  "poultry_duck_meat_pekin_prestarter_v1",
+                              "grower":  "poultry_duck_meat_pekin_grower_v1",
+                              "finisher":  "poultry_duck_meat_pekin_finisher_v1",
+                              "withdrawal":  "poultry_duck_meat_pekin_withdrawal_v1",
+                              "starter":  "poultry_duck_meat_pekin_starter_v1"
+                          },
+                "muleard":  {
+                                "prestarter":  "poultry_duck_meat_muleard_prestarter_v1",
+                                "grower":  "poultry_duck_meat_muleard_grower_v1",
+                                "finisher":  "poultry_duck_meat_muleard_finisher_v1",
+                                "withdrawal":  "poultry_duck_meat_muleard_withdrawal_v1",
+                                "starter":  "poultry_duck_meat_muleard_starter_v1"
+                            },
+                "grimaud":  {
+                                "prestarter":  "poultry_duck_meat_grimaud_prestarter_v1",
+                                "grower":  "poultry_duck_meat_grimaud_grower_v1",
+                                "finisher":  "poultry_duck_meat_grimaud_finisher_v1",
+                                "withdrawal":  "poultry_duck_meat_grimaud_withdrawal_v1",
+                                "starter":  "poultry_duck_meat_grimaud_starter_v1"
+                            },
+                "muscovy":  {
+                                "prestarter":  "poultry_duck_meat_muscovy_prestarter_v1",
+                                "grower":  "poultry_duck_meat_muscovy_grower_v1",
+                                "finisher":  "poultry_duck_meat_muscovy_finisher_v1",
+                                "withdrawal":  "poultry_duck_meat_muscovy_withdrawal_v1",
+                                "starter":  "poultry_duck_meat_muscovy_starter_v1"
+                            },
+                "cherry_valley":  {
+                                      "prestarter":  "poultry_duck_meat_cherry_valley_prestarter_v1",
+                                      "grower":  "poultry_duck_meat_cherry_valley_grower_v1",
+                                      "finisher":  "poultry_duck_meat_cherry_valley_finisher_v1",
+                                      "withdrawal":  "poultry_duck_meat_cherry_valley_withdrawal_v1",
+                                      "starter":  "poultry_duck_meat_cherry_valley_starter_v1"
+                                  }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "meat",
+                  "type":  "duck",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

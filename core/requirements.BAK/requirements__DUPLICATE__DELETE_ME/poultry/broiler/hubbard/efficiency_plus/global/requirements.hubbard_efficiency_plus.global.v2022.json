@@ -1,0 +1,14 @@
+﻿{
+    "_meta":  {
+                  "version":  "2022",
+                  "source":  "breeder_pdf",
+                  "region":  "global",
+                  "locked":  false
+              },
+    "species":  "poultry",
+    "type":  "broiler",
+    "breed":  "hubbard_efficiency_plus",
+    "phases":  [
+
+               ]
+}

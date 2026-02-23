@@ -1,0 +1,53 @@
+{
+    "map":  {
+                "generic":  {
+                                "late":  "poultry_quail_layer_generic_late_v1",
+                                "early":  "poultry_quail_layer_generic_early_v1",
+                                "starter":  "poultry_quail_layer_generic_starter_v1",
+                                "mid":  "poultry_quail_layer_generic_mid_v1",
+                                "developer":  "poultry_quail_layer_generic_developer_v1",
+                                "grower":  "poultry_quail_layer_generic_grower_v1",
+                                "peak":  "poultry_quail_layer_generic_peak_v1",
+                                "prelay":  "poultry_quail_layer_generic_prelay_v1"
+                            },
+                "japanese_meat":  {
+                                      "late":  "poultry_quail_layer_japanese_meat_late_v1",
+                                      "early":  "poultry_quail_layer_japanese_meat_early_v1",
+                                      "starter":  "poultry_quail_layer_japanese_meat_starter_v1",
+                                      "mid":  "poultry_quail_layer_japanese_meat_mid_v1",
+                                      "developer":  "poultry_quail_layer_japanese_meat_developer_v1",
+                                      "grower":  "poultry_quail_layer_japanese_meat_grower_v1",
+                                      "peak":  "poultry_quail_layer_japanese_meat_peak_v1",
+                                      "prelay":  "poultry_quail_layer_japanese_meat_prelay_v1"
+                                  },
+                "coturnix":  {
+                                 "late":  "poultry_quail_layer_coturnix_late_v1",
+                                 "early":  "poultry_quail_layer_coturnix_early_v1",
+                                 "starter":  "poultry_quail_layer_coturnix_starter_v1",
+                                 "mid":  "poultry_quail_layer_coturnix_mid_v1",
+                                 "developer":  "poultry_quail_layer_coturnix_developer_v1",
+                                 "grower":  "poultry_quail_layer_coturnix_grower_v1",
+                                 "peak":  "poultry_quail_layer_coturnix_peak_v1",
+                                 "prelay":  "poultry_quail_layer_coturnix_prelay_v1"
+                             },
+                "japanese_layer":  {
+                                       "late":  "poultry_quail_layer_japanese_layer_late_v1",
+                                       "early":  "poultry_quail_layer_japanese_layer_early_v1",
+                                       "starter":  "poultry_quail_layer_japanese_layer_starter_v1",
+                                       "mid":  "poultry_quail_layer_japanese_layer_mid_v1",
+                                       "developer":  "poultry_quail_layer_japanese_layer_developer_v1",
+                                       "grower":  "poultry_quail_layer_japanese_layer_grower_v1",
+                                       "peak":  "poultry_quail_layer_japanese_layer_peak_v1",
+                                       "prelay":  "poultry_quail_layer_japanese_layer_prelay_v1"
+                                   }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "layer",
+                  "type":  "quail",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

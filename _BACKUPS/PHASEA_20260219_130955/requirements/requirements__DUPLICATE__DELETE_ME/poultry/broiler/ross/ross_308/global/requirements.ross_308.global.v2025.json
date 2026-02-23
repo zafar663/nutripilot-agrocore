@@ -1,0 +1,14 @@
+﻿{
+    "_meta":  {
+                  "version":  "2025",
+                  "source":  "breeder_pdf",
+                  "region":  "global",
+                  "locked":  false
+              },
+    "species":  "poultry",
+    "type":  "broiler",
+    "breed":  "ross_308",
+    "phases":  [
+
+               ]
+}

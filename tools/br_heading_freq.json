@@ -1,0 +1,462 @@
+[
+  {
+    "raw": "Tallow",
+    "norm": "tallow",
+    "count": 6
+  },
+  {
+    "raw": "Starch",
+    "norm": "starch",
+    "count": 6
+  },
+  {
+    "raw": "Milk Whey, Permeate",
+    "norm": "milk whey permeate",
+    "count": 3
+  },
+  {
+    "raw": "Bakery, By-products",
+    "norm": "bakery by products",
+    "count": 3
+  },
+  {
+    "raw": "Blood, Meal",
+    "norm": "blood meal",
+    "count": 3
+  },
+  {
+    "raw": "Lard",
+    "norm": "lard",
+    "count": 3
+  },
+  {
+    "raw": "Millet, Grain",
+    "norm": "millet grain",
+    "count": 3
+  },
+  {
+    "raw": "Soybean, Hulls",
+    "norm": "soybean hulls",
+    "count": 3
+  },
+  {
+    "raw": "Yeast, Brewer’s",
+    "norm": "yeast brewer s",
+    "count": 3
+  },
+  {
+    "raw": "Albumin",
+    "norm": "albumin",
+    "count": 2
+  },
+  {
+    "raw": "Algae (Spirulina platensis)",
+    "norm": "algae spirulina platensis",
+    "count": 2
+  },
+  {
+    "raw": "Algaroba, Flour",
+    "norm": "algaroba flour",
+    "count": 2
+  },
+  {
+    "raw": "Babassu, Meal",
+    "norm": "babassu meal",
+    "count": 2
+  },
+  {
+    "raw": "Barley, Grain",
+    "norm": "barley grain",
+    "count": 2
+  },
+  {
+    "raw": "Blood, Plasma",
+    "norm": "blood plasma",
+    "count": 2
+  },
+  {
+    "raw": "Blood, Red Cells",
+    "norm": "blood red cells",
+    "count": 2
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 38% CP",
+    "norm": "bovine meat and bone meal 38% cp",
+    "count": 2
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 43% CP",
+    "norm": "bovine meat and bone meal 43% cp",
+    "count": 2
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 48% CP",
+    "norm": "bovine meat and bone meal 48% cp",
+    "count": 2
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 52% CP",
+    "norm": "bovine meat and bone meal 52% cp",
+    "count": 2
+  },
+  {
+    "raw": "Bovine Meat and Bone, Meal 58% CP",
+    "norm": "bovine meat and bone meal 58% cp",
+    "count": 2
+  },
+  {
+    "raw": "Bread, By-products",
+    "norm": "bread by products",
+    "count": 2
+  },
+  {
+    "raw": "Canola, Meal",
+    "norm": "canola meal",
+    "count": 2
+  },
+  {
+    "raw": "Canola, Oil",
+    "norm": "canola oil",
+    "count": 2
+  },
+  {
+    "raw": "Casein",
+    "norm": "casein",
+    "count": 2
+  },
+  {
+    "raw": "Cassava, Whole",
+    "norm": "cassava whole",
+    "count": 2
+  },
+  {
+    "raw": "Castor Plant, Meal",
+    "norm": "castor plant meal",
+    "count": 2
+  },
+  {
+    "raw": "Citrus Pulp",
+    "norm": "citrus pulp",
+    "count": 2
+  },
+  {
+    "raw": "Coconut, Meal",
+    "norm": "coconut meal",
+    "count": 2
+  },
+  {
+    "raw": "Coconut, Oil",
+    "norm": "coconut oil",
+    "count": 2
+  },
+  {
+    "raw": "Corn, Bran with Solubles",
+    "norm": "corn bran with solubles",
+    "count": 2
+  },
+  {
+    "raw": "Corn, Germ",
+    "norm": "corn germ",
+    "count": 2
+  },
+  {
+    "raw": "Corn, Gluten Feed 21% CP",
+    "norm": "corn gluten feed 21% cp",
+    "count": 2
+  },
+  {
+    "raw": "Corn, Gluten Meal 60% CP",
+    "norm": "corn gluten meal 60% cp",
+    "count": 2
+  },
+  {
+    "raw": "Corn, Grain (Average)",
+    "norm": "corn grain average",
+    "count": 2
+  },
+  {
+    "raw": "Corn, Pre-cooked",
+    "norm": "corn pre cooked",
+    "count": 2
+  },
+  {
+    "raw": "Corn, Oil",
+    "norm": "corn oil",
+    "count": 2
+  },
+  {
+    "raw": "Cottonseed, Meal 28% CP",
+    "norm": "cottonseed meal 28% cp",
+    "count": 2
+  },
+  {
+    "raw": "Cottonseed, Meal 38% CP",
+    "norm": "cottonseed meal 38% cp",
+    "count": 2
+  },
+  {
+    "raw": "Cottonseed, Meal 43% CP",
+    "norm": "cottonseed meal 43% cp",
+    "count": 2
+  },
+  {
+    "raw": "Dendê Palm, Oil",
+    "norm": "dende palm oil",
+    "count": 2
+  },
+  {
+    "raw": "Feather, Meal 76% CP",
+    "norm": "feather meal 76% cp",
+    "count": 2
+  },
+  {
+    "raw": "Feather, Meal 84% CP",
+    "norm": "feather meal 84% cp",
+    "count": 2
+  },
+  {
+    "raw": "Fish, Meal 54% CP",
+    "norm": "fish meal 54% cp",
+    "count": 2
+  },
+  {
+    "raw": "Fish, Meal 62% CP",
+    "norm": "fish meal 62% cp",
+    "count": 2
+  },
+  {
+    "raw": "Lecithin",
+    "norm": "lecithin",
+    "count": 2
+  },
+  {
+    "raw": "Milk Skimmed, Powder",
+    "norm": "milk skimmed powder",
+    "count": 2
+  },
+  {
+    "raw": "Milk Whey, Powder",
+    "norm": "milk whey powder",
+    "count": 2
+  },
+  {
+    "raw": "Milk Whole, Powder",
+    "norm": "milk whole powder",
+    "count": 2
+  },
+  {
+    "raw": "Oats, Grain",
+    "norm": "oats grain",
+    "count": 2
+  },
+  {
+    "raw": "Ouricuri (Syagrus coronata), Meal",
+    "norm": "ouricuri syagrus coronata meal",
+    "count": 2
+  },
+  {
+    "raw": "Peanuts, Meal",
+    "norm": "peanuts meal",
+    "count": 2
+  },
+  {
+    "raw": "Pork Meat and Bone, Meal",
+    "norm": "pork meat and bone meal",
+    "count": 2
+  },
+  {
+    "raw": "Poultry, By-product Meal",
+    "norm": "poultry by product meal",
+    "count": 2
+  },
+  {
+    "raw": "Poultry, By-product High-fat Meal",
+    "norm": "poultry by product high fat meal",
+    "count": 2
+  },
+  {
+    "raw": "Poultry, Fat",
+    "norm": "poultry fat",
+    "count": 2
+  },
+  {
+    "raw": "Rice, Bran",
+    "norm": "rice bran",
+    "count": 2
+  },
+  {
+    "raw": "Rice, Broken",
+    "norm": "rice broken",
+    "count": 2
+  },
+  {
+    "raw": "Rice, Defatted Bran",
+    "norm": "rice defatted bran",
+    "count": 2
+  },
+  {
+    "raw": "Rye, Grain",
+    "norm": "rye grain",
+    "count": 2
+  },
+  {
+    "raw": "Shrimp, By-product Meal",
+    "norm": "shrimp by product meal",
+    "count": 2
+  },
+  {
+    "raw": "Sorghum, Grain",
+    "norm": "sorghum grain",
+    "count": 2
+  },
+  {
+    "raw": "Sorghum, Grain High Tannin",
+    "norm": "sorghum grain high tannin",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Acid Oil",
+    "norm": "soybean acid oil",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Degummed Oil",
+    "norm": "soybean degummed oil",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Full-fat Extruded",
+    "norm": "soybean full fat extruded",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Full-fat Micronized",
+    "norm": "soybean full fat micronized",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Full-fat Roasted",
+    "norm": "soybean full fat roasted",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Meal 44.5% CP",
+    "norm": "soybean meal 44.5% cp",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Meal 46.5% CP",
+    "norm": "soybean meal 46.5% cp",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Meal 48% CP",
+    "norm": "soybean meal 48% cp",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Protein Concentrate",
+    "norm": "soybean protein concentrate",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Protein Isolate",
+    "norm": "soybean protein isolate",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Semi-defatted Extruded",
+    "norm": "soybean semi defatted extruded",
+    "count": 2
+  },
+  {
+    "raw": "Soybean, Semi-defatted Roasted",
+    "norm": "soybean semi defatted roasted",
+    "count": 2
+  },
+  {
+    "raw": "Sugar",
+    "norm": "sugar",
+    "count": 2
+  },
+  {
+    "raw": "Sugarcane, Juice",
+    "norm": "sugarcane juice",
+    "count": 2
+  },
+  {
+    "raw": "Sugarcane, Molasses",
+    "norm": "sugarcane molasses",
+    "count": 2
+  },
+  {
+    "raw": "Sugarcane, Molasses Dried",
+    "norm": "sugarcane molasses dried",
+    "count": 2
+  },
+  {
+    "raw": "Sunflower, Meal",
+    "norm": "sunflower meal",
+    "count": 2
+  },
+  {
+    "raw": "Sweet Potato, Flour",
+    "norm": "sweet potato flour",
+    "count": 2
+  },
+  {
+    "raw": "Triticale, Grain",
+    "norm": "triticale grain",
+    "count": 2
+  },
+  {
+    "raw": "Wheat, Bran",
+    "norm": "wheat bran",
+    "count": 2
+  },
+  {
+    "raw": "Wheat, Dark Flour",
+    "norm": "wheat dark flour",
+    "count": 2
+  },
+  {
+    "raw": "Wheat, Flour",
+    "norm": "wheat flour",
+    "count": 2
+  },
+  {
+    "raw": "Wheat, Germ",
+    "norm": "wheat germ",
+    "count": 2
+  },
+  {
+    "raw": "Wheat, Gluten",
+    "norm": "wheat gluten",
+    "count": 2
+  },
+  {
+    "raw": "Wheat, Grain",
+    "norm": "wheat grain",
+    "count": 2
+  },
+  {
+    "raw": "Wheat, Screenings",
+    "norm": "wheat screenings",
+    "count": 2
+  },
+  {
+    "raw": "Yeast, Alcohol Distiller’s",
+    "norm": "yeast alcohol distiller s",
+    "count": 2
+  },
+  {
+    "raw": "Glucose",
+    "norm": "glucose",
+    "count": 1
+  },
+  {
+    "raw": "Lactose",
+    "norm": "lactose",
+    "count": 1
+  }
+]

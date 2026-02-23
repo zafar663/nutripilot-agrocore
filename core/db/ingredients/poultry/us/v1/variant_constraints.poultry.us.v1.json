@@ -1,0 +1,23 @@
+﻿{
+  "_LOCK": {
+    "id": "variant_constraints.poultry.us.v1",
+    "note": "Governance layer: inclusion limits and QA flags.",
+    "mode": "structured"
+  },
+  "constraints": {
+    "corn_grain": {
+      "defaults": {
+        "min_inclusion_pct": 0,
+        "soft_warn_pct": 70
+      },
+      "qa_flags": [
+        "mycotoxin_screen",
+        "moisture_check",
+        "bulk_density_check"
+      ],
+      "notes": [
+        "Corn above 70% triggers advisory warning only. No hard cap. Nutrient constraints determine practical maximum."
+      ]
+    }
+  }
+}

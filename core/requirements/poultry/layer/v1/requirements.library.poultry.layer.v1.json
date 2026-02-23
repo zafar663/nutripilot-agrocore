@@ -1,0 +1,307 @@
+{
+  "_LOCK": {
+    "meta": {
+      "name": "poultry_layer_requirements_library",
+      "version": "v1",
+      "basis": "as-fed",
+      "aa_basis_supported": [
+        "total",
+        "sid"
+      ],
+      "energy_units": [
+        "kcal_per_kg",
+        "mj_per_kg"
+      ],
+      "notes": "Option B: multi-genetic layer requirements via inheritance. Numbers are baseline defaults; refine per genetics later."
+    }
+  },
+  "profiles": {
+    "poultry_layer_generic_prelay_v1": {
+      "label": "Layer Pre-lay (Generic) v1",
+      "phase": "prelay",
+      "targets": {
+        "me_kcal_per_kg": 2850,
+        "cp_pct": 18,
+        "ca_pct": 2.2,
+        "avp_pct": 0.45,
+        "na_pct": 0.18,
+        "sid_lys_pct": 0.82,
+        "sid_met_pct": 0.38,
+        "sid_metcys_pct": 0.62,
+        "sid_thr_pct": 0.6,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.92
+      },
+      "tolerance": {
+        "default_pct_of_target": 2
+      }
+    },
+    "poultry_layer_generic_early_v1": {
+      "label": "Layer Early Lay (Generic) v1",
+      "phase": "early",
+      "targets": {
+        "me_kcal_per_kg": 2800,
+        "cp_pct": 17.5,
+        "ca_pct": 3.6,
+        "avp_pct": 0.42,
+        "na_pct": 0.18,
+        "sid_lys_pct": 0.78,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.6,
+        "sid_thr_pct": 0.58,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.9
+      },
+      "tolerance": {
+        "default_pct_of_target": 2
+      }
+    },
+    "poultry_layer_generic_peak_v1": {
+      "label": "Layer Peak (Generic) v1",
+      "phase": "peak",
+      "targets": {
+        "me_kcal_per_kg": 2750,
+        "cp_pct": 17,
+        "ca_pct": 4.05,
+        "avp_pct": 0.4,
+        "na_pct": 0.17,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.35,
+        "sid_metcys_pct": 0.58,
+        "sid_thr_pct": 0.55,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.86
+      },
+      "tolerance": {
+        "default_pct_of_target": 2
+      }
+    },
+    "poultry_layer_generic_late_v1": {
+      "label": "Layer Late Lay (Generic) v1",
+      "phase": "late",
+      "targets": {
+        "me_kcal_per_kg": 2700,
+        "cp_pct": 16.5,
+        "ca_pct": 4.2,
+        "avp_pct": 0.38,
+        "na_pct": 0.16,
+        "sid_lys_pct": 0.7,
+        "sid_met_pct": 0.33,
+        "sid_metcys_pct": 0.55,
+        "sid_thr_pct": 0.52,
+        "sid_trp_pct": 0.14,
+        "sid_arg_pct": 0.82
+      },
+      "tolerance": {
+        "default_pct_of_target": 2
+      }
+    },
+    "poultry_layer_hyline_w36_prelay_v1": {
+      "label": "Layer Pre-lay (Hy-Line W-36) v1",
+      "phase": "prelay",
+      "inherits": "poultry_layer_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_hyline_w36_early_v1": {
+      "label": "Layer Early (Hy-Line W-36) v1",
+      "phase": "early",
+      "inherits": "poultry_layer_generic_early_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_hyline_w36_peak_v1": {
+      "label": "Layer Peak (Hy-Line W-36) v1",
+      "phase": "peak",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_hyline_w36_late_v1": {
+      "label": "Layer Late (Hy-Line W-36) v1",
+      "phase": "late",
+      "inherits": "poultry_layer_generic_late_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_hyline_brown_prelay_v1": {
+      "label": "Layer Pre-lay (Hy-Line Brown) v1",
+      "phase": "prelay",
+      "inherits": "poultry_layer_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_hyline_brown_early_v1": {
+      "label": "Layer Early (Hy-Line Brown) v1",
+      "phase": "early",
+      "inherits": "poultry_layer_generic_early_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_hyline_brown_peak_v1": {
+      "label": "Layer Peak (Hy-Line Brown) v1",
+      "phase": "peak",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_hyline_brown_late_v1": {
+      "label": "Layer Late (Hy-Line Brown) v1",
+      "phase": "late",
+      "inherits": "poultry_layer_generic_late_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_lohmann_lsl_prelay_v1": {
+      "label": "Layer Pre-lay (Lohmann LSL) v1",
+      "phase": "prelay",
+      "inherits": "poultry_layer_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_lohmann_lsl_early_v1": {
+      "label": "Layer Early (Lohmann LSL) v1",
+      "phase": "early",
+      "inherits": "poultry_layer_generic_early_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_lohmann_lsl_peak_v1": {
+      "label": "Layer Peak (Lohmann LSL) v1",
+      "phase": "peak",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_lohmann_lsl_late_v1": {
+      "label": "Layer Late (Lohmann LSL) v1",
+      "phase": "late",
+      "inherits": "poultry_layer_generic_late_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_lohmann_brown_prelay_v1": {
+      "label": "Layer Pre-lay (Lohmann Brown) v1",
+      "phase": "prelay",
+      "inherits": "poultry_layer_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_lohmann_brown_early_v1": {
+      "label": "Layer Early (Lohmann Brown) v1",
+      "phase": "early",
+      "inherits": "poultry_layer_generic_early_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_lohmann_brown_peak_v1": {
+      "label": "Layer Peak (Lohmann Brown) v1",
+      "phase": "peak",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_lohmann_brown_late_v1": {
+      "label": "Layer Late (Lohmann Brown) v1",
+      "phase": "late",
+      "inherits": "poultry_layer_generic_late_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_bovans_white_prelay_v1": {
+      "label": "Layer Pre-lay (Bovans White) v1",
+      "phase": "prelay",
+      "inherits": "poultry_layer_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_bovans_white_early_v1": {
+      "label": "Layer Early (Bovans White) v1",
+      "phase": "early",
+      "inherits": "poultry_layer_generic_early_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_bovans_white_peak_v1": {
+      "label": "Layer Peak (Bovans White) v1",
+      "phase": "peak",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_bovans_white_late_v1": {
+      "label": "Layer Late (Bovans White) v1",
+      "phase": "late",
+      "inherits": "poultry_layer_generic_late_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_isa_brown_prelay_v1": {
+      "label": "Layer Pre-lay (ISA Brown) v1",
+      "phase": "prelay",
+      "inherits": "poultry_layer_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_isa_brown_early_v1": {
+      "label": "Layer Early (ISA Brown) v1",
+      "phase": "early",
+      "inherits": "poultry_layer_generic_early_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_isa_brown_peak_v1": {
+      "label": "Layer Peak (ISA Brown) v1",
+      "phase": "peak",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_isa_brown_late_v1": {
+      "label": "Layer Late (ISA Brown) v1",
+      "phase": "late",
+      "inherits": "poultry_layer_generic_late_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_generic_rearing_v1": {
+      "label": "Layer Breeder Rearing (Generic) v1",
+      "production": "breeder",
+      "phase": "rearing",
+      "inherits": "poultry_layer_generic_early_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_generic_prelay_v1": {
+      "label": "Layer Breeder Prelay (Generic) v1",
+      "production": "breeder",
+      "phase": "prelay",
+      "inherits": "poultry_layer_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_generic_lay_v1": {
+      "label": "Layer Breeder Lay (Generic) v1",
+      "production": "breeder",
+      "phase": "lay",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_hyline_w36_rearing_v1": {
+      "label": "Layer Breeder Rearing (Hy-Line W-36) v1",
+      "production": "breeder",
+      "phase": "rearing",
+      "inherits": "poultry_layer_breeder_generic_rearing_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_hyline_w36_prelay_v1": {
+      "label": "Layer Breeder Prelay (Hy-Line W-36) v1",
+      "production": "breeder",
+      "phase": "prelay",
+      "inherits": "poultry_layer_breeder_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_hyline_w36_lay_v1": {
+      "label": "Layer Breeder Lay (Hy-Line W-36) v1",
+      "production": "breeder",
+      "phase": "lay",
+      "inherits": "poultry_layer_breeder_generic_lay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_lohmann_lsl_rearing_v1": {
+      "label": "Layer Breeder Rearing (Lohmann LSL) v1",
+      "production": "breeder",
+      "phase": "rearing",
+      "inherits": "poultry_layer_breeder_generic_rearing_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_lohmann_lsl_prelay_v1": {
+      "label": "Layer Breeder Prelay (Lohmann LSL) v1",
+      "production": "breeder",
+      "phase": "prelay",
+      "inherits": "poultry_layer_breeder_generic_prelay_v1",
+      "targets_override": {}
+    },
+    "poultry_layer_breeder_lohmann_lsl_lay_v1": {
+      "label": "Layer Breeder Lay (Lohmann LSL) v1",
+      "production": "breeder",
+      "phase": "lay",
+      "inherits": "poultry_layer_breeder_generic_lay_v1",
+      "targets_override": {}
+    }
+  }
+}

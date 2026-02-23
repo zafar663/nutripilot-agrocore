@@ -1,5 +1,5 @@
 {
-  "name": "agrocore",
-  "private": true,
-  "type": "module"
+    "name":  "nutripilot-agrocore-api",
+    "private":  true,
+    "type":  "module"
 }

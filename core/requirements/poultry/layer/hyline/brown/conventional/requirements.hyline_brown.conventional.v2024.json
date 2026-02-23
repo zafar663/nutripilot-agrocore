@@ -1,0 +1,14 @@
+﻿{
+    "_meta":  {
+                  "version":  "2024",
+                  "source":  "breeder_pdf",
+                  "region":  "conventional",
+                  "locked":  false
+              },
+    "species":  "poultry",
+    "type":  "layer",
+    "breed":  "hyline_brown",
+    "phases":  [
+
+               ]
+}

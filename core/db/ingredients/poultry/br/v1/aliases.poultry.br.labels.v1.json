@@ -1,0 +1,15 @@
+{
+  "_LOCK": {
+    "version": "v1",
+    "note": "auto-seeded (corn only). expand later."
+  },
+  "map": {
+    "corn grain (average)": "corn_grain_avg",
+    "corn grain average": "corn_grain_avg",
+    "corn": "corn_grain_avg",
+    "milho": "corn_grain_avg",
+    "milho grao": "corn_grain_avg",
+    "milho grao moido": "corn_grain_avg",
+    "milho moido": "corn_grain_avg"
+  }
+}

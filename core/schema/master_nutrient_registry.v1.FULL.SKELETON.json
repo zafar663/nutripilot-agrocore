@@ -1,0 +1,1502 @@
+﻿{
+    "_meta":  {
+                  "version":  "v1",
+                  "note":  "FULL nutrient registry skeleton generated from want list. IDs are placeholders (todo.*)."
+              },
+    "nutrients":  [
+                      {
+                          "key":  "me",
+                          "id":  "todo.me",
+                          "display_name":  "ME",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "unit_display_options":  [
+                                                       "kcal/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "amen",
+                          "id":  "todo.amen",
+                          "display_name":  "AMEN",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "unit_display_options":  [
+                                                       "kcal/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ne",
+                          "id":  "todo.ne",
+                          "display_name":  "NE",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "unit_display_options":  [
+                                                       "kcal/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "cp",
+                          "id":  "todo.cp",
+                          "display_name":  "CP",
+                          "category":  "protein",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "starch",
+                          "id":  "todo.starch",
+                          "display_name":  "STARCH",
+                          "category":  "carbohydrate",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sugars",
+                          "id":  "todo.sugars",
+                          "display_name":  "SUGARS",
+                          "category":  "carbohydrate",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ee",
+                          "id":  "todo.ee",
+                          "display_name":  "EE",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "linoleic",
+                          "id":  "todo.linoleic",
+                          "display_name":  "LINOLEIC",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "linolenic",
+                          "id":  "todo.linolenic",
+                          "display_name":  "LINOLENIC",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "oleic",
+                          "id":  "todo.oleic",
+                          "display_name":  "OLEIC",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sfa",
+                          "id":  "todo.sfa",
+                          "display_name":  "SFA",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ufa",
+                          "id":  "todo.ufa",
+                          "display_name":  "UFA",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "cf",
+                          "id":  "todo.cf",
+                          "display_name":  "CF",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ndf",
+                          "id":  "todo.ndf",
+                          "display_name":  "NDF",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "adf",
+                          "id":  "todo.adf",
+                          "display_name":  "ADF",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "lignin",
+                          "id":  "todo.lignin",
+                          "display_name":  "LIGNIN",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "nsp_total",
+                          "id":  "todo.nsp_total",
+                          "display_name":  "NSP TOTAL",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "nsp_sol",
+                          "id":  "todo.nsp_sol",
+                          "display_name":  "NSP SOL",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "nsp_insol",
+                          "id":  "todo.nsp_insol",
+                          "display_name":  "NSP INSOL",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "beta_glucans",
+                          "id":  "todo.beta_glucans",
+                          "display_name":  "BETA GLUCANS",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "arabinoxylans",
+                          "id":  "todo.arabinoxylans",
+                          "display_name":  "ARABINOXYLANS",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ca",
+                          "id":  "todo.ca",
+                          "display_name":  "CA",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "p_total",
+                          "id":  "todo.p_total",
+                          "display_name":  "P TOTAL",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "avp",
+                          "id":  "todo.avp",
+                          "display_name":  "AVP",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "npp",
+                          "id":  "todo.npp",
+                          "display_name":  "NPP",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "dig_p",
+                          "id":  "todo.dig_p",
+                          "display_name":  "DIG P",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "mg",
+                          "id":  "todo.mg",
+                          "display_name":  "MG",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "s",
+                          "id":  "todo.s",
+                          "display_name":  "S",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "na",
+                          "id":  "todo.na",
+                          "display_name":  "NA",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "k",
+                          "id":  "todo.k",
+                          "display_name":  "K",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "cl",
+                          "id":  "todo.cl",
+                          "display_name":  "CL",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "deb",
+                          "id":  "todo.deb",
+                          "display_name":  "DEB",
+                          "category":  "electrolyte",
+                          "unit_canonical":  "mEq/kg",
+                          "unit_display_options":  [
+                                                       "mEq/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_lys",
+                          "id":  "todo.sid_lys",
+                          "display_name":  "SID LYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_met",
+                          "id":  "todo.sid_met",
+                          "display_name":  "SID MET",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_cys",
+                          "id":  "todo.sid_cys",
+                          "display_name":  "SID CYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_metcys",
+                          "id":  "todo.sid_metcys",
+                          "display_name":  "SID METCYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_thr",
+                          "id":  "todo.sid_thr",
+                          "display_name":  "SID THR",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_trp",
+                          "id":  "todo.sid_trp",
+                          "display_name":  "SID TRP",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_arg",
+                          "id":  "todo.sid_arg",
+                          "display_name":  "SID ARG",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_ile",
+                          "id":  "todo.sid_ile",
+                          "display_name":  "SID ILE",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_val",
+                          "id":  "todo.sid_val",
+                          "display_name":  "SID VAL",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_leu",
+                          "id":  "todo.sid_leu",
+                          "display_name":  "SID LEU",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_his",
+                          "id":  "todo.sid_his",
+                          "display_name":  "SID HIS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_phe",
+                          "id":  "todo.sid_phe",
+                          "display_name":  "SID PHE",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_tyr",
+                          "id":  "todo.sid_tyr",
+                          "display_name":  "SID TYR",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_gly",
+                          "id":  "todo.sid_gly",
+                          "display_name":  "SID GLY",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_ser",
+                          "id":  "todo.sid_ser",
+                          "display_name":  "SID SER",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_pro",
+                          "id":  "todo.sid_pro",
+                          "display_name":  "SID PRO",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_lys",
+                          "id":  "todo.total_lys",
+                          "display_name":  "TOTAL LYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_met",
+                          "id":  "todo.total_met",
+                          "display_name":  "TOTAL MET",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_cys",
+                          "id":  "todo.total_cys",
+                          "display_name":  "TOTAL CYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_metcys",
+                          "id":  "todo.total_metcys",
+                          "display_name":  "TOTAL METCYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_thr",
+                          "id":  "todo.total_thr",
+                          "display_name":  "TOTAL THR",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_trp",
+                          "id":  "todo.total_trp",
+                          "display_name":  "TOTAL TRP",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_arg",
+                          "id":  "todo.total_arg",
+                          "display_name":  "TOTAL ARG",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_ile",
+                          "id":  "todo.total_ile",
+                          "display_name":  "TOTAL ILE",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_val",
+                          "id":  "todo.total_val",
+                          "display_name":  "TOTAL VAL",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_leu",
+                          "id":  "todo.total_leu",
+                          "display_name":  "TOTAL LEU",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_his",
+                          "id":  "todo.total_his",
+                          "display_name":  "TOTAL HIS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_phe",
+                          "id":  "todo.total_phe",
+                          "display_name":  "TOTAL PHE",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_tyr",
+                          "id":  "todo.total_tyr",
+                          "display_name":  "TOTAL TYR",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_gly",
+                          "id":  "todo.total_gly",
+                          "display_name":  "TOTAL GLY",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_ser",
+                          "id":  "todo.total_ser",
+                          "display_name":  "TOTAL SER",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_pro",
+                          "id":  "todo.total_pro",
+                          "display_name":  "TOTAL PRO",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_a",
+                          "id":  "todo.vit_a",
+                          "display_name":  "VIT A",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_d3",
+                          "id":  "todo.vit_d3",
+                          "display_name":  "VIT D3",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_e",
+                          "id":  "todo.vit_e",
+                          "display_name":  "VIT E",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_k",
+                          "id":  "todo.vit_k",
+                          "display_name":  "VIT K",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_b1",
+                          "id":  "todo.vit_b1",
+                          "display_name":  "VIT B1",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_b2",
+                          "id":  "todo.vit_b2",
+                          "display_name":  "VIT B2",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_b6",
+                          "id":  "todo.vit_b6",
+                          "display_name":  "VIT B6",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_b12",
+                          "id":  "todo.vit_b12",
+                          "display_name":  "VIT B12",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "niacin",
+                          "id":  "todo.niacin",
+                          "display_name":  "NIACIN",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "pantothenic_acid",
+                          "id":  "todo.pantothenic_acid",
+                          "display_name":  "PANTOTHENIC ACID",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "folic_acid",
+                          "id":  "todo.folic_acid",
+                          "display_name":  "FOLIC ACID",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "biotin",
+                          "id":  "todo.biotin",
+                          "display_name":  "BIOTIN",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "choline",
+                          "id":  "todo.choline",
+                          "display_name":  "CHOLINE",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "zn",
+                          "id":  "todo.zn",
+                          "display_name":  "ZN",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "mn",
+                          "id":  "todo.mn",
+                          "display_name":  "MN",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "cu",
+                          "id":  "todo.cu",
+                          "display_name":  "CU",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "fe",
+                          "id":  "todo.fe",
+                          "display_name":  "FE",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "i",
+                          "id":  "todo.i",
+                          "display_name":  "I",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "se",
+                          "id":  "todo.se",
+                          "display_name":  "SE",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      }
+                  ]
+}

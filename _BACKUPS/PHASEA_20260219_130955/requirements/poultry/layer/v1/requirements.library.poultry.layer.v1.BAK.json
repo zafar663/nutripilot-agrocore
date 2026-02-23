@@ -1,0 +1,75 @@
+﻿{
+  "_LOCK": { "meta": { "name": "poultry_layer_requirements_library", "version": "v1" } },
+  "profiles": {
+    "poultry_layer_generic_prelay_v1": {
+      "label": "Layer Pre-lay (Generic) v1",
+      "phase": "prelay",
+      "targets": {
+        "me_kcal_per_kg": 2750,
+        "cp_pct": 16.5,
+        "ca_pct": 2.50,
+        "avp_pct": 0.45,
+        "na_pct": 0.17,
+        "sid_lys_pct": 0.78,
+        "sid_met_pct": 0.38,
+        "sid_metcys_pct": 0.65,
+        "sid_thr_pct": 0.55,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.85
+      },
+      "tolerance": { "default_pct_of_target": 2.0 }
+    },
+
+    "poultry_layer_generic_peak_v1": {
+      "label": "Layer Peak (Generic) v1",
+      "phase": "peak",
+      "targets": {
+        "me_kcal_per_kg": 2800,
+        "cp_pct": 16.8,
+        "ca_pct": 4.10,
+        "avp_pct": 0.42,
+        "na_pct": 0.17,
+        "sid_lys_pct": 0.82,
+        "sid_met_pct": 0.40,
+        "sid_metcys_pct": 0.68,
+        "sid_thr_pct": 0.57,
+        "sid_trp_pct": 0.17,
+        "sid_arg_pct": 0.90
+      },
+      "tolerance": { "default_pct_of_target": 2.0 }
+    },
+
+    "poultry_layer_generic_postpeak_v1": {
+      "label": "Layer Post-peak (Generic) v1",
+      "phase": "postpeak",
+      "targets": {
+        "me_kcal_per_kg": 2750,
+        "cp_pct": 16.0,
+        "ca_pct": 4.20,
+        "avp_pct": 0.40,
+        "na_pct": 0.16,
+        "sid_lys_pct": 0.76,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.63,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.85
+      },
+      "tolerance": { "default_pct_of_target": 2.0 }
+    },
+
+    "poultry_layer_hyline_peak_v1": {
+      "label": "Layer Peak (Hy-Line) v1",
+      "phase": "peak",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": { "sid_lys_pct": 0.83 }
+    },
+
+    "poultry_layer_lohmann_peak_v1": {
+      "label": "Layer Peak (Lohmann) v1",
+      "phase": "peak",
+      "inherits": "poultry_layer_generic_peak_v1",
+      "targets_override": { "sid_lys_pct": 0.82 }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+﻿{
+  "_LOCK": {
+    "id": "ingredient_metadata.poultry.us.v1",
+    "note": "Non-nutrient attributes and classification of ingredient variants.",
+    "mode": "structured"
+  },
+  "metadata": {
+    "corn_dm_8":  { "family": "corn_grain", "category": "energy", "basis": "as_fed", "moisture_pct": 8,  "tag": "very_dry" },
+    "corn_dm_9":  { "family": "corn_grain", "category": "energy", "basis": "as_fed", "moisture_pct": 9,  "tag": "very_dry" },
+    "corn_dm_10": { "family": "corn_grain", "category": "energy", "basis": "as_fed", "moisture_pct": 10, "tag": "dry" },
+    "corn_dm_12": { "family": "corn_grain", "category": "energy", "basis": "as_fed", "moisture_pct": 12, "tag": "standard" },
+    "corn_dm_14": { "family": "corn_grain", "category": "energy", "basis": "as_fed", "moisture_pct": 14, "tag": "wet" },
+    "corn_dm_15": { "family": "corn_grain", "category": "energy", "basis": "as_fed", "moisture_pct": 15, "tag": "wet" }
+  }
+}

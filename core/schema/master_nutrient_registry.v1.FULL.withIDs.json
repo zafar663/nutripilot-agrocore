@@ -1,0 +1,1502 @@
+﻿{
+    "_meta":  {
+                  "version":  "v1",
+                  "note":  "FULL nutrient registry skeleton generated from want list. IDs are placeholders (todo.*)."
+              },
+    "nutrients":  [
+                      {
+                          "key":  "me",
+                          "id":  "energy.me_kcal_kg",
+                          "display_name":  "ME",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "unit_display_options":  [
+                                                       "kcal/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "amen",
+                          "id":  "energy.amen_kcal_kg",
+                          "display_name":  "AMEN",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "unit_display_options":  [
+                                                       "kcal/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ne",
+                          "id":  "energy.ne_kcal_kg",
+                          "display_name":  "NE",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "unit_display_options":  [
+                                                       "kcal/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "cp",
+                          "id":  "protein.cp_pct",
+                          "display_name":  "CP",
+                          "category":  "protein",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "starch",
+                          "id":  "carb.starch_pct",
+                          "display_name":  "STARCH",
+                          "category":  "carbohydrate",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sugars",
+                          "id":  "carb.sugars_pct",
+                          "display_name":  "SUGARS",
+                          "category":  "carbohydrate",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ee",
+                          "id":  "fat.ee_pct",
+                          "display_name":  "EE",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "linoleic",
+                          "id":  "fat.linoleic_pct",
+                          "display_name":  "LINOLEIC",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "linolenic",
+                          "id":  "fat.linolenic_pct",
+                          "display_name":  "LINOLENIC",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "oleic",
+                          "id":  "fat.oleic_pct",
+                          "display_name":  "OLEIC",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sfa",
+                          "id":  "fat.sfa_pct",
+                          "display_name":  "SFA",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ufa",
+                          "id":  "fat.ufa_pct",
+                          "display_name":  "UFA",
+                          "category":  "fat",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "cf",
+                          "id":  "fiber.cf_pct",
+                          "display_name":  "CF",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ndf",
+                          "id":  "fiber.ndf_pct",
+                          "display_name":  "NDF",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "adf",
+                          "id":  "fiber.adf_pct",
+                          "display_name":  "ADF",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "lignin",
+                          "id":  "fiber.lignin_pct",
+                          "display_name":  "LIGNIN",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "nsp_total",
+                          "id":  "fiber.nsp_total_pct",
+                          "display_name":  "NSP TOTAL",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "nsp_sol",
+                          "id":  "fiber.nsp_sol_pct",
+                          "display_name":  "NSP SOL",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "nsp_insol",
+                          "id":  "fiber.nsp_insol_pct",
+                          "display_name":  "NSP INSOL",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "beta_glucans",
+                          "id":  "fiber.beta_glucans_pct",
+                          "display_name":  "BETA GLUCANS",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "arabinoxylans",
+                          "id":  "fiber.arabinoxylans_pct",
+                          "display_name":  "ARABINOXYLANS",
+                          "category":  "fiber",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "ca",
+                          "id":  "min.ca_pct",
+                          "display_name":  "CA",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "p_total",
+                          "id":  "min.p_total_pct",
+                          "display_name":  "P TOTAL",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "avp",
+                          "id":  "min.p_avail_pct",
+                          "display_name":  "AVP",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "npp",
+                          "id":  "min.npp_pct",
+                          "display_name":  "NPP",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "dig_p",
+                          "id":  "min.dig_p_pct",
+                          "display_name":  "DIG P",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "mg",
+                          "id":  "min.mg_pct",
+                          "display_name":  "MG",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "s",
+                          "id":  "min.s_pct",
+                          "display_name":  "S",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "na",
+                          "id":  "min.na_pct",
+                          "display_name":  "NA",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "k",
+                          "id":  "min.k_pct",
+                          "display_name":  "K",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "cl",
+                          "id":  "min.cl_pct",
+                          "display_name":  "CL",
+                          "category":  "mineral",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "deb",
+                          "id":  "elec.deb_meq_kg",
+                          "display_name":  "DEB",
+                          "category":  "electrolyte",
+                          "unit_canonical":  "mEq/kg",
+                          "unit_display_options":  [
+                                                       "mEq/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_lys",
+                          "id":  "aa.sid_lys_pct",
+                          "display_name":  "SID LYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_met",
+                          "id":  "aa.sid_met_pct",
+                          "display_name":  "SID MET",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_cys",
+                          "id":  "aa.sid_cys_pct",
+                          "display_name":  "SID CYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_metcys",
+                          "id":  "aa.sid_met_cys_pct",
+                          "display_name":  "SID METCYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_thr",
+                          "id":  "aa.sid_thr_pct",
+                          "display_name":  "SID THR",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_trp",
+                          "id":  "aa.sid_trp_pct",
+                          "display_name":  "SID TRP",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_arg",
+                          "id":  "aa.sid_arg_pct",
+                          "display_name":  "SID ARG",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_ile",
+                          "id":  "aa.sid_ile_pct",
+                          "display_name":  "SID ILE",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_val",
+                          "id":  "aa.sid_val_pct",
+                          "display_name":  "SID VAL",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_leu",
+                          "id":  "aa.sid_leu_pct",
+                          "display_name":  "SID LEU",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_his",
+                          "id":  "aa.sid_his_pct",
+                          "display_name":  "SID HIS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_phe",
+                          "id":  "aa.sid_phe_pct",
+                          "display_name":  "SID PHE",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_tyr",
+                          "id":  "aa.sid_tyr_pct",
+                          "display_name":  "SID TYR",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_gly",
+                          "id":  "aa.sid_gly_pct",
+                          "display_name":  "SID GLY",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_ser",
+                          "id":  "aa.sid_ser_pct",
+                          "display_name":  "SID SER",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "sid_pro",
+                          "id":  "aa.sid_pro_pct",
+                          "display_name":  "SID PRO",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_lys",
+                          "id":  "aa.total_lys_pct",
+                          "display_name":  "TOTAL LYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_met",
+                          "id":  "aa.total_met_pct",
+                          "display_name":  "TOTAL MET",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_cys",
+                          "id":  "aa.total_cys_pct",
+                          "display_name":  "TOTAL CYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_metcys",
+                          "id":  "aa.total_met_cys_pct",
+                          "display_name":  "TOTAL METCYS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_thr",
+                          "id":  "aa.total_thr_pct",
+                          "display_name":  "TOTAL THR",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_trp",
+                          "id":  "aa.total_trp_pct",
+                          "display_name":  "TOTAL TRP",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_arg",
+                          "id":  "aa.total_arg_pct",
+                          "display_name":  "TOTAL ARG",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_ile",
+                          "id":  "aa.total_ile_pct",
+                          "display_name":  "TOTAL ILE",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_val",
+                          "id":  "aa.total_val_pct",
+                          "display_name":  "TOTAL VAL",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_leu",
+                          "id":  "aa.total_leu_pct",
+                          "display_name":  "TOTAL LEU",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_his",
+                          "id":  "aa.total_his_pct",
+                          "display_name":  "TOTAL HIS",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_phe",
+                          "id":  "aa.total_phe_pct",
+                          "display_name":  "TOTAL PHE",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_tyr",
+                          "id":  "aa.total_tyr_pct",
+                          "display_name":  "TOTAL TYR",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_gly",
+                          "id":  "aa.total_gly_pct",
+                          "display_name":  "TOTAL GLY",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_ser",
+                          "id":  "aa.total_ser_pct",
+                          "display_name":  "TOTAL SER",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "total_pro",
+                          "id":  "aa.total_pro_pct",
+                          "display_name":  "TOTAL PRO",
+                          "category":  "amino_acid",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_a",
+                          "id":  "vit.vit_a_IU_kg",
+                          "display_name":  "VIT A",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_d3",
+                          "id":  "vit.vit_d3_IU_kg",
+                          "display_name":  "VIT D3",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_e",
+                          "id":  "vit.vit_e_IU_kg",
+                          "display_name":  "VIT E",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_k",
+                          "id":  "vit.vit_k_mg_kg",
+                          "display_name":  "VIT K",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_b1",
+                          "id":  "vit.vit_b1_mg_kg",
+                          "display_name":  "VIT B1",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_b2",
+                          "id":  "vit.vit_b2_mg_kg",
+                          "display_name":  "VIT B2",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_b6",
+                          "id":  "vit.vit_b6_mg_kg",
+                          "display_name":  "VIT B6",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "vit_b12",
+                          "id":  "vit.vit_b12_mg_kg",
+                          "display_name":  "VIT B12",
+                          "category":  "other",
+                          "unit_canonical":  "%",
+                          "unit_display_options":  [
+                                                       "%"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "niacin",
+                          "id":  "vit.niacin_mg_kg",
+                          "display_name":  "NIACIN",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "pantothenic_acid",
+                          "id":  "vit.pantothenic_acid_mg_kg",
+                          "display_name":  "PANTOTHENIC ACID",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "folic_acid",
+                          "id":  "vit.folic_acid_mg_kg",
+                          "display_name":  "FOLIC ACID",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "biotin",
+                          "id":  "vit.biotin_mg_kg",
+                          "display_name":  "BIOTIN",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "choline",
+                          "id":  "vit.choline_mg_kg",
+                          "display_name":  "CHOLINE",
+                          "category":  "vitamin",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "zn",
+                          "id":  "trace.zn_mg_kg",
+                          "display_name":  "ZN",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "mn",
+                          "id":  "trace.mn_mg_kg",
+                          "display_name":  "MN",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "cu",
+                          "id":  "trace.cu_mg_kg",
+                          "display_name":  "CU",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "fe",
+                          "id":  "trace.fe_mg_kg",
+                          "display_name":  "FE",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "i",
+                          "id":  "trace.i_mg_kg",
+                          "display_name":  "I",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      },
+                      {
+                          "key":  "se",
+                          "id":  "trace.se_mg_kg",
+                          "display_name":  "SE",
+                          "category":  "trace_mineral",
+                          "unit_canonical":  "mg/kg",
+                          "unit_display_options":  [
+                                                       "mg/kg"
+                                                   ],
+                          "basis":  "as_fed",
+                          "derived":  false,
+                          "plan_access":  {
+                                              "pro":  true,
+                                              "core":  true,
+                                              "basic":  true,
+                                              "elite":  true
+                                          }
+                      }
+                  ]
+}

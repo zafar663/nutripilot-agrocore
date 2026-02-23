@@ -1,0 +1,21 @@
+﻿{
+  "_LOCK": {
+    "id": "variant_catalog.poultry.us.v1",
+    "note": "Family-to-variant mapping. Controls clarification and default selection.",
+    "mode": "structured"
+  },
+  "families": {
+    "corn_grain": {
+      "default_variant": "corn_dm_12",
+      "clarify_if_ambiguous": true,
+      "options": [
+        "corn_dm_8",
+        "corn_dm_9",
+        "corn_dm_10",
+        "corn_dm_12",
+        "corn_dm_14",
+        "corn_dm_15"
+      ]
+    }
+  }
+}

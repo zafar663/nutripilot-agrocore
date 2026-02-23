@@ -1,0 +1,14 @@
+﻿{
+    "_meta":  {
+                  "version":  "2024",
+                  "source":  "breeder_pdf",
+                  "region":  "global",
+                  "locked":  false
+              },
+    "species":  "poultry",
+    "type":  "turkey_commercial",
+    "breed":  "but",
+    "phases":  [
+
+               ]
+}

@@ -1,0 +1,105 @@
+﻿{
+  "_LOCK": {
+    "meta": {
+      "name": "poultry_broiler_requirements_library",
+      "version": "v1",
+      "basis": "as-fed",
+      "aa_basis_supported": ["total", "sid"],
+      "energy_units": ["kcal_per_kg", "mj_per_kg"]
+    }
+  },
+  "profiles": {
+    "poultry_broiler_generic_starter_v1": {
+      "label": "Broiler Starter (Generic) v1",
+      "phase": "starter",
+      "targets": {
+        "me_kcal_per_kg": 3000,
+        "cp_pct": 21.5,
+        "ca_pct": 0.95,
+        "avp_pct": 0.45,
+        "na_pct": 0.20,
+        "sid_lys_pct": 1.18,
+        "sid_met_pct": 0.56,
+        "sid_metcys_pct": 0.90,
+        "sid_thr_pct": 0.78,
+        "sid_trp_pct": 0.20,
+        "sid_arg_pct": 1.25
+      },
+      "tolerance": { "default_pct_of_target": 2.0 }
+    },
+    "poultry_broiler_generic_grower_v1": {
+      "label": "Broiler Grower (Generic) v1",
+      "phase": "grower",
+      "targets": {
+        "me_kcal_per_kg": 3100,
+        "cp_pct": 20.0,
+        "ca_pct": 0.85,
+        "avp_pct": 0.40,
+        "na_pct": 0.19,
+        "sid_lys_pct": 1.05,
+        "sid_met_pct": 0.50,
+        "sid_metcys_pct": 0.82,
+        "sid_thr_pct": 0.70,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 1.15
+      },
+      "tolerance": { "default_pct_of_target": 2.0 }
+    },
+    "poultry_broiler_generic_finisher_v1": {
+      "label": "Broiler Finisher (Generic) v1",
+      "phase": "finisher",
+      "targets": {
+        "me_kcal_per_kg": 3200,
+        "cp_pct": 18.5,
+        "ca_pct": 0.80,
+        "avp_pct": 0.35,
+        "na_pct": 0.18,
+        "sid_lys_pct": 0.92,
+        "sid_met_pct": 0.44,
+        "sid_metcys_pct": 0.73,
+        "sid_thr_pct": 0.62,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 1.02
+      },
+      "tolerance": { "default_pct_of_target": 2.0 }
+    },
+
+    "poultry_broiler_ross308_starter_v1": {
+      "label": "Broiler Starter (Ross 308) v1",
+      "phase": "starter",
+      "inherits": "poultry_broiler_generic_starter_v1",
+      "targets_override": { "sid_lys_pct": 1.20, "sid_arg_pct": 1.27 }
+    },
+    "poultry_broiler_ross308_grower_v1": {
+      "label": "Broiler Grower (Ross 308) v1",
+      "phase": "grower",
+      "inherits": "poultry_broiler_generic_grower_v1",
+      "targets_override": { "sid_lys_pct": 1.07 }
+    },
+    "poultry_broiler_ross308_finisher_v1": {
+      "label": "Broiler Finisher (Ross 308) v1",
+      "phase": "finisher",
+      "inherits": "poultry_broiler_generic_finisher_v1",
+      "targets_override": {}
+    },
+
+    "poultry_broiler_cobb500_starter_v1": {
+      "label": "Broiler Starter (Cobb 500) v1",
+      "phase": "starter",
+      "inherits": "poultry_broiler_generic_starter_v1",
+      "targets_override": { "sid_lys_pct": 1.19 }
+    },
+    "poultry_broiler_cobb500_grower_v1": {
+      "label": "Broiler Grower (Cobb 500) v1",
+      "phase": "grower",
+      "inherits": "poultry_broiler_generic_grower_v1",
+      "targets_override": {}
+    },
+    "poultry_broiler_cobb500_finisher_v1": {
+      "label": "Broiler Finisher (Cobb 500) v1",
+      "phase": "finisher",
+      "inherits": "poultry_broiler_generic_finisher_v1",
+      "targets_override": {}
+    }
+  }
+}

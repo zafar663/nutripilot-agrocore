@@ -1,18 +1,23 @@
 {
-  "name": "nutripilot-agrocore",
-  "private": true,
-  "engines": { "node": "20.x" },
-  "scripts": {
-    "start": "node agrocore/agrocore-server.mjs"
-  },
-  "dependencies": {
-    "axios": "^1.6.8",
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "file-type": "^19.0.0",
-    "multer": "^1.4.5-lts.1",
-    "pdf-parse": "^1.1.1",
-    "tesseract.js": "^5.0.5",
-    "xlsx": "^0.18.5"
-  }
+    "name": "nutripilot-agrocore-root",
+    "private": true,
+    "engines": {
+        "node": "20.x"
+    },
+    "scripts": {
+        "start": "node agrocore/START_AGROCORE_SERVER.mjs"
+    },
+    "dependencies": {
+        "axios": "^1.6.8",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.4",
+        "express": "^4.19.2",
+        "file-type": "^19.0.0",
+        "multer": "^1.4.5-lts.1",
+        "pdf-parse": "^1.1.4",
+        "pdfjs-dist": "^5.4.624",
+        "tesseract.js": "^5.0.5",
+        "xlsx": "^0.18.5"
+    },
+    "type": "module"
 }

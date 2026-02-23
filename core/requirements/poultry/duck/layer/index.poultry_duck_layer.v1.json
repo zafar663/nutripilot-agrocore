@@ -1,0 +1,73 @@
+{
+    "map":  {
+                "generic":  {
+                                "late":  "poultry_duck_layer_generic_late_v1",
+                                "early":  "poultry_duck_layer_generic_early_v1",
+                                "starter":  "poultry_duck_layer_generic_starter_v1",
+                                "mid":  "poultry_duck_layer_generic_mid_v1",
+                                "developer":  "poultry_duck_layer_generic_developer_v1",
+                                "grower":  "poultry_duck_layer_generic_grower_v1",
+                                "peak":  "poultry_duck_layer_generic_peak_v1",
+                                "prelay":  "poultry_duck_layer_generic_prelay_v1"
+                            },
+                "pekin":  {
+                              "late":  "poultry_duck_layer_pekin_late_v1",
+                              "early":  "poultry_duck_layer_pekin_early_v1",
+                              "starter":  "poultry_duck_layer_pekin_starter_v1",
+                              "mid":  "poultry_duck_layer_pekin_mid_v1",
+                              "developer":  "poultry_duck_layer_pekin_developer_v1",
+                              "grower":  "poultry_duck_layer_pekin_grower_v1",
+                              "peak":  "poultry_duck_layer_pekin_peak_v1",
+                              "prelay":  "poultry_duck_layer_pekin_prelay_v1"
+                          },
+                "muleard":  {
+                                "late":  "poultry_duck_layer_muleard_late_v1",
+                                "early":  "poultry_duck_layer_muleard_early_v1",
+                                "starter":  "poultry_duck_layer_muleard_starter_v1",
+                                "mid":  "poultry_duck_layer_muleard_mid_v1",
+                                "developer":  "poultry_duck_layer_muleard_developer_v1",
+                                "grower":  "poultry_duck_layer_muleard_grower_v1",
+                                "peak":  "poultry_duck_layer_muleard_peak_v1",
+                                "prelay":  "poultry_duck_layer_muleard_prelay_v1"
+                            },
+                "grimaud":  {
+                                "late":  "poultry_duck_layer_grimaud_late_v1",
+                                "early":  "poultry_duck_layer_grimaud_early_v1",
+                                "starter":  "poultry_duck_layer_grimaud_starter_v1",
+                                "mid":  "poultry_duck_layer_grimaud_mid_v1",
+                                "developer":  "poultry_duck_layer_grimaud_developer_v1",
+                                "grower":  "poultry_duck_layer_grimaud_grower_v1",
+                                "peak":  "poultry_duck_layer_grimaud_peak_v1",
+                                "prelay":  "poultry_duck_layer_grimaud_prelay_v1"
+                            },
+                "muscovy":  {
+                                "late":  "poultry_duck_layer_muscovy_late_v1",
+                                "early":  "poultry_duck_layer_muscovy_early_v1",
+                                "starter":  "poultry_duck_layer_muscovy_starter_v1",
+                                "mid":  "poultry_duck_layer_muscovy_mid_v1",
+                                "developer":  "poultry_duck_layer_muscovy_developer_v1",
+                                "grower":  "poultry_duck_layer_muscovy_grower_v1",
+                                "peak":  "poultry_duck_layer_muscovy_peak_v1",
+                                "prelay":  "poultry_duck_layer_muscovy_prelay_v1"
+                            },
+                "cherry_valley":  {
+                                      "late":  "poultry_duck_layer_cherry_valley_late_v1",
+                                      "early":  "poultry_duck_layer_cherry_valley_early_v1",
+                                      "starter":  "poultry_duck_layer_cherry_valley_starter_v1",
+                                      "mid":  "poultry_duck_layer_cherry_valley_mid_v1",
+                                      "developer":  "poultry_duck_layer_cherry_valley_developer_v1",
+                                      "grower":  "poultry_duck_layer_cherry_valley_grower_v1",
+                                      "peak":  "poultry_duck_layer_cherry_valley_peak_v1",
+                                      "prelay":  "poultry_duck_layer_cherry_valley_prelay_v1"
+                                  }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "layer",
+                  "type":  "duck",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

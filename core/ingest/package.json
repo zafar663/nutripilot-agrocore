@@ -1,5 +1,5 @@
-﻿{
-  "name": "nutripilot-core-ingest",
-  "private": true,
-  "type": "module"
+{
+    "name":  "nutripilot-agrocore-ingest",
+    "private":  true,
+    "type":  "module"
 }

@@ -1,0 +1,64 @@
+﻿{
+  "_LOCK": {
+    "meta": {
+      "name": "poultry_layer_requirements_index",
+      "version": "v1",
+      "notes": "Maps (breed, phase) -> reqKey. Option B: multi-genetic architecture."
+    }
+  },
+  "defaults": { "breed": "generic", "phase": "peak" },
+  "breeds": {
+    "generic": {
+      "prelay": "poultry_layer_generic_prelay_v1",
+      "early":  "poultry_layer_generic_early_v1",
+      "peak":   "poultry_layer_generic_peak_v1",
+      "late":   "poultry_layer_generic_late_v1"
+    },
+
+    "hyline_w36": {
+      "prelay": "poultry_layer_hyline_w36_prelay_v1",
+      "early":  "poultry_layer_hyline_w36_early_v1",
+      "peak":   "poultry_layer_hyline_w36_peak_v1",
+      "late":   "poultry_layer_hyline_w36_late_v1"
+    },
+    "hyline_brown": {
+      "prelay": "poultry_layer_hyline_brown_prelay_v1",
+      "early":  "poultry_layer_hyline_brown_early_v1",
+      "peak":   "poultry_layer_hyline_brown_peak_v1",
+      "late":   "poultry_layer_hyline_brown_late_v1"
+    },
+
+    "lohmann_lsl": {
+      "prelay": "poultry_layer_lohmann_lsl_prelay_v1",
+      "early":  "poultry_layer_lohmann_lsl_early_v1",
+      "peak":   "poultry_layer_lohmann_lsl_peak_v1",
+      "late":   "poultry_layer_lohmann_lsl_late_v1"
+    },
+    "lohmann_brown": {
+      "prelay": "poultry_layer_lohmann_brown_prelay_v1",
+      "early":  "poultry_layer_lohmann_brown_early_v1",
+      "peak":   "poultry_layer_lohmann_brown_peak_v1",
+      "late":   "poultry_layer_lohmann_brown_late_v1"
+    },
+
+    "bovans_white": {
+      "prelay": "poultry_layer_bovans_white_prelay_v1",
+      "early":  "poultry_layer_bovans_white_early_v1",
+      "peak":   "poultry_layer_bovans_white_peak_v1",
+      "late":   "poultry_layer_bovans_white_late_v1"
+    },
+    "isa_brown": {
+      "prelay": "poultry_layer_isa_brown_prelay_v1",
+      "early":  "poultry_layer_isa_brown_early_v1",
+      "peak":   "poultry_layer_isa_brown_peak_v1",
+      "late":   "poultry_layer_isa_brown_late_v1"
+    },
+
+    "hyline": {
+      "prelay": "poultry_layer_hyline_w36_prelay_v1",
+      "early":  "poultry_layer_hyline_w36_early_v1",
+      "peak":   "poultry_layer_hyline_w36_peak_v1",
+      "late":   "poultry_layer_hyline_w36_late_v1"
+    }
+  }
+}

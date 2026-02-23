@@ -1,0 +1,33 @@
+﻿{
+  "_meta": {
+    "reqKey": "poultry__broiler__generic__global__v1__starter",
+    "basis": "asfed",
+    "note": "Minimal starter requirements (demo) for enabling evaluation pipeline"
+  },
+  "evaluation_keys": [
+    "me",
+    "cp",
+    "sid_lys",
+    "sid_met",
+    "sid_metcys",
+    "sid_thr",
+    "sid_trp",
+    "sid_arg",
+    "ca",
+    "avp",
+    "na"
+  ],
+  "requirements": {
+    "me":        { "min": 3000, "unit": "kcal_per_kg" },
+    "cp":        { "min": 21.0, "unit": "percent" },
+    "sid_lys":   { "min": 1.10, "unit": "percent" },
+    "sid_met":   { "min": 0.50, "unit": "percent" },
+    "sid_metcys":{ "min": 0.90, "unit": "percent" },
+    "sid_thr":   { "min": 0.70, "unit": "percent" },
+    "sid_trp":   { "min": 0.20, "unit": "percent" },
+    "sid_arg":   { "min": 1.20, "unit": "percent" },
+    "ca":        { "min": 0.85, "unit": "percent" },
+    "avp":       { "min": 0.45, "unit": "percent" },
+    "na":        { "min": 0.16, "unit": "percent" }
+  }
+}

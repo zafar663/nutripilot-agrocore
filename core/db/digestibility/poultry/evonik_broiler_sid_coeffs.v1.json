@@ -1,0 +1,32 @@
+{
+  "_LOCK": {
+    "note": "Placeholder digestibility coefficients (fractions 0..1). Replace with validated Evonik SID coefficients.",
+    "species": "poultry",
+    "type": "broiler",
+    "basis": "sid_from_total"
+  },
+  "defaults": {
+    "lys": 0.88,
+    "met": 0.90,
+    "thr": 0.84,
+    "trp": 0.84,
+    "arg": 0.87,
+    "val": 0.84,
+    "leu": 0.86,
+    "ile": 0.84,
+    "his": 0.82,
+    "cys": 0.75,
+    "phe": 0.85,
+    "tyr": 0.85,
+    "gly": 0.80,
+    "ser": 0.80,
+    "ala": 0.80,
+    "asp": 0.80,
+    "glu": 0.80,
+    "asn": 0.80,
+    "gln": 0.80,
+    "pro": 0.80
+  },
+  "category_overrides": {},
+  "overrides": {}
+}

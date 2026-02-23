@@ -1,38 +1,98 @@
 {
-  "corn": [
-    "corn",
-    "maize",
-    "yellow corn",
-    "ground corn",
-    "corn grain",
-    "maize grain"
-  ],
-  "sbm": [
-    "sbm",
-    "soybean meal",
-    "soya meal",
-    "soy meal",
-    "soybean meal 46",
-    "soybean meal 48",
-    "sbm 46",
-    "sbm 48",
-    "soybean meal-46",
-    "soybean meal-48"
-  ],
-  "oil": [
-    "oil",
-    "soy oil",
-    "soya oil",
-    "vegetable oil",
-    "veg oil",
-    "poultry fat",
-    "tallow"
-  ],
-  "salt": [
-    "salt",
-    "common salt",
-    "nacl",
-    "na cl",
-    "sodium chloride"
-  ]
+    "_meta":  {
+                  "db":  "ingredientAliases.v0",
+                  "note":  "STR PDF aliases (2026-02-16)"
+              },
+    "corn":  [
+                 "corn",
+                 "maize",
+                 "maize grain",
+                 "corn grain",
+                 "yellow corn",
+                 "ground corn"
+             ],
+    "soybean_meal":  [
+                         "sbm",
+                         "sbm 44",
+                         "sbm 44%",
+                         "sbm 46",
+                         "sbm 46%",
+                         "sbm 48",
+                         "sbm 48%",
+                         "soybean meal",
+                         "soya meal",
+                         "soy meal",
+                         "sbm 44 percent"
+                     ],
+    "rice_broken":  [
+                        "rice broken",
+                        "broken rice"
+                    ],
+    "fish_meal":  [
+                      "fish meal",
+                      "fish meal 54",
+                      "fish meal 54%",
+                      "fishmeal"
+                  ],
+    "canola_meal":  [
+                        "canola meal",
+                        "canola meal 36",
+                        "canola meal 36%"
+                    ],
+    "sunflower_meal":  [
+                           "sunflower meal",
+                           "sunflower meal 26-28",
+                           "sunflower meal 26-28%",
+                           "sunflower meal 26 28",
+                           "sunflower meal 26 28%"
+                       ],
+    "millet":  [
+                   "millet",
+                   "bajra",
+                   "millet/bajra"
+               ],
+    "soybean_oil":  [
+                        "soyabean oil",
+                        "soybean oil",
+                        "soy oil",
+                        "soya oil",
+                        "vegetable oil",
+                        "veg oil"
+                    ],
+    "corn_gluten":  [
+                        "c.g",
+                        "cg",
+                        "c.g 60",
+                        "c.g 60%",
+                        "corn gluten",
+                        "corn gluten meal"
+                    ],
+    "dl_methionine":  [
+                          "dlm",
+                          "dlm 99",
+                          "dlm 99%",
+                          "dl-methionine"
+                      ],
+    "salt":  [
+                 "salt",
+                 "common salt",
+                 "nacl",
+                 "na cl",
+                 "sodium chloride"
+             ],
+    "choline_chloride":  [
+                             "choline chloride"
+                         ],
+    "vitamin_premix":  [
+                           "vitamin premix"
+                       ],
+    "mineral_premix":  [
+                           "mineral premix"
+                       ],
+    "map":  {
+
+            },
+    "_LOCK":  {
+
+              }
 }
