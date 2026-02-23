@@ -1,0 +1,53 @@
+﻿{
+  "_LOCK": {
+    "version": "v1",
+    "note": "Global Invariants: minerals + synthetic amino acids merged into all regions."
+  },
+  "db": {
+    "salt": {
+      "display_name": "Salt (NaCl)",
+      "category": "mineral",
+      "na": 39.34,
+      "cl": 60.66
+    },
+    "sodium_bicarbonate": {
+      "display_name": "Sodium bicarbonate",
+      "category": "mineral",
+      "na": 27.37
+    },
+    "limestone": {
+      "display_name": "Limestone",
+      "category": "mineral",
+      "ca": 38.0
+    },
+    "dcp": {
+      "display_name": "Dicalcium phosphate",
+      "category": "mineral",
+      "ca": 23.0,
+      "p_total": 18.5,
+      "avp": 18.5
+    },
+    "mcp": {
+      "display_name": "Monocalcium phosphate",
+      "category": "mineral",
+      "ca": 16.5,
+      "p_total": 22.7,
+      "avp": 22.7
+    },
+    "dl_met": {
+      "display_name": "DL-Methionine",
+      "category": "synthetic_aa",
+      "total_met": 99.0
+    },
+    "l_lys_hcl": {
+      "display_name": "L-Lysine HCl",
+      "category": "synthetic_aa",
+      "total_lys": 78.8
+    },
+    "l_thr": {
+      "display_name": "L-Threonine",
+      "category": "synthetic_aa",
+      "total_thr": 98.0
+    }
+  }
+}
