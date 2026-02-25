@@ -1,14 +1,174 @@
 ﻿{
-    "_meta":  {
-                  "version":  "2022",
-                  "source":  "breeder_pdf",
-                  "region":  "global",
-                  "locked":  false
-              },
-    "species":  "poultry",
-    "type":  "broiler",
-    "breed":  "cobb_500",
-    "phases":  [
-
-               ]
+  "_meta": {
+    "version": "2022",
+    "source": "pdf_extract",
+    "region": "global",
+    "locked": false,
+    "source_pdf": "2022-Cobb500-Broiler-Performance-Nutrition-Supplement.pdf",
+    "source_pages": [
+      10,
+      11
+    ],
+    "table": "Recommended Nutrient Levels - Medium/Large Broilers (5 phases)"
+  },
+  "species": "poultry",
+  "type": "broiler",
+  "breed": "cobb_500",
+  "phases": [
+    {
+      "phase": "starter",
+      "phase_label": "Starter",
+      "day_from": 0,
+      "day_to": 12,
+      "targets": {
+        "me_kcal_per_kg": 3000.0,
+        "cp_pct": 21.5,
+        "ca_pct": 0.85,
+        "avp_pct": 0.43,
+        "na_pct": 0.195,
+        "cl_pct": 0.23,
+        "k_pct": 0.775,
+        "linoleic_pct": 1.18,
+        "sid_lys_pct": 1.19,
+        "sid_met_pct": 0.55,
+        "sid_metcys_pct": 0.88,
+        "sid_thr_pct": 0.76,
+        "sid_trp_pct": 0.2,
+        "sid_arg_pct": 1.25,
+        "sid_val_pct": 0.85,
+        "sid_ile_pct": 0.76,
+        "sid_leu_pct": 1.4
+      }
+    },
+    {
+      "phase": "grower_1",
+      "phase_label": "Grower 1",
+      "day_from": 13,
+      "day_to": 25,
+      "targets": {
+        "me_kcal_per_kg": 3100.0,
+        "cp_pct": 19.5,
+        "ca_pct": 0.75,
+        "avp_pct": 0.38,
+        "na_pct": 0.195,
+        "cl_pct": 0.23,
+        "k_pct": 0.775,
+        "linoleic_pct": 1.18,
+        "sid_lys_pct": 1.02,
+        "sid_met_pct": 0.48,
+        "sid_metcys_pct": 0.79,
+        "sid_thr_pct": 0.68,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 1.12,
+        "sid_val_pct": 0.73,
+        "sid_ile_pct": 0.66,
+        "sid_leu_pct": 1.21
+      }
+    },
+    {
+      "phase": "grower_2",
+      "phase_label": "Grower 2",
+      "day_from": 26,
+      "day_to": 35,
+      "targets": {
+        "me_kcal_per_kg": 3150.0,
+        "cp_pct": 19.0,
+        "ca_pct": 0.7,
+        "avp_pct": 0.35,
+        "na_pct": 0.195,
+        "cl_pct": 0.23,
+        "k_pct": 0.775,
+        "linoleic_pct": 1.18,
+        "sid_lys_pct": 0.9,
+        "sid_met_pct": 0.43,
+        "sid_metcys_pct": 0.71,
+        "sid_thr_pct": 0.6,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.99,
+        "sid_val_pct": 0.65,
+        "sid_ile_pct": 0.59,
+        "sid_leu_pct": 1.07
+      }
+    },
+    {
+      "phase": "finisher_1",
+      "phase_label": "Finisher 1",
+      "day_from": 36,
+      "day_to": 49,
+      "targets": {
+        "me_kcal_per_kg": 3200.0,
+        "cp_pct": 18.5,
+        "ca_pct": 0.65,
+        "avp_pct": 0.32,
+        "na_pct": 0.195,
+        "cl_pct": 0.23,
+        "k_pct": 0.775,
+        "linoleic_pct": 1.18,
+        "sid_lys_pct": 0.83,
+        "sid_met_pct": 0.4,
+        "sid_metcys_pct": 0.66,
+        "sid_thr_pct": 0.56,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.91,
+        "sid_val_pct": 0.6,
+        "sid_ile_pct": 0.54,
+        "sid_leu_pct": 0.98
+      }
+    },
+    {
+      "phase": "finisher_2",
+      "phase_label": "Finisher 2",
+      "day_from": 50,
+      "day_to": null,
+      "targets": {
+        "me_kcal_per_kg": 3225.0,
+        "cp_pct": 18.0,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "na_pct": 0.195,
+        "cl_pct": 0.23,
+        "k_pct": 0.775,
+        "linoleic_pct": 1.18,
+        "sid_lys_pct": 0.79,
+        "sid_met_pct": 0.39,
+        "sid_metcys_pct": 0.64,
+        "sid_thr_pct": 0.54,
+        "sid_trp_pct": 0.14,
+        "sid_arg_pct": 0.87,
+        "sid_val_pct": 0.57,
+        "sid_ile_pct": 0.51,
+        "sid_leu_pct": 0.93
+      }
+    }
+  ],
+  "_range_raw": {
+    "cp_pct": {
+      "Starter": "21.0-22.0",
+      "Grower 1": "19.0-20.0",
+      "Grower 2": "18.5-19.5",
+      "Finisher 1": "18.0-19.0",
+      "Finisher 2": "17.5-18.5"
+    },
+    "na_pct": {
+      "Starter": "0.16-0.23",
+      "Grower 1": "0.16-0.23",
+      "Grower 2": "0.16-0.23",
+      "Finisher 1": "0.16-0.23",
+      "Finisher 2": "0.16-0.23"
+    },
+    "cl_pct": {
+      "Starter": "0.16-0.30",
+      "Grower 1": "0.16-0.30",
+      "Grower 2": "0.16-0.30",
+      "Finisher 1": "0.16-0.30",
+      "Finisher 2": "0.16-0.30"
+    },
+    "k_pct": {
+      "Starter": "0.60-0.95",
+      "Grower 1": "0.60-0.95",
+      "Grower 2": "0.60-0.95",
+      "Finisher 1": "0.60-0.95",
+      "Finisher 2": "0.60-0.95"
+    }
+  }
 }

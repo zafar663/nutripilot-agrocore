@@ -1,67 +1,83 @@
-﻿{
-    "profiles":  {
-                     "generic":  {
-                                     "label":  "Turkey Layer (Generic)",
-                                     "targets_by_phase":  {
-                                                              "prelay":  {
-                                                                             "me":  2700,
-                                                                             "cp":  17,
-                                                                             "ca":  2.2,
-                                                                             "avp":  0.42,
-                                                                             "na":  0.17,
-                                                                             "sid_lys":  0.75,
-                                                                             "sid_met":  0.35,
-                                                                             "sid_metcys":  0.63,
-                                                                             "sid_thr":  0.52,
-                                                                             "sid_trp":  0.18,
-                                                                             "sid_arg":  0.9
-                                                                         },
-                                                              "early":  {
-                                                                            "me":  2725,
-                                                                            "cp":  16.8,
-                                                                            "ca":  3.2,
-                                                                            "avp":  0.41,
-                                                                            "na":  0.17,
-                                                                            "sid_lys":  0.72,
-                                                                            "sid_met":  0.34,
-                                                                            "sid_metcys":  0.61,
-                                                                            "sid_thr":  0.51,
-                                                                            "sid_trp":  0.17,
-                                                                            "sid_arg":  0.87
-                                                                        },
-                                                              "peak":  {
-                                                                           "me":  2750,
-                                                                           "cp":  16.5,
-                                                                           "ca":  3.6,
-                                                                           "avp":  0.4,
-                                                                           "na":  0.17,
-                                                                           "sid_lys":  0.7,
-                                                                           "sid_met":  0.33,
-                                                                           "sid_metcys":  0.6,
-                                                                           "sid_thr":  0.5,
-                                                                           "sid_trp":  0.17,
-                                                                           "sid_arg":  0.85
-                                                                       },
-                                                              "late":  {
-                                                                           "me":  2700,
-                                                                           "cp":  16,
-                                                                           "ca":  3.6,
-                                                                           "avp":  0.38,
-                                                                           "na":  0.16,
-                                                                           "sid_lys":  0.66,
-                                                                           "sid_met":  0.31,
-                                                                           "sid_metcys":  0.56,
-                                                                           "sid_thr":  0.47,
-                                                                           "sid_trp":  0.16,
-                                                                           "sid_arg":  0.8
-                                                                       }
-                                                          }
-                                 }
-                 },
-    "_LOCK":  {
-                  "note":  "Option-B library for poultry/turkey layer. Placeholder targets until validated.",
-                  "mode":  "option_b",
-                  "created_utc":  "2026-02-19T16:23:25.1468870Z",
-                  "version":  "v1"
-              }
+{
+  "_LOCK": {
+    "note": "Option-B library for poultry/turkey layer. Placeholder targets until validated.",
+    "mode": "option_b",
+    "created_utc": "2026-02-19T16:23:25.1468870Z",
+    "version": "v1"
+  },
+  "profiles": {
+    "generic": {
+      "label": "Turkey Layer (Generic)",
+      "targets_by_phase": {
+        "prelay": {
+          "me": 2700,
+          "cp": 17,
+          "ca": 2.2,
+          "avp": 0.42,
+          "na": 0.17,
+          "sid_lys": 0.75,
+          "sid_met": 0.35,
+          "sid_metcys": 0.63,
+          "sid_thr": 0.52,
+          "sid_trp": 0.18,
+          "sid_arg": 0.9
+        },
+        "early": {
+          "me": 2725,
+          "cp": 16.8,
+          "ca": 3.2,
+          "avp": 0.41,
+          "na": 0.17,
+          "sid_lys": 0.72,
+          "sid_met": 0.34,
+          "sid_metcys": 0.61,
+          "sid_thr": 0.51,
+          "sid_trp": 0.17,
+          "sid_arg": 0.87
+        },
+        "peak": {
+          "me": 2750,
+          "cp": 16.5,
+          "ca": 3.6,
+          "avp": 0.4,
+          "na": 0.17,
+          "sid_lys": 0.7,
+          "sid_met": 0.33,
+          "sid_metcys": 0.6,
+          "sid_thr": 0.5,
+          "sid_trp": 0.17,
+          "sid_arg": 0.85
+        },
+        "late": {
+          "me": 2700,
+          "cp": 16,
+          "ca": 3.6,
+          "avp": 0.38,
+          "na": 0.16,
+          "sid_lys": 0.66,
+          "sid_met": 0.31,
+          "sid_metcys": 0.56,
+          "sid_thr": 0.47,
+          "sid_trp": 0.16,
+          "sid_arg": 0.8
+        }
+      }
+    },
+    "poultry_turkey_layer_generic_prelay_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_layer_generic_early_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_layer_generic_peak_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_layer_generic_late_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    }
+  }
 }

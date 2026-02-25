@@ -1,159 +1,289 @@
 {
-    "profiles":  {
-                     "hybrid_converter":  {
-                                              "targets_override":  {
-
-                                                                   },
-                                              "inherits":  "generic"
-                                          },
-                     "generic":  {
-                                     "targets_by_phase":  {
-                                                              "grower1":  {
-                                                                              "cp":  19,
-                                                                              "sid_trp":  0.2,
-                                                                              "sid_met":  0.4,
-                                                                              "me":  3000,
-                                                                              "sid_thr":  0.62,
-                                                                              "na":  0.18,
-                                                                              "cl":  0.18,
-                                                                              "ca":  0.9,
-                                                                              "k":  0.85,
-                                                                              "sid_metcys":  0.72,
-                                                                              "sid_lys":  0.95,
-                                                                              "deb":  240,
-                                                                              "sid_arg":  1.05,
-                                                                              "avp":  0.45
-                                                                          },
-                                                              "finisher1":  {
-                                                                                "cp":  17.5,
-                                                                                "sid_trp":  0.2,
-                                                                                "sid_met":  0.36,
-                                                                                "me":  3100,
-                                                                                "sid_thr":  0.56,
-                                                                                "na":  0.18,
-                                                                                "cl":  0.18,
-                                                                                "ca":  0.9,
-                                                                                "k":  0.85,
-                                                                                "sid_metcys":  0.65,
-                                                                                "sid_lys":  0.85,
-                                                                                "deb":  230,
-                                                                                "sid_arg":  0.95,
-                                                                                "avp":  0.45
-                                                                            },
-                                                              "prestarter":  {
-                                                                                 "cp":  21.5,
-                                                                                 "sid_trp":  0.2,
-                                                                                 "sid_met":  0.5,
-                                                                                 "me":  2850,
-                                                                                 "sid_thr":  0.7,
-                                                                                 "na":  0.18,
-                                                                                 "cl":  0.18,
-                                                                                 "ca":  0.9,
-                                                                                 "k":  0.85,
-                                                                                 "sid_metcys":  0.85,
-                                                                                 "sid_lys":  1.1,
-                                                                                 "deb":  260,
-                                                                                 "sid_arg":  1.2,
-                                                                                 "avp":  0.45
-                                                                             },
-                                                              "finisher2":  {
-                                                                                "cp":  17.5,
-                                                                                "sid_trp":  0.2,
-                                                                                "sid_met":  0.36,
-                                                                                "me":  3100,
-                                                                                "sid_thr":  0.56,
-                                                                                "na":  0.18,
-                                                                                "cl":  0.18,
-                                                                                "ca":  0.9,
-                                                                                "k":  0.85,
-                                                                                "sid_metcys":  0.65,
-                                                                                "sid_lys":  0.85,
-                                                                                "deb":  230,
-                                                                                "sid_arg":  0.95,
-                                                                                "avp":  0.45
-                                                                            },
-                                                              "starter":  {
-                                                                              "cp":  20.5,
-                                                                              "sid_trp":  0.2,
-                                                                              "sid_met":  0.45,
-                                                                              "me":  2900,
-                                                                              "sid_thr":  0.68,
-                                                                              "na":  0.18,
-                                                                              "cl":  0.18,
-                                                                              "ca":  0.9,
-                                                                              "k":  0.85,
-                                                                              "sid_metcys":  0.8,
-                                                                              "sid_lys":  1.05,
-                                                                              "deb":  250,
-                                                                              "sid_arg":  1.15,
-                                                                              "avp":  0.45
-                                                                          },
-                                                              "withdrawal":  {
-                                                                                 "cp":  17,
-                                                                                 "sid_trp":  0.2,
-                                                                                 "sid_met":  0.34,
-                                                                                 "me":  3050,
-                                                                                 "sid_thr":  0.54,
-                                                                                 "na":  0.18,
-                                                                                 "cl":  0.18,
-                                                                                 "ca":  0.9,
-                                                                                 "k":  0.85,
-                                                                                 "sid_metcys":  0.62,
-                                                                                 "sid_lys":  0.82,
-                                                                                 "deb":  225,
-                                                                                 "sid_arg":  0.92,
-                                                                                 "avp":  0.45
-                                                                             },
-                                                              "grower2":  {
-                                                                              "cp":  19,
-                                                                              "sid_trp":  0.2,
-                                                                              "sid_met":  0.4,
-                                                                              "me":  3000,
-                                                                              "sid_thr":  0.62,
-                                                                              "na":  0.18,
-                                                                              "cl":  0.18,
-                                                                              "ca":  0.9,
-                                                                              "k":  0.85,
-                                                                              "sid_metcys":  0.72,
-                                                                              "sid_lys":  0.95,
-                                                                              "deb":  240,
-                                                                              "sid_arg":  1.05,
-                                                                              "avp":  0.45
-                                                                          }
-                                                          },
-                                     "targets_override":  {
-
-                                                          },
-                                     "mode":  "baseline_generic_v1"
-                                 },
-                     "nicholas":  {
-                                      "targets_override":  {
-
-                                                           },
-                                      "inherits":  "generic"
-                                  },
-                     "aviagen":  {
-                                     "targets_override":  {
-
-                                                          },
-                                     "inherits":  "generic"
-                                 },
-                     "but6":  {
-                                  "targets_override":  {
-
-                                                       },
-                                  "inherits":  "generic"
-                              }
-                 },
-    "_LOCK":  {
-                  "version":  "v1",
-                  "production":  "meat",
-                  "species":  "poultry",
-                  "type":  "turkey",
-                  "kind":  "requirements_library",
-                  "created_utc":  "2026-02-19T01:39:53Z",
-                  "mode":  "option_b_inheritance_ready",
-                  "note":  "PLACEHOLDER numeric targets (NON-ZERO). Replace with finalized commercial tables.",
-                  "migration_note":  "2026-02-19: migrated targets_by_phase from *_pct/me_kcal_per_kg schema to canonical (me,cp,ca,avp,na,k,cl,deb,sid_*)"
-              }
+  "_LOCK": {
+    "version": "v1",
+    "production": "meat",
+    "species": "poultry",
+    "type": "turkey",
+    "kind": "requirements_library",
+    "created_utc": "2026-02-19T01:39:53Z",
+    "mode": "option_b_inheritance_ready",
+    "note": "PLACEHOLDER numeric targets (NON-ZERO). Replace with finalized commercial tables.",
+    "migration_note": "2026-02-19: migrated targets_by_phase from *_pct/me_kcal_per_kg schema to canonical (me,cp,ca,avp,na,k,cl,deb,sid_*)"
+  },
+  "profiles": {
+    "hybrid_converter": {
+      "targets_override": {},
+      "inherits": "generic"
+    },
+    "generic": {
+      "targets_by_phase": {
+        "grower1": {
+          "cp": 19,
+          "sid_trp": 0.2,
+          "sid_met": 0.4,
+          "me": 3000,
+          "sid_thr": 0.62,
+          "na": 0.18,
+          "cl": 0.18,
+          "ca": 0.9,
+          "k": 0.85,
+          "sid_metcys": 0.72,
+          "sid_lys": 0.95,
+          "deb": 240,
+          "sid_arg": 1.05,
+          "avp": 0.45
+        },
+        "finisher1": {
+          "cp": 17.5,
+          "sid_trp": 0.2,
+          "sid_met": 0.36,
+          "me": 3100,
+          "sid_thr": 0.56,
+          "na": 0.18,
+          "cl": 0.18,
+          "ca": 0.9,
+          "k": 0.85,
+          "sid_metcys": 0.65,
+          "sid_lys": 0.85,
+          "deb": 230,
+          "sid_arg": 0.95,
+          "avp": 0.45
+        },
+        "prestarter": {
+          "cp": 21.5,
+          "sid_trp": 0.2,
+          "sid_met": 0.5,
+          "me": 2850,
+          "sid_thr": 0.7,
+          "na": 0.18,
+          "cl": 0.18,
+          "ca": 0.9,
+          "k": 0.85,
+          "sid_metcys": 0.85,
+          "sid_lys": 1.1,
+          "deb": 260,
+          "sid_arg": 1.2,
+          "avp": 0.45
+        },
+        "finisher2": {
+          "cp": 17.5,
+          "sid_trp": 0.2,
+          "sid_met": 0.36,
+          "me": 3100,
+          "sid_thr": 0.56,
+          "na": 0.18,
+          "cl": 0.18,
+          "ca": 0.9,
+          "k": 0.85,
+          "sid_metcys": 0.65,
+          "sid_lys": 0.85,
+          "deb": 230,
+          "sid_arg": 0.95,
+          "avp": 0.45
+        },
+        "starter": {
+          "cp": 20.5,
+          "sid_trp": 0.2,
+          "sid_met": 0.45,
+          "me": 2900,
+          "sid_thr": 0.68,
+          "na": 0.18,
+          "cl": 0.18,
+          "ca": 0.9,
+          "k": 0.85,
+          "sid_metcys": 0.8,
+          "sid_lys": 1.05,
+          "deb": 250,
+          "sid_arg": 1.15,
+          "avp": 0.45
+        },
+        "withdrawal": {
+          "cp": 17,
+          "sid_trp": 0.2,
+          "sid_met": 0.34,
+          "me": 3050,
+          "sid_thr": 0.54,
+          "na": 0.18,
+          "cl": 0.18,
+          "ca": 0.9,
+          "k": 0.85,
+          "sid_metcys": 0.62,
+          "sid_lys": 0.82,
+          "deb": 225,
+          "sid_arg": 0.92,
+          "avp": 0.45
+        },
+        "grower2": {
+          "cp": 19,
+          "sid_trp": 0.2,
+          "sid_met": 0.4,
+          "me": 3000,
+          "sid_thr": 0.62,
+          "na": 0.18,
+          "cl": 0.18,
+          "ca": 0.9,
+          "k": 0.85,
+          "sid_metcys": 0.72,
+          "sid_lys": 0.95,
+          "deb": 240,
+          "sid_arg": 1.05,
+          "avp": 0.45
+        }
+      },
+      "targets_override": {},
+      "mode": "baseline_generic_v1"
+    },
+    "nicholas": {
+      "targets_override": {},
+      "inherits": "generic"
+    },
+    "aviagen": {
+      "targets_override": {},
+      "inherits": "generic"
+    },
+    "but6": {
+      "targets_override": {},
+      "inherits": "generic"
+    },
+    "poultry_turkey_meat_hybrid_converter_grower1_v1": {
+      "inherits": "hybrid_converter",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_hybrid_converter_finisher1_v1": {
+      "inherits": "hybrid_converter",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_hybrid_converter_prestarter_v1": {
+      "inherits": "hybrid_converter",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_hybrid_converter_finisher2_v1": {
+      "inherits": "hybrid_converter",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_hybrid_converter_starter_v1": {
+      "inherits": "hybrid_converter",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_hybrid_converter_withdrawal_v1": {
+      "inherits": "hybrid_converter",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_hybrid_converter_grower2_v1": {
+      "inherits": "hybrid_converter",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_generic_grower1_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_generic_finisher1_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_generic_prestarter_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_generic_finisher2_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_generic_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_generic_withdrawal_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_generic_grower2_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_nicholas_grower1_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_nicholas_finisher1_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_nicholas_prestarter_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_nicholas_finisher2_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_nicholas_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_nicholas_withdrawal_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_nicholas_grower2_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_aviagen_grower1_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_aviagen_finisher1_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_aviagen_prestarter_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_aviagen_finisher2_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_aviagen_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_aviagen_withdrawal_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_aviagen_grower2_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_but6_grower1_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_but6_finisher1_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_but6_prestarter_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_but6_finisher2_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_but6_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_but6_withdrawal_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    },
+    "poultry_turkey_meat_but6_grower2_v1": {
+      "inherits": "generic",
+      "targets_override": {}
+    }
+  }
 }

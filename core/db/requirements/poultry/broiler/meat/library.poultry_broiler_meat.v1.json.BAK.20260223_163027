@@ -1,12 +1,8 @@
-{
+﻿{
   "_LOCK": {
     "note": "Broiler Option-B library v1. Commercial-ready targets: Generic + Ross308 + Cobb500 + Hubbard(Efficiency Plus) + Aviagen AA/IR (2022).",
     "mode": "option_b_library_profiles_v1",
-    "last_updated": "2026-02-22",
-    "targets_override": {
-      "k_pct": 0.85,
-      "cl_pct": 0.2
-    }
+    "last_updated": "2026-02-22"
   },
   "profiles": {
     "poultry_broiler_generic_starter_v1": {
@@ -26,14 +22,7 @@
         "sid_trp_pct": 0.2,
         "sid_arg_pct": 1.25
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.85,
-        "cl": 0.2,
-        "deb": 248
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_generic_grower_v1": {
       "label": "Broiler Grower (Generic) v1",
@@ -52,14 +41,7 @@
         "sid_trp_pct": 0.18,
         "sid_arg_pct": 1.15
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.8,
-        "cl": 0.2,
-        "deb": 231
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_generic_finisher_v1": {
       "label": "Broiler Finisher (Generic) v1",
@@ -78,15 +60,9 @@
         "sid_trp_pct": 0.16,
         "sid_arg_pct": 1.02
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.75,
-        "cl": 0.2,
-        "deb": 214
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
+
     "poultry_broiler_ross308_starter_v1": {
       "label": "Broiler Starter (Ross 308) v1",
       "production": "meat",
@@ -104,14 +80,7 @@
         "sid_trp_pct": 0.2,
         "sid_arg_pct": 1.27
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.85,
-        "cl": 0.2,
-        "deb": 248
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_ross308_grower_v1": {
       "label": "Broiler Grower (Ross 308) v1",
@@ -130,14 +99,7 @@
         "sid_trp_pct": 0.18,
         "sid_arg_pct": 1.15
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.8,
-        "cl": 0.2,
-        "deb": 231
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_ross308_finisher_v1": {
       "label": "Broiler Finisher (Ross 308) v1",
@@ -156,15 +118,9 @@
         "sid_trp_pct": 0.16,
         "sid_arg_pct": 1.02
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.75,
-        "cl": 0.2,
-        "deb": 214
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
+
     "poultry_broiler_cobb500_starter_v1": {
       "label": "Broiler Starter (Cobb 500) v1",
       "production": "meat",
@@ -182,14 +138,7 @@
         "sid_trp_pct": 0.2,
         "sid_arg_pct": 1.25
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.85,
-        "cl": 0.2,
-        "deb": 248
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_cobb500_grower_v1": {
       "label": "Broiler Grower (Cobb 500) v1",
@@ -208,14 +157,7 @@
         "sid_trp_pct": 0.18,
         "sid_arg_pct": 1.12
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.8,
-        "cl": 0.2,
-        "deb": 231
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_cobb500_finisher_v1": {
       "label": "Broiler Finisher (Cobb 500) v1",
@@ -234,15 +176,9 @@
         "sid_trp_pct": 0.16,
         "sid_arg_pct": 1
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.75,
-        "cl": 0.2,
-        "deb": 214
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
+
     "poultry_broiler_hubbard_starter_v1": {
       "label": "Broiler Starter (Hubbard Efficiency Plus) v1",
       "production": "meat",
@@ -260,14 +196,7 @@
         "sid_trp_pct": 0.23,
         "sid_arg_pct": 1.42
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.85,
-        "cl": 0.2,
-        "deb": 248
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_hubbard_grower_v1": {
       "label": "Broiler Grower (Hubbard Efficiency Plus) v1",
@@ -286,14 +215,7 @@
         "sid_trp_pct": 0.2,
         "sid_arg_pct": 1.27
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.8,
-        "cl": 0.2,
-        "deb": 231
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_hubbard_finisher_v1": {
       "label": "Broiler Finisher (Hubbard Efficiency Plus) v1",
@@ -312,15 +234,9 @@
         "sid_trp_pct": 0.18,
         "sid_arg_pct": 1.14
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.75,
-        "cl": 0.2,
-        "deb": 214
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
+
     "poultry_broiler_aa_starter_v1": {
       "label": "Broiler Starter (Arbor Acres) v1",
       "production": "meat",
@@ -338,14 +254,7 @@
         "sid_trp_pct": 0.24,
         "sid_arg_pct": 1.41
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.85,
-        "cl": 0.2,
-        "deb": 252
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_aa_grower_v1": {
       "label": "Broiler Grower (Arbor Acres) v1",
@@ -364,14 +273,7 @@
         "sid_trp_pct": 0.22,
         "sid_arg_pct": 1.26
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.8,
-        "cl": 0.2,
-        "deb": 240
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_aa_finisher_v1": {
       "label": "Broiler Finisher (Arbor Acres) v1",
@@ -390,15 +292,9 @@
         "sid_trp_pct": 0.2,
         "sid_arg_pct": 1.16
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.75,
-        "cl": 0.2,
-        "deb": 227
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
+
     "poultry_broiler_ir_starter_v1": {
       "label": "Broiler Starter (Indian River) v1",
       "production": "meat",
@@ -416,14 +312,7 @@
         "sid_trp_pct": 0.24,
         "sid_arg_pct": 1.41
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.85,
-        "cl": 0.2,
-        "deb": 252
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_ir_grower_v1": {
       "label": "Broiler Grower (Indian River) v1",
@@ -442,14 +331,7 @@
         "sid_trp_pct": 0.22,
         "sid_arg_pct": 1.26
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.8,
-        "cl": 0.2,
-        "deb": 226
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     },
     "poultry_broiler_ir_finisher_v1": {
       "label": "Broiler Finisher (Indian River) v1",
@@ -468,14 +350,7 @@
         "sid_trp_pct": 0.2,
         "sid_arg_pct": 1.16
       },
-      "tolerance": {
-        "default_pct_of_target": 2
-      },
-      "targets_override": {
-        "k": 0.75,
-        "cl": 0.2,
-        "deb": 235
-      }
+      "tolerance": { "default_pct_of_target": 2 }
     }
   }
 }

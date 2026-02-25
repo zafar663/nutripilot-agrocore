@@ -1,14 +1,278 @@
 ﻿{
-    "_meta":  {
-                  "version":  "2022",
-                  "source":  "breeder_pdf",
-                  "region":  "global",
-                  "locked":  false
-              },
-    "species":  "poultry",
-    "type":  "broiler",
-    "breed":  "hubbard_efficiency_plus",
-    "phases":  [
-
-               ]
+  "_meta": {
+    "version": "2022",
+    "source": "pdf_extract",
+    "region": "global",
+    "locked": false,
+    "source_pdf": "broiler-guide-efficiency-plus-en-20220503-ld.pdf",
+    "source_page": 11,
+    "note": "Extracted example diet specifications tables (programs by slaughter weight). Values are digestible AA (Dig) and mineral/protein ranges midpoint; raw ranges preserved."
+  },
+  "species": "poultry",
+  "type": "broiler",
+  "breed": "hubbard_efficiency_plus",
+  "programs": [
+    {
+      "program_id": "w1_8_2_0kg_30_34d",
+      "label": "Example of diet specifications for broilers with live weight at slaughter between 1.8 and 2.0kg (age between 30 and 34 days)",
+      "phases": [
+        {
+          "phase": "starter",
+          "phase_label": "Starter",
+          "day_from": 0,
+          "day_to": 10,
+          "targets": {
+            "me_kcal_per_kg": 2925.0,
+            "cp_pct": 22.115,
+            "ca_pct": 0.95,
+            "avp_pct": 0.46,
+            "na_pct": 0.2,
+            "cl_pct": 0.18,
+            "sid_lys_pct": 1.3,
+            "sid_met_pct": 0.65,
+            "sid_metcys_pct": 0.99,
+            "sid_val_pct": 0.85,
+            "sid_ile_pct": 0.75,
+            "sid_arg_pct": 1.42,
+            "sid_trp_pct": 0.23,
+            "sid_thr_pct": 0.85
+          },
+          "_range_raw": {
+            "cp_pct": [
+              [
+                21.98,
+                22.25
+              ]
+            ],
+            "ca_pct": [
+              [
+                0.9,
+                1.0
+              ]
+            ],
+            "avp_pct": [
+              [
+                0.44,
+                0.48
+              ]
+            ],
+            "na_pct": [
+              [
+                0.18,
+                0.22
+              ]
+            ],
+            "cl_pct": [
+              [
+                0.16,
+                0.2
+              ]
+            ]
+          }
+        },
+        {
+          "phase": "grower",
+          "phase_label": "Grower",
+          "day_from": 10,
+          "day_to": 22,
+          "targets": {
+            "me_kcal_per_kg": 3000.0,
+            "cp_pct": 20.05,
+            "ca_pct": 0.8,
+            "avp_pct": 0.4,
+            "na_pct": 0.19,
+            "cl_pct": 0.17,
+            "sid_lys_pct": 1.16,
+            "sid_met_pct": 0.58,
+            "sid_metcys_pct": 0.89,
+            "sid_val_pct": 0.76,
+            "sid_ile_pct": 0.68,
+            "sid_arg_pct": 1.27,
+            "sid_trp_pct": 0.2,
+            "sid_thr_pct": 0.76
+          },
+          "_range_raw": {
+            "cp_pct": [
+              [
+                19.9,
+                20.2
+              ]
+            ],
+            "ca_pct": [
+              [
+                0.75,
+                0.85
+              ]
+            ],
+            "avp_pct": [
+              [
+                0.38,
+                0.42
+              ]
+            ],
+            "na_pct": [
+              [
+                0.17,
+                0.21
+              ]
+            ],
+            "cl_pct": [
+              [
+                0.15,
+                0.19
+              ]
+            ]
+          }
+        },
+        {
+          "phase": "finisher",
+          "phase_label": "Finisher",
+          "day_from": 22,
+          "day_to": null,
+          "targets": {
+            "me_kcal_per_kg": 3075.0,
+            "cp_pct": 18.825,
+            "ca_pct": 0.72,
+            "avp_pct": 0.35,
+            "na_pct": 0.18,
+            "cl_pct": 0.16,
+            "sid_lys_pct": 1.04,
+            "sid_met_pct": 0.52,
+            "sid_metcys_pct": 0.8,
+            "sid_val_pct": 0.69,
+            "sid_ile_pct": 0.61,
+            "sid_arg_pct": 1.14,
+            "sid_trp_pct": 0.18,
+            "sid_thr_pct": 0.68
+          },
+          "_range_raw": {
+            "cp_pct": [
+              [
+                18.65,
+                19.0
+              ]
+            ],
+            "ca_pct": [
+              [
+                0.7,
+                0.74
+              ]
+            ],
+            "avp_pct": [
+              [
+                0.34,
+                0.36
+              ]
+            ],
+            "na_pct": [
+              [
+                0.16,
+                0.2
+              ]
+            ],
+            "cl_pct": [
+              [
+                0.14,
+                0.18
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "program_id": "w2_5_3_0kg_39_45d",
+      "label": "Example of diet specifications for broilers with live weight at slaughter between 2.5 and 3.0kg (age between 39 and 45 days)",
+      "phases": [
+        {
+          "phase": "starter",
+          "phase_label": "Starter",
+          "day_from": 0,
+          "day_to": 10,
+          "targets": {
+            "me_kcal_per_kg": 2925.0,
+            "cp_pct": 22.115,
+            "ca_pct": 0.95,
+            "avp_pct": 0.46,
+            "na_pct": 0.2,
+            "cl_pct": 0.18,
+            "sid_lys_pct": 1.3,
+            "sid_met_pct": 0.65,
+            "sid_metcys_pct": 0.99,
+            "sid_val_pct": 0.85,
+            "sid_ile_pct": 0.75,
+            "sid_arg_pct": 1.42,
+            "sid_trp_pct": 0.23,
+            "sid_thr_pct": 0.85
+          }
+        },
+        {
+          "phase": "grower",
+          "phase_label": "Grower",
+          "day_from": 10,
+          "day_to": 22,
+          "targets": {
+            "me_kcal_per_kg": 3000.0,
+            "cp_pct": 20.05,
+            "ca_pct": 0.8,
+            "avp_pct": 0.4,
+            "na_pct": 0.19,
+            "cl_pct": 0.17,
+            "sid_lys_pct": 1.16,
+            "sid_met_pct": 0.58,
+            "sid_metcys_pct": 0.89,
+            "sid_val_pct": 0.76,
+            "sid_ile_pct": 0.68,
+            "sid_arg_pct": 1.27,
+            "sid_trp_pct": 0.2,
+            "sid_thr_pct": 0.76
+          }
+        },
+        {
+          "phase": "finisher_1",
+          "phase_label": "Finisher 1",
+          "day_from": 22,
+          "day_to": 38,
+          "targets": {
+            "me_kcal_per_kg": 3075.0,
+            "cp_pct": 18.825,
+            "ca_pct": 0.72,
+            "avp_pct": 0.35,
+            "na_pct": 0.18,
+            "cl_pct": 0.16,
+            "sid_lys_pct": 1.04,
+            "sid_met_pct": 0.52,
+            "sid_metcys_pct": 0.8,
+            "sid_val_pct": 0.69,
+            "sid_ile_pct": 0.61,
+            "sid_arg_pct": 1.14,
+            "sid_trp_pct": 0.18,
+            "sid_thr_pct": 0.68
+          }
+        },
+        {
+          "phase": "finisher_2",
+          "phase_label": "Finisher 2",
+          "day_from": 38,
+          "day_to": null,
+          "targets": {
+            "me_kcal_per_kg": 3125.0,
+            "cp_pct": 18.18,
+            "ca_pct": 0.72,
+            "avp_pct": 0.35,
+            "na_pct": 0.18,
+            "cl_pct": 0.16,
+            "sid_lys_pct": 0.98,
+            "sid_met_pct": 0.49,
+            "sid_metcys_pct": 0.75,
+            "sid_val_pct": 0.65,
+            "sid_ile_pct": 0.57,
+            "sid_arg_pct": 1.08,
+            "sid_trp_pct": 0.17,
+            "sid_thr_pct": 0.64
+          }
+        }
+      ]
+    }
+  ]
 }

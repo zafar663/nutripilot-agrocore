@@ -1,0 +1,17 @@
+﻿{
+  "species": "poultry",
+  "type": "layer_breeder",
+  "version": "v1",
+  "_meta": {
+    "kind": "requirements_option_b_wrapper",
+    "description": "Routes production to Option-B index+library for poultry/layer_breeder (chicken). breeder_type=layer_line.",
+    "created_utc": "2026-02-23T00:00:00Z",
+    "locked": false
+  },
+  "productions": {
+    "breeder": {
+      "index_file": "..\\\\breeder\\\\index.poultry_layer_breeder_breeder.v1.json",
+      "library_file": "..\\\\breeder\\\\library.poultry_layer_breeder_breeder.v1.json"
+    }
+  }
+}
