@@ -1,145 +1,80 @@
-﻿// agrocore/api/routes/analyze.route.js  (ESM)
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
-import { createRequire } from "module";
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+const { analyzeFormula } = require("../../../core/engine/analyzeFormula.cjs");
 
 const router = express.Router();
 
-// __dirname for ESM
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+function pickAnalyzeFn() {
+  return analyzeFormula;
+}
 
-// Use CommonJS require from ESM (best for .cjs)
-const require = createRequire(import.meta.url);
-
-// Load CORE engine (CommonJS)
-const enginePath = path.join(__dirname, "..", "..", "..", "core", "engine", "analyzeFormula.cjs");
-
-let analyzeFormula = null;
-
-function loadEngine() {
+router.post("/", async (req, res) => {
   try {
-    // IMPORTANT: require() caches modules; restart the server after changes.
-    const engineMod = require(enginePath);
-    analyzeFormula = (engineMod && (engineMod.analyzeFormula || engineMod.default)) || null;
-    return true;
-  } catch (err) {
-    analyzeFormula = null;
-    return false;
-  }
-}
+    const {
+      locale = "US",
+      formula_text: raw_formula_text = "",
+      resolved_rows = [],
+      lab_overrides,
+      ...rest
+    } = req.body || {};
 
-// Attempt initial load
-loadEngine();
-
-function coerceString(v, fallback = "") {
-  if (typeof v === "string") return v;
-  if (v === null || v === undefined) return fallback;
-  return String(v);
-}
-
-function coerceBool(v, fallback = false) {
-  if (typeof v === "boolean") return v;
-  if (typeof v === "string") {
-    const s = v.trim().toLowerCase();
-    if (["true", "1", "yes", "y"].includes(s)) return true;
-    if (["false", "0", "no", "n"].includes(s)) return false;
-  }
-  return fallback;
-}
-
-function isPlainObject(x) {
-  return !!x && typeof x === "object" && !Array.isArray(x);
-}
-
-router.post("/", (req, res) => {
-  try {
-    // If engine wasn't loaded at startup, retry once per request
-    if (typeof analyzeFormula !== "function") loadEngine();
-
-    if (typeof analyzeFormula !== "function") {
-      return res.status(500).json({
-        ok: false,
-        error: "Engine not available",
-        message: "analyzeFormula() could not be loaded from core/engine/analyzeFormula.cjs",
-        debug: {
-          enginePath,
-          hint: "Verify file exists and is valid CommonJS: core/engine/analyzeFormula.cjs",
-        },
-      });
-    }
-
-    const body = isPlainObject(req.body) ? req.body : {};
-
-    // Body parser guard (if express.json() isn't enabled upstream, req.body may be undefined)
-    const formula_text = coerceString(body.formula_text, "");
-    if (!formula_text.trim()) {
-      return res.status(400).json({
-        ok: false,
-        error: "Bad Request",
-        message:
-          "formula_text is required (string). Ensure server uses app.use(express.json()) before this route.",
-        received_body_type: typeof req.body,
-        received_keys: isPlainObject(body) ? Object.keys(body) : [],
-      });
-    }
-
-    // ✅ LAB passthrough (PRIMARY)
-    // Engine expects: params.lab.ingredient_overrides[dbKey].dm / .cp etc.
-    // Back-compat: if someone sends lab_overrides (older), accept it as lab.
-    const labCandidate = isPlainObject(body.lab)
-      ? body.lab
-      : isPlainObject(body.lab_overrides)
-        ? body.lab_overrides
-        : null;
-
-    const lab = labCandidate && isPlainObject(labCandidate) ? labCandidate : undefined;
-
-    // Forward-compatible input (do not reject unknown future fields)
-    const input = {
-      options: isPlainObject(body.options) ? body.options : {},
-
-      locale: coerceString(body.locale, "US"),
-      formula_text,
-
-      species: coerceString(body.species, "poultry"),
-      type: coerceString(body.type, "broiler"),
-      breed: coerceString(body.breed, "generic"),
-      region: coerceString(body.region, "global"),
-      version: coerceString(body.version, "v1"),
-      phase: coerceString(body.phase, "starter"),
-
-      // Optional override: allow calling with explicit reqKey
-      reqKey: coerceString(body.reqKey, ""),
-
-      // ✅ Production passthrough (engine uses it for requirements)
-      production: coerceString(body.production, ""),
-
-      normalize: coerceBool(body.normalize, false),
-
-      // ✅ enterprise + performance passthrough (engine uses these)
-      enterprise: isPlainObject(body.enterprise) ? body.enterprise : undefined,
-      performance: isPlainObject(body.performance) ? body.performance : undefined,
-
-      // ✅ lab passthrough (critical for DM/CP overrides)
-      lab,
-
-      // keep for later layers (pass-through)
-      reported_nutrients: body.reported_nutrients || undefined,
+    const buildFormulaTextFromResolvedRows = (rows = []) => {
+      if (!Array.isArray(rows) || !rows.length) return "";
+      return rows
+        .filter((r) => r && r.ingredient_id && Number.isFinite(Number(r.inclusion)))
+        .map((r) => `${String(r.ingredient_id).trim()} ${Number(r.inclusion)}`)
+        .join("\n");
     };
 
-    if (!input.reqKey) delete input.reqKey;
-    if (!input.production) delete input.production;
+    const formula_text =
+      Array.isArray(resolved_rows) && resolved_rows.length
+        ? buildFormulaTextFromResolvedRows(resolved_rows)
+        : String(raw_formula_text || "").trim();
 
-    const result = analyzeFormula(input);
+    if (!String(formula_text).trim()) {
+      return res.status(400).json({
+        status: "ERROR",
+        message: "formula_text or resolved_rows is required"
+      });
+    }
+
+    const analyzeFn = pickAnalyzeFn();
+    if (typeof analyzeFn !== "function") {
+      return res.status(500).json({
+        status: "ERROR",
+        message: "AgroCore engine analyze function not found.",
+        analyze_type: typeof analyzeFn
+      });
+    }
+
+    const result = await analyzeFn({
+      locale,
+      formula_text,
+      resolved_rows,
+      lab_overrides,
+      ...rest
+    });
+
+    // AIE — Log analysis event
+    try {
+      const AIE = require("../../../core/intelligence/AIE.cjs");
+      AIE.onFormulaAnalyzed({
+        species: rest?.species,
+        type: rest?.type,
+        production: rest?.production,
+        body_weight_kg: rest?.body_weight_kg,
+        intake_pct_bw: rest?.intake_pct_bw,
+        formula_text
+      });
+    } catch (_aieErr) {}
+
     return res.json(result);
   } catch (err) {
+    console.error("[analyze.route] error:", err);
     return res.status(500).json({
-      ok: false,
-      error: "Internal Server Error",
-      message: err?.message || String(err),
-      stack: err?.stack || undefined,
+      status: "ERROR",
+      message: err instanceof Error ? err.message : "Internal server error"
     });
   }
 });
