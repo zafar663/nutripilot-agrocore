@@ -1,0 +1,188 @@
+{
+  "_meta": {
+    "description": "Rabbit production performance standards — meat, fur, and dual-purpose breeds",
+    "version": "v2025",
+    "created_utc": "2026-08-09T00:00:00Z",
+    "sources": [
+      "NRC 1977 — Nutrient Requirements of Rabbits",
+      "de Blas & Wiseman 2010 — Nutrition of the Rabbit 2nd Ed (CABI)",
+      "McNitt et al. 2013 — Rabbit Production 9th Ed",
+      "Lebas et al. 1997 — The Rabbit: Husbandry, Health and Production (FAO)",
+      "UPRA Cuniculture France commercial records 2021",
+      "British Rabbit Council breed standards 2022"
+    ],
+    "notes": "Body weights in grams (kit/grow-out) or kg (mature). Litter data per doe."
+  },
+  "rabbit": {
+    "new_zealand_white": {
+      "_meta": {
+        "breed": "New Zealand White",
+        "purpose": "meat",
+        "mature_bw_kg": 4.5,
+        "birth_wt_g": 60,
+        "litter_size_born": 10,
+        "litter_size_weaned": 8.5,
+        "weaning_age_days": 28,
+        "market_age_days": 84,
+        "market_weight_g": 2500,
+        "adg_post_weaning_g_day": 42,
+        "fcr_grow_out": 3.2,
+        "does_per_buck": 10,
+        "litters_per_doe_year": 8,
+        "data_quality": "commercial_benchmark",
+        "source": "McNitt et al. 2013 + UPRA Cuniculture 2021"
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "neonatal": { "days": "0-14", "target_bw_g": 200 },
+        "pre_weaning": { "days": "14-28", "target_bw_g": 580 },
+        "post_weaning": { "days": "28-56", "target_bw_g": 1500 },
+        "grow_out": { "days": "56-84", "target_bw_g": 2500 }
+      },
+      "curve": [
+        { "day": 0,  "body_wt_g": 60,   "adg_g_day": null, "fcr": null },
+        { "day": 7,  "body_wt_g": 130,  "adg_g_day": 10,   "fcr": null },
+        { "day": 14, "body_wt_g": 220,  "adg_g_day": 13,   "fcr": null },
+        { "day": 21, "body_wt_g": 380,  "adg_g_day": 23,   "fcr": null },
+        { "day": 28, "body_wt_g": 580,  "adg_g_day": 29,   "fcr": null },
+        { "day": 35, "body_wt_g": 820,  "adg_g_day": 34,   "fcr": 2.8 },
+        { "day": 42, "body_wt_g": 1090, "adg_g_day": 39,   "fcr": 3.0 },
+        { "day": 49, "body_wt_g": 1380, "adg_g_day": 41,   "fcr": 3.1 },
+        { "day": 56, "body_wt_g": 1650, "adg_g_day": 39,   "fcr": 3.2 },
+        { "day": 63, "body_wt_g": 1940, "adg_g_day": 41,   "fcr": 3.2 },
+        { "day": 70, "body_wt_g": 2200, "adg_g_day": 37,   "fcr": 3.3 },
+        { "day": 77, "body_wt_g": 2380, "adg_g_day": 26,   "fcr": 3.4 },
+        { "day": 84, "body_wt_g": 2500, "adg_g_day": 17,   "fcr": 3.5 }
+      ],
+      "reproductive_performance": {
+        "does_conception_rate_pct": 80,
+        "litters_per_doe_year": 8,
+        "kits_born_alive": 9,
+        "kits_weaned": 8.5,
+        "pre_weaning_mortality_pct": 8,
+        "weaning_weight_g": 580,
+        "gestation_days": 31
+      }
+    },
+    "californian": {
+      "_meta": {
+        "breed": "Californian",
+        "purpose": "meat",
+        "mature_bw_kg": 4.8,
+        "birth_wt_g": 65,
+        "litter_size_born": 9,
+        "litter_size_weaned": 8,
+        "weaning_age_days": 28,
+        "market_age_days": 84,
+        "market_weight_g": 2650,
+        "adg_post_weaning_g_day": 44,
+        "fcr_grow_out": 3.1,
+        "data_quality": "commercial_benchmark",
+        "source": "McNitt et al. 2013 + ARBA breed standard"
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "neonatal": { "days": "0-14", "target_bw_g": 210 },
+        "pre_weaning": { "days": "14-28", "target_bw_g": 610 },
+        "post_weaning": { "days": "28-56", "target_bw_g": 1580 },
+        "grow_out": { "days": "56-84", "target_bw_g": 2650 }
+      },
+      "curve": [
+        { "day": 0,  "body_wt_g": 65,   "adg_g_day": null, "fcr": null },
+        { "day": 7,  "body_wt_g": 140,  "adg_g_day": 11,   "fcr": null },
+        { "day": 14, "body_wt_g": 240,  "adg_g_day": 14,   "fcr": null },
+        { "day": 21, "body_wt_g": 410,  "adg_g_day": 24,   "fcr": null },
+        { "day": 28, "body_wt_g": 610,  "adg_g_day": 29,   "fcr": null },
+        { "day": 35, "body_wt_g": 860,  "adg_g_day": 36,   "fcr": 2.7 },
+        { "day": 42, "body_wt_g": 1140, "adg_g_day": 40,   "fcr": 2.9 },
+        { "day": 49, "body_wt_g": 1430, "adg_g_day": 41,   "fcr": 3.0 },
+        { "day": 56, "body_wt_g": 1730, "adg_g_day": 43,   "fcr": 3.0 },
+        { "day": 63, "body_wt_g": 2030, "adg_g_day": 43,   "fcr": 3.1 },
+        { "day": 70, "body_wt_g": 2290, "adg_g_day": 37,   "fcr": 3.2 },
+        { "day": 77, "body_wt_g": 2490, "adg_g_day": 29,   "fcr": 3.3 },
+        { "day": 84, "body_wt_g": 2650, "adg_g_day": 23,   "fcr": 3.4 }
+      ],
+      "reproductive_performance": {
+        "does_conception_rate_pct": 82,
+        "litters_per_doe_year": 8,
+        "kits_born_alive": 8.5,
+        "kits_weaned": 8,
+        "pre_weaning_mortality_pct": 6,
+        "weaning_weight_g": 610,
+        "gestation_days": 31
+      }
+    },
+    "rex": {
+      "_meta": {
+        "breed": "Rex",
+        "purpose": "dual — meat and fur",
+        "mature_bw_kg": 4.0,
+        "birth_wt_g": 55,
+        "litter_size_born": 8,
+        "litter_size_weaned": 7,
+        "weaning_age_days": 28,
+        "market_age_days": 91,
+        "market_weight_g": 2200,
+        "adg_post_weaning_g_day": 36,
+        "fcr_grow_out": 3.5,
+        "fur_pelt_quality": "Grade A velvety — 1.3 cm dense fur",
+        "data_quality": "research",
+        "source": "British Rabbit Council 2022 + McNitt et al. 2013"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "neonatal": { "days": "0-14", "target_bw_g": 185 },
+        "pre_weaning": { "days": "14-28", "target_bw_g": 510 },
+        "grow_out": { "days": "28-91", "target_bw_g": 2200 }
+      },
+      "curve": [
+        { "day": 0,  "body_wt_g": 55,   "adg_g_day": null, "fcr": null },
+        { "day": 14, "body_wt_g": 200,  "adg_g_day": 10,   "fcr": null },
+        { "day": 28, "body_wt_g": 510,  "adg_g_day": 22,   "fcr": null },
+        { "day": 42, "body_wt_g": 820,  "adg_g_day": 33,   "fcr": 3.2 },
+        { "day": 56, "body_wt_g": 1120, "adg_g_day": 34,   "fcr": 3.4 },
+        { "day": 70, "body_wt_g": 1600, "adg_g_day": 34,   "fcr": 3.5 },
+        { "day": 84, "body_wt_g": 1950, "adg_g_day": 25,   "fcr": 3.6 },
+        { "day": 91, "body_wt_g": 2200, "adg_g_day": 36,   "fcr": 3.7 }
+      ]
+    },
+    "english_angora": {
+      "_meta": {
+        "breed": "English Angora",
+        "purpose": "fiber (wool)",
+        "mature_bw_kg": 3.0,
+        "birth_wt_g": 45,
+        "annual_wool_g": 400,
+        "shearing_interval_weeks": 13,
+        "fiber_diameter_micron": 13,
+        "data_quality": "research",
+        "source": "ARBA + British Rabbit Council 2022"
+      },
+      "warn_threshold_pct": 15,
+      "alert_threshold_pct": 25,
+      "phases": {
+        "neonatal": { "days": "0-28", "target_bw_g": 400 },
+        "grow_out": { "days": "28-84", "target_bw_g": 1500 },
+        "mature": { "days": "180+", "target_bw_kg": 3.0 }
+      },
+      "curve": [
+        { "day": 0,   "body_wt_g": 45,   "adg_g_day": null },
+        { "day": 14,  "body_wt_g": 170,  "adg_g_day": 9 },
+        { "day": 28,  "body_wt_g": 400,  "adg_g_day": 16 },
+        { "day": 56,  "body_wt_g": 900,  "adg_g_day": 18 },
+        { "day": 84,  "body_wt_g": 1500, "adg_g_day": 21 },
+        { "day": 180, "body_wt_g": 2500, "adg_g_day": 11 },
+        { "day": 270, "body_wt_g": 3000, "adg_g_day": 6 }
+      ],
+      "fiber_performance": {
+        "annual_wool_g": 400,
+        "shearing_every_weeks": 13,
+        "fiber_diameter_micron": 13,
+        "guard_hair_pct": 0
+      }
+    }
+  }
+}

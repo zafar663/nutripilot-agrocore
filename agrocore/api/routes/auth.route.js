@@ -4,13 +4,20 @@ import jwt from 'jsonwebtoken';
 import Database from 'better-sqlite3';
 import crypto from 'crypto';
 import fs from 'fs';
+import { createRequire } from 'module';
+const { normalizeEmail, lookupUserByEmail, encodeUsername } = createRequire(import.meta.url)('../../../core/lib/normalize-email.cjs');
 import { sendMail } from '../../core/email/mailer.js';
 import { verifySuperAdmin, checkSuperPassword, signSuperAdmin, totpEnabled, verifyTotp, generateTotpSecret, verifyTotpWith, otpauthUri,
   clientIp, listAllowedIps, allowlistActive, isIpAllowed, addAllowedIp, removeAllowedIp, superAdminIpGate,
   setSuperPassword, passwordIsRotated, createSaResetToken, verifySaResetToken, consumeSaResetToken } from '../middleware/super-admin.mw.js';
 import { invalidateUserStatus } from '../middleware/auth-gate.mw.js';
+import { accountAccessState, licenseUntil, parseModuleAccess, revokePayload } from '../lib/account-access.js';
 import { trafficSummary, logLoginEvent, userActivity } from '../middleware/traffic.mw.js';
 import { listBlocked, unblockIp, blockIp } from '../middleware/ip-block.mw.js';
+import { grantIfPrepaid, isOwnerEmail, grantOwnerFree, OWNER_MODULES } from '../lib/billing-grant.js';
+import { quoteCharge, billedModules } from '../lib/seats.js';
+import { createInvoice, ensureInvoiceTable } from '../lib/invoices.js';
+import { ensureNutrixDatabaseForUser } from '../../../core/services/ensure-nutrix-database.js';
 
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET || (() => { throw new Error('[auth] JWT_SECRET env var is required'); })();
@@ -104,7 +111,9 @@ router.get('/v1/super-admin/traffic', superAdminIpGate, (req, res) => {
       (data.active_now || []).forEach(u => { u.name = nm(u.email); });
       (data.recent_logins || []).forEach(u => { u.name = nm(u.email); });
     } catch (_e) {}
-    return res.json({ success: true, data, blocked: listBlocked() });
+    let blocked = [];
+    try { blocked = listBlocked() || []; } catch (_e) { blocked = []; }
+    return res.json({ success: true, data, blocked });
   } catch (e) { return res.status(500).json({ success: false, error: e.message }); }
 });
 
@@ -233,7 +242,7 @@ router.post('/v1/super-admin/2fa/verify', superAdminIpGate, (req, res) => {
   const { secret, code } = req.body || {};
   return res.json({ success: true, valid: verifyTotpWith(secret, code) });
 });
-function encodeOwner(email) { return String(email).replace(/@/g, '_at_').replace(/\./g, '_dot_'); }
+function encodeOwner(email) { return encodeUsername(email); }
 const OWNER_EMAIL_RAW = process.env.SUPER_ADMIN_EMAIL || 'feednutritionmillconsulting@gmail.com';
 const DB_PATH = `/var/www/nutripilot-agrocore/data/users/${encodeOwner(OWNER_EMAIL_RAW)}/nutrix.db`;
 const APP_URL = process.env.APP_URL || 'https://agrocoreprime.com';
@@ -282,6 +291,7 @@ function getDb() {
     created_at TEXT DEFAULT (datetime('now')),
     approved_at TEXT,
     notes TEXT,
+    extra_seats TEXT,
     turso_url TEXT,
     turso_token TEXT
   )`);
@@ -289,6 +299,11 @@ function getDb() {
   try { db.exec(`ALTER TABLE np_users ADD COLUMN turso_url TEXT`); } catch (_) {}
   try { db.exec(`ALTER TABLE np_users ADD COLUMN turso_token TEXT`); } catch (_) {}
   try { db.exec(`ALTER TABLE np_users ADD COLUMN provisioned_by TEXT`); } catch (_) {}
+  try { db.exec(`ALTER TABLE np_users ADD COLUMN workspace_connected_via TEXT`); } catch (_) {}
+  try { db.exec(`ALTER TABLE np_users ADD COLUMN workspace_mode TEXT`); } catch (_) {}
+  try { db.exec(`ALTER TABLE np_users ADD COLUMN module_access TEXT`); } catch (_) {}
+  try { db.exec(`ALTER TABLE np_users ADD COLUMN extra_seats TEXT`); } catch (_) {}
+  try { db.exec(`ALTER TABLE np_users ADD COLUMN pending_invoice TEXT`); } catch (_) {}
   db.exec(`CREATE TABLE IF NOT EXISTS password_resets (
     id TEXT PRIMARY KEY,
     user_id TEXT NOT NULL,
@@ -307,9 +322,12 @@ router.post('/v1/auth/register', async (req, res) => {
     const { full_name, email, password, company_name, company_type,
       country, country_tier, role, plan_interest, modules_interest,
       use_case, expected_users, heard_from } = req.body;
-    if (!full_name || !email || !password)
+    const canonEmail = normalizeEmail(email);
+    if (!full_name || !canonEmail || !password)
       return res.status(400).json({ success: false, error: 'Name, email and password required' });
-    const existing = db.prepare('SELECT id FROM np_users WHERE email = ?').get(email.toLowerCase());
+    if (!canonEmail.includes('@') || !canonEmail.includes('.'))
+      return res.status(400).json({ success: false, error: 'Enter a valid email address' });
+    const existing = lookupUserByEmail(db, canonEmail);
     if (existing)
       return res.status(409).json({ success: false, error: 'Email already registered' });
     const hash = await bcrypt.hash(password, 10);
@@ -318,10 +336,53 @@ router.post('/v1/auth/register', async (req, res) => {
       (id, full_name, email, password_hash, company_name, company_type, country, country_tier,
        role, plan_interest, modules_interest, use_case, expected_users, heard_from)
       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
-    ).run(id, full_name, email.toLowerCase(), hash, company_name, company_type,
+    ).run(id, full_name, canonEmail, hash, company_name, company_type,
       country, country_tier || 1, role, plan_interest,
       JSON.stringify(modules_interest || []), use_case, expected_users, heard_from);
+    if (isOwnerEmail(canonEmail)) {
+      db.prepare(`UPDATE np_users SET status='approved', plan_granted='owner', modules_granted=?, approved_at=datetime('now') WHERE id=?`)
+        .run(JSON.stringify(OWNER_MODULES), id);
+      return res.json({ success: true, status: 'approved', free: true });
+    }
+    grantIfPrepaid(canonEmail, id);
     res.json({ success: true, status: 'pending' });
+  } catch (e) {
+    res.status(500).json({ success: false, error: e.message });
+  }
+});
+
+router.post('/v1/auth/request-trial', async (req, res) => {
+  try {
+    const email = normalizeEmail(req.body?.email);
+    const password = String(req.body?.password || '');
+    const modules = Array.isArray(req.body?.modules_interest)
+      ? req.body.modules_interest.map(String).filter(Boolean)
+      : [];
+    if (!email || !password) {
+      return res.status(400).json({ success: false, error: 'Email and password are required' });
+    }
+    if (!modules.length) {
+      return res.status(400).json({ success: false, error: 'Select at least one module for the trial.' });
+    }
+    const db = getDb();
+    const user = lookupUserByEmail(db, email);
+    if (!user) return res.status(404).json({ success: false, error: 'Create your account first, then request the trial.' });
+    const valid = await bcrypt.compare(password, user.password_hash);
+    if (!valid) return res.status(401).json({ success: false, error: 'Invalid email or password' });
+    if (user.status === 'approved') {
+      return res.status(409).json({ success: false, error: 'This account is already approved.' });
+    }
+    if (user.status === 'rejected' || user.status === 'suspended') {
+      return res.status(403).json({ success: false, error: 'This account cannot request a trial. Contact the administrator.' });
+    }
+    db.prepare(`UPDATE np_users
+      SET plan_interest = 'trial', modules_interest = ?, status = 'pending', notes = ?
+      WHERE id = ?`).run(
+      JSON.stringify(modules),
+      `7-day trial requested for ${modules.join(', ')}. Waiting for Super Admin permission.`,
+      user.id
+    );
+    res.json({ success: true, status: 'pending', plan_interest: 'trial', modules_interest: modules });
   } catch (e) {
     res.status(500).json({ success: false, error: e.message });
   }
@@ -333,28 +394,41 @@ router.post('/v1/auth/login', async (req, res) => {
     return res.status(429).json({ success: false, error: 'Too many login attempts. Please wait 15 minutes before trying again.' });
   }
   try {
-    const { email, password } = req.body;
+    const email = normalizeEmail(req.body?.email);
+    const password = req.body?.password;
     const db = getDb();
-    const user = db.prepare('SELECT * FROM np_users WHERE email = ?').get((email || '').toLowerCase().trim());
+    const user = lookupUserByEmail(db, req.body?.email);
     if (!user) { logLoginEvent(email, false, loginIp, 'no such account'); return res.status(401).json({ success: false, error: 'Invalid email or password' }); }
     const valid = await bcrypt.compare(password, user.password_hash);
     if (!valid) { logLoginEvent(email, false, loginIp, 'wrong password'); return res.status(401).json({ success: false, error: 'Invalid email or password' }); }
     if (user.status === 'pending') { logLoginEvent(email, false, loginIp, 'pending'); return res.json({ success: false, status: 'pending', error: 'Account awaiting approval' }); }
     if (user.status === 'rejected') { logLoginEvent(email, false, loginIp, 'rejected'); return res.json({ success: false, status: 'rejected', error: 'Account not approved' }); }
     if (user.status === 'suspended') { logLoginEvent(email, false, loginIp, 'suspended'); return res.json({ success: false, status: 'suspended', error: 'Account suspended' }); }
+    const accessState = accountAccessState(user.status, user.modules_granted, user.module_access);
+    if (accessState.blocked) {
+      logLoginEvent(email, false, loginIp, accessState.reason);
+      return res.json({ success: false, status: accessState.reason, error: accessState.error, revoke: true });
+    }
     resetLoginRateLimit(loginIp);
     logLoginEvent(email, true, loginIp, 'ok');
     const token = jwt.sign(
       { id: user.id, email: user.email, full_name: user.full_name,
-        modules: JSON.parse(user.modules_granted || '[]'), plan: user.plan_granted },
+        modules: accessState.modules, plan: user.plan_granted,
+        status: user.status, license_until: licenseUntil(user.modules_granted, user.module_access) },
       JWT_SECRET, { expiresIn: '30d' }
     );
     res.json({ success: true, token, user: {
       id: user.id, full_name: user.full_name, email: user.email,
       company_name: user.company_name, country: user.country,
       role: user.role, plan: user.plan_granted,
-      modules: JSON.parse(user.modules_granted || '[]'), status: user.status
+      modules: accessState.modules, status: user.status,
+      module_access: parseModuleAccess(user.module_access),
+      license_until: licenseUntil(user.modules_granted, user.module_access)
     }});
+    ensureNutrixDatabaseForUser(
+      { nutrixUser: user.email },
+      { millId: 'personal', species: 'poultry' }
+    ).catch((e) => console.error('[auth] Nutrix database seed failed:', e?.message || e));
   } catch (e) {
     res.status(500).json({ success: false, error: e.message });
   }
@@ -367,16 +441,19 @@ router.get('/v1/auth/me', (req, res) => {
     const decoded = jwt.verify(token, JWT_SECRET);
     // Super-admin tokens have no DB row — return as-is
     if (decoded.super_admin) return res.json({ success: true, user: decoded });
-    // Return live modules + plan from DB so the client can detect changes without re-login
     const db = getDb();
-    const row = db.prepare('SELECT modules_granted, plan_granted, status FROM np_users WHERE id = ?').get(decoded.id);
+    const row = db.prepare('SELECT modules_granted, plan_granted, status, module_access FROM np_users WHERE id = ?').get(decoded.id);
     db.close();
-    if (!row) return res.json({ success: true, user: decoded });
+    if (!row) return res.status(401).json(revokePayload({ reason: 'inactive', error: 'Your account is no longer active. Contact the administrator.' }));
+    const state = accountAccessState(row.status, row.modules_granted, row.module_access);
+    if (state.blocked) return res.status(401).json(revokePayload(state));
     res.json({ success: true, user: {
       ...decoded,
-      modules: JSON.parse(row.modules_granted || '[]'),
+      modules: state.modules,
       plan:    row.plan_granted,
       status:  row.status,
+      module_access: parseModuleAccess(row.module_access),
+      license_until: licenseUntil(row.modules_granted, row.module_access),
     }});
   } catch (e) {
     res.status(401).json({ success: false, error: 'Invalid token' });
@@ -401,13 +478,33 @@ function requireAdmin(req, res, next) {
 router.get('/v1/auth/admin/users', requireAdmin, (req, res) => {
   try {
     const db = getDb();
+    try { db.exec(`ALTER TABLE np_users ADD COLUMN extra_seats TEXT`); } catch {}
+    try { db.exec(`ALTER TABLE np_users ADD COLUMN pending_invoice TEXT`); } catch {}
     db.exec(`CREATE TABLE IF NOT EXISTS traffic_log (id INTEGER PRIMARY KEY AUTOINCREMENT, ts TEXT DEFAULT (datetime('now')), method TEXT, path TEXT, status INTEGER, user TEXT, ip TEXT)`);
-    const registered = db.prepare(`SELECT u.id, u.full_name, u.email, u.company_name, u.company_type, u.country, u.role, u.plan_interest, u.modules_interest, u.use_case, u.expected_users, u.heard_from, u.status, u.modules_granted, u.plan_granted, u.created_at, u.approved_at, u.notes,
+    const registered = db.prepare(`SELECT u.id, u.full_name, u.email, u.company_name, u.company_type, u.country, u.country_tier, u.role, u.plan_interest, u.modules_interest, u.use_case, u.expected_users, u.heard_from, u.status, u.modules_granted, u.plan_granted, u.module_access, u.extra_seats, u.pending_invoice, u.created_at, u.approved_at, u.notes,
         (SELECT MAX(t.ts) FROM traffic_log t WHERE LOWER(t.user) = LOWER(u.email)) AS last_active,
         (SELECT COUNT(*) FROM traffic_log t WHERE LOWER(t.user) = LOWER(u.email)) AS activity_count
       FROM np_users u
       WHERE (u.provisioned_by IS NULL OR u.provisioned_by = '')
       ORDER BY u.created_at DESC`).all();
+    try {
+      const payments = db.prepare(`SELECT email, plan, modules_json, amount_cents, interval, status, created_at
+        FROM np_payments WHERE status = 'paid' ORDER BY created_at DESC`).all();
+      const byEmail = new Map();
+      for (const payment of payments) {
+        const key = String(payment.email || '').toLowerCase();
+        if (!byEmail.has(key)) byEmail.set(key, payment);
+      }
+      for (const user of registered) {
+        const payment = byEmail.get(String(user.email || '').toLowerCase());
+        if (!payment) continue;
+        user.payment_plan = payment.plan;
+        user.payment_cents = payment.amount_cents;
+        user.payment_interval = payment.interval;
+        user.payment_modules = payment.modules_json;
+        user.payment_status = payment.status;
+      }
+    } catch { /* payments table appears after the first card payment */ }
 
     // Also discover users who have a data directory but no np_users entry (logged in outside the registration flow)
     const DATA_USERS_ROOT = '/var/www/nutripilot-agrocore/data/users';
@@ -454,9 +551,10 @@ router.get('/v1/auth/admin/users', requireAdmin, (req, res) => {
 router.post('/v1/auth/admin/users/:id/approve', requireAdmin, (req, res) => {
   try {
     const db = getDb();
-    const { modules_granted, plan_granted, notes } = req.body;
-    db.prepare(`UPDATE np_users SET status='approved', modules_granted=?, plan_granted=?, approved_at=datetime('now'), notes=? WHERE id=?`)
-      .run(JSON.stringify(modules_granted || []), plan_granted || '', notes || '', req.params.id);
+    const { modules_granted, plan_granted, notes, module_access, extra_seats } = req.body;
+    try { db.exec(`ALTER TABLE np_users ADD COLUMN extra_seats TEXT`); } catch (_) {}
+    db.prepare(`UPDATE np_users SET status='approved', modules_granted=?, plan_granted=?, approved_at=datetime('now'), notes=?, module_access=?, extra_seats=? WHERE id=?`)
+      .run(JSON.stringify(modules_granted || []), plan_granted || '', notes || '', JSON.stringify(module_access || {}), extra_seats ? JSON.stringify(extra_seats) : null, req.params.id);
     invalidateUserStatus(req.params.id);
     res.json({ success: true });
   } catch (e) {
@@ -491,9 +589,10 @@ router.post('/v1/auth/admin/users/:id/suspend', requireAdmin, (req, res) => {
 router.patch('/v1/auth/admin/users/:id', requireAdmin, (req, res) => {
   try {
     const db = getDb();
-    const { modules_granted, plan_granted, notes } = req.body;
-    db.prepare(`UPDATE np_users SET modules_granted=?, plan_granted=?, notes=? WHERE id=?`)
-      .run(JSON.stringify(modules_granted || []), plan_granted || '', notes || '', req.params.id);
+    const { modules_granted, plan_granted, notes, module_access, extra_seats } = req.body;
+    try { db.exec(`ALTER TABLE np_users ADD COLUMN extra_seats TEXT`); } catch (_) {}
+    db.prepare(`UPDATE np_users SET modules_granted=?, plan_granted=?, notes=?, module_access=?, extra_seats=COALESCE(?, extra_seats) WHERE id=?`)
+      .run(JSON.stringify(modules_granted || []), plan_granted || '', notes || '', JSON.stringify(module_access || {}), extra_seats != null ? JSON.stringify(extra_seats) : null, req.params.id);
     invalidateUserStatus(req.params.id);
     res.json({ success: true });
   } catch (e) {
@@ -501,6 +600,58 @@ router.patch('/v1/auth/admin/users/:id', requireAdmin, (req, res) => {
   }
 });
 
+router.post('/v1/auth/admin/users/:id/invoice', requireAdmin, async (req, res) => {
+  try {
+    const db = getDb();
+    try { db.exec(`ALTER TABLE np_users ADD COLUMN pending_invoice TEXT`); } catch (_) {}
+    const user = db.prepare('SELECT id, email, full_name, company_name, country, country_tier, extra_seats, status FROM np_users WHERE id=?').get(req.params.id);
+    if (!user) return res.status(404).json({ success: false, error: 'User not found' });
+    const extra_seats = req.body?.extra_seats || {};
+    let currentExtra = {};
+    try { currentExtra = JSON.parse(user.extra_seats || '{}') || {}; } catch { currentExtra = {}; }
+    const quoted = quoteCharge({
+      plan: req.body?.plan_granted || req.body?.plan || '',
+      extraSeats: extra_seats,
+      currentExtra,
+      chargePlan: !!req.body?.charge_plan,
+      chargeExtras: req.body?.charge_extras !== false,
+      annual: !!req.body?.annual,
+      tier: Number(user.country_tier) || 1,
+    });
+    if (!quoted.dollars || quoted.dollars < 1) {
+      return res.status(400).json({ success: false, error: 'Nothing to charge. Tick plan and/or extra seats, then set quantities above what they already have.' });
+    }
+    const modules = billedModules(req.body?.modules_granted || req.body?.modules || []);
+    ensureInvoiceTable(db);
+    const made = createInvoice(db, {
+      user,
+      quoted,
+      extra_seats,
+      modules,
+      chargePlan: !!req.body?.charge_plan,
+      chargeExtras: req.body?.charge_extras !== false,
+      annual: !!req.body?.annual,
+    });
+    const share_url = `${APP_URL}/pay?t=${made.token}`;
+    const pending = {
+      share_url,
+      invoice_id: made.id,
+      expires_at: made.expires_at,
+      monthly: quoted.monthly,
+      dollars: quoted.dollars,
+      interval: quoted.interval,
+      lines: quoted.lines,
+      plan: quoted.plan,
+      extra_seats,
+      created_at: new Date().toISOString(),
+    };
+    db.prepare('UPDATE np_users SET pending_invoice=? WHERE id=?').run(JSON.stringify(pending), user.id);
+    res.json({ success: true, url: share_url, share_url, expires_at: made.expires_at, quote: quoted, pending });
+  } catch (e) {
+    console.error('[auth] invoice', e.message);
+    res.status(500).json({ success: false, error: e.message || 'Payment link could not be created.' });
+  }
+});
 
 // ── Discora-specific admin endpoints ────────────────────────────────────────
 // Dedicated approval flow for Discora signups, scoped to just the 'discora' module
@@ -566,6 +717,25 @@ router.post('/v1/auth/contact-sales', async (req, res) => {
     const id = 'cs_' + Date.now();
     db.prepare(`INSERT INTO contact_sales (id, full_name, email, company_name, country, role, phone, message, interest) VALUES (?,?,?,?,?,?,?,?,?)`)
       .run(id, full_name, email.toLowerCase(), company_name, country, role, phone, message, interest);
+    const salesTo = process.env.CONTACT_SALES_EMAIL || 'team@agrocoreprime.com';
+    const text = [
+      'New AgroCore Prime contact',
+      `Name: ${full_name}`,
+      `Email: ${email}`,
+      `Company: ${company_name || '—'}`,
+      `Country: ${country || '—'}`,
+      `Role: ${role || '—'}`,
+      `Phone: ${phone || '—'}`,
+      `Interest: ${interest || '—'}`,
+      '',
+      message || '(no message)',
+    ].join('\n');
+    sendMail({
+      to: salesTo,
+      subject: `Contact Sales — ${full_name}`,
+      text,
+      html: `<pre style="font-family:sans-serif;white-space:pre-wrap">${text.replace(/</g, '&lt;')}</pre>`,
+    }).catch((e) => console.warn('[contact-sales] email failed:', e.message));
     res.json({ success: true, message: 'Thank you! Our sales team will contact you within 24 hours.' });
   } catch (e) {
     res.status(500).json({ success: false, error: e.message });
@@ -654,7 +824,7 @@ router.post('/v1/auth/forgot-password', async (req, res) => {
   const genericMsg = 'If an account exists for that email, a reset link has been sent.';
   try {
     const db = getDb();
-    const email = String(req.body?.email || '').toLowerCase().trim();
+    const email = normalizeEmail(req.body?.email);
     if (!email) return res.status(400).json({ success: false, error: 'Email required' });
 
     // Super-admin email — handled by the SA reset flow (separate credential store).
@@ -670,7 +840,7 @@ router.post('/v1/auth/forgot-password', async (req, res) => {
       return res.json({ success: true, message: genericMsg });
     }
 
-    const user = db.prepare('SELECT id, email, full_name, status FROM np_users WHERE email = ?').get(email);
+    const user = lookupUserByEmail(db, email);
     if (user && user.status !== 'rejected' && user.status !== 'suspended') {
       const rawToken = crypto.randomBytes(32).toString('hex');
       const tokenHash = crypto.createHash('sha256').update(rawToken).digest('hex');
@@ -935,10 +1105,21 @@ router.post('/v1/auth/turso', async (req, res) => {
     const db = getDb();
     const encUrl   = turso_url   ? encrypt(turso_url)   : null;
     const encToken = turso_token ? encrypt(turso_token) : null;
-    db.prepare(`UPDATE np_users SET turso_url=?, turso_token=? WHERE email=?`)
-      .run(encUrl, encToken, userEmail.toLowerCase());
+    db.prepare(`UPDATE np_users SET turso_url=?, turso_token=?, workspace_mode=?, workspace_connected_via=COALESCE(NULLIF(workspace_connected_via,''), ?) WHERE email=?`)
+      .run(encUrl, encToken, turso_url ? 'turso' : null, turso_url ? String(req.body.via || 'nutrix').toLowerCase() : null, userEmail.toLowerCase());
 
-    res.json({ success: true, message: turso_url ? 'Turso database connected.' : 'Turso database disconnected.' });
+    if (turso_url && turso_token) {
+      try {
+        const client = getTursoClient(turso_url, turso_token);
+        const { NpDb } = await import('../../../core/db/turso/turso.adapter.js');
+        const { ensureFarmPulseSchemaAsync } = await import('../../../core/db/farmpulse/ensure-farmpulse-schema.js');
+        await ensureFarmPulseSchemaAsync(new NpDb({ type: 'turso', client }));
+      } catch (e) {
+        console.error('[auth] Farm Pulse Turso schema ensure failed:', e?.message || e);
+      }
+    }
+
+    res.json({ success: true, message: turso_url ? 'Workspace database connected. All purchased modules use this data.' : 'Workspace database disconnected.' });
   } catch (e) { res.status(500).json({ success: false, error: e.message }); }
 });
 
@@ -949,10 +1130,78 @@ router.get('/v1/auth/turso', (req, res) => {
     if (!userEmail) return res.status(401).json({ success: false, error: 'Not authenticated' });
 
     const db  = getDb();
-    const row = db.prepare(`SELECT turso_url FROM np_users WHERE email=?`).get(userEmail.toLowerCase());
+    const row = db.prepare(`SELECT turso_url, workspace_mode, workspace_connected_via, modules_granted FROM np_users WHERE email=?`).get(userEmail.toLowerCase());
     const url = row?.turso_url ? decrypt(row.turso_url) : null;
+    const ws = buildWorkspace(row || {}, decrypt);
 
-    res.json({ success: true, connected: !!url, turso_url: url ? maskUrl(url) : null });
+    res.json({ success: true, connected: !!url || ws.connected, turso_url: url ? maskUrl(url) : null, workspace: ws });
+  } catch (e) { res.status(500).json({ success: false, error: e.message }); }
+});
+
+const WORKSPACE_MODULES = [
+  { key: 'nutrix', label: 'Nutrix', desc: 'Formulas, ingredients, optimisation' },
+  { key: 'milliq', label: 'Mill IQ', desc: 'Batches, stock, QC, mill-edge' },
+  { key: 'vendorpulse', label: 'VendorPulse', desc: 'Prices, purchase orders, suppliers' },
+  { key: 'farmpulse', label: 'Farm Pulse', desc: 'Farms, flocks, performance' },
+  { key: 'nutrixlite', label: 'Nutrix Lite', desc: 'Guest optimizer links' },
+  { key: 'lab-quality', label: 'Lab & Quality', desc: 'Lab intake and CoA' },
+];
+const WS_ALIASES = { formulation: 'nutrix', prices: 'nutrix', lab: 'nutrix', 'feed-mill': 'milliq', purchaser: 'vendorpulse', 'farm-pulse': 'farmpulse' };
+
+function buildWorkspace(row, decryptFn) {
+  let granted = [];
+  try { granted = JSON.parse(row.modules_granted || '[]'); } catch (_e) { granted = []; }
+  granted = [...new Set(granted.map(k => WS_ALIASES[k] || k))];
+  const isAdmin = granted.includes('admin');
+  const url = row.turso_url && decryptFn ? decryptFn(row.turso_url) : (row.turso_url ? null : null);
+  const tursoOn = !!(row.turso_url);
+  const connected = tursoOn || row.workspace_mode === 'hosted' || !!row.workspace_connected_via;
+  const mode = tursoOn ? 'turso' : (connected ? 'hosted' : 'none');
+  const via = row.workspace_connected_via || (tursoOn ? 'nutrix' : null);
+  const modules = WORKSPACE_MODULES.map(m => {
+    const grantedHere = isAdmin || granted.includes(m.key);
+    return { ...m, granted: grantedHere, attached: connected && grantedHere };
+  });
+  const mine = modules.filter(m => m.granted);
+  let headline = 'Connect once on My Data. Nutrix, Mill IQ, Farm Pulse and VendorPulse all use this workspace.';
+  if (connected) {
+    headline = 'Connected. Every module you open uses this same data.';
+  }
+  return {
+    connected,
+    mode,
+    turso_url: tursoOn && decryptFn ? (decryptFn(row.turso_url) ? maskUrl(decryptFn(row.turso_url)) : null) : null,
+    connected_via: via,
+    granted: mine.map(m => m.key),
+    modules,
+    headline,
+  };
+}
+
+router.get('/v1/auth/workspace', (req, res) => {
+  try {
+    const userEmail = req.user?.email;
+    if (!userEmail) return res.status(401).json({ success: false, error: 'Not authenticated' });
+    const db = getDb();
+    const row = db.prepare(`SELECT turso_url, workspace_mode, workspace_connected_via, modules_granted FROM np_users WHERE email=?`).get(userEmail.toLowerCase());
+    res.json({ success: true, ...buildWorkspace(row || {}, decrypt) });
+  } catch (e) { res.status(500).json({ success: false, error: e.message }); }
+});
+
+router.post('/v1/auth/workspace', (req, res) => {
+  try {
+    const userEmail = req.user?.email;
+    if (!userEmail) return res.status(401).json({ success: false, error: 'Not authenticated' });
+    const via = String(req.body?.via || 'account').toLowerCase();
+    const mode = String(req.body?.mode || 'hosted').toLowerCase();
+    if (mode !== 'hosted') {
+      return res.status(400).json({ success: false, error: 'Use /v1/auth/turso to connect your own database.' });
+    }
+    const db = getDb();
+    db.prepare(`UPDATE np_users SET workspace_mode='hosted', workspace_connected_via=COALESCE(NULLIF(workspace_connected_via,''), ?) WHERE email=?`)
+      .run(via, userEmail.toLowerCase());
+    const row = db.prepare(`SELECT turso_url, workspace_mode, workspace_connected_via, modules_granted FROM np_users WHERE email=?`).get(userEmail.toLowerCase());
+    res.json({ success: true, message: 'Hosted workspace connected. Purchased modules share this data.', ...buildWorkspace(row || {}, decrypt) });
   } catch (e) { res.status(500).json({ success: false, error: e.message }); }
 });
 
@@ -1028,9 +1277,11 @@ router.post('/v1/auth/turso/provision', async (req, res) => {
 
     // 3. Verify connectivity
     try {
-      const { getTursoClient } = await import('../../../core/db/turso/turso.adapter.js');
+      const { getTursoClient, NpDb } = await import('../../../core/db/turso/turso.adapter.js');
       const client = getTursoClient(turso_url, turso_token);
       await client.execute('SELECT 1');
+      const { ensureFarmPulseSchemaAsync } = await import('../../../core/db/farmpulse/ensure-farmpulse-schema.js');
+      await ensureFarmPulseSchemaAsync(new NpDb({ type: 'turso', client }));
     } catch (e) {
       return res.status(502).json({ success: false, error: 'Database created but connection test failed: ' + e.message });
     }
@@ -1038,8 +1289,8 @@ router.post('/v1/auth/turso/provision', async (req, res) => {
     // 4. Store encrypted credentials
     const encUrl   = encrypt(turso_url);
     const encToken = encrypt(turso_token);
-    db.prepare(`UPDATE np_users SET turso_url=?, turso_token=? WHERE email=?`)
-      .run(encUrl, encToken, userEmail.toLowerCase());
+    db.prepare(`UPDATE np_users SET turso_url=?, turso_token=?, workspace_mode='turso', workspace_connected_via=COALESCE(NULLIF(workspace_connected_via,''), ?) WHERE email=?`)
+      .run(encUrl, encToken, String(req.body?.via || 'nutrix').toLowerCase(), userEmail.toLowerCase());
 
     res.json({ success: true, turso_url: maskUrl(turso_url), message: 'Private database created and connected.' });
   } catch (e) { res.status(500).json({ success: false, error: e.message }); }
@@ -1088,5 +1339,7 @@ router.post('/v1/super-admin/fellows/announce', superAdminIpGate, async (req, re
     res.json(j);
   } catch (e) { res.status(502).json({ success: false, error: e.message }); }
 });
+
+try { grantOwnerFree(getDb()); } catch (e) { console.error('[auth] owner account', e.message); }
 
 export default router;

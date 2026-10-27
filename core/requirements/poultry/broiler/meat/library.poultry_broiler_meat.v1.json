@@ -128,8 +128,8 @@
       "targets": {
         "me_kcal_per_kg": 2900,
         "cp_pct": 21.5,
-        "ca_pct": 0.92,
-        "avp_pct": 0.46,
+        "ca_pct": 0.96,
+        "avp_pct": 0.54,
         "na_pct": 0.2,
         "sid_lys_pct": 1.19,
         "sid_met_pct": 0.55,

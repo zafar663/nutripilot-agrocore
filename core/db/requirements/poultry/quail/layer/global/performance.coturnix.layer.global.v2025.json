@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "breed": "coturnix_japonica",
+    "species": "poultry",
+    "production": "quail_egg",
+    "age_unit": "week",
+    "source": "Japanese Quail Commercial Production Standards 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "week": 6,  "body_wt_g": 145, "egg_prod_pct": 50, "egg_wt_g": 10.5, "feed_per_bird_g": 22, "mortality_pct_max": 1.0 },
+    { "week": 8,  "body_wt_g": 165, "egg_prod_pct": 85, "egg_wt_g": 11.5, "feed_per_bird_g": 25, "mortality_pct_max": 1.5 },
+    { "week": 12, "body_wt_g": 175, "egg_prod_pct": 90, "egg_wt_g": 12.0, "feed_per_bird_g": 26, "mortality_pct_max": 2.0 },
+    { "week": 20, "body_wt_g": 180, "egg_prod_pct": 88, "egg_wt_g": 12.5, "feed_per_bird_g": 26, "mortality_pct_max": 3.0 },
+    { "week": 30, "body_wt_g": 185, "egg_prod_pct": 82, "egg_wt_g": 12.5, "feed_per_bird_g": 25, "mortality_pct_max": 4.5 },
+    { "week": 40, "body_wt_g": 185, "egg_prod_pct": 74, "egg_wt_g": 12.5, "feed_per_bird_g": 24, "mortality_pct_max": 6.5 }
+  ]
+}

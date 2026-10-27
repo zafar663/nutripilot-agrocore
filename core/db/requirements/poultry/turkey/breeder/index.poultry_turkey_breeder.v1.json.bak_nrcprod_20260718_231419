@@ -1,0 +1,58 @@
+{
+    "map":  {
+                "hybrid_converter":  {
+                                         "late":  "poultry_turkey_breeder_hybrid_converter_late_v1",
+                                         "prebreed":  "poultry_turkey_breeder_hybrid_converter_prebreed_v1",
+                                         "postpeak":  "poultry_turkey_breeder_hybrid_converter_postpeak_v1",
+                                         "starter":  "poultry_turkey_breeder_hybrid_converter_starter_v1",
+                                         "grower":  "poultry_turkey_breeder_hybrid_converter_grower_v1",
+                                         "peak":  "poultry_turkey_breeder_hybrid_converter_peak_v1",
+                                         "developer":  "poultry_turkey_breeder_hybrid_converter_developer_v1"
+                                     },
+                "generic":  {
+                                "late":  "poultry_turkey_breeder_generic_late_v1",
+                                "prebreed":  "poultry_turkey_breeder_generic_prebreed_v1",
+                                "postpeak":  "poultry_turkey_breeder_generic_postpeak_v1",
+                                "starter":  "poultry_turkey_breeder_generic_starter_v1",
+                                "grower":  "poultry_turkey_breeder_generic_grower_v1",
+                                "peak":  "poultry_turkey_breeder_generic_peak_v1",
+                                "developer":  "poultry_turkey_breeder_generic_developer_v1"
+                            },
+                "nicholas":  {
+                                 "late":  "poultry_turkey_breeder_nicholas_late_v1",
+                                 "prebreed":  "poultry_turkey_breeder_nicholas_prebreed_v1",
+                                 "postpeak":  "poultry_turkey_breeder_nicholas_postpeak_v1",
+                                 "starter":  "poultry_turkey_breeder_nicholas_starter_v1",
+                                 "grower":  "poultry_turkey_breeder_nicholas_grower_v1",
+                                 "peak":  "poultry_turkey_breeder_nicholas_peak_v1",
+                                 "developer":  "poultry_turkey_breeder_nicholas_developer_v1"
+                             },
+                "aviagen":  {
+                                "late":  "poultry_turkey_breeder_aviagen_late_v1",
+                                "prebreed":  "poultry_turkey_breeder_aviagen_prebreed_v1",
+                                "postpeak":  "poultry_turkey_breeder_aviagen_postpeak_v1",
+                                "starter":  "poultry_turkey_breeder_aviagen_starter_v1",
+                                "grower":  "poultry_turkey_breeder_aviagen_grower_v1",
+                                "peak":  "poultry_turkey_breeder_aviagen_peak_v1",
+                                "developer":  "poultry_turkey_breeder_aviagen_developer_v1"
+                            },
+                "but6":  {
+                             "late":  "poultry_turkey_breeder_but6_late_v1",
+                             "prebreed":  "poultry_turkey_breeder_but6_prebreed_v1",
+                             "postpeak":  "poultry_turkey_breeder_but6_postpeak_v1",
+                             "starter":  "poultry_turkey_breeder_but6_starter_v1",
+                             "grower":  "poultry_turkey_breeder_but6_grower_v1",
+                             "peak":  "poultry_turkey_breeder_but6_peak_v1",
+                             "developer":  "poultry_turkey_breeder_but6_developer_v1"
+                         }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "breeder",
+                  "type":  "turkey",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

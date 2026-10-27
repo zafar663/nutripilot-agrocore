@@ -1,0 +1,125 @@
+{
+  "_LOCK": {
+    "version": "v1",
+    "mode": "option_b_production_index",
+    "note": "Canonical broiler meat index (Option-B). 5-phase exposed. pre_starter maps to starter until true pre-starter targets exist. Withdrawal is the final feed phase (Finisher2/Final feed) for each breed where available."
+  },
+  "species": "poultry",
+  "type": "broiler",
+  "production": "meat",
+  "phases": [
+    "pre_starter",
+    "starter",
+    "grower",
+    "finisher",
+    "withdrawal"
+  ],
+  "phase_aliases": {
+    "prestarter": "pre_starter",
+    "pre_starter": "pre_starter",
+    "pre-starter": "pre_starter",
+    "starter": "starter",
+    "grower": "grower",
+    "grower1": "grower",
+    "grower_1": "grower",
+    "grower2": "grower",
+    "grower_2": "grower",
+    "finisher": "finisher",
+    "finish": "finisher",
+    "finisher1": "finisher",
+    "finisher_1": "finisher",
+    "withdrawal": "withdrawal",
+    "withdraw": "withdrawal",
+    "withdrawl": "withdrawal",
+    "finisher2": "withdrawal",
+    "finisher_2": "withdrawal",
+    "final": "withdrawal",
+    "final_feed": "withdrawal"
+  },
+  "breeds": {
+    "generic": {
+      "pre_starter": "poultry_broiler_generic_starter_v1",
+      "starter": "poultry_broiler_generic_starter_v1",
+      "grower": "poultry_broiler_generic_grower_v1",
+      "finisher": "poultry_broiler_generic_finisher_v1",
+      "withdrawal": "poultry_broiler_generic_withdrawal_v1"
+    },
+    "cobb_500": {
+      "pre_starter": "poultry_broiler_cobb500_starter_v1",
+      "starter": "poultry_broiler_cobb500_starter_v1",
+      "grower": "poultry_broiler_cobb500_grower_v1",
+      "finisher": "poultry_broiler_cobb500_finisher_v1",
+      "withdrawal": "poultry_broiler_cobb500_withdrawal_v1"
+    },
+    "cobb500": {
+      "pre_starter": "poultry_broiler_cobb500_starter_v1",
+      "starter": "poultry_broiler_cobb500_starter_v1",
+      "grower": "poultry_broiler_cobb500_grower_v1",
+      "finisher": "poultry_broiler_cobb500_finisher_v1",
+      "withdrawal": "poultry_broiler_cobb500_withdrawal_v1"
+    },
+    "cobb_700": {
+      "pre_starter": "poultry_broiler_cobb700_starter_v1",
+      "starter": "poultry_broiler_cobb700_starter_v1",
+      "grower": "poultry_broiler_cobb700_grower_v1",
+      "finisher": "poultry_broiler_cobb700_finisher_v1",
+      "withdrawal": "poultry_broiler_cobb700_withdrawal_v1"
+    },
+    "cobb700": {
+      "pre_starter": "poultry_broiler_cobb700_starter_v1",
+      "starter": "poultry_broiler_cobb700_starter_v1",
+      "grower": "poultry_broiler_cobb700_grower_v1",
+      "finisher": "poultry_broiler_cobb700_finisher_v1",
+      "withdrawal": "poultry_broiler_cobb700_withdrawal_v1"
+    },
+    "cobb_800": {
+      "pre_starter": "poultry_broiler_cobb800_starter_v1",
+      "starter": "poultry_broiler_cobb800_starter_v1",
+      "grower": "poultry_broiler_cobb800_grower_v1",
+      "finisher": "poultry_broiler_cobb800_finisher_v1",
+      "withdrawal": "poultry_broiler_cobb800_withdrawal_v1"
+    },
+    "cobb800": {
+      "pre_starter": "poultry_broiler_cobb800_starter_v1",
+      "starter": "poultry_broiler_cobb800_starter_v1",
+      "grower": "poultry_broiler_cobb800_grower_v1",
+      "finisher": "poultry_broiler_cobb800_finisher_v1",
+      "withdrawal": "poultry_broiler_cobb800_withdrawal_v1"
+    },
+    "hubbard": {
+      "pre_starter": "poultry_broiler_hubbard_starter_v1",
+      "starter": "poultry_broiler_hubbard_starter_v1",
+      "grower": "poultry_broiler_hubbard_grower_v1",
+      "finisher": "poultry_broiler_hubbard_finisher_v1",
+      "withdrawal": "poultry_broiler_hubbard_withdrawal_v1"
+    },
+    "ross_308": {
+      "pre_starter": "poultry_broiler_ross308_starter_v1",
+      "starter": "poultry_broiler_ross308_starter_v1",
+      "grower": "poultry_broiler_ross308_grower_v1",
+      "finisher": "poultry_broiler_ross308_finisher_v1",
+      "withdrawal": "poultry_broiler_ross308_finisher_v1"
+    },
+    "ross308": {
+      "pre_starter": "poultry_broiler_ross308_starter_v1",
+      "starter": "poultry_broiler_ross308_starter_v1",
+      "grower": "poultry_broiler_ross308_grower_v1",
+      "finisher": "poultry_broiler_ross308_finisher_v1",
+      "withdrawal": "poultry_broiler_ross308_finisher_v1"
+    },
+    "aa": {
+      "pre_starter": "poultry_broiler_aa_starter_v1",
+      "starter": "poultry_broiler_aa_starter_v1",
+      "grower": "poultry_broiler_aa_grower_v1",
+      "finisher": "poultry_broiler_aa_finisher_v1",
+      "withdrawal": "poultry_broiler_aa_withdrawal_v1"
+    },
+    "ir": {
+      "pre_starter": "poultry_broiler_ir_starter_v1",
+      "starter": "poultry_broiler_ir_starter_v1",
+      "grower": "poultry_broiler_ir_grower_v1",
+      "finisher": "poultry_broiler_ir_finisher_v1",
+      "withdrawal": "poultry_broiler_ir_withdrawal_v1"
+    }
+  }
+}

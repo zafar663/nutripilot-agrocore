@@ -1,0 +1,22 @@
+﻿{
+  "map": {
+    "generic": {
+      "prebreed": "poultry_layer_breeder_layer_line_generic_prebreed_v1",
+      "developer": "poultry_layer_breeder_layer_line_generic_developer_v1",
+      "peak": "poultry_layer_breeder_layer_line_generic_peak_v1",
+      "postpeak": "poultry_layer_breeder_layer_line_generic_postpeak_v1",
+      "late": "poultry_layer_breeder_layer_line_generic_late_v1"
+    }
+  },
+  "_LOCK": {
+    "species": "poultry",
+    "type": "layer_breeder",
+    "production": "breeder",
+    "breeder_type": "layer_line",
+    "version": "v1",
+    "kind": "requirements_index",
+    "mode": "option_b_inheritance_ready",
+    "created_utc": "2026-02-23T00:00:00Z",
+    "note": "ReqKeys only. Numeric targets live in library and must be filled from validated breeder PDFs."
+  }
+}

@@ -1,30 +1,132 @@
-﻿{
-    "phases":  {
-                   "prelay":  {
-                                  "generic":  "poultry_turkey_layer_generic_prelay_v1"
-                              },
-                   "early":  {
-                                 "generic":  "poultry_turkey_layer_generic_early_v1"
-                             },
-                   "peak":  {
-                                "generic":  "poultry_turkey_layer_generic_peak_v1"
-                            },
-                   "late":  {
-                                "generic":  "poultry_turkey_layer_generic_late_v1"
-                            }
-               },
-    "_LOCK":  {
-                  "note":  "Option-B index for poultry/turkey layer. Placeholder targets until handbook values are inserted.",
-                  "mode":  "option_b",
-                  "created_utc":  "2026-02-19T16:23:25.1379931Z",
-                  "version":  "v1"
-              },
-    "map":  {
-                "generic":  {
-                                "prelay":  "poultry_turkey_layer_generic_prelay_v1",
-                                "early":  "poultry_turkey_layer_generic_early_v1",
-                                "peak":  "poultry_turkey_layer_generic_peak_v1",
-                                "late":  "poultry_turkey_layer_generic_late_v1"
-                            }
-            }
+{
+  "phases": {
+    "starter": {
+      "generic": "poultry_turkey_layer_generic_starter_v1",
+      "nicholas": "poultry_turkey_layer_nicholas_starter_v1",
+      "aviagen": "poultry_turkey_layer_aviagen_starter_v1",
+      "but6": "poultry_turkey_layer_but6_starter_v1",
+      "hybrid_converter": "poultry_turkey_layer_hybrid_converter_starter_v1",
+      "but9": "poultry_turkey_layer_aviagen_starter_v1"
+    },
+    "grower": {
+      "generic": "poultry_turkey_layer_generic_grower_v1",
+      "nicholas": "poultry_turkey_layer_nicholas_grower_v1",
+      "aviagen": "poultry_turkey_layer_aviagen_grower_v1",
+      "but6": "poultry_turkey_layer_but6_grower_v1",
+      "hybrid_converter": "poultry_turkey_layer_hybrid_converter_grower_v1",
+      "but9": "poultry_turkey_layer_aviagen_grower_v1"
+    },
+    "developer": {
+      "generic": "poultry_turkey_layer_generic_developer_v1",
+      "nicholas": "poultry_turkey_layer_nicholas_developer_v1",
+      "aviagen": "poultry_turkey_layer_aviagen_developer_v1",
+      "but6": "poultry_turkey_layer_but6_developer_v1",
+      "hybrid_converter": "poultry_turkey_layer_hybrid_converter_developer_v1",
+      "but9": "poultry_turkey_layer_aviagen_developer_v1"
+    },
+    "prelay": {
+      "generic": "poultry_turkey_layer_generic_prelay_v1",
+      "nicholas": "poultry_turkey_layer_nicholas_prelay_v1",
+      "aviagen": "poultry_turkey_layer_aviagen_prelay_v1",
+      "but6": "poultry_turkey_layer_but6_prelay_v1",
+      "but9": "poultry_turkey_layer_but9_prelay_v1",
+      "hybrid_converter": "poultry_turkey_layer_hybrid_converter_prelay_v1"
+    },
+    "early": {
+      "generic": "poultry_turkey_layer_generic_early_v1",
+      "nicholas": "poultry_turkey_layer_nicholas_early_v1",
+      "aviagen": "poultry_turkey_layer_aviagen_early_v1",
+      "but6": "poultry_turkey_layer_but6_early_v1",
+      "but9": "poultry_turkey_layer_but9_early_v1",
+      "hybrid_converter": "poultry_turkey_layer_hybrid_converter_early_v1"
+    },
+    "peak": {
+      "generic": "poultry_turkey_layer_generic_peak_v1",
+      "nicholas": "poultry_turkey_layer_nicholas_peak_v1",
+      "aviagen": "poultry_turkey_layer_aviagen_peak_v1",
+      "but6": "poultry_turkey_layer_but6_peak_v1",
+      "but9": "poultry_turkey_layer_but9_peak_v1",
+      "hybrid_converter": "poultry_turkey_layer_hybrid_converter_peak_v1"
+    },
+    "late": {
+      "generic": "poultry_turkey_layer_generic_late_v1",
+      "nicholas": "poultry_turkey_layer_nicholas_late_v1",
+      "aviagen": "poultry_turkey_layer_aviagen_late_v1",
+      "but6": "poultry_turkey_layer_but6_late_v1",
+      "but9": "poultry_turkey_layer_but9_late_v1",
+      "hybrid_converter": "poultry_turkey_layer_hybrid_converter_late_v1"
+    }
+  },
+  "_LOCK": {
+    "note": "Option-B index for poultry/turkey layer. Placeholder targets until handbook values are inserted.",
+    "mode": "option_b",
+    "created_utc": "2026-02-19T16:23:25.1379931Z",
+    "version": "v1"
+  },
+  "map": {
+    "generic": {
+      "starter": "poultry_turkey_layer_generic_starter_v1",
+      "grower": "poultry_turkey_layer_generic_grower_v1",
+      "developer": "poultry_turkey_layer_generic_developer_v1",
+      "prelay": "poultry_turkey_layer_generic_prelay_v1",
+      "early": "poultry_turkey_layer_generic_early_v1",
+      "peak": "poultry_turkey_layer_generic_peak_v1",
+      "late": "poultry_turkey_layer_generic_late_v1"
+    },
+    "nrc2026": {
+      "wk_0_3": "poultry_turkey_layer_nrc2026_wk_0_3_v1",
+      "wk_3_6": "poultry_turkey_layer_nrc2026_wk_3_6_v1",
+      "wk_6_9": "poultry_turkey_layer_nrc2026_wk_6_9_v1",
+      "wk_9_12": "poultry_turkey_layer_nrc2026_wk_9_12_v1",
+      "wk_12_15": "poultry_turkey_layer_nrc2026_wk_12_15_v1",
+      "wk_15_18": "poultry_turkey_layer_nrc2026_wk_15_18_v1",
+      "breeder_holding": "poultry_turkey_layer_nrc2026_breeder_holding_v1",
+      "breeder_laying": "poultry_turkey_layer_nrc2026_breeder_laying_v1"
+    },
+    "nicholas": {
+      "starter": "poultry_turkey_layer_nicholas_starter_v1",
+      "grower": "poultry_turkey_layer_nicholas_grower_v1",
+      "developer": "poultry_turkey_layer_nicholas_developer_v1",
+      "prelay": "poultry_turkey_layer_nicholas_prelay_v1",
+      "early": "poultry_turkey_layer_nicholas_early_v1",
+      "peak": "poultry_turkey_layer_nicholas_peak_v1",
+      "late": "poultry_turkey_layer_nicholas_late_v1"
+    },
+    "aviagen": {
+      "starter": "poultry_turkey_layer_aviagen_starter_v1",
+      "grower": "poultry_turkey_layer_aviagen_grower_v1",
+      "developer": "poultry_turkey_layer_aviagen_developer_v1",
+      "prelay": "poultry_turkey_layer_aviagen_prelay_v1",
+      "early": "poultry_turkey_layer_aviagen_early_v1",
+      "peak": "poultry_turkey_layer_aviagen_peak_v1",
+      "late": "poultry_turkey_layer_aviagen_late_v1"
+    },
+    "but6": {
+      "starter": "poultry_turkey_layer_but6_starter_v1",
+      "grower": "poultry_turkey_layer_but6_grower_v1",
+      "developer": "poultry_turkey_layer_but6_developer_v1",
+      "prelay": "poultry_turkey_layer_but6_prelay_v1",
+      "early": "poultry_turkey_layer_but6_early_v1",
+      "peak": "poultry_turkey_layer_but6_peak_v1",
+      "late": "poultry_turkey_layer_but6_late_v1"
+    },
+    "but9": {
+      "starter": "poultry_turkey_layer_aviagen_starter_v1",
+      "grower": "poultry_turkey_layer_aviagen_grower_v1",
+      "developer": "poultry_turkey_layer_aviagen_developer_v1",
+      "prelay": "poultry_turkey_layer_but9_prelay_v1",
+      "early": "poultry_turkey_layer_but9_early_v1",
+      "peak": "poultry_turkey_layer_but9_peak_v1",
+      "late": "poultry_turkey_layer_but9_late_v1"
+    },
+    "hybrid_converter": {
+      "starter": "poultry_turkey_layer_hybrid_converter_starter_v1",
+      "grower": "poultry_turkey_layer_hybrid_converter_grower_v1",
+      "developer": "poultry_turkey_layer_hybrid_converter_developer_v1",
+      "prelay": "poultry_turkey_layer_hybrid_converter_prelay_v1",
+      "early": "poultry_turkey_layer_hybrid_converter_early_v1",
+      "peak": "poultry_turkey_layer_hybrid_converter_peak_v1",
+      "late": "poultry_turkey_layer_hybrid_converter_late_v1"
+    }
+  }
 }

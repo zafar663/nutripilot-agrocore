@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "breed": "hubbard_efficiency_plus",
+    "species": "poultry",
+    "production": "broiler",
+    "age_unit": "day",
+    "source": "Hubbard Efficiency Plus Performance Guide 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "age": 7,  "body_wt_g": 183,  "fcr": 0.895, "adg_g": 24.1, "feed_per_bird_g": 21,  "mortality_pct_max": 0.5 },
+    { "age": 14, "body_wt_g": 440,  "fcr": 1.115, "adg_g": 36.7, "feed_per_bird_g": 45,  "mortality_pct_max": 1.0 },
+    { "age": 21, "body_wt_g": 855,  "fcr": 1.290, "adg_g": 59.3, "feed_per_bird_g": 83,  "mortality_pct_max": 1.5 },
+    { "age": 28, "body_wt_g": 1480, "fcr": 1.460, "adg_g": 89.3, "feed_per_bird_g": 138, "mortality_pct_max": 2.0 },
+    { "age": 35, "body_wt_g": 2200, "fcr": 1.630, "adg_g": 103,  "feed_per_bird_g": 191, "mortality_pct_max": 2.5 },
+    { "age": 42, "body_wt_g": 2930, "fcr": 1.790, "adg_g": 104,  "feed_per_bird_g": 243, "mortality_pct_max": 3.5 }
+  ],
+  "phases": {
+    "starter":  { "days": "1-10",  "energy_kcal": 3050 },
+    "grower":   { "days": "11-24", "energy_kcal": 3150 },
+    "finisher": { "days": "25-42", "energy_kcal": 3200 }
+  }
+}

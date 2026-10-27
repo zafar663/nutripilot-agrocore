@@ -1,0 +1,400 @@
+{
+  "_meta": {
+    "species": "beef",
+    "region": "us",
+    "version": "v1",
+    "basis": "as_fed",
+    "energy_system": "NEm_NEg_NASEM2016",
+    "energy_units": "Mcal_per_kg_DM",
+    "protein_system": "RDP_RUP",
+    "sources": ["NASEM_2016_Beef", "NRC_2000_Beef", "Feedlot_NRC_Ref"]
+  },
+  "ingredients": {
+    "corn_grain_beef": {
+      "display_name": "Corn, Grain (Dry)",
+      "category": "cereal_grain",
+      "dm": 88.0, "cp": 8.5, "ee": 3.6, "ndf": 9.5, "adf": 3.5, "starch": 72.0, "ash": 1.3, "cf": 2.2,
+      "tdn": 88.0, "nem": 2.13, "neg": 1.42, "ne_gain": 1.42,
+      "rdp_pct": 63.0, "rup_pct": 37.0,
+      "ca": 0.02, "total_p": 0.28, "mg": 0.11, "k": 0.33, "na": 0.01, "s": 0.10,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "high_moisture_corn_beef": {
+      "display_name": "Corn, High Moisture",
+      "category": "cereal_grain",
+      "dm": 72.0, "cp": 6.9, "ee": 2.9, "ndf": 7.7, "adf": 2.9, "starch": 58.8, "ash": 1.0, "cf": 1.8,
+      "tdn": 91.0, "nem": 2.20, "neg": 1.48, "ne_gain": 1.48,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 0.02, "total_p": 0.23, "mg": 0.09, "k": 0.27, "na": 0.01, "s": 0.08,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "wheat_grain_beef": {
+      "display_name": "Wheat, Grain",
+      "category": "cereal_grain",
+      "dm": 88.0, "cp": 13.0, "ee": 1.8, "ndf": 12.0, "adf": 3.5, "starch": 62.0, "ash": 1.7, "cf": 2.6,
+      "tdn": 86.0, "nem": 2.07, "neg": 1.37, "ne_gain": 1.37,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 0.05, "total_p": 0.36, "mg": 0.13, "k": 0.42, "na": 0.01, "s": 0.13,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "barley_grain_beef": {
+      "display_name": "Barley, Grain",
+      "category": "cereal_grain",
+      "dm": 89.0, "cp": 12.0, "ee": 2.0, "ndf": 17.0, "adf": 7.0, "starch": 57.0, "ash": 2.5, "cf": 5.0,
+      "tdn": 83.0, "nem": 1.99, "neg": 1.31, "ne_gain": 1.31,
+      "rdp_pct": 73.0, "rup_pct": 27.0,
+      "ca": 0.07, "total_p": 0.38, "mg": 0.12, "k": 0.52, "na": 0.02, "s": 0.12,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "sorghum_grain_beef": {
+      "display_name": "Sorghum, Grain (Milo)",
+      "category": "cereal_grain",
+      "dm": 88.0, "cp": 9.0, "ee": 2.8, "ndf": 9.0, "adf": 5.5, "starch": 70.0, "ash": 1.7, "cf": 2.5,
+      "tdn": 82.0, "nem": 1.96, "neg": 1.29, "ne_gain": 1.29,
+      "rdp_pct": 63.0, "rup_pct": 37.0,
+      "ca": 0.03, "total_p": 0.30, "mg": 0.16, "k": 0.35, "na": 0.01, "s": 0.11,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "oats_beef": {
+      "display_name": "Oats, Grain",
+      "category": "cereal_grain",
+      "dm": 89.0, "cp": 11.5, "ee": 4.5, "ndf": 28.0, "adf": 13.0, "starch": 40.0, "ash": 3.2, "cf": 11.5,
+      "tdn": 77.0, "nem": 1.82, "neg": 1.16, "ne_gain": 1.16,
+      "rdp_pct": 73.0, "rup_pct": 27.0,
+      "ca": 0.08, "total_p": 0.33, "mg": 0.13, "k": 0.44, "na": 0.02, "s": 0.10,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_early_beef": {
+      "display_name": "Alfalfa Hay, Early Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp": 20.0, "ee": 2.5, "ndf": 38.0, "adf": 28.0, "starch": 2.0, "ash": 9.5, "cf": 24.0,
+      "tdn": 62.0, "nem": 1.47, "neg": 0.87, "ne_gain": 0.87,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 1.41, "total_p": 0.27, "mg": 0.30, "k": 2.69, "na": 0.11, "s": 0.29,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_mid_beef": {
+      "display_name": "Alfalfa Hay, Mid Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp": 17.5, "ee": 2.3, "ndf": 43.0, "adf": 34.0, "starch": 1.5, "ash": 9.0, "cf": 29.0,
+      "tdn": 56.0, "nem": 1.32, "neg": 0.76, "ne_gain": 0.76,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 1.29, "total_p": 0.25, "mg": 0.28, "k": 2.44, "na": 0.09, "s": 0.27,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_late_beef": {
+      "display_name": "Alfalfa Hay, Full Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp": 15.0, "ee": 2.0, "ndf": 50.0, "adf": 40.0, "starch": 1.0, "ash": 8.5, "cf": 34.0,
+      "tdn": 50.0, "nem": 1.17, "neg": 0.64, "ne_gain": 0.64,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 1.10, "total_p": 0.23, "mg": 0.25, "k": 2.00, "na": 0.08, "s": 0.24,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "corn_silage_beef": {
+      "display_name": "Corn Silage, 1/2 Milk Line",
+      "category": "forage_silage",
+      "dm": 35.0, "cp": 2.8, "ee": 1.1, "ndf": 16.5, "adf": 9.8, "starch": 10.9, "ash": 1.4, "cf": 7.5,
+      "tdn": 69.0, "nem": 1.66, "neg": 1.04, "ne_gain": 1.04,
+      "rdp_pct": 55.0, "rup_pct": 45.0,
+      "ca": 0.09, "total_p": 0.07, "mg": 0.05, "k": 0.35, "na": 0.01, "s": 0.05,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "grass_hay_beef": {
+      "display_name": "Grass Hay, Mixed (Medium Quality)",
+      "category": "forage_grass",
+      "dm": 89.0, "cp": 10.0, "ee": 2.3, "ndf": 60.0, "adf": 37.0, "starch": 1.0, "ash": 6.5, "cf": 31.0,
+      "tdn": 53.0, "nem": 1.24, "neg": 0.70, "ne_gain": 0.70,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 0.39, "total_p": 0.22, "mg": 0.16, "k": 1.95, "na": 0.03, "s": 0.18,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "bermuda_hay_beef": {
+      "display_name": "Bermuda Grass Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp": 9.5, "ee": 2.0, "ndf": 69.0, "adf": 35.0, "starch": 1.0, "ash": 6.5, "cf": 29.0,
+      "tdn": 52.0, "nem": 1.21, "neg": 0.67, "ne_gain": 0.67,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.47, "total_p": 0.18, "mg": 0.15, "k": 1.70, "na": 0.04, "s": 0.19,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "native_grass_hay_beef": {
+      "display_name": "Native Grass Hay, Prairie",
+      "category": "forage_grass",
+      "dm": 91.0, "cp": 7.0, "ee": 2.0, "ndf": 67.0, "adf": 40.0, "starch": 1.0, "ash": 6.0, "cf": 34.0,
+      "tdn": 49.0, "nem": 1.14, "neg": 0.62, "ne_gain": 0.62,
+      "rdp_pct": 68.0, "rup_pct": 32.0,
+      "ca": 0.35, "total_p": 0.18, "mg": 0.12, "k": 1.55, "na": 0.02, "s": 0.15,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "wheat_straw_beef": {
+      "display_name": "Wheat Straw",
+      "category": "forage_straw",
+      "dm": 91.0, "cp": 3.5, "ee": 1.3, "ndf": 78.0, "adf": 49.0, "starch": 0.5, "ash": 7.5, "cf": 43.0,
+      "tdn": 44.0, "nem": 0.98, "neg": 0.52, "ne_gain": 0.52,
+      "rdp_pct": 68.0, "rup_pct": 32.0,
+      "ca": 0.24, "total_p": 0.08, "mg": 0.12, "k": 1.31, "na": 0.02, "s": 0.20,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "oat_straw_beef": {
+      "display_name": "Oat Straw",
+      "category": "forage_straw",
+      "dm": 91.0, "cp": 4.5, "ee": 1.8, "ndf": 71.0, "adf": 48.0, "starch": 0.5, "ash": 8.0, "cf": 40.0,
+      "tdn": 46.0, "nem": 1.03, "neg": 0.54, "ne_gain": 0.54,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.30, "total_p": 0.10, "mg": 0.15, "k": 1.60, "na": 0.03, "s": 0.19,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "soybean_meal_44_beef": {
+      "display_name": "Soybean Meal, 44% CP",
+      "category": "protein",
+      "dm": 89.0, "cp": 44.0, "ee": 1.5, "ndf": 12.0, "adf": 8.5, "starch": 1.0, "ash": 6.5, "cf": 6.5,
+      "tdn": 81.0, "nem": 1.94, "neg": 1.27, "ne_gain": 1.27,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.33, "total_p": 0.61, "mg": 0.29, "k": 2.00, "na": 0.02, "s": 0.34,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "canola_meal_beef": {
+      "display_name": "Canola Meal",
+      "category": "protein",
+      "dm": 90.0, "cp": 37.0, "ee": 3.8, "ndf": 26.0, "adf": 20.0, "starch": 3.0, "ash": 7.5, "cf": 14.0,
+      "tdn": 73.0, "nem": 1.74, "neg": 1.10, "ne_gain": 1.10,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.67, "total_p": 1.07, "mg": 0.45, "k": 1.33, "na": 0.03, "s": 0.67,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "cottonseed_meal_beef": {
+      "display_name": "Cottonseed Meal, 41% CP",
+      "category": "protein",
+      "dm": 91.0, "cp": 41.0, "ee": 1.8, "ndf": 26.0, "adf": 18.0, "starch": 0.5, "ash": 7.0, "cf": 13.0,
+      "tdn": 72.0, "nem": 1.72, "neg": 1.08, "ne_gain": 1.08,
+      "rdp_pct": 45.0, "rup_pct": 55.0,
+      "ca": 0.17, "total_p": 1.08, "mg": 0.55, "k": 1.39, "na": 0.02, "s": 0.40,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "whole_cottonseed_beef": {
+      "display_name": "Whole Cottonseed (Lint)",
+      "category": "energy_protein",
+      "dm": 91.0, "cp": 23.0, "ee": 20.0, "ndf": 47.0, "adf": 37.0, "starch": 0.5, "ash": 4.5, "cf": 33.0,
+      "tdn": 95.0, "nem": 2.28, "neg": 1.57, "ne_gain": 1.57,
+      "rdp_pct": 38.0, "rup_pct": 62.0,
+      "ca": 0.14, "total_p": 0.60, "mg": 0.37, "k": 1.20, "na": 0.01, "s": 0.24,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "corn_gluten_meal_60_beef": {
+      "display_name": "Corn Gluten Meal, 60% CP",
+      "category": "by_product_protein",
+      "dm": 90.0, "cp": 60.0, "ee": 2.5, "ndf": 4.0, "adf": 2.0, "starch": 1.0, "ash": 2.0, "cf": 1.0,
+      "tdn": 83.0, "nem": 2.30, "neg": 1.58, "ne_gain": 1.58,
+      "rdp_pct": 22.0, "rup_pct": 78.0,
+      "ca": 0.03, "total_p": 0.47, "mg": 0.05, "k": 0.28, "na": 0.02, "s": 0.71,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "blood_meal_beef": {
+      "display_name": "Blood Meal, Spray-Dried",
+      "category": "animal_protein",
+      "dm": 92.0, "cp": 90.0, "ee": 1.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 4.0, "cf": 0.3,
+      "tdn": 72.0, "nem": 2.04, "neg": 1.36, "ne_gain": 1.36,
+      "rdp_pct": 20.0, "rup_pct": 80.0,
+      "ca": 0.30, "total_p": 0.24, "mg": 0.05, "k": 0.10, "na": 0.40, "s": 0.40,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "feather_meal_beef": {
+      "display_name": "Feather Meal, Hydrolyzed",
+      "category": "animal_protein",
+      "dm": 93.0, "cp": 80.0, "ee": 5.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 3.0, "cf": 1.5,
+      "tdn": 62.0, "nem": 1.78, "neg": 1.14, "ne_gain": 1.14,
+      "rdp_pct": 18.0, "rup_pct": 82.0,
+      "ca": 0.30, "total_p": 0.65, "mg": 0.05, "k": 0.20, "na": 0.20, "s": 0.80,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "meat_bone_meal_beef": {
+      "display_name": "Meat and Bone Meal, 50% CP",
+      "category": "animal_protein",
+      "dm": 92.0, "cp": 50.0, "ee": 9.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 28.0, "cf": 2.5,
+      "tdn": 61.0, "nem": 1.65, "neg": 1.03, "ne_gain": 1.03,
+      "rdp_pct": 43.0, "rup_pct": 57.0,
+      "ca": 10.0, "total_p": 5.00, "mg": 0.25, "k": 0.60, "na": 0.68, "s": 0.30,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "urea_beef": {
+      "display_name": "Urea (281% CP equivalent)",
+      "category": "npn",
+      "dm": 99.0, "cp": 281.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 0.0, "cf": 0.0,
+      "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0,
+      "rdp_pct": 100.0, "rup_pct": 0.0,
+      "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "corn_ddgs_beef": {
+      "display_name": "Corn DDGS",
+      "category": "by_product_energy_protein",
+      "dm": 88.0, "cp": 27.0, "ee": 10.5, "ndf": 38.0, "adf": 17.0, "starch": 4.0, "ash": 5.0, "cf": 9.0,
+      "tdn": 88.0, "nem": 2.16, "neg": 1.44, "ne_gain": 1.44,
+      "rdp_pct": 40.0, "rup_pct": 60.0,
+      "ca": 0.06, "total_p": 0.75, "mg": 0.28, "k": 0.98, "na": 0.35, "s": 0.37,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "corn_gluten_feed_beef": {
+      "display_name": "Corn Gluten Feed",
+      "category": "by_product_energy_protein",
+      "dm": 89.0, "cp": 21.0, "ee": 3.0, "ndf": 37.0, "adf": 11.0, "starch": 10.0, "ash": 6.0, "cf": 9.0,
+      "tdn": 74.0, "nem": 1.77, "neg": 1.12, "ne_gain": 1.12,
+      "rdp_pct": 58.0, "rup_pct": 42.0,
+      "ca": 0.25, "total_p": 0.82, "mg": 0.20, "k": 0.98, "na": 0.24, "s": 0.29,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "beet_pulp_dried_beef": {
+      "display_name": "Beet Pulp, Dried",
+      "category": "by_product_fiber",
+      "dm": 91.0, "cp": 9.5, "ee": 0.7, "ndf": 44.0, "adf": 24.0, "starch": 1.0, "ash": 5.5, "cf": 19.0,
+      "tdn": 76.0, "nem": 1.81, "neg": 1.16, "ne_gain": 1.16,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 0.68, "total_p": 0.10, "mg": 0.16, "k": 0.73, "na": 0.36, "s": 0.18,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "soybean_hulls_beef": {
+      "display_name": "Soybean Hulls",
+      "category": "by_product_fiber",
+      "dm": 90.0, "cp": 12.0, "ee": 2.2, "ndf": 61.0, "adf": 45.0, "starch": 1.0, "ash": 4.5, "cf": 38.0,
+      "tdn": 77.0, "nem": 1.83, "neg": 1.17, "ne_gain": 1.17,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 0.48, "total_p": 0.18, "mg": 0.18, "k": 1.34, "na": 0.01, "s": 0.16,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "citrus_pulp_dried_beef": {
+      "display_name": "Citrus Pulp, Dried",
+      "category": "by_product_fiber",
+      "dm": 91.0, "cp": 6.5, "ee": 3.5, "ndf": 23.0, "adf": 21.0, "starch": 1.0, "ash": 6.5, "cf": 14.0,
+      "tdn": 76.0, "nem": 1.81, "neg": 1.16, "ne_gain": 1.16,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 1.91, "total_p": 0.12, "mg": 0.12, "k": 1.00, "na": 0.05, "s": 0.09,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "wheat_bran_beef": {
+      "display_name": "Wheat Bran",
+      "category": "by_product_fiber",
+      "dm": 88.0, "cp": 15.5, "ee": 4.0, "ndf": 43.0, "adf": 12.0, "starch": 15.0, "ash": 5.5, "cf": 10.0,
+      "tdn": 66.0, "nem": 1.57, "neg": 0.96, "ne_gain": 0.96,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 0.13, "total_p": 1.20, "mg": 0.52, "k": 1.17, "na": 0.03, "s": 0.17,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "brewers_grains_dried_beef": {
+      "display_name": "Brewers Grains, Dried",
+      "category": "by_product_energy_protein",
+      "dm": 92.0, "cp": 25.0, "ee": 7.0, "ndf": 47.0, "adf": 22.0, "starch": 4.0, "ash": 4.0, "cf": 14.0,
+      "tdn": 67.0, "nem": 1.58, "neg": 0.97, "ne_gain": 0.97,
+      "rdp_pct": 52.0, "rup_pct": 48.0,
+      "ca": 0.32, "total_p": 0.56, "mg": 0.18, "k": 0.10, "na": 0.08, "s": 0.33,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "tallow_beef": {
+      "display_name": "Tallow (Animal Fat)",
+      "category": "fat_supplement",
+      "dm": 99.0, "cp": 0.0, "ee": 99.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 0.5, "cf": 0.0,
+      "tdn": 171.0, "nem": 5.18, "neg": 3.81, "ne_gain": 3.81,
+      "rdp_pct": 0.0, "rup_pct": 0.0,
+      "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "soybean_oil_beef": {
+      "display_name": "Soybean Oil",
+      "category": "fat_supplement",
+      "dm": 99.0, "cp": 0.0, "ee": 99.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 0.1, "cf": 0.0,
+      "tdn": 195.0, "nem": 5.80, "neg": 4.28, "ne_gain": 4.28,
+      "rdp_pct": 0.0, "rup_pct": 0.0,
+      "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "molasses_cane_beef": {
+      "display_name": "Molasses, Sugarcane",
+      "category": "energy",
+      "dm": 73.0, "cp": 4.0, "ee": 0.1, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 10.5, "cf": 0.0,
+      "tdn": 70.0, "nem": 1.66, "neg": 1.04, "ne_gain": 1.04,
+      "rdp_pct": 75.0, "rup_pct": 25.0,
+      "ca": 0.80, "total_p": 0.09, "mg": 0.40, "k": 2.50, "na": 0.17, "s": 0.43,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "cottonseed_hulls_beef": {
+      "display_name": "Cottonseed Hulls",
+      "category": "by_product_fiber",
+      "dm": 91.0, "cp": 4.0, "ee": 1.8, "ndf": 79.0, "adf": 63.0, "starch": 0.5, "ash": 3.0, "cf": 49.0,
+      "tdn": 43.0, "nem": 0.96, "neg": 0.49, "ne_gain": 0.49,
+      "rdp_pct": 55.0, "rup_pct": 45.0,
+      "ca": 0.14, "total_p": 0.09, "mg": 0.13, "k": 0.85, "na": 0.02, "s": 0.13,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "timothy_hay_beef": {
+      "display_name": "Timothy Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp": 10.0, "ee": 2.5, "ndf": 56.0, "adf": 33.0, "starch": 1.0, "ash": 5.5, "cf": 29.0,
+      "tdn": 55.0, "nem": 1.29, "neg": 0.73, "ne_gain": 0.73,
+      "rdp_pct": 73.0, "rup_pct": 27.0,
+      "ca": 0.43, "total_p": 0.20, "mg": 0.14, "k": 1.83, "na": 0.04, "s": 0.18,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "orchard_grass_hay_beef": {
+      "display_name": "Orchard Grass Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp": 11.5, "ee": 2.8, "ndf": 58.0, "adf": 36.0, "starch": 1.0, "ash": 7.0, "cf": 30.0,
+      "tdn": 57.0, "nem": 1.34, "neg": 0.77, "ne_gain": 0.77,
+      "rdp_pct": 73.0, "rup_pct": 27.0,
+      "ca": 0.35, "total_p": 0.25, "mg": 0.18, "k": 2.27, "na": 0.03, "s": 0.20,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_silage_beef": {
+      "display_name": "Alfalfa Silage (Haylage)",
+      "category": "forage_legume_silage",
+      "dm": 40.0, "cp": 7.2, "ee": 1.0, "ndf": 16.8, "adf": 13.2, "starch": 0.6, "ash": 3.8, "cf": 10.0,
+      "tdn": 60.0, "nem": 1.42, "neg": 0.83, "ne_gain": 0.83,
+      "rdp_pct": 76.0, "rup_pct": 24.0,
+      "ca": 0.56, "total_p": 0.10, "mg": 0.11, "k": 1.04, "na": 0.05, "s": 0.11,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "hominy_feed_beef": {
+      "display_name": "Hominy Feed",
+      "category": "by_product_energy",
+      "dm": 90.0, "cp": 10.5, "ee": 6.5, "ndf": 15.0, "adf": 5.0, "starch": 52.0, "ash": 1.8, "cf": 4.0,
+      "tdn": 82.0, "nem": 1.96, "neg": 1.29, "ne_gain": 1.29,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.04, "total_p": 0.46, "mg": 0.14, "k": 0.38, "na": 0.01, "s": 0.09,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "sunflower_meal_beef": {
+      "display_name": "Sunflower Meal, Solvent",
+      "category": "protein",
+      "dm": 91.0, "cp": 36.0, "ee": 1.5, "ndf": 38.0, "adf": 29.0, "starch": 1.0, "ash": 7.0, "cf": 26.0,
+      "tdn": 63.0, "nem": 1.49, "neg": 0.91, "ne_gain": 0.91,
+      "rdp_pct": 60.0, "rup_pct": 40.0,
+      "ca": 0.35, "total_p": 1.02, "mg": 0.38, "k": 1.18, "na": 0.05, "s": 0.37,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "limestone_beef": { "display_name": "Limestone", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 38.5, "total_p": 0.02, "mg": 0.33, "k": 0.04, "na": 0.06, "s": 0.05, "source_ref": "NASEM_2016", "nutrient_basis": "as_fed" },
+    "dicalcium_phosphate_beef": { "display_name": "Dicalcium Phosphate (DCP)", "category": "mineral", "dm": 97.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 97.0, "cf": 0.0, "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 21.0, "total_p": 18.5, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0, "source_ref": "NASEM_2016", "nutrient_basis": "as_fed" },
+    "magnesium_oxide_beef": { "display_name": "Magnesium Oxide (54% Mg)", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 0.0, "total_p": 0.0, "mg": 54.0, "k": 0.0, "na": 0.0, "s": 0.0, "source_ref": "NASEM_2016", "nutrient_basis": "as_fed" },
+    "salt_beef": { "display_name": "Salt (NaCl)", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 39.3, "s": 0.0, "source_ref": "NASEM_2016", "nutrient_basis": "as_fed" },
+    "potassium_chloride_beef": { "display_name": "Potassium Chloride (52% K)", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 52.4, "na": 0.0, "s": 0.0, "source_ref": "NASEM_2016", "nutrient_basis": "as_fed" },
+    "sodium_bicarbonate_beef": { "display_name": "Sodium Bicarbonate", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 27.4, "s": 0.0, "source_ref": "NASEM_2016", "nutrient_basis": "as_fed" },
+    "vit_min_premix_beef": { "display_name": "Vitamin-Mineral Premix, Beef", "category": "premix", "dm": 97.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 55.0, "cf": 0.0, "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 6.0, "total_p": 2.5, "mg": 1.5, "k": 0.5, "na": 0.5, "s": 0.3, "source_ref": "Industry", "nutrient_basis": "as_fed" },
+    "ionophore_premix_beef": { "display_name": "Ionophore Premix (Rumensin/Bovatec)", "category": "additive", "dm": 97.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 10.0, "cf": 0.0, "tdn": 0.0, "nem": 0.0, "neg": 0.0, "ne_gain": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0, "source_ref": "Industry", "nutrient_basis": "as_fed" },
+    "grass_silage_beef": {
+      "display_name": "Grass Silage, Mixed",
+      "category": "forage_silage",
+      "dm": 35.0, "cp": 4.6, "ee": 1.2, "ndf": 17.5, "adf": 10.5, "starch": 1.0, "ash": 3.2, "cf": 9.5,
+      "tdn": 58.0, "nem": 1.37, "neg": 0.79, "ne_gain": 0.79,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.17, "total_p": 0.11, "mg": 0.07, "k": 0.73, "na": 0.03, "s": 0.10,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    },
+    "palm_kernel_meal_beef": {
+      "display_name": "Palm Kernel Meal",
+      "category": "protein",
+      "dm": 90.0, "cp": 16.5, "ee": 8.0, "ndf": 58.0, "adf": 39.0, "starch": 3.0, "ash": 4.5, "cf": 18.0,
+      "tdn": 64.0, "nem": 1.50, "neg": 0.91, "ne_gain": 0.91,
+      "rdp_pct": 55.0, "rup_pct": 45.0,
+      "ca": 0.30, "total_p": 0.65, "mg": 0.28, "k": 0.65, "na": 0.02, "s": 0.20,
+      "source_ref": "NASEM_2016", "nutrient_basis": "as_fed"
+    }
+  }
+}

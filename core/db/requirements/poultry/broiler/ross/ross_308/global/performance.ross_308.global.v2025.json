@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "breed": "ross_308",
+    "species": "poultry",
+    "production": "broiler",
+    "age_unit": "day",
+    "source": "Aviagen Ross 308 Broiler Performance Objectives 2022",
+    "version": "v2025",
+    "note": "Cumulative FCR and body weight targets. Mortality is cumulative ceiling."
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "age": 7,  "body_wt_g": 190,  "fcr": 0.892, "adg_g": 25.3, "feed_per_bird_g": 23,  "mortality_pct_max": 0.5,  "water_feed_ratio": 1.8 },
+    { "age": 10, "body_wt_g": 315,  "fcr": 0.978, "adg_g": 29.5, "feed_per_bird_g": 33,  "mortality_pct_max": 0.7,  "water_feed_ratio": 1.8 },
+    { "age": 14, "body_wt_g": 455,  "fcr": 1.113, "adg_g": 37.9, "feed_per_bird_g": 47,  "mortality_pct_max": 1.0,  "water_feed_ratio": 1.9 },
+    { "age": 17, "body_wt_g": 620,  "fcr": 1.178, "adg_g": 45.8, "feed_per_bird_g": 62,  "mortality_pct_max": 1.2,  "water_feed_ratio": 1.9 },
+    { "age": 21, "body_wt_g": 870,  "fcr": 1.284, "adg_g": 59.3, "feed_per_bird_g": 85,  "mortality_pct_max": 1.5,  "water_feed_ratio": 1.9 },
+    { "age": 24, "body_wt_g": 1090, "fcr": 1.352, "adg_g": 71.0, "feed_per_bird_g": 109, "mortality_pct_max": 1.7,  "water_feed_ratio": 2.0 },
+    { "age": 28, "body_wt_g": 1510, "fcr": 1.451, "adg_g": 91.4, "feed_per_bird_g": 140, "mortality_pct_max": 2.0,  "water_feed_ratio": 2.0 },
+    { "age": 32, "body_wt_g": 1930, "fcr": 1.540, "adg_g": 98.3, "feed_per_bird_g": 175, "mortality_pct_max": 2.2,  "water_feed_ratio": 2.0 },
+    { "age": 35, "body_wt_g": 2260, "fcr": 1.620, "adg_g": 107,  "feed_per_bird_g": 196, "mortality_pct_max": 2.5,  "water_feed_ratio": 2.0 },
+    { "age": 38, "body_wt_g": 2560, "fcr": 1.690, "adg_g": 106,  "feed_per_bird_g": 218, "mortality_pct_max": 2.8,  "water_feed_ratio": 2.1 },
+    { "age": 42, "body_wt_g": 3000, "fcr": 1.780, "adg_g": 106,  "feed_per_bird_g": 248, "mortality_pct_max": 3.5,  "water_feed_ratio": 2.1 }
+  ],
+  "epi_formula": "((livability_pct / 100) * avg_body_wt_kg * 100) / (fcr * age_days)",
+  "phases": {
+    "starter":  { "days": "1-10",  "feed_type": "crumble",  "energy_kcal": 3050 },
+    "grower":   { "days": "11-24", "feed_type": "pellet",   "energy_kcal": 3150 },
+    "finisher": { "days": "25-42", "feed_type": "pellet",   "energy_kcal": 3200 }
+  }
+}

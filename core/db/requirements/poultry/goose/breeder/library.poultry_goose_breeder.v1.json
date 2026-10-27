@@ -1,183 +1,1101 @@
 {
-    "profiles":  {
-                     "embden":  {
-                                    "targets_override":  {
-
-                                                         },
-                                    "inherits":  "generic"
-                                },
-                     "generic":  {
-                                     "targets_by_phase":  {
-                                                              "grower":  {
-                                                                             "cp":  19,
-                                                                             "sid_trp":  0.2,
-                                                                             "sid_met":  0.4,
-                                                                             "me":  3000,
-                                                                             "sid_thr":  0.62,
-                                                                             "na":  0.18,
-                                                                             "cl":  0.18,
-                                                                             "ca":  0.9,
-                                                                             "k":  0.85,
-                                                                             "sid_metcys":  0.72,
-                                                                             "sid_lys":  0.95,
-                                                                             "deb":  240,
-                                                                             "sid_arg":  1.05,
-                                                                             "avp":  0.45
-                                                                         },
-                                                              "finisher":  {
-                                                                               "cp":  17.5,
-                                                                               "sid_trp":  0.2,
-                                                                               "sid_met":  0.36,
-                                                                               "me":  3100,
-                                                                               "sid_thr":  0.56,
-                                                                               "na":  0.18,
-                                                                               "cl":  0.18,
-                                                                               "ca":  0.9,
-                                                                               "k":  0.85,
-                                                                               "sid_metcys":  0.65,
-                                                                               "sid_lys":  0.85,
-                                                                               "deb":  230,
-                                                                               "sid_arg":  0.95,
-                                                                               "avp":  0.45
-                                                                           },
-                                                              "withdrawal":  {
-                                                                                 "cp":  17,
-                                                                                 "sid_trp":  0.2,
-                                                                                 "sid_met":  0.34,
-                                                                                 "me":  3050,
-                                                                                 "sid_thr":  0.54,
-                                                                                 "na":  0.18,
-                                                                                 "cl":  0.18,
-                                                                                 "ca":  0.9,
-                                                                                 "k":  0.85,
-                                                                                 "sid_metcys":  0.62,
-                                                                                 "sid_lys":  0.82,
-                                                                                 "deb":  225,
-                                                                                 "sid_arg":  0.92,
-                                                                                 "avp":  0.45
-                                                                             },
-                                                              "starter":  {
-                                                                              "cp":  20.5,
-                                                                              "sid_trp":  0.2,
-                                                                              "sid_met":  0.45,
-                                                                              "me":  2900,
-                                                                              "sid_thr":  0.68,
-                                                                              "na":  0.18,
-                                                                              "cl":  0.18,
-                                                                              "ca":  0.9,
-                                                                              "k":  0.85,
-                                                                              "sid_metcys":  0.8,
-                                                                              "sid_lys":  1.05,
-                                                                              "deb":  250,
-                                                                              "sid_arg":  1.15,
-                                                                              "avp":  0.45
-                                                                          },
-                                                              "peak":  {
-                                                                           "me":  2600,
-                                                                           "cp":  15.5,
-                                                                           "ca":  3,
-                                                                           "avp":  0.4,
-                                                                           "na":  0.16,
-                                                                           "sid_lys":  0.65,
-                                                                           "sid_met":  0.3,
-                                                                           "sid_metcys":  0.55,
-                                                                           "sid_thr":  0.46,
-                                                                           "sid_trp":  0.15,
-                                                                           "sid_arg":  0.8
-                                                                       },
-                                                              "developer":  {
-                                                                                "cp":  19,
-                                                                                "sid_trp":  0.2,
-                                                                                "sid_met":  0.4,
-                                                                                "me":  3000,
-                                                                                "sid_thr":  0.62,
-                                                                                "na":  0.18,
-                                                                                "cl":  0.18,
-                                                                                "ca":  0.9,
-                                                                                "k":  0.85,
-                                                                                "sid_metcys":  0.72,
-                                                                                "sid_lys":  0.95,
-                                                                                "deb":  240,
-                                                                                "sid_arg":  1.05,
-                                                                                "avp":  0.45
-                                                                            },
-                                                              "prebreed":  {
-                                                                               "cp":  19,
-                                                                               "sid_trp":  0.2,
-                                                                               "sid_met":  0.4,
-                                                                               "me":  3000,
-                                                                               "sid_thr":  0.62,
-                                                                               "na":  0.18,
-                                                                               "cl":  0.18,
-                                                                               "ca":  0.9,
-                                                                               "k":  0.85,
-                                                                               "sid_metcys":  0.72,
-                                                                               "sid_lys":  0.95,
-                                                                               "deb":  240,
-                                                                               "sid_arg":  1.05,
-                                                                               "avp":  0.45
-                                                                           },
-                                                              "postpeak":  {
-                                                                               "cp":  19,
-                                                                               "sid_trp":  0.2,
-                                                                               "sid_met":  0.4,
-                                                                               "me":  3000,
-                                                                               "sid_thr":  0.62,
-                                                                               "na":  0.18,
-                                                                               "cl":  0.18,
-                                                                               "ca":  0.9,
-                                                                               "k":  0.85,
-                                                                               "sid_metcys":  0.72,
-                                                                               "sid_lys":  0.95,
-                                                                               "deb":  240,
-                                                                               "sid_arg":  1.05,
-                                                                               "avp":  0.45
-                                                                           },
-                                                              "late":  {
-                                                                           "cp":  19,
-                                                                           "sid_trp":  0.2,
-                                                                           "sid_met":  0.4,
-                                                                           "me":  3000,
-                                                                           "sid_thr":  0.62,
-                                                                           "na":  0.18,
-                                                                           "cl":  0.18,
-                                                                           "ca":  0.9,
-                                                                           "k":  0.85,
-                                                                           "sid_metcys":  0.72,
-                                                                           "sid_lys":  0.95,
-                                                                           "deb":  240,
-                                                                           "sid_arg":  1.05,
-                                                                           "avp":  0.45
-                                                                       }
-                                                          },
-                                     "targets_override":  {
-
-                                                          },
-                                     "mode":  "baseline_generic_v1"
-                                 },
-                     "toulouse":  {
-                                      "targets_override":  {
-
-                                                           },
-                                      "inherits":  "generic"
-                                  },
-                     "african":  {
-                                     "targets_override":  {
-
-                                                          },
-                                     "inherits":  "generic"
-                                 }
-                 },
-    "_LOCK":  {
-                  "version":  "v1",
-                  "production":  "meat",
-                  "species":  "poultry",
-                  "type":  "goose",
-                  "kind":  "requirements_library",
-                  "created_utc":  "2026-02-19T01:39:53Z",
-                  "mode":  "option_b_inheritance_ready",
-                  "note":  "PLACEHOLDER numeric targets (NON-ZERO). Replace with finalized commercial tables.",
-                  "migration_note":  "2026-02-19: migrated targets_by_phase from *_pct/me_kcal_per_kg schema to canonical (me,cp,ca,avp,na,k,cl,deb,sid_*)",
-                  "migration_note2":  "2026-02-19: added missing goose breeder tokens (developer/prebreed/postpeak/late) cloned from grower placeholder"
-              }
+  "profiles": {
+    "embden": {
+      "targets_by_phase": {
+        "starter": {
+          "me": 2950,
+          "cp": 21,
+          "sid_lys": 1.12,
+          "sid_met": 0.46,
+          "sid_metcys": 0.8,
+          "sid_thr": 0.72,
+          "sid_trp": 0.21,
+          "sid_arg": 1.2,
+          "ca": 1.0,
+          "avp": 0.48,
+          "na": 0.17,
+          "cl": 0.17,
+          "k": 0.8,
+          "deb": 248
+        },
+        "grower": {
+          "me": 3000,
+          "cp": 19,
+          "sid_lys": 0.98,
+          "sid_met": 0.4,
+          "sid_metcys": 0.7,
+          "sid_thr": 0.63,
+          "sid_trp": 0.19,
+          "sid_arg": 1.05,
+          "ca": 0.9,
+          "avp": 0.44,
+          "na": 0.17,
+          "cl": 0.17,
+          "k": 0.8,
+          "deb": 244
+        },
+        "developer": {
+          "me": 2950,
+          "cp": 16,
+          "sid_lys": 0.84,
+          "sid_met": 0.34,
+          "sid_metcys": 0.6,
+          "sid_thr": 0.55,
+          "sid_trp": 0.16,
+          "sid_arg": 0.9,
+          "ca": 0.9,
+          "avp": 0.4,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 240
+        },
+        "prebreed": {
+          "me": 2900,
+          "cp": 15,
+          "sid_lys": 0.75,
+          "sid_met": 0.31,
+          "sid_metcys": 0.55,
+          "sid_thr": 0.5,
+          "sid_trp": 0.15,
+          "sid_arg": 0.8,
+          "ca": 1.8,
+          "avp": 0.4,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 237
+        },
+        "peak": {
+          "me": 2700,
+          "cp": 17,
+          "sid_lys": 0.7,
+          "sid_met": 0.3,
+          "sid_metcys": 0.53,
+          "sid_thr": 0.47,
+          "sid_trp": 0.14,
+          "sid_arg": 0.74,
+          "ca": 3.2,
+          "avp": 0.4,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 238
+        },
+        "postpeak": {
+          "me": 2680,
+          "cp": 16.5,
+          "sid_lys": 0.67,
+          "sid_met": 0.29,
+          "sid_metcys": 0.51,
+          "sid_thr": 0.45,
+          "sid_trp": 0.13,
+          "sid_arg": 0.71,
+          "ca": 3.2,
+          "avp": 0.38,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 236
+        },
+        "late": {
+          "me": 2650,
+          "cp": 16,
+          "sid_lys": 0.63,
+          "sid_met": 0.27,
+          "sid_metcys": 0.48,
+          "sid_thr": 0.43,
+          "sid_trp": 0.13,
+          "sid_arg": 0.68,
+          "ca": 3.0,
+          "avp": 0.36,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 233
+        }
+      },
+      "targets_override": {},
+      "doc_meta": {
+        "source": "Sauveur & de Carville 1990 (goose breed nutrition); NRC 2026 Table 18-1; commercial feeding guides (Schauer/Lohmann)"
+      },
+      "mode": "breed_specific_v1"
+    },
+    "generic": {
+      "targets_by_phase": {
+        "starter": {
+          "me": 2900,
+          "cp": 20,
+          "sid_lys": 1.05,
+          "sid_met": 0.43,
+          "sid_metcys": 0.75,
+          "sid_thr": 0.68,
+          "sid_trp": 0.2,
+          "sid_arg": 1.12,
+          "ca": 1.0,
+          "avp": 0.48,
+          "na": 0.17,
+          "cl": 0.17,
+          "k": 0.8,
+          "deb": 245
+        },
+        "grower": {
+          "me": 2950,
+          "cp": 18,
+          "sid_lys": 0.92,
+          "sid_met": 0.38,
+          "sid_metcys": 0.66,
+          "sid_thr": 0.6,
+          "sid_trp": 0.18,
+          "sid_arg": 0.98,
+          "ca": 0.9,
+          "avp": 0.44,
+          "na": 0.17,
+          "cl": 0.17,
+          "k": 0.8,
+          "deb": 242
+        },
+        "developer": {
+          "me": 2900,
+          "cp": 15,
+          "sid_lys": 0.78,
+          "sid_met": 0.32,
+          "sid_metcys": 0.57,
+          "sid_thr": 0.52,
+          "sid_trp": 0.15,
+          "sid_arg": 0.83,
+          "ca": 0.9,
+          "avp": 0.4,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 238
+        },
+        "prebreed": {
+          "me": 2850,
+          "cp": 14,
+          "sid_lys": 0.7,
+          "sid_met": 0.29,
+          "sid_metcys": 0.52,
+          "sid_thr": 0.47,
+          "sid_trp": 0.14,
+          "sid_arg": 0.75,
+          "ca": 1.8,
+          "avp": 0.4,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 235
+        },
+        "peak": {
+          "me": 2600,
+          "cp": 16,
+          "sid_lys": 0.65,
+          "sid_met": 0.28,
+          "sid_metcys": 0.5,
+          "sid_thr": 0.44,
+          "sid_trp": 0.13,
+          "sid_arg": 0.7,
+          "ca": 3.0,
+          "avp": 0.38,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 235
+        },
+        "postpeak": {
+          "me": 2600,
+          "cp": 15.5,
+          "sid_lys": 0.62,
+          "sid_met": 0.27,
+          "sid_metcys": 0.48,
+          "sid_thr": 0.42,
+          "sid_trp": 0.12,
+          "sid_arg": 0.67,
+          "ca": 3.0,
+          "avp": 0.36,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 233
+        },
+        "late": {
+          "me": 2550,
+          "cp": 15,
+          "sid_lys": 0.58,
+          "sid_met": 0.25,
+          "sid_metcys": 0.45,
+          "sid_thr": 0.4,
+          "sid_trp": 0.12,
+          "sid_arg": 0.63,
+          "ca": 3.0,
+          "avp": 0.34,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.8,
+          "deb": 230
+        }
+      },
+      "targets_override": {},
+      "mode": "baseline_generic_v1"
+    },
+    "toulouse": {
+      "targets_by_phase": {
+        "starter": {
+          "me": 2850,
+          "cp": 19,
+          "sid_lys": 0.98,
+          "sid_met": 0.4,
+          "sid_metcys": 0.7,
+          "sid_thr": 0.63,
+          "sid_trp": 0.18,
+          "sid_arg": 1.05,
+          "ca": 1.0,
+          "avp": 0.46,
+          "na": 0.17,
+          "cl": 0.17,
+          "k": 0.78,
+          "deb": 240
+        },
+        "grower": {
+          "me": 2880,
+          "cp": 17,
+          "sid_lys": 0.85,
+          "sid_met": 0.35,
+          "sid_metcys": 0.62,
+          "sid_thr": 0.56,
+          "sid_trp": 0.17,
+          "sid_arg": 0.91,
+          "ca": 0.88,
+          "avp": 0.42,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.78,
+          "deb": 237
+        },
+        "developer": {
+          "me": 2850,
+          "cp": 14,
+          "sid_lys": 0.72,
+          "sid_met": 0.3,
+          "sid_metcys": 0.53,
+          "sid_thr": 0.49,
+          "sid_trp": 0.14,
+          "sid_arg": 0.77,
+          "ca": 0.88,
+          "avp": 0.38,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.78,
+          "deb": 234
+        },
+        "prebreed": {
+          "me": 2820,
+          "cp": 13,
+          "sid_lys": 0.65,
+          "sid_met": 0.27,
+          "sid_metcys": 0.48,
+          "sid_thr": 0.44,
+          "sid_trp": 0.13,
+          "sid_arg": 0.7,
+          "ca": 1.8,
+          "avp": 0.38,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.78,
+          "deb": 232
+        },
+        "peak": {
+          "me": 2580,
+          "cp": 15.5,
+          "sid_lys": 0.62,
+          "sid_met": 0.27,
+          "sid_metcys": 0.48,
+          "sid_thr": 0.42,
+          "sid_trp": 0.12,
+          "sid_arg": 0.67,
+          "ca": 2.9,
+          "avp": 0.36,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.78,
+          "deb": 232
+        },
+        "postpeak": {
+          "me": 2560,
+          "cp": 15,
+          "sid_lys": 0.59,
+          "sid_met": 0.26,
+          "sid_metcys": 0.46,
+          "sid_thr": 0.4,
+          "sid_trp": 0.12,
+          "sid_arg": 0.64,
+          "ca": 2.9,
+          "avp": 0.34,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.78,
+          "deb": 230
+        },
+        "late": {
+          "me": 2540,
+          "cp": 14.5,
+          "sid_lys": 0.56,
+          "sid_met": 0.24,
+          "sid_metcys": 0.43,
+          "sid_thr": 0.38,
+          "sid_trp": 0.11,
+          "sid_arg": 0.61,
+          "ca": 2.9,
+          "avp": 0.33,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.78,
+          "deb": 228
+        }
+      },
+      "targets_override": {},
+      "doc_meta": {
+        "source": "Sauveur & de Carville 1990 (goose breed nutrition); NRC 2026 Table 18-1; commercial feeding guides (Schauer/Lohmann)"
+      },
+      "mode": "breed_specific_v1"
+    },
+    "african": {
+      "targets_by_phase": {
+        "starter": {
+          "me": 2900,
+          "cp": 20,
+          "sid_lys": 1.02,
+          "sid_met": 0.42,
+          "sid_metcys": 0.73,
+          "sid_thr": 0.66,
+          "sid_trp": 0.19,
+          "sid_arg": 1.1,
+          "ca": 1.0,
+          "avp": 0.47,
+          "na": 0.17,
+          "cl": 0.17,
+          "k": 0.79,
+          "deb": 243
+        },
+        "grower": {
+          "me": 2930,
+          "cp": 18,
+          "sid_lys": 0.88,
+          "sid_met": 0.37,
+          "sid_metcys": 0.64,
+          "sid_thr": 0.58,
+          "sid_trp": 0.17,
+          "sid_arg": 0.95,
+          "ca": 0.88,
+          "avp": 0.43,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.79,
+          "deb": 240
+        },
+        "developer": {
+          "me": 2880,
+          "cp": 15,
+          "sid_lys": 0.76,
+          "sid_met": 0.31,
+          "sid_metcys": 0.55,
+          "sid_thr": 0.51,
+          "sid_trp": 0.15,
+          "sid_arg": 0.82,
+          "ca": 0.88,
+          "avp": 0.39,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.79,
+          "deb": 236
+        },
+        "prebreed": {
+          "me": 2840,
+          "cp": 13.5,
+          "sid_lys": 0.68,
+          "sid_met": 0.28,
+          "sid_metcys": 0.5,
+          "sid_thr": 0.46,
+          "sid_trp": 0.14,
+          "sid_arg": 0.73,
+          "ca": 1.8,
+          "avp": 0.39,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.79,
+          "deb": 234
+        },
+        "peak": {
+          "me": 2620,
+          "cp": 16.5,
+          "sid_lys": 0.67,
+          "sid_met": 0.29,
+          "sid_metcys": 0.51,
+          "sid_thr": 0.45,
+          "sid_trp": 0.13,
+          "sid_arg": 0.72,
+          "ca": 3.1,
+          "avp": 0.39,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.79,
+          "deb": 236
+        },
+        "postpeak": {
+          "me": 2610,
+          "cp": 16,
+          "sid_lys": 0.64,
+          "sid_met": 0.28,
+          "sid_metcys": 0.49,
+          "sid_thr": 0.43,
+          "sid_trp": 0.13,
+          "sid_arg": 0.69,
+          "ca": 3.1,
+          "avp": 0.37,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.79,
+          "deb": 234
+        },
+        "late": {
+          "me": 2580,
+          "cp": 15.5,
+          "sid_lys": 0.6,
+          "sid_met": 0.26,
+          "sid_metcys": 0.46,
+          "sid_thr": 0.41,
+          "sid_trp": 0.12,
+          "sid_arg": 0.65,
+          "ca": 3.0,
+          "avp": 0.35,
+          "na": 0.16,
+          "cl": 0.16,
+          "k": 0.79,
+          "deb": 231
+        }
+      },
+      "targets_override": {},
+      "doc_meta": {
+        "source": "Sauveur & de Carville 1990 (goose breed nutrition); NRC 2026 Table 18-1; commercial feeding guides (Schauer/Lohmann)"
+      },
+      "mode": "breed_specific_v1"
+    },
+    "poultry_goose_breeder_nrc2026_wk_0_4_v1": {
+      "phase": "wk_0_4",
+      "label": "NRC 2026 Goose 0–4 wk v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 18-1",
+        "basis_note": "Total AAs; sid_*=total*0.89. Sparse table (Lys/TSAA/Thr/Trp only)."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "cp_pct": 20,
+        "ca_pct": 0.65,
+        "avp_pct": 0.4,
+        "total_lys_pct": 1,
+        "sid_lys_pct": 0.89,
+        "total_metcys_pct": 0.85,
+        "sid_metcys_pct": 0.756,
+        "total_thr_pct": 0.73,
+        "sid_thr_pct": 0.65,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.715,
+        "sid_met_pct": 0.42
+      }
+    },
+    "poultry_goose_breeder_nrc2026_wk_4plus_v1": {
+      "phase": "wk_4plus",
+      "label": "NRC 2026 Goose After 4 wk v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 18-1",
+        "basis_note": "Total AAs; sid_*=total*0.89. Sparse table (Lys/TSAA/Thr/Trp only)."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 2700,
+        "cp_pct": 15,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.297,
+        "sid_met_pct": 0.316
+      }
+    },
+    "poultry_goose_breeder_nrc2026_laying_v1": {
+      "phase": "laying",
+      "label": "NRC 2026 Goose Laying Female v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 18-1",
+        "basis_note": "Total AAs; sid_*=total*0.89. Sparse table (Lys/TSAA/Thr/Trp only)."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      }
+    },
+    "poultry_goose_breeder_embden_late_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 14.0,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.491,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_embden_prebreed_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 1.5,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_embden_postpeak_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_embden_starter_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "cp_pct": 20,
+        "ca_pct": 0.65,
+        "avp_pct": 0.4,
+        "total_lys_pct": 1,
+        "sid_lys_pct": 0.89,
+        "total_metcys_pct": 0.85,
+        "sid_metcys_pct": 0.756,
+        "total_thr_pct": 0.73,
+        "sid_thr_pct": 0.65,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.715,
+        "sid_met_pct": 0.42
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_embden_grower_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2700,
+        "cp_pct": 15,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.297,
+        "sid_met_pct": 0.316
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_embden_peak_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_embden_developer_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2650,
+        "cp_pct": 13.0,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.095,
+        "sid_met_pct": 0.316
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_generic_late_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 14.0,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.491,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_generic_prebreed_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 1.5,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_generic_postpeak_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_generic_starter_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "cp_pct": 20,
+        "ca_pct": 0.65,
+        "avp_pct": 0.4,
+        "total_lys_pct": 1,
+        "sid_lys_pct": 0.89,
+        "total_metcys_pct": 0.85,
+        "sid_metcys_pct": 0.756,
+        "total_thr_pct": 0.73,
+        "sid_thr_pct": 0.65,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.715,
+        "sid_met_pct": 0.42
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_generic_grower_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2700,
+        "cp_pct": 15,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.297,
+        "sid_met_pct": 0.316
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_generic_peak_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_generic_developer_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2650,
+        "cp_pct": 13.0,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.095,
+        "sid_met_pct": 0.316
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_toulouse_late_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 14.0,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.491,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_toulouse_prebreed_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 1.5,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_toulouse_postpeak_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_toulouse_starter_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "cp_pct": 20,
+        "ca_pct": 0.65,
+        "avp_pct": 0.4,
+        "total_lys_pct": 1,
+        "sid_lys_pct": 0.89,
+        "total_metcys_pct": 0.85,
+        "sid_metcys_pct": 0.756,
+        "total_thr_pct": 0.73,
+        "sid_thr_pct": 0.65,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.715,
+        "sid_met_pct": 0.42
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_toulouse_grower_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2700,
+        "cp_pct": 15,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.297,
+        "sid_met_pct": 0.316
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_toulouse_peak_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_toulouse_developer_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2650,
+        "cp_pct": 13.0,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.095,
+        "sid_met_pct": 0.316
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_african_late_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 14.0,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.491,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_african_prebreed_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 1.5,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_african_postpeak_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_african_starter_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "cp_pct": 20,
+        "ca_pct": 0.65,
+        "avp_pct": 0.4,
+        "total_lys_pct": 1,
+        "sid_lys_pct": 0.89,
+        "total_metcys_pct": 0.85,
+        "sid_metcys_pct": 0.756,
+        "total_thr_pct": 0.73,
+        "sid_thr_pct": 0.65,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.715,
+        "sid_met_pct": 0.42
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_african_grower_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2700,
+        "cp_pct": 15,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.297,
+        "sid_met_pct": 0.316
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_african_peak_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 15,
+        "ca_pct": 2.25,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_metcys_pct": 0.5,
+        "sid_metcys_pct": 0.445,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 12.134,
+        "sid_met_pct": 0.247
+      },
+      "inherits": "generic"
+    },
+    "poultry_goose_breeder_african_developer_v1": {
+      "targets_override": {
+        "me_kcal_per_kg": 2650,
+        "cp_pct": 13.0,
+        "ca_pct": 0.6,
+        "avp_pct": 0.3,
+        "total_lys_pct": 0.75,
+        "sid_lys_pct": 0.667,
+        "total_metcys_pct": 0.64,
+        "sid_metcys_pct": 0.57,
+        "total_thr_pct": 0.54,
+        "sid_thr_pct": 0.481,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "me_mj_per_kg": 11.095,
+        "sid_met_pct": 0.316
+      },
+      "inherits": "generic"
+    }
+  },
+  "_LOCK": {
+    "version": "v1",
+    "production": "meat",
+    "species": "poultry",
+    "type": "goose",
+    "kind": "requirements_library",
+    "created_utc": "2026-02-19T01:39:53Z",
+    "mode": "option_b_inheritance_ready",
+    "note": "PLACEHOLDER numeric targets (NON-ZERO). Replace with finalized commercial tables.",
+    "migration_note": "2026-02-19: migrated targets_by_phase from *_pct/me_kcal_per_kg schema to canonical (me,cp,ca,avp,na,k,cl,deb,sid_*)",
+    "migration_note2": "2026-02-19: added missing goose breeder tokens (developer/prebreed/postpeak/late) cloned from grower placeholder"
+  }
 }

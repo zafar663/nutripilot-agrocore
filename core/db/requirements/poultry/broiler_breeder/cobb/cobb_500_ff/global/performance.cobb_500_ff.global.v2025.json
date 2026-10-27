@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "breed": "cobb_500_ff",
+    "species": "poultry",
+    "production": "breeder",
+    "age_unit": "week",
+    "source": "Cobb Breeder Management Supplement 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 3,
+  "alert_threshold_pct": 7,
+  "curve": [
+    { "week": 20, "body_wt_g": 2700, "egg_prod_pct": 5,  "egg_wt_g": 53.0, "feed_per_bird_g": 130, "mortality_pct_max": 1.0 },
+    { "week": 26, "body_wt_g": 3250, "egg_prod_pct": 80, "egg_wt_g": 63.0, "feed_per_bird_g": 160, "mortality_pct_max": 2.0 },
+    { "week": 30, "body_wt_g": 3380, "egg_prod_pct": 85, "egg_wt_g": 66.0, "feed_per_bird_g": 163, "mortality_pct_max": 2.5 },
+    { "week": 40, "body_wt_g": 3620, "egg_prod_pct": 77, "egg_wt_g": 68.0, "feed_per_bird_g": 161, "mortality_pct_max": 4.0 },
+    { "week": 60, "body_wt_g": 3950, "egg_prod_pct": 60, "egg_wt_g": 69.5, "feed_per_bird_g": 156, "mortality_pct_max": 7.0 }
+  ]
+}

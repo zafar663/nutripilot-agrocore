@@ -1,0 +1,463 @@
+{
+  "_LOCK": {
+    "mode": "option_b_production_index",
+    "meta": {
+      "name": "poultry_layer_requirements_index",
+      "version": "v1",
+      "notes": "Option-B: production=egg -> breed -> phase -> reqKey. No defaults; breed+phase must be explicit. Index expanded to include all tracked layer breeds/lines; placeholders allowed where PDFs not yet extracted."
+    }
+  },
+  "defaults": {
+    "production": "egg",
+    "breed": "__UNSET__",
+    "phase": "__UNSET__"
+  },
+  "region_defaults": {
+    "global": "global",
+    "us": "us",
+    "na": "na",
+    "sea": "sea",
+    "latam": "latam",
+    "eu": "eu",
+    "au": "au",
+    "pk": "pk"
+  },
+  "breed_aliases": {
+    "dekalb": "dekalb_white",
+    "dekalb_white": "dekalb_white",
+
+    "isa": "isa_brown",
+    "isa_brown": "isa_brown",
+
+    "hyline": "hyline_w36",
+    "hy-line": "hyline_w36",
+    "hyline_w36": "hyline_w36",
+    "hyline_w80": "hyline_w80",
+    "hyline_w80_plus": "hyline_w80_plus",
+    "hyline_w80_pro": "hyline_w80_pro",
+    "hyline_brown": "hyline_brown",
+    "hyline_pink": "hyline_pink",
+    "hyline_silver_brown": "hyline_silver_brown",
+
+    "lohmann_brown": "lohmann_brown_classic",
+    "lohmann_brown_classic": "lohmann_brown_classic",
+    "lohmann_brown_extra": "lohmann_brown_extra",
+    "lohmann_brown_lite": "lohmann_brown_lite_na",
+    "lohmann_brown_lite_na": "lohmann_brown_lite_na",
+
+    "lohmann_lsl": "lohmann_lsl_classic",
+    "lohmann_lsl_classic": "lohmann_lsl_classic",
+    "lohmann_lsl_extra": "lohmann_lsl_extra",
+    "lohmann_lsl_lite": "lohmann_lsl_lite_na",
+    "lohmann_lsl_lite_na": "lohmann_lsl_lite_na",
+    "lohmann_lsl_ultralite": "lohmann_lsl_ultralite",
+
+    "lohmann_pink": "lohmann_pink",
+    "lohmann_sandy": "lohmann_sandy",
+    "lohmann_silver": "lohmann_silver",
+    "lohmann_tradition": "lohmann_tradition",
+
+    "bovans": "bovans_brown",
+    "bovans_brown": "bovans_brown",
+    "bovans_white": "bovans_white",
+    "bovans_black": "bovans_black",
+
+    "babcock_brown": "babcock_brown",
+    "babcock_white": "babcock_white",
+
+    "novogen": "novogen_brown",
+    "novogen_brown": "novogen_brown",
+    "novogen_white": "novogen_white",
+
+    "hisex_brown": "hisex_brown",
+    "hisex_white": "hisex_white",
+
+    "shaver_brown": "shaver_brown",
+    "shaver_white": "shaver_white",
+    "shaver_black": "shaver_black",
+
+    "brown_nick": "brown_nick",
+    "nick_chick_brown": "nick_chick_brown",
+
+    "uisa_brown": "uisa_brown"
+  },
+  "productions": {
+    "egg": {
+      "phases": [
+        "starter",
+        "grower",
+        "developer",
+        "prelay",
+        "lay_early",
+        "lay_peak",
+        "lay_mid",
+        "lay_late"
+      ],
+      "breeds": {
+        "babcock_brown": {
+          "starter": "poultry_layer_babcock_brown_starter_v1",
+          "grower": "poultry_layer_babcock_brown_grower_v1",
+          "developer": "poultry_layer_babcock_brown_developer_v1",
+          "prelay": "poultry_layer_babcock_brown_prelay_v1",
+          "lay_early": "poultry_layer_babcock_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_babcock_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_babcock_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_babcock_brown_lay_late_v1"
+        },
+        "babcock_white": {
+          "starter": "poultry_layer_babcock_white_starter_v1",
+          "grower": "poultry_layer_babcock_white_grower_v1",
+          "developer": "poultry_layer_babcock_white_developer_v1",
+          "prelay": "poultry_layer_babcock_white_prelay_v1",
+          "lay_early": "poultry_layer_babcock_white_lay_early_v1",
+          "lay_peak": "poultry_layer_babcock_white_lay_peak_v1",
+          "lay_mid": "poultry_layer_babcock_white_lay_mid_v1",
+          "lay_late": "poultry_layer_babcock_white_lay_late_v1"
+        },
+
+        "bovans_black": {
+          "starter": "poultry_layer_bovans_black_starter_v1",
+          "grower": "poultry_layer_bovans_black_grower_v1",
+          "developer": "poultry_layer_bovans_black_developer_v1",
+          "prelay": "poultry_layer_bovans_black_prelay_v1",
+          "lay_early": "poultry_layer_bovans_black_lay_early_v1",
+          "lay_peak": "poultry_layer_bovans_black_lay_peak_v1",
+          "lay_mid": "poultry_layer_bovans_black_lay_mid_v1",
+          "lay_late": "poultry_layer_bovans_black_lay_late_v1"
+        },
+        "bovans_brown": {
+          "starter": "poultry_layer_bovans_brown_starter_v1",
+          "grower": "poultry_layer_bovans_brown_grower_v1",
+          "developer": "poultry_layer_bovans_brown_developer_v1",
+          "prelay": "poultry_layer_bovans_brown_prelay_v1",
+          "lay_early": "poultry_layer_bovans_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_bovans_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_bovans_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_bovans_brown_lay_late_v1"
+        },
+        "bovans_white": {
+          "starter": "poultry_layer_bovans_white_starter_v1",
+          "grower": "poultry_layer_bovans_white_grower_v1",
+          "developer": "poultry_layer_bovans_white_developer_v1",
+          "prelay": "poultry_layer_bovans_white_prelay_v1",
+          "lay_early": "poultry_layer_bovans_white_lay_early_v1",
+          "lay_peak": "poultry_layer_bovans_white_lay_peak_v1",
+          "lay_mid": "poultry_layer_bovans_white_lay_mid_v1",
+          "lay_late": "poultry_layer_bovans_white_lay_late_v1"
+        },
+
+        "dekalb_white": {
+          "starter": "poultry_layer_dekalb_white_starter_v1",
+          "grower": "poultry_layer_dekalb_white_grower_v1",
+          "developer": "poultry_layer_dekalb_white_developer_v1",
+          "prelay": "poultry_layer_dekalb_white_prelay_v1",
+          "lay_early": "poultry_layer_dekalb_white_lay_early_v1",
+          "lay_peak": "poultry_layer_dekalb_white_lay_peak_v1",
+          "lay_mid": "poultry_layer_dekalb_white_lay_mid_v1",
+          "lay_late": "poultry_layer_dekalb_white_lay_late_v1"
+        },
+
+        "hyline_brown": {
+          "starter": "poultry_layer_hyline_brown_starter_v1",
+          "grower": "poultry_layer_hyline_brown_grower_v1",
+          "developer": "poultry_layer_hyline_brown_developer_v1",
+          "prelay": "poultry_layer_hyline_brown_prelay_v1",
+          "lay_early": "poultry_layer_hyline_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_hyline_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_hyline_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_hyline_brown_lay_late_v1"
+        },
+        "hyline_pink": {
+          "starter": "poultry_layer_hyline_pink_starter_v1",
+          "grower": "poultry_layer_hyline_pink_grower_v1",
+          "developer": "poultry_layer_hyline_pink_developer_v1",
+          "prelay": "poultry_layer_hyline_pink_prelay_v1",
+          "lay_early": "poultry_layer_hyline_pink_lay_early_v1",
+          "lay_peak": "poultry_layer_hyline_pink_lay_peak_v1",
+          "lay_mid": "poultry_layer_hyline_pink_lay_mid_v1",
+          "lay_late": "poultry_layer_hyline_pink_lay_late_v1"
+        },
+        "hyline_silver_brown": {
+          "starter": "poultry_layer_hyline_silver_brown_starter_v1",
+          "grower": "poultry_layer_hyline_silver_brown_grower_v1",
+          "developer": "poultry_layer_hyline_silver_brown_developer_v1",
+          "prelay": "poultry_layer_hyline_silver_brown_prelay_v1",
+          "lay_early": "poultry_layer_hyline_silver_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_hyline_silver_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_hyline_silver_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_hyline_silver_brown_lay_late_v1"
+        },
+        "hyline_w36": {
+          "starter": "poultry_layer_hyline_w36_starter_v1",
+          "grower": "poultry_layer_hyline_w36_grower_v1",
+          "developer": "poultry_layer_hyline_w36_developer_v1",
+          "prelay": "poultry_layer_hyline_w36_prelay_v1",
+          "lay_early": "poultry_layer_hyline_w36_lay_early_v1",
+          "lay_peak": "poultry_layer_hyline_w36_lay_peak_v1",
+          "lay_mid": "poultry_layer_hyline_w36_lay_mid_v1",
+          "lay_late": "poultry_layer_hyline_w36_lay_late_v1"
+        },
+        "hyline_w80": {
+          "starter": "poultry_layer_hyline_w80_starter_v1",
+          "grower": "poultry_layer_hyline_w80_grower_v1",
+          "developer": "poultry_layer_hyline_w80_developer_v1",
+          "prelay": "poultry_layer_hyline_w80_prelay_v1",
+          "lay_early": "poultry_layer_hyline_w80_lay_early_v1",
+          "lay_peak": "poultry_layer_hyline_w80_lay_peak_v1",
+          "lay_mid": "poultry_layer_hyline_w80_lay_mid_v1",
+          "lay_late": "poultry_layer_hyline_w80_lay_late_v1"
+        },
+        "hyline_w80_plus": {
+          "starter": "poultry_layer_hyline_w80_plus_starter_v1",
+          "grower": "poultry_layer_hyline_w80_plus_grower_v1",
+          "developer": "poultry_layer_hyline_w80_plus_developer_v1",
+          "prelay": "poultry_layer_hyline_w80_plus_prelay_v1",
+          "lay_early": "poultry_layer_hyline_w80_plus_lay_early_v1",
+          "lay_peak": "poultry_layer_hyline_w80_plus_lay_peak_v1",
+          "lay_mid": "poultry_layer_hyline_w80_plus_lay_mid_v1",
+          "lay_late": "poultry_layer_hyline_w80_plus_lay_late_v1"
+        },
+        "hyline_w80_pro": {
+          "starter": "poultry_layer_hyline_w80_pro_starter_v1",
+          "grower": "poultry_layer_hyline_w80_pro_grower_v1",
+          "developer": "poultry_layer_hyline_w80_pro_developer_v1",
+          "prelay": "poultry_layer_hyline_w80_pro_prelay_v1",
+          "lay_early": "poultry_layer_hyline_w80_pro_lay_early_v1",
+          "lay_peak": "poultry_layer_hyline_w80_pro_lay_peak_v1",
+          "lay_mid": "poultry_layer_hyline_w80_pro_lay_mid_v1",
+          "lay_late": "poultry_layer_hyline_w80_pro_lay_late_v1"
+        },
+
+        "isa_brown": {
+          "starter": "poultry_layer_isa_brown_starter_v1",
+          "grower": "poultry_layer_isa_brown_grower_v1",
+          "developer": "poultry_layer_isa_brown_developer_v1",
+          "prelay": "poultry_layer_isa_brown_prelay_v1",
+          "lay_early": "poultry_layer_isa_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_isa_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_isa_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_isa_brown_lay_late_v1"
+        },
+
+        "lohmann_brown_classic": {
+          "starter": "poultry_layer_lohmann_brown_classic_starter_v1",
+          "grower": "poultry_layer_lohmann_brown_classic_grower_v1",
+          "developer": "poultry_layer_lohmann_brown_classic_developer_v1",
+          "prelay": "poultry_layer_lohmann_brown_classic_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_brown_classic_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_brown_classic_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_brown_classic_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_brown_classic_lay_late_v1"
+        },
+        "lohmann_brown_extra": {
+          "starter": "poultry_layer_lohmann_brown_extra_starter_v1",
+          "grower": "poultry_layer_lohmann_brown_extra_grower_v1",
+          "developer": "poultry_layer_lohmann_brown_extra_developer_v1",
+          "prelay": "poultry_layer_lohmann_brown_extra_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_brown_extra_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_brown_extra_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_brown_extra_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_brown_extra_lay_late_v1"
+        },
+        "lohmann_brown_lite_na": {
+          "starter": "poultry_layer_lohmann_brown_lite_na_starter_v1",
+          "grower": "poultry_layer_lohmann_brown_lite_na_grower_v1",
+          "developer": "poultry_layer_lohmann_brown_lite_na_developer_v1",
+          "prelay": "poultry_layer_lohmann_brown_lite_na_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_brown_lite_na_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_brown_lite_na_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_brown_lite_na_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_brown_lite_na_lay_late_v1"
+        },
+
+        "lohmann_lsl_classic": {
+          "starter": "poultry_layer_lohmann_lsl_classic_starter_v1",
+          "grower": "poultry_layer_lohmann_lsl_classic_grower_v1",
+          "developer": "poultry_layer_lohmann_lsl_classic_developer_v1",
+          "prelay": "poultry_layer_lohmann_lsl_classic_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_lsl_classic_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_lsl_classic_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_lsl_classic_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_lsl_classic_lay_late_v1"
+        },
+        "lohmann_lsl_extra": {
+          "starter": "poultry_layer_lohmann_lsl_extra_starter_v1",
+          "grower": "poultry_layer_lohmann_lsl_extra_grower_v1",
+          "developer": "poultry_layer_lohmann_lsl_extra_developer_v1",
+          "prelay": "poultry_layer_lohmann_lsl_extra_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_lsl_extra_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_lsl_extra_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_lsl_extra_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_lsl_extra_lay_late_v1"
+        },
+        "lohmann_lsl_lite_na": {
+          "starter": "poultry_layer_lohmann_lsl_lite_na_starter_v1",
+          "grower": "poultry_layer_lohmann_lsl_lite_na_grower_v1",
+          "developer": "poultry_layer_lohmann_lsl_lite_na_developer_v1",
+          "prelay": "poultry_layer_lohmann_lsl_lite_na_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_lsl_lite_na_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_lsl_lite_na_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_lsl_lite_na_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_lsl_lite_na_lay_late_v1"
+        },
+        "lohmann_lsl_ultralite": {
+          "starter": "poultry_layer_lohmann_lsl_ultralite_starter_v1",
+          "grower": "poultry_layer_lohmann_lsl_ultralite_grower_v1",
+          "developer": "poultry_layer_lohmann_lsl_ultralite_developer_v1",
+          "prelay": "poultry_layer_lohmann_lsl_ultralite_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_lsl_ultralite_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_lsl_ultralite_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_lsl_ultralite_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_lsl_ultralite_lay_late_v1"
+        },
+
+        "lohmann_pink": {
+          "starter": "poultry_layer_lohmann_pink_starter_v1",
+          "grower": "poultry_layer_lohmann_pink_grower_v1",
+          "developer": "poultry_layer_lohmann_pink_developer_v1",
+          "prelay": "poultry_layer_lohmann_pink_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_pink_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_pink_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_pink_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_pink_lay_late_v1"
+        },
+        "lohmann_sandy": {
+          "starter": "poultry_layer_lohmann_sandy_starter_v1",
+          "grower": "poultry_layer_lohmann_sandy_grower_v1",
+          "developer": "poultry_layer_lohmann_sandy_developer_v1",
+          "prelay": "poultry_layer_lohmann_sandy_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_sandy_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_sandy_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_sandy_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_sandy_lay_late_v1"
+        },
+        "lohmann_silver": {
+          "starter": "poultry_layer_lohmann_silver_starter_v1",
+          "grower": "poultry_layer_lohmann_silver_grower_v1",
+          "developer": "poultry_layer_lohmann_silver_developer_v1",
+          "prelay": "poultry_layer_lohmann_silver_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_silver_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_silver_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_silver_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_silver_lay_late_v1"
+        },
+        "lohmann_tradition": {
+          "starter": "poultry_layer_lohmann_tradition_starter_v1",
+          "grower": "poultry_layer_lohmann_tradition_grower_v1",
+          "developer": "poultry_layer_lohmann_tradition_developer_v1",
+          "prelay": "poultry_layer_lohmann_tradition_prelay_v1",
+          "lay_early": "poultry_layer_lohmann_tradition_lay_early_v1",
+          "lay_peak": "poultry_layer_lohmann_tradition_lay_peak_v1",
+          "lay_mid": "poultry_layer_lohmann_tradition_lay_mid_v1",
+          "lay_late": "poultry_layer_lohmann_tradition_lay_late_v1"
+        },
+
+        "novogen_brown": {
+          "starter": "poultry_layer_novogen_brown_starter_v1",
+          "grower": "poultry_layer_novogen_brown_grower_v1",
+          "developer": "poultry_layer_novogen_brown_developer_v1",
+          "prelay": "poultry_layer_novogen_brown_prelay_v1",
+          "lay_early": "poultry_layer_novogen_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_novogen_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_novogen_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_novogen_brown_lay_late_v1"
+        },
+
+        "novogen_white": {
+          "starter": "poultry_layer_novogen_white_starter_v1",
+          "grower": "poultry_layer_novogen_white_grower_v1",
+          "developer": "poultry_layer_novogen_white_developer_v1",
+          "prelay": "poultry_layer_novogen_white_prelay_v1",
+          "lay_early": "poultry_layer_novogen_white_lay_early_v1",
+          "lay_peak": "poultry_layer_novogen_white_lay_peak_v1",
+          "lay_mid": "poultry_layer_novogen_white_lay_mid_v1",
+          "lay_late": "poultry_layer_novogen_white_lay_late_v1"
+        },
+
+        "hisex_brown": {
+          "starter": "poultry_layer_hisex_brown_starter_v1",
+          "grower": "poultry_layer_hisex_brown_grower_v1",
+          "developer": "poultry_layer_hisex_brown_developer_v1",
+          "prelay": "poultry_layer_hisex_brown_prelay_v1",
+          "lay_early": "poultry_layer_hisex_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_hisex_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_hisex_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_hisex_brown_lay_late_v1"
+        },
+        "hisex_white": {
+          "starter": "poultry_layer_hisex_white_starter_v1",
+          "grower": "poultry_layer_hisex_white_grower_v1",
+          "developer": "poultry_layer_hisex_white_developer_v1",
+          "prelay": "poultry_layer_hisex_white_prelay_v1",
+          "lay_early": "poultry_layer_hisex_white_lay_early_v1",
+          "lay_peak": "poultry_layer_hisex_white_lay_peak_v1",
+          "lay_mid": "poultry_layer_hisex_white_lay_mid_v1",
+          "lay_late": "poultry_layer_hisex_white_lay_late_v1"
+        },
+
+        "shaver_brown": {
+          "starter": "poultry_layer_shaver_brown_starter_v1",
+          "grower": "poultry_layer_shaver_brown_grower_v1",
+          "developer": "poultry_layer_shaver_brown_developer_v1",
+          "prelay": "poultry_layer_shaver_brown_prelay_v1",
+          "lay_early": "poultry_layer_shaver_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_shaver_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_shaver_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_shaver_brown_lay_late_v1"
+        },
+        "shaver_white": {
+          "starter": "poultry_layer_shaver_white_starter_v1",
+          "grower": "poultry_layer_shaver_white_grower_v1",
+          "developer": "poultry_layer_shaver_white_developer_v1",
+          "prelay": "poultry_layer_shaver_white_prelay_v1",
+          "lay_early": "poultry_layer_shaver_white_lay_early_v1",
+          "lay_peak": "poultry_layer_shaver_white_lay_peak_v1",
+          "lay_mid": "poultry_layer_shaver_white_lay_mid_v1",
+          "lay_late": "poultry_layer_shaver_white_lay_late_v1"
+        },
+        "shaver_black": {
+          "starter": "poultry_layer_shaver_black_starter_v1",
+          "grower": "poultry_layer_shaver_black_grower_v1",
+          "developer": "poultry_layer_shaver_black_developer_v1",
+          "prelay": "poultry_layer_shaver_black_prelay_v1",
+          "lay_early": "poultry_layer_shaver_black_lay_early_v1",
+          "lay_peak": "poultry_layer_shaver_black_lay_peak_v1",
+          "lay_mid": "poultry_layer_shaver_black_lay_mid_v1",
+          "lay_late": "poultry_layer_shaver_black_lay_late_v1"
+        },
+
+        "brown_nick": {
+          "starter": "poultry_layer_brown_nick_starter_v1",
+          "grower": "poultry_layer_brown_nick_grower_v1",
+          "developer": "poultry_layer_brown_nick_developer_v1",
+          "prelay": "poultry_layer_brown_nick_prelay_v1",
+          "lay_early": "poultry_layer_brown_nick_lay_early_v1",
+          "lay_peak": "poultry_layer_brown_nick_lay_peak_v1",
+          "lay_mid": "poultry_layer_brown_nick_lay_mid_v1",
+          "lay_late": "poultry_layer_brown_nick_lay_late_v1"
+        },
+        "nick_chick_brown": {
+          "starter": "poultry_layer_nick_chick_brown_starter_v1",
+          "grower": "poultry_layer_nick_chick_brown_grower_v1",
+          "developer": "poultry_layer_nick_chick_brown_developer_v1",
+          "prelay": "poultry_layer_nick_chick_brown_prelay_v1",
+          "lay_early": "poultry_layer_nick_chick_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_nick_chick_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_nick_chick_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_nick_chick_brown_lay_late_v1"
+        },
+
+        "uisa_brown": {
+          "starter": "poultry_layer_uisa_brown_starter_v1",
+          "grower": "poultry_layer_uisa_brown_grower_v1",
+          "developer": "poultry_layer_uisa_brown_developer_v1",
+          "prelay": "poultry_layer_uisa_brown_prelay_v1",
+          "lay_early": "poultry_layer_uisa_brown_lay_early_v1",
+          "lay_peak": "poultry_layer_uisa_brown_lay_peak_v1",
+          "lay_mid": "poultry_layer_uisa_brown_lay_mid_v1",
+          "lay_late": "poultry_layer_uisa_brown_lay_late_v1"
+        }
+      }
+    }
+  }
+}

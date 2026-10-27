@@ -1,0 +1,971 @@
+{
+  "library_meta": {
+    "species": "swine",
+    "version": "v1",
+    "standard": "PIC_2021",
+    "energy_basis": "NRC_2012",
+    "unit_system": "metric",
+    "created": "2025",
+    "notes": "All values from PIC Nutrition and Feeding Guidelines 2021 (Imperial version, converted to metric). SID amino acids throughout. CP added from PIC/NRC industry references. lys_pct derived from lys_ne_ratio × NE/10000 where not explicitly stated."
+  },
+
+  "phases": {
+
+    "nursery_p1": {
+      "label": "Nursery Phase 1",
+      "description": "Weaning to ~7 kg (16 lbs)",
+      "body_weight_range_kg": { "min": 2.5, "max": 7.3 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 0.25,
+      "energy": {
+        "ne_kcal_kg": 2618,
+        "me_kcal_kg": 3493
+      },
+      "proximate": {
+        "cp_pct": 25.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 5.32,
+        "lys_me_ratio_g_mcal": 3.90,
+        "lys_pct": 1.46,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 20,
+          "val": 67,
+          "ile": 55,
+          "leu": 100,
+          "his": 32,
+          "phe_tyr": 92
+        }
+      },
+      "minerals": {
+        "sttd_p_pct": 0.50,
+        "avail_p_pct": 0.45,
+        "calcium_pct": 0.65,
+        "sodium_pct": 0.40,
+        "chloride_pct": 0.38,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 }
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 130,
+        "fe": 130,
+        "mn": 50,
+        "cu": 18,
+        "iodine": 0.65,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 4997,
+        "vit_d3_iu": 1599,
+        "vit_e_iu": 51,
+        "vit_k_mg": 3.1,
+        "niacin_mg": 51,
+        "riboflavin_mg": 7.9,
+        "pantothenic_acid_mg": 28.2,
+        "vit_b12_mcg": 37.9,
+        "choline_mg": 0,
+        "folic_acid_mcg": 0,
+        "biotin_mcg": 0,
+        "thiamine_mg": 0,
+        "pyridoxine_mg": 0
+      },
+      "special_ingredients": {
+        "soybean_meal_max_pct": 20,
+        "sid_lys_to_cp_ratio_max": 6.4,
+        "highly_digestible_protein_pct": "5-10",
+        "highly_digestible_carbohydrate_pct": 15.0,
+        "notes": "Phase 1 max duration: weaning to 16 lbs or 42 days of age. High lactose 14%+ recommended. Fish meal 3-6% to stimulate intake."
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section Q",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 25% typical for pre-starter diets with fish meal and milk products (PIC/NRC reference). Vitamins converted from per lb to per kg."
+      }
+    },
+
+    "nursery_p2": {
+      "label": "Nursery Phase 2",
+      "description": "~7 to 11 kg (16 to 25 lbs)",
+      "body_weight_range_kg": { "min": 7.3, "max": 11.4 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 0.45,
+      "energy": {
+        "ne_kcal_kg": 2618,
+        "me_kcal_kg": 3493
+      },
+      "proximate": {
+        "cp_pct": 22.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 5.32,
+        "lys_me_ratio_g_mcal": 3.90,
+        "lys_pct": 1.42,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 19,
+          "val": 67,
+          "ile": 55,
+          "leu": 100,
+          "his": 32,
+          "phe_tyr": 92
+        }
+      },
+      "minerals": {
+        "sttd_p_pct": 0.45,
+        "avail_p_pct": 0.40,
+        "calcium_pct": 0.65,
+        "sodium_pct": 0.35,
+        "chloride_pct": 0.32,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 }
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 130,
+        "fe": 130,
+        "mn": 50,
+        "cu": 18,
+        "iodine": 0.65,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 4997,
+        "vit_d3_iu": 1599,
+        "vit_e_iu": 51,
+        "vit_k_mg": 3.1,
+        "niacin_mg": 51,
+        "riboflavin_mg": 7.9,
+        "pantothenic_acid_mg": 28.2,
+        "vit_b12_mcg": 37.9,
+        "choline_mg": 0,
+        "folic_acid_mcg": 0,
+        "biotin_mcg": 0,
+        "thiamine_mg": 0,
+        "pyridoxine_mg": 0
+      },
+      "special_ingredients": {
+        "soybean_meal_max_pct": 28,
+        "sid_lys_to_cp_ratio_max": 6.4,
+        "highly_digestible_protein_pct": "3-5",
+        "highly_digestible_carbohydrate_pct": 7.5,
+        "notes": "Reduce lactose to ~7%. Max duration to 42 days of age."
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section Q",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 22% typical starter-2 with SBM, reduced milk products. Imperial values converted to metric."
+      }
+    },
+
+    "nursery_p3": {
+      "label": "Nursery Phase 3",
+      "description": "25 to 50 lbs (~11 to 23 kg)",
+      "body_weight_range_kg": { "min": 11.4, "max": 22.7 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 0.85,
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 20.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 5.32,
+        "lys_me_ratio_g_mcal": 3.90,
+        "lys_pct": 1.35,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 19,
+          "val": 68,
+          "ile": 55,
+          "leu": 100,
+          "his": 32,
+          "phe_tyr": 92
+        }
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.80,
+        "sttd_p_me_ratio_g_mcal": 1.32,
+        "avail_p_ne_ratio_g_mcal": 1.54,
+        "avail_p_me_ratio_g_mcal": 1.14,
+        "sodium_pct": 0.28,
+        "chloride_pct": 0.32,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 }
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 130,
+        "fe": 130,
+        "mn": 50,
+        "cu": 18,
+        "iodine": 0.65,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 4997,
+        "vit_d3_iu": 1599,
+        "vit_e_iu": 51,
+        "vit_k_mg": 3.1,
+        "niacin_mg": 51,
+        "riboflavin_mg": 7.9,
+        "pantothenic_acid_mg": 28.2,
+        "vit_b12_mcg": 37.9
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section R",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 20% typical for grower-1/nursery-3 based on SBM-corn diet. No lactose or specialty proteins. Similar to grow-finish diets."
+      }
+    },
+
+    "grower": {
+      "label": "Grower",
+      "description": "50 to 90 lbs (~23 to 41 kg)",
+      "body_weight_range_kg": { "min": 22.7, "max": 40.8 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 1.8,
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 18.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 4.74,
+        "lys_me_ratio_g_mcal": 3.47,
+        "lys_pct": 1.12,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 18,
+          "val": 68,
+          "ile": 56,
+          "leu": 101,
+          "his": 34,
+          "phe_tyr": 94
+        }
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.62,
+        "sttd_p_me_ratio_g_mcal": 1.20,
+        "avail_p_ne_ratio_g_mcal": 1.39,
+        "avail_p_me_ratio_g_mcal": 1.03,
+        "sodium_pct": 0.25,
+        "chloride_pct": 0.25,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 }
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 111,
+        "fe": 111,
+        "mn": 43,
+        "cu": 15,
+        "iodine": 0.55,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 4247,
+        "vit_d3_iu": 1358,
+        "vit_e_iu": 44,
+        "vit_k_mg": 2.6,
+        "niacin_mg": 44,
+        "riboflavin_mg": 6.6,
+        "pantothenic_acid_mg": 24.3,
+        "vit_b12_mcg": 33.1
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section R",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 18% typical; PIC 2021 does not set a CP minimum at this weight — formulation is amino acid ratio based. lys_pct derived from lys_ne_ratio × NE/10000. L-Lys-HCl max 0.45%."
+      }
+    },
+
+    "finisher_early": {
+      "label": "Early Finisher",
+      "description": "90 to 130 lbs (~41 to 59 kg)",
+      "body_weight_range_kg": { "min": 40.8, "max": 59.0 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 2.4,
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 17.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 4.11,
+        "lys_me_ratio_g_mcal": 3.03,
+        "lys_pct": 0.97,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 18,
+          "val": 68,
+          "ile": 56,
+          "leu": 101,
+          "his": 34,
+          "phe_tyr": 94
+        }
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.43,
+        "sttd_p_me_ratio_g_mcal": 1.07,
+        "avail_p_ne_ratio_g_mcal": 1.23,
+        "avail_p_me_ratio_g_mcal": 0.92,
+        "sodium_pct": 0.25,
+        "chloride_pct": 0.25,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 }
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 98,
+        "fe": 98,
+        "mn": 38,
+        "cu": 14,
+        "iodine": 0.49,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 3748,
+        "vit_d3_iu": 1199,
+        "vit_e_iu": 37,
+        "vit_k_mg": 2.4,
+        "niacin_mg": 37,
+        "riboflavin_mg": 6.6,
+        "pantothenic_acid_mg": 22.0,
+        "vit_b12_mcg": 28.6
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section R",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 17% typical; PIC is AA-ratio based so no explicit CP minimum. lys_pct derived. L-Lys-HCl max 0.40%."
+      }
+    },
+
+    "finisher_mid": {
+      "label": "Mid Finisher",
+      "description": "130 to 180 lbs (~59 to 82 kg)",
+      "body_weight_range_kg": { "min": 59.0, "max": 81.6 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 2.8,
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 15.5
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 3.54,
+        "lys_me_ratio_g_mcal": 2.62,
+        "lys_pct": 0.84,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 18,
+          "val": 68,
+          "ile": 56,
+          "leu": 101,
+          "his": 34,
+          "phe_tyr": 94
+        }
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.25,
+        "sttd_p_me_ratio_g_mcal": 0.95,
+        "avail_p_ne_ratio_g_mcal": 1.07,
+        "avail_p_me_ratio_g_mcal": 0.82,
+        "sodium_pct": 0.25,
+        "chloride_pct": 0.25,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 }
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 78,
+        "fe": 78,
+        "mn": 30,
+        "cu": 11,
+        "iodine": 0.39,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 2998,
+        "vit_d3_iu": 960,
+        "vit_e_iu": 31,
+        "vit_k_mg": 1.8,
+        "niacin_mg": 31,
+        "riboflavin_mg": 4.4,
+        "pantothenic_acid_mg": 17.6,
+        "vit_b12_mcg": 22.0
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section R",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 15.5% typical. lys_pct derived. L-Lys-HCl max 0.35%."
+      }
+    },
+
+    "finisher_late": {
+      "label": "Late Finisher",
+      "description": "180 to 230 lbs (~82 to 105 kg)",
+      "body_weight_range_kg": { "min": 81.6, "max": 104.3 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 3.1,
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 14.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 3.06,
+        "lys_me_ratio_g_mcal": 2.29,
+        "lys_pct": 0.72,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 18,
+          "val": 68,
+          "ile": 56,
+          "leu": 101,
+          "his": 34,
+          "phe_tyr": 95
+        }
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.10,
+        "sttd_p_me_ratio_g_mcal": 0.84,
+        "avail_p_ne_ratio_g_mcal": 0.94,
+        "avail_p_me_ratio_g_mcal": 0.72,
+        "sodium_pct": 0.25,
+        "chloride_pct": 0.25,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 }
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 65,
+        "fe": 65,
+        "mn": 25,
+        "cu": 9,
+        "iodine": 0.33,
+        "se": 0.25
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 2498,
+        "vit_d3_iu": 799,
+        "vit_e_iu": 26,
+        "vit_k_mg": 1.5,
+        "niacin_mg": 26,
+        "riboflavin_mg": 4.4,
+        "pantothenic_acid_mg": 13.2,
+        "vit_b12_mcg": 19.8
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section R",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 14% typical. lys_pct derived. L-Lys-HCl max 0.28%."
+      }
+    },
+
+    "finisher_market": {
+      "label": "Market Finisher",
+      "description": "230 lbs to market (~105 to 130 kg)",
+      "body_weight_range_kg": { "min": 104.3, "max": 130.0 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 3.2,
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 13.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 2.72,
+        "lys_me_ratio_g_mcal": 2.08,
+        "lys_pct": 0.64,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 66,
+          "trp": 18,
+          "val": 68,
+          "ile": 56,
+          "leu": 102,
+          "his": 34,
+          "phe_tyr": 96
+        }
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 0.99,
+        "sttd_p_me_ratio_g_mcal": 0.77,
+        "avail_p_ne_ratio_g_mcal": 0.85,
+        "avail_p_me_ratio_g_mcal": 0.66,
+        "sodium_pct": 0.25,
+        "chloride_pct": 0.25,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 }
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 65,
+        "fe": 65,
+        "mn": 25,
+        "cu": 9,
+        "iodine": 0.33,
+        "se": 0.25
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 2498,
+        "vit_d3_iu": 799,
+        "vit_e_iu": 26,
+        "vit_k_mg": 1.5,
+        "niacin_mg": 26,
+        "riboflavin_mg": 4.4,
+        "pantothenic_acid_mg": 13.2,
+        "vit_b12_mcg": 19.8
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section R",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 13% minimum explicitly stated in PIC 2021 for market weight pigs. lys_pct derived. L-Lys-HCl max 0.25%."
+      }
+    },
+
+    "gestation": {
+      "label": "Gestation",
+      "description": "Gestating gilts and sows — full gestation",
+      "body_weight_range_kg": { "min": 140, "max": 280 },
+      "feeding_mode": "controlled",
+      "feed_intake_by_bcs": {
+        "fat_sow_mcal_ne_day": 3.7,
+        "fat_sow_mcal_me_day": 4.9,
+        "ideal_sow_mcal_ne_day": 4.4,
+        "ideal_sow_mcal_me_day": 5.9,
+        "thin_sow_mcal_ne_day": 6.1,
+        "thin_sow_mcal_me_day": 8.0,
+        "notes": "PIC recommends same energy for gilts throughout gestation regardless of BCS: 4.4 Mcal NE/d"
+      },
+      "feed_intake_reference_kg_day": 2.2,
+      "energy": {
+        "ne_kcal_kg": 2200,
+        "me_kcal_kg": 3226
+      },
+      "proximate": {
+        "cp_pct": 12.5
+      },
+      "sid_amino_acids": {
+        "lys_min_g_day": 11.0,
+        "lys_pct": 0.50,
+        "ratios_to_lys": {
+          "met_cys": 70,
+          "thr": 76,
+          "trp": 19,
+          "val": 71,
+          "ile": 58,
+          "leu": 92,
+          "his": 35,
+          "phe_tyr": 96
+        },
+        "l_lys_hcl_max_pct": 0.25
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.84,
+        "sttd_p_me_ratio_g_mcal": 1.36,
+        "avail_p_ne_ratio_g_mcal": 1.74,
+        "avail_p_me_ratio_g_mcal": 1.29,
+        "ca_to_p_ratio_analyzed": 1.50,
+        "ca_to_p_ratio_no_phytase": 1.25,
+        "sodium_pct": 0.24,
+        "chloride_pct": 0.24
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 125,
+        "fe": 100,
+        "mn": 50,
+        "cu": 15,
+        "iodine": 0.35,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 9921,
+        "vit_d3_iu": 1984,
+        "vit_e_iu": 66,
+        "vit_k_mg": 4.4,
+        "choline_mg": 661,
+        "niacin_mg": 44,
+        "riboflavin_mg": 9.9,
+        "pantothenic_acid_mg": 33.1,
+        "vit_b12_mcg": 37.5,
+        "folic_acid_mcg": 1323,
+        "biotin_mcg": 220,
+        "thiamine_mg": 2.2,
+        "pyridoxine_mg": 3.3
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section O",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "Daily Lys minimum 11 g/day. lys_pct derived: 11.0 g ÷ 2200 g/day intake = 0.50%. CP 12.5% typical for gestation. Feed intake controlled by BCS. NE to ME conversion 0.75."
+      }
+    },
+
+    "lactation": {
+      "label": "Lactation",
+      "description": "Lactating gilts and sows",
+      "body_weight_range_kg": { "min": 140, "max": 280 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": {
+        "gilts": 5.0,
+        "sows": 6.2,
+        "herd": 6.0
+      },
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3197
+      },
+      "proximate": {
+        "cp_pct": 18.0
+      },
+      "daily_requirements": {
+        "ne_mcal_day": {
+          "gilts": 12.5,
+          "sows": 15.5,
+          "herd": 14.9
+        },
+        "me_mcal_day": {
+          "gilts": 16.9,
+          "sows": 20.9,
+          "herd": 20.1
+        },
+        "sid_lys_g_day": {
+          "single_diet_gilts": 50.0,
+          "single_diet_sows": 62.0,
+          "single_diet_herd": 59.5,
+          "two_diet_gilts": 59.0,
+          "two_diet_sows": 56.5
+        }
+      },
+      "sid_amino_acids": {
+        "lys_pct": 0.99,
+        "ratios_to_lys": {
+          "met_cys": 53,
+          "thr": 64,
+          "trp": 19,
+          "val": 64,
+          "ile": 56,
+          "leu": 114,
+          "his": 40,
+          "phe_tyr": 113
+        },
+        "l_lys_hcl_max_pct": 0.45,
+        "notes": "SBM max 30% — higher reduces ADFI. Max dietary SID Lys 1.30%."
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal_herd": 1.72,
+        "ca_to_p_ratio_analyzed": 1.50,
+        "ca_to_p_ratio_no_phytase": 1.25,
+        "sodium_pct": 0.24,
+        "chloride_pct": 0.24
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 125,
+        "fe": 100,
+        "mn": 50,
+        "cu": 15,
+        "iodine": 0.35,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 9921,
+        "vit_d3_iu": 1984,
+        "vit_e_iu": 66,
+        "vit_k_mg": 4.4,
+        "choline_mg": 661,
+        "niacin_mg": 44,
+        "riboflavin_mg": 9.9,
+        "pantothenic_acid_mg": 33.1,
+        "vit_b12_mcg": 37.5,
+        "folic_acid_mcg": 1323,
+        "biotin_mcg": 220,
+        "thiamine_mg": 2.2,
+        "pyridoxine_mg": 3.3
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section P",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "lys_pct derived: 59.5 g/day (herd single diet) ÷ 6000 g/day = 0.99%. CP 18% typical for lactation to support milk production. Daily Lys requirement varies by litter growth and sow ADFI."
+      }
+    },
+
+    "boar": {
+      "label": "Mature Boar",
+      "description": "Mature boar in production",
+      "body_weight_range_kg": { "min": 180, "max": 340 },
+      "feeding_mode": "controlled",
+      "feed_intake_reference_kg_day": 2.6,
+      "energy": {
+        "ne_kcal_kg": 2376,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 13.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 2.64,
+        "lys_me_ratio_g_mcal": 1.95,
+        "lys_pct": 0.62,
+        "ratios_to_lys": {
+          "met_cys": 70,
+          "thr": 74,
+          "trp": 20,
+          "val": 67,
+          "ile": 58,
+          "leu": 65,
+          "his": 30,
+          "phe_tyr": 114
+        },
+        "l_lys_hcl_max_pct": 0.25
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.87,
+        "sttd_p_me_ratio_g_mcal": 1.38,
+        "avail_p_ne_ratio_g_mcal": 1.78,
+        "avail_p_me_ratio_g_mcal": 1.31,
+        "ca_to_p_ratio_analyzed": 1.50,
+        "ca_to_p_ratio_no_phytase": 1.25,
+        "sodium_pct": 0.22,
+        "chloride_pct": 0.22,
+        "ndf_min_pct": 11,
+        "linoleic_acid_pct": 1.9
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 125,
+        "fe": 100,
+        "mn": 50,
+        "cu": 15,
+        "iodine": 0.35,
+        "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 9921,
+        "vit_d3_iu": 1984,
+        "vit_e_iu": 66,
+        "vit_k_mg": 4.4,
+        "choline_mg": 661,
+        "niacin_mg": 44,
+        "riboflavin_mg": 9.9,
+        "pantothenic_acid_mg": 33.1,
+        "vit_b12_mcg": 37.5,
+        "folic_acid_mcg": 1323,
+        "biotin_mcg": 220,
+        "thiamine_mg": 2.2,
+        "pyridoxine_mg": 3.3
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section M",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 13% typical for mature boar. lys_pct 0.62% is PIC's stated typical value for mature boar reproductive performance. Feed intake adjusted by BW and season per PIC Boar Feeding Tool."
+      }
+    },
+
+    "gilt_development_early": {
+      "label": "Gilt Development Early",
+      "description": "50 to 130 lbs (~23 to 59 kg)",
+      "body_weight_range_kg": { "min": 22.7, "max": 59.0 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 1.8,
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 18.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 4.29,
+        "lys_me_ratio_g_mcal": 3.15,
+        "lys_pct": 1.01,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 18,
+          "val": 68,
+          "ile": 56,
+          "leu": 101,
+          "his": 34,
+          "phe_tyr": 94
+        },
+        "l_lys_hcl_max_pct": 0.40
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.64,
+        "sttd_p_me_ratio_g_mcal": 1.23,
+        "avail_p_ne_ratio_g_mcal": 1.41,
+        "avail_p_me_ratio_g_mcal": 1.05,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 },
+        "sodium_pct": 0.25,
+        "chloride_pct": 0.25
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 125, "fe": 100, "mn": 50,
+        "cu": 15, "iodine": 0.35, "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 9921, "vit_d3_iu": 1984, "vit_e_iu": 66,
+        "vit_k_mg": 4.4, "choline_mg": 661, "niacin_mg": 44,
+        "riboflavin_mg": 9.9, "pantothenic_acid_mg": 33.1,
+        "vit_b12_mcg": 37.5, "folic_acid_mcg": 1323,
+        "biotin_mcg": 220, "thiamine_mg": 2.2, "pyridoxine_mg": 3.3
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section N",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "Greater Ca and P than market gilts for bone mineralization. CP 18% typical. lys_pct derived from ratio. Sow-level vitamins for reproductive priming."
+      }
+    },
+
+    "gilt_development_mid": {
+      "label": "Gilt Development Mid",
+      "description": "130 to 200 lbs (~59 to 91 kg)",
+      "body_weight_range_kg": { "min": 59.0, "max": 90.7 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 2.4,
+      "energy": {
+        "ne_kcal_kg": 2365,
+        "me_kcal_kg": 3175
+      },
+      "proximate": {
+        "cp_pct": 16.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 3.46,
+        "lys_me_ratio_g_mcal": 2.57,
+        "lys_pct": 0.82,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 65,
+          "trp": 18,
+          "val": 68,
+          "ile": 56,
+          "leu": 101,
+          "his": 34,
+          "phe_tyr": 95
+        },
+        "l_lys_hcl_max_pct": 0.32
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.37,
+        "sttd_p_me_ratio_g_mcal": 1.04,
+        "avail_p_ne_ratio_g_mcal": 1.17,
+        "avail_p_me_ratio_g_mcal": 0.89,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 },
+        "sodium_pct": 0.25,
+        "chloride_pct": 0.25
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 125, "fe": 100, "mn": 50,
+        "cu": 15, "iodine": 0.35, "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 9921, "vit_d3_iu": 1984, "vit_e_iu": 66,
+        "vit_k_mg": 4.4, "choline_mg": 661, "niacin_mg": 44,
+        "riboflavin_mg": 9.9, "pantothenic_acid_mg": 33.1,
+        "vit_b12_mcg": 37.5, "folic_acid_mcg": 1323,
+        "biotin_mcg": 220, "thiamine_mg": 2.2, "pyridoxine_mg": 3.3
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section N",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 16% typical. lys_pct derived. P requirements ~8% greater than commercial gilt for bone mineralization (Vier et al. 2019b)."
+      }
+    },
+
+    "gilt_development_prebreed": {
+      "label": "Gilt Development Pre-Breed",
+      "description": "200 lbs to first breeding (~91 to 135 kg)",
+      "body_weight_range_kg": { "min": 90.7, "max": 135.0 },
+      "feeding_mode": "ad_libitum",
+      "feed_intake_reference_kg_day": 2.8,
+      "energy": {
+        "ne_kcal_kg": 2200,
+        "me_kcal_kg": 3226
+      },
+      "proximate": {
+        "cp_pct": 14.0
+      },
+      "sid_amino_acids": {
+        "lys_ne_ratio_g_mcal": 2.51,
+        "lys_me_ratio_g_mcal": 1.86,
+        "lys_pct": 0.55,
+        "ratios_to_lys": {
+          "met_cys": 58,
+          "thr": 66,
+          "trp": 18,
+          "val": 68,
+          "ile": 56,
+          "leu": 102,
+          "his": 34,
+          "phe_tyr": 96
+        },
+        "l_lys_hcl_max_pct": 0.27
+      },
+      "minerals": {
+        "sttd_p_ne_ratio_g_mcal": 1.09,
+        "sttd_p_me_ratio_g_mcal": 0.84,
+        "avail_p_ne_ratio_g_mcal": 0.94,
+        "avail_p_me_ratio_g_mcal": 0.73,
+        "ca_to_p_ratio": { "min": 1.25, "max": 1.50 },
+        "sodium_pct": 0.25,
+        "chloride_pct": 0.25
+      },
+      "trace_minerals_added_ppm": {
+        "zn": 125, "fe": 100, "mn": 50,
+        "cu": 15, "iodine": 0.35, "se": 0.30
+      },
+      "vitamins_added_per_kg_diet": {
+        "vit_a_iu": 9921, "vit_d3_iu": 1984, "vit_e_iu": 66,
+        "vit_k_mg": 4.4, "choline_mg": 661, "niacin_mg": 44,
+        "riboflavin_mg": 9.9, "pantothenic_acid_mg": 33.1,
+        "vit_b12_mcg": 37.5, "folic_acid_mcg": 1323,
+        "biotin_mcg": 220, "thiamine_mg": 2.2, "pyridoxine_mg": 3.3
+      },
+      "breeding_targets": {
+        "age_at_puberty_max_days": 195,
+        "age_at_first_breeding_days": { "min": 200, "max": 225 },
+        "body_weight_at_breeding_lbs": { "min": 300, "max": 350 },
+        "estrus_at_first_service_min": 2,
+        "adg_birth_to_first_service_lbs": { "min": 1.32, "max": 1.76 }
+      },
+      "doc_meta": {
+        "source": "PIC Nutrition and Feeding Guidelines 2021 Section N and G",
+        "standard": "PIC_2021",
+        "energy_basis": "NRC_2012",
+        "estimated": false,
+        "notes": "CP 14% typical. lys_pct 0.55% derived from 2.51 g/Mcal × 2200 NE/10000. After 200 lbs can use gestation diet. Breeding targets included for gilt management module."
+      }
+    }
+  }
+}

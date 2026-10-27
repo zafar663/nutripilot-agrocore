@@ -37,6 +37,21 @@ const MAX_UPLOAD_BYTES = MAX_UPLOAD_MB * 1024 * 1024;
 
 const INGEST_DEBUG = String(process.env.INGEST_DEBUG || "") === "1";
 
+// QC owner isolation helper
+const QC_AUTH_DB = '/var/www/nutripilot-agrocore/data/users/default/nutrix.db';
+function resolveQcOwner(req) {
+  const userEmail = ((req && req.user && req.user.email) ? req.user.email : '').toLowerCase();
+  if (!userEmail) return '__no_user__';
+  try {
+    const Database = require('better-sqlite3');
+    const db = new Database(QC_AUTH_DB, { readonly: true });
+    const row = db.prepare('SELECT provisioned_by FROM np_users WHERE LOWER(email)=? LIMIT 1').get(userEmail);
+    db.close();
+    if (row && row.provisioned_by) return row.provisioned_by.toLowerCase();
+  } catch (_) {}
+  return userEmail;
+}
+
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: { fileSize: MAX_UPLOAD_BYTES },
@@ -178,28 +193,70 @@ function extractReportedFromPdfText(text) {
   const reported_total =
     total != null && total > 50 && total < 150 ? total : null;
 
-  out.dm = grab(/\bDM\b/);
- out.me = grab(/ME/);
-out.cp = grab(/CP/);
-out.ca = grab(/Ca/);
-out.avp = grab(/Av\.?\s*P/);
-  out.na = grab(/\bNa\b/);
-  out.k = grab(/\bK\b/);
-  out.cl = grab(/\bCl\b/);
-  out.deb = grab(/\bDEB\b/);
+  out.dm    = grab(/\bDM\b/);
+  out.me    = grab(/\bME\b/);
+  out.cp    = grab(/\bCP\b/);
+  out.ee    = grab(/\bEE\b/);
+  out.cf    = grab(/\bCF\b/);
+  out.starch= grab(/\bStarch\b/);
+  out.ca    = grab(/\bCa\b/);
+  // Available phosphorus — multiple label formats: "Av. P", "AvP", "Ph (Av./NPP)"
+  // grab(/Ph\s*\([^)]*\)/i) matches full "Ph (Av./NPP)" before the number
+  out.avp   = grab(/\bAv\.?\s*P\b/) || grab(/\bAvP\b/) || grab(/\bPh\s*\([^)]*\)/i);
+  out.na    = grab(/\bNa\b/);
+  out.k     = grab(/\bK\b/);
+  out.cl    = grab(/\bCl\b/);
+  out.deb   = grab(/\bDEB\b/);
+  out.ndf   = grab(/\bNDF\b/);
+  out.adf   = grab(/\bADF\b/);
 
-  out.sid_met = grab(/\bMeth\s*\(D\)\b/);
-  out.sid_lys = grab(/\bLysine\s*\(D\)\b/);
-  out.sid_thr = grab(/\bThreo\s*\(D\)\b/);
-  out.sid_trp = grab(/\bTryp\s*\(D\)\b/);
-  out.sid_arg = grab(/\bArg\s*\(D\)\b/);
-  out.sid_metcys = grab(/\bM\+C\s*\(D\)\b/);
+  // Debug: log raw M+C and Ph context from PDF text
+  const _mcIdx = t.search(/M.C\s*\(/i);
+  const _phIdx = t.search(/Ph\s*\(/i);
+  console.log(`[REP_DEBUG] M+C context: "${t.slice(Math.max(0,_mcIdx-5),_mcIdx+20)}" | Ph context: "${t.slice(Math.max(0,_phIdx-5),_phIdx+25)}"`);
+
+  // SID amino acids — handle both "Meth (D)" and "Met (D)" labels
+  out.sid_lys    = grab(/\bLysine\s*\(D\)/);
+  out.sid_met    = grab(/\bMeth(?:ionine)?\s*\(D\)/) || grab(/\bMet\s*\(D\)/);
+  out.sid_metcys = grab(/\bM\+C\s*\(D\)/) || grab(/\bM.C\s*\(D\)/);
+  out.sid_thr    = grab(/\bThreo(?:nine)?\s*\(D\)/);
+  out.sid_trp    = grab(/\bTryp(?:tophan)?\s*\(D\)/);
+  out.sid_arg    = grab(/\bArg(?:inine)?\s*\(D\)/);
+  out.sid_ile    = grab(/\bIsoleucine\s*\(D\)/) || grab(/\bIle\s*\(D\)/);
+  out.sid_val    = grab(/\bValine\s*\(D\)/) || grab(/\bVal\s*\(D\)/);
+  out.sid_leu    = grab(/\bLeucine\s*\(D\)/) || grab(/\bLeu\s*\(D\)/);
+  out.sid_his    = grab(/\bHistidine\s*\(D\)/) || grab(/\bHis\s*\(D\)/);
+  out.sid_phe    = grab(/\bPhe(?:nylalanine)?\s*\(D\)/);
+  out.sid_gly    = grab(/\bGly(?:cine)?\s*\(D\)/);
+
+  // Total (non-SID) AAs — FACT PDFs sometimes list these without "(D)"
+  out.total_lys  = out.sid_lys  == null ? grab(/\bLysine\b(?!\s*\(D\))/) : null;
+  out.total_met  = out.sid_met  == null ? grab(/\bMeth(?:ionine)?\b(?!\s*\(D\))/) : null;
+  out.total_thr  = out.sid_thr  == null ? grab(/\bThreo(?:nine)?\b(?!\s*\(D\))/) : null;
+  out.total_trp  = out.sid_trp  == null ? grab(/\bTryp(?:tophan)?\b(?!\s*\(D\))/) : null;
+  out.total_arg  = out.sid_arg  == null ? grab(/\bArg(?:inine)?\b(?!\s*\(D\))/) : null;
 
   for (const k of Object.keys(out)) {
     if (out[k] == null) delete out[k];
   }
 
-  return { reported_nutrients: out, reported_total };
+  // Extract formula name from PDF header: "Formula   Broiler Finisher HD S-3"
+  let formula_name = null;
+  const fmMatch = t.match(/\bformula\b[\s:]+([A-Za-z][^\n]{3,60})/i);
+  if (fmMatch) formula_name = fmMatch[1].trim().replace(/\s+/g, " ");
+
+  // Detect production phase from formula name
+  let detected_phase = null;
+  if (formula_name) {
+    const fn = formula_name.toLowerCase();
+    if (/finisher|finish/.test(fn)) detected_phase = "finisher";
+    else if (/grower|grow/.test(fn)) detected_phase = "grower";
+    else if (/starter|start/.test(fn)) detected_phase = "starter";
+    else if (/withdrawal|withdra/.test(fn)) detected_phase = "withdrawal";
+    else if (/pre.?starter/.test(fn)) detected_phase = "pre_starter";
+  }
+
+  return { reported_nutrients: out, reported_total, formula_name, detected_phase };
 }
 
 let resolveAlias = null;
@@ -1187,29 +1244,15 @@ function scoreSet(set, sum) {
 
 function extractFormulaFromPdfText(rawText) {
   // ═══════════════════════════════════════════════════════════════════════
-  // GLOBAL MULTI-FORMAT PDF PARSER v14
-  // ═══════════════════════════════════════════════════════════════════════
-  //
-  // Supports all real-world feed formula PDF formats:
-  //   MODE 1 — FACT / SF Poultry / any feed-mill tool with batch weight
-  //             Token-stream: [code][Name IR%][Weight] per row
-  //             Validated by: Weight = IR% × batchFactor ±30%
-  //   MODE 2 — PHN / Bestmix / WinFeed
-  //             [code][Name][-O price][Amount][Pct] per row
-  //   MODE 3 — Orangeburg / "Ingredients and Amounts" table
-  //             [code][Name][Pct][Amount] under section header
-  //   MODE 4 — Numbered list: "1. Maize 55.0"
-  //   MODE 5 — Simple pairs: "Name value" any language, European decimals
-  //   MODE 6 — Column-packed: split on 2+ spaces
-  //   MODE 7 — Fallback: original scanCandidatesPctFirst engine
-  //
-  // Key design decisions:
-  //   - degluePdfText runs FIRST to split glued tokens
-  //   - No windowing, no scoring = zero latency overhead
-  //   - Nutrient rejection: (D) suffix OR pure abbreviation ONLY
-  //     so L-Isoleucine, L-Valine, Iso-Leucine are NEVER rejected
-  //   - Unknown ingredients kept at their inclusion % (not dropped)
-  //   - Returns identical structure to original for zero downstream changes
+ // ═══════════════════════════════════════════════════════════════════════
+  // UNIVERSAL FORMULA PARSER v1
+  // Strategy:
+  //   1. Split text into ingredient section vs nutrient section
+  //   2. Extract all lines with name + one or more numbers
+  //   3. For each line, identify ingredient name by alias match
+  //   4. Find inclusion % column — numbers 0.001-99.99 that sum to ~100%
+  //   5. Extract cost column if present (large numbers)
+  //   6. Validate: sum ≈ 100%, at least 3 ingredients resolved
   // ═══════════════════════════════════════════════════════════════════════
 
   // ── Helpers ─────────────────────────────────────────────────────────────
@@ -1222,32 +1265,46 @@ function extractFormulaFromPdfText(rawText) {
     "stored formula report","ingredient report","ingredients and amounts",
     "% as fed","amount","pct","cost","minimum","maximum","dry matter",
     "species","batch","description","code","price","sf poultry","broiler",
-    "factor status value","ration nutrition","ration ingredients"
+    "factor status value","ration nutrition","ration ingredients",
+    "correction report","quick fix","agrocore","livestock","intelligence",
+    "generated","deep fix","least-cost","leastcost","rule-based",
   ]);
 
   function _ck(s){return String(s||"").toLowerCase().replace(/\s+/g," ").trim();}
   function _san(s){return String(s||"").trim().replace(/([a-z])([A-Z])/g,"$1 $2").replace(/\s{2,}/g," ").trim();}
   function _n(s){
-    const c=String(s||"").trim();
-    const n=Number(c.includes(",")&&!c.includes(".")?c.replace(",","."):c.replace(/,/g,""));
+    const c=String(s||"").trim().replace(/,/g,"");
+    const n=Number(c);
     return Number.isFinite(n)?n:NaN;
   }
   function _bad(name){
     if(!name||name.length<2)return true;
     if(/^\d+$/.test(name)||/^\W+$/.test(name))return true;
+    if(/^=>/.test(name))return true;
     if(/^(sf\s|broiler\s|layer\s|starter\s|grower\s|finisher\s)/i.test(name))return true;
     return _BAD.has(_ck(name));
   }
-  function _okp(p){return Number.isFinite(p)&&p>0&&p<=100;}
+  function _okp(p){return Number.isFinite(p)&&p>0.001&&p<=99.99;}
 
-  // Nutrient detection: ONLY reject (D) suffix or pure abbreviations
-  // NEVER reject L-prefixed or Iso-prefixed ingredient names
+  // Nutrient name + physiologically valid ranges
+  const NUTRIENT_RANGES = {
+    me:[2000,4000], cp:[10,50], ee:[1,15], cf:[1,20], ca:[0.3,5],
+    avp:[0.1,2], na:[0.1,1], k:[0.3,2], cl:[0.1,1], deb:[50,400],
+    lys:[0.5,3], met:[0.1,2], thr:[0.3,2], trp:[0.1,1], arg:[0.5,3],
+    ile:[0.3,2], leu:[0.5,3], val:[0.3,2], his:[0.1,1], phe:[0.3,2],
+    "m+c":[0.3,2.5], ash:[2,15], dm:[80,100], ndf:[5,50], adf:[2,30],
+  };
+
   function _isNutrient(name){
-    if(/\(\s*[Dd]\s*\)/.test(name))return true; // "Lysine (D)", "Valine (D)"
-    if(/^(me|cp|ee|cf|ca|na|k|cl|deb|starch|ndf|adf|ash|dm|tdn|nfe|avp)$/i.test(name))return true;
-    if(/^ph\s*\(/i.test(name))return true;
-    if(/^m\+c/i.test(name))return true;
-    if(/^(lys|met|thr|trp|arg|ile|leu|val|his|phe|gly|ser|pro|ala|cys|tyr)$/i.test(name))return true;
+    const n=_ck(name).replace(/\s*\(d\)\s*$/i,"").trim();
+    if(n in NUTRIENT_RANGES)return true;
+    if(/\(\s*[Dd]\s*\)/.test(name))return true;
+    if(/^(me|cp|ee|cf|ca|na|k|cl|deb|starch|ndf|adf|ash|dm|tdn|nfe|avp|p)$/i.test(n))return true;
+    if(/^av\.?\s*p$/i.test(n))return true;
+    if(/^ph\s*\(/i.test(n))return true;
+    if(/^m\+c/i.test(n))return true;
+    if(/^(lys|met|thr|trp|arg|ile|leu|val|his|phe|gly|ser|pro|ala|cys|tyr)$/i.test(n))return true;
+    if(/^sid\s/i.test(n))return true;
     return false;
   }
 
@@ -1256,36 +1313,50 @@ function extractFormulaFromPdfText(rawText) {
     return rows.filter(r=>{const k=_ck(r.ing)+"|"+r.pct;if(s.has(k))return false;s.add(k);return true;});
   }
 
-  function _resolve(name){
+  function _resolveAlias(name){
     try{
       const ra=getResolveAlias();
-      const r=ra(cleanName(name));
+      // Try original
+      let r=ra(cleanName(name));
       if(r&&r.canonical_key)return r.canonical_key;
+      // Try stripping trailing numbers
+      const stripped=name.replace(/\s+\d[\d.\s]*$/, "").trim();
+      if(stripped!==name){
+        r=ra(cleanName(stripped));
+        if(r&&r.canonical_key)return r.canonical_key;
+      }
+      // Try removing % spec numbers e.g. "SBM 44%" -> "soybean meal"
+      const noSpec=name.replace(/\s+\d{1,3}%\s*$/,"").trim();
+      if(noSpec!==name){
+        r=ra(cleanName(noSpec));
+        if(r&&r.canonical_key)return r.canonical_key;
+      }
     }catch(e){}
     return FALLBACK_CANONICAL[cleanName(name)]||null;
   }
 
   function _buildReturn(rows, mode){
     const resolvedRows=rows.map(r=>{
-      const canonical=_resolve(r.ing)||r.ing;
+      const canonical=_resolveAlias(r.ing)||r.ing;
       return{
         ingredient_name:r.ing, raw_name:r.ing,
         ingredient_id:canonical, canonical_id:canonical, ingredient_code:canonical,
-        inclusion:Number(r.pct), resolved:!!_resolve(r.ing), confidence:_resolve(r.ing)?1:0.5,
-        is_unknown:!_resolve(r.ing),
+        inclusion:Number(r.pct), resolved:!!_resolveAlias(r.ing), confidence:_resolveAlias(r.ing)?1:0.5,
+        is_unknown:!_resolveAlias(r.ing),
+        cost_per_kg: r.cost || null,
       };
     });
     const formulaText=resolvedRows
       .map(r=>`${r.ingredient_id} ${Number(r.inclusion).toFixed(4).replace(/\.?0+$/,"")}`)
       .join("\n");
     const total=rows.reduce((s,r)=>s+r.pct,0);
-    console.log(`[DBG multiformat v14] mode=${mode} rows=${rows.length} total=${total.toFixed(2)}`);
+    console.log(`[UNIVERSAL PARSER] mode=${mode} rows=${rows.length} total=${total.toFixed(2)} resolved=${resolvedRows.filter(r=>r.resolved).length}`);
     return{
       formula_text:formulaText, resolved_rows:resolvedRows,
       formula_lines_count:resolvedRows.length, picked_total:total,
-      candidates:rows.length, method:`multiformat_v14_${mode}`,
+      candidates:rows.length, method:`universal_v1_${mode}`,
       normalized:Math.abs(total-100)<1, normalize_factor:1,
-      chosen_column:"MULTIFORMAT", score_reason:"ok",
+      chosen_column:"UNIVERSAL", score_reason:"ok",
       gated_count:resolvedRows.length,
       resolved_count:resolvedRows.filter(r=>r.resolved).length,
       unresolved_count:resolvedRows.filter(r=>!r.resolved).length,
@@ -1294,108 +1365,188 @@ function extractFormulaFromPdfText(rawText) {
     };
   }
 
-  // Apply degluePdfText to split glued tokens like "Maize/Corn22.22" -> "Maize/Corn 22.22"
-  const deglued = degluePdfText(rawText);
-  const rawLines = String(deglued||"").replace(/\r/g,"\n").split("\n")
+  // ── SECTION SPLITTER ────────────────────────────────────────────────────
+  // Nutrients are in a separate table — detect boundary by nutrient keywords
+  function _splitSections(lines){
+    // Find lines that are clearly nutrient headers
+    const nutHeaderRe=/^\s*(no\.?\s*)?(nutrient|ration nutrition|nutrition limits|nutrient name)\b/i;
+    const ingHeaderRe=/^\s*(no\.?\s*)?(ingredient|ration ingredient|ingredients and amounts|ingredient name)\b/i;
+
+    let ingLines=[], nutLines=[];
+    let inNutSection=false, inIngSection=false;
+
+    for(const l of lines){
+      if(nutHeaderRe.test(l)){inNutSection=true;inIngSection=false;continue;}
+      if(ingHeaderRe.test(l)){inIngSection=true;inNutSection=false;continue;}
+      if(inNutSection) nutLines.push(l);
+      else ingLines.push(l);
+    }
+
+    // If no clear sections found, use all lines as ingredient lines
+    // and filter out nutrient lines by name recognition
+    if(!ingLines.length) ingLines=lines;
+    return{ingLines, nutLines};
+  }
+
+  // ── CORE UNIVERSAL PARSER ───────────────────────────────────────────────
+  // Parse a line into: { name, numbers[] }
+  function _parseLine(line){
+    const l=line.trim();
+    if(!l||l.length>300)return null;
+
+    // Strip quality spec percentages embedded in names: "SBM 44%", "Fish Meal 54%", "26-28%"
+    // These inflate column sums and mask the real inclusion column
+    const specStripped=l.replace(/\b\d{1,3}(?:-\d{1,3})?%/g,'');
+
+    const numRe=/\d+(?:[.,]\d+)?/g;
+    const allNums=[];
+    let m;
+    while((m=numRe.exec(specStripped))!==null){
+      const n=_n(m[0]);
+      if(Number.isFinite(n))allNums.push({val:n,pos:m.index,len:m[0].length});
+    }
+    if(!allNums.length)return null;
+
+    // Default: name is text before first number
+    const firstNumPos=allNums[0].pos;
+    let namePart=specStripped.slice(0,firstNumPos).trim();
+    // Strip leading numeric row code: "2 Maize ..." → "Maize"
+    const codeMatch=namePart.match(/^\d{1,4}(?:-\d+)?\s+(.+)/);
+    if(codeMatch)namePart=codeMatch[1].trim();
+    namePart=_san(namePart);
+    return{name:namePart, nums:allNums.map(n=>n.val), raw:l};
+  }
+
+  // Find the column index that sums closest to 100
+  function _findInclusionColumn(parsedLines){
+    if(!parsedLines.length)return -1;
+    const maxCols=Math.max(...parsedLines.map(p=>p.nums.length));
+    if(!maxCols)return -1;
+
+    // Use only alias-resolved rows to score columns — nutrition bleed rows
+    // won't resolve in the alias DB, so they can't inflate col 0's sum
+    const resolvedLines=parsedLines.filter(p=>!!_resolveAlias(p.name));
+    const scoreLines=resolvedLines.length>=3?resolvedLines:parsedLines;
+
+    let bestCol=-1, bestScore=Infinity;
+
+    for(let col=0;col<maxCols;col++){
+      const vals=scoreLines.map(p=>p.nums[col]).filter(v=>v!==undefined&&_okp(v));
+      if(vals.length<3)continue;
+      const sum=vals.reduce((a,b)=>a+b,0);
+      if(sum<70||sum>130)continue;
+      const score=Math.abs(sum-100);
+      console.log(`[COL_SCORE] col=${col} n=${vals.length} sum=${sum.toFixed(2)} score=${score.toFixed(2)}`);
+      if(score<bestScore){
+        bestScore=score;
+        bestCol=col;
+      }
+    }
+    return bestCol;
+  }
+
+  // ── MAIN ENTRY ──────────────────────────────────────────────────────────
+  const deglued=degluePdfText(rawText);
+  const rawLines=String(deglued||"").replace(/\r/g,"\n").split("\n")
     .map(l=>l.replace(/\t/g," ").replace(/\s{2,}/g," ").trim())
     .filter(l=>l&&l.length<300);
 
-  let _result = null;
+  let _result=null;
 
-  // ── MODE 1: FACT / feed-mill token-stream ───────────────────────────────
-  // Structure after degluePdfText:
-  //   line N:   "2"                    (row code - lone integer)
-  //   line N+1: "Maize/Corn 22.22"     (name + IR% on same line after deglue)
-  //   line N+2: "666.6"                (weight_kg)
-  //   line N+3: "5"                    (nutrition code)
-  //   line N+4: "ME"                   (nutrient name)
-  //   line N+5: "3,000.00"             (nutrient value)
-  // Validated: Weight ≈ IR% × batchFactor
-  factParse: {
-    // Detect batch size from split "Total / 100.0 / 3000" lines
-    let bf=null;
-    for(let _i=0;_i<rawLines.length-2;_i++){
-      if(/^total$/i.test(rawLines[_i])){
-        const _pct=parseFloat(rawLines[_i+1]);
-        const _batch=parseFloat(rawLines[_i+2].replace(/,/g,""));
-        if(Math.abs(_pct-100)<1&&_batch>100){bf=_batch/100;break;}
+  // ── STEP 1: Filter out junk lines ───────────────────────────────────────
+  const junkRe=/^(total|codes|factor|warning|page|user|plant|formula|ration|pellet|press|abr|poor|low|non-abbr|correction|quick fix|agrocore|generated|status|nutrient comparison|ingredient changes|corrected formula|download|reply|more|fix|result)/i;
+
+  const cleanLines=rawLines.filter(l=>{
+    if(junkRe.test(l))return false;
+    if(/^\d+\s*$/.test(l))return false; // lone numbers
+    if(/^[^a-zA-Z]*$/.test(l))return false; // no letters
+    return true;
+  });
+
+  // ── STEP 2: Split ingredient vs nutrient sections ───────────────────────
+  const{ingLines}=_splitSections(cleanLines);
+
+  // ── STEP 3: Parse each line into name + numbers ──────────────────────────
+  const parsed=ingLines
+    .map(_parseLine)
+    .filter(p=>p&&p.name&&p.name.length>=2&&p.nums.length>=1)
+    .filter(p=>!_bad(p.name)&&!_isNutrient(p.name));
+
+  parsed.slice(0,30).forEach(p=>console.log(`[PARSED] name="${p.name}" nums=[${p.nums.slice(0,5).join(",")}] raw="${p.raw.slice(0,80)}"`));
+
+  // ── STEP 4: Find inclusion column ───────────────────────────────────────
+  const colIdx=_findInclusionColumn(parsed);
+
+  if(colIdx>=0){
+    const rows=[];
+    for(const p of parsed){
+      const pct=p.nums[colIdx];
+      if(!_okp(pct))continue;
+      // Cost column is typically colIdx+2 or +3 (large numbers)
+      const costCandidates=p.nums.filter(n=>n>10&&n!==pct);
+      const cost=costCandidates.length?costCandidates[costCandidates.length-1]:null;
+      rows.push({ing:p.name, pct, cost});
+    }
+
+    const sum=rows.reduce((s,r)=>s+r.pct,0);
+    console.log(`[UNIVERSAL PARSER] col=${colIdx} rows=${rows.length} sum=${sum.toFixed(2)}`);
+    rows.forEach(r=>console.log(`[ROW] ing="${r.ing}" pct=${r.pct}`));
+
+    if(rows.length>=3&&sum>20&&sum<200){
+      _result=_buildReturn(_dedup(rows),"column_sum");
+    }
+  }
+
+  // ── STEP 5: Fallback — try alias-first approach ──────────────────────────
+  // Find lines where name resolves in alias DB, then pick best number
+  if(!_result){
+    const aliasRows=[];
+    for(const p of parsed){
+      const canonical=_resolveAlias(p.name);
+      if(!canonical)continue;
+      // Pick the number most likely to be inclusion (0.001-99.99, not a weight)
+      // Prefer numbers < 100, prefer numbers that make sum ≈ 100
+      const candidates=p.nums.filter(_okp);
+      if(!candidates.length)continue;
+      // Take first valid candidate
+      aliasRows.push({ing:p.name, pct:candidates[0], canonical});
+    }
+
+    if(aliasRows.length>=3){
+      const sum=aliasRows.reduce((s,r)=>s+r.pct,0);
+      // Find best column by trying different candidate indices
+      let bestRows=aliasRows, bestSum=sum;
+
+      // Try all combinations of candidate indices
+      const maxIdx=Math.max(...parsed.map(p=>p.nums.filter(_okp).length));
+      for(let i=0;i<Math.min(maxIdx,4);i++){
+        const tryRows=[];
+        for(const p of parsed){
+          const canonical=_resolveAlias(p.name);
+          if(!canonical)continue;
+          const candidates=p.nums.filter(_okp);
+          if(i>=candidates.length)continue;
+          tryRows.push({ing:p.name, pct:candidates[i], canonical});
+        }
+        if(tryRows.length<3)continue;
+        const trySum=tryRows.reduce((s,r)=>s+r.pct,0);
+        if(Math.abs(trySum-100)<Math.abs(bestSum-100)){
+          bestRows=tryRows;
+          bestSum=trySum;
+        }
       }
-      // Also handle single-line "Total 100.0 3000"
-      const _tm=rawLines[_i].match(/^total\s+100(?:\.0+)?\s+(\d[\d,]*)/i);
-      if(_tm){bf=_n(_tm[1])/100;break;}
-    }
-    if(!bf)break factParse;
 
-    const rows=[];
-    // Pattern: "Name decimal" line followed by weight line
-    for(let _i=0;_i<rawLines.length-1;_i++){
-      const _l=rawLines[_i];
-      // Match: name followed by IR% value on same line
-      const _m=_l.match(/^([A-Za-z][A-Za-z0-9\s\-\/\+\.\(\)%&,\']{1,60}?)\s+(\d{1,3}\.\d{1,6})\s*$/);
-      if(!_m)continue;
-      const name=_san(_m[1]);
-      const ir=_n(_m[2]);
-      if(_bad(name)||!_okp(ir))continue;
-      if(_isNutrient(name))continue;
-      // Validate weight on next line
-      const _wt=_n(rawLines[_i+1]);
-      if(!Number.isFinite(_wt)||_wt<=0)continue;
-      const ratio=_wt/(ir*bf);
-      if(ratio<0.65||ratio>1.45)continue;
-      rows.push({ing:name,pct:ir});
+      if(Math.abs(bestSum-100)<30){
+        _result=_buildReturn(_dedup(bestRows),"alias_first");
+      }
     }
-    if(rows.length>=3)_result=_buildReturn(_dedup(rows),"fact_format");
   }
 
-  // ── MODE 2: PHN / Bestmix / WinFeed ────────────────────────────────────
-  if(!_result) {
-    const RE=/^(\d{1,4}(?:-\d+)?)\s+([A-Za-z][A-Za-z0-9\s\-\/\+\.\(\)%&,\']{0,70}?)\s+(?:-[A-Z]\s+|\d[\d,.]*\s+)?(\d{1,6}(?:[.,]\d{1,4})?)\s+(\d{1,3}(?:[.,]\d{1,4})?)\s*$/;
-    const rows=[];
-    for(const l of rawLines){
-      if(/^(total|code\s+ingred|warning|no\.|formula|batch|stored|pricing|page|user|plant|species)\b/i.test(l))continue;
-      const m=l.match(RE);if(!m)continue;
-      const name=_san(m[2].replace(/\s+-[A-Z]\s*$/,"").trim()),pct=_n(m[4].replace(",","."));
-      if(_bad(name)||!_okp(pct))continue;
-      rows.push({ing:name,pct});
-    }
-    if(rows.length>=3)_result=_buildReturn(_dedup(rows),"phn_format");
-  }
-
-  // ── MODE 3: Orangeburg / "Ingredients and Amounts" ──────────────────────
-  if(!_result){
-    const rows=[];let inSec=false;
-    for(const l of rawLines){
-      if(/ingredients.*amounts/i.test(l)){inSec=true;continue;}
-      if(/^total\b/i.test(l)){if(inSec)break;continue;}
-      if(!inSec||/^(ingredients|%\s*as\s*fed|amount|no\.)/i.test(l))continue;
-      const m=l.match(/^(\d{1,4}(?:-\d+)?)\s+([A-Za-z][A-Za-z0-9\s\-\/\+\.\(\)%&,\']{0,60}?)\s+(\d{1,3}(?:\.\d{1,6})?)\s+(\d{1,6}(?:\.\d{1,4})?)\s*$/);
-      if(!m)continue;
-      const name=_san(m[2]),pct=_n(m[3]);
-      if(_bad(name)||!_okp(pct))continue;
-      rows.push({ing:name,pct});
-    }
-    if(rows.length>=2)_result=_buildReturn(_dedup(rows),"orangeburg_format");
-  }
-
-  // ── MODE 4: Numbered list ────────────────────────────────────────────────
+  // ── STEP 6: Simple pairs fallback ───────────────────────────────────────
   if(!_result){
     const rows=[];
-    for(const l of rawLines){
-      const m=l.match(/^\d{1,3}[.)]\s+([A-Za-zÀ-ÿ][A-Za-z0-9À-ÿ\s\-\/\+\.\(\)%&,\']{1,60}?)\s+(\d{1,3}(?:[.,]\d{1,6})?)\s*%?\s*$/);
-      if(!m)continue;
-      const name=_san(m[1]),pct=_n(m[2]);
-      if(_bad(name)||!_okp(pct)||_isNutrient(name))continue;
-      rows.push({ing:name,pct});
-    }
-    if(rows.length>=3)_result=_buildReturn(_dedup(rows),"numbered_list");
-  }
-
-  // ── MODE 5: Simple pairs (Unicode-safe, European decimals) ───────────────
-  if(!_result){
-    const rows=[];
-    const RE=/^([A-Za-zÀ-ÖØ-öø-ÿ\u0600-\u06FF\u4E00-\u9FFF][A-Za-z0-9À-ÿ\u0600-\u06FF\u4E00-\u9FFF\s\-\/\+\.\(\)%&,\']{1,60}?)[\s:=\t]+(-?\d{1,3}(?:[.,]\d{1,6})?)\s*%?\s*$/;
-    for(const l of rawLines){
-      if(/^(total|codes|factor|warning|page|user)\b/i.test(l))continue;
+    const RE=/^([A-Za-zÀ-ÖØ-öø-ÿ][A-Za-z0-9À-ÿ\s\-\/\+\.\(\)%&,\']{1,60}?)[\s:=\t]+(\d{1,3}(?:[.,]\d{1,6})?)\s*%?\s*$/;
+    for(const l of cleanLines){
       const m=l.match(RE);if(!m)continue;
       const name=_san(m[1]),pct=_n(m[2]);
       if(_bad(name)||!_okp(pct)||_isNutrient(name))continue;
@@ -1404,26 +1555,9 @@ function extractFormulaFromPdfText(rawText) {
     if(rows.length>=2)_result=_buildReturn(_dedup(rows),"simple_pairs");
   }
 
-  // ── MODE 6: Column-packed (2+ space split) ───────────────────────────────
-  if(!_result){
-    const rows=[];
-    for(const l of rawLines){
-      if(/^(total|codes|factor|plant|formula|remarks|date|warning|page)\b/i.test(l))continue;
-      const segs=l.split(/\s{2,}/);if(segs.length<2)continue;
-      for(let _i=0;_i+1<segs.length;_i++){
-        const m=(segs[_i].trim()+" "+segs[_i+1].trim()).match(/^([A-Za-zÀ-ÿ][A-Za-z0-9\s\-\/\+\.\(\)%&\']{1,60}?)\s+(\d{1,3}(?:[.,]\d{1,6})?)\s*%?$/);
-        if(!m)continue;
-        const name=_san(m[1]),pct=_n(m[2]);
-        if(_bad(name)||!_okp(pct)||_isNutrient(name))continue;
-        rows.push({ing:name,pct});
-      }
-    }
-    if(rows.length>=2)_result=_buildReturn(_dedup(rows),"column_packed");
-  }
-
   if(_result)return _result;
 
-  // ── MODE 7: Fallback to original scanCandidatesPctFirst engine ───────────
+  // ── STEP 7: Fallback to legacy engine ────────────────────────────────────
   console.log("[DBG multiformat v14] all modes failed, falling back to legacy engine");
   const pick=pickBestRegionText(rawText);
   const rawCandidates=scanCandidatesPctFirst(pick.text);
@@ -1762,6 +1896,14 @@ function extractQcNutrientsFromXlsxRows(rows = []) {
   return normalizeQcNutrients(out);
 }
 
+function sanitizeExtendedParams(raw = {}) {
+  const out = {};
+  for (const [k, v] of Object.entries(raw)) {
+    if (v != null && isFinite(Number(v))) out[k] = Number(v);
+  }
+  return out;
+}
+
 function buildQcRecord({
   sample_id,
   entered_name,
@@ -1771,6 +1913,7 @@ function buildQcRecord({
   submitted_by,
   baseline_nutrients = {},
   nutrients,
+  extended_params = {},
   intake_type,
   source_system = null,
   filename = null,
@@ -1797,6 +1940,7 @@ function buildQcRecord({
     nutrients: normalizeQcNutrients(nutrients || {}),
     reported_nutrients: normalizeQcNutrients(nutrients || {}),
     baseline_nutrients: normalizeQcNutrients(baseline_nutrients || {}),
+    extended_params: sanitizeExtendedParams(extended_params || {}),
     review_note: "",
     override_payload: null,
     meta: cleanObject({
@@ -2058,6 +2202,440 @@ function updateIngredientMasterRecord(ingredient_id, approved_profile) {
   };
 }
 
+/** Map PDF/Excel-style nutrient headers onto Ingredient Intelligence field names. */
+function canonicalNutrientHeader(header) {
+  const raw = String(header || "").toLowerCase();
+  const ck = raw
+    .replace(/mcal\s*\/?\s*kg|kcal\s*\/?\s*kg|mj\s*\/?\s*kg|meq\s*\/?\s*kg/g, "")
+    .trim()
+    .replace(/[%()]/g, "")
+    .replace(/[+\-]/g, "_")
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+  const aliases = {
+    ingredient: "ingredient_name",
+    name: "ingredient_name",
+    ingredient_name: "ingredient_name",
+    ee_fat: "ee",
+    eefat: "ee",
+    fat: "ee",
+    crude_fiber: "cf",
+    crude_fibre: "cf",
+    me_kcal_kg: "me",
+    me_kcal: "me",
+    me: "me",
+    nel: "nel_mcal_kg",
+    nel_mcal_kg: "nel_mcal_kg",
+    nem: "nem_mcal_kg",
+    nem_mcal_kg: "nem_mcal_kg",
+    neg: "neg_mcal_kg",
+    neg_mcal_kg: "neg_mcal_kg",
+    tdn: "tdn",
+    pendf: "peNDF",
+    pe_ndf: "peNDF",
+    rup: "rup",
+    rup_cp: "rup",
+    rdp: "rdp",
+    deb: "deb",
+    deb_meq_kg: "deb",
+    total_p: "total_p",
+    total_phosphorus: "total_p",
+  };
+  return aliases[ck] || ck;
+}
+
+/**
+ * Preview helper for wide PDF nutrient matrices (headers may span pages).
+ * Returns raw column-keyed rows for the frontend mapper.
+ */
+function previewIngredientMatrixFromPdfText(text) {
+  const lines = String(text || "").split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  const hints = ["adf", "ash", "cp", "me", "ndf", "moisture", "starch", "fiber", "fibre", "nel", "nem", "neg", "tdn", "pendf", "rup", "fat", "ee", "cl", "ca"];
+  const headerLines = [];
+  for (const line of lines) {
+    const lower = line.toLowerCase();
+    if (hints.filter((t) => lower.includes(t)).length >= 2) headerLines.push(line);
+  }
+  if (!headerLines.length) return [];
+
+  const rawHeaders = [];
+  for (const hl of headerLines) {
+    for (const tok of hl.split(/\t|\s{2,}|(?<=\))\s+/)) {
+      const t = tok.trim();
+      if (t && !/^--/.test(t)) rawHeaders.push(t);
+    }
+  }
+  const colKeys = rawHeaders.map(canonicalNutrientHeader);
+  const nameColIdx = colKeys.findIndex((k) => k === "ingredient" || k === "ingredient_name" || k === "name");
+
+  const out = [];
+  for (const line of lines) {
+    if (headerLines.includes(line)) continue;
+    if (/^--\s*\d/.test(line)) continue;
+    const firstNumMatch = line.match(/^(.+?)\s+([\d][\d.]*(?:\s+[\d.]*)*)\s*$/);
+    if (!firstNumMatch) continue;
+    const ingredient_name = firstNumMatch[1].trim();
+    if (!ingredient_name || /^\d/.test(ingredient_name)) continue;
+    const numStrs = firstNumMatch[2].match(/[\d]+(?:\.\d+)?/g) || [];
+    const values = numStrs.map(Number);
+    if (!values.length) continue;
+    const row = { ingredient_name };
+    const dataColKeys = colKeys.filter((k, idx) => idx !== nameColIdx && k !== "ingredient_name");
+    for (let j = 0; j < Math.min(dataColKeys.length, values.length); j++) {
+      if (dataColKeys[j]) row[dataColKeys[j]] = values[j];
+    }
+    out.push(row);
+  }
+  return out;
+}
+
+const INGREDIENT_INTELLIGENCE_EXPORT_COLUMNS = [
+  "ingredient_name", "category", "currency", "price_basis", "price", "inclusion",
+  "dm", "moisture", "me", "me_mj", "amen", "ne", "cp", "ee", "cf", "ash",
+  "starch", "sugars", "ndf", "adf", "lignin", "nsp_total", "nsp_soluble", "nsp_insoluble",
+  "total_lys", "total_met", "total_cys", "total_metcys", "total_thr", "total_trp", "total_arg", "total_val", "total_ile", "total_leu",
+  "ca", "total_p", "avp", "na", "k", "cl", "mg", "s",
+  "sid_lys", "sid_met", "sid_cys", "sid_metcys", "sid_thr", "sid_trp", "sid_arg", "sid_val", "sid_ile", "sid_leu",
+  "fe", "zn", "mn", "cu", "i", "se",
+  "vit_a", "vit_d3", "vit_e", "vit_k", "vit_b1", "vit_b2", "vit_b6", "vit_b12", "niacin", "pantothenic_acid", "folic_acid", "biotin", "choline",
+  "nel_mcal_kg", "nem_mcal_kg", "neg_mcal_kg", "tdn", "peNDF", "rup", "rdp", "mp", "deb",
+];
+
+// ── Generic table export (used by Custom Ingredient DB and similar grids) ───
+// Accepts arbitrary { columns: [{key,label}], rows } and writes an .xlsx with
+// headers in the given order/labels, unlike the fixed-schema export above.
+router.post("/v1/table-export", (req, res) => {
+  try {
+    const columns = Array.isArray(req.body?.columns) ? req.body.columns : [];
+    const rows = Array.isArray(req.body?.rows) ? req.body.rows : [];
+    if (!columns.length) {
+      return res.status(400).json({ ok: false, error: "No columns specified." });
+    }
+
+    const sheetRows = rows.map((r) => {
+      const out = {};
+      for (const col of columns) out[col.label || col.key] = r?.[col.key] ?? "";
+      return out;
+    });
+
+    const header = columns.map((c) => c.label || c.key);
+    const ws = xlsx.utils.json_to_sheet(sheetRows, { header });
+    const wb = xlsx.utils.book_new();
+    xlsx.utils.book_append_sheet(wb, ws, String(req.body?.sheet_name || "Sheet1").slice(0, 31));
+    const buf = xlsx.write(wb, { type: "buffer", bookType: "xlsx" });
+
+    const filename = String(req.body?.filename || "export.xlsx").replace(/["\r\n]/g, "");
+    res.setHeader("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+    res.setHeader("Content-Disposition", `attachment; filename="${filename}"`);
+    res.send(buf);
+  } catch (e) {
+    console.error("[INGEST] table-export error:", e.message);
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+function previewHeaderTokenScore(cell) {
+  const n = String(cell || "")
+    .replace(/^\uFEFF/, "")
+    .toLowerCase()
+    .replace(/mcal\s*\/?\s*kg|kcal\s*\/?\s*kg|mj\s*\/?\s*kg|meq\s*\/?\s*kg/g, "")
+    .replace(/%\s*cp\b|%cp\b|%dm\b/g, "")
+    .replace(/[\s_%()\/.\-]+/g, "");
+  if (!n || n.startsWith("empty") || n.startsWith("__empty")) return 0;
+  const nameKeys = new Set([
+    "ingredientname", "name", "ingredient", "feedstuff", "feed", "item",
+    "rawmaterial", "rawmaterialname", "product", "productname", "description",
+    "feedname", "nameofingredient", "insumo", "alimento", "hammadde", "rohstoff",
+    "ingrediente", "materiaprima", "grondstof", "commodity", "material",
+    "itemdescription", "feedingredients", "rawmat", "rm",
+  ]);
+  if (nameKeys.has(n) || n.includes("ingredientname") || (n.includes("ingredient") && n.includes("name"))) return 8;
+  const nuts = [
+    "nel", "nem", "neg", "tdn", "cp", "crudeprotein", "protein", "dm", "drymatter",
+    "ee", "fat", "eefat", "etherextract", "me", "ndf", "adf", "ash", "rup", "pendf",
+    "moisture", "ca", "cf", "starch", "nelmcalkg", "nemmcalkg", "negmcalkg", "deb",
+    "sidlys", "totallys", "avp", "totalp",
+  ];
+  if (nuts.includes(n) || nuts.some((x) => n === x || n.startsWith(x))) return 3;
+  return 0;
+}
+
+function previewPickHeaderLabel(a, b) {
+  const sa = String(a || "").trim();
+  const sb = String(b || "").trim();
+  if (!sa) return sb;
+  if (!sb) return sa;
+  const scoreA = previewHeaderTokenScore(sa);
+  const scoreB = previewHeaderTokenScore(sb);
+  if (scoreB > scoreA) return sb;
+  if (scoreA > scoreB) return sa;
+  return `${sa} ${sb}`.trim();
+}
+
+function previewMatrixToObjects(matrix) {
+  if (!Array.isArray(matrix) || !matrix.length) return [];
+  const scan = Math.min(matrix.length, 25);
+  let bestIdx = 0;
+  let bestScore = -1;
+  for (let i = 0; i < scan; i++) {
+    const row = Array.isArray(matrix[i]) ? matrix[i] : [];
+    const score = row.reduce((sum, cell) => sum + previewHeaderTokenScore(cell), 0);
+    if (score > bestScore) {
+      bestScore = score;
+      bestIdx = i;
+    }
+  }
+  if (bestScore < 2) return [];
+
+  let headerRow = (matrix[bestIdx] || []).map((h) => String(h || "").replace(/^\uFEFF/, "").trim());
+  let dataStart = bestIdx + 1;
+
+  const next = matrix[bestIdx + 1];
+  if (Array.isArray(next) && next.length) {
+    const nextScore = next.reduce((sum, cell) => sum + previewHeaderTokenScore(cell), 0);
+    const currentNutrientish = headerRow.reduce((sum, cell) => {
+      const s = previewHeaderTokenScore(cell);
+      return sum + (s === 3 ? 1 : 0);
+    }, 0);
+    const nextNutrientish = next.reduce((sum, cell) => {
+      const s = previewHeaderTokenScore(cell);
+      return sum + (s === 3 ? 1 : 0);
+    }, 0);
+    if (nextNutrientish > currentNutrientish && nextScore >= 6) {
+      headerRow = headerRow.map((h, i) => previewPickHeaderLabel(h, next[i]));
+      dataStart = bestIdx + 2;
+    }
+  }
+
+  const headers = headerRow.map((h, i) => h || `Column_${i + 1}`);
+  const rows = [];
+  for (let r = dataStart; r < matrix.length; r++) {
+    const line = Array.isArray(matrix[r]) ? matrix[r] : [];
+    const obj = {};
+    let any = false;
+    for (let c = 0; c < headers.length; c++) {
+      let val = line[c];
+      if (val == null) val = "";
+      if (val !== "") any = true;
+      obj[headers[c]] = val;
+    }
+    if (any) rows.push(obj);
+  }
+  return rows;
+}
+
+function tryTransposeIngredientColumns(matrix) {
+  if (!Array.isArray(matrix) || matrix.length < 4) return null;
+  const scan = Math.min(matrix.length, 30);
+  for (let i = 0; i < scan; i++) {
+    const header = Array.isArray(matrix[i]) ? matrix[i] : [];
+    const data = matrix.slice(i + 1);
+    if (header.length < 3 || data.length < 3) continue;
+    let nutrientRows = 0;
+    for (const row of data.slice(0, 16)) {
+      const cells = Array.isArray(row) ? row : [];
+      if (previewHeaderTokenScore(cells[0]) === 3) nutrientRows++;
+    }
+    if (nutrientRows < 3) continue;
+    const names = [];
+    for (let c = 1; c < header.length; c++) {
+      const n = String(header[c] || "").trim();
+      if (n) names.push({ c, n });
+    }
+    if (names.length < 2) continue;
+    const headerNuts = names.filter((x) => previewHeaderTokenScore(x.n) === 3).length;
+    if (headerNuts >= Math.max(2, names.length * 0.4)) continue;
+    const out = [];
+    for (const { c, n } of names) {
+      const obj = { ingredient_name: n };
+      for (const row of data) {
+        const cells = Array.isArray(row) ? row : [];
+        const key = String(cells[0] || "").trim();
+        if (!key) continue;
+        const val = cells[c];
+        if (val === "" || val == null) continue;
+        obj[key] = val;
+      }
+      out.push(obj);
+    }
+    if (out.length >= 2) return out;
+  }
+  return null;
+}
+
+// FACT column header → Nutrix nutrient key
+const FACT_COL_MAP = {
+  names: "ingredient_name", codes: "ingredient_code", cost: "price",
+  dm: "dm", me: "me", cp: "cp", ee: "ee", cf: "cf", ash: "ash",
+  ca: "ca", "av. p": "avp", "av.p": "avp", na: "na", k: "k", cl: "cl",
+  deb: "deb", nfe: "nfe",
+  "meth (d)": "sid_met", "cyst (d)": "sid_cys", "m+c (d)": "sid_metcys",
+  "lysine (d)": "sid_lys", "threo (d)": "sid_thr", "tryp (d)": "sid_trp",
+  "arg (d)": "sid_arg", "isoleucine (d)": "sid_ile", "leucine (d)": "sid_leu",
+  "valine (d)": "sid_val", "histidine (d)": "sid_his", "phenyl (d)": "sid_phe",
+  "ph + tyr (d)": "sid_phetyr",
+  "meth (t)": "total_met", "cyst (t)": "total_cys", "m+c (t)": "total_metcys",
+  "lysine (t)": "total_lys", "threo (t)": "total_thr", "tryp (t)": "total_trp",
+  "arg (t)": "total_arg", "isoleucine (t)": "total_ile", "leucine (t)": "total_leu",
+  "valine (t)": "total_val", "histidine (t)": "total_his", "phenyl (t)": "total_phe",
+  "total phosphorus": "total_p", "total p": "total_p", "phytate p": "phytate_p",
+  chromium: "cr", magnesium: "mg", copper: "cu", selenium: "se",
+  zinc: "zn", manganese: "mn", adf: "adf", ndf: "ndf",
+  "vitamin a": "vit_a", "vitamin d": "vit_d3", "vitamin e": "vit_e",
+  iodine: "i", iron: "fe", cobalt: "co", "vitamin k": "vit_k",
+  "thiamin ": "vit_b1", thiamin: "vit_b1", thiamine: "vit_b1",
+  riboflavin: "vit_b2", niacin: "niacin",
+  "pantothenic acid": "pantothenic_acid", "pyridoxine (b6)": "vit_b6",
+  pyridoxine: "vit_b6", folacin: "folic_acid", "folic acid": "folic_acid",
+  biotin: "biotin", "vitamin b12": "vit_b12", "vitamin c": "vit_c",
+  sulfur: "s", sulphur: "s", starch: "starch", "starch ": "starch",
+  sugar: "sugars", "sugar ": "sugars", "choline (ppm)": "choline",
+  tdn: "tdn", ne: "ne",
+};
+
+function parseFACTCodesSheet(ws) {
+  const matrix = xlsx.utils.sheet_to_json(ws, { header: 1, defval: null, raw: true, blankrows: false });
+  // Find the header row: look for a row containing "Names" and "ME" or "CP"
+  let headerRowIdx = -1;
+  for (let i = 0; i < Math.min(matrix.length, 10); i++) {
+    const row = matrix[i];
+    const cells = row.map(c => String(c || "").trim().toLowerCase());
+    if (cells.includes("names") && (cells.includes("me") || cells.includes("cp"))) {
+      headerRowIdx = i;
+      break;
+    }
+  }
+  if (headerRowIdx < 0) return [];
+  const headers = matrix[headerRowIdx].map(c => String(c || "").trim());
+  const rows = [];
+  for (let i = headerRowIdx + 1; i < matrix.length; i++) {
+    const raw = matrix[i];
+    const name = String(raw[1] || "").trim(); // "Names" is always col index 1
+    if (!name) continue;
+    const obj = {};
+    for (let j = 0; j < headers.length; j++) {
+      const h = headers[j];
+      if (!h) continue;
+      const mapped = FACT_COL_MAP[h.toLowerCase()] || FACT_COL_MAP[h.toLowerCase().trim()];
+      const key = mapped || null;
+      if (!key) continue;
+      const val = raw[j];
+      if (val === null || val === undefined || val === "") continue;
+      const num = Number(val);
+      obj[key] = Number.isFinite(num) ? num : String(val).trim();
+    }
+    if (!obj.ingredient_name) obj.ingredient_name = name;
+    rows.push(obj);
+  }
+  return rows;
+}
+
+function parseSpreadsheetToPreviewRows(buffer) {
+  const wb = xlsx.read(buffer, { type: "buffer", cellDates: false });
+  // Detect FACT format: look for a "Codes" sheet with a "Names"/"ME"/"CP" header
+  const codesSheet = wb.Sheets["Codes"];
+  if (codesSheet) {
+    const factRows = parseFACTCodesSheet(codesSheet);
+    if (factRows.length > 0) return factRows;
+  }
+  let best = [];
+  for (const name of wb.SheetNames || []) {
+    const ws = wb.Sheets[name];
+    if (!ws) continue;
+    const matrix = xlsx.utils.sheet_to_json(ws, { header: 1, defval: "", raw: false, blankrows: false });
+    const transposed = tryTransposeIngredientColumns(matrix);
+    let rows = previewMatrixToObjects(matrix);
+    if (transposed && transposed.length >= (rows?.length || 0)) rows = transposed;
+    if (!rows.length) {
+      rows = xlsx.utils.sheet_to_json(ws, { defval: "", raw: false });
+    }
+    if (rows.length > best.length) best = rows;
+  }
+  return best;
+}
+
+// ── Generic table import preview — parses xlsx/csv, returns header+rows ────
+// Returns rows keyed by their original column header text (no fixed schema),
+// so callers can map columns however fits their own data model.
+router.post("/v1/table-import-preview", upload.single("file"), async (req, res) => {
+  try {
+    const file = req.file;
+    if (!file) {
+      return res.status(400).json({ ok: false, error: "No file uploaded." });
+    }
+
+    const orig = String(file.originalname || "").toLowerCase();
+    const isPdf = orig.endsWith(".pdf") || file.mimetype === "application/pdf";
+
+    if (isPdf) {
+      let text = "";
+      try {
+        const pdf = await pdfParse(file.buffer);
+        text = pdf?.text || "";
+      } catch (pdfErr) {
+        return res.status(400).json({ ok: false, error: `PDF parse failed: ${pdfErr?.message || "Unable to read PDF"}` });
+      }
+      const rows = previewIngredientMatrixFromPdfText(text);
+      if (!rows.length) {
+        return res.json({
+          ok: true,
+          headers: [],
+          rows: [],
+          source: "pdf_matrix",
+          error: "No numeric ingredient rows found in this PDF. Wide tables split across pages (or scanned PDFs) import more reliably as Excel/CSV.",
+        });
+      }
+      return res.json({ ok: true, headers: Object.keys(rows[0]), rows, source: "pdf_matrix" });
+    }
+
+    const json = parseSpreadsheetToPreviewRows(file.buffer);
+
+    if (!json.length) {
+      return res.json({
+        ok: true,
+        headers: [],
+        rows: [],
+        error: "No data table found. Put a header row with Ingredient / Name plus nutrient columns (CP, NEL, TDN, EE, …) on any sheet. Title rows above the table are OK.",
+      });
+    }
+
+    res.json({ ok: true, headers: Object.keys(json[0]), rows: json });
+  } catch (e) {
+    console.error("[INGEST] table-import-preview error:", e.message);
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// ── Export Ingredient Intelligence working set as .xlsx ──────────────────────
+// Mirrors the column schema extractIngredientRowsFromWorksheet() expects on
+// import, so a round-trip export -> edit -> import works without remapping.
+router.post("/v1/ingredient-intelligence/export", (req, res) => {
+  try {
+    const rows = Array.isArray(req.body?.rows) ? req.body.rows : [];
+    if (!rows.length) {
+      return res.status(400).json({ ok: false, error: "No ingredient rows to export." });
+    }
+
+    const sheetRows = rows.map((r) => {
+      const out = {};
+      for (const col of INGREDIENT_INTELLIGENCE_EXPORT_COLUMNS) out[col] = r?.[col] ?? "";
+      return out;
+    });
+
+    const ws = xlsx.utils.json_to_sheet(sheetRows, { header: INGREDIENT_INTELLIGENCE_EXPORT_COLUMNS });
+    const wb = xlsx.utils.book_new();
+    xlsx.utils.book_append_sheet(wb, ws, "Ingredient Intelligence");
+    const buf = xlsx.write(wb, { type: "buffer", bookType: "xlsx" });
+
+    res.setHeader("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+    res.setHeader("Content-Disposition", 'attachment; filename="ingredient_intelligence_export.xlsx"');
+    res.send(buf);
+  } catch (e) {
+    console.error("[INGEST] export error:", e.message);
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
 router.post("/v1/ingest", upload.single("file"), async (req, res) => {
   try {
     const file = req.file;
@@ -2209,6 +2787,15 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
       folic_acid: toSafeNumber(row.folic_acid),
       biotin: toSafeNumber(row.biotin),
       choline: toSafeNumber(row.choline),
+      nel_mcal_kg: toSafeNumber(row.nel_mcal_kg ?? row.nel),
+      nem_mcal_kg: toSafeNumber(row.nem_mcal_kg ?? row.nem),
+      neg_mcal_kg: toSafeNumber(row.neg_mcal_kg ?? row.neg),
+      tdn: toSafeNumber(row.tdn),
+      peNDF: toSafeNumber(row.peNDF ?? row.pendf ?? row.pe_ndf),
+      rup: toSafeNumber(row.rup),
+      rdp: toSafeNumber(row.rdp),
+      mp: toSafeNumber(row.mp),
+      deb: toSafeNumber(row.deb),
     });
 
     const extractIngredientRowsFromStructuredPdfText = (text) => {
@@ -2266,6 +2853,7 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
         ne: "ne",
         price: "price",
         ee: "ee",
+        ee_fat: "ee",
         cf: "cf",
         ash: "ash",
         starch: "starch",
@@ -2273,6 +2861,19 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
         ndf: "ndf",
         adf: "adf",
         lignin: "lignin",
+        tdn: "tdn",
+        nel: "nel_mcal_kg",
+        nel_mcal_kg: "nel_mcal_kg",
+        nem: "nem_mcal_kg",
+        nem_mcal_kg: "nem_mcal_kg",
+        neg: "neg_mcal_kg",
+        neg_mcal_kg: "neg_mcal_kg",
+        pendf: "peNDF",
+        pe_ndf: "peNDF",
+        rup: "rup",
+        rdp: "rdp",
+        deb: "deb",
+        deb_meq_kg: "deb",
         total_lys: "total_lys",
         total_met: "total_met",
         total_cys: "total_cys",
@@ -2304,6 +2905,39 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
   return out.filter((r) => String(r?.ingredient_name || "").trim());
 };
 
+    // Maps cleanKey() output of common display column names to their internal field names.
+    // Needed because xlsx column headers like "EE/Fat (%)" → "ee_fat" after cleanKey,
+    // but normalizeIngredientRow expects "ee".
+    const WORKSHEET_COL_ALIASES = {
+      ee_fat: "ee",            // EE/Fat (%)
+      eefat: "ee",
+      crude_fiber: "cf",
+      crude_fibre: "cf",
+      deb_meq_kg: "deb",
+      me_kcal_kg: "me",
+      me_kcal: "me",
+      me_mj_kg: "me_mj",
+      fat: "ee",
+      total_phosphorus: "total_p",
+      total_p: "total_p",
+      avail_p: "avp",
+      available_p: "avp",
+      available_phosphorus: "avp",
+      tdn: "tdn",
+      rup: "rup",
+      rup_cp: "rup",
+      rdp: "rdp",
+      rdp_cp: "rdp",
+      pendf: "peNDF",
+      pe_ndf: "peNDF",
+      nel: "nel_mcal_kg",
+      nel_mcal_kg: "nel_mcal_kg",
+      nem: "nem_mcal_kg",
+      nem_mcal_kg: "nem_mcal_kg",
+      neg: "neg_mcal_kg",
+      neg_mcal_kg: "neg_mcal_kg",
+    };
+
     const extractIngredientRowsFromWorksheet = (sheetRows) => {
       if (!Array.isArray(sheetRows) || !sheetRows.length) return [];
 
@@ -2311,7 +2945,8 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
         .map((r) => {
           const out = {};
           for (const [k, v] of Object.entries(r || {})) {
-            out[cleanKey(k)] = v;
+            const ck = cleanKey(k);
+            out[WORKSHEET_COL_ALIASES[ck] || ck] = v;
           }
           return out;
         })
@@ -2330,11 +2965,21 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
           "cp",
           "me",
           "me_mj",
+          "me_kcal",
           "price",
           "moisture",
           "ee",
           "cf",
           "ash",
+          "ndf",
+              "adf",
+              "deb",
+              "tdn",
+              "nel_mcal_kg",
+              "nem_mcal_kg",
+              "neg_mcal_kg",
+              "peNDF",
+              "rup",
           "total_lys",
           "sid_lys",
           "ca",
@@ -2364,6 +3009,15 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
               me_mj: r.me_mj,
               amen: r.amen,
               ne: r.ne,
+              nel_mcal_kg: r.nel_mcal_kg,
+              nem_mcal_kg: r.nem_mcal_kg,
+              neg_mcal_kg: r.neg_mcal_kg,
+              tdn: r.tdn,
+              peNDF: r.peNDF,
+              rup: r.rup,
+              rdp: r.rdp,
+              mp: r.mp,
+              deb: r.deb,
               cp: r.cp,
               ee: r.ee,
               cf: r.cf,
@@ -2439,6 +3093,62 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
       return out;
     };
 
+    // Fallback PDF parser for wide matrix tables (ingredients as rows, nutrients as columns).
+    // Used when extractIngredientRowsFromStructuredPdfText returns 0 rows.
+    const extractIngredientRowsFromMatrixPdfText = (text) => {
+      const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+
+      // Detect the header line: must contain ≥3 known nutrient keywords
+      const HEADER_TOKENS = ["adf", "ash", "cp", "me", "ndf", "moisture", "starch", "fiber", "fibre", "nel", "nem", "neg", "tdn", "pendf", "rup", "fat", "ee"];
+      let headerIdx = -1;
+      let rawHeaders = [];
+
+      for (let i = 0; i < Math.min(lines.length, 20); i++) {
+        const lower = lines[i].toLowerCase();
+        if (HEADER_TOKENS.filter(t => lower.includes(t)).length >= 3) {
+          headerIdx = i;
+          rawHeaders = lines[i].split(/\t|\s{2,}/).map(h => h.trim()).filter(Boolean);
+          break;
+        }
+      }
+
+      if (headerIdx < 0 || rawHeaders.length < 2) return [];
+
+      // Map each header column to a canonical field name via WORKSHEET_COL_ALIASES
+      const colKeys = rawHeaders.map(h => {
+        const ck = cleanKey(h);
+        return WORKSHEET_COL_ALIASES[ck] || ck;
+      });
+      // Skip header columns that represent the ingredient name itself
+      const nameColIdx = colKeys.findIndex(k => k === "ingredient" || k === "ingredient_name" || k === "name");
+
+      const out = [];
+      for (let i = headerIdx + 1; i < lines.length; i++) {
+        const line = lines[i];
+        // Find the boundary between ingredient name (text) and first numeric value
+        const firstNumMatch = line.match(/^(.+?)\s+([\d][\d\.]*(?:\s+[\d][\d\.]*)*)\s*$/);
+        if (!firstNumMatch) continue;
+
+        const ingredient_name = firstNumMatch[1].trim();
+        if (!ingredient_name || /^\d/.test(ingredient_name)) continue;
+
+        const numStrs = firstNumMatch[2].match(/[\d]+(?:\.\d+)?/g) || [];
+        const values = numStrs.map(Number);
+        if (!values.length) continue;
+
+        const row = { ingredient_name };
+        // dataColKeys: all columns except the ingredient name column
+        const dataColKeys = colKeys.filter((_, idx) => idx !== nameColIdx && idx > 0);
+        for (let j = 0; j < Math.min(dataColKeys.length, values.length); j++) {
+          if (dataColKeys[j]) row[dataColKeys[j]] = values[j];
+        }
+
+        out.push(normalizeIngredientRow(row, out.length, "pdf_matrix_import"));
+      }
+
+      return out.filter(r => String(r?.ingredient_name || "").trim());
+    };
+
    if (
   detected_mime === "application/pdf" ||
   mime === "application/pdf" ||
@@ -2449,7 +3159,7 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
   try {
     const pdf = await pdfParse(file.buffer);
     text = pdf?.text || "";
-    console.log("[PDF_TEXT_DEBUG]", text);
+    if (process.env.INGEST_DEBUG === '1') console.log("[PDF_TEXT_DEBUG]", text);
   } catch (pdfErr) {
     console.error("[PDF_PARSE_ERROR]", pdfErr?.message || pdfErr);
     return res.status(400).json({
@@ -2464,7 +3174,10 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
     });
   }
 
-  const ingredient_rows = extractIngredientRowsFromStructuredPdfText(text);
+  const structured_rows = extractIngredientRowsFromStructuredPdfText(text);
+  const ingredient_rows = structured_rows.length > 0
+    ? structured_rows
+    : extractIngredientRowsFromMatrixPdfText(text);
   const rep = extractReportedFromPdfText(text);
 
   let f = extractFormulaFromPdfText(text);
@@ -2531,6 +3244,8 @@ router.post("/v1/ingest", upload.single("file"), async (req, res) => {
     reported_nutrients: rep.reported_nutrients || {},
     reported_total: rep.reported_total,
     ingredient_rows: ingredient_rows.length,
+    formula_name: rep.formula_name || null,
+    detected_phase: rep.detected_phase || null,
   };
 
   if (INGEST_DEBUG && f.debug) {
@@ -2800,6 +3515,14 @@ function getQcSampleById(sample_id) {
   return store.samples.find((x) => String(x?.sample_id || "").trim() === id) || null;
 }
 
+function getQcSampleByIdForOwner(sample_id, req) {
+  const sample = getQcSampleById(sample_id);
+  if (!sample) return null;
+  const owner = resolveQcOwner(req);
+  if (sample.owner && sample.owner !== owner) return 'FORBIDDEN';
+  return sample;
+}
+
 function appendQcAudit(event) {
   const auditFile = getQcAuditFile();
   const audit = readJsonFileSafe(auditFile, { events: [] });
@@ -2868,6 +3591,7 @@ router.post("/v1/qc/intake", async (req, res) => {
     }
 
     const nutrients = normalizeQcNutrients(body.nutrients || {});
+    const extendedParams = sanitizeExtendedParams(body.extended_params || {});
     const ctx = getQcIngredientContext({
       entered_name,
       matched_ingredient_id: matched_ingredient_id_raw,
@@ -2882,6 +3606,7 @@ router.post("/v1/qc/intake", async (req, res) => {
       matched_display_name: ctx.matched_display_name,
       source,
       submitted_by,
+      extended_params: extendedParams,
       baseline_nutrients: normalizeQcNutrients(
         body.baseline_nutrients || body.baseline || ctx.baseline_nutrients || {}
       ),
@@ -2890,6 +3615,7 @@ router.post("/v1/qc/intake", async (req, res) => {
     });
 
     qc_record = qcEvaluateRecord(qc_record);
+    qc_record.owner = resolveQcOwner(req);
     const persisted = saveQcRecord(qc_record);
 
     if (INGEST_DEBUG) {
@@ -3007,6 +3733,7 @@ router.post("/v1/qc/intake/file", upload.single("file"), async (req, res) => {
       });
 
       qc_record = qcEvaluateRecord(qc_record);
+      qc_record.owner = resolveQcOwner(req);
       const persisted = saveQcRecord(qc_record);
 
       if (INGEST_DEBUG) {
@@ -3063,6 +3790,7 @@ router.post("/v1/qc/intake/file", upload.single("file"), async (req, res) => {
       });
 
       qc_record = qcEvaluateRecord(qc_record);
+      qc_record.owner = resolveQcOwner(req);
       const persisted = saveQcRecord(qc_record);
 
       if (INGEST_DEBUG) {
@@ -3159,6 +3887,7 @@ router.post("/v1/qc/intake/live", async (req, res) => {
     });
 
     qc_record = qcEvaluateRecord(qc_record);
+    qc_record.owner = resolveQcOwner(req);
     const persisted = saveQcRecord(qc_record);
 
     if (INGEST_DEBUG) {
@@ -4259,6 +4988,9 @@ router.post("/v1/qc/review2/:sample_id/approve", async (req, res) => {
     }
 
     const sample = sampleStore.samples[idx];
+    if (sample && sample.owner && sample.owner !== resolveQcOwner(req)) {
+      return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
+    }
     const ingredient_id =
       ingredient_id_body ||
       String(sample?.ingredient_id || sample?.matched_ingredient_id || "").trim();
@@ -4398,6 +5130,10 @@ router.post("/v1/qc/review/:sample_id/impact", async (req, res) => {
     const sample = sampleStore.samples.find(
       (x) => String(x?.sample_id || "").trim() === sample_id
     );
+
+    if (sample && sample.owner && sample.owner !== resolveQcOwner(req)) {
+      return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
+    }
 
     if (!sample) {
       return res.status(404).json({
@@ -4837,10 +5573,11 @@ router.post("/v1/qc/override/:ingredient_id/remove", async (req, res) => {
   }
 });
 
-router.get("/v1/qc/samples", async (_req, res) => {
+router.get("/v1/qc/samples", async (req, res) => {
   try {
     const store = getQcStore();
-    const samples = [...store.samples].sort((a, b) =>
+    const owner = resolveQcOwner(req);
+    const samples = [...store.samples].filter(s => s.owner === owner).sort((a, b) =>
       String(b?.updated_at || "").localeCompare(String(a?.updated_at || ""))
     );
     return res.json({
@@ -4860,7 +5597,8 @@ router.get("/v1/qc/samples", async (_req, res) => {
 
 router.get("/v1/qc/samples/:sample_id", async (req, res) => {
   try {
-    const qc_record = getQcSampleById(req.params.sample_id);
+    const qc_record = getQcSampleByIdForOwner(req.params.sample_id, req);
+    if (qc_record === 'FORBIDDEN') return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
     if (!qc_record) {
       return res.status(404).json({
         ok: false,
@@ -4887,7 +5625,8 @@ router.get("/v1/qc/samples/:sample_id", async (req, res) => {
 
 router.post("/v1/qc/decision/:sample_id/rescreen", async (req, res) => {
   try {
-    const existing = getQcSampleById(req.params.sample_id);
+    const existing = getQcSampleByIdForOwner(req.params.sample_id, req);
+    if (existing === 'FORBIDDEN') return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
     if (!existing) {
       return res.status(404).json({
         ok: false,
@@ -4921,7 +5660,8 @@ router.post("/v1/qc/decision/:sample_id/rescreen", async (req, res) => {
 router.post("/v1/qc/decision/:sample_id/approve", async (req, res) => {
   try {
     const body = req.body || {};
-    const existing = getQcSampleById(req.params.sample_id);
+    const existing = getQcSampleByIdForOwner(req.params.sample_id, req);
+    if (existing === 'FORBIDDEN') return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
 
     if (!existing) {
       return res.status(404).json({
@@ -4982,6 +5722,9 @@ router.post("/v1/qc/decision/:sample_id/approve", async (req, res) => {
 router.post("/v1/qc/decision/:sample_id/reject", async (req, res) => {
   try {
     const body = req.body || {};
+    const _rejectCheck = getQcSampleByIdForOwner(req.params.sample_id, req);
+    if (_rejectCheck === 'FORBIDDEN') return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
+    if (!_rejectCheck) return res.status(404).json({ ok: false, error: 'QC_SAMPLE_NOT_FOUND', message: 'QC sample not found', meta: { route_version: INGEST_ROUTE_VERSION } });
     const out = updateQcDecision(req.params.sample_id, {
       decision_status: "rejected",
       status: "rejected",
@@ -5018,6 +5761,9 @@ router.post("/v1/qc/decision/:sample_id/reject", async (req, res) => {
 router.post("/v1/qc/decision/:sample_id/record-only", async (req, res) => {
   try {
     const body = req.body || {};
+    const _recordCheck = getQcSampleByIdForOwner(req.params.sample_id, req);
+    if (_recordCheck === 'FORBIDDEN') return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
+    if (!_recordCheck) return res.status(404).json({ ok: false, error: 'QC_SAMPLE_NOT_FOUND', message: 'QC sample not found', meta: { route_version: INGEST_ROUTE_VERSION } });
     const out = updateQcDecision(req.params.sample_id, {
       decision_status: "record_only",
       status: "record_only",
@@ -5054,7 +5800,8 @@ router.post("/v1/qc/decision/:sample_id/record-only", async (req, res) => {
 router.post("/v1/qc/decision/:sample_id/temporary-override", async (req, res) => {
   try {
     const body = req.body || {};
-    const existing = getQcSampleById(req.params.sample_id);
+    const existing = getQcSampleByIdForOwner(req.params.sample_id, req);
+    if (existing === 'FORBIDDEN') return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
 
     if (!existing) {
       return res.status(404).json({
@@ -5129,6 +5876,10 @@ router.post("/v1/qc/impact/:sample_id/send-to-optimizer", async (req, res) => {
     const sample = sampleStore.samples.find(
       (x) => String(x?.sample_id || "").trim() === sample_id
     );
+
+    if (sample && sample.owner && sample.owner !== resolveQcOwner(req)) {
+      return res.status(403).json({ ok: false, error: 'QC_ACCESS_DENIED', message: 'Access denied', meta: { route_version: INGEST_ROUTE_VERSION } });
+    }
 
     if (!sample) {
       return res.status(404).json({
@@ -5425,6 +6176,238 @@ router.post("/v1/qc/impact/:sample_id/send-to-optimizer", async (req, res) => {
       message: e?.message || "Failed to review QC impact for optimizer decision",
       meta: { route_version: INGEST_ROUTE_VERSION },
     });
+  }
+});
+
+// ---------- QC supplemental endpoints ----------
+
+function getFeedIntakeFile() {
+  return require("path").resolve(__dirname, "../../data/qc/qc.feed_intake.json");
+}
+
+function mapDecisionToActionType(decision_status) {
+  const d = String(decision_status || "");
+  if (d === "approved") return "Database Update";
+  if (d === "temporary_override") return "Temporary Override";
+  if (d === "record_only") return "Record Only";
+  if (d === "rejected") return "Rejected";
+  return d || "Unknown";
+}
+
+router.get("/v1/qc/review/pending", async (req, res) => {
+  try {
+    const store = getQcStore();
+    const owner = resolveQcOwner(req);
+    const pending = store.samples
+      .filter(s => { const d = String((s && s.decision_status) || "pending"); return (s.owner === owner) && (d === "pending" || d === ""); })
+      .sort((a, b) => String((b && b.updated_at) || "").localeCompare(String((a && a.updated_at) || "")));
+    return res.json({ ok: true, samples: pending });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "REVIEW_PENDING_FAILED", message: e && e.message });
+  }
+});
+
+router.post("/v1/qc/feed-intake", async (req, res) => {
+  try {
+    const body = req.body || {};
+    const sample_id = String(body.sample_id || "").trim();
+    if (!sample_id) return res.status(400).json({ ok: false, error: "SAMPLE_ID_REQUIRED" });
+    const file = getFeedIntakeFile();
+    const store = readJsonFileSafe(file, { samples: [] });
+    if (!Array.isArray(store.samples)) store.samples = [];
+    const nutrients = body.nutrients || {};
+    const deviation = [], physical_deviation = [];
+    let overall_status = "pending", formula_name = body.formula_name || null;
+    if (body.formula_id) {
+      try {
+        const formulaFile = require("path").resolve(__dirname, "../../data/formulas.json");
+        const fData = readJsonFileSafe(formulaFile, { data: [] });
+        const formulas = fData.data || fData.formulas || (Array.isArray(fData) ? fData : []);
+        const formula = formulas.find(f => f.id === body.formula_id || f.formula_id === body.formula_id);
+        if (formula) {
+          formula_name = formula.formula_name || formula.name || formula_name;
+          const lm = { cp:"CP",ee:"EE",moisture:"Moisture",dm:"DM",ash:"Ash",cf:"CF",ca:"Ca",total_p:"Total P",avp:"AvP",total_lys:"Lys",total_met:"Met" };
+          const constraints = formula.nutrient_constraints || formula.constraints || [];
+          for (const c of constraints) {
+            const key = c.nutrient || c.key;
+            if (!key || nutrients[key] == null) continue;
+            const labVal = toNum(nutrients[key]);
+            if (labVal === null) continue;
+            const target = toNum(c.target != null ? c.target : c.value);
+            const min = toNum(c.min), max = toNum(c.max);
+            const devPct = target != null ? Number(((labVal - target) / target * 100).toFixed(1)) : null;
+            let status = "ok";
+            if (min != null && labVal < min) status = "low";
+            else if (max != null && labVal > max) status = "high";
+            deviation.push({ key, label: lm[key] || key, lab_actual: labVal, target, deviation_pct: devPct, status });
+          }
+          overall_status = deviation.some(d => d.status !== "ok") ? "warn" : "ok";
+        }
+      } catch (_) {}
+    }
+    const record = { sample_id, formula_id: body.formula_id || null, formula_name, submitted_by: String(body.submitted_by || "lab_user").trim(), status: "pending", overall_status, nutrients, physical_quality: body.physical_quality || {}, contaminants: body.contaminants || {}, deviation, physical_deviation, created_at: new Date().toISOString(), updated_at: new Date().toISOString() };
+    record.owner = resolveQcOwner(req);
+    store.samples.unshift(record);
+    writeJsonFilePretty(file, store);
+    return res.json({ ok: true, record });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "FEED_INTAKE_FAILED", message: e && e.message });
+  }
+});
+
+router.get("/v1/qc/feed-intake/pending", async (req, res) => {
+  try {
+    const store = readJsonFileSafe(getFeedIntakeFile(), { samples: [] });
+    const owner = resolveQcOwner(req);
+    return res.json({ ok: true, samples: (store.samples || []).filter(s => (s.owner === owner) && s.status === "pending") });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "FEED_PENDING_FAILED", message: e && e.message });
+  }
+});
+
+router.post("/v1/qc/feed-intake/:id/approve", async (req, res) => {
+  try {
+    const file = getFeedIntakeFile();
+    const store = readJsonFileSafe(file, { samples: [] });
+    const idx = (store.samples || []).findIndex(s => s.sample_id === req.params.id);
+    if (idx < 0) return res.status(404).json({ ok: false, error: "NOT_FOUND" });
+    if (store.samples[idx] && store.samples[idx].owner && store.samples[idx].owner !== resolveQcOwner(req)) return res.status(403).json({ ok: false, error: "FEED_ACCESS_DENIED" });
+    store.samples[idx] = Object.assign({}, store.samples[idx], { status: "approved", approved_by: req.body && req.body.approved_by, approved_at: new Date().toISOString() });
+    writeJsonFilePretty(file, store);
+    return res.json({ ok: true, record: store.samples[idx] });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "FEED_APPROVE_FAILED", message: e && e.message });
+  }
+});
+
+router.post("/v1/qc/feed-intake/:id/reject", async (req, res) => {
+  try {
+    const file = getFeedIntakeFile();
+    const store = readJsonFileSafe(file, { samples: [] });
+    const idx = (store.samples || []).findIndex(s => s.sample_id === req.params.id);
+    if (idx < 0) return res.status(404).json({ ok: false, error: "NOT_FOUND" });
+    if (store.samples[idx] && store.samples[idx].owner && store.samples[idx].owner !== resolveQcOwner(req)) return res.status(403).json({ ok: false, error: "FEED_ACCESS_DENIED" });
+    store.samples[idx] = Object.assign({}, store.samples[idx], { status: "rejected", rejected_by: req.body && req.body.approved_by, rejection_reason: req.body && req.body.rejection_reason, rejected_at: new Date().toISOString() });
+    writeJsonFilePretty(file, store);
+    return res.json({ ok: true, record: store.samples[idx] });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "FEED_REJECT_FAILED", message: e && e.message });
+  }
+});
+
+router.get("/v1/qc/history", async (req, res) => {
+  try {
+    const store = getQcStore();
+    const owner = resolveQcOwner(req);
+    const history = store.samples
+      .filter(s => s && s.decision_status && s.decision_status !== "pending" && (s.owner === owner))
+      .sort((a, b) => String((b && b.updated_at) || "").localeCompare(String((a && a.updated_at) || "")))
+      .map(s => ({ history_id: s.sample_id, date: ((s.updated_at || s.created_at) || "").slice(0, 10), ingredient: s.matched_display_name || s.entered_name || "", ingredient_id: s.ingredient_id || s.matched_ingredient_id || "", source_sample: s.sample_id, submitted_by: s.submitted_by || "", approved_by: s.reviewed_by || s.approved_by || "", action_type: mapDecisionToActionType(s.decision_status), review_note: s.review_note || "", screening_status: s.screening_status || "normal", original: s.baseline_nutrients || {}, updated: s.reported_nutrients || s.nutrients || {} }));
+    return res.json({ ok: true, history });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "HISTORY_FAILED", message: e && e.message });
+  }
+});
+
+router.get("/v1/qc/trends/:ingredient_id", async (req, res) => {
+  try {
+    const q = String(req.params.ingredient_id || "").trim().toLowerCase();
+    const store = getQcStore();
+    const owner = resolveQcOwner(req);
+    const samples = store.samples
+      .filter(s => { const name = String((s && s.matched_display_name) || (s && s.entered_name) || "").toLowerCase(); const id = String((s && s.ingredient_id) || (s && s.matched_ingredient_id) || "").toLowerCase(); return (s.owner === owner) && (name.includes(q) || id.includes(q)); })
+      .sort((a, b) => String((a && a.created_at) || "").localeCompare(String((b && b.created_at) || "")))
+      .map(s => ({ date: ((s.created_at || s.updated_at) || "").slice(0, 10), sample_id: s.sample_id, ingredient: s.matched_display_name || s.entered_name || "", decision_status: s.decision_status || "pending", screening_status: s.screening_status || "normal", nutrients: s.reported_nutrients || s.nutrients || {} }));
+    return res.json({ ok: true, samples, ingredient_id: req.params.ingredient_id });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "TRENDS_FAILED", message: e && e.message });
+  }
+});
+// ── GET /v1/qc/sample-log/:ingredient_id ─────────────────────────────────────
+// Returns all samples for an ingredient with extended_params, plus pre-computed
+// running averages from approved/accepted samples (ready to apply in one click).
+router.get("/v1/qc/sample-log/:ingredient_id", async (req, res) => {
+  try {
+    const q = String(req.params.ingredient_id || "").trim().toLowerCase();
+    const store = getQcStore();
+    const owner = resolveQcOwner(req);
+
+    const allSamples = store.samples
+      .filter(s => {
+        const name = String((s && s.matched_display_name) || (s && s.entered_name) || "").toLowerCase();
+        const id = String((s && s.ingredient_id) || (s && s.matched_ingredient_id) || "").toLowerCase();
+        return (s.owner === owner) && (name.includes(q) || id.includes(q));
+      })
+      .sort((a, b) => String((a && a.created_at) || "").localeCompare(String((b && b.created_at) || "")));
+
+    const samples = allSamples.map(s => ({
+      sample_id: s.sample_id,
+      date: ((s.created_at || s.updated_at) || "").slice(0, 10),
+      submitted_by: s.submitted_by || "lab",
+      lot_batch: s.lot_batch || null,
+      decision_status: s.decision_status || "pending",
+      screening_status: s.screening_status || "normal",
+      nutrients: s.reported_nutrients || s.nutrients || {},
+      extended_params: s.extended_params || {}
+    }));
+
+    // Compute running averages from approved samples
+    const approved = allSamples.filter(s => {
+      const d = String(s.decision_status || "pending");
+      return d === "approved" || d === "database_update";
+    });
+    const approved_count = approved.length;
+    const averages = {};
+
+    if (approved_count > 0) {
+      // Nutrient averages
+      const nutrientKeys = ["moisture","dm","cp","ee","cf","ash","starch","sugars","me_kcal","me_mj",
+        "ca","total_p","avp","na","k","cl","mg","s","deb",
+        "total_lys","total_met","total_metcys","total_thr","total_trp","total_arg","total_val","total_ile","total_leu",
+        "sid_lys","sid_met","sid_metcys","sid_thr","sid_trp","sid_arg","sid_val","sid_ile","sid_leu"];
+      for (const k of nutrientKeys) {
+        const vals = approved
+          .map(s => { const v = (s.reported_nutrients || s.nutrients || {})[k]; return (v != null && isFinite(Number(v))) ? Number(v) : null; })
+          .filter(v => v !== null);
+        if (vals.length) averages[k] = Math.round(vals.reduce((a, b) => a + b, 0) / vals.length * 10000) / 10000;
+      }
+      // Extended param averages
+      const extKeys = new Set();
+      approved.forEach(s => { if (s.extended_params) Object.keys(s.extended_params).forEach(k => extKeys.add(k)); });
+      for (const k of extKeys) {
+        const vals = approved
+          .map(s => { const v = (s.extended_params || {})[k]; return (v != null && isFinite(Number(v))) ? Number(v) : null; })
+          .filter(v => v !== null);
+        if (vals.length) averages[k] = Math.round(vals.reduce((a, b) => a + b, 0) / vals.length * 10000) / 10000;
+      }
+    }
+
+    return res.json({ ok: true, samples, averages, approved_count, ingredient_id: req.params.ingredient_id });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "SAMPLE_LOG_FAILED", message: e && e.message });
+  }
+});
+
+// ── GET /v1/qc/tested-ingredients ────────────────────────────────────────────
+// Returns all unique ingredient names that have at least one QC sample,
+// sorted by sample count descending. Auto-populates the dropdown in Ingredient Trends.
+router.get("/v1/qc/tested-ingredients", (req, res) => {
+  try {
+    const store = getQcStore();
+    const owner = resolveQcOwner(req);
+    const counts = {};
+    for (const s of store.samples) {
+      if (!s || s.owner !== owner) continue;
+      const name = (s.matched_display_name || s.entered_name || "").trim();
+      if (!name) continue;
+      counts[name] = (counts[name] || 0) + 1;
+    }
+    const ingredients = Object.entries(counts)
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+    return res.json({ ok: true, ingredients });
+  } catch (e) {
+    return res.status(500).json({ ok: false, error: "TESTED_INGREDIENTS_FAILED", message: e && e.message });
   }
 });
 

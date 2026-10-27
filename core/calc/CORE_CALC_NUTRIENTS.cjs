@@ -75,7 +75,12 @@ function calcNutrients(items, ingredientsDB, opts = {}) {
     }
 
     for (const k of keys) {
-      const raw = ing[k];
+      // Equine key aliasing: cp_pct -> cp, lys_pct -> lys etc.
+      const raw = ing[k] !== undefined ? ing[k] :
+        ing[k.replace('_pct', '')] !== undefined ? ing[k.replace('_pct', '')] :
+        ing[k + '_pct'] !== undefined ? ing[k + '_pct'] :
+        ing[k.replace('_ppm', '')] !== undefined ? ing[k.replace('_ppm', '')] :
+        undefined;
 
       // Missing if null/undefined/empty string
       if (raw === null || raw === undefined || raw === "") {
@@ -160,7 +165,11 @@ function calcNutrientsRegistryDriven({ parsedItems, ingredientsDb, registry }) {
     for (const k of keys) {
       coverage_by_key[k].total += 1;
 
-      const raw = ing[k];
+      const raw = ing[k] !== undefined ? ing[k] :
+        ing[k.replace('_pct', '')] !== undefined ? ing[k.replace('_pct', '')] :
+        ing[k + '_pct'] !== undefined ? ing[k + '_pct'] :
+        ing[k.replace('_ppm', '')] !== undefined ? ing[k.replace('_ppm', '')] :
+        undefined;
       if (raw === null || raw === undefined || raw === "") {
         missing_by_key[k].push(ingKey);
         continue;
@@ -189,7 +198,18 @@ function calcNutrientsRegistryDriven({ parsedItems, ingredientsDb, registry }) {
     }
   }
 
-  return { nutrient_profile_full, coverage_by_key, missing_by_key };
+    // ✅ DERIVED AA: Met+Cys should ALWAYS be Met + Cys (do not trust tables to provide metcys)
+  // This keeps total_metcys and sid_metcys consistent when Met or Cys changes (e.g., DL-Met added).
+  {
+    const tMet = Number(nutrient_profile_full.total_met ?? 0) || 0;
+    const tCys = Number(nutrient_profile_full.total_cys ?? 0) || 0;
+    nutrient_profile_full.total_metcys = tMet + tCys;
+
+    const sMet = Number(nutrient_profile_full.sid_met ?? 0) || 0;
+    const sCys = Number(nutrient_profile_full.sid_cys ?? 0) || 0;
+    nutrient_profile_full.sid_metcys = sMet + sCys;
+  }
+return { nutrient_profile_full, coverage_by_key, missing_by_key };
 }
 
 module.exports = { calcNutrients, calcNutrientsRegistryDriven };

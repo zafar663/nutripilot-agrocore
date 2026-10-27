@@ -161,9 +161,14 @@ const { resolveSalmonidRequirements } = require("../services/requirements/aqua/s
 const { resolveTilapiaRequirements } = require("../services/requirements/aqua/tilapiaEngine.cjs");
 const { resolveCarpRequirements } = require("../services/requirements/aqua/carpEngine.cjs");
 const { resolveCatfishRequirements } = require("../services/requirements/aqua/catfishEngine.cjs");
+const { resolvePangasiusRequirements } = require("../services/requirements/aqua/pangasiusEngine.cjs");
+const { resolveMilkfishRequirements } = require("../services/requirements/aqua/milkfishEngine.cjs");
 const { resolveMarineFishRequirements } = require("../services/requirements/aqua/seabassSeabreamEngine.cjs");
+const { resolveRabbitRequirements } = require("../services/requirements/rabbit/rabbitEngine.cjs");
 const { resolveDogRequirements } = require("../services/requirements/dog/dogEngine.cjs");
 const { resolveCatRequirements } = require("../services/requirements/cat/catEngine.cjs");
+const { resolveCamelRequirements } = require("../services/requirements/camelid/camelEngine.cjs");
+const { resolveSACRequirements } = require("../services/requirements/camelid/sacEngine.cjs");
 
 // -------------------- Small helpers --------------------
 
@@ -761,6 +766,9 @@ function normalizeRequirementTargets(targets) {
 
     if (k === "me_kcal_per_kg" || k === "me_kcal_kg" || k === "me_kcalkg" || k === "me") canon = "me";
 
+    // electrolyte balance
+    if (k === "deb_meq_per_kg" || k === "deb_meq_kg" || k === "deb_meq") canon = "deb";
+
 
 
     // percent-style suffix
@@ -1169,6 +1177,8 @@ function sumNutrients(itemsResolved, db_eff, keysWanted, altMap, options = {}) {
 
   for (const k of keys) out[k] = 0;
 
+  const coveredMass = { dm: 0, moisture: 0, dm_pct: 0, moisture_pct: 0 };
+
 
 
   const dmMode = options && options.dm_scale_mode ? String(options.dm_scale_mode).trim() : "ME_ONLY";
@@ -1370,9 +1380,17 @@ function sumNutrients(itemsResolved, db_eff, keysWanted, altMap, options = {}) {
 
 
       out[k] += num(v) * dmRatio * dmKeyFactor * pct;
+      if (Object.prototype.hasOwnProperty.call(coveredMass, k)) coveredMass[k] += pct;
 
     }
 
+  }
+
+  // DM / moisture are mass fractions. Do not treat missing ingredient DM as 0%
+  // (that reports ~27% when only ~30% of the mix has a DM value).
+  for (const k of Object.keys(coveredMass)) {
+    if (coveredMass[k] > 1e-12) out[k] = out[k] / coveredMass[k];
+    else delete out[k];
   }
 
 
@@ -1925,6 +1943,8 @@ function analyzeFormula(params = {}) {
     body_weight_kg = 500,
     intake_pct_bw = 2.0,
     feedIntakeGpd = null,
+    bodyWeightG = null,
+    stdBodyWeightG = null,
   } = params;
 
 
@@ -2086,7 +2106,7 @@ function analyzeFormula(params = {}) {
   const _is_swine = String(species || "").toLowerCase() === "swine";
 
   // ✅ MINIMAL FIX: preserve rich layer phases like lay_peak, lay_early, lay_mid, lay_late
-  if (String(type || "").toLowerCase() === "layer" && _phase_req.startsWith("lay_")) {
+  if ((String(type || "").toLowerCase() === "layer" || String(type || "").toLowerCase() === "layer_breeder") && _phase_req.startsWith("lay_")) {
     // keep as-is (do not strip to "peak")
   } else {
     if (!_is_swine && _phase_req.includes("_")) {
@@ -2159,7 +2179,13 @@ function analyzeFormula(params = {}) {
 
   const ingLoaded = loadIngredients({ species, region, version, basis: "sid" });
 
-  const db = ingLoaded.db || {};
+  // Merge virtual_ingredients (sent by frontend for cross-species/universal ingredients)
+  // keyed by display name so the engine finds them on direct-hit lookup.
+  const virtualIng = params && params.virtual_ingredients && typeof params.virtual_ingredients === "object"
+    ? params.virtual_ingredients : null;
+  const db = virtualIng
+    ? Object.assign({}, ingLoaded.db || {}, virtualIng)
+    : (ingLoaded.db || {});
 
   const ingredients_source = normalizeIngredientsSource(ingLoaded);
 
@@ -2315,7 +2341,22 @@ function remapToRealDbId(id) {
 
         }
 
-
+        // Apply all other numeric nutrient fields from II overrides (cf, me, ee, ash, amino acids, etc.)
+        const _nonNutrientFields = new Set([
+          'row_id','db_id','profile_id','base_ingredient_id','ingredient_id',
+          'ingredient_code','ingredient_name','price','min','max','price_basis',
+          'currency','inclusion_min','inclusion_max','price_per_kg','note','source',
+          'mill_id','plant_id','user_id','created_at','updated_at','version',
+          'currency_mode','price_basis_mode','display_name','name','unit'
+        ]);
+        for (const [_field, _val] of Object.entries(ov)) {
+          if (_field === 'dm' || _field === 'cp') continue;
+          if (_nonNutrientFields.has(_field)) continue;
+          if (typeof _val === 'number' && Number.isFinite(_val)) {
+            cloned[_field] = _val;
+            touched = true;
+          }
+        }
 
         if (touched) {
 
@@ -2929,13 +2970,14 @@ const dm_overrides_applied = [];
     dim: Number(params?.dim) || 100,
     days_pregnant: Number(params?.days_pregnant) || 0,
     breed: breed || "holstein",
+    dmi_kg: Number(params?.dmi_kg_day) || 0,
   });
   req = {
     ok: true,
     reqKey: `dairy_${production_req_used || "lactating"}_${_phase_req || "peak"}_nasem2021_${mode}`,
     requirements: da || {},
-    profile: { label: `Dairy NASEM 2021 (${mode})`, targets: da || {} },
-    sources: { mode: `dairy_nasem2021_${mode}`, resolved: true },
+    profile: { label: mode === 'dynamic' ? 'Dairy published CNCPS / NASEM 2021 equations' : 'Dairy NASEM 2021 tables', targets: da || {} },
+    sources: { mode: `dairy_nasem2021_${mode}`, resolved: true, citation: mode === 'dynamic' ? 'NASEM 2021; Fox et al. 2004; Van Amburgh et al. 2015 (published CNCPS equations, not Cornell software)' : 'NASEM 2021 tables' },
     meta: { engine: "dairyNasem2021", requirements_mode: mode }
   };
 
@@ -2949,14 +2991,15 @@ const dm_overrides_applied = [];
     adg_kg: Number(params?.adg_kg) || 1.2,
     sex: type || "steer",
     days_pregnant: Number(params?.days_pregnant) || 0,
+    breed: breed || "generic",
   });
   req = {
     ok: true,
     reqKey: `beef_${production_req_used || "growing"}_${_phase_req || "stocker"}_nasem2016_${mode}`,
     requirements: bf || {},
-    profile: { label: `Beef NASEM 2016 (${mode})`, targets: bf || {} },
+    profile: { label: bf?.label || `Beef NASEM 2016 (${mode})`, targets: bf || {} },
     sources: { mode: `beef_nasem2016_${mode}`, resolved: true },
-    meta: { engine: "beefNasem2016", requirements_mode: mode }
+    meta: { engine: "beefNasem2016", requirements_mode: mode, breed_used: breed || "generic" }
   };
 
   } else if (speciesProfile?.species === "sheep") {
@@ -2967,14 +3010,15 @@ const dm_overrides_applied = [];
     adg_kg: Number(params?.adg_kg) || 0,
     milk_kg_day: Number(params?.milk_kg_day) || 0,
     days_pregnant: Number(params?.days_pregnant) || 0,
+    breed: breed || "generic",
   });
   req = {
     ok: true,
     reqKey: `sheep_${production_req_used || "ewe"}_${_phase_req || "maintenance"}_nrc2007_${mode}`,
     requirements: sh || {},
-    profile: { label: `Sheep NRC 2007 (${mode})`, targets: sh || {} },
+    profile: { label: sh?.label || `Sheep NRC 2007 (${mode})`, targets: sh || {} },
     sources: { mode: `sheep_nrc2007_${mode}`, resolved: true },
-    meta: { engine: "sheepNrc2007", requirements_mode: mode }
+    meta: { engine: "sheepNrc2007", requirements_mode: mode, breed_used: breed || "generic" }
   };
 } else if (speciesProfile?.species === "goat") {
   const mode = params?.requirements_mode || "static";
@@ -2986,14 +3030,15 @@ const dm_overrides_applied = [];
     fat_pct: Number(params?.fat_pct) || 3.8,
     protein_pct: Number(params?.protein_pct) || 3.2,
     days_pregnant: Number(params?.days_pregnant) || 0,
+    breed: breed || "generic",
   });
   req = {
     ok: true,
     reqKey: `goat_${production_req_used || "doe"}_${_phase_req || "maintenance"}_nrc2007_${mode}`,
     requirements: gt || {},
-    profile: { label: `Goat NRC 2007 (${mode})`, targets: gt || {} },
+    profile: { label: gt?.label || `Goat NRC 2007 (${mode})`, targets: gt || {} },
     sources: { mode: `goat_nrc2007_${mode}`, resolved: true },
-    meta: { engine: "goatNrc2007", requirements_mode: mode }
+    meta: { engine: "goatNrc2007", requirements_mode: mode, breed_used: breed || "generic" }
   };
 } else if (speciesProfile?.species === "aqua" || speciesProfile?.species === "aquaculture") {
   const mode = params?.requirements_mode || "static";
@@ -3007,8 +3052,12 @@ const dm_overrides_applied = [];
     aq = resolveTilapiaRequirements({ mode, production: production_req_used, phase: _phase_req });
   } else if (aquaType.includes('carp')) {
     aq = resolveCarpRequirements({ mode, production: production_req_used, phase: _phase_req });
-  } else if (aquaType.includes('catfish') || aquaType.includes('pangasius')) {
+  } else if (aquaType.includes('catfish')) {
     aq = resolveCatfishRequirements({ mode, production: production_req_used, phase: _phase_req });
+  } else if (aquaType.includes('pangasius') || aquaType.includes('basa')) {
+    aq = resolvePangasiusRequirements({ mode, production: production_req_used, phase: _phase_req });
+  } else if (aquaType.includes('milkfish') || aquaType === 'chanos') {
+    aq = resolveMilkfishRequirements({ mode, production: production_req_used, phase: _phase_req });
   } else if (aquaType.includes('bass') || aquaType.includes('bream') || aquaType.includes('marine')) {
     aq = resolveMarineFishRequirements({ mode, production: production_req_used, phase: _phase_req });
   } else {
@@ -3047,6 +3096,40 @@ const dm_overrides_applied = [];
     meta: { engine: "catEngine", requirements_mode: mode }
   };
 
+} else if (speciesProfile?.species === "rabbit") {
+  const rb = resolveRabbitRequirements({ production: production_req_used, phase: _phase_req });
+  req = {
+    ok: true,
+    reqKey: `rabbit_${production_req_used || "growing"}_${_phase_req || "growing"}_nrc1977`,
+    requirements: rb || {},
+    profile: { label: `Rabbit (NRC 1977 + De Blas & Wiseman 2010)`, targets: rb || {} },
+    sources: { mode: "rabbit_nrc1977", resolved: true },
+    meta: { engine: "rabbitEngine" }
+  };
+
+} else if (speciesProfile?.species === "camel") {
+  const cm = resolveCamelRequirements({ breed: breed || params?.breed || 'dromedary', production: production_req_used, phase: _phase_req });
+  req = {
+    ok: true,
+    reqKey: `camel_${production_req_used || "maintenance"}_${_phase_req || "maintenance"}_wardeh1989`,
+    requirements: cm || {},
+    profile: { label: cm?.label || `Camel (Wardeh 1989 / Faye & Bengoumi 2018)`, targets: cm || {} },
+    sources: { mode: "camel_wardeh1989", resolved: true },
+    meta: { engine: "camelEngine" }
+  };
+
+} else if (speciesProfile?.species === "alpaca" || speciesProfile?.species === "llama" || speciesProfile?.species === "south_american_camelid") {
+  const sacContext = { species: speciesProfile?.species, breed: breed || params?.breed || '', production: production_req_used, phase: _phase_req };
+  const sc = resolveSACRequirements(sacContext);
+  req = {
+    ok: true,
+    reqKey: `sac_${sc?.sac_species || "alpaca"}_${production_req_used || "maintenance"}_${_phase_req || "maintenance"}_nrc2007`,
+    requirements: sc || {},
+    profile: { label: sc?.label || `South American Camelid (NRC 2007 / Van Saun 2006)`, targets: sc || {} },
+    sources: { mode: "sac_nrc2007", resolved: true },
+    meta: { engine: "sacEngine", sac_species: sc?.sac_species }
+  };
+
 } else if (speciesProfile?.species === "swine") {
   const sw = resolveSwineRequirements({ species, type, breed, phase: _phase_req, production: production_req_used, body_weight_kg: Number(body_weight_kg) || 50 });
   req = {
@@ -3068,17 +3151,25 @@ const dm_overrides_applied = [];
     version: _version,
     production: production_req_used,
   });
-  // Apply feed intake adjustment for layer
-  if (feedIntakeGpd && req && req.ok && req.profile?.feed_intake?.recommended_gpd) {
-    const refGpd = req.profile.feed_intake.recommended_gpd;
-    const actualGpd = Number(feedIntakeGpd);
-    if (actualGpd > 0 && actualGpd !== refGpd) {
-      const { adjustRequirementsForFeedIntake } = require('../db/requirements/_index/LOAD_REQUIREMENTS.cjs');
-      req.requirements = adjustRequirementsForFeedIntake(req.requirements, refGpd, actualGpd);
-      req.feed_intake_adjusted = true;
-      req.feed_intake_actual_gpd = actualGpd;
-      req.feed_intake_reference_gpd = refGpd;
-    }
+  // Precision density: layer intake + broiler intake/weight vs book
+  if (req && req.ok) {
+    try {
+      const { applyPrecisionDensity, referenceIntakeGpd } = require('../services/farmpulse/precision.feed.service.cjs');
+      const refGpd = req.profile?.feed_intake?.recommended_gpd
+        || referenceIntakeGpd(type, _phase_req, null);
+      const actualGpd = Number(feedIntakeGpd);
+      const dens = applyPrecisionDensity(req.requirements, {
+        actualGpd, refGpd, type, phase: _phase_req,
+        actualBwG: bodyWeightG, stdBwG: stdBodyWeightG
+      });
+      if (dens.applied) {
+        req.requirements = dens.targets;
+        req.feed_intake_adjusted = true;
+        req.precision_density = dens.factor;
+        req.feed_intake_actual_gpd = actualGpd || null;
+        req.feed_intake_reference_gpd = refGpd;
+      }
+    } catch (_e) {}
   }
 }
     // ?? FALLBACK FIX: use index + library directly if resolver fails
@@ -3398,49 +3489,96 @@ if (!req || !req.reqKey) {
     };
 
   }
-  // Apply feed intake adjustment ONLY for laying phases - not rearing
-  const _layingPhases = new Set(['lay_early','lay_peak','lay_mid','lay_late','lay']);
-  if (feedIntakeGpd && req?.profile?.feed_intake?.recommended_gpd && _layingPhases.has(String(_phase_req||'').toLowerCase())) {
-    const refGpd = req.profile.feed_intake.recommended_gpd;
-    const actualGpd = Number(feedIntakeGpd);
-    if (actualGpd > 0 && actualGpd !== refGpd) {
-      const adjusted = {};
-      for (const [k, v] of Object.entries(profileReqs_raw)) {
-        if (typeof v !== 'number') { adjusted[k] = v; continue; }
-        if (k === 'me_kcal_per_kg') {
-          if (actualGpd < 95) {
-            // Low intake � high density needed � ME at commercial ceiling
-            adjusted[k] = 2950;
-          } else if (actualGpd > 120) {
-            // High intake � diluted diet � ME at commercial floor
-            adjusted[k] = 2650;
-          } else {
-            // Normal zone 95-120g � maintain SID Lys:ME ratio
-            const sid_lys_ref = Number(profileReqs_raw['sid_lys_pct'] || 0);
-            if (sid_lys_ref > 0) {
-              const sid_lys_adj = sid_lys_ref * refGpd / actualGpd;
-              const ref_ratio = sid_lys_ref * 10 / v;
-              const me_adj = Math.round(sid_lys_adj * 10 / ref_ratio);
-              adjusted[k] = Math.min(2950, Math.max(2650, me_adj));
-            } else {
-              adjusted[k] = v;
-            }
-          }
-        } else if (k === 'me_mj_per_kg' || k === 'ne_kcal_per_kg' || k === 'ge_kcal_per_kg') {
-          adjusted[k] = v; // leave other energy keys unchanged
-        } else {
-          // All nutrients adjust proportionally to feed intake
-          adjusted[k] = Math.round((v * refGpd / actualGpd) * 1000) / 1000;
-        }
-      }
-      profileReqs_raw = adjusted;
-    }
-  }
+  try {
+    const { applyPrecisionDensity, referenceIntakeGpd } = require('../services/farmpulse/precision.feed.service.cjs');
+    const refGpd = req?.profile?.feed_intake?.recommended_gpd
+      || referenceIntakeGpd(type, _phase_req, null);
+    const dens = applyPrecisionDensity(profileReqs_raw, {
+      actualGpd: Number(feedIntakeGpd),
+      refGpd,
+      type,
+      phase: _phase_req,
+      actualBwG: bodyWeightG,
+      stdBwG: stdBodyWeightG
+    });
+    if (dens.applied) profileReqs_raw = dens.targets;
+  } catch (_e) {}
   const effectiveTargetsRaw = profileReqs_raw;
   const _bypassNormalize = new Set(["equine","swine","dairy","beef","sheep","goat","aqua","aquaculture","dog","cat"]);
-  const profileReqs = _bypassNormalize.has(speciesProfile?.species || "")
+  let profileReqs = _bypassNormalize.has(speciesProfile?.species || "")
   ? (effectiveTargetsRaw || {})
   : normalizeRequirementTargets(effectiveTargetsRaw);
+
+  // For large-animal species the engines store energy in Mcal/kg (me_mcal_kg, nel_mcal_kg,
+  // neg_mcal_kg, nem_mcal_kg) but the formulation grid's ME row uses key "me" in kcal/kg.
+  // Bridge the gap so the STD column populates correctly.
+  if (_bypassNormalize.has(speciesProfile?.species || "") && profileReqs) {
+    profileReqs = { ...profileReqs };
+    if (profileReqs.me_mcal_kg != null && profileReqs.me == null) {
+      profileReqs.me = Math.round(profileReqs.me_mcal_kg * 1000);
+    }
+    // Dog/Cat engines return me_dog_kcal_kg / me_cat_kcal_kg — map to grid "me" key
+    if (profileReqs.me_dog_kcal_kg != null && profileReqs.me == null) {
+      profileReqs.me = Math.round(profileReqs.me_dog_kcal_kg);
+    }
+    if (profileReqs.me_cat_kcal_kg != null && profileReqs.me == null) {
+      profileReqs.me = Math.round(profileReqs.me_cat_kcal_kg);
+    }
+    if (profileReqs.neg_mcal_kg != null && profileReqs.neg == null) {
+      profileReqs.neg = Math.round(profileReqs.neg_mcal_kg * 1000);
+    }
+    if (profileReqs.nem_mcal_kg != null && profileReqs.nem == null) {
+      profileReqs.nem = Math.round(profileReqs.nem_mcal_kg * 1000);
+    }
+    // Ruminant/swine % keys: engines use bare names (cp, ca, mg, k, na, cl, s, tdn)
+    // while the grid registry sometimes expects _pct suffix — add both forms so
+    // either will match without duplicating.
+    // Equine engine already uses _pct forms exclusively; skip the bare alias direction
+    // to avoid creating duplicate target keys (cp + cp_pct both in targets → two rows).
+    const pctAliases = ['cp','ca','p','mg','k','na','cl','s','ndf','adf','tdn'];
+    for (const bare of pctAliases) {
+      if (profileReqs[bare] != null && profileReqs[bare + '_pct'] == null) {
+        profileReqs[bare + '_pct'] = profileReqs[bare];
+      }
+      if (species !== 'equine' && profileReqs[bare + '_pct'] != null && profileReqs[bare] == null) {
+        profileReqs[bare] = profileReqs[bare + '_pct'];
+      }
+    }
+    // total_p → p / p_pct aliases
+    if (profileReqs.total_p != null) {
+      if (profileReqs.p == null) profileReqs.p = profileReqs.total_p;
+      if (profileReqs.p_pct == null) profileReqs.p_pct = profileReqs.total_p;
+    }
+    // vit_d ↔ vit_d3 alias (dairy engine returns vit_d; grid registry key is vit_d3)
+    if (profileReqs.vit_d != null && profileReqs.vit_d3 == null) {
+      profileReqs.vit_d3 = profileReqs.vit_d;
+    }
+    if (profileReqs.vit_d3 != null && profileReqs.vit_d == null) {
+      profileReqs.vit_d = profileReqs.vit_d3;
+    }
+    // dcad_meq_kg → deb alias (dairy DCAD maps to DEB row in the nutrient registry)
+    if (profileReqs.dcad_meq_kg != null && profileReqs.deb == null) {
+      profileReqs.deb = profileReqs.dcad_meq_kg;
+    }
+    // nel_mcal_kg → nel alias
+    if (profileReqs.nel_mcal_kg != null && profileReqs.nel == null) {
+      profileReqs.nel = profileReqs.nel_mcal_kg;
+    }
+    // equine: de_mcal_per_kg (library key) → de_mcal_kg (registry key)
+    if (profileReqs.de_mcal_per_kg != null && profileReqs.de_mcal_kg == null) {
+      profileReqs.de_mcal_kg = profileReqs.de_mcal_per_kg;
+    }
+    // equine vitamin aliases: library returns _iu_per_kg, registry uses _iu_kg
+    if (profileReqs.vit_a_iu_per_kg != null && profileReqs.vit_a_iu_kg == null) {
+      profileReqs.vit_a_iu_kg = profileReqs.vit_a_iu_per_kg;
+    }
+    if (profileReqs.vit_d_iu_per_kg != null && profileReqs.vit_d_iu_kg == null) {
+      profileReqs.vit_d_iu_kg = profileReqs.vit_d_iu_per_kg;
+    }
+    if (profileReqs.vit_e_iu_per_kg != null && profileReqs.vit_e_iu_kg == null) {
+      profileReqs.vit_e_iu_kg = profileReqs.vit_e_iu_per_kg;
+    }
+  }
 
 
 
@@ -3716,7 +3854,7 @@ const UNIVERSAL_KEYS = [
 
   "total_val", "total_ile", "total_leu",
 
-  "total_his", "total_phe", "total_tyr",
+  "total_his", "total_phe", "total_tyr", "total_phetyr",
 
   "total_gly", "total_ser", "total_pro",
 
@@ -3732,7 +3870,7 @@ const UNIVERSAL_KEYS = [
 
   "sid_val", "sid_ile", "sid_leu",
 
-  "sid_his", "sid_phe",
+  "sid_his", "sid_phe", "sid_tyr", "sid_phetyr",
 
 
 
@@ -4184,6 +4322,26 @@ if (speciesProfile?.species === "equine") {
 
 
 
+  // Aromatic AA invariants (Phe + Tyr) — mirrors sulfur AA (Met + Cys)
+
+  if (isNum(nutrient_profile_full_core.total_phe) || isNum(nutrient_profile_full_core.total_tyr)) {
+
+    nutrient_profile_full_core.total_phetyr =
+
+      num(nutrient_profile_full_core.total_phe) + num(nutrient_profile_full_core.total_tyr);
+
+  }
+
+  if (isNum(nutrient_profile_full_core.sid_phe) || isNum(nutrient_profile_full_core.sid_tyr)) {
+
+    nutrient_profile_full_core.sid_phetyr =
+
+      num(nutrient_profile_full_core.sid_phe) + num(nutrient_profile_full_core.sid_tyr);
+
+  }
+
+
+
  const normalizedKeysForCoverage = normalizeKeyList(keysForProfile);
 
 const coverage = buildCoverage(itemsResolved, db_eff, normalizedKeysForCoverage, altMap);
@@ -4467,6 +4625,9 @@ if (speciesProfile?.species === "equine" && req) {
         targets_raw_effective: effectiveTargetsRaw,
 
         targets: profileReqs,
+
+        // TEMP DEBUG - remove after diagnosis
+        _debug_target_keys: species === 'equine' ? Object.keys(profileReqs || {}).filter(k => ['cp','cp_pct','cp_g_day','ee','ee_pct','cf','cf_pct','ndf','ndf_pct'].includes(k)) : undefined,
 
         tolerance: req.profile?.tolerance || null,
 

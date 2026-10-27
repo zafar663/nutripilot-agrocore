@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "breed": "hybrid_turkey",
+    "species": "poultry",
+    "production": "turkey_meat",
+    "age_unit": "week",
+    "region": "na",
+    "source": "Hybrid Turkeys Performance Guide 2024",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve_male": [
+    {
+      "week": 4,
+      "body_wt_g": 1150,
+      "fcr": 1.38,
+      "adg_g": 164,
+      "mortality_pct_max": 1,
+      "cum_feed_g": 1587
+    },
+    {
+      "week": 8,
+      "body_wt_g": 3500,
+      "fcr": 1.75,
+      "adg_g": 321,
+      "mortality_pct_max": 2,
+      "cum_feed_g": 6125
+    },
+    {
+      "week": 12,
+      "body_wt_g": 6800,
+      "fcr": 2.05,
+      "adg_g": 414,
+      "mortality_pct_max": 3,
+      "cum_feed_g": 13940
+    },
+    {
+      "week": 16,
+      "body_wt_g": 10500,
+      "fcr": 2.3,
+      "adg_g": 446,
+      "mortality_pct_max": 4,
+      "cum_feed_g": 24150
+    },
+    {
+      "week": 20,
+      "body_wt_g": 13800,
+      "fcr": 2.58,
+      "adg_g": 371,
+      "mortality_pct_max": 5,
+      "cum_feed_g": 35604
+    }
+  ]
+}

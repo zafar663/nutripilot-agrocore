@@ -10,17 +10,17 @@
       "label": "Turkey Layer (Generic)",
       "targets_by_phase": {
         "prelay": {
-          "me": 2700,
-          "cp": 17,
+          "me": 2800,
+          "cp": 14.5,
           "ca": 2.2,
-          "avp": 0.42,
+          "avp": 0.4,
           "na": 0.17,
-          "sid_lys": 0.75,
-          "sid_met": 0.35,
-          "sid_metcys": 0.63,
-          "sid_thr": 0.52,
-          "sid_trp": 0.18,
-          "sid_arg": 0.9
+          "sid_lys": 0.58,
+          "sid_met": 0.2,
+          "sid_metcys": 0.35,
+          "sid_thr": 0.38,
+          "sid_trp": 0.1,
+          "sid_arg": 0.49
         },
         "early": {
           "me": 2725,
@@ -65,19 +65,1153 @@
     },
     "poultry_turkey_layer_generic_prelay_v1": {
       "inherits": "generic",
-      "targets_override": {}
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 14.5,
+        "sid_lys_pct": 0.58,
+        "sid_met_pct": 0.2,
+        "sid_metcys_pct": 0.35,
+        "sid_thr_pct": 0.38,
+        "sid_trp_pct": 0.1,
+        "sid_arg_pct": 0.49,
+        "ca_pct": 2.2,
+        "avp_pct": 0.4,
+        "na_pct": 0.17
+      }
     },
     "poultry_turkey_layer_generic_early_v1": {
       "inherits": "generic",
-      "targets_override": {}
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      }
     },
     "poultry_turkey_layer_generic_peak_v1": {
       "inherits": "generic",
-      "targets_override": {}
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      }
     },
     "poultry_turkey_layer_generic_late_v1": {
       "inherits": "generic",
-      "targets_override": {}
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.72,
+        "cp_pct": 16.5,
+        "sid_lys_pct": 0.7,
+        "sid_met_pct": 0.35,
+        "sid_metcys_pct": 0.58,
+        "sid_thr_pct": 0.5,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.73,
+        "ca_pct": 2.8,
+        "avp_pct": 0.36,
+        "na_pct": 0.17,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      }
+    },
+    "poultry_turkey_layer_nrc2026_wk_0_3_v1": {
+      "phase": "wk_0_3",
+      "label": "NRC 2026 Turkey 0–3 wk v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 16-2",
+        "basis_note": "Total AAs (footnote f); sid_*=total*0.89."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "cp_pct": 28,
+        "ca_pct": 1.3,
+        "avp_pct": 0.65,
+        "na_pct": 0.17,
+        "cl_pct": 0.15,
+        "k_pct": 0.7,
+        "mg_pct": 0.05,
+        "linoleic": 1,
+        "total_arg_pct": 1.6,
+        "sid_arg_pct": 1.424,
+        "total_his_pct": 0.58,
+        "sid_his_pct": 0.516,
+        "total_ile_pct": 1.1,
+        "sid_ile_pct": 0.979,
+        "total_leu_pct": 1.9,
+        "sid_leu_pct": 1.691,
+        "total_lys_pct": 1.53,
+        "sid_lys_pct": 1.362,
+        "total_met_pct": 0.46,
+        "sid_met_pct": 0.409,
+        "total_metcys_pct": 0.9,
+        "sid_metcys_pct": 0.801,
+        "total_phetyr_pct": 1.8,
+        "sid_phetyr_pct": 1.602,
+        "total_thr_pct": 0.94,
+        "sid_thr_pct": 0.837,
+        "total_trp_pct": 0.26,
+        "sid_trp_pct": 0.231,
+        "total_val_pct": 1.1,
+        "sid_val_pct": 0.979,
+        "me_mj_per_kg": 11.715
+      }
+    },
+    "poultry_turkey_layer_nrc2026_wk_3_6_v1": {
+      "phase": "wk_3_6",
+      "label": "NRC 2026 Turkey 3–6 wk v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 16-2",
+        "basis_note": "Total AAs (footnote f); sid_*=total*0.89."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 2860,
+        "cp_pct": 27,
+        "ca_pct": 1.15,
+        "avp_pct": 0.58,
+        "na_pct": 0.15,
+        "cl_pct": 0.14,
+        "k_pct": 0.6,
+        "mg_pct": 0.05,
+        "linoleic": 1,
+        "total_arg_pct": 1.5,
+        "sid_arg_pct": 1.335,
+        "total_his_pct": 0.5,
+        "sid_his_pct": 0.445,
+        "total_ile_pct": 1,
+        "sid_ile_pct": 0.89,
+        "total_leu_pct": 1.8,
+        "sid_leu_pct": 1.602,
+        "total_lys_pct": 1.37,
+        "sid_lys_pct": 1.219,
+        "total_met_pct": 0.48,
+        "sid_met_pct": 0.427,
+        "total_metcys_pct": 0.85,
+        "sid_metcys_pct": 0.756,
+        "total_phetyr_pct": 1.7,
+        "sid_phetyr_pct": 1.513,
+        "total_thr_pct": 0.89,
+        "sid_thr_pct": 0.792,
+        "total_trp_pct": 0.25,
+        "sid_trp_pct": 0.223,
+        "total_val_pct": 1.1,
+        "sid_val_pct": 0.979,
+        "me_mj_per_kg": 11.966
+      }
+    },
+    "poultry_turkey_layer_nrc2026_wk_6_9_v1": {
+      "phase": "wk_6_9",
+      "label": "NRC 2026 Turkey 6–9 wk v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 16-2",
+        "basis_note": "Total AAs (footnote f); sid_*=total*0.89."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 2930,
+        "cp_pct": 25,
+        "ca_pct": 1,
+        "avp_pct": 0.5,
+        "na_pct": 0.12,
+        "cl_pct": 0.14,
+        "k_pct": 0.6,
+        "mg_pct": 0.05,
+        "linoleic": 1,
+        "total_arg_pct": 1.3,
+        "sid_arg_pct": 1.157,
+        "total_his_pct": 0.5,
+        "sid_his_pct": 0.445,
+        "total_ile_pct": 0.9,
+        "sid_ile_pct": 0.801,
+        "total_leu_pct": 1.7,
+        "sid_leu_pct": 1.513,
+        "total_lys_pct": 1.25,
+        "sid_lys_pct": 1.113,
+        "total_met_pct": 0.43,
+        "sid_met_pct": 0.383,
+        "total_metcys_pct": 0.74,
+        "sid_metcys_pct": 0.659,
+        "total_phetyr_pct": 1.5,
+        "sid_phetyr_pct": 1.335,
+        "total_thr_pct": 0.82,
+        "sid_thr_pct": 0.73,
+        "total_trp_pct": 0.23,
+        "sid_trp_pct": 0.205,
+        "total_val_pct": 1,
+        "sid_val_pct": 0.89,
+        "me_mj_per_kg": 12.259
+      }
+    },
+    "poultry_turkey_layer_nrc2026_wk_9_12_v1": {
+      "phase": "wk_9_12",
+      "label": "NRC 2026 Turkey 9–12 wk v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 16-2",
+        "basis_note": "Total AAs (footnote f); sid_*=total*0.89."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 3000,
+        "cp_pct": 22,
+        "ca_pct": 0.9,
+        "avp_pct": 0.45,
+        "na_pct": 0.1,
+        "cl_pct": 0.14,
+        "k_pct": 0.5,
+        "mg_pct": 0.05,
+        "linoleic": 0.8,
+        "total_arg_pct": 1.1,
+        "sid_arg_pct": 0.979,
+        "total_his_pct": 0.4,
+        "sid_his_pct": 0.356,
+        "total_ile_pct": 0.8,
+        "sid_ile_pct": 0.712,
+        "total_leu_pct": 1.5,
+        "sid_leu_pct": 1.335,
+        "total_lys_pct": 0.98,
+        "sid_lys_pct": 0.872,
+        "total_met_pct": 0.32,
+        "sid_met_pct": 0.285,
+        "total_metcys_pct": 0.62,
+        "sid_metcys_pct": 0.552,
+        "total_phetyr_pct": 1.2,
+        "sid_phetyr_pct": 1.068,
+        "total_thr_pct": 0.72,
+        "sid_thr_pct": 0.641,
+        "total_trp_pct": 0.2,
+        "sid_trp_pct": 0.178,
+        "total_val_pct": 0.9,
+        "sid_val_pct": 0.801,
+        "me_mj_per_kg": 12.552
+      }
+    },
+    "poultry_turkey_layer_nrc2026_wk_12_15_v1": {
+      "phase": "wk_12_15",
+      "label": "NRC 2026 Turkey 12–15 wk v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 16-2",
+        "basis_note": "Total AAs (footnote f); sid_*=total*0.89."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 3100,
+        "cp_pct": 19,
+        "ca_pct": 0.8,
+        "avp_pct": 0.4,
+        "na_pct": 0.1,
+        "cl_pct": 0.12,
+        "k_pct": 0.5,
+        "mg_pct": 0.05,
+        "linoleic": 0.8,
+        "total_arg_pct": 0.9,
+        "sid_arg_pct": 0.801,
+        "total_his_pct": 0.3,
+        "sid_his_pct": 0.267,
+        "total_ile_pct": 0.6,
+        "sid_ile_pct": 0.534,
+        "total_leu_pct": 1.3,
+        "sid_leu_pct": 1.157,
+        "total_lys_pct": 0.76,
+        "sid_lys_pct": 0.676,
+        "total_met_pct": 0.35,
+        "sid_met_pct": 0.311,
+        "total_metcys_pct": 0.46,
+        "sid_metcys_pct": 0.409,
+        "total_phetyr_pct": 1,
+        "sid_phetyr_pct": 0.89,
+        "total_thr_pct": 0.59,
+        "sid_thr_pct": 0.525,
+        "total_trp_pct": 0.18,
+        "sid_trp_pct": 0.16,
+        "total_val_pct": 0.8,
+        "sid_val_pct": 0.712,
+        "me_mj_per_kg": 12.97
+      }
+    },
+    "poultry_turkey_layer_nrc2026_wk_15_18_v1": {
+      "phase": "wk_15_18",
+      "label": "NRC 2026 Turkey 15–18 wk v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 16-2",
+        "basis_note": "Total AAs (footnote f); sid_*=total*0.89."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 3200,
+        "cp_pct": 16.5,
+        "ca_pct": 0.75,
+        "avp_pct": 0.37,
+        "na_pct": 0.1,
+        "cl_pct": 0.12,
+        "k_pct": 0.4,
+        "mg_pct": 0.05,
+        "linoleic": 0.8,
+        "total_arg_pct": 0.75,
+        "sid_arg_pct": 0.667,
+        "total_his_pct": 0.3,
+        "sid_his_pct": 0.267,
+        "total_ile_pct": 0.5,
+        "sid_ile_pct": 0.445,
+        "total_leu_pct": 1,
+        "sid_leu_pct": 0.89,
+        "total_lys_pct": 0.76,
+        "sid_lys_pct": 0.676,
+        "total_met_pct": 0.25,
+        "sid_met_pct": 0.223,
+        "total_metcys_pct": 0.42,
+        "sid_metcys_pct": 0.374,
+        "total_phetyr_pct": 0.9,
+        "sid_phetyr_pct": 0.801,
+        "total_thr_pct": 0.58,
+        "sid_thr_pct": 0.516,
+        "total_trp_pct": 0.18,
+        "sid_trp_pct": 0.16,
+        "total_val_pct": 0.7,
+        "sid_val_pct": 0.623,
+        "me_mj_per_kg": 13.389
+      }
+    },
+    "poultry_turkey_layer_nrc2026_breeder_holding_v1": {
+      "phase": "breeder_holding",
+      "label": "NRC 2026 Turkey Breeder (Holding) v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 16-2",
+        "basis_note": "Total AAs (footnote f); sid_*=total*0.89."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 14,
+        "ca_pct": 0.65,
+        "avp_pct": 0.35,
+        "na_pct": 0.12,
+        "cl_pct": 0.12,
+        "k_pct": 0.4,
+        "mg_pct": 0.05,
+        "linoleic": 0.8,
+        "total_arg_pct": 0.5,
+        "sid_arg_pct": 0.445,
+        "total_his_pct": 0.2,
+        "sid_his_pct": 0.178,
+        "total_ile_pct": 0.4,
+        "sid_ile_pct": 0.356,
+        "total_leu_pct": 0.5,
+        "sid_leu_pct": 0.445,
+        "total_lys_pct": 0.5,
+        "sid_lys_pct": 0.445,
+        "total_met_pct": 0.2,
+        "sid_met_pct": 0.178,
+        "total_metcys_pct": 0.4,
+        "sid_metcys_pct": 0.356,
+        "total_phetyr_pct": 0.8,
+        "sid_phetyr_pct": 0.712,
+        "total_thr_pct": 0.4,
+        "sid_thr_pct": 0.356,
+        "total_trp_pct": 0.1,
+        "sid_trp_pct": 0.089,
+        "total_val_pct": 0.5,
+        "sid_val_pct": 0.445,
+        "me_mj_per_kg": 12.134
+      }
+    },
+    "poultry_turkey_layer_nrc2026_breeder_laying_v1": {
+      "phase": "breeder_laying",
+      "label": "NRC 2026 Turkey Breeder (Laying) v1",
+      "doc_meta": {
+        "source": "NRC 2026 Table 16-2",
+        "basis_note": "Total AAs (footnote f); sid_*=total*0.89."
+      },
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 16,
+        "ca_pct": 2.9,
+        "avp_pct": 0.35,
+        "na_pct": 0.12,
+        "cl_pct": 0.12,
+        "k_pct": 0.6,
+        "mg_pct": 0.05,
+        "linoleic": 1.1,
+        "total_arg_pct": 0.6,
+        "sid_arg_pct": 0.534,
+        "total_his_pct": 0.3,
+        "sid_his_pct": 0.267,
+        "total_ile_pct": 0.5,
+        "sid_ile_pct": 0.445,
+        "total_leu_pct": 0.5,
+        "sid_leu_pct": 0.445,
+        "total_lys_pct": 0.6,
+        "sid_lys_pct": 0.534,
+        "total_met_pct": 0.2,
+        "sid_met_pct": 0.178,
+        "total_metcys_pct": 0.4,
+        "sid_metcys_pct": 0.356,
+        "total_phetyr_pct": 1,
+        "sid_phetyr_pct": 0.89,
+        "total_thr_pct": 0.45,
+        "sid_thr_pct": 0.401,
+        "total_trp_pct": 0.13,
+        "sid_trp_pct": 0.116,
+        "total_val_pct": 0.58,
+        "sid_val_pct": 0.516,
+        "me_mj_per_kg": 12.134
+      }
+    },
+    "poultry_turkey_layer_nicholas_prelay_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 14.5,
+        "sid_lys_pct": 0.58,
+        "sid_met_pct": 0.2,
+        "sid_metcys_pct": 0.35,
+        "sid_thr_pct": 0.38,
+        "sid_trp_pct": 0.1,
+        "sid_arg_pct": 0.49,
+        "ca_pct": 2.2,
+        "avp_pct": 0.4,
+        "na_pct": 0.17
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "prelay"
+      }
+    },
+    "poultry_turkey_layer_nicholas_early_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "early"
+      }
+    },
+    "poultry_turkey_layer_nicholas_peak_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "peak"
+      }
+    },
+    "poultry_turkey_layer_nicholas_late_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.72,
+        "cp_pct": 16.5,
+        "sid_lys_pct": 0.7,
+        "sid_met_pct": 0.35,
+        "sid_metcys_pct": 0.58,
+        "sid_thr_pct": 0.5,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.73,
+        "ca_pct": 2.8,
+        "avp_pct": 0.36,
+        "na_pct": 0.17,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "late"
+      }
+    },
+    "poultry_turkey_layer_aviagen_prelay_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 14.5,
+        "sid_lys_pct": 0.58,
+        "sid_met_pct": 0.2,
+        "sid_metcys_pct": 0.35,
+        "sid_thr_pct": 0.38,
+        "sid_trp_pct": 0.1,
+        "sid_arg_pct": 0.49,
+        "ca_pct": 2.2,
+        "avp_pct": 0.4,
+        "na_pct": 0.17
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "prelay"
+      }
+    },
+    "poultry_turkey_layer_aviagen_early_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "early"
+      }
+    },
+    "poultry_turkey_layer_aviagen_peak_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "peak"
+      }
+    },
+    "poultry_turkey_layer_aviagen_late_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.72,
+        "cp_pct": 16.5,
+        "sid_lys_pct": 0.7,
+        "sid_met_pct": 0.35,
+        "sid_metcys_pct": 0.58,
+        "sid_thr_pct": 0.5,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.73,
+        "ca_pct": 2.8,
+        "avp_pct": 0.36,
+        "na_pct": 0.17,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "late"
+      }
+    },
+    "poultry_turkey_layer_but6_prelay_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 14.5,
+        "sid_lys_pct": 0.58,
+        "sid_met_pct": 0.2,
+        "sid_metcys_pct": 0.35,
+        "sid_thr_pct": 0.38,
+        "sid_trp_pct": 0.1,
+        "sid_arg_pct": 0.49,
+        "ca_pct": 2.2,
+        "avp_pct": 0.4,
+        "na_pct": 0.17
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "prelay"
+      }
+    },
+    "poultry_turkey_layer_but6_early_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "early"
+      }
+    },
+    "poultry_turkey_layer_but6_peak_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "peak"
+      }
+    },
+    "poultry_turkey_layer_but6_late_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.72,
+        "cp_pct": 16.5,
+        "sid_lys_pct": 0.7,
+        "sid_met_pct": 0.35,
+        "sid_metcys_pct": 0.58,
+        "sid_thr_pct": 0.5,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.73,
+        "ca_pct": 2.8,
+        "avp_pct": 0.36,
+        "na_pct": 0.17,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Aviagen Turkey NU19 V2 Breeder Guidelines (2025) - standard breeder laying; prelay=Grower3 restriction phase",
+        "phase": "late"
+      }
+    },
+    "poultry_turkey_layer_hybrid_converter_prelay_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 14.5,
+        "sid_lys_pct": 0.58,
+        "sid_met_pct": 0.2,
+        "sid_metcys_pct": 0.35,
+        "sid_thr_pct": 0.38,
+        "sid_trp_pct": 0.1,
+        "sid_arg_pct": 0.49,
+        "ca_pct": 2.2,
+        "avp_pct": 0.4,
+        "na_pct": 0.17
+      },
+      "meta": {
+        "source": "Generic turkey layer values (no breed-specific Hybrid Turkey layer spec available)",
+        "phase": "prelay"
+      }
+    },
+    "poultry_turkey_layer_hybrid_converter_early_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Generic turkey layer values (no breed-specific Hybrid Turkey layer spec available)",
+        "phase": "early"
+      }
+    },
+    "poultry_turkey_layer_hybrid_converter_peak_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Generic turkey layer values (no breed-specific Hybrid Turkey layer spec available)",
+        "phase": "peak"
+      }
+    },
+    "poultry_turkey_layer_hybrid_converter_late_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.72,
+        "cp_pct": 16.5,
+        "sid_lys_pct": 0.7,
+        "sid_met_pct": 0.35,
+        "sid_metcys_pct": 0.58,
+        "sid_thr_pct": 0.5,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.73,
+        "ca_pct": 2.8,
+        "avp_pct": 0.36,
+        "na_pct": 0.17,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      },
+      "meta": {
+        "source": "Generic turkey layer values (no breed-specific Hybrid Turkey layer spec available)",
+        "phase": "late"
+      }
+    },
+    "poultry_turkey_layer_generic_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 27,
+        "sid_lys_pct": 1.43,
+        "sid_met_pct": 0.47,
+        "sid_metcys_pct": 0.77,
+        "sid_thr_pct": 0.91,
+        "sid_trp_pct": 0.23,
+        "sid_arg_pct": 1.18,
+        "ca_pct": 1.45,
+        "avp_pct": 0.73,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_generic_grower_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 19.5,
+        "sid_lys_pct": 1.08,
+        "sid_met_pct": 0.36,
+        "sid_metcys_pct": 0.6,
+        "sid_thr_pct": 0.7,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 0.9,
+        "ca_pct": 1.35,
+        "avp_pct": 0.55,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_generic_developer_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 15.5,
+        "sid_lys_pct": 0.84,
+        "sid_met_pct": 0.28,
+        "sid_metcys_pct": 0.47,
+        "sid_thr_pct": 0.55,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.71,
+        "ca_pct": 1.15,
+        "avp_pct": 0.43,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_nicholas_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 27,
+        "sid_lys_pct": 1.43,
+        "sid_met_pct": 0.47,
+        "sid_metcys_pct": 0.77,
+        "sid_thr_pct": 0.91,
+        "sid_trp_pct": 0.23,
+        "sid_arg_pct": 1.18,
+        "ca_pct": 1.45,
+        "avp_pct": 0.73,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_nicholas_grower_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 19.5,
+        "sid_lys_pct": 1.08,
+        "sid_met_pct": 0.36,
+        "sid_metcys_pct": 0.6,
+        "sid_thr_pct": 0.7,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 0.9,
+        "ca_pct": 1.35,
+        "avp_pct": 0.55,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_nicholas_developer_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 15.5,
+        "sid_lys_pct": 0.84,
+        "sid_met_pct": 0.28,
+        "sid_metcys_pct": 0.47,
+        "sid_thr_pct": 0.55,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.71,
+        "ca_pct": 1.15,
+        "avp_pct": 0.43,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_aviagen_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 27,
+        "sid_lys_pct": 1.43,
+        "sid_met_pct": 0.47,
+        "sid_metcys_pct": 0.77,
+        "sid_thr_pct": 0.91,
+        "sid_trp_pct": 0.23,
+        "sid_arg_pct": 1.18,
+        "ca_pct": 1.45,
+        "avp_pct": 0.73,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_aviagen_grower_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 19.5,
+        "sid_lys_pct": 1.08,
+        "sid_met_pct": 0.36,
+        "sid_metcys_pct": 0.6,
+        "sid_thr_pct": 0.7,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 0.9,
+        "ca_pct": 1.35,
+        "avp_pct": 0.55,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_aviagen_developer_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 15.5,
+        "sid_lys_pct": 0.84,
+        "sid_met_pct": 0.28,
+        "sid_metcys_pct": 0.47,
+        "sid_thr_pct": 0.55,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.71,
+        "ca_pct": 1.15,
+        "avp_pct": 0.43,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_but6_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 27,
+        "sid_lys_pct": 1.43,
+        "sid_met_pct": 0.47,
+        "sid_metcys_pct": 0.77,
+        "sid_thr_pct": 0.91,
+        "sid_trp_pct": 0.23,
+        "sid_arg_pct": 1.18,
+        "ca_pct": 1.45,
+        "avp_pct": 0.73,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_but6_grower_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 19.5,
+        "sid_lys_pct": 1.08,
+        "sid_met_pct": 0.36,
+        "sid_metcys_pct": 0.6,
+        "sid_thr_pct": 0.7,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 0.9,
+        "ca_pct": 1.35,
+        "avp_pct": 0.55,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_but6_developer_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 15.5,
+        "sid_lys_pct": 0.84,
+        "sid_met_pct": 0.28,
+        "sid_metcys_pct": 0.47,
+        "sid_thr_pct": 0.55,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.71,
+        "ca_pct": 1.15,
+        "avp_pct": 0.43,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_hybrid_converter_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 27,
+        "sid_lys_pct": 1.43,
+        "sid_met_pct": 0.47,
+        "sid_metcys_pct": 0.77,
+        "sid_thr_pct": 0.91,
+        "sid_trp_pct": 0.23,
+        "sid_arg_pct": 1.18,
+        "ca_pct": 1.45,
+        "avp_pct": 0.73,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_hybrid_converter_grower_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 19.5,
+        "sid_lys_pct": 1.08,
+        "sid_met_pct": 0.36,
+        "sid_metcys_pct": 0.6,
+        "sid_thr_pct": 0.7,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 0.9,
+        "ca_pct": 1.35,
+        "avp_pct": 0.55,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_hybrid_converter_developer_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 15.5,
+        "sid_lys_pct": 0.84,
+        "sid_met_pct": 0.28,
+        "sid_metcys_pct": 0.47,
+        "sid_thr_pct": 0.55,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.71,
+        "ca_pct": 1.15,
+        "avp_pct": 0.43,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_but9_starter_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 27,
+        "sid_lys_pct": 1.43,
+        "sid_met_pct": 0.47,
+        "sid_metcys_pct": 0.77,
+        "sid_thr_pct": 0.91,
+        "sid_trp_pct": 0.23,
+        "sid_arg_pct": 1.18,
+        "ca_pct": 1.45,
+        "avp_pct": 0.73,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_but9_grower_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.807,
+        "cp_pct": 19.5,
+        "sid_lys_pct": 1.08,
+        "sid_met_pct": 0.36,
+        "sid_metcys_pct": 0.6,
+        "sid_thr_pct": 0.7,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 0.9,
+        "ca_pct": 1.35,
+        "avp_pct": 0.55,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_but9_developer_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 15.5,
+        "sid_lys_pct": 0.84,
+        "sid_met_pct": 0.28,
+        "sid_metcys_pct": 0.47,
+        "sid_thr_pct": 0.55,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.71,
+        "ca_pct": 1.15,
+        "avp_pct": 0.43,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_but9_prelay_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.723,
+        "cp_pct": 14.5,
+        "sid_lys_pct": 0.58,
+        "sid_met_pct": 0.2,
+        "sid_metcys_pct": 0.35,
+        "sid_thr_pct": 0.38,
+        "sid_trp_pct": 0.1,
+        "sid_arg_pct": 0.49,
+        "ca_pct": 2.2,
+        "avp_pct": 0.4,
+        "na_pct": 0.17
+      }
+    },
+    "poultry_turkey_layer_but9_early_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      }
+    },
+    "poultry_turkey_layer_but9_peak_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2820,
+        "me_mj_per_kg": 11.8,
+        "cp_pct": 17.5,
+        "sid_lys_pct": 0.74,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.61,
+        "sid_thr_pct": 0.53,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.77,
+        "ca_pct": 2.8,
+        "avp_pct": 0.38,
+        "na_pct": 0.18,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      }
+    },
+    "poultry_turkey_layer_but9_late_v1": {
+      "inherits": "generic",
+      "targets_override": {
+        "me_kcal_per_kg": 2800,
+        "me_mj_per_kg": 11.72,
+        "cp_pct": 16.5,
+        "sid_lys_pct": 0.7,
+        "sid_met_pct": 0.35,
+        "sid_metcys_pct": 0.58,
+        "sid_thr_pct": 0.5,
+        "sid_trp_pct": 0.15,
+        "sid_arg_pct": 0.73,
+        "ca_pct": 2.8,
+        "avp_pct": 0.36,
+        "na_pct": 0.17,
+        "cl_pct": 0.21,
+        "k_pct": 0.85
+      }
     }
   }
 }

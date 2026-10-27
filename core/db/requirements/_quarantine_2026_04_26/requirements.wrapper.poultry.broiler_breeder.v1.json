@@ -1,0 +1,15 @@
+{
+  "_LOCK": {
+    "version": "v1",
+    "mode": "option_b_wrapper",
+    "note": "Wrapper for Option-B: points resolver to index+library for broiler_breeder."
+  },
+  "species": "poultry",
+  "type": "broiler_breeder",
+  "version": "v1",
+  "resolver": {
+    "mode": "option_b",
+    "index_file": "requirements.index.poultry.broiler_breeder.v1.json",
+    "library_file": "requirements.library.poultry.broiler_breeder.v1.json"
+  }
+}

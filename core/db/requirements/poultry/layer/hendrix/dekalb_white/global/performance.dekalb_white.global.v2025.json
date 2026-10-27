@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "breed": "dekalb_white",
+    "species": "poultry",
+    "production": "layer",
+    "age_unit": "week",
+    "source": "Hendrix Genetics Dekalb White Management Guide 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "week": 18, "body_wt_g": 1320, "egg_prod_pct": 8,  "egg_wt_g": 46.5, "feed_per_bird_g": 86,  "fcr": null, "mortality_pct_max": 0.3 },
+    { "week": 22, "body_wt_g": 1430, "egg_prod_pct": 88, "egg_wt_g": 54.5, "feed_per_bird_g": 98,  "fcr": null, "mortality_pct_max": 0.6 },
+    { "week": 28, "body_wt_g": 1490, "egg_prod_pct": 95, "egg_wt_g": 58.5, "feed_per_bird_g": 103, "fcr": 1.98, "mortality_pct_max": 1.0 },
+    { "week": 40, "body_wt_g": 1530, "egg_prod_pct": 92, "egg_wt_g": 60.5, "feed_per_bird_g": 103, "fcr": 2.12, "mortality_pct_max": 2.0 },
+    { "week": 60, "body_wt_g": 1560, "egg_prod_pct": 85, "egg_wt_g": 61.0, "feed_per_bird_g": 101, "fcr": 2.30, "mortality_pct_max": 3.5 },
+    { "week": 80, "body_wt_g": 1590, "egg_prod_pct": 71, "egg_wt_g": 60.5, "feed_per_bird_g": 97,  "fcr": 2.65, "mortality_pct_max": 7.0 }
+  ]
+}

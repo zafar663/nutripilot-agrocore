@@ -1,53 +1,723 @@
-﻿{
-  "_LOCK": {
-    "version": "v1",
-    "note": "Global Invariants: minerals + synthetic amino acids merged into all regions."
-  },
-  "db": {
-    "salt": {
-      "display_name": "Salt (NaCl)",
-      "category": "mineral",
-      "na": 39.34,
-      "cl": 60.66
+{
+    "_LOCK": {
+        "version": "v2",
+        "note": "Global Invariants v2: minerals, synthetic AAs, vitamins, buffers, binders — merged into ALL species/regions automatically.",
+        "species_compatibility": "all",
+        "source_refs": [
+            "NRC_2001_Dairy",
+            "NRC_2000_Beef",
+            "NRC_2007_SmallRuminants",
+            "PIC_2021",
+            "Rostagno_2022",
+            "NRC_2012_Swine"
+        ]
     },
-    "sodium_bicarbonate": {
-      "display_name": "Sodium bicarbonate",
-      "category": "mineral",
-      "na": 27.37
-    },
-    "limestone": {
-      "display_name": "Limestone",
-      "category": "mineral",
-      "ca": 38.0
-    },
-    "dcp": {
-      "display_name": "Dicalcium phosphate",
-      "category": "mineral",
-      "ca": 23.0,
-      "p_total": 18.5,
-      "avp": 18.5
-    },
-    "mcp": {
-      "display_name": "Monocalcium phosphate",
-      "category": "mineral",
-      "ca": 16.5,
-      "p_total": 22.7,
-      "avp": 22.7
-    },
-    "dl_met": {
-      "display_name": "DL-Methionine",
-      "category": "synthetic_aa",
-      "total_met": 99.0
-    },
-    "l_lys_hcl": {
-      "display_name": "L-Lysine HCl",
-      "category": "synthetic_aa",
-      "total_lys": 78.8
-    },
-    "l_thr": {
-      "display_name": "L-Threonine",
-      "category": "synthetic_aa",
-      "total_thr": 98.0
+    "db": {
+        "_comment_minerals": "═══ MACROMINERALS ═══",
+        "salt": {
+            "display_name": "Salt (NaCl)",
+            "category": "mineral",
+            "ingredient_type": "sodium_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "na": 39.34,
+            "cl": 60.66
+        },
+        "sodium_bicarbonate": {
+            "display_name": "Sodium Bicarbonate",
+            "category": "mineral",
+            "ingredient_type": "buffer",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "na": 27.37,
+            "notes": "Rumen buffer for dairy. Also used as Na source in poultry/swine."
+        },
+        "limestone": {
+            "display_name": "Limestone (Calcium Carbonate)",
+            "category": "mineral",
+            "ingredient_type": "calcium_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "ca": 38.0,
+            "p_total": 0.02
+        },
+        "dcp": {
+            "display_name": "Dicalcium Phosphate",
+            "category": "mineral",
+            "ingredient_type": "calcium_phosphorus_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 97.0,
+            "ca": 23.0,
+            "p_total": 18.5,
+            "avp": 18.5,
+            "sttd_p": 18.5
+        },
+        "mcp": {
+            "display_name": "Monocalcium Phosphate",
+            "category": "mineral",
+            "ingredient_type": "phosphorus_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 97.0,
+            "ca": 16.5,
+            "p_total": 22.7,
+            "avp": 22.7,
+            "sttd_p": 22.7
+        },
+        "dicalcium_phosphate": {
+            "display_name": "Dicalcium Phosphate (DCP)",
+            "category": "mineral",
+            "ingredient_type": "calcium_phosphorus_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 97.0,
+            "ca": 23.0,
+            "p_total": 18.5,
+            "avp": 18.5,
+            "sttd_p": 18.5
+        },
+        "monocalcium_phosphate": {
+            "display_name": "Monocalcium Phosphate (MCP)",
+            "category": "mineral",
+            "ingredient_type": "phosphorus_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 97.0,
+            "ca": 16.5,
+            "p_total": 22.7,
+            "avp": 22.7,
+            "sttd_p": 22.7
+        },
+        "magnesium_oxide": {
+            "display_name": "Magnesium Oxide (MgO)",
+            "category": "mineral",
+            "ingredient_type": "magnesium_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "mg": 54.0,
+            "notes": "High bioavailability Mg source. Also rumen buffer in dairy."
+        },
+        "magnesium_sulfate": {
+            "display_name": "Magnesium Sulfate (Epsom Salt)",
+            "category": "mineral",
+            "ingredient_type": "magnesium_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "mg": 9.9,
+            "s": 13.0
+        },
+        "potassium_chloride": {
+            "display_name": "Potassium Chloride",
+            "category": "mineral",
+            "ingredient_type": "potassium_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "k": 52.0,
+            "cl": 47.5
+        },
+        "potassium_carbonate": {
+            "display_name": "Potassium Carbonate",
+            "category": "mineral",
+            "ingredient_type": "potassium_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "k": 56.5
+        },
+        "sodium_sulfate": {
+            "display_name": "Sodium Sulfate",
+            "category": "mineral",
+            "ingredient_type": "sodium_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "na": 32.4,
+            "s": 22.6
+        },
+        "calcium_chloride": {
+            "display_name": "Calcium Chloride",
+            "category": "mineral",
+            "ingredient_type": "calcium_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "ca": 36.1,
+            "cl": 63.9
+        },
+        "_comment_trace": "═══ TRACE MINERALS ═══",
+        "zinc_oxide": {
+            "display_name": "Zinc Oxide",
+            "category": "mineral",
+            "ingredient_type": "trace_mineral",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "zn_ppm": 800000,
+            "notes": "80% Zn. Pharmacological levels (2000-3000ppm) in nursery swine only."
+        },
+        "zinc_sulfate": {
+            "display_name": "Zinc Sulfate",
+            "category": "mineral",
+            "ingredient_type": "trace_mineral",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "zn_ppm": 360000
+        },
+        "copper_sulfate": {
+            "display_name": "Copper Sulfate",
+            "category": "mineral",
+            "ingredient_type": "trace_mineral",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cu_ppm": 250000,
+            "notes": "25% Cu. Monitor total Cu in sheep diets — max 15ppm total diet."
+        },
+        "manganese_oxide": {
+            "display_name": "Manganese Oxide",
+            "category": "mineral",
+            "ingredient_type": "trace_mineral",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "mn_ppm": 600000
+        },
+        "ferrous_sulfate": {
+            "display_name": "Ferrous Sulfate",
+            "category": "mineral",
+            "ingredient_type": "trace_mineral",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "fe_ppm": 200000
+        },
+        "sodium_selenite": {
+            "display_name": "Sodium Selenite",
+            "category": "mineral",
+            "ingredient_type": "trace_mineral",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "se_ppm": 450000,
+            "notes": "45% Se. Max dietary Se 0.3ppm in most species."
+        },
+        "potassium_iodide": {
+            "display_name": "Potassium Iodide",
+            "category": "mineral",
+            "ingredient_type": "trace_mineral",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "i_ppm": 680000
+        },
+        "cobalt_carbonate": {
+            "display_name": "Cobalt Carbonate",
+            "category": "mineral",
+            "ingredient_type": "trace_mineral",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "46% Co. Essential for ruminants (vitamin B12 synthesis)."
+        },
+        "_comment_aa": "═══ SYNTHETIC AMINO ACIDS ═══",
+        "dl_met": {
+            "display_name": "DL-Methionine",
+            "category": "synthetic_aa",
+            "ingredient_type": "methionine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_met": 99.0,
+            "sid_met": 99.0,
+            "sid_metcys": 99.0,
+            "me": 4990,
+            "amen": 4990,
+            "dig_met": 100,
+            "sid_coef_met": 100
+        },
+        "l_lys_hcl": {
+            "display_name": "L-Lysine HCl",
+            "category": "synthetic_aa",
+            "ingredient_type": "lysine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_lys": 78.8,
+            "sid_lys": 78.8,
+            "me": 4643,
+            "amen": 4643,
+            "dig_lys": 100,
+            "sid_coef_lys": 100
+        },
+        "l_thr": {
+            "display_name": "L-Threonine",
+            "category": "synthetic_aa",
+            "ingredient_type": "threonine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_thr": 98.0,
+            "sid_thr": 98.0,
+            "dig_thr": 100,
+            "sid_coef_thr": 100
+        },
+        "l_trp": {
+            "display_name": "L-Tryptophan",
+            "category": "synthetic_aa",
+            "ingredient_type": "tryptophan_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_trp": 98.0,
+            "sid_trp": 98.0,
+            "dig_trp": 100,
+            "sid_coef_trp": 100
+        },
+        "l_val": {
+            "display_name": "L-Valine",
+            "category": "synthetic_aa",
+            "ingredient_type": "valine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_val": 98.0,
+            "sid_val": 98.0,
+            "dig_val": 100,
+            "sid_coef_val": 100
+        },
+        "l_ile": {
+            "display_name": "L-Isoleucine",
+            "category": "synthetic_aa",
+            "ingredient_type": "isoleucine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_ile": 98.0,
+            "sid_ile": 98.0,
+            "dig_ile": 100,
+            "sid_coef_ile": 100
+        },
+        "l_arg": {
+            "display_name": "L-Arginine",
+            "category": "synthetic_aa",
+            "ingredient_type": "arginine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_arg": 98.0,
+            "sid_arg": 98.0,
+            "dig_arg": 100,
+            "sid_coef_arg": 100
+        },
+        "l_leu": {
+            "display_name": "L-Leucine",
+            "category": "synthetic_aa",
+            "ingredient_type": "leucine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_leu": 98.0,
+            "sid_leu": 98.0,
+            "dig_leu": 100,
+            "sid_coef_leu": 100
+        },
+        "l_his": {
+            "display_name": "L-Histidine",
+            "category": "synthetic_aa",
+            "ingredient_type": "histidine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_his": 98.0,
+            "sid_his": 98.0,
+            "dig_his": 100,
+            "sid_coef_his": 100
+        },
+        "l_phe": {
+            "display_name": "L-Phenylalanine",
+            "category": "synthetic_aa",
+            "ingredient_type": "phenylalanine_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "cp": 0,
+            "total_phe": 98.0,
+            "sid_phe": 98.0,
+            "dig_phe": 100,
+            "sid_coef_phe": 100
+        },
+        "_comment_vitamins": "═══ VITAMINS ═══",
+        "vitamin_a_acetate": {
+            "display_name": "Vitamin A Acetate",
+            "category": "vitamin",
+            "ingredient_type": "vitamin_a_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "500,000 IU/g typical. Include at label rate."
+        },
+        "vitamin_d3": {
+            "display_name": "Vitamin D3 (Cholecalciferol)",
+            "category": "vitamin",
+            "ingredient_type": "vitamin_d_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "500,000 IU/g typical. Include at label rate."
+        },
+        "vitamin_e_acetate": {
+            "display_name": "Vitamin E Acetate (dl-Alpha Tocopheryl)",
+            "category": "vitamin",
+            "ingredient_type": "vitamin_e_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "500 IU/g typical. Include at label rate."
+        },
+        "vitamin_k3": {
+            "display_name": "Vitamin K3 (Menadione)",
+            "category": "vitamin",
+            "ingredient_type": "vitamin_k_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0
+        },
+        "thiamine_hcl": {
+            "display_name": "Thiamine HCl (Vitamin B1)",
+            "category": "vitamin",
+            "ingredient_type": "vitamin_b1_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0
+        },
+        "riboflavin": {
+            "display_name": "Riboflavin (Vitamin B2)",
+            "category": "vitamin",
+            "ingredient_type": "vitamin_b2_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 96.0
+        },
+        "pyridoxine_hcl": {
+            "display_name": "Pyridoxine HCl (Vitamin B6)",
+            "category": "vitamin",
+            "ingredient_type": "vitamin_b6_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0
+        },
+        "cyanocobalamin": {
+            "display_name": "Cyanocobalamin (Vitamin B12)",
+            "category": "vitamin",
+            "ingredient_type": "vitamin_b12_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0
+        },
+        "niacin": {
+            "display_name": "Niacin (Nicotinic Acid)",
+            "category": "vitamin",
+            "ingredient_type": "niacin_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "niacin": 990
+        },
+        "calcium_pantothenate": {
+            "display_name": "Calcium Pantothenate (Vitamin B5)",
+            "category": "vitamin",
+            "ingredient_type": "pantothenic_acid_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "pantothenic_acid": 920
+        },
+        "folic_acid": {
+            "display_name": "Folic Acid",
+            "category": "vitamin",
+            "ingredient_type": "folate_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "folic_acid": 970
+        },
+        "biotin": {
+            "display_name": "Biotin (Vitamin H)",
+            "category": "vitamin",
+            "ingredient_type": "biotin_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "biotin": 980
+        },
+        "choline_chloride": {
+            "display_name": "Choline Chloride",
+            "category": "feed_additive",
+            "ingredient_type": "choline_source",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "choline": 600,
+            "cl": 16.4
+        },
+        "_comment_additives": "═══ FEED ADDITIVES / ENZYMES ═══",
+        "phytase": {
+            "display_name": "Phytase Enzyme",
+            "category": "enzyme",
+            "ingredient_type": "phytase",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Releases bound phosphorus from phytate. Typical: 500-1000 FTU/kg. Improves avP by 0.1-0.15%."
+        },
+        "xylanase": {
+            "display_name": "Xylanase Enzyme",
+            "category": "enzyme",
+            "ingredient_type": "nsp_enzyme",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "NSP-degrading enzyme. Improves ME by 50-100 kcal/kg in wheat-based diets."
+        },
+        "beta_glucanase": {
+            "display_name": "Beta-Glucanase Enzyme",
+            "category": "enzyme",
+            "ingredient_type": "nsp_enzyme",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "NSP-degrading enzyme. Improves ME in barley/oat-based diets."
+        },
+        "protease": {
+            "display_name": "Protease Enzyme",
+            "category": "enzyme",
+            "ingredient_type": "protease",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Improves protein digestibility by 2-4%. Reduces total CP requirement."
+        },
+        "lipase": {
+            "display_name": "Lipase Enzyme",
+            "category": "enzyme",
+            "ingredient_type": "lipase",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Improves fat digestibility. Useful in high-fat diets."
+        },
+        "mycotoxin_binder": {
+            "display_name": "Mycotoxin Binder",
+            "category": "additive",
+            "ingredient_type": "binder",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Adsorbs mycotoxins. Typical inclusion 0.05-0.2%. No nutritive value."
+        },
+        "toxin_binder": {
+            "display_name": "Toxin Binder",
+            "category": "additive",
+            "ingredient_type": "binder",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Broad-spectrum mycotoxin binder. Include at label rate."
+        },
+        "antioxidant_bha_bht": {
+            "display_name": "Antioxidant (BHA/BHT)",
+            "category": "additive",
+            "ingredient_type": "antioxidant",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Protects fat-soluble vitamins and fats from oxidation."
+        },
+        "acidifier_blend": {
+            "display_name": "Organic Acid Blend (Acidifier)",
+            "category": "additive",
+            "ingredient_type": "acidifier",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Formic/propionic/citric acid blend. Improves gut health and feed hygiene."
+        },
+        "probiotic_blend": {
+            "display_name": "Probiotic Blend",
+            "category": "additive",
+            "ingredient_type": "probiotic",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Live microorganisms. No nutritive value. Include at label rate."
+        },
+        "prebiotic_mos": {
+            "display_name": "Prebiotic (MOS)",
+            "category": "additive",
+            "ingredient_type": "prebiotic",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Mannan-oligosaccharides. Gut health support. Typical 0.1-0.2%."
+        },
+        "bentonite": {
+            "display_name": "Bentonite (Flow Agent/Binder)",
+            "category": "additive",
+            "ingredient_type": "binder",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 99.0,
+            "notes": "Pellet binder and flow agent. Max 2% of diet."
+        },
+        "_comment_fat": "═══ FATS AND OILS ═══",
+        "soybean_oil": {
+            "display_name": "Soybean Oil",
+            "category": "fat_oil",
+            "ingredient_type": "vegetable_oil",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 100.0,
+            "ee": 99.0,
+            "me": 8790,
+            "ne": 7440,
+            "de_mcal_kg": 9.0
+        },
+        "palm_oil": {
+            "display_name": "Palm Oil",
+            "category": "fat_oil",
+            "ingredient_type": "vegetable_oil",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 100.0,
+            "ee": 99.0,
+            "me": 8400,
+            "ne": 7100
+        },
+        "tallow": {
+            "display_name": "Beef Tallow",
+            "category": "fat_oil",
+            "ingredient_type": "animal_fat",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 100.0,
+            "ee": 99.0,
+            "me": 8000,
+            "ne": 6800
+        },
+        "canola_oil": {
+            "display_name": "Canola Oil",
+            "category": "fat_oil",
+            "ingredient_type": "vegetable_oil",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 100.0,
+            "ee": 99.0,
+            "me": 8800,
+            "ne": 7500
+        },
+        "corn_oil": {
+            "display_name": "Corn Oil",
+            "category": "fat_oil",
+            "ingredient_type": "vegetable_oil",
+            "species_compatibility": [
+                "all"
+            ],
+            "dm_pct": 100.0,
+            "ee": 99.0,
+            "me": 8790,
+            "ne": 7440
+        },
+        "_comment_urea": "═══ NPN SOURCES (RUMINANTS ONLY) ═══",
+        "urea": {
+            "display_name": "Urea (NPN Source)",
+            "category": "nit_non_protein",
+            "ingredient_type": "urea",
+            "species_compatibility": [
+                "dairy",
+                "beef",
+                "sheep",
+                "goat"
+            ],
+            "dm_pct": 99.0,
+            "cp": 281.0,
+            "notes": "NPN source — 281% CP equivalent. Ruminants ONLY. Max 1% DM cattle, 0.5% DM small ruminants."
+        }
     }
-  }
 }

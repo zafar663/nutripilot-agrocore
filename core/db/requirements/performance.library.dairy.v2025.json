@@ -1,0 +1,994 @@
+{
+  "_meta": {
+    "description": "Master dairy performance library",
+    "version": "v2025.1",
+    "age_unit": "week_of_lactation",
+    "sources": [
+      "Ehrlich JL (2011) Bovine Practitioner 45:88-96",
+      "NASEM 2021",
+      "CDCB/DHIA 2022",
+      "ICAR 2022",
+      "EMBRAPA 2021"
+    ]
+  },
+  "dairy_cow": {
+    "holstein": {
+      "_meta": {
+        "breed": "holstein",
+        "species": "dairy",
+        "production": "dairy_cow",
+        "age_unit": "week_of_lactation",
+        "source": "Holstein Association USA + Ehrlich 2011 + NASEM 2021 + CDCB 2022",
+        "data_quality": "official"
+      },
+      "warn_threshold_pct": 5,
+      "alert_threshold_pct": 10,
+      "annual_targets": {
+        "305d_milk_kg": 10900,
+        "peak_milk_kg_day": 50,
+        "peak_week": 7,
+        "scc_max": 200,
+        "pregnancy_rate_pct": 22,
+        "days_open_max": 115
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 28,
+          "fat_pct": 4.1,
+          "protein_pct": 3.28,
+          "scc_max": 200,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 36,
+          "fat_pct": 3.95,
+          "protein_pct": 3.18,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 43,
+          "fat_pct": 3.8,
+          "protein_pct": 3.1,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 7,
+          "milk_kg_day": 48,
+          "fat_pct": 3.72,
+          "protein_pct": 3.08,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 10,
+          "milk_kg_day": 46,
+          "fat_pct": 3.68,
+          "protein_pct": 3.05,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 15,
+          "milk_kg_day": 42,
+          "fat_pct": 3.68,
+          "protein_pct": 3.05,
+          "scc_max": 200,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 38,
+          "fat_pct": 3.7,
+          "protein_pct": 3.05,
+          "scc_max": 200,
+          "bcs_min": 2.9
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 30,
+          "fat_pct": 3.75,
+          "protein_pct": 3.1,
+          "scc_max": 200,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 22,
+          "fat_pct": 3.8,
+          "protein_pct": 3.15,
+          "scc_max": 250,
+          "bcs_min": 3.25
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 18,
+          "fat_pct": 3.9,
+          "protein_pct": 3.2,
+          "scc_max": 250,
+          "bcs_min": 3.5
+        }
+      ]
+    },
+    "jersey": {
+      "_meta": {
+        "breed": "jersey",
+        "species": "dairy",
+        "production": "dairy_cow",
+        "age_unit": "week_of_lactation",
+        "source": "CDCB 2022 + Ehrlich 2011. 305d avg 7,830 kg, fat 4.84%, protein 3.67%",
+        "data_quality": "official"
+      },
+      "warn_threshold_pct": 5,
+      "alert_threshold_pct": 10,
+      "annual_targets": {
+        "305d_milk_kg": 7830,
+        "peak_milk_kg_day": 35,
+        "peak_week": 7,
+        "scc_max": 200,
+        "pregnancy_rate_pct": 24,
+        "days_open_max": 110
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 18,
+          "fat_pct": 5.4,
+          "protein_pct": 3.9,
+          "scc_max": 200,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 24,
+          "fat_pct": 5.2,
+          "protein_pct": 3.8,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 30,
+          "fat_pct": 5.0,
+          "protein_pct": 3.72,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 7,
+          "milk_kg_day": 34,
+          "fat_pct": 4.85,
+          "protein_pct": 3.68,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 10,
+          "milk_kg_day": 33,
+          "fat_pct": 4.8,
+          "protein_pct": 3.65,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 15,
+          "milk_kg_day": 30,
+          "fat_pct": 4.78,
+          "protein_pct": 3.65,
+          "scc_max": 200,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 27,
+          "fat_pct": 4.8,
+          "protein_pct": 3.65,
+          "scc_max": 200,
+          "bcs_min": 2.9
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 22,
+          "fat_pct": 4.82,
+          "protein_pct": 3.68,
+          "scc_max": 200,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 16,
+          "fat_pct": 4.85,
+          "protein_pct": 3.7,
+          "scc_max": 250,
+          "bcs_min": 3.25
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 12,
+          "fat_pct": 4.9,
+          "protein_pct": 3.75,
+          "scc_max": 250,
+          "bcs_min": 3.5
+        }
+      ]
+    },
+    "brown_swiss": {
+      "_meta": {
+        "breed": "brown_swiss",
+        "species": "dairy",
+        "production": "dairy_cow",
+        "age_unit": "week_of_lactation",
+        "source": "CDCB 2022 + Ehrlich 2011. 305d avg 9,700 kg, fat 4.00%, protein 3.30%",
+        "data_quality": "official"
+      },
+      "warn_threshold_pct": 5,
+      "alert_threshold_pct": 10,
+      "annual_targets": {
+        "305d_milk_kg": 9700,
+        "peak_milk_kg_day": 44,
+        "peak_week": 8,
+        "scc_max": 200,
+        "pregnancy_rate_pct": 22,
+        "days_open_max": 115
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 24,
+          "fat_pct": 4.4,
+          "protein_pct": 3.55,
+          "scc_max": 200,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 32,
+          "fat_pct": 4.25,
+          "protein_pct": 3.45,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 39,
+          "fat_pct": 4.1,
+          "protein_pct": 3.35,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 43,
+          "fat_pct": 3.98,
+          "protein_pct": 3.3,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 42,
+          "fat_pct": 3.95,
+          "protein_pct": 3.28,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 37,
+          "fat_pct": 3.95,
+          "protein_pct": 3.28,
+          "scc_max": 200,
+          "bcs_min": 2.85
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 30,
+          "fat_pct": 4.0,
+          "protein_pct": 3.3,
+          "scc_max": 200,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 22,
+          "fat_pct": 4.05,
+          "protein_pct": 3.35,
+          "scc_max": 250,
+          "bcs_min": 3.25
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 18,
+          "fat_pct": 4.1,
+          "protein_pct": 3.4,
+          "scc_max": 250,
+          "bcs_min": 3.5
+        }
+      ]
+    },
+    "ayrshire": {
+      "_meta": {
+        "breed": "ayrshire",
+        "species": "dairy",
+        "production": "dairy_cow",
+        "age_unit": "week_of_lactation",
+        "source": "CDCB 2022 + Ehrlich 2011. 305d avg 8,260 kg, fat 3.83%, protein 3.13%",
+        "data_quality": "official"
+      },
+      "warn_threshold_pct": 5,
+      "alert_threshold_pct": 10,
+      "annual_targets": {
+        "305d_milk_kg": 8260,
+        "peak_milk_kg_day": 38,
+        "peak_week": 7,
+        "scc_max": 200,
+        "pregnancy_rate_pct": 23,
+        "days_open_max": 112
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 20,
+          "fat_pct": 4.2,
+          "protein_pct": 3.35,
+          "scc_max": 200,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 27,
+          "fat_pct": 4.05,
+          "protein_pct": 3.25,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 33,
+          "fat_pct": 3.92,
+          "protein_pct": 3.18,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 7,
+          "milk_kg_day": 37,
+          "fat_pct": 3.83,
+          "protein_pct": 3.13,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 35,
+          "fat_pct": 3.82,
+          "protein_pct": 3.12,
+          "scc_max": 200,
+          "bcs_min": 2.65
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 31,
+          "fat_pct": 3.83,
+          "protein_pct": 3.12,
+          "scc_max": 200,
+          "bcs_min": 2.85
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 25,
+          "fat_pct": 3.85,
+          "protein_pct": 3.14,
+          "scc_max": 200,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 18,
+          "fat_pct": 3.88,
+          "protein_pct": 3.16,
+          "scc_max": 250,
+          "bcs_min": 3.25
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 14,
+          "fat_pct": 3.92,
+          "protein_pct": 3.18,
+          "scc_max": 250,
+          "bcs_min": 3.5
+        }
+      ]
+    },
+    "guernsey": {
+      "_meta": {
+        "breed": "guernsey",
+        "species": "dairy",
+        "production": "dairy_cow",
+        "age_unit": "week_of_lactation",
+        "source": "CDCB 2022 + Ehrlich 2011. 305d avg 7,890 kg, fat 4.41%, protein 3.27%",
+        "data_quality": "official"
+      },
+      "warn_threshold_pct": 5,
+      "alert_threshold_pct": 10,
+      "annual_targets": {
+        "305d_milk_kg": 7890,
+        "peak_milk_kg_day": 36,
+        "peak_week": 7,
+        "scc_max": 200,
+        "pregnancy_rate_pct": 23,
+        "days_open_max": 112
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 19,
+          "fat_pct": 4.8,
+          "protein_pct": 3.5,
+          "scc_max": 200,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 25,
+          "fat_pct": 4.65,
+          "protein_pct": 3.4,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 31,
+          "fat_pct": 4.5,
+          "protein_pct": 3.32,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 7,
+          "milk_kg_day": 35,
+          "fat_pct": 4.41,
+          "protein_pct": 3.27,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 33,
+          "fat_pct": 4.4,
+          "protein_pct": 3.27,
+          "scc_max": 200,
+          "bcs_min": 2.65
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 29,
+          "fat_pct": 4.4,
+          "protein_pct": 3.27,
+          "scc_max": 200,
+          "bcs_min": 2.85
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 23,
+          "fat_pct": 4.42,
+          "protein_pct": 3.28,
+          "scc_max": 200,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 17,
+          "fat_pct": 4.45,
+          "protein_pct": 3.3,
+          "scc_max": 250,
+          "bcs_min": 3.25
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 13,
+          "fat_pct": 4.5,
+          "protein_pct": 3.32,
+          "scc_max": 250,
+          "bcs_min": 3.5
+        }
+      ]
+    },
+    "milking_shorthorn": {
+      "_meta": {
+        "breed": "milking_shorthorn",
+        "species": "dairy",
+        "production": "dairy_cow",
+        "age_unit": "week_of_lactation",
+        "source": "CDCB 2022. 305d avg 7,650 kg, fat 3.70%, protein 3.20%",
+        "data_quality": "official"
+      },
+      "warn_threshold_pct": 5,
+      "alert_threshold_pct": 10,
+      "annual_targets": {
+        "305d_milk_kg": 7650,
+        "peak_milk_kg_day": 34,
+        "peak_week": 8,
+        "scc_max": 200,
+        "pregnancy_rate_pct": 23,
+        "days_open_max": 115
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 18,
+          "fat_pct": 4.05,
+          "protein_pct": 3.42,
+          "scc_max": 200,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 25,
+          "fat_pct": 3.92,
+          "protein_pct": 3.32,
+          "scc_max": 200,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 30,
+          "fat_pct": 3.8,
+          "protein_pct": 3.25,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 33,
+          "fat_pct": 3.7,
+          "protein_pct": 3.2,
+          "scc_max": 200,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 32,
+          "fat_pct": 3.7,
+          "protein_pct": 3.2,
+          "scc_max": 200,
+          "bcs_min": 2.65
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 28,
+          "fat_pct": 3.72,
+          "protein_pct": 3.2,
+          "scc_max": 200,
+          "bcs_min": 2.85
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 22,
+          "fat_pct": 3.75,
+          "protein_pct": 3.22,
+          "scc_max": 200,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 16,
+          "fat_pct": 3.78,
+          "protein_pct": 3.25,
+          "scc_max": 250,
+          "bcs_min": 3.25
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 12,
+          "fat_pct": 3.82,
+          "protein_pct": 3.28,
+          "scc_max": 250,
+          "bcs_min": 3.5
+        }
+      ]
+    },
+    "sahiwal": {
+      "_meta": {
+        "breed": "sahiwal",
+        "species": "dairy",
+        "production": "dairy_cow",
+        "age_unit": "week_of_lactation",
+        "source": "ICAR-NDRI Karnal 2022. 1,084 lactations. 305d avg 2,325 kg, fat 4.90%, protein 3.52%",
+        "data_quality": "official_research",
+        "regional_relevance": [
+          "Pakistan",
+          "India",
+          "Middle East",
+          "East Africa"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "annual_targets": {
+        "305d_milk_kg": 2325,
+        "peak_milk_kg_day": 14,
+        "peak_week": 7,
+        "scc_max": 300,
+        "pregnancy_rate_pct": 55,
+        "days_open_max": 150
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 7,
+          "fat_pct": 5.3,
+          "protein_pct": 3.7,
+          "scc_max": 300,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 10,
+          "fat_pct": 5.15,
+          "protein_pct": 3.65,
+          "scc_max": 300,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 12,
+          "fat_pct": 5.0,
+          "protein_pct": 3.6,
+          "scc_max": 300,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 7,
+          "milk_kg_day": 14,
+          "fat_pct": 4.9,
+          "protein_pct": 3.55,
+          "scc_max": 300,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 13,
+          "fat_pct": 4.88,
+          "protein_pct": 3.53,
+          "scc_max": 300,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 10,
+          "fat_pct": 4.88,
+          "protein_pct": 3.52,
+          "scc_max": 300,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 7,
+          "fat_pct": 4.9,
+          "protein_pct": 3.52,
+          "scc_max": 300,
+          "bcs_min": 2.9
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 5,
+          "fat_pct": 4.92,
+          "protein_pct": 3.55,
+          "scc_max": 350,
+          "bcs_min": 3.1
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 4,
+          "fat_pct": 4.95,
+          "protein_pct": 3.58,
+          "scc_max": 350,
+          "bcs_min": 3.25
+        }
+      ]
+    },
+    "gir": {
+      "_meta": {
+        "breed": "gir",
+        "species": "dairy",
+        "production": "dairy_cow",
+        "age_unit": "week_of_lactation",
+        "source": "EMBRAPA 2021 Brazil + ICAR India. 305d avg 4,200 kg, fat 4.50%, protein 3.60%",
+        "data_quality": "official_research",
+        "regional_relevance": [
+          "Brazil",
+          "India",
+          "Latin America"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "annual_targets": {
+        "305d_milk_kg": 4200,
+        "peak_milk_kg_day": 22,
+        "peak_week": 8,
+        "scc_max": 300,
+        "pregnancy_rate_pct": 50,
+        "days_open_max": 140
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 11,
+          "fat_pct": 4.9,
+          "protein_pct": 3.8,
+          "scc_max": 300,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 16,
+          "fat_pct": 4.75,
+          "protein_pct": 3.72,
+          "scc_max": 300,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 20,
+          "fat_pct": 4.6,
+          "protein_pct": 3.65,
+          "scc_max": 300,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 22,
+          "fat_pct": 4.5,
+          "protein_pct": 3.6,
+          "scc_max": 300,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 21,
+          "fat_pct": 4.49,
+          "protein_pct": 3.6,
+          "scc_max": 300,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 18,
+          "fat_pct": 4.5,
+          "protein_pct": 3.6,
+          "scc_max": 300,
+          "bcs_min": 2.8
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 14,
+          "fat_pct": 4.52,
+          "protein_pct": 3.62,
+          "scc_max": 300,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 9,
+          "fat_pct": 4.55,
+          "protein_pct": 3.65,
+          "scc_max": 350,
+          "bcs_min": 3.2
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 7,
+          "fat_pct": 4.6,
+          "protein_pct": 3.68,
+          "scc_max": 350,
+          "bcs_min": 3.4
+        }
+      ]
+    }
+  },
+  "dairy_buffalo": {
+    "murrah_buffalo": {
+      "_meta": {
+        "breed": "murrah_buffalo",
+        "species": "buffalo",
+        "production": "dairy_buffalo",
+        "age_unit": "week_of_lactation",
+        "source": "ICAR-NDRI Karnal 2022. 45,000+ lactations. 305d avg 2,350 kg, fat 7.20%, protein 4.00%",
+        "data_quality": "official_research",
+        "regional_relevance": [
+          "India",
+          "Pakistan",
+          "Southeast Asia"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "annual_targets": {
+        "305d_milk_kg": 2350,
+        "peak_milk_kg_day": 13,
+        "peak_week": 8,
+        "scc_max": 400,
+        "pregnancy_rate_pct": 45,
+        "days_open_max": 180
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 7,
+          "fat_pct": 7.8,
+          "protein_pct": 4.2,
+          "scc_max": 400,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 10,
+          "fat_pct": 7.6,
+          "protein_pct": 4.1,
+          "scc_max": 400,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 12,
+          "fat_pct": 7.4,
+          "protein_pct": 4.05,
+          "scc_max": 400,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 13,
+          "fat_pct": 7.2,
+          "protein_pct": 4.0,
+          "scc_max": 400,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 12,
+          "fat_pct": 7.18,
+          "protein_pct": 4.0,
+          "scc_max": 400,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 10,
+          "fat_pct": 7.18,
+          "protein_pct": 4.0,
+          "scc_max": 400,
+          "bcs_min": 2.8
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 7,
+          "fat_pct": 7.2,
+          "protein_pct": 4.0,
+          "scc_max": 400,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 5,
+          "fat_pct": 7.25,
+          "protein_pct": 4.02,
+          "scc_max": 450,
+          "bcs_min": 3.2
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 4,
+          "fat_pct": 7.3,
+          "protein_pct": 4.05,
+          "scc_max": 450,
+          "bcs_min": 3.4
+        }
+      ]
+    },
+    "nili_ravi_buffalo": {
+      "_meta": {
+        "breed": "nili_ravi_buffalo",
+        "species": "buffalo",
+        "production": "dairy_buffalo",
+        "age_unit": "week_of_lactation",
+        "source": "LPRI Bahadurnagar Pakistan 2021. 305d avg 2,200 kg, fat 7.00%, protein 3.90%",
+        "data_quality": "official_research",
+        "regional_relevance": [
+          "Pakistan",
+          "India (Punjab)"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "annual_targets": {
+        "305d_milk_kg": 2200,
+        "peak_milk_kg_day": 12,
+        "peak_week": 8,
+        "scc_max": 400,
+        "pregnancy_rate_pct": 45,
+        "days_open_max": 185
+      },
+      "curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 6,
+          "fat_pct": 7.6,
+          "protein_pct": 4.1,
+          "scc_max": 400,
+          "bcs_min": 2.75
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 9,
+          "fat_pct": 7.45,
+          "protein_pct": 4.02,
+          "scc_max": 400,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 11,
+          "fat_pct": 7.25,
+          "protein_pct": 3.95,
+          "scc_max": 400,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 12,
+          "fat_pct": 7.0,
+          "protein_pct": 3.9,
+          "scc_max": 400,
+          "bcs_min": 2.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 11,
+          "fat_pct": 6.98,
+          "protein_pct": 3.9,
+          "scc_max": 400,
+          "bcs_min": 2.6
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 9,
+          "fat_pct": 6.98,
+          "protein_pct": 3.9,
+          "scc_max": 400,
+          "bcs_min": 2.8
+        },
+        {
+          "week": 30,
+          "milk_kg_day": 7,
+          "fat_pct": 7.0,
+          "protein_pct": 3.9,
+          "scc_max": 400,
+          "bcs_min": 3.0
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 4,
+          "fat_pct": 7.05,
+          "protein_pct": 3.92,
+          "scc_max": 450,
+          "bcs_min": 3.2
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 3,
+          "fat_pct": 7.1,
+          "protein_pct": 3.95,
+          "scc_max": 450,
+          "bcs_min": 3.4
+        }
+      ]
+    }
+  }
+}

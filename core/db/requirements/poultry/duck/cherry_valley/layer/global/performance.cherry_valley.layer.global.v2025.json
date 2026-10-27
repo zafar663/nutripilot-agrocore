@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "breed": "cherry_valley_layer",
+    "species": "poultry",
+    "production": "duck_egg",
+    "age_unit": "week",
+    "source": "Cherry Valley Duck Layer Management Guide 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "week": 20, "body_wt_g": 1800, "egg_prod_pct": 20, "egg_wt_g": 65.0, "feed_per_bird_g": 160, "mortality_pct_max": 0.5 },
+    { "week": 25, "body_wt_g": 1950, "egg_prod_pct": 85, "egg_wt_g": 72.0, "feed_per_bird_g": 185, "mortality_pct_max": 1.0 },
+    { "week": 30, "body_wt_g": 2050, "egg_prod_pct": 90, "egg_wt_g": 75.0, "feed_per_bird_g": 190, "mortality_pct_max": 1.5 },
+    { "week": 40, "body_wt_g": 2100, "egg_prod_pct": 87, "egg_wt_g": 76.0, "feed_per_bird_g": 188, "mortality_pct_max": 2.5 },
+    { "week": 60, "body_wt_g": 2150, "egg_prod_pct": 78, "egg_wt_g": 76.0, "feed_per_bird_g": 182, "mortality_pct_max": 4.5 }
+  ]
+}

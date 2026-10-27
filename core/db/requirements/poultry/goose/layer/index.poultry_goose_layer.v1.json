@@ -1,37 +1,63 @@
-﻿{
-    "map":  {
-                "embden":  {
-                               "peak":  "poultry_goose_layer_embden_peak_v1",
-                               "late":  "poultry_goose_layer_embden_late_v1",
-                               "prelay":  "poultry_goose_layer_embden_prelay_v1",
-                               "early":  "poultry_goose_layer_embden_early_v1"
-                           },
-                "generic":  {
-                                "peak":  "poultry_goose_layer_generic_peak_v1",
-                                "late":  "poultry_goose_layer_generic_late_v1",
-                                "prelay":  "poultry_goose_layer_generic_prelay_v1",
-                                "early":  "poultry_goose_layer_generic_early_v1"
-                            },
-                "toulouse":  {
-                                 "peak":  "poultry_goose_layer_toulouse_peak_v1",
-                                 "late":  "poultry_goose_layer_toulouse_late_v1",
-                                 "prelay":  "poultry_goose_layer_toulouse_prelay_v1",
-                                 "early":  "poultry_goose_layer_toulouse_early_v1"
-                             }
-            },
-    "_LOCK":  {
-                  "species":  "poultry",
-                  "version":  "v1",
-                  "production":  "layer",
-                  "type":  "goose",
-                  "kind":  "requirements_index",
-                  "created_utc":  "2026-02-19T00:42:13Z",
-                  "mode":  "option_b_inheritance_ready"
-              },
-    "phases":  {
-                   "peak":  "poultry_goose_layer_generic_peak_v1",
-                   "late":  "poultry_goose_layer_generic_late_v1",
-                   "prelay":  "poultry_goose_layer_generic_prelay_v1",
-                   "early":  "poultry_goose_layer_generic_early_v1"
-               }
+{
+  "map": {
+    "embden": {
+      "starter": "poultry_goose_layer_embden_starter_v1",
+      "grower": "poultry_goose_layer_embden_grower_v1",
+      "developer": "poultry_goose_layer_embden_developer_v1",
+      "prelay": "poultry_goose_layer_embden_prelay_v1",
+      "early": "poultry_goose_layer_embden_early_v1",
+      "peak": "poultry_goose_layer_embden_peak_v1",
+      "late": "poultry_goose_layer_embden_late_v1"
+    },
+    "generic": {
+      "starter": "poultry_goose_layer_generic_starter_v1",
+      "grower": "poultry_goose_layer_generic_grower_v1",
+      "developer": "poultry_goose_layer_generic_developer_v1",
+      "prelay": "poultry_goose_layer_generic_prelay_v1",
+      "early": "poultry_goose_layer_generic_early_v1",
+      "peak": "poultry_goose_layer_generic_peak_v1",
+      "late": "poultry_goose_layer_generic_late_v1"
+    },
+    "toulouse": {
+      "starter": "poultry_goose_layer_toulouse_starter_v1",
+      "grower": "poultry_goose_layer_toulouse_grower_v1",
+      "developer": "poultry_goose_layer_toulouse_developer_v1",
+      "prelay": "poultry_goose_layer_toulouse_prelay_v1",
+      "early": "poultry_goose_layer_toulouse_early_v1",
+      "peak": "poultry_goose_layer_toulouse_peak_v1",
+      "late": "poultry_goose_layer_toulouse_late_v1"
+    },
+    "nrc2026": {
+      "wk_0_4": "poultry_goose_layer_nrc2026_wk_0_4_v1",
+      "wk_4plus": "poultry_goose_layer_nrc2026_wk_4plus_v1",
+      "laying": "poultry_goose_layer_nrc2026_laying_v1"
+    },
+    "african": {
+      "starter": "poultry_goose_layer_african_starter_v1",
+      "grower": "poultry_goose_layer_african_grower_v1",
+      "developer": "poultry_goose_layer_african_developer_v1",
+      "prelay": "poultry_goose_layer_african_prelay_v1",
+      "early": "poultry_goose_layer_african_early_v1",
+      "peak": "poultry_goose_layer_african_peak_v1",
+      "late": "poultry_goose_layer_african_late_v1"
+    }
+  },
+  "_LOCK": {
+    "species": "poultry",
+    "version": "v1",
+    "production": "layer",
+    "type": "goose",
+    "kind": "requirements_index",
+    "created_utc": "2026-02-19T00:42:13Z",
+    "mode": "option_b_inheritance_ready"
+  },
+  "phases": {
+    "starter": "poultry_goose_layer_generic_starter_v1",
+    "grower": "poultry_goose_layer_generic_grower_v1",
+    "developer": "poultry_goose_layer_generic_developer_v1",
+    "prelay": "poultry_goose_layer_generic_prelay_v1",
+    "early": "poultry_goose_layer_generic_early_v1",
+    "peak": "poultry_goose_layer_generic_peak_v1",
+    "late": "poultry_goose_layer_generic_late_v1"
+  }
 }

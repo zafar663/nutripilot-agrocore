@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "breed": "pic_337",
+    "species": "swine",
+    "production": "grower_finisher",
+    "age_unit": "day",
+    "source": "PIC 337 Performance Standards 2022",
+    "version": "v2025",
+    "note": "Live weight targets. ADG = average daily gain grams."
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "age": 28,  "body_wt_kg": 8.0,   "fcr": 1.50, "adg_g": 230,  "mortality_pct_max": 0.5, "phase": "nursery" },
+    { "age": 42,  "body_wt_kg": 13.5,  "fcr": 1.60, "adg_g": 393,  "mortality_pct_max": 0.8, "phase": "nursery" },
+    { "age": 63,  "body_wt_kg": 30.0,  "fcr": 1.80, "adg_g": 786,  "mortality_pct_max": 1.0, "phase": "grower" },
+    { "age": 90,  "body_wt_kg": 52.5,  "fcr": 1.95, "adg_g": 833,  "mortality_pct_max": 1.2, "phase": "grower" },
+    { "age": 120, "body_wt_kg": 80.0,  "fcr": 2.40, "adg_g": 917,  "mortality_pct_max": 1.5, "phase": "finisher" },
+    { "age": 150, "body_wt_kg": 108.0, "fcr": 2.65, "adg_g": 933,  "mortality_pct_max": 1.8, "phase": "finisher" },
+    { "age": 175, "body_wt_kg": 130.0, "fcr": 2.85, "adg_g": 880,  "mortality_pct_max": 2.0, "phase": "finisher" }
+  ],
+  "phases": {
+    "nursery":  { "days": "21-63",   "target_wt_range_kg": "6-30" },
+    "grower":   { "days": "63-120",  "target_wt_range_kg": "30-80" },
+    "finisher": { "days": "120-175", "target_wt_range_kg": "80-130" }
+  }
+}

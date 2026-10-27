@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "breed": "but_commercial",
+    "species": "poultry",
+    "production": "turkey_meat",
+    "age_unit": "week",
+    "source": "Aviagen BUT Commercial Turkey Performance Objectives 2024",
+    "version": "v2025",
+    "note": "Male targets. Females lighter â€” apply 80% of male body weight."
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve_male": [
+    { "week": 4,  "body_wt_g": 1200,  "fcr": 1.35, "adg_g": 171, "feed_per_bird_g": 231,  "mortality_pct_max": 1.0 },
+    { "week": 6,  "body_wt_g": 2200,  "fcr": 1.55, "adg_g": 238, "feed_per_bird_g": 369,  "mortality_pct_max": 1.5 },
+    { "week": 8,  "body_wt_g": 3600,  "fcr": 1.72, "adg_g": 333, "feed_per_bird_g": 573,  "mortality_pct_max": 2.0 },
+    { "week": 10, "body_wt_g": 5200,  "fcr": 1.88, "adg_g": 381, "feed_per_bird_g": 717,  "mortality_pct_max": 2.5 },
+    { "week": 12, "body_wt_g": 7000,  "fcr": 2.02, "adg_g": 429, "feed_per_bird_g": 867,  "mortality_pct_max": 3.0 },
+    { "week": 14, "body_wt_g": 8900,  "fcr": 2.15, "adg_g": 452, "feed_per_bird_g": 972,  "mortality_pct_max": 3.5 },
+    { "week": 16, "body_wt_g": 10800, "fcr": 2.28, "adg_g": 452, "feed_per_bird_g": 1031, "mortality_pct_max": 4.0 },
+    { "week": 18, "body_wt_g": 12600, "fcr": 2.42, "adg_g": 429, "feed_per_bird_g": 1038, "mortality_pct_max": 4.5 },
+    { "week": 20, "body_wt_g": 14200, "fcr": 2.56, "adg_g": 381, "feed_per_bird_g": 975,  "mortality_pct_max": 5.0 }
+  ],
+  "phases": {
+    "starter":  { "weeks": "1-3",   "energy_kcal": 2900 },
+    "grower":   { "weeks": "4-8",   "energy_kcal": 3000 },
+    "developer":{ "weeks": "9-13",  "energy_kcal": 3100 },
+    "finisher": { "weeks": "14-20", "energy_kcal": 3200 }
+  }
+}

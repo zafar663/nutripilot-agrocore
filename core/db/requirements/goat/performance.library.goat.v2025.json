@@ -1,0 +1,2051 @@
+{
+  "_meta": {
+    "description": "Master performance standards library — all breeds, all species (comprehensive)",
+    "version": "v2025.2-complete",
+    "age_unit_note": "Broilers/turkey/duck/quail meat use 'day'; layers/breeders/turkey breeders/goose use 'week'",
+    "created_utc": "2026-05-15T00:00:00Z",
+    "coverage": {
+      "broiler": [
+        "ross_308_eu",
+        "ross_308_ap",
+        "ross_708",
+        "cobb_500",
+        "cobb_700",
+        "hubbard_edge",
+        "arbor_acres_plus"
+      ],
+      "layer": [
+        "bovans_brown",
+        "bovans_white",
+        "isa_brown",
+        "dekalb_brown",
+        "dekalb_white",
+        "hyline_brown",
+        "hyline_w80",
+        "hyline_w80_plus",
+        "hyline_w80_pro",
+        "hyline_pink",
+        "hyline_silver_brown",
+        "hyline_w36",
+        "lohmann_brown_classic",
+        "lohmann_lsl_classic",
+        "lohmann_lsl_extra",
+        "lohmann_lsl_lite",
+        "lohmann_brown_lite",
+        "lohmann_brown_extra",
+        "lohmann_pink",
+        "shaver_white",
+        "babcock_b300"
+      ],
+      "breeder": [
+        "ross_308_ps",
+        "cobb_500_ps",
+        "hubbard_ps_conventional",
+        "hyline_brown_ps",
+        "lohmann_brown_classic_ps"
+      ],
+      "turkey": [
+        "but_premium_male",
+        "but_premium_female",
+        "nicholas_select_male"
+      ],
+      "duck": [
+        "duck_meat_generic",
+        "cherry_valley_sm3"
+      ],
+      "goose": [
+        "goose_meat_generic",
+        "goose_layer_generic"
+      ],
+      "quail": [
+        "coturnix_japonica_meat",
+        "coturnix_japonica_layer"
+      ],
+      "goat_meat": [
+        "boer",
+        "kiko",
+        "spanish",
+        "kalahari_red",
+        "savanna",
+        "myotonic"
+      ],
+      "goat_dairy": [
+        "saanen",
+        "alpine",
+        "nubian",
+        "toggenburg",
+        "lamancha",
+        "oberhasli"
+      ],
+      "goat_dual": [
+        "beetal",
+        "barbari"
+      ],
+      "goat_fiber": [
+        "angora",
+        "cashmere"
+      ]
+    },
+    "data_quality_notes": {
+      "official_data": [
+        "bovans_white",
+        "isa_brown",
+        "hyline_brown",
+        "hyline_w80",
+        "hyline_pink",
+        "hyline_silver_brown",
+        "lohmann_brown_classic",
+        "lohmann_lsl_classic",
+        "lohmann_lsl_extra",
+        "ross_308_eu",
+        "ross_308_ap",
+        "cobb_500",
+        "cobb_700",
+        "hubbard_edge",
+        "bovans_brown",
+        "but_premium_male",
+        "but_premium_female",
+        "boer",
+        "saanen",
+        "alpine",
+        "nubian",
+        "toggenburg",
+        "lamancha",
+        "oberhasli"
+      ],
+      "estimated_data": [
+        "hyline_w80_plus",
+        "hyline_w80_pro",
+        "hyline_w36",
+        "dekalb_brown",
+        "dekalb_white",
+        "lohmann_lsl_lite",
+        "lohmann_brown_lite",
+        "lohmann_brown_extra",
+        "lohmann_pink",
+        "shaver_white",
+        "babcock_b300",
+        "arbor_acres_plus",
+        "ross_708",
+        "ross_308_ps",
+        "cobb_500_ps",
+        "hubbard_ps_conventional",
+        "hyline_brown_ps",
+        "lohmann_brown_classic_ps",
+        "nicholas_select_male",
+        "duck_meat_generic",
+        "cherry_valley_sm3",
+        "goose_meat_generic",
+        "goose_layer_generic",
+        "coturnix_japonica_meat",
+        "coturnix_japonica_layer",
+        "kiko",
+        "spanish",
+        "kalahari_red",
+        "savanna",
+        "myotonic",
+        "beetal",
+        "barbari",
+        "angora",
+        "cashmere"
+      ]
+    }
+  },
+  "goat_meat": {
+    "boer": {
+      "_meta": {
+        "breed": "boer",
+        "age_unit": "week",
+        "source": "American Boer Goat Association (ABGA) performance records; Ohio State University Extension; peer-reviewed literature (Pinkerton et al. 1991; Lu & Potchoiba 1988). Official breed standard data.",
+        "data_quality": "official",
+        "type": "meat",
+        "mature_weight_buck_kg": 110,
+        "mature_weight_doe_kg": 85,
+        "carcass_yield_pct": 55,
+        "kidding_rate_pct": 200,
+        "note": "ADG under feedlot: 150–200 g/day. Extensive: 130–150 g/day."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "pre_wean": {
+          "label": "Boer – Pre-wean Kid (0–8 weeks, birth–15 kg)",
+          "age_weeks": "0–8",
+          "weight_range_kg": "3.6–15",
+          "adg_g_day": 150,
+          "adg_range_g_day": "135–165",
+          "feed_kg_dm": 0.4,
+          "note": "Dam-raised; suckling + creep feed from week 2."
+        },
+        "grower": {
+          "label": "Boer – Growing Kid (8–20 weeks, 15–33 kg)",
+          "age_weeks": "8–20",
+          "weight_range_kg": "15–33",
+          "adg_g_day": 158,
+          "adg_range_g_day": "150–165",
+          "feed_kg_dm": 0.95,
+          "fcr": 4.5,
+          "fcr_range": "3.6–5.2",
+          "note": "Fastest ADG phase. Feedlot: 150–200 g/day. Extensive: 130–150 g/day."
+        },
+        "finisher": {
+          "label": "Boer – Finishing Kid (20–32 weeks, 33–50 kg)",
+          "age_weeks": "20–32",
+          "weight_range_kg": "33–50",
+          "adg_g_day": 130,
+          "adg_range_g_day": "120–150",
+          "feed_kg_dm": 1.4,
+          "fcr": 6.0,
+          "fcr_range": "5.2–6.5",
+          "note": "Market weight target 35–45 kg (6–8 months for quality cabrito; 40–50 kg for carcass market)."
+        },
+        "market_targets": {
+          "label": "Boer – Market Targets",
+          "market_wt_kg_range": "35–45",
+          "carcass_yield_pct": 55,
+          "dressing_pct_range": "50–58",
+          "age_at_market_weeks_range": "24–32",
+          "litter_size_avg": 2.0,
+          "kidding_rate_pct": 200,
+          "pre_wean_mortality_pct_max": 5,
+          "source": "ABGA breed standard + OSU Extension"
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 3.6,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 2
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 5.5,
+          "daily_gain_g": 135,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 2.5
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 8.5,
+          "daily_gain_g": 155,
+          "feed_kg_dm": 0.35,
+          "fcr": null,
+          "mortality_pct_max": 3
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 14.5,
+          "daily_gain_g": 165,
+          "feed_kg_dm": 0.6,
+          "fcr": 3.6,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 20.5,
+          "daily_gain_g": 165,
+          "feed_kg_dm": 0.85,
+          "fcr": 4.2,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 27,
+          "daily_gain_g": 160,
+          "feed_kg_dm": 1.1,
+          "fcr": 4.8,
+          "mortality_pct_max": 4.5
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 33,
+          "daily_gain_g": 150,
+          "feed_kg_dm": 1.25,
+          "fcr": 5.2,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 38.5,
+          "daily_gain_g": 140,
+          "feed_kg_dm": 1.35,
+          "fcr": 5.8,
+          "mortality_pct_max": 5.5
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 48,
+          "daily_gain_g": 120,
+          "feed_kg_dm": 1.5,
+          "fcr": 6.5,
+          "mortality_pct_max": 6
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 65,
+          "daily_gain_g": 100,
+          "feed_kg_dm": 1.8,
+          "fcr": 7,
+          "mortality_pct_max": 7
+        }
+      ]
+    },
+    "kiko": {
+      "_meta": {
+        "breed": "kiko",
+        "age_unit": "week",
+        "source": "New Zealand Kiko Goat Association; American Kiko Goat Association records; Pinkerton et al. extension literature (estimated from field data).",
+        "data_quality": "estimated",
+        "type": "meat",
+        "mature_weight_buck_kg": 80,
+        "mature_weight_doe_kg": 55,
+        "note": "Hardy low-input breed. Slower growth than Boer but excellent parasite resistance. Developed in NZ from feral does x Nubian/Toggenburg/Saanen."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 3,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 2
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 7,
+          "daily_gain_g": 140,
+          "feed_kg_dm": 0.3,
+          "fcr": null,
+          "mortality_pct_max": 2.5
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 12,
+          "daily_gain_g": 145,
+          "feed_kg_dm": 0.55,
+          "fcr": 3.8,
+          "mortality_pct_max": 3
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 17,
+          "daily_gain_g": 145,
+          "feed_kg_dm": 0.75,
+          "fcr": 4.5,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 22,
+          "daily_gain_g": 140,
+          "feed_kg_dm": 0.95,
+          "fcr": 5,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 31,
+          "daily_gain_g": 130,
+          "feed_kg_dm": 1.2,
+          "fcr": 5.8,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 36,
+          "body_wt_kg": 42,
+          "daily_gain_g": 110,
+          "feed_kg_dm": 1.4,
+          "fcr": 6.5,
+          "mortality_pct_max": 6
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 55,
+          "daily_gain_g": 90,
+          "feed_kg_dm": 1.6,
+          "fcr": 7,
+          "mortality_pct_max": 7
+        }
+      ]
+    },
+    "spanish": {
+      "_meta": {
+        "breed": "spanish",
+        "age_unit": "week",
+        "source": "Langston University E. (Kika) de la Garza Institute for Goat Research; USDA AMS records (estimated). NRC 2007.",
+        "data_quality": "estimated",
+        "type": "meat",
+        "mature_weight_buck_kg": 70,
+        "mature_weight_doe_kg": 48,
+        "note": "Feral origin US breed. Hardy, lean, good forager. Slower growth, very low input costs."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "pre_wean": {
+          "label": "Spanish Goat Kid – Pre-wean (0–8 weeks, birth–10 kg)",
+          "age_weeks": "0–8",
+          "weight_range_kg": "2.5–10",
+          "adg_g_day": 107,
+          "adg_range_g_day": "90–115",
+          "feed_kg_dm": 0.35,
+          "note": "Suckling; creep feed optional. Very low-input early growth."
+        },
+        "grower": {
+          "label": "Spanish Goat Kid – Grower (8–20 weeks, 10–20 kg)",
+          "age_weeks": "8–20",
+          "weight_range_kg": "10–20",
+          "adg_g_day": 112,
+          "adg_range_g_day": "100–130",
+          "feed_kg_dm": 0.75,
+          "fcr": 5.0,
+          "fcr_range": "4.5–5.5",
+          "note": "Moderate ADG typical of hardy range breed. Superior foraging reduces supplemental feed costs."
+        },
+        "finisher": {
+          "label": "Spanish Goat Kid – Finisher/Growing Meat (20–36 weeks, 20–32 kg)",
+          "age_weeks": "20–36",
+          "weight_range_kg": "20–32",
+          "adg_g_day": 98,
+          "adg_range_g_day": "85–115",
+          "feed_kg_dm": 1.05,
+          "fcr": 6.0,
+          "fcr_range": "5.5–6.5",
+          "note": "Slower finishing than Boer. Market weight 25–30 kg at 28–36 weeks depending on management."
+        },
+        "market_targets": {
+          "label": "Spanish Goat – Market Targets",
+          "market_wt_kg_range": "22–30",
+          "carcass_yield_pct": 48,
+          "dressing_pct_range": "45–52",
+          "age_at_market_weeks_range": "28–40",
+          "kidding_rate_pct": 175,
+          "pre_wean_mortality_pct_max": 6,
+          "source": "Langston University; USDA AMS; NRC 2007"
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 2.5,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 2.5
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 5.5,
+          "daily_gain_g": 107,
+          "feed_kg_dm": 0.25,
+          "fcr": null,
+          "mortality_pct_max": 3
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 9.5,
+          "daily_gain_g": 115,
+          "feed_kg_dm": 0.45,
+          "fcr": 3.9,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 13.5,
+          "daily_gain_g": 115,
+          "feed_kg_dm": 0.65,
+          "fcr": 4.5,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 20,
+          "daily_gain_g": 110,
+          "feed_kg_dm": 0.9,
+          "fcr": 5.5,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 36,
+          "body_wt_kg": 32,
+          "daily_gain_g": 95,
+          "feed_kg_dm": 1.2,
+          "fcr": 6.5,
+          "mortality_pct_max": 6.5
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 45,
+          "daily_gain_g": 80,
+          "feed_kg_dm": 1.45,
+          "fcr": 7.5,
+          "mortality_pct_max": 8
+        }
+      ]
+    },
+    "kalahari_red": {
+      "_meta": {
+        "breed": "kalahari_red",
+        "age_unit": "week",
+        "source": "South African Kalahari Red Goat Breeders Society; peer-reviewed South African production data (estimated weekly curve from breed summary).",
+        "data_quality": "estimated",
+        "type": "meat",
+        "mature_weight_buck_kg": 115,
+        "mature_weight_doe_kg": 75,
+        "note": "South African meat breed similar to Boer but all-red. Excellent heat tolerance, slightly heavier frame."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 3.8,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 2
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 9,
+          "daily_gain_g": 160,
+          "feed_kg_dm": 0.38,
+          "fcr": null,
+          "mortality_pct_max": 2.5
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 15.5,
+          "daily_gain_g": 170,
+          "feed_kg_dm": 0.65,
+          "fcr": 3.5,
+          "mortality_pct_max": 3
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 22.5,
+          "daily_gain_g": 170,
+          "feed_kg_dm": 0.9,
+          "fcr": 4,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 29,
+          "daily_gain_g": 165,
+          "feed_kg_dm": 1.15,
+          "fcr": 4.6,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 41,
+          "daily_gain_g": 150,
+          "feed_kg_dm": 1.4,
+          "fcr": 5.5,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 36,
+          "body_wt_kg": 56,
+          "daily_gain_g": 125,
+          "feed_kg_dm": 1.65,
+          "fcr": 6.2,
+          "mortality_pct_max": 6
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 70,
+          "daily_gain_g": 100,
+          "feed_kg_dm": 1.9,
+          "fcr": 7,
+          "mortality_pct_max": 7
+        }
+      ]
+    },
+    "savanna": {
+      "_meta": {
+        "breed": "savanna",
+        "age_unit": "week",
+        "source": "South African Savanna Goat Breeders Society; extension literature (estimated from breed standard data).",
+        "data_quality": "estimated",
+        "type": "meat",
+        "mature_weight_buck_kg": 100,
+        "mature_weight_doe_kg": 70,
+        "note": "White South African meat breed. Heat tolerant, good mothering. Performance slightly below Boer."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 3.5,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 2
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 8.5,
+          "daily_gain_g": 155,
+          "feed_kg_dm": 0.36,
+          "fcr": null,
+          "mortality_pct_max": 2.5
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 14.5,
+          "daily_gain_g": 160,
+          "feed_kg_dm": 0.62,
+          "fcr": 3.6,
+          "mortality_pct_max": 3
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 21,
+          "daily_gain_g": 160,
+          "feed_kg_dm": 0.88,
+          "fcr": 4.1,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 32,
+          "daily_gain_g": 145,
+          "feed_kg_dm": 1.2,
+          "fcr": 5,
+          "mortality_pct_max": 4.5
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 46,
+          "daily_gain_g": 120,
+          "feed_kg_dm": 1.45,
+          "fcr": 6,
+          "mortality_pct_max": 5.5
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 62,
+          "daily_gain_g": 95,
+          "feed_kg_dm": 1.75,
+          "fcr": 7,
+          "mortality_pct_max": 7
+        }
+      ]
+    },
+    "myotonic": {
+      "_meta": {
+        "breed": "myotonic",
+        "age_unit": "week",
+        "source": "Myotonic Goat Registry; Tennessee State University Extension (estimated from field data).",
+        "data_quality": "estimated",
+        "type": "meat",
+        "mature_weight_buck_kg": 80,
+        "mature_weight_doe_kg": 55,
+        "note": "Fainting/Tennessee Stiff-Leg goat. High muscle-to-bone ratio, excellent carcass quality. Slow growth."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 2.8,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 2.5
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 6.5,
+          "daily_gain_g": 132,
+          "feed_kg_dm": 0.28,
+          "fcr": null,
+          "mortality_pct_max": 3
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 11,
+          "daily_gain_g": 130,
+          "feed_kg_dm": 0.5,
+          "fcr": 3.8,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 15.5,
+          "daily_gain_g": 128,
+          "feed_kg_dm": 0.7,
+          "fcr": 4.5,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 23,
+          "daily_gain_g": 115,
+          "feed_kg_dm": 0.95,
+          "fcr": 5.3,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 36,
+          "body_wt_kg": 36,
+          "daily_gain_g": 95,
+          "feed_kg_dm": 1.25,
+          "fcr": 6.5,
+          "mortality_pct_max": 6.5
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 48,
+          "daily_gain_g": 75,
+          "feed_kg_dm": 1.5,
+          "fcr": 8,
+          "mortality_pct_max": 8
+        }
+      ]
+    },
+    "black_bengal": {
+      "_meta": {
+        "breed": "black_bengal",
+        "age_unit": "week",
+        "type": "meat_skin",
+        "origin": "Bangladesh/West Bengal India",
+        "data_quality": "official_research",
+        "source": "BLRI Bangladesh Livestock Research Institute + FAO. Birth 1.1 kg, 3-month 5.5 kg, 6-month 9 kg, yearling 13 kg. Highly prolific 1.9 kids/birth. Superior glazed leather.",
+        "mature_weight_buck_kg": 20,
+        "mature_weight_doe_kg": 16,
+        "regional_relevance": [
+          "Bangladesh",
+          "West Bengal India",
+          "Northeast India"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 1.1,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 3
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 1.7,
+          "daily_gain_g": 43,
+          "feed_kg_dm": 0.07,
+          "fcr": 1.6,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 2.9,
+          "daily_gain_g": 40,
+          "feed_kg_dm": 0.15,
+          "fcr": 3.8,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 5,
+          "daily_gain_g": 40,
+          "feed_kg_dm": 0.25,
+          "fcr": 6.3,
+          "mortality_pct_max": 4.5
+        },
+        {
+          "week": 13,
+          "body_wt_kg": 5.5,
+          "daily_gain_g": 35,
+          "feed_kg_dm": 0.28,
+          "fcr": 8,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 7.5,
+          "daily_gain_g": 38,
+          "feed_kg_dm": 0.34,
+          "fcr": 8.9,
+          "mortality_pct_max": 5.5
+        },
+        {
+          "week": 26,
+          "body_wt_kg": 9,
+          "daily_gain_g": 36,
+          "feed_kg_dm": 0.38,
+          "fcr": 10.6,
+          "mortality_pct_max": 6
+        },
+        {
+          "week": 39,
+          "body_wt_kg": 11.8,
+          "daily_gain_g": 33,
+          "feed_kg_dm": 0.45,
+          "fcr": 13.6,
+          "mortality_pct_max": 6.5
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 13,
+          "daily_gain_g": 25,
+          "feed_kg_dm": 0.48,
+          "fcr": 19.2,
+          "mortality_pct_max": 7
+        }
+      ]
+    }
+  },
+  "goat_dairy": {
+    "saanen": {
+      "_meta": {
+        "breed": "saanen",
+        "age_unit": "week_of_lactation",
+        "source": "USDA AMS Dairy Goat National Genetic Evaluation; French INRAE breed reference (994 kg/305d); University of Georgia Extension Dairy Goat Production guide; ScienceDirect Saanen overview.",
+        "data_quality": "official",
+        "type": "dairy",
+        "origin": "Switzerland",
+        "mature_weight_doe_kg": 65,
+        "lactation_days": 305,
+        "annual_milk_kg": 994,
+        "milk_fat_pct": 3.3,
+        "milk_protein_pct": 2.9,
+        "note": "World's highest-producing dairy goat. White coat. Peak milk 5.7 L/day average, up to 11.3 L/day in top does."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "lactation_curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 2.8,
+          "fat_pct": 3.8,
+          "protein_pct": 3,
+          "body_wt_kg": 60,
+          "feed_kg_dm": 2.8,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 3.5,
+          "fat_pct": 3.5,
+          "protein_pct": 3,
+          "body_wt_kg": 59,
+          "feed_kg_dm": 3.2,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 4.2,
+          "fat_pct": 3.3,
+          "protein_pct": 2.9,
+          "body_wt_kg": 58,
+          "feed_kg_dm": 3.8,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 6,
+          "milk_kg_day": 4.5,
+          "fat_pct": 3.3,
+          "protein_pct": 2.9,
+          "body_wt_kg": 57,
+          "feed_kg_dm": 4,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 4.4,
+          "fat_pct": 3.3,
+          "protein_pct": 2.9,
+          "body_wt_kg": 58,
+          "feed_kg_dm": 3.9,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 4.1,
+          "fat_pct": 3.3,
+          "protein_pct": 2.9,
+          "body_wt_kg": 59,
+          "feed_kg_dm": 3.7,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 16,
+          "milk_kg_day": 3.8,
+          "fat_pct": 3.3,
+          "protein_pct": 2.9,
+          "body_wt_kg": 61,
+          "feed_kg_dm": 3.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 3.5,
+          "fat_pct": 3.4,
+          "protein_pct": 3,
+          "body_wt_kg": 62,
+          "feed_kg_dm": 3.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 24,
+          "milk_kg_day": 3.2,
+          "fat_pct": 3.4,
+          "protein_pct": 3,
+          "body_wt_kg": 63,
+          "feed_kg_dm": 3.1,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 28,
+          "milk_kg_day": 2.8,
+          "fat_pct": 3.5,
+          "protein_pct": 3,
+          "body_wt_kg": 64,
+          "feed_kg_dm": 2.9,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 32,
+          "milk_kg_day": 2.4,
+          "fat_pct": 3.5,
+          "protein_pct": 3.1,
+          "body_wt_kg": 65,
+          "feed_kg_dm": 2.7,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 36,
+          "milk_kg_day": 2,
+          "fat_pct": 3.6,
+          "protein_pct": 3.1,
+          "body_wt_kg": 66,
+          "feed_kg_dm": 2.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 1.6,
+          "fat_pct": 3.7,
+          "protein_pct": 3.1,
+          "body_wt_kg": 66,
+          "feed_kg_dm": 2.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 44,
+          "milk_kg_day": 1.2,
+          "fat_pct": 3.8,
+          "protein_pct": 3.2,
+          "body_wt_kg": 66,
+          "feed_kg_dm": 2.1,
+          "mortality_pct_max": 0.5
+        }
+      ]
+    },
+    "alpine": {
+      "_meta": {
+        "breed": "alpine",
+        "age_unit": "week_of_lactation",
+        "source": "USDA AMS Dairy Goat National Genetic Evaluation; University of Georgia Extension; French Alpine breed references (933 kg/307d INRAE).",
+        "data_quality": "official",
+        "type": "dairy",
+        "origin": "France/Switzerland",
+        "mature_weight_doe_kg": 60,
+        "lactation_days": 290,
+        "annual_milk_kg": 930,
+        "milk_fat_pct": 3.4,
+        "milk_protein_pct": 2.9,
+        "note": "Second highest-producing dairy goat. Multi-colored coat. Good adaptability."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "lactation_curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 2.5,
+          "fat_pct": 4,
+          "protein_pct": 3,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 2.6,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 3.2,
+          "fat_pct": 3.7,
+          "protein_pct": 2.9,
+          "body_wt_kg": 54,
+          "feed_kg_dm": 3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 3.8,
+          "fat_pct": 3.5,
+          "protein_pct": 2.9,
+          "body_wt_kg": 53,
+          "feed_kg_dm": 3.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 6,
+          "milk_kg_day": 4,
+          "fat_pct": 3.4,
+          "protein_pct": 2.9,
+          "body_wt_kg": 53,
+          "feed_kg_dm": 3.6,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 3.9,
+          "fat_pct": 3.4,
+          "protein_pct": 2.9,
+          "body_wt_kg": 54,
+          "feed_kg_dm": 3.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 3.6,
+          "fat_pct": 3.4,
+          "protein_pct": 2.9,
+          "body_wt_kg": 56,
+          "feed_kg_dm": 3.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 16,
+          "milk_kg_day": 3.3,
+          "fat_pct": 3.4,
+          "protein_pct": 2.9,
+          "body_wt_kg": 57,
+          "feed_kg_dm": 3.1,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 3,
+          "fat_pct": 3.5,
+          "protein_pct": 3,
+          "body_wt_kg": 58,
+          "feed_kg_dm": 2.9,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 24,
+          "milk_kg_day": 2.7,
+          "fat_pct": 3.5,
+          "protein_pct": 3,
+          "body_wt_kg": 59,
+          "feed_kg_dm": 2.7,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 28,
+          "milk_kg_day": 2.3,
+          "fat_pct": 3.6,
+          "protein_pct": 3,
+          "body_wt_kg": 60,
+          "feed_kg_dm": 2.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 32,
+          "milk_kg_day": 1.9,
+          "fat_pct": 3.7,
+          "protein_pct": 3.1,
+          "body_wt_kg": 61,
+          "feed_kg_dm": 2.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 36,
+          "milk_kg_day": 1.5,
+          "fat_pct": 3.8,
+          "protein_pct": 3.1,
+          "body_wt_kg": 61,
+          "feed_kg_dm": 2.1,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 1.1,
+          "fat_pct": 3.9,
+          "protein_pct": 3.2,
+          "body_wt_kg": 61,
+          "feed_kg_dm": 1.9,
+          "mortality_pct_max": 0.5
+        }
+      ]
+    },
+    "nubian": {
+      "_meta": {
+        "breed": "nubian",
+        "age_unit": "week_of_lactation",
+        "source": "USDA AMS Dairy Goat National Genetic Evaluation; University of Georgia Extension (1820 lbs/lactation = 825 kg); Anglo-Nubian breed society UK.",
+        "data_quality": "official",
+        "type": "dairy",
+        "origin": "Africa/Middle East cross with British",
+        "mature_weight_doe_kg": 65,
+        "lactation_days": 280,
+        "annual_milk_kg": 825,
+        "milk_fat_pct": 4.9,
+        "milk_protein_pct": 3.7,
+        "note": "Lower volume but highest fat and protein of all dairy breeds. Long drooping ears. Popular in tropics."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "lactation_curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 2,
+          "fat_pct": 5.5,
+          "protein_pct": 3.9,
+          "body_wt_kg": 60,
+          "feed_kg_dm": 2.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 2.6,
+          "fat_pct": 5.2,
+          "protein_pct": 3.8,
+          "body_wt_kg": 59,
+          "feed_kg_dm": 2.8,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 3.1,
+          "fat_pct": 5,
+          "protein_pct": 3.7,
+          "body_wt_kg": 58,
+          "feed_kg_dm": 3.2,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 6,
+          "milk_kg_day": 3.3,
+          "fat_pct": 4.9,
+          "protein_pct": 3.7,
+          "body_wt_kg": 58,
+          "feed_kg_dm": 3.4,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 3.2,
+          "fat_pct": 4.9,
+          "protein_pct": 3.7,
+          "body_wt_kg": 59,
+          "feed_kg_dm": 3.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 3,
+          "fat_pct": 4.9,
+          "protein_pct": 3.7,
+          "body_wt_kg": 61,
+          "feed_kg_dm": 3.1,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 16,
+          "milk_kg_day": 2.7,
+          "fat_pct": 4.9,
+          "protein_pct": 3.7,
+          "body_wt_kg": 62,
+          "feed_kg_dm": 2.9,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 2.4,
+          "fat_pct": 5,
+          "protein_pct": 3.8,
+          "body_wt_kg": 63,
+          "feed_kg_dm": 2.7,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 24,
+          "milk_kg_day": 2.1,
+          "fat_pct": 5,
+          "protein_pct": 3.8,
+          "body_wt_kg": 64,
+          "feed_kg_dm": 2.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 28,
+          "milk_kg_day": 1.8,
+          "fat_pct": 5.1,
+          "protein_pct": 3.8,
+          "body_wt_kg": 65,
+          "feed_kg_dm": 2.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 32,
+          "milk_kg_day": 1.4,
+          "fat_pct": 5.2,
+          "protein_pct": 3.9,
+          "body_wt_kg": 65,
+          "feed_kg_dm": 2.1,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 36,
+          "milk_kg_day": 1,
+          "fat_pct": 5.3,
+          "protein_pct": 3.9,
+          "body_wt_kg": 65,
+          "feed_kg_dm": 1.9,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 0.7,
+          "fat_pct": 5.4,
+          "protein_pct": 4,
+          "body_wt_kg": 65,
+          "feed_kg_dm": 1.8,
+          "mortality_pct_max": 0.5
+        }
+      ]
+    },
+    "toggenburg": {
+      "_meta": {
+        "breed": "toggenburg",
+        "age_unit": "week_of_lactation",
+        "source": "USDA AMS Dairy Goat National Genetic Evaluation; University of Georgia Extension (2115 lbs = 960 kg / lactation); Swiss Toggenburg breed society.",
+        "data_quality": "official",
+        "type": "dairy",
+        "origin": "Switzerland",
+        "mature_weight_doe_kg": 55,
+        "lactation_days": 285,
+        "annual_milk_kg": 960,
+        "milk_fat_pct": 3.2,
+        "milk_protein_pct": 2.7,
+        "note": "Oldest known dairy goat breed. Brown with white markings. Consistent producer, good in cooler climates."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "lactation_curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 2.4,
+          "fat_pct": 3.8,
+          "protein_pct": 2.9,
+          "body_wt_kg": 50,
+          "feed_kg_dm": 2.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 3.6,
+          "fat_pct": 3.3,
+          "protein_pct": 2.7,
+          "body_wt_kg": 49,
+          "feed_kg_dm": 3.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 6,
+          "milk_kg_day": 3.8,
+          "fat_pct": 3.2,
+          "protein_pct": 2.7,
+          "body_wt_kg": 49,
+          "feed_kg_dm": 3.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 3.7,
+          "fat_pct": 3.2,
+          "protein_pct": 2.7,
+          "body_wt_kg": 50,
+          "feed_kg_dm": 3.4,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 3.4,
+          "fat_pct": 3.2,
+          "protein_pct": 2.7,
+          "body_wt_kg": 52,
+          "feed_kg_dm": 3.2,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 16,
+          "milk_kg_day": 3.1,
+          "fat_pct": 3.2,
+          "protein_pct": 2.7,
+          "body_wt_kg": 53,
+          "feed_kg_dm": 3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 2.8,
+          "fat_pct": 3.3,
+          "protein_pct": 2.8,
+          "body_wt_kg": 54,
+          "feed_kg_dm": 2.8,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 24,
+          "milk_kg_day": 2.5,
+          "fat_pct": 3.3,
+          "protein_pct": 2.8,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 2.6,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 28,
+          "milk_kg_day": 2.1,
+          "fat_pct": 3.4,
+          "protein_pct": 2.8,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 2.4,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 32,
+          "milk_kg_day": 1.7,
+          "fat_pct": 3.5,
+          "protein_pct": 2.9,
+          "body_wt_kg": 56,
+          "feed_kg_dm": 2.2,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 36,
+          "milk_kg_day": 1.3,
+          "fat_pct": 3.6,
+          "protein_pct": 2.9,
+          "body_wt_kg": 56,
+          "feed_kg_dm": 2,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 0.9,
+          "fat_pct": 3.7,
+          "protein_pct": 3,
+          "body_wt_kg": 56,
+          "feed_kg_dm": 1.8,
+          "mortality_pct_max": 0.5
+        }
+      ]
+    },
+    "lamancha": {
+      "_meta": {
+        "breed": "lamancha",
+        "age_unit": "week_of_lactation",
+        "source": "USDA AMS Dairy Goat National Genetic Evaluation; University of Georgia Extension (2100 lbs = 953 kg / lactation); American LaMancha Club.",
+        "data_quality": "official",
+        "type": "dairy",
+        "origin": "USA (developed from Spanish stock)",
+        "mature_weight_doe_kg": 60,
+        "lactation_days": 285,
+        "annual_milk_kg": 953,
+        "milk_fat_pct": 4,
+        "milk_protein_pct": 3.2,
+        "note": "Distinctive very small ears. High butterfat. Heat tolerant. Developed in the US."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "lactation_curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 2.3,
+          "fat_pct": 4.5,
+          "protein_pct": 3.4,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 2.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 3.5,
+          "fat_pct": 4.1,
+          "protein_pct": 3.2,
+          "body_wt_kg": 54,
+          "feed_kg_dm": 3.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 6,
+          "milk_kg_day": 3.7,
+          "fat_pct": 4,
+          "protein_pct": 3.2,
+          "body_wt_kg": 54,
+          "feed_kg_dm": 3.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 3.6,
+          "fat_pct": 4,
+          "protein_pct": 3.2,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 3.4,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 3.3,
+          "fat_pct": 4,
+          "protein_pct": 3.2,
+          "body_wt_kg": 57,
+          "feed_kg_dm": 3.1,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 16,
+          "milk_kg_day": 3,
+          "fat_pct": 4,
+          "protein_pct": 3.2,
+          "body_wt_kg": 58,
+          "feed_kg_dm": 2.9,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 2.7,
+          "fat_pct": 4.1,
+          "protein_pct": 3.3,
+          "body_wt_kg": 59,
+          "feed_kg_dm": 2.7,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 24,
+          "milk_kg_day": 2.4,
+          "fat_pct": 4.1,
+          "protein_pct": 3.3,
+          "body_wt_kg": 60,
+          "feed_kg_dm": 2.5,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 28,
+          "milk_kg_day": 2,
+          "fat_pct": 4.2,
+          "protein_pct": 3.3,
+          "body_wt_kg": 60,
+          "feed_kg_dm": 2.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 32,
+          "milk_kg_day": 1.6,
+          "fat_pct": 4.3,
+          "protein_pct": 3.4,
+          "body_wt_kg": 61,
+          "feed_kg_dm": 2.1,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 36,
+          "milk_kg_day": 1.2,
+          "fat_pct": 4.4,
+          "protein_pct": 3.4,
+          "body_wt_kg": 61,
+          "feed_kg_dm": 1.9,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 0.8,
+          "fat_pct": 4.5,
+          "protein_pct": 3.5,
+          "body_wt_kg": 61,
+          "feed_kg_dm": 1.8,
+          "mortality_pct_max": 0.5
+        }
+      ]
+    },
+    "oberhasli": {
+      "_meta": {
+        "breed": "oberhasli",
+        "age_unit": "week_of_lactation",
+        "source": "USDA AMS Dairy Goat National Genetic Evaluation; University of Georgia Extension (2146 lbs = 974 kg / lactation).",
+        "data_quality": "official",
+        "type": "dairy",
+        "origin": "Switzerland",
+        "mature_weight_doe_kg": 55,
+        "lactation_days": 290,
+        "annual_milk_kg": 974,
+        "milk_fat_pct": 3.9,
+        "milk_protein_pct": 2.9,
+        "note": "Bay-colored Swiss breed. Sweet mild milk. Less common than Saanen/Alpine but excellent quality."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "lactation_curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 2.2,
+          "fat_pct": 4.4,
+          "protein_pct": 3.1,
+          "body_wt_kg": 50,
+          "feed_kg_dm": 2.4,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 3.4,
+          "fat_pct": 4,
+          "protein_pct": 2.9,
+          "body_wt_kg": 49,
+          "feed_kg_dm": 3.2,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 6,
+          "milk_kg_day": 3.6,
+          "fat_pct": 3.9,
+          "protein_pct": 2.9,
+          "body_wt_kg": 49,
+          "feed_kg_dm": 3.4,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 3.5,
+          "fat_pct": 3.9,
+          "protein_pct": 2.9,
+          "body_wt_kg": 50,
+          "feed_kg_dm": 3.3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 3.2,
+          "fat_pct": 3.9,
+          "protein_pct": 2.9,
+          "body_wt_kg": 52,
+          "feed_kg_dm": 3,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 16,
+          "milk_kg_day": 2.9,
+          "fat_pct": 3.9,
+          "protein_pct": 2.9,
+          "body_wt_kg": 53,
+          "feed_kg_dm": 2.8,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 2.6,
+          "fat_pct": 4,
+          "protein_pct": 3,
+          "body_wt_kg": 54,
+          "feed_kg_dm": 2.6,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 24,
+          "milk_kg_day": 2.3,
+          "fat_pct": 4,
+          "protein_pct": 3,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 2.4,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 28,
+          "milk_kg_day": 1.9,
+          "fat_pct": 4.1,
+          "protein_pct": 3,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 2.2,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 32,
+          "milk_kg_day": 1.5,
+          "fat_pct": 4.2,
+          "protein_pct": 3.1,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 2,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 36,
+          "milk_kg_day": 1.1,
+          "fat_pct": 4.3,
+          "protein_pct": 3.1,
+          "body_wt_kg": 56,
+          "feed_kg_dm": 1.9,
+          "mortality_pct_max": 0.5
+        },
+        {
+          "week": 40,
+          "milk_kg_day": 0.8,
+          "fat_pct": 4.4,
+          "protein_pct": 3.2,
+          "body_wt_kg": 56,
+          "feed_kg_dm": 1.8,
+          "mortality_pct_max": 0.5
+        }
+      ]
+    },
+    "beetal_dairy": {
+      "_meta": {
+        "breed": "beetal_dairy",
+        "age_unit": "week_of_lactation",
+        "type": "dairy_meat",
+        "origin": "Pakistan/India (Punjab)",
+        "data_quality": "official_research",
+        "source": "LPRI Pakistan + GoatJournal breed profile. 1.0-3.0 L/day avg 1.8 L for 150-170 days (avg 161 days). Fat 5%, Protein 3.5%.",
+        "mature_weight_doe_kg": 55,
+        "lactation_days": 161,
+        "milk_fat_pct": 5,
+        "milk_protein_pct": 3.5,
+        "regional_relevance": [
+          "Pakistan",
+          "India (Punjab/Haryana)"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "lactation_curve": [
+        {
+          "week": 1,
+          "milk_kg_day": 1,
+          "fat_pct": 5.8,
+          "protein_pct": 3.8,
+          "body_wt_kg": 53,
+          "feed_kg_dm": 1.5
+        },
+        {
+          "week": 2,
+          "milk_kg_day": 1.8,
+          "fat_pct": 5.5,
+          "protein_pct": 3.6,
+          "body_wt_kg": 52,
+          "feed_kg_dm": 2
+        },
+        {
+          "week": 3,
+          "milk_kg_day": 2.3,
+          "fat_pct": 5.2,
+          "protein_pct": 3.5,
+          "body_wt_kg": 51,
+          "feed_kg_dm": 2.3
+        },
+        {
+          "week": 4,
+          "milk_kg_day": 2.5,
+          "fat_pct": 5,
+          "protein_pct": 3.5,
+          "body_wt_kg": 51,
+          "feed_kg_dm": 2.4
+        },
+        {
+          "week": 6,
+          "milk_kg_day": 2.3,
+          "fat_pct": 5,
+          "protein_pct": 3.5,
+          "body_wt_kg": 51,
+          "feed_kg_dm": 2.3
+        },
+        {
+          "week": 8,
+          "milk_kg_day": 2.1,
+          "fat_pct": 5,
+          "protein_pct": 3.5,
+          "body_wt_kg": 52,
+          "feed_kg_dm": 2.2
+        },
+        {
+          "week": 10,
+          "milk_kg_day": 1.9,
+          "fat_pct": 5,
+          "protein_pct": 3.5,
+          "body_wt_kg": 53,
+          "feed_kg_dm": 2.1
+        },
+        {
+          "week": 12,
+          "milk_kg_day": 1.7,
+          "fat_pct": 5.1,
+          "protein_pct": 3.5,
+          "body_wt_kg": 54,
+          "feed_kg_dm": 2
+        },
+        {
+          "week": 14,
+          "milk_kg_day": 1.5,
+          "fat_pct": 5.1,
+          "protein_pct": 3.6,
+          "body_wt_kg": 54,
+          "feed_kg_dm": 1.9
+        },
+        {
+          "week": 16,
+          "milk_kg_day": 1.2,
+          "fat_pct": 5.2,
+          "protein_pct": 3.6,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 1.8
+        },
+        {
+          "week": 18,
+          "milk_kg_day": 0.9,
+          "fat_pct": 5.3,
+          "protein_pct": 3.6,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 1.7
+        },
+        {
+          "week": 20,
+          "milk_kg_day": 0.6,
+          "fat_pct": 5.4,
+          "protein_pct": 3.7,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 1.6
+        },
+        {
+          "week": 22,
+          "milk_kg_day": 0.3,
+          "fat_pct": 5.5,
+          "protein_pct": 3.7,
+          "body_wt_kg": 55,
+          "feed_kg_dm": 1.5
+        }
+      ]
+    }
+  },
+  "goat_dual": {
+    "beetal": {
+      "_meta": {
+        "breed": "beetal",
+        "age_unit": "week",
+        "source": "Pakistan Livestock Research; Punjab Agriculture University; FAO Domestic Animal Diversity breed data (estimated from published field data).",
+        "data_quality": "estimated",
+        "type": "dual_meat_milk",
+        "origin": "Punjab, Pakistan/India",
+        "mature_weight_buck_kg": 65,
+        "mature_weight_doe_kg": 45,
+        "milk_per_lactation_kg": 250,
+        "note": "Widely used dual-purpose breed in South Asia. Good meat and moderate milk. Large body with curved horns."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 2.5,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 3
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 6,
+          "daily_gain_g": 125,
+          "feed_kg_dm": 0.28,
+          "fcr": null,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 10,
+          "daily_gain_g": 125,
+          "feed_kg_dm": 0.48,
+          "fcr": 3.8,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 14,
+          "daily_gain_g": 120,
+          "feed_kg_dm": 0.65,
+          "fcr": 4.5,
+          "mortality_pct_max": 4.5
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 21,
+          "daily_gain_g": 110,
+          "feed_kg_dm": 0.9,
+          "fcr": 5.3,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 36,
+          "body_wt_kg": 33,
+          "daily_gain_g": 95,
+          "feed_kg_dm": 1.2,
+          "fcr": 6.5,
+          "mortality_pct_max": 6
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 44,
+          "daily_gain_g": 75,
+          "feed_kg_dm": 1.45,
+          "fcr": 7.5,
+          "mortality_pct_max": 7
+        }
+      ]
+    },
+    "barbari": {
+      "_meta": {
+        "breed": "barbari",
+        "age_unit": "week",
+        "source": "Central Institute for Research on Goats (CIRG), India; FAO breed data (estimated from published records).",
+        "data_quality": "estimated",
+        "type": "dual_meat_milk",
+        "origin": "India/Pakistan",
+        "mature_weight_buck_kg": 38,
+        "mature_weight_doe_kg": 25,
+        "milk_per_lactation_kg": 110,
+        "note": "Small compact dual-purpose breed. High prolificacy (twins/triplets common). Popular in India for both meat and milk."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 1.5,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "fcr": null,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 3.8,
+          "daily_gain_g": 82,
+          "feed_kg_dm": 0.18,
+          "fcr": null,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 6.5,
+          "daily_gain_g": 85,
+          "feed_kg_dm": 0.32,
+          "fcr": 3.8,
+          "mortality_pct_max": 4.5
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 9.2,
+          "daily_gain_g": 82,
+          "feed_kg_dm": 0.44,
+          "fcr": 4.5,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 14,
+          "daily_gain_g": 75,
+          "feed_kg_dm": 0.62,
+          "fcr": 5.5,
+          "mortality_pct_max": 5.5
+        },
+        {
+          "week": 36,
+          "body_wt_kg": 21,
+          "daily_gain_g": 63,
+          "feed_kg_dm": 0.85,
+          "fcr": 7,
+          "mortality_pct_max": 6.5
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 27,
+          "daily_gain_g": 50,
+          "feed_kg_dm": 1,
+          "fcr": 8.5,
+          "mortality_pct_max": 8
+        }
+      ]
+    }
+  },
+  "goat_fiber": {
+    "angora": {
+      "_meta": {
+        "breed": "angora",
+        "age_unit": "week",
+        "source": "South African Angora Stud Breeders Society; Texas A&M AgriLife Extension; American Angora Goat Breeders Association (estimated from published data).",
+        "data_quality": "estimated",
+        "type": "fiber_mohair",
+        "origin": "Turkey (Ankara region)",
+        "mature_weight_buck_kg": 55,
+        "mature_weight_doe_kg": 38,
+        "mohair_kg_per_shearing": 2.5,
+        "shearings_per_year": 2,
+        "note": "Produces lustrous mohair fiber. Shorn twice yearly. More delicate than meat breeds, sensitive to cold/wet."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 2.2,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "mohair_kg_shearing": null,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 5,
+          "daily_gain_g": 100,
+          "feed_kg_dm": 0.22,
+          "mohair_kg_shearing": null,
+          "mortality_pct_max": 4.5
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 8,
+          "daily_gain_g": 100,
+          "feed_kg_dm": 0.38,
+          "mohair_kg_shearing": null,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 11,
+          "daily_gain_g": 95,
+          "feed_kg_dm": 0.52,
+          "mohair_kg_shearing": 0.8,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 18,
+          "daily_gain_g": 85,
+          "feed_kg_dm": 0.8,
+          "mohair_kg_shearing": 1.2,
+          "mortality_pct_max": 5.5
+        },
+        {
+          "week": 36,
+          "body_wt_kg": 25,
+          "daily_gain_g": 75,
+          "feed_kg_dm": 1,
+          "mohair_kg_shearing": 1.8,
+          "mortality_pct_max": 6
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 33,
+          "daily_gain_g": 60,
+          "feed_kg_dm": 1.2,
+          "mohair_kg_shearing": 2.2,
+          "mortality_pct_max": 6.5
+        },
+        {
+          "week": 104,
+          "body_wt_kg": 42,
+          "daily_gain_g": 30,
+          "feed_kg_dm": 1.4,
+          "mohair_kg_shearing": 2.8,
+          "mortality_pct_max": 7
+        }
+      ]
+    },
+    "cashmere": {
+      "_meta": {
+        "breed": "cashmere",
+        "age_unit": "week",
+        "source": "FAO Animal Production and Health guidelines; Inner Mongolia Agricultural University data; Australian Cashmere Goat Society (estimated).",
+        "data_quality": "estimated",
+        "type": "fiber_cashmere",
+        "origin": "Central Asia / Kashmir",
+        "mature_weight_buck_kg": 65,
+        "mature_weight_doe_kg": 45,
+        "cashmere_g_per_year": 200,
+        "note": "Cashmere is the fine undercoat, combed/dehaired annually. Body weight varies widely by region. Performance highly variable."
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 2.8,
+          "daily_gain_g": null,
+          "feed_kg_dm": null,
+          "cashmere_g_annual": null,
+          "mortality_pct_max": 3.5
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 6,
+          "daily_gain_g": 114,
+          "feed_kg_dm": 0.25,
+          "cashmere_g_annual": null,
+          "mortality_pct_max": 4
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 12,
+          "daily_gain_g": 100,
+          "feed_kg_dm": 0.55,
+          "cashmere_g_annual": null,
+          "mortality_pct_max": 4.5
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 20,
+          "daily_gain_g": 95,
+          "feed_kg_dm": 0.85,
+          "cashmere_g_annual": 80,
+          "mortality_pct_max": 5
+        },
+        {
+          "week": 36,
+          "body_wt_kg": 28,
+          "daily_gain_g": 80,
+          "feed_kg_dm": 1.05,
+          "cashmere_g_annual": 130,
+          "mortality_pct_max": 5.5
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 38,
+          "daily_gain_g": 65,
+          "feed_kg_dm": 1.25,
+          "cashmere_g_annual": 175,
+          "mortality_pct_max": 6
+        },
+        {
+          "week": 104,
+          "body_wt_kg": 50,
+          "daily_gain_g": 35,
+          "feed_kg_dm": 1.55,
+          "cashmere_g_annual": 210,
+          "mortality_pct_max": 7
+        }
+      ]
+    }
+  }
+}

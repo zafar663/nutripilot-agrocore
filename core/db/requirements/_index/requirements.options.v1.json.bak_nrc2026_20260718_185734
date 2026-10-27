@@ -1,0 +1,2426 @@
+{
+  "ok": true,
+  "version": "requirements.options.v2.auto",
+  "species": [
+    {
+      "key": "poultry",
+      "label": "Poultry"
+    },
+    {
+      "key": "equine",
+      "label": "Equine"
+    },
+    {
+      "key": "swine",
+      "label": "Swine"
+    },
+    {
+      "key": "dairy",
+      "label": "Dairy"
+    },
+    {
+      "key": "beef",
+      "label": "Beef"
+    },
+    {
+      "key": "sheep",
+      "label": "Sheep"
+    },
+    {
+      "key": "goat",
+      "label": "Goat"
+    },
+    {
+      "key": "aqua",
+      "label": "Aquaculture"
+    },
+    {
+      "key": "dog",
+      "label": "Dog"
+    },
+    {
+      "key": "cat",
+      "label": "Cat"
+    }
+  ],
+  "types": {
+    "poultry": [
+      {
+        "key": "broiler",
+        "label": "Broiler"
+      },
+      {
+        "key": "broiler_breeder",
+        "label": "Broiler Breeder"
+      },
+      {
+        "key": "duck",
+        "label": "Duck"
+      },
+      {
+        "key": "goose",
+        "label": "Goose"
+      },
+      {
+        "key": "layer",
+        "label": "Layer"
+      },
+      {
+        "key": "layer_breeder",
+        "label": "Layer Breeder"
+      },
+      {
+        "key": "quail",
+        "label": "Quail"
+      },
+      {
+        "key": "turkey",
+        "label": "Turkey"
+      }
+    ],
+    "equine": [
+      {
+        "key": "horse",
+        "label": "Horse"
+      },
+      {
+        "key": "pony",
+        "label": "Pony"
+      },
+      {
+        "key": "donkey",
+        "label": "Donkey"
+      },
+      {
+        "key": "mule",
+        "label": "Mule"
+      }
+    ],
+    "swine": [
+      {
+        "key": "grow_finish",
+        "label": "Grow-Finish"
+      },
+      {
+        "key": "sow",
+        "label": "Sow"
+      },
+      {
+        "key": "gilt",
+        "label": "Gilt"
+      },
+      {
+        "key": "boar",
+        "label": "Boar"
+      },
+      {
+        "key": "nursery",
+        "label": "Nursery"
+      }
+    ],
+    "dairy": [
+      {
+        "key": "cow",
+        "label": "Dairy Cow"
+      },
+      {
+        "key": "heifer",
+        "label": "Heifer"
+      },
+      {
+        "key": "calf",
+        "label": "Calf"
+      }
+    ],
+    "beef": [
+      {
+        "key": "cow_calf",
+        "label": "Cow-Calf"
+      },
+      {
+        "key": "stocker",
+        "label": "Stocker / Backgrounder"
+      },
+      {
+        "key": "feedlot",
+        "label": "Feedlot"
+      },
+      {
+        "key": "bull",
+        "label": "Breeding Bull"
+      }
+    ],
+    "sheep": [
+      {
+        "key": "ewe",
+        "label": "Ewe"
+      },
+      {
+        "key": "lamb",
+        "label": "Lamb"
+      },
+      {
+        "key": "ram",
+        "label": "Ram"
+      }
+    ],
+    "goat": [
+      {
+        "key": "doe",
+        "label": "Doe (Dairy / Meat)"
+      },
+      {
+        "key": "kid",
+        "label": "Kid"
+      },
+      {
+        "key": "buck",
+        "label": "Buck"
+      }
+    ],
+    "aqua": [
+      {
+        "key": "tilapia",
+        "label": "Tilapia"
+      },
+      {
+        "key": "catfish",
+        "label": "Catfish"
+      },
+      {
+        "key": "salmon",
+        "label": "Salmon"
+      },
+      {
+        "key": "trout",
+        "label": "Trout"
+      },
+      {
+        "key": "carp",
+        "label": "Carp"
+      },
+      {
+        "key": "shrimp",
+        "label": "Shrimp / Prawn"
+      },
+      {
+        "key": "seabass",
+        "label": "Sea Bass"
+      },
+      {
+        "key": "seabream",
+        "label": "Sea Bream"
+      },
+      {
+        "key": "pangasius",
+        "label": "Pangasius / Basa"
+      },
+      {
+        "key": "milkfish",
+        "label": "Milkfish"
+      }
+    ],
+    "dog": [
+      {
+        "key": "dog",
+        "label": "Dog"
+      }
+    ],
+    "cat": [
+      {
+        "key": "cat",
+        "label": "Cat"
+      }
+    ]
+  },
+  "productions": {
+    "broiler": [
+      {
+        "key": "meat",
+        "label": "Meat"
+      }
+    ],
+    "broiler_breeder": [
+      {
+        "key": "breeder",
+        "label": "Breeder"
+      }
+    ],
+    "duck": [
+      {
+        "key": "breeder",
+        "label": "Breeder"
+      },
+      {
+        "key": "egg",
+        "label": "Egg"
+      },
+      {
+        "key": "meat",
+        "label": "Meat"
+      }
+    ],
+    "goose": [
+      {
+        "key": "breeder",
+        "label": "Breeder"
+      },
+      {
+        "key": "egg",
+        "label": "Egg"
+      },
+      {
+        "key": "meat",
+        "label": "Meat"
+      }
+    ],
+    "layer": [
+      {
+        "key": "egg",
+        "label": "Egg"
+      }
+    ],
+    "layer_breeder": [
+      {
+        "key": "breeder",
+        "label": "Breeder"
+      }
+    ],
+    "quail": [
+      {
+        "key": "breeder",
+        "label": "Breeder"
+      },
+      {
+        "key": "egg",
+        "label": "Egg"
+      },
+      {
+        "key": "meat",
+        "label": "Meat"
+      }
+    ],
+    "turkey": [
+      {
+        "key": "breeder",
+        "label": "Breeder"
+      },
+      {
+        "key": "egg",
+        "label": "Egg"
+      },
+      {
+        "key": "meat",
+        "label": "Meat"
+      }
+    ],
+    "horse": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "performance",
+        "label": "Performance / Work"
+      },
+      {
+        "key": "growth",
+        "label": "Growth"
+      },
+      {
+        "key": "reproduction",
+        "label": "Reproduction"
+      },
+      {
+        "key": "lactation",
+        "label": "Lactation"
+      },
+      {
+        "key": "senior",
+        "label": "Senior"
+      },
+      {
+        "key": "metabolic",
+        "label": "Metabolic"
+      }
+    ],
+    "grow_finish": [
+      {
+        "key": "market",
+        "label": "Market Pig"
+      }
+    ],
+    "sow": [
+      {
+        "key": "gestation",
+        "label": "Gestation"
+      },
+      {
+        "key": "lactation",
+        "label": "Lactation"
+      }
+    ],
+    "gilt": [
+      {
+        "key": "development",
+        "label": "Development"
+      },
+      {
+        "key": "prebreed",
+        "label": "Pre-Breed"
+      }
+    ],
+    "boar": [
+      {
+        "key": "production",
+        "label": "Production"
+      }
+    ],
+    "nursery": [
+      {
+        "key": "weaning",
+        "label": "Weaning"
+      }
+    ],
+    "cow": [
+      {
+        "key": "lactation",
+        "label": "Lactation"
+      },
+      {
+        "key": "dry",
+        "label": "Dry Period"
+      },
+      {
+        "key": "transition",
+        "label": "Transition (Close-up)"
+      },
+      {
+        "key": "fresh",
+        "label": "Fresh Cow"
+      }
+    ],
+    "heifer": [
+      {
+        "key": "growing",
+        "label": "Growing"
+      },
+      {
+        "key": "bred",
+        "label": "Bred Heifer"
+      }
+    ],
+    "calf": [
+      {
+        "key": "preruminant",
+        "label": "Pre-ruminant (Milk Fed)"
+      },
+      {
+        "key": "starter",
+        "label": "Starter / Weaning"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      }
+    ],
+    "cow_calf": [
+      {
+        "key": "cow_maintenance",
+        "label": "Cow Maintenance"
+      },
+      {
+        "key": "cow_gestation",
+        "label": "Cow Late Gestation"
+      },
+      {
+        "key": "cow_lactation",
+        "label": "Cow Lactation"
+      },
+      {
+        "key": "calf_creep",
+        "label": "Calf Creep"
+      }
+    ],
+    "stocker": [
+      {
+        "key": "growing",
+        "label": "Growing"
+      },
+      {
+        "key": "backgrounding",
+        "label": "Backgrounding"
+      }
+    ],
+    "feedlot": [
+      {
+        "key": "receiving",
+        "label": "Receiving"
+      },
+      {
+        "key": "growing",
+        "label": "Growing"
+      },
+      {
+        "key": "finishing",
+        "label": "Finishing"
+      }
+    ],
+    "bull": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "breeding",
+        "label": "Breeding Season"
+      }
+    ],
+    "ewe": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "flushing",
+        "label": "Flushing"
+      },
+      {
+        "key": "early_gestation",
+        "label": "Early Gestation"
+      },
+      {
+        "key": "late_gestation",
+        "label": "Late Gestation"
+      },
+      {
+        "key": "early_lactation",
+        "label": "Early Lactation"
+      },
+      {
+        "key": "late_lactation",
+        "label": "Late Lactation"
+      }
+    ],
+    "lamb": [
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher / Feedlot"
+      }
+    ],
+    "ram": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "breeding",
+        "label": "Breeding Season"
+      }
+    ],
+    "doe": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "late_gestation",
+        "label": "Late Gestation"
+      },
+      {
+        "key": "early_lactation",
+        "label": "Early Lactation (Peak)"
+      },
+      {
+        "key": "mid_lactation",
+        "label": "Mid Lactation"
+      },
+      {
+        "key": "late_lactation",
+        "label": "Late Lactation"
+      }
+    ],
+    "kid": [
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher"
+      }
+    ],
+    "buck": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "breeding",
+        "label": "Breeding Season"
+      }
+    ],
+    "tilapia": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "catfish": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "salmon": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out (Sea)"
+      },
+      {
+        "key": "smolt",
+        "label": "Smolt"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "trout": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "carp": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling"
+      }
+    ],
+    "shrimp": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      },
+      {
+        "key": "postlarva",
+        "label": "Post-Larva / PL"
+      }
+    ],
+    "seabass": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "seabream": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "pangasius": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      }
+    ],
+    "milkfish": [
+      {
+        "key": "grow_out",
+        "label": "Grow-Out"
+      },
+      {
+        "key": "fry",
+        "label": "Fry"
+      }
+    ]
+  },
+  "breeds": {
+    "broiler": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "cobb500",
+        "label": "Cobb 500"
+      },
+      {
+        "key": "cobb700",
+        "label": "Cobb 700"
+      },
+      {
+        "key": "cobb800",
+        "label": "Cobb 800"
+      },
+      {
+        "key": "hubbard",
+        "label": "Hubbard"
+      },
+      {
+        "key": "ross308",
+        "label": "Ross 308"
+      },
+      {
+        "key": "aa",
+        "label": "Arbor Acres"
+      },
+      {
+        "key": "ir",
+        "label": "Indian River"
+      }
+    ],
+    "broiler_breeder": [
+      {
+        "key": "ross308",
+        "label": "Ross 308"
+      },
+      {
+        "key": "ross308ap",
+        "label": "Ross 308 AP"
+      },
+      {
+        "key": "ross308_eu",
+        "label": "Ross 308 EU"
+      },
+      {
+        "key": "ross708",
+        "label": "Ross 708"
+      },
+      {
+        "key": "nrc2026",
+        "label": "NRC 2026"
+      }
+    ],
+    "duck": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "pekin",
+        "label": "Pekin"
+      },
+      {
+        "key": "mulard",
+        "label": "Mulard"
+      },
+      {
+        "key": "grimaud",
+        "label": "Grimaud"
+      },
+      {
+        "key": "muscovy",
+        "label": "Muscovy"
+      },
+      {
+        "key": "cherry_valley",
+        "label": "Cherry Valley"
+      }
+    ],
+    "goose": [
+      {
+        "key": "embden",
+        "label": "Embden"
+      },
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "toulouse",
+        "label": "Toulouse"
+      },
+      {
+        "key": "african",
+        "label": "African"
+      }
+    ],
+    "layer": [
+      {
+        "key": "bovans_brown",
+        "label": "Bovans Brown"
+      },
+      {
+        "key": "bovans_white",
+        "label": "Bovans White"
+      },
+      {
+        "key": "dekalb_white",
+        "label": "Dekalb White"
+      },
+      {
+        "key": "hyline_brown",
+        "label": "Hy-Line Brown"
+      },
+      {
+        "key": "hyline_pink",
+        "label": "Hy-Line Pink"
+      },
+      {
+        "key": "hyline_w36",
+        "label": "Hy-Line W-36"
+      },
+      {
+        "key": "hyline_w80",
+        "label": "Hy-Line W-80"
+      },
+      {
+        "key": "hyline_w80_plus",
+        "label": "Hy-Line W-80 Plus"
+      },
+      {
+        "key": "hyline_w80_pro",
+        "label": "Hy-Line W-80 Pro"
+      },
+      {
+        "key": "isa_brown",
+        "label": "ISA Brown"
+      },
+      {
+        "key": "lohmann_brown_classic",
+        "label": "Lohmann Brown Classic"
+      },
+      {
+        "key": "lohmann_brown_extra",
+        "label": "Lohmann Brown Extra"
+      },
+      {
+        "key": "lohmann_brown_lite_na",
+        "label": "Lohmann Brown Lite NA"
+      },
+      {
+        "key": "lohmann_lsl_classic",
+        "label": "Lohmann LSL Classic"
+      },
+      {
+        "key": "lohmann_lsl_extra",
+        "label": "Lohmann LSL Extra"
+      },
+      {
+        "key": "lohmann_lsl_lite_na",
+        "label": "Lohmann LSL Lite NA"
+      },
+      {
+        "key": "lohmann_lsl_ultra_lite",
+        "label": "Lohmann LSL Ultra Lite"
+      },
+      {
+        "key": "lohmann_pink",
+        "label": "Lohmann Pink"
+      },
+      {
+        "key": "lohmann_sandy",
+        "label": "Lohmann Sandy"
+      },
+      {
+        "key": "lohmann_silver",
+        "label": "Lohmann Silver"
+      },
+      {
+        "key": "lohmann_tradition",
+        "label": "Lohmann Tradition"
+      },
+      {
+        "key": "nrc2026_white",
+        "label": "NRC 2026 (White egg)"
+      },
+      {
+        "key": "nrc2026_brown",
+        "label": "NRC 2026 (Brown egg)"
+      }
+    ],
+    "layer_breeder": [
+      {
+        "key": "hyline_brown_f_rear",
+        "label": "Hyline Brown F Rear"
+      },
+      {
+        "key": "hyline_w36_f_rear",
+        "label": "Hyline W36 F Rear"
+      },
+      {
+        "key": "hyline_pink_f_rear",
+        "label": "Hyline Pink F Rear"
+      },
+      {
+        "key": "hyline_silver_brown_f_rear",
+        "label": "Hyline Silver Brown F Rear"
+      },
+      {
+        "key": "lohmann_lsl_f_rear",
+        "label": "Lohmann Lsl F Rear"
+      },
+      {
+        "key": "lohmann_brown_f_rear",
+        "label": "Lohmann Brown F Rear"
+      },
+      {
+        "key": "bovans_white_f_rear",
+        "label": "Bovans White F Rear"
+      },
+      {
+        "key": "bovans_brown_f_rear",
+        "label": "Bovans Brown F Rear"
+      },
+      {
+        "key": "dekalb_white_f_rear",
+        "label": "Dekalb White F Rear"
+      },
+      {
+        "key": "dekalb_brown_f_rear",
+        "label": "Dekalb Brown F Rear"
+      }
+    ],
+    "quail": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "japanese_meat",
+        "label": "Japanese Meat"
+      },
+      {
+        "key": "coturnix",
+        "label": "Coturnix"
+      },
+      {
+        "key": "japanese_layer",
+        "label": "Japanese Layer"
+      }
+    ],
+    "turkey": [
+      {
+        "key": "hybrid_converter",
+        "label": "Hybrid Converter"
+      },
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "nicholas",
+        "label": "Nicholas"
+      },
+      {
+        "key": "aviagen",
+        "label": "Aviagen"
+      },
+      {
+        "key": "but6",
+        "label": "B.U.T. 6"
+      },
+      {
+        "key": "nrc2026",
+        "label": "NRC 2026"
+      }
+    ],
+    "grow_finish": [
+      {
+        "key": "commercial",
+        "label": "Commercial"
+      },
+      {
+        "key": "high_lean",
+        "label": "High Lean"
+      }
+    ],
+    "sow": [
+      {
+        "key": "commercial",
+        "label": "Commercial"
+      }
+    ],
+    "gilt": [
+      {
+        "key": "commercial",
+        "label": "Commercial"
+      }
+    ],
+    "boar": [
+      {
+        "key": "commercial",
+        "label": "Commercial"
+      }
+    ],
+    "nursery": [
+      {
+        "key": "commercial",
+        "label": "Commercial"
+      }
+    ],
+    "cow": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "holstein",
+        "label": "Holstein"
+      },
+      {
+        "key": "jersey",
+        "label": "Jersey"
+      },
+      {
+        "key": "brown_swiss",
+        "label": "Brown Swiss"
+      },
+      {
+        "key": "ayrshire",
+        "label": "Ayrshire"
+      },
+      {
+        "key": "guernsey",
+        "label": "Guernsey"
+      },
+      {
+        "key": "crossbred",
+        "label": "Crossbred"
+      }
+    ],
+    "heifer": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "holstein",
+        "label": "Holstein"
+      },
+      {
+        "key": "jersey",
+        "label": "Jersey"
+      },
+      {
+        "key": "crossbred",
+        "label": "Crossbred"
+      }
+    ],
+    "calf": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "holstein",
+        "label": "Holstein"
+      },
+      {
+        "key": "jersey",
+        "label": "Jersey"
+      }
+    ],
+    "cow_calf": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "angus",
+        "label": "Angus"
+      },
+      {
+        "key": "hereford",
+        "label": "Hereford"
+      },
+      {
+        "key": "simmental",
+        "label": "Simmental"
+      },
+      {
+        "key": "brahman",
+        "label": "Brahman"
+      },
+      {
+        "key": "brangus",
+        "label": "Brangus"
+      },
+      {
+        "key": "crossbred",
+        "label": "Crossbred"
+      }
+    ],
+    "stocker": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "angus_cross",
+        "label": "Angus Cross"
+      },
+      {
+        "key": "british_cross",
+        "label": "British Cross"
+      }
+    ],
+    "feedlot": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "high_yielding",
+        "label": "High Yielding"
+      },
+      {
+        "key": "british_cross",
+        "label": "British Cross"
+      },
+      {
+        "key": "continental_cross",
+        "label": "Continental Cross"
+      }
+    ],
+    "bull": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "angus",
+        "label": "Angus"
+      },
+      {
+        "key": "hereford",
+        "label": "Hereford"
+      }
+    ],
+    "ewe": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "merino",
+        "label": "Merino"
+      },
+      {
+        "key": "dorper",
+        "label": "Dorper"
+      },
+      {
+        "key": "suffolk",
+        "label": "Suffolk"
+      },
+      {
+        "key": "dorset",
+        "label": "Dorset"
+      },
+      {
+        "key": "rambouillet",
+        "label": "Rambouillet"
+      },
+      {
+        "key": "crossbred",
+        "label": "Crossbred"
+      }
+    ],
+    "lamb": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "merino",
+        "label": "Merino"
+      },
+      {
+        "key": "dorper",
+        "label": "Dorper"
+      },
+      {
+        "key": "suffolk",
+        "label": "Suffolk"
+      },
+      {
+        "key": "crossbred",
+        "label": "Crossbred"
+      }
+    ],
+    "ram": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "merino",
+        "label": "Merino"
+      },
+      {
+        "key": "suffolk",
+        "label": "Suffolk"
+      }
+    ],
+    "doe": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "saanen",
+        "label": "Saanen"
+      },
+      {
+        "key": "alpine",
+        "label": "Alpine"
+      },
+      {
+        "key": "nubian",
+        "label": "Nubian"
+      },
+      {
+        "key": "toggenburg",
+        "label": "Toggenburg"
+      },
+      {
+        "key": "boer",
+        "label": "Boer"
+      },
+      {
+        "key": "lamancha",
+        "label": "LaMancha"
+      },
+      {
+        "key": "crossbred",
+        "label": "Crossbred"
+      }
+    ],
+    "kid": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "boer",
+        "label": "Boer"
+      },
+      {
+        "key": "dairy_cross",
+        "label": "Dairy Cross"
+      }
+    ],
+    "buck": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "boer",
+        "label": "Boer"
+      },
+      {
+        "key": "saanen",
+        "label": "Saanen"
+      },
+      {
+        "key": "nubian",
+        "label": "Nubian"
+      }
+    ],
+    "tilapia": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "nile",
+        "label": "Nile Tilapia (O. niloticus)"
+      },
+      {
+        "key": "gift",
+        "label": "GIFT Strain"
+      },
+      {
+        "key": "red_tilapia",
+        "label": "Red Tilapia"
+      }
+    ],
+    "catfish": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "channel",
+        "label": "Channel Catfish"
+      },
+      {
+        "key": "african",
+        "label": "African Catfish (Clarias)"
+      },
+      {
+        "key": "hybrid",
+        "label": "Hybrid Catfish"
+      }
+    ],
+    "salmon": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "atlantic",
+        "label": "Atlantic Salmon"
+      },
+      {
+        "key": "chinook",
+        "label": "Chinook / King"
+      },
+      {
+        "key": "coho",
+        "label": "Coho"
+      }
+    ],
+    "trout": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "rainbow",
+        "label": "Rainbow Trout"
+      },
+      {
+        "key": "brown",
+        "label": "Brown Trout"
+      },
+      {
+        "key": "brook",
+        "label": "Brook Trout"
+      }
+    ],
+    "carp": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "common",
+        "label": "Common Carp"
+      },
+      {
+        "key": "grass",
+        "label": "Grass Carp"
+      },
+      {
+        "key": "silver",
+        "label": "Silver Carp"
+      },
+      {
+        "key": "bighead",
+        "label": "Bighead Carp"
+      }
+    ],
+    "shrimp": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "vannamei",
+        "label": "L. vannamei (Whiteleg)"
+      },
+      {
+        "key": "monodon",
+        "label": "P. monodon (Black Tiger)"
+      },
+      {
+        "key": "stylirostris",
+        "label": "L. stylirostris"
+      }
+    ],
+    "seabass": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "european",
+        "label": "European Sea Bass"
+      },
+      {
+        "key": "asian",
+        "label": "Asian Sea Bass (Barramundi)"
+      }
+    ],
+    "seabream": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "gilthead",
+        "label": "Gilthead Sea Bream"
+      },
+      {
+        "key": "red",
+        "label": "Red Sea Bream"
+      }
+    ],
+    "pangasius": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "hypophthalmus",
+        "label": "P. hypophthalmus"
+      }
+    ],
+    "milkfish": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      }
+    ],
+    "dog": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "small",
+        "label": "Small Breed (<10kg)"
+      },
+      {
+        "key": "medium",
+        "label": "Medium Breed (10-25kg)"
+      },
+      {
+        "key": "large",
+        "label": "Large Breed (>25kg)"
+      }
+    ],
+    "cat": [
+      {
+        "key": "generic",
+        "label": "Generic"
+      },
+      {
+        "key": "indoor",
+        "label": "Indoor"
+      },
+      {
+        "key": "outdoor",
+        "label": "Outdoor"
+      }
+    ]
+  },
+  "phases": {
+    "broiler": [
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher"
+      },
+      {
+        "key": "withdrawal",
+        "label": "Withdrawal"
+      }
+    ],
+    "broiler_breeder": [
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "breeder",
+        "label": "Breeder"
+      },
+      {
+        "key": "developer",
+        "label": "Developer"
+      },
+      {
+        "key": "pre_breeder",
+        "label": "Pre-breeder"
+      },
+      {
+        "key": "breeder_1",
+        "label": "Breeder I"
+      },
+      {
+        "key": "breeder_2",
+        "label": "Breeder II"
+      },
+      {
+        "key": "breeder_3",
+        "label": "Breeder III"
+      }
+    ],
+    "duck": [
+      {
+        "key": "late",
+        "label": "Late"
+      },
+      {
+        "key": "prebreed",
+        "label": "Prebreed"
+      },
+      {
+        "key": "postpeak",
+        "label": "Postpeak"
+      },
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "peak",
+        "label": "Peak"
+      },
+      {
+        "key": "developer",
+        "label": "Developer"
+      },
+      {
+        "key": "early",
+        "label": "Early"
+      },
+      {
+        "key": "mid",
+        "label": "Mid"
+      },
+      {
+        "key": "prelay",
+        "label": "Prelay"
+      },
+      {
+        "key": "prestarter",
+        "label": "Prestarter"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher"
+      },
+      {
+        "key": "withdrawal",
+        "label": "Withdrawal"
+      }
+    ],
+    "goose": [
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher"
+      },
+      {
+        "key": "withdrawal",
+        "label": "Withdrawal"
+      },
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "peak",
+        "label": "Peak"
+      },
+      {
+        "key": "developer",
+        "label": "Developer"
+      },
+      {
+        "key": "prebreed",
+        "label": "Prebreed"
+      },
+      {
+        "key": "postpeak",
+        "label": "Postpeak"
+      },
+      {
+        "key": "late",
+        "label": "Late"
+      },
+      {
+        "key": "prelay",
+        "label": "Prelay"
+      },
+      {
+        "key": "early",
+        "label": "Early"
+      }
+    ],
+    "layer": [
+      {
+        "key": "lay_peak",
+        "label": "Lay Peak"
+      },
+      {
+        "key": "developer",
+        "label": "Developer"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "prelay",
+        "label": "Prelay"
+      },
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "lay_late",
+        "label": "Lay Late"
+      },
+      {
+        "key": "lay_mid",
+        "label": "Lay Mid"
+      }
+    ],
+    "layer_breeder": [
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "developer",
+        "label": "Developer"
+      },
+      {
+        "key": "pre_lay",
+        "label": "Pre Lay"
+      }
+    ],
+    "quail": [
+      {
+        "key": "late",
+        "label": "Late"
+      },
+      {
+        "key": "prebreed",
+        "label": "Prebreed"
+      },
+      {
+        "key": "postpeak",
+        "label": "Postpeak"
+      },
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "peak",
+        "label": "Peak"
+      },
+      {
+        "key": "developer",
+        "label": "Developer"
+      },
+      {
+        "key": "early",
+        "label": "Early"
+      },
+      {
+        "key": "mid",
+        "label": "Mid"
+      },
+      {
+        "key": "prelay",
+        "label": "Prelay"
+      },
+      {
+        "key": "prestarter",
+        "label": "Prestarter"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher"
+      }
+    ],
+    "turkey": [
+      {
+        "key": "prebreed",
+        "label": "Prebreed"
+      },
+      {
+        "key": "postpeak",
+        "label": "Postpeak"
+      },
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "developer",
+        "label": "Developer"
+      },
+      {
+        "key": "prelay",
+        "label": "Prelay"
+      },
+      {
+        "key": "peak",
+        "label": "Peak"
+      },
+      {
+        "key": "late",
+        "label": "Late"
+      },
+      {
+        "key": "prestarter",
+        "label": "Prestarter"
+      },
+      {
+        "key": "withdrawal",
+        "label": "Withdrawal"
+      },
+      {
+        "key": "wk_0_3",
+        "label": "0\u20133 wk"
+      },
+      {
+        "key": "wk_3_6",
+        "label": "3\u20136 wk"
+      },
+      {
+        "key": "wk_6_9",
+        "label": "6\u20139 wk"
+      },
+      {
+        "key": "wk_9_12",
+        "label": "9\u201312 wk"
+      },
+      {
+        "key": "wk_12_15",
+        "label": "12\u201315 wk"
+      },
+      {
+        "key": "wk_15_18",
+        "label": "15\u201318 wk"
+      },
+      {
+        "key": "breeder_holding",
+        "label": "Breeder (Holding)"
+      },
+      {
+        "key": "breeder_laying",
+        "label": "Breeder (Laying)"
+      }
+    ],
+    "grow_finish": [
+      {
+        "key": "grower",
+        "label": "Grower (23-41 kg)"
+      },
+      {
+        "key": "finisher_early",
+        "label": "Early Finisher (41-59 kg)"
+      },
+      {
+        "key": "finisher_mid",
+        "label": "Mid Finisher (59-82 kg)"
+      },
+      {
+        "key": "finisher_late",
+        "label": "Late Finisher (82-105 kg)"
+      },
+      {
+        "key": "finisher_market",
+        "label": "Market Finisher (105-130 kg)"
+      }
+    ],
+    "nursery": [
+      {
+        "key": "nursery_p1",
+        "label": "Nursery Phase 1 (2.5-7 kg)"
+      },
+      {
+        "key": "nursery_p2",
+        "label": "Nursery Phase 2 (7-11 kg)"
+      },
+      {
+        "key": "nursery_p3",
+        "label": "Nursery Phase 3 (11-23 kg)"
+      }
+    ],
+    "sow": [
+      {
+        "key": "gestation",
+        "label": "Gestation"
+      },
+      {
+        "key": "lactation",
+        "label": "Lactation"
+      }
+    ],
+    "gilt": [
+      {
+        "key": "gilt_development_early",
+        "label": "Gilt Development Early (23-59 kg)"
+      },
+      {
+        "key": "gilt_development_mid",
+        "label": "Gilt Development Mid (59-91 kg)"
+      },
+      {
+        "key": "gilt_development_prebreed",
+        "label": "Gilt Pre-Breed (91-135 kg)"
+      }
+    ],
+    "boar": [
+      {
+        "key": "boar",
+        "label": "Mature Boar"
+      }
+    ],
+    "cow": [
+      {
+        "key": "early_lactation",
+        "label": "Early Lactation (0-70 DIM)"
+      },
+      {
+        "key": "peak_lactation",
+        "label": "Peak Lactation (70-150 DIM)"
+      },
+      {
+        "key": "mid_lactation",
+        "label": "Mid Lactation (150-250 DIM)"
+      },
+      {
+        "key": "late_lactation",
+        "label": "Late Lactation (250+ DIM)"
+      },
+      {
+        "key": "dry_far_off",
+        "label": "Dry \u00e2\u20ac\u201d Far Off (>21d pre-calving)"
+      },
+      {
+        "key": "dry_close_up",
+        "label": "Dry \u00e2\u20ac\u201d Close Up (\u00e2\u2030\u00a421d pre-calving)"
+      }
+    ],
+    "heifer": [
+      {
+        "key": "growing",
+        "label": "Growing"
+      },
+      {
+        "key": "bred",
+        "label": "Bred"
+      }
+    ],
+    "calf": [
+      {
+        "key": "preruminant",
+        "label": "Pre-ruminant (0-8 wk)"
+      },
+      {
+        "key": "weaning",
+        "label": "Weaning (8-12 wk)"
+      },
+      {
+        "key": "post_weaning",
+        "label": "Post-Weaning (3-6 mo)"
+      }
+    ],
+    "cow_calf": [
+      {
+        "key": "early_gestation",
+        "label": "Early Gestation"
+      },
+      {
+        "key": "late_gestation",
+        "label": "Late Gestation"
+      },
+      {
+        "key": "early_lactation",
+        "label": "Early Lactation"
+      },
+      {
+        "key": "mid_late_lactation",
+        "label": "Mid-Late Lactation"
+      }
+    ],
+    "stocker": [
+      {
+        "key": "receiving",
+        "label": "Receiving"
+      },
+      {
+        "key": "growing",
+        "label": "Growing"
+      }
+    ],
+    "feedlot": [
+      {
+        "key": "receiving",
+        "label": "Receiving / Adaptation"
+      },
+      {
+        "key": "growing",
+        "label": "Growing"
+      },
+      {
+        "key": "finishing",
+        "label": "Finishing"
+      }
+    ],
+    "bull": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "breeding",
+        "label": "Breeding"
+      }
+    ],
+    "ewe": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "flushing",
+        "label": "Flushing / Pre-mating"
+      },
+      {
+        "key": "early_gestation",
+        "label": "Early Gestation (0-100d)"
+      },
+      {
+        "key": "late_gestation",
+        "label": "Late Gestation (100-147d)"
+      },
+      {
+        "key": "early_lactation",
+        "label": "Early Lactation (0-6 wk)"
+      },
+      {
+        "key": "late_lactation",
+        "label": "Late Lactation (6+ wk)"
+      }
+    ],
+    "lamb": [
+      {
+        "key": "creep",
+        "label": "Creep (pre-weaning)"
+      },
+      {
+        "key": "starter",
+        "label": "Starter (weaning-20 kg)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (20-35 kg)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (35+ kg)"
+      }
+    ],
+    "ram": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "breeding",
+        "label": "Breeding"
+      }
+    ],
+    "doe": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance / Dry"
+      },
+      {
+        "key": "late_gestation",
+        "label": "Late Gestation"
+      },
+      {
+        "key": "early_lactation",
+        "label": "Early Lactation (Peak)"
+      },
+      {
+        "key": "mid_lactation",
+        "label": "Mid Lactation"
+      },
+      {
+        "key": "late_lactation",
+        "label": "Late Lactation"
+      }
+    ],
+    "kid": [
+      {
+        "key": "milk_fed",
+        "label": "Milk Fed (0-8 wk)"
+      },
+      {
+        "key": "starter",
+        "label": "Starter (8-16 wk)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (4-7 mo)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (7+ mo)"
+      }
+    ],
+    "buck": [
+      {
+        "key": "maintenance",
+        "label": "Maintenance"
+      },
+      {
+        "key": "breeding",
+        "label": "Breeding Season"
+      }
+    ],
+    "tilapia": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "catfish": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "salmon": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "trout": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "carp": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "seabass": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "seabream": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "pangasius": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "milkfish": [
+      {
+        "key": "fry",
+        "label": "Fry (< 1g)"
+      },
+      {
+        "key": "fingerling",
+        "label": "Fingerling (1\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (10\u00e2\u20ac\u201c50g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (50\u00e2\u20ac\u201c200g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (200g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "shrimp": [
+      {
+        "key": "postlarva",
+        "label": "Post-Larva (PL1\u00e2\u20ac\u201cPL20)"
+      },
+      {
+        "key": "juvenile",
+        "label": "Juvenile (0.1\u00e2\u20ac\u201c2g)"
+      },
+      {
+        "key": "grower",
+        "label": "Grower (2\u00e2\u20ac\u201c10g)"
+      },
+      {
+        "key": "finisher",
+        "label": "Finisher (10g+)"
+      },
+      {
+        "key": "broodstock",
+        "label": "Broodstock"
+      }
+    ],
+    "dog": [
+      {
+        "key": "adult",
+        "label": "Adult Maintenance"
+      },
+      {
+        "key": "puppy",
+        "label": "Puppy (4-14 weeks)"
+      },
+      {
+        "key": "puppy_juvenile",
+        "label": "Puppy Juvenile (>14 weeks)"
+      },
+      {
+        "key": "senior",
+        "label": "Senior (>7 years)"
+      },
+      {
+        "key": "gestation",
+        "label": "Gestation"
+      },
+      {
+        "key": "lactation",
+        "label": "Lactation"
+      },
+      {
+        "key": "active",
+        "label": "Active/Working"
+      }
+    ],
+    "cat": [
+      {
+        "key": "adult",
+        "label": "Adult Maintenance"
+      },
+      {
+        "key": "kitten",
+        "label": "Kitten (Growth)"
+      },
+      {
+        "key": "senior",
+        "label": "Senior (>10 years)"
+      },
+      {
+        "key": "gestation",
+        "label": "Gestation"
+      },
+      {
+        "key": "lactation",
+        "label": "Lactation"
+      }
+    ]
+  },
+  "phases_by_breed": {
+    "broiler_breeder__nrc2026": [
+      {
+        "key": "starter",
+        "label": "Starter"
+      },
+      {
+        "key": "grower",
+        "label": "Grower"
+      },
+      {
+        "key": "developer",
+        "label": "Developer"
+      },
+      {
+        "key": "pre_breeder",
+        "label": "Pre-breeder"
+      },
+      {
+        "key": "breeder_1",
+        "label": "Breeder I"
+      },
+      {
+        "key": "breeder_2",
+        "label": "Breeder II"
+      },
+      {
+        "key": "breeder_3",
+        "label": "Breeder III"
+      }
+    ],
+    "turkey__nrc2026": [
+      {
+        "key": "wk_0_3",
+        "label": "0\u20133 wk"
+      },
+      {
+        "key": "wk_3_6",
+        "label": "3\u20136 wk"
+      },
+      {
+        "key": "wk_6_9",
+        "label": "6\u20139 wk"
+      },
+      {
+        "key": "wk_9_12",
+        "label": "9\u201312 wk"
+      },
+      {
+        "key": "wk_12_15",
+        "label": "12\u201315 wk"
+      },
+      {
+        "key": "wk_15_18",
+        "label": "15\u201318 wk"
+      },
+      {
+        "key": "breeder_holding",
+        "label": "Breeder (Holding)"
+      },
+      {
+        "key": "breeder_laying",
+        "label": "Breeder (Laying)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "species": "equine",
+  "architecture": "dynamic_nrc2007_future_proof_v1",
+  "primary_reference": {
+    "name": "Nutrient Requirements of Horses",
+    "edition": "Sixth Revised Edition",
+    "year": 2007,
+    "publisher": "National Academies Press",
+    "basis": "NRC 2007 equation-derived targets"
+  },
+  "requirement_model": {
+    "type": "dynamic_equation_engine",
+    "engine_file": "core/services/requirements/equine/equineNrc2007.engine.cjs",
+    "static_profiles_are_metadata_only": true
+  },
+  "production_groups": {
+    "maintenance": "horse/maintenance/index.equine_horse_maintenance.v1.json",
+    "growth": "horse/growth/index.equine_horse_growth.v1.json",
+    "reproduction": "horse/reproduction/index.equine_horse_reproduction.v1.json",
+    "lactation": "horse/lactation/index.equine_horse_lactation.v1.json",
+    "performance": "horse/performance/index.equine_horse_performance.v1.json",
+    "senior": "horse/senior/index.equine_horse_senior.v1.json",
+    "metabolic": "horse/metabolic/index.equine_horse_metabolic.v1.json",
+    "pony": "pony/index.equine_pony.v1.json",
+    "draft": "draft/index.equine_draft.v1.json",
+    "donkey": "donkey/index.equine_donkey.v1.json",
+    "mule": "mule/index.equine_mule.v1.json"
+  }
+}

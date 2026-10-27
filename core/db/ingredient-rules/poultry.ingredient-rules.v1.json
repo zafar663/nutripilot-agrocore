@@ -1,0 +1,16 @@
+{
+    "version":  "poultry_ingredient_rules_v1",
+    "scope":  {
+                  "species":  "poultry"
+              },
+    "rules":  {
+                  "fish_meal_54_cp":  {
+                                          "default":  {
+                                                          "min":  0,
+                                                          "max":  3
+                                                      },
+                                          "family":  "fish_meal",
+                                          "notes":  "avoid fishy taint in meat and eggs"
+                                      }
+              }
+}

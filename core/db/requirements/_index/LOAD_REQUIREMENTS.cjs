@@ -1,4 +1,4 @@
-﻿// core/db/requirements/_index/LOAD_REQUIREMENTS.cjs
+// core/db/requirements/_index/LOAD_REQUIREMENTS.cjs
 "use strict";
 
 const fs = require("fs");
@@ -187,6 +187,8 @@ function resolveProfileByReqKey(libObj, reqKey, _seen = new Set()) {
     tolerance: mergedTolerance || null,
     evaluation_keys: mergedEvalKeys || null,
     inherits: prof.inherits || null,
+    feed_intake: prof.feed_intake || (base ? base.feed_intake : null) || null,
+    doc_meta: prof.doc_meta || (base ? base.doc_meta : null) || null,
   };
 }
 
@@ -218,6 +220,8 @@ function resolveTargetsFromLibrary({ libObj, breedKey, phaseKey, reqKey }) {
               phase: prof.phase || phaseKey || null,
               tolerance: prof.tolerance || null,
               evaluation_keys: prof.evaluation_keys || null,
+              feed_intake: prof.feed_intake || null,
+              doc_meta: prof.doc_meta || null,
             }
           : null,
       };
@@ -321,6 +325,252 @@ function scorePhaseCandidate(p, regionToken) {
   if (regionToken && s.includes(`/${regionToken.toLowerCase()}/`)) score += 5;
   if (s.includes("/poultry/")) score += 1;
   return score;
+}
+
+// -------- Swine requirements loader --------
+function resolveSwineRequirements({ baseDir, type, production, breed, phase, region }) {
+  const libPath = path.join(
+    baseDir,
+    "swine",
+    "v1",
+    "requirements.library.swine.v1.json"
+  );
+
+  if (!fs.existsSync(libPath)) {
+    return {
+      ok: false,
+      error: "SWINE_LIBRARY_MISSING",
+      message: `Swine library not found at: ${libPath}`,
+      details: { libPath },
+    };
+  }
+
+  const libObj = readJsonIfExists(libPath);
+  if (!libObj || !libObj.phases || typeof libObj.phases !== "object") {
+    return {
+      ok: false,
+      error: "SWINE_LIBRARY_INVALID",
+      message: "Swine library loaded but phases object is missing or invalid.",
+      details: { libPath },
+    };
+  }
+
+  // Resolve phase key — map incoming phase to library phase key
+  const ph = normalizeToken(phase || "grower");
+  const phaseAliases = {
+    // nursery
+    "nursery":           "nursery_p3",
+    "nursery_phase_1":   "nursery_p1",
+    "nursery_phase_2":   "nursery_p2",
+    "nursery_phase_3":   "nursery_p3",
+    "prestart":          "nursery_p1",
+    "starter":           "nursery_p1",
+    // grow-finish
+    "grow":              "grower",
+    "grow_finish":       "grower",
+    "growfinish":        "grower",
+    "finisher":          "finisher_early",
+    "finish":            "finisher_early",
+    "finisher_1":        "finisher_early",
+    "finisher_2":        "finisher_mid",
+    "finisher_3":        "finisher_late",
+    "finisher_4":        "finisher_market",
+    "market":            "finisher_market",
+    // reproductive
+    "gestation_early":   "gestation",
+    "gestation_late":    "gestation",
+    "gestating":         "gestation",
+    "lactating":         "lactation",
+    "sow":               "gestation",
+    "gilt":              "gilt_development_early",
+    "gilt_dev":          "gilt_development_early",
+    "gilt_development":  "gilt_development_early",
+    "wean_to_estrus":    "gestation",
+    // boar
+    "mature_boar":       "boar",
+    "boar_production":   "boar",
+  };
+
+  // Try exact match first, then alias, then default
+  let resolvedPhaseKey = null;
+  if (libObj.phases[ph]) {
+    resolvedPhaseKey = ph;
+  } else if (phaseAliases[ph] && libObj.phases[phaseAliases[ph]]) {
+    resolvedPhaseKey = phaseAliases[ph];
+  } else {
+    // fuzzy: find first phase key that contains the input
+    const keys = Object.keys(libObj.phases);
+    const fuzzy = keys.find(k => k.includes(ph) || ph.includes(k));
+    resolvedPhaseKey = fuzzy || "grower";
+  }
+
+  const phaseData = libObj.phases[resolvedPhaseKey];
+  if (!phaseData || typeof phaseData !== "object") {
+    return {
+      ok: false,
+      error: "SWINE_PHASE_NOT_FOUND",
+      message: `Swine phase '${ph}' (resolved: '${resolvedPhaseKey}') not found in library.`,
+      details: { libPath, requestedPhase: ph, resolvedPhaseKey, availablePhases: Object.keys(libObj.phases) },
+    };
+  }
+
+  // Build flat numeric requirements from phase data
+  const requirements = buildSwineRequirements(phaseData);
+
+  if (!Object.keys(requirements).length) {
+    return {
+      ok: false,
+      error: "SWINE_PHASE_EMPTY",
+      message: `Swine phase '${resolvedPhaseKey}' resolved but produced no numeric requirements.`,
+      details: { libPath, resolvedPhaseKey },
+    };
+  }
+
+  // Build profile object (mirrors poultry profile shape)
+  const profile = {
+    key: resolvedPhaseKey,
+    label: phaseData.label || resolvedPhaseKey,
+    production: production || null,
+    phase: resolvedPhaseKey,
+    feed_intake: {
+      reference_kg_day: typeof phaseData.feed_intake_reference_kg_day === "object"
+        ? phaseData.feed_intake_reference_kg_day
+        : { value: phaseData.feed_intake_reference_kg_day || null },
+      feeding_mode: phaseData.feeding_mode || "ad_libitum",
+      by_bcs: phaseData.feed_intake_by_bcs || null,
+      daily_requirements: phaseData.daily_requirements || null,
+    },
+    doc_meta: phaseData.doc_meta || null,
+    body_weight_range_kg: phaseData.body_weight_range_kg || null,
+    breeding_targets: phaseData.breeding_targets || null,
+    special_ingredients: phaseData.special_ingredients || null,
+  };
+
+  return {
+    ok: true,
+    reqKey: `swine/${resolvedPhaseKey}`,
+    reqFilePath: libPath,
+    breed: "generic",
+    phase: resolvedPhaseKey,
+    requirements,
+    profile,
+    doc_meta: phaseData.doc_meta || libObj.library_meta || null,
+    source: {
+      mode: "swine_v1",
+      libPath,
+      resolvedPhaseKey,
+      requestedPhase: ph,
+    },
+  };
+}
+
+/**
+ * Flatten swine phase data into numeric requirements map.
+ * Handles nested structures: energy, sid_amino_acids, minerals,
+ * trace_minerals_added_ppm, vitamins_added_per_kg_diet.
+ */
+function buildSwineRequirements(phaseData) {
+  const out = {};
+
+  // Energy
+  if (phaseData.energy && typeof phaseData.energy === "object") {
+    const e = phaseData.energy;
+    if (Number.isFinite(e.ne_kcal_kg))  out.ne_kcal_per_kg  = e.ne_kcal_kg;
+    if (Number.isFinite(e.me_kcal_kg))  out.me_kcal_per_kg  = e.me_kcal_kg;
+  }
+
+  // SID Amino Acids
+  if (phaseData.sid_amino_acids && typeof phaseData.sid_amino_acids === "object") {
+    const aa = phaseData.sid_amino_acids;
+    if (Number.isFinite(aa.lys_ne_ratio_g_mcal))  out.sid_lys_ne_ratio  = aa.lys_ne_ratio_g_mcal;
+    if (Number.isFinite(aa.lys_me_ratio_g_mcal))  out.sid_lys_me_ratio  = aa.lys_me_ratio_g_mcal;
+    if (Number.isFinite(aa.lys_pct))               out.sid_lys_pct       = aa.lys_pct;
+    if (Number.isFinite(aa.lys_min_g_day))         out.sid_lys_min_g_day = aa.lys_min_g_day;
+    if (Number.isFinite(aa.sid_lys_pct_typical))   out.sid_lys_pct_typical = aa.sid_lys_pct_typical;
+    if (Number.isFinite(aa.l_lys_hcl_max_pct))     out.l_lys_hcl_max_pct = aa.l_lys_hcl_max_pct;
+
+    // AA ratios to Lys
+    if (aa.ratios_to_lys && typeof aa.ratios_to_lys === "object") {
+      const r = aa.ratios_to_lys;
+      if (Number.isFinite(r.met_cys)) out.sid_met_cys_to_lys = r.met_cys;
+      if (Number.isFinite(r.thr))     out.sid_thr_to_lys      = r.thr;
+      if (Number.isFinite(r.trp))     out.sid_trp_to_lys      = r.trp;
+      if (Number.isFinite(r.val))     out.sid_val_to_lys      = r.val;
+      if (Number.isFinite(r.ile))     out.sid_ile_to_lys      = r.ile;
+      if (Number.isFinite(r.leu))     out.sid_leu_to_lys      = r.leu;
+      if (Number.isFinite(r.his))     out.sid_his_to_lys      = r.his;
+      if (Number.isFinite(r.phe_tyr)) out.sid_phe_tyr_to_lys  = r.phe_tyr;
+    }
+  }
+
+  // Minerals
+  if (phaseData.minerals && typeof phaseData.minerals === "object") {
+    const m = phaseData.minerals;
+    if (Number.isFinite(m.sttd_p_ne_ratio_g_mcal))  out.sttd_p_ne_ratio  = m.sttd_p_ne_ratio_g_mcal;
+    if (Number.isFinite(m.sttd_p_me_ratio_g_mcal))  out.sttd_p_me_ratio  = m.sttd_p_me_ratio_g_mcal;
+    if (Number.isFinite(m.avail_p_ne_ratio_g_mcal)) out.avail_p_ne_ratio = m.avail_p_ne_ratio_g_mcal;
+    if (Number.isFinite(m.avail_p_me_ratio_g_mcal)) out.avail_p_me_ratio = m.avail_p_me_ratio_g_mcal;
+    if (Number.isFinite(m.sttd_p_pct))              out.sttd_p_pct       = m.sttd_p_pct;
+    if (Number.isFinite(m.avail_p_pct))              out.avail_p_pct      = m.avail_p_pct;
+    if (Number.isFinite(m.calcium_pct))              out.calcium_pct      = m.calcium_pct;
+    if (Number.isFinite(m.sodium_pct))               out.sodium_pct       = m.sodium_pct;
+    if (Number.isFinite(m.chloride_pct))             out.chloride_pct     = m.chloride_pct;
+    if (Number.isFinite(m.ca_to_p_ratio_analyzed))  out.ca_to_p_ratio    = m.ca_to_p_ratio_analyzed;
+    if (Number.isFinite(m.ndf_min_pct))              out.ndf_min_pct      = m.ndf_min_pct;
+    if (Number.isFinite(m.linoleic_acid_pct)) {
+      out.linoleic_acid_pct = m.linoleic_acid_pct;
+      out.linoleic = m.linoleic_acid_pct;
+    }
+    // nested ca_to_p_ratio object
+    if (m.ca_to_p_ratio && typeof m.ca_to_p_ratio === "object") {
+      if (Number.isFinite(m.ca_to_p_ratio.min)) out.ca_to_p_ratio_min = m.ca_to_p_ratio.min;
+      if (Number.isFinite(m.ca_to_p_ratio.max)) out.ca_to_p_ratio_max = m.ca_to_p_ratio.max;
+    }
+  }
+
+  // Lactation: SID Lys from daily_requirements
+  if (!out.sid_lys_ne_ratio && !out.sid_lys_me_ratio && !out.sid_lys_min_g_day) {
+    const dr = phaseData.daily_requirements;
+    const fi = phaseData.feed_intake_reference_kg_day;
+    const refIntake = typeof fi === "object" ? (fi.herd || fi.sows || 6.0) : (typeof fi === "number" ? fi : 6.0);
+    const lysGDay = dr && dr.sid_lys_g_day
+      ? (dr.sid_lys_g_day.single_diet_herd || dr.sid_lys_g_day.single_diet_sows || null)
+      : null;
+    if (typeof lysGDay === "number" && lysGDay > 0) {
+      out.sid_lys_min_g_day = lysGDay;
+      out.sid_lys_ref_intake_kg_day = refIntake;
+    }
+  }
+  // Trace minerals (ppm)
+  if (phaseData.trace_minerals_added_ppm && typeof phaseData.trace_minerals_added_ppm === "object") {
+    const t = phaseData.trace_minerals_added_ppm;
+    if (Number.isFinite(t.zn))      out.trace_zn_ppm      = t.zn;
+    if (Number.isFinite(t.fe))      out.trace_fe_ppm      = t.fe;
+    if (Number.isFinite(t.mn))      out.trace_mn_ppm      = t.mn;
+    if (Number.isFinite(t.cu))      out.trace_cu_ppm      = t.cu;
+    if (Number.isFinite(t.iodine))  out.trace_iodine_ppm  = t.iodine;
+    if (Number.isFinite(t.se))      out.trace_se_ppm      = t.se;
+  }
+
+  // Vitamins (per kg diet)
+  if (phaseData.vitamins_added_per_kg_diet && typeof phaseData.vitamins_added_per_kg_diet === "object") {
+    const v = phaseData.vitamins_added_per_kg_diet;
+    if (Number.isFinite(v.vit_a_iu))             out.vit_a_iu_per_kg             = v.vit_a_iu;
+    if (Number.isFinite(v.vit_d3_iu))            out.vit_d3_iu_per_kg            = v.vit_d3_iu;
+    if (Number.isFinite(v.vit_e_iu))             out.vit_e_iu_per_kg             = v.vit_e_iu;
+    if (Number.isFinite(v.vit_k_mg))             out.vit_k_mg_per_kg             = v.vit_k_mg;
+    if (Number.isFinite(v.niacin_mg))            out.niacin_mg_per_kg            = v.niacin_mg;
+    if (Number.isFinite(v.riboflavin_mg))        out.riboflavin_mg_per_kg        = v.riboflavin_mg;
+    if (Number.isFinite(v.pantothenic_acid_mg))  out.pantothenic_acid_mg_per_kg  = v.pantothenic_acid_mg;
+    if (Number.isFinite(v.vit_b12_mcg))          out.vit_b12_mcg_per_kg          = v.vit_b12_mcg;
+    if (Number.isFinite(v.choline_mg))           out.choline_mg_per_kg           = v.choline_mg;
+    if (Number.isFinite(v.folic_acid_mcg))       out.folic_acid_mcg_per_kg       = v.folic_acid_mcg;
+    if (Number.isFinite(v.biotin_mcg))           out.biotin_mcg_per_kg           = v.biotin_mcg;
+    if (Number.isFinite(v.thiamine_mg))          out.thiamine_mg_per_kg          = v.thiamine_mg;
+    if (Number.isFinite(v.pyridoxine_mg))        out.pyridoxine_mg_per_kg        = v.pyridoxine_mg;
+  }
+
+  return out;
 }
 
 // -------- Option-B (index+library) --------
@@ -448,13 +698,17 @@ function resolveOptionB({ baseDir, type, production, breed, phase, region }) {
   const defaults = indexObj?.defaults || {};
   const defaultBreed = normalizeToken(defaults?.breed || "generic");
   const defaultPhase = normalizeToken(defaults?.phase || "starter");
-
-  const breedKey = breedsMap[b]
-    ? b
-    : breedsMap[defaultBreed]
-      ? defaultBreed
-      : breedsMap["generic"]
-        ? "generic"
+  // Apply breed_aliases from index before lookup
+  const breedAliases = indexObj?.breed_aliases || {};
+  const bResolved = breedAliases[b] ? normalizeToken(breedAliases[b]) : b;
+  const breedKey = breedsMap[bResolved]
+    ? bResolved
+    : breedsMap[b]
+      ? b
+      : breedsMap[defaultBreed]
+        ? defaultBreed
+        : breedsMap["generic"]
+          ? "generic"
         : Object.keys(breedsMap)[0];
 
   const phasesMap = breedKey ? breedsMap[breedKey] : null;
@@ -641,6 +895,30 @@ function loadRequirementsProfile(input = {}) {
     }
   }
 
+  // C) Swine v1
+  if (normalizeToken(species) === "swine") {
+    const swineResult = resolveSwineRequirements({ baseDir, type, production, breed, phase, region });
+    if (swineResult.ok) {
+      return {
+        ok: true,
+        reqKey: swineResult.reqKey,
+        reqFilePath: swineResult.reqFilePath,
+        species,
+        type: normalizeToken(type),
+        breed: swineResult.breed || "generic",
+        region,
+        version,
+        phase: swineResult.phase,
+        requirements: swineResult.requirements,
+        profile: swineResult.profile || null,
+        doc_meta: swineResult.doc_meta || null,
+        source: swineResult.source || null,
+        resolved: { reqKey: swineResult.reqKey, breed: swineResult.breed, phase: swineResult.phase, production },
+      };
+    }
+    return Object.assign({ species, type: normalizeToken(type), breed, region, version, phase, production }, swineResult);
+  }
+
   // B) Option-B for poultry + v1
   if (normalizeToken(species) === "poultry" && normalizeToken(version) === "v1") {
     if (!String(production || "").trim()) {
@@ -685,8 +963,27 @@ function loadRequirementsProfile(input = {}) {
   };
 }
 
+// Feed intake adjustment function
+// Takes requirements at reference GPD and adjusts to actual GPD
+function adjustRequirementsForFeedIntake(requirements, referenceGpd, actualGpd) {
+  if (!requirements || !referenceGpd || !actualGpd || referenceGpd === actualGpd) {
+    return requirements;
+  }
+  const skip = new Set(['me_kcal_per_kg', 'me_mj_per_kg', 'ne_kcal_per_kg']);
+  const adjusted = {};
+  for (const [key, val] of Object.entries(requirements)) {
+    if (typeof val !== 'number') { adjusted[key] = val; continue; }
+    if (skip.has(key)) { adjusted[key] = val; continue; }
+    // daily_mg = val * referenceGpd * 10
+    // adjusted_pct = daily_mg / actualGpd / 10
+    adjusted[key] = Math.round((val * referenceGpd / actualGpd) * 1000) / 1000;
+  }
+  return adjusted;
+}
+
 // --- Robust exports (supports all calling styles) ---
 module.exports = loadRequirementsProfile;
 module.exports.loadRequirementsProfile = loadRequirementsProfile;
 module.exports.loadRequirements = loadRequirementsProfile; // back-compat
 module.exports.default = loadRequirementsProfile;
+module.exports.adjustRequirementsForFeedIntake = adjustRequirementsForFeedIntake;

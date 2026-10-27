@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "breed": "ross_308_ps",
+    "species": "poultry",
+    "production": "breeder",
+    "age_unit": "week",
+    "source": "Aviagen Ross 308 Parent Stock Management Manual 2022",
+    "version": "v2025",
+    "note": "Female targets. Body weight critical for reproductive performance."
+  },
+  "warn_threshold_pct": 3,
+  "alert_threshold_pct": 7,
+  "curve": [
+    { "week": 5,  "body_wt_g": 450,  "egg_prod_pct": null, "egg_wt_g": null, "feed_per_bird_g": 40,  "mortality_pct_max": 0.5 },
+    { "week": 10, "body_wt_g": 1000, "egg_prod_pct": null, "egg_wt_g": null, "feed_per_bird_g": 70,  "mortality_pct_max": 0.8 },
+    { "week": 15, "body_wt_g": 1580, "egg_prod_pct": null, "egg_wt_g": null, "feed_per_bird_g": 100, "mortality_pct_max": 1.0 },
+    { "week": 20, "body_wt_g": 2480, "egg_prod_pct": 5,   "egg_wt_g": 52.0, "feed_per_bird_g": 128, "mortality_pct_max": 1.0 },
+    { "week": 24, "body_wt_g": 3100, "egg_prod_pct": 60,  "egg_wt_g": 60.0, "feed_per_bird_g": 150, "mortality_pct_max": 1.5 },
+    { "week": 26, "body_wt_g": 3200, "egg_prod_pct": 82,  "egg_wt_g": 62.0, "feed_per_bird_g": 158, "mortality_pct_max": 2.0 },
+    { "week": 29, "body_wt_g": 3300, "egg_prod_pct": 86,  "egg_wt_g": 65.0, "feed_per_bird_g": 161, "mortality_pct_max": 2.5 },
+    { "week": 35, "body_wt_g": 3500, "egg_prod_pct": 82,  "egg_wt_g": 67.0, "feed_per_bird_g": 160, "mortality_pct_max": 3.5 },
+    { "week": 40, "body_wt_g": 3600, "egg_prod_pct": 78,  "egg_wt_g": 68.0, "feed_per_bird_g": 160, "mortality_pct_max": 4.0 },
+    { "week": 50, "body_wt_g": 3750, "egg_prod_pct": 70,  "egg_wt_g": 68.5, "feed_per_bird_g": 157, "mortality_pct_max": 5.5 },
+    { "week": 60, "body_wt_g": 3900, "egg_prod_pct": 62,  "egg_wt_g": 69.0, "feed_per_bird_g": 155, "mortality_pct_max": 7.0 }
+  ],
+  "fertility_targets": {
+    "peak_pct": 96,
+    "week_40_pct": 90,
+    "week_60_pct": 80
+  },
+  "hatchability_targets": {
+    "peak_pct": 87,
+    "week_40_pct": 83,
+    "week_60_pct": 76
+  }
+}

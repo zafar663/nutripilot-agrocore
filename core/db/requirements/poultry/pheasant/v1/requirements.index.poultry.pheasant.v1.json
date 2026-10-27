@@ -1,0 +1,19 @@
+{
+  "productions": {
+    "meat": {
+      "library_file": "../meat/library.poultry_pheasant_meat.v1.json",
+      "index_file": "../meat/index.poultry_pheasant_meat.v1.json"
+    },
+    "breeder": {
+      "library_file": "../breeder/library.poultry_pheasant_breeder.v1.json",
+      "index_file": "../breeder/index.poultry_pheasant_breeder.v1.json"
+    }
+  },
+  "_meta": {
+    "description": "Routes production to Option-B index+library for poultry/pheasant",
+    "created_utc": "2026-07-18T00:00:00Z"
+  },
+  "version": "v1",
+  "type": "pheasant",
+  "species": "poultry"
+}

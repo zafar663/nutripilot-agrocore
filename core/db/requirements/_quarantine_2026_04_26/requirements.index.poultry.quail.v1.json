@@ -1,0 +1,25 @@
+{
+    "productions":  {
+                        "meat":  {
+                                     "library_file":  "..\\meat\\library.poultry_quail_meat.v1.json",
+                                     "index_file":  "..\\meat\\index.poultry_quail_meat.v1.json"
+                                 },
+                        "layer":  {
+                                      "library_file":  "..\\layer\\library.poultry_quail_layer.v1.json",
+                                      "index_file":  "..\\layer\\index.poultry_quail_layer.v1.json"
+                                  },
+                        "breeder":  {
+                                        "library_file":  "..\\breeder\\library.poultry_quail_breeder.v1.json",
+                                        "index_file":  "..\\breeder\\index.poultry_quail_breeder.v1.json"
+                                    }
+                    },
+    "_meta":  {
+                  "description":  "Routes production to Option-B index+library for poultry/quail",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "version":  "v1",
+                  "kind":  "requirements_option_b_wrapper"
+              },
+    "version":  "v1",
+    "type":  "quail",
+    "species":  "poultry"
+}

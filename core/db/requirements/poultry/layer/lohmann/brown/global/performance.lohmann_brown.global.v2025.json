@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "breed": "lohmann_brown",
+    "species": "poultry",
+    "production": "layer",
+    "age_unit": "week",
+    "source": "Lohmann Brown Classic Management Guide 2022",
+    "version": "v2025",
+    "note": "Hen-day production. Week 17 = housing week."
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "week": 17, "body_wt_g": 1500, "egg_prod_pct": 5,  "egg_wt_g": 48.0, "feed_per_bird_g": 90,  "fcr": null, "mortality_pct_max": 0.3 },
+    { "week": 18, "body_wt_g": 1580, "egg_prod_pct": 25, "egg_wt_g": 51.0, "feed_per_bird_g": 95,  "fcr": null, "mortality_pct_max": 0.4 },
+    { "week": 19, "body_wt_g": 1640, "egg_prod_pct": 55, "egg_wt_g": 53.5, "feed_per_bird_g": 100, "fcr": null, "mortality_pct_max": 0.4 },
+    { "week": 20, "body_wt_g": 1700, "egg_prod_pct": 78, "egg_wt_g": 55.5, "feed_per_bird_g": 107, "fcr": null, "mortality_pct_max": 0.5 },
+    { "week": 22, "body_wt_g": 1780, "egg_prod_pct": 90, "egg_wt_g": 58.5, "feed_per_bird_g": 112, "fcr": null, "mortality_pct_max": 0.6 },
+    { "week": 25, "body_wt_g": 1850, "egg_prod_pct": 93, "egg_wt_g": 60.5, "feed_per_bird_g": 115, "fcr": null, "mortality_pct_max": 0.8 },
+    { "week": 27, "body_wt_g": 1880, "egg_prod_pct": 94, "egg_wt_g": 61.5, "feed_per_bird_g": 117, "fcr": null, "mortality_pct_max": 1.0 },
+    { "week": 30, "body_wt_g": 1900, "egg_prod_pct": 94, "egg_wt_g": 62.0, "feed_per_bird_g": 118, "fcr": 2.05, "mortality_pct_max": 1.2 },
+    { "week": 35, "body_wt_g": 1920, "egg_prod_pct": 93, "egg_wt_g": 64.5, "feed_per_bird_g": 118, "fcr": 2.10, "mortality_pct_max": 1.5 },
+    { "week": 40, "body_wt_g": 1930, "egg_prod_pct": 91, "egg_wt_g": 65.5, "feed_per_bird_g": 116, "fcr": 2.15, "mortality_pct_max": 2.0 },
+    { "week": 45, "body_wt_g": 1940, "egg_prod_pct": 89, "egg_wt_g": 65.5, "feed_per_bird_g": 114, "fcr": 2.20, "mortality_pct_max": 2.3 },
+    { "week": 50, "body_wt_g": 1950, "egg_prod_pct": 88, "egg_wt_g": 65.5, "feed_per_bird_g": 113, "fcr": 2.25, "mortality_pct_max": 2.5 },
+    { "week": 55, "body_wt_g": 1955, "egg_prod_pct": 86, "egg_wt_g": 65.5, "feed_per_bird_g": 111, "fcr": 2.30, "mortality_pct_max": 3.0 },
+    { "week": 60, "body_wt_g": 1960, "egg_prod_pct": 85, "egg_wt_g": 65.0, "feed_per_bird_g": 110, "fcr": 2.35, "mortality_pct_max": 3.5 },
+    { "week": 65, "body_wt_g": 1965, "egg_prod_pct": 83, "egg_wt_g": 64.5, "feed_per_bird_g": 109, "fcr": 2.42, "mortality_pct_max": 4.2 },
+    { "week": 70, "body_wt_g": 1970, "egg_prod_pct": 80, "egg_wt_g": 64.5, "feed_per_bird_g": 108, "fcr": 2.50, "mortality_pct_max": 5.0 },
+    { "week": 75, "body_wt_g": 1975, "egg_prod_pct": 77, "egg_wt_g": 64.0, "feed_per_bird_g": 107, "fcr": 2.60, "mortality_pct_max": 6.0 },
+    { "week": 80, "body_wt_g": 1980, "egg_prod_pct": 74, "egg_wt_g": 64.0, "feed_per_bird_g": 105, "fcr": 2.70, "mortality_pct_max": 7.0 }
+  ],
+  "phases": {
+    "pre_lay":   { "weeks": "17-19", "note": "Coming into production" },
+    "peak_lay":  { "weeks": "20-35", "note": "Peak production phase" },
+    "mid_lay":   { "weeks": "36-55", "note": "Mid production — maintain body weight" },
+    "late_lay":  { "weeks": "56-80", "note": "Late production — egg weight priority" }
+  }
+}

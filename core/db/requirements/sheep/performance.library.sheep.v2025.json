@@ -1,0 +1,1285 @@
+{
+  "_meta": {
+    "description": "NutriPilot Sheep Performance Library — growth and milk curves by breed",
+    "version": "v2025.1",
+    "age_unit": "week",
+    "sources": [
+      "MLA/AWI (2023) Australian sheep industry benchmarks",
+      "South African Dorper Society + ScienceDirect Productive Performance of Dorper Sheep (2000)",
+      "ICARDA Jordan — Awassi Lambs Body Weight and Growth Rate (2020) — 2262 records",
+      "NARC/LES Khizerabad Pakistan — Kajli sheep performance data 1994-2010",
+      "NSA UK + AHDB (2023) — Suffolk performance benchmarks",
+      "INRA France (2022) — Lacaune dairy sheep official data",
+      "NRC (2007) Nutrient Requirements of Small Ruminants — DMI equations",
+      "FAO Animal Production Paper 58 — Small Ruminant Production in Developing Countries"
+    ],
+    "fields": {
+      "week": "Age in weeks from birth",
+      "body_wt_kg": "Live body weight in kg",
+      "adg_kg_day": "Average daily gain kg/day",
+      "dmi_kg_day": "Dry matter intake kg/day (NRC 2007)",
+      "fcr": "Feed conversion ratio (DMI/ADG)"
+    },
+    "data_quality_notes": {
+      "official_research": [
+        "merino",
+        "suffolk",
+        "texel",
+        "dorper",
+        "awassi",
+        "lacaune"
+      ],
+      "official_research_pak": [
+        "kajli"
+      ],
+      "official_research_fao": [
+        "nali",
+        "marwari"
+      ]
+    }
+  },
+  "sheep_meat": {
+    "merino": {
+      "_meta": {
+        "breed": "merino",
+        "common_name": "Merino",
+        "type": "wool_meat",
+        "origin": "Spain / Australia",
+        "data_quality": "official_research",
+        "source": "MLA/AWI Australian benchmarks 2023 + Cambridge Animal Science peer-reviewed growth data. Mature ewe 55-65kg. ADG pre-weaning 0.20-0.25 kg/day. Post-weaning 0.15-0.20 kg/day.",
+        "mature_bw_kg": 60,
+        "birth_wt_kg": 4.2,
+        "weaning_wt_kg": 20,
+        "slaughter_wt_kg": 45,
+        "adg_preweaning": 0.22,
+        "adg_postweaning": 0.17,
+        "dressing_pct": 44,
+        "wool_fleece_kg_yr": 4.5,
+        "regional_relevance": [
+          "Australia",
+          "South Africa",
+          "Argentina",
+          "New Zealand",
+          "Global wool"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-13",
+          "target_adg_kg_day": 0.22
+        },
+        "postweaning": {
+          "weeks": "13-26",
+          "target_adg_kg_day": 0.17
+        },
+        "growing": {
+          "weeks": "26-52",
+          "target_adg_kg_day": 0.15
+        },
+        "finishing": {
+          "weeks": "52-65",
+          "target_adg_kg_day": 0.12
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 4.2,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 5.0,
+          "adg_kg_day": 0.11,
+          "dmi_kg_day": 0.2,
+          "fcr": 1.82
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 6.0,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 0.25,
+          "fcr": 1.79
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 8.0,
+          "adg_kg_day": 0.19,
+          "dmi_kg_day": 0.38,
+          "fcr": 2.0
+        },
+        {
+          "week": 6,
+          "body_wt_kg": 10.3,
+          "adg_kg_day": 0.21,
+          "dmi_kg_day": 0.5,
+          "fcr": 2.38
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 12.5,
+          "adg_kg_day": 0.22,
+          "dmi_kg_day": 0.6,
+          "fcr": 2.73
+        },
+        {
+          "week": 10,
+          "body_wt_kg": 14.8,
+          "adg_kg_day": 0.22,
+          "dmi_kg_day": 0.7,
+          "fcr": 3.18
+        },
+        {
+          "week": 13,
+          "body_wt_kg": 18.5,
+          "adg_kg_day": 0.22,
+          "dmi_kg_day": 0.82,
+          "fcr": 3.73
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 21.7,
+          "adg_kg_day": 0.18,
+          "dmi_kg_day": 0.9,
+          "fcr": 5.0
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 25.0,
+          "adg_kg_day": 0.17,
+          "dmi_kg_day": 0.98,
+          "fcr": 5.76
+        },
+        {
+          "week": 26,
+          "body_wt_kg": 30.0,
+          "adg_kg_day": 0.16,
+          "dmi_kg_day": 1.05,
+          "fcr": 6.56
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 34.6,
+          "adg_kg_day": 0.15,
+          "dmi_kg_day": 1.1,
+          "fcr": 7.33
+        },
+        {
+          "week": 39,
+          "body_wt_kg": 39.5,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 1.15,
+          "fcr": 8.21
+        },
+        {
+          "week": 45,
+          "body_wt_kg": 43.5,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 1.18,
+          "fcr": 9.08
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 47.5,
+          "adg_kg_day": 0.12,
+          "dmi_kg_day": 1.2,
+          "fcr": 10.0
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 54.0,
+          "adg_kg_day": 0.1,
+          "dmi_kg_day": 1.22,
+          "fcr": 12.2
+        }
+      ]
+    },
+    "suffolk": {
+      "_meta": {
+        "breed": "suffolk",
+        "common_name": "Suffolk",
+        "type": "meat",
+        "origin": "England, UK",
+        "data_quality": "official_research",
+        "source": "NSA UK + AHDB Sheep BRP (2023). Fast-growing meat breed. ADG pre-weaning 0.30-0.35 kg/day. Slaughter 42-50kg at 16-20 weeks. Dressing 48-52%.",
+        "mature_bw_kg": 100,
+        "birth_wt_kg": 5.0,
+        "weaning_wt_kg": 28,
+        "slaughter_wt_kg": 46,
+        "adg_preweaning": 0.33,
+        "adg_postweaning": 0.25,
+        "dressing_pct": 50,
+        "regional_relevance": [
+          "UK",
+          "USA",
+          "Australia",
+          "New Zealand",
+          "Global meat"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-13",
+          "target_adg_kg_day": 0.33
+        },
+        "postweaning": {
+          "weeks": "13-20",
+          "target_adg_kg_day": 0.25
+        },
+        "finishing": {
+          "weeks": "20-26",
+          "target_adg_kg_day": 0.2
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 5.0,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 6.2,
+          "adg_kg_day": 0.17,
+          "dmi_kg_day": 0.25,
+          "fcr": 1.47
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 8.0,
+          "adg_kg_day": 0.26,
+          "dmi_kg_day": 0.35,
+          "fcr": 1.35
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 11.8,
+          "adg_kg_day": 0.31,
+          "dmi_kg_day": 0.55,
+          "fcr": 1.77
+        },
+        {
+          "week": 6,
+          "body_wt_kg": 16.0,
+          "adg_kg_day": 0.33,
+          "dmi_kg_day": 0.75,
+          "fcr": 2.27
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 20.4,
+          "adg_kg_day": 0.34,
+          "dmi_kg_day": 0.95,
+          "fcr": 2.79
+        },
+        {
+          "week": 10,
+          "body_wt_kg": 24.8,
+          "adg_kg_day": 0.34,
+          "dmi_kg_day": 1.1,
+          "fcr": 3.24
+        },
+        {
+          "week": 13,
+          "body_wt_kg": 31.5,
+          "adg_kg_day": 0.32,
+          "dmi_kg_day": 1.25,
+          "fcr": 3.91
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 37.5,
+          "adg_kg_day": 0.27,
+          "dmi_kg_day": 1.35,
+          "fcr": 5.0
+        },
+        {
+          "week": 18,
+          "body_wt_kg": 41.3,
+          "adg_kg_day": 0.27,
+          "dmi_kg_day": 1.4,
+          "fcr": 5.19
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 45.0,
+          "adg_kg_day": 0.26,
+          "dmi_kg_day": 1.45,
+          "fcr": 5.58
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 52.0,
+          "adg_kg_day": 0.22,
+          "dmi_kg_day": 1.5,
+          "fcr": 6.82
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 64.0,
+          "adg_kg_day": 0.18,
+          "dmi_kg_day": 1.6,
+          "fcr": 8.89
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 85.0,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 1.8,
+          "fcr": 12.86
+        }
+      ]
+    },
+    "texel": {
+      "_meta": {
+        "breed": "texel",
+        "common_name": "Texel",
+        "type": "meat",
+        "origin": "Netherlands",
+        "data_quality": "official_research",
+        "source": "AHDB UK + Dutch Texel Society benchmarks (2023). High muscle, lean carcass breed. ADG 0.28-0.32 kg/day. Slaughter 42-48kg at 16-20 weeks. Dressing 50-54%.",
+        "mature_bw_kg": 85,
+        "birth_wt_kg": 4.8,
+        "weaning_wt_kg": 26,
+        "slaughter_wt_kg": 45,
+        "adg_preweaning": 0.3,
+        "adg_postweaning": 0.23,
+        "dressing_pct": 52,
+        "regional_relevance": [
+          "UK",
+          "Netherlands",
+          "France",
+          "Australia",
+          "Global meat"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-13",
+          "target_adg_kg_day": 0.3
+        },
+        "postweaning": {
+          "weeks": "13-20",
+          "target_adg_kg_day": 0.23
+        },
+        "finishing": {
+          "weeks": "20-26",
+          "target_adg_kg_day": 0.18
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 4.8,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 6.0,
+          "adg_kg_day": 0.17,
+          "dmi_kg_day": 0.24,
+          "fcr": 1.41
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 7.6,
+          "adg_kg_day": 0.23,
+          "dmi_kg_day": 0.33,
+          "fcr": 1.43
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 11.0,
+          "adg_kg_day": 0.29,
+          "dmi_kg_day": 0.52,
+          "fcr": 1.79
+        },
+        {
+          "week": 6,
+          "body_wt_kg": 14.8,
+          "adg_kg_day": 0.31,
+          "dmi_kg_day": 0.7,
+          "fcr": 2.26
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 19.0,
+          "adg_kg_day": 0.3,
+          "dmi_kg_day": 0.88,
+          "fcr": 2.93
+        },
+        {
+          "week": 10,
+          "body_wt_kg": 23.0,
+          "adg_kg_day": 0.3,
+          "dmi_kg_day": 1.02,
+          "fcr": 3.4
+        },
+        {
+          "week": 13,
+          "body_wt_kg": 29.0,
+          "adg_kg_day": 0.29,
+          "dmi_kg_day": 1.18,
+          "fcr": 4.07
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 34.5,
+          "adg_kg_day": 0.24,
+          "dmi_kg_day": 1.28,
+          "fcr": 5.33
+        },
+        {
+          "week": 18,
+          "body_wt_kg": 38.0,
+          "adg_kg_day": 0.24,
+          "dmi_kg_day": 1.33,
+          "fcr": 5.54
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 41.5,
+          "adg_kg_day": 0.25,
+          "dmi_kg_day": 1.38,
+          "fcr": 5.52
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 48.0,
+          "adg_kg_day": 0.2,
+          "dmi_kg_day": 1.45,
+          "fcr": 7.25
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 59.0,
+          "adg_kg_day": 0.16,
+          "dmi_kg_day": 1.55,
+          "fcr": 9.69
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 78.0,
+          "adg_kg_day": 0.12,
+          "dmi_kg_day": 1.7,
+          "fcr": 14.17
+        }
+      ]
+    },
+    "dorper": {
+      "_meta": {
+        "breed": "dorper",
+        "common_name": "Dorper",
+        "type": "meat",
+        "origin": "South Africa",
+        "data_quality": "official_research",
+        "source": "South African Dorper Sheep Breeders Society + ScienceDirect (2000) Scholtz et al. ADG 0.24-0.28 kg/day under diverse conditions. Birth wt 3.8-4.5 kg. Dressing 50%. Heat tolerant.",
+        "mature_bw_kg": 80,
+        "birth_wt_kg": 4.0,
+        "weaning_wt_kg": 22,
+        "slaughter_wt_kg": 40,
+        "adg_preweaning": 0.26,
+        "adg_postweaning": 0.2,
+        "dressing_pct": 50,
+        "heat_tolerance": "excellent",
+        "regional_relevance": [
+          "South Africa",
+          "Australia",
+          "Middle East",
+          "USA",
+          "Global arid"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-13",
+          "target_adg_kg_day": 0.26
+        },
+        "postweaning": {
+          "weeks": "13-20",
+          "target_adg_kg_day": 0.2
+        },
+        "finishing": {
+          "weeks": "20-26",
+          "target_adg_kg_day": 0.16
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 4.0,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 4.9,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 0.2,
+          "fcr": 1.54
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 6.2,
+          "adg_kg_day": 0.19,
+          "dmi_kg_day": 0.28,
+          "fcr": 1.47
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 9.0,
+          "adg_kg_day": 0.24,
+          "dmi_kg_day": 0.44,
+          "fcr": 1.83
+        },
+        {
+          "week": 6,
+          "body_wt_kg": 12.0,
+          "adg_kg_day": 0.26,
+          "dmi_kg_day": 0.58,
+          "fcr": 2.23
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 15.2,
+          "adg_kg_day": 0.26,
+          "dmi_kg_day": 0.72,
+          "fcr": 2.77
+        },
+        {
+          "week": 10,
+          "body_wt_kg": 18.3,
+          "adg_kg_day": 0.27,
+          "dmi_kg_day": 0.84,
+          "fcr": 3.11
+        },
+        {
+          "week": 13,
+          "body_wt_kg": 23.0,
+          "adg_kg_day": 0.26,
+          "dmi_kg_day": 1.0,
+          "fcr": 3.85
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 27.0,
+          "adg_kg_day": 0.22,
+          "dmi_kg_day": 1.1,
+          "fcr": 5.0
+        },
+        {
+          "week": 18,
+          "body_wt_kg": 30.0,
+          "adg_kg_day": 0.21,
+          "dmi_kg_day": 1.15,
+          "fcr": 5.48
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 32.8,
+          "adg_kg_day": 0.2,
+          "dmi_kg_day": 1.18,
+          "fcr": 5.9
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 38.0,
+          "adg_kg_day": 0.17,
+          "dmi_kg_day": 1.22,
+          "fcr": 7.18
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 47.0,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 1.28,
+          "fcr": 9.14
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 63.0,
+          "adg_kg_day": 0.1,
+          "dmi_kg_day": 1.4,
+          "fcr": 14.0
+        }
+      ]
+    },
+    "awassi": {
+      "_meta": {
+        "breed": "awassi",
+        "common_name": "Awassi (Fat-tailed)",
+        "type": "meat_dairy",
+        "origin": "Middle East (Syria/Iraq/Jordan)",
+        "data_quality": "official_research",
+        "source": "ICARDA Jordan official station data (2020) — 2262 records Al-Fjaj station. Birth 4.43kg, weaning 60d 18.07kg, 180d 35.96kg, yearling 59.71kg. ADG birth-weaning 0.216 kg/day.",
+        "mature_bw_kg": 65,
+        "birth_wt_kg": 4.4,
+        "weaning_wt_kg_60d": 18.1,
+        "wt_180d_kg": 36.0,
+        "wt_360d_kg": 59.7,
+        "adg_birth_weaning": 0.216,
+        "adg_postweaning": 0.141,
+        "dressing_pct": 48,
+        "fat_tail": true,
+        "heat_tolerance": "excellent",
+        "regional_relevance": [
+          "Jordan",
+          "Syria",
+          "Iraq",
+          "Palestine",
+          "Turkey",
+          "Middle East",
+          "North Africa"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-9",
+          "target_adg_kg_day": 0.216
+        },
+        "postweaning": {
+          "weeks": "9-26",
+          "target_adg_kg_day": 0.141
+        },
+        "growing": {
+          "weeks": "26-52",
+          "target_adg_kg_day": 0.131
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 4.4,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 5.4,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 0.22,
+          "fcr": 1.57
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 6.9,
+          "adg_kg_day": 0.21,
+          "dmi_kg_day": 0.3,
+          "fcr": 1.43
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 10.0,
+          "adg_kg_day": 0.22,
+          "dmi_kg_day": 0.46,
+          "fcr": 2.09
+        },
+        {
+          "week": 6,
+          "body_wt_kg": 13.1,
+          "adg_kg_day": 0.22,
+          "dmi_kg_day": 0.6,
+          "fcr": 2.73
+        },
+        {
+          "week": 9,
+          "body_wt_kg": 18.1,
+          "adg_kg_day": 0.22,
+          "dmi_kg_day": 0.76,
+          "fcr": 3.45
+        },
+        {
+          "week": 13,
+          "body_wt_kg": 23.7,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 0.9,
+          "fcr": 6.43
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 27.6,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 1.0,
+          "fcr": 7.14
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 32.1,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 1.08,
+          "fcr": 7.71
+        },
+        {
+          "week": 26,
+          "body_wt_kg": 36.0,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 1.15,
+          "fcr": 8.85
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 40.9,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 1.2,
+          "fcr": 9.23
+        },
+        {
+          "week": 39,
+          "body_wt_kg": 46.5,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 1.25,
+          "fcr": 9.62
+        },
+        {
+          "week": 45,
+          "body_wt_kg": 51.1,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 1.28,
+          "fcr": 9.85
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 59.7,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 1.3,
+          "fcr": 10.0
+        }
+      ]
+    },
+    "kajli": {
+      "_meta": {
+        "breed": "kajli",
+        "common_name": "Kajli (Pakistan)",
+        "type": "meat",
+        "origin": "Pakistan (Punjab — Sargodha/Sahiwal region)",
+        "data_quality": "official_research",
+        "source": "NARC/LES Khizerabad Pakistan government records 1994-2010 — 13,715 lambs. Large-framed fat-tailed breed. Birth wt 4.5-5.0 kg, mature 65-80 kg. ADG 0.18-0.22 kg/day preweaning.",
+        "mature_bw_kg": 72,
+        "birth_wt_kg": 4.7,
+        "weaning_wt_kg": 22,
+        "slaughter_wt_kg": 45,
+        "adg_preweaning": 0.2,
+        "adg_postweaning": 0.16,
+        "dressing_pct": 47,
+        "fat_tail": true,
+        "heat_tolerance": "good",
+        "regional_relevance": [
+          "Pakistan",
+          "India (Punjab)"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-13",
+          "target_adg_kg_day": 0.2
+        },
+        "postweaning": {
+          "weeks": "13-26",
+          "target_adg_kg_day": 0.16
+        },
+        "growing": {
+          "weeks": "26-52",
+          "target_adg_kg_day": 0.13
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 4.7,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 5.5,
+          "adg_kg_day": 0.11,
+          "dmi_kg_day": 0.22,
+          "fcr": 2.0
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 7.0,
+          "adg_kg_day": 0.21,
+          "dmi_kg_day": 0.3,
+          "fcr": 1.43
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 9.8,
+          "adg_kg_day": 0.2,
+          "dmi_kg_day": 0.45,
+          "fcr": 2.25
+        },
+        {
+          "week": 6,
+          "body_wt_kg": 12.6,
+          "adg_kg_day": 0.2,
+          "dmi_kg_day": 0.58,
+          "fcr": 2.9
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 15.3,
+          "adg_kg_day": 0.2,
+          "dmi_kg_day": 0.7,
+          "fcr": 3.5
+        },
+        {
+          "week": 10,
+          "body_wt_kg": 18.0,
+          "adg_kg_day": 0.2,
+          "dmi_kg_day": 0.8,
+          "fcr": 4.0
+        },
+        {
+          "week": 13,
+          "body_wt_kg": 22.0,
+          "adg_kg_day": 0.2,
+          "dmi_kg_day": 0.92,
+          "fcr": 4.6
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 25.5,
+          "adg_kg_day": 0.17,
+          "dmi_kg_day": 1.0,
+          "fcr": 5.88
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 29.5,
+          "adg_kg_day": 0.16,
+          "dmi_kg_day": 1.08,
+          "fcr": 6.75
+        },
+        {
+          "week": 26,
+          "body_wt_kg": 35.0,
+          "adg_kg_day": 0.16,
+          "dmi_kg_day": 1.15,
+          "fcr": 7.19
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 39.8,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 1.2,
+          "fcr": 9.23
+        },
+        {
+          "week": 39,
+          "body_wt_kg": 44.8,
+          "adg_kg_day": 0.13,
+          "dmi_kg_day": 1.25,
+          "fcr": 9.62
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 53.0,
+          "adg_kg_day": 0.11,
+          "dmi_kg_day": 1.3,
+          "fcr": 11.82
+        }
+      ]
+    },
+    "nali": {
+      "_meta": {
+        "breed": "nali",
+        "common_name": "Nali (Rajasthan Carpet Wool)",
+        "type": "wool_meat",
+        "origin": "India (Rajasthan)",
+        "data_quality": "official_research",
+        "source": "CIRG Makhdoom India (2021) + FAO. Medium-sized breed. Birth wt 3.2 kg, 3-month 12 kg, 6-month 18 kg, yearling 28 kg. ADG 0.14-0.16 kg/day.",
+        "mature_bw_kg": 38,
+        "birth_wt_kg": 3.2,
+        "weaning_wt_kg": 12,
+        "slaughter_wt_kg": 28,
+        "adg_preweaning": 0.15,
+        "dressing_pct": 44,
+        "regional_relevance": [
+          "India (Rajasthan)",
+          "Pakistan border regions"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-13",
+          "target_adg_kg_day": 0.15
+        },
+        "postweaning": {
+          "weeks": "13-26",
+          "target_adg_kg_day": 0.12
+        },
+        "growing": {
+          "weeks": "26-52",
+          "target_adg_kg_day": 0.09
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 3.2,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 4.8,
+          "adg_kg_day": 0.11,
+          "dmi_kg_day": 0.2,
+          "fcr": 1.82
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 6.5,
+          "adg_kg_day": 0.12,
+          "dmi_kg_day": 0.28,
+          "fcr": 2.33
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 9.5,
+          "adg_kg_day": 0.14,
+          "dmi_kg_day": 0.42,
+          "fcr": 3.0
+        },
+        {
+          "week": 13,
+          "body_wt_kg": 12.0,
+          "adg_kg_day": 0.15,
+          "dmi_kg_day": 0.54,
+          "fcr": 3.6
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 16.5,
+          "adg_kg_day": 0.12,
+          "dmi_kg_day": 0.65,
+          "fcr": 5.42
+        },
+        {
+          "week": 26,
+          "body_wt_kg": 18.0,
+          "adg_kg_day": 0.11,
+          "dmi_kg_day": 0.7,
+          "fcr": 6.36
+        },
+        {
+          "week": 32,
+          "body_wt_kg": 21.0,
+          "adg_kg_day": 0.1,
+          "dmi_kg_day": 0.75,
+          "fcr": 7.5
+        },
+        {
+          "week": 39,
+          "body_wt_kg": 24.0,
+          "adg_kg_day": 0.09,
+          "dmi_kg_day": 0.78,
+          "fcr": 8.67
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 28.0,
+          "adg_kg_day": 0.09,
+          "dmi_kg_day": 0.8,
+          "fcr": 8.89
+        }
+      ]
+    }
+  },
+  "sheep_dairy": {
+    "lacaune": {
+      "_meta": {
+        "breed": "lacaune",
+        "common_name": "Lacaune (Roquefort)",
+        "type": "dairy",
+        "origin": "France (Massif Central)",
+        "data_quality": "official_research",
+        "source": "INRA France (2022) + Confederation de Roquefort official data. World's most productive dairy sheep. 305d avg 300-450L. Fat 7%, Protein 5.5%. Lactation 150-165 days. Elite herds 550L+.",
+        "age_unit": "week_of_lactation",
+        "lactation_length_days": 160,
+        "production_305d_litre": {
+          "average": 380,
+          "elite": 520
+        },
+        "fat_pct_avg": 7.0,
+        "protein_pct_avg": 5.5,
+        "mature_bw_kg": 70,
+        "peak_milk_litre_day": 3.8,
+        "peak_week": 4,
+        "regional_relevance": [
+          "France",
+          "Spain",
+          "Italy",
+          "Global dairy sheep"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 1,
+          "milk_litre_day": 1.8,
+          "fat_pct": 8.2,
+          "protein_pct": 6.0,
+          "body_wt_kg": 68
+        },
+        {
+          "week": 2,
+          "milk_litre_day": 2.8,
+          "fat_pct": 7.8,
+          "protein_pct": 5.8,
+          "body_wt_kg": 67
+        },
+        {
+          "week": 3,
+          "milk_litre_day": 3.4,
+          "fat_pct": 7.4,
+          "protein_pct": 5.6,
+          "body_wt_kg": 66
+        },
+        {
+          "week": 4,
+          "milk_litre_day": 3.8,
+          "fat_pct": 7.1,
+          "protein_pct": 5.5,
+          "body_wt_kg": 65
+        },
+        {
+          "week": 5,
+          "milk_litre_day": 3.7,
+          "fat_pct": 7.0,
+          "protein_pct": 5.5,
+          "body_wt_kg": 64
+        },
+        {
+          "week": 6,
+          "milk_litre_day": 3.6,
+          "fat_pct": 7.0,
+          "protein_pct": 5.5,
+          "body_wt_kg": 63
+        },
+        {
+          "week": 8,
+          "milk_litre_day": 3.3,
+          "fat_pct": 7.0,
+          "protein_pct": 5.5,
+          "body_wt_kg": 63
+        },
+        {
+          "week": 10,
+          "milk_litre_day": 3.0,
+          "fat_pct": 7.0,
+          "protein_pct": 5.5,
+          "body_wt_kg": 64
+        },
+        {
+          "week": 12,
+          "milk_litre_day": 2.7,
+          "fat_pct": 7.1,
+          "protein_pct": 5.6,
+          "body_wt_kg": 65
+        },
+        {
+          "week": 14,
+          "milk_litre_day": 2.4,
+          "fat_pct": 7.2,
+          "protein_pct": 5.6,
+          "body_wt_kg": 65
+        },
+        {
+          "week": 16,
+          "milk_litre_day": 2.0,
+          "fat_pct": 7.3,
+          "protein_pct": 5.7,
+          "body_wt_kg": 66
+        },
+        {
+          "week": 18,
+          "milk_litre_day": 1.6,
+          "fat_pct": 7.5,
+          "protein_pct": 5.8,
+          "body_wt_kg": 67
+        },
+        {
+          "week": 20,
+          "milk_litre_day": 1.2,
+          "fat_pct": 7.8,
+          "protein_pct": 6.0,
+          "body_wt_kg": 68
+        },
+        {
+          "week": 22,
+          "milk_litre_day": 0.8,
+          "fat_pct": 8.0,
+          "protein_pct": 6.2,
+          "body_wt_kg": 69
+        }
+      ]
+    },
+    "awassi_dairy": {
+      "_meta": {
+        "breed": "awassi_dairy",
+        "common_name": "Awassi (Improved Dairy)",
+        "type": "dairy_meat",
+        "origin": "Middle East — improved Israeli/Syrian strain",
+        "data_quality": "official_research",
+        "source": "ICARDA Syria + Israeli Improved Awassi data. Improved strain: 300-500L/lactation. Fat 6.5%, Protein 5.2%. Traditional Awassi: 80-150L. Used for Halloumi/white cheese in Middle East.",
+        "age_unit": "week_of_lactation",
+        "lactation_length_days": 210,
+        "production_305d_litre": {
+          "traditional": 120,
+          "improved": 380
+        },
+        "fat_pct_avg": 6.5,
+        "protein_pct_avg": 5.2,
+        "mature_bw_kg": 55,
+        "peak_milk_litre_day": 3.0,
+        "peak_week": 4,
+        "regional_relevance": [
+          "Jordan",
+          "Syria",
+          "Lebanon",
+          "Palestine",
+          "Israel",
+          "Turkey",
+          "Middle East"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "curve": [
+        {
+          "week": 1,
+          "milk_litre_day": 1.2,
+          "fat_pct": 7.5,
+          "protein_pct": 5.8,
+          "body_wt_kg": 53
+        },
+        {
+          "week": 2,
+          "milk_litre_day": 2.0,
+          "fat_pct": 7.2,
+          "protein_pct": 5.6,
+          "body_wt_kg": 52
+        },
+        {
+          "week": 3,
+          "milk_litre_day": 2.6,
+          "fat_pct": 6.8,
+          "protein_pct": 5.4,
+          "body_wt_kg": 51
+        },
+        {
+          "week": 4,
+          "milk_litre_day": 3.0,
+          "fat_pct": 6.5,
+          "protein_pct": 5.2,
+          "body_wt_kg": 50
+        },
+        {
+          "week": 5,
+          "milk_litre_day": 2.9,
+          "fat_pct": 6.4,
+          "protein_pct": 5.2,
+          "body_wt_kg": 50
+        },
+        {
+          "week": 6,
+          "milk_litre_day": 2.8,
+          "fat_pct": 6.4,
+          "protein_pct": 5.2,
+          "body_wt_kg": 50
+        },
+        {
+          "week": 8,
+          "milk_litre_day": 2.5,
+          "fat_pct": 6.4,
+          "protein_pct": 5.2,
+          "body_wt_kg": 51
+        },
+        {
+          "week": 10,
+          "milk_litre_day": 2.2,
+          "fat_pct": 6.5,
+          "protein_pct": 5.3,
+          "body_wt_kg": 52
+        },
+        {
+          "week": 12,
+          "milk_litre_day": 2.0,
+          "fat_pct": 6.5,
+          "protein_pct": 5.3,
+          "body_wt_kg": 52
+        },
+        {
+          "week": 14,
+          "milk_litre_day": 1.7,
+          "fat_pct": 6.6,
+          "protein_pct": 5.3,
+          "body_wt_kg": 53
+        },
+        {
+          "week": 16,
+          "milk_litre_day": 1.4,
+          "fat_pct": 6.7,
+          "protein_pct": 5.4,
+          "body_wt_kg": 53
+        },
+        {
+          "week": 18,
+          "milk_litre_day": 1.1,
+          "fat_pct": 6.8,
+          "protein_pct": 5.4,
+          "body_wt_kg": 54
+        },
+        {
+          "week": 20,
+          "milk_litre_day": 0.8,
+          "fat_pct": 7.0,
+          "protein_pct": 5.5,
+          "body_wt_kg": 54
+        },
+        {
+          "week": 24,
+          "milk_litre_day": 0.5,
+          "fat_pct": 7.2,
+          "protein_pct": 5.6,
+          "body_wt_kg": 55
+        },
+        {
+          "week": 28,
+          "milk_litre_day": 0.3,
+          "fat_pct": 7.5,
+          "protein_pct": 5.8,
+          "body_wt_kg": 55
+        }
+      ]
+    }
+  }
+}

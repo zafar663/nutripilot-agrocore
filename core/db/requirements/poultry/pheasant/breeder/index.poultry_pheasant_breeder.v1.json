@@ -1,0 +1,44 @@
+{
+  "map": {
+    "generic": {
+      "starter": "poultry_pheasant_breeder_generic_starter_v1",
+      "grower": "poultry_pheasant_breeder_generic_grower_v1",
+      "developer": "poultry_pheasant_breeder_generic_developer_v1",
+      "prebreed": "poultry_pheasant_breeder_generic_prebreed_v1",
+      "peak": "poultry_pheasant_breeder_generic_peak_v1",
+      "postpeak": "poultry_pheasant_breeder_generic_postpeak_v1",
+      "late": "poultry_pheasant_breeder_generic_late_v1"
+    },
+    "ring_necked": {
+      "starter": "poultry_pheasant_breeder_ring_necked_starter_v1",
+      "grower": "poultry_pheasant_breeder_ring_necked_grower_v1",
+      "developer": "poultry_pheasant_breeder_ring_necked_developer_v1",
+      "prebreed": "poultry_pheasant_breeder_ring_necked_prebreed_v1",
+      "peak": "poultry_pheasant_breeder_ring_necked_peak_v1",
+      "postpeak": "poultry_pheasant_breeder_ring_necked_postpeak_v1",
+      "late": "poultry_pheasant_breeder_ring_necked_late_v1"
+    },
+    "melanistic": {
+      "starter": "poultry_pheasant_breeder_melanistic_starter_v1",
+      "grower": "poultry_pheasant_breeder_melanistic_grower_v1",
+      "developer": "poultry_pheasant_breeder_melanistic_developer_v1",
+      "prebreed": "poultry_pheasant_breeder_melanistic_prebreed_v1",
+      "peak": "poultry_pheasant_breeder_melanistic_peak_v1",
+      "postpeak": "poultry_pheasant_breeder_melanistic_postpeak_v1",
+      "late": "poultry_pheasant_breeder_melanistic_late_v1"
+    }
+  },
+  "_LOCK": {
+    "mode": "option_b",
+    "version": "v1"
+  },
+  "phases": {
+    "starter": "poultry_pheasant_breeder_generic_starter_v1",
+    "grower": "poultry_pheasant_breeder_generic_grower_v1",
+    "developer": "poultry_pheasant_breeder_generic_developer_v1",
+    "prebreed": "poultry_pheasant_breeder_generic_prebreed_v1",
+    "peak": "poultry_pheasant_breeder_generic_peak_v1",
+    "postpeak": "poultry_pheasant_breeder_generic_postpeak_v1",
+    "late": "poultry_pheasant_breeder_generic_late_v1"
+  }
+}

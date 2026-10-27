@@ -1,4 +1,4 @@
-﻿/*
+/*
   AgroCore Ingredients Loader
   File: core/db/ingredients/_index/LOAD_INGREDIENTS.cjs
 
@@ -11,6 +11,11 @@
   sid_lys -> lys, sid_met -> met, sid_metcys -> met_cys, etc.
 
   CommonJS compatible (Node 20.x)
+
+  TEMP BRIDGE (PHASE A):
+  - GLOBAL DB is currently empty/placeholder.
+  - If requested region != 'us', force 'us' so analyzer remains usable.
+  - Later: remove this and populate GLOBAL properly (BR tables ? global).
 */
 
 "use strict";
@@ -26,7 +31,7 @@ const LEGACY_DEFAULT_A = path.resolve(ING_ROOT, "..", "ingredients.poultry.v0.js
 const LEGACY_DEFAULT_B = path.resolve(ING_ROOT, "ingredients.poultry.v0.json");
 const LEGACY_DEFAULT_C = path.resolve(ING_ROOT, "ingredients", "ingredients.poultry.v0.json");
 
-// Simple cache per file
+// Simple cache per file (cache ONLY successful parses)
 const JSON_CACHE = new Map();
 
 function stripUtf8Bom(s) {
@@ -43,17 +48,46 @@ function unwrapToDb(obj) {
   return obj;
 }
 
+/**
+ * Read JSON safely.
+ * - If missing: return null
+ * - If empty/whitespace: return null
+ * - If invalid/truncated JSON: return null (do NOT crash the API)
+ */
 function readJson(absPath) {
   if (JSON_CACHE.has(absPath)) return JSON_CACHE.get(absPath);
 
   if (!fs.existsSync(absPath)) return null;
 
-  const raw = fs.readFileSync(absPath, "utf8");
-  const text = stripUtf8Bom(raw);
-  const json = JSON.parse(text);
+  try {
+    const raw = fs.readFileSync(absPath, "utf8");
+    const text = stripUtf8Bom(raw);
 
-  JSON_CACHE.set(absPath, json);
-  return json;
+    if (!text || !String(text).trim()) return null;
+
+    const json = JSON.parse(text);
+
+    // cache only successful parses
+    JSON_CACHE.set(absPath, json);
+    return json;
+  } catch (e) {
+    // Skip bad JSON so we can fall back to other candidates / legacy.
+    // This is critical during development when a DB file may be mid-write/truncated.
+    console.error(`[ING_DB] Invalid JSON, skipping: ${absPath}`);
+    console.error(`[ING_DB] ${e && e.message ? e.message : String(e)}`);
+    return null;
+  }
+}
+
+/**
+ * TEMP bridge: force ingredient-region to US unless the caller explicitly requests US.
+ * We do NOT touch locale; only the ingredient matrix region.
+ */
+function regionEffective(regionIn) {
+  const r = String(regionIn || "").toLowerCase().trim();
+  if (!r) return { requested: "", effective: "us", forced: true };
+  if (r === "us") return { requested: r, effective: r, forced: false };
+  return { requested: r, effective: "us", forced: true };
 }
 
 function buildCandidates({ species = "poultry", region = "global", version = "v1", basis = "sid" } = {}) {
@@ -61,6 +95,14 @@ function buildCandidates({ species = "poultry", region = "global", version = "v1
   const r = String(region || "global").toLowerCase().trim();
   const v = String(version || "v1").toLowerCase().trim();
   const b = String(basis || "sid").toLowerCase().trim();
+
+  // NutrixDB unified � check first
+  const nutrixDb = path.resolve(
+    ING_ROOT,
+    "nutrixdb",
+    "v1",
+    "nutrixdb.ingredients.v1.json"
+  );
 
   const byRegion = path.resolve(
     ING_ROOT,
@@ -78,7 +120,9 @@ function buildCandidates({ species = "poultry", region = "global", version = "v1
     `ingredients.${s}.global.${b}.${v}.json`
   );
 
-  return [byRegion, globalFallback];
+  // Species-specific file takes priority over unified nutrixdb.
+  // nutrixdb serves as fallback for species that don't have a dedicated file.
+  return [byRegion, globalFallback, nutrixDb];
 }
 
 function clone(obj) {
@@ -105,14 +149,46 @@ function normalizeSidToEngineKeys(db) {
   };
 
   const out = {};
+
   for (const ingKey of Object.keys(db)) {
-    const row = db[ingKey] && typeof db[ingKey] === "object" ? { ...db[ingKey] } : db[ingKey];
+    const row = db[ingKey] && typeof db[ingKey] === "object"
+      ? { ...db[ingKey] }
+      : db[ingKey];
 
     if (row && typeof row === "object") {
+      // Universal ingredient nutrient container support.
+      // Poultry/old DB may use nutrient_profile; newer species DBs may use nutrients.
+      const sourceNutrients =
+        row.nutrients && typeof row.nutrients === "object"
+          ? row.nutrients
+          : row.nutrient_profile && typeof row.nutrient_profile === "object"
+            ? row.nutrient_profile
+            : null;
+
+      if (sourceNutrients) {
+        row.nutrients = { ...sourceNutrients };
+
+        // Also expose nutrient keys at row root for existing engine compatibility.
+        for (const [k, v] of Object.entries(sourceNutrients)) {
+          if (typeof row[k] === "undefined") row[k] = v;
+        }
+      }
+
+      // Existing poultry SID compatibility mapping.
       for (const engineKey of Object.keys(map)) {
         const sidKey = map[engineKey];
+
         if (typeof row[engineKey] === "undefined" && typeof row[sidKey] !== "undefined") {
           row[engineKey] = row[sidKey];
+        }
+
+        if (
+          row.nutrients &&
+          typeof row.nutrients === "object" &&
+          typeof row.nutrients[engineKey] === "undefined" &&
+          typeof row.nutrients[sidKey] !== "undefined"
+        ) {
+          row.nutrients[engineKey] = row.nutrients[sidKey];
         }
       }
     }
@@ -133,8 +209,7 @@ function pickLegacyPath() {
 /**
  * Load global invariants (minerals + synthetic AA) merged into every region DB.
  *
- * ✅ Your current invariants file (as you pasted) is:
- *   core/db/ingredients/_invariants/ingredients.global.invariants.v1.json
+ * core/db/ingredients/_invariants/ingredients.global.invariants.v1.json
  *
  * This loader supports:
  *   { db: {...} } OR { ingredients: {...} } OR flat object {...}
@@ -188,8 +263,25 @@ function mergePreferBase(base, inv) {
   return out;
 }
 
+function filterBySpecies(db, species) {
+  if (!species || !db) return db;
+  const s = String(species).toLowerCase().trim();
+  const out = {};
+  for (const [key, ing] of Object.entries(db)) {
+    if (key.startsWith('_')) continue;
+    const compat = ing.species_compatibility;
+    if (!compat || !Array.isArray(compat) || compat.includes(s) || compat.includes("all")) {
+      out[key] = ing;
+    }
+  }
+  return out;
+}
 function loadIngredients(selectors = {}) {
-  const candidates = buildCandidates(selectors);
+  // TEMP BRIDGE: force ingredient region to US unless region=us was explicitly requested
+  const rr = regionEffective(selectors.region);
+  const selectorsEff = rr.forced ? { ...selectors, region: rr.effective } : selectors;
+
+  const candidates = buildCandidates(selectorsEff);
 
   // Load invariants once (and report whether found)
   const inv = loadGlobalInvariantsDb();
@@ -205,7 +297,8 @@ function loadIngredients(selectors = {}) {
 
     if (keys.length === 0) continue;
 
-    const db = normalizeSidToEngineKeys(clone(db0));
+    const filtered = filterBySpecies(db0, selectorsEff.species);
+const db = normalizeSidToEngineKeys(clone(filtered));
 
     return {
       ok: true,
@@ -217,6 +310,11 @@ function loadIngredients(selectors = {}) {
           exists: inv.exists,
           file: path.relative(process.cwd(), inv.path),
           merged: true
+        },
+        region_override: {
+          requested: rr.requested,
+          effective: rr.effective,
+          forced: rr.forced
         }
       },
       db,
@@ -259,6 +357,11 @@ function loadIngredients(selectors = {}) {
         exists: inv.exists,
         file: path.relative(process.cwd(), inv.path),
         merged: true
+      },
+      region_override: {
+        requested: rr.requested,
+        effective: rr.effective,
+        forced: rr.forced
       }
     },
     db: legacyDb

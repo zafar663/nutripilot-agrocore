@@ -1,0 +1,127 @@
+{
+  "_LOCK": {
+    "version": "v1",
+    "mode": "option_b_production_index",
+    "note": "Auto-generated breeder requirements index (production->breed->phase->reqKey).",
+    "meta": {
+      "type": "broiler_breeder",
+      "production_key": "breeder",
+      "generated_utc": "2026-03-05T16:50:28.388013+00:00"
+    }
+  },
+  "defaults": {
+    "production": "breeder",
+    "breed": "ross308",
+    "phase": "f_2stage_breeder_1"
+  },
+  "region_defaults": {
+    "us": "us",
+    "global": "global",
+    "eu": "eu"
+  },
+  "phases": [
+    "f_2stage_breeder_1",
+    "f_2stage_breeder_2",
+    "f_2stage_grower",
+    "f_2stage_starter",
+    "f_3stage_breeder_1",
+    "f_3stage_breeder_2",
+    "f_3stage_breeder_3",
+    "f_3stage_grower",
+    "f_3stage_pre_breeder",
+    "f_3stage_starter",
+    "f_4stage_breeder_1",
+    "f_4stage_breeder_2",
+    "f_4stage_breeder_3",
+    "f_4stage_grower",
+    "f_4stage_pre_breeder",
+    "f_4stage_starter_1",
+    "f_4stage_starter_2",
+    "f_5stage_breeder_1",
+    "f_5stage_breeder_2",
+    "f_5stage_breeder_3",
+    "f_5stage_developer",
+    "f_5stage_grower",
+    "f_5stage_pre_breeder",
+    "f_5stage_starter_1",
+    "f_5stage_starter_2",
+    "m_male_male_diet_after_175_days"
+  ],
+  "production_aliases": {
+    "breeder": "breeder",
+    "parent_stock": "breeder",
+    "ps": "breeder"
+  },
+  "productions": {
+    "breeder": {
+      "breeds": {
+        "ross308": {
+          "phases": {
+            "f_4stage_starter_1": "poultry_broiler_breeder_ross308_f_4stage_starter_1_v1",
+            "f_4stage_starter_2": "poultry_broiler_breeder_ross308_f_4stage_starter_2_v1",
+            "f_4stage_grower": "poultry_broiler_breeder_ross308_f_4stage_grower_v1",
+            "f_4stage_pre_breeder": "poultry_broiler_breeder_ross308_f_4stage_pre_breeder_v1",
+            "f_4stage_breeder_1": "poultry_broiler_breeder_ross308_f_4stage_breeder_1_v1",
+            "f_4stage_breeder_2": "poultry_broiler_breeder_ross308_f_4stage_breeder_2_v1",
+            "f_4stage_breeder_3": "poultry_broiler_breeder_ross308_f_4stage_breeder_3_v1",
+            "f_5stage_starter_1": "poultry_broiler_breeder_ross308_f_5stage_starter_1_v1",
+            "f_5stage_starter_2": "poultry_broiler_breeder_ross308_f_5stage_starter_2_v1",
+            "f_5stage_grower": "poultry_broiler_breeder_ross308_f_5stage_grower_v1",
+            "f_5stage_developer": "poultry_broiler_breeder_ross308_f_5stage_developer_v1",
+            "f_5stage_pre_breeder": "poultry_broiler_breeder_ross308_f_5stage_pre_breeder_v1",
+            "f_5stage_breeder_1": "poultry_broiler_breeder_ross308_f_5stage_breeder_1_v1",
+            "f_5stage_breeder_2": "poultry_broiler_breeder_ross308_f_5stage_breeder_2_v1",
+            "f_5stage_breeder_3": "poultry_broiler_breeder_ross308_f_5stage_breeder_3_v1",
+            "m_male_male_diet_after_175_days": "poultry_broiler_breeder_ross308_m_male_male_diet_after_175_days_v1"
+          }
+        },
+        "ross308ap": {
+          "phases": {
+            "f_3stage_starter": "poultry_broiler_breeder_ross308ap_f_3stage_starter_v1",
+            "f_3stage_grower": "poultry_broiler_breeder_ross308ap_f_3stage_grower_v1",
+            "f_3stage_pre_breeder": "poultry_broiler_breeder_ross308ap_f_3stage_pre_breeder_v1",
+            "f_3stage_breeder_1": "poultry_broiler_breeder_ross308ap_f_3stage_breeder_1_v1",
+            "f_3stage_breeder_2": "poultry_broiler_breeder_ross308ap_f_3stage_breeder_2_v1",
+            "f_3stage_breeder_3": "poultry_broiler_breeder_ross308ap_f_3stage_breeder_3_v1",
+            "m_male_male_diet_after_175_days": "poultry_broiler_breeder_ross308ap_m_male_male_diet_after_175_days_v1"
+          }
+        },
+        "ross308_eu": {
+          "phases": {
+            "f_4stage_starter_1": "poultry_broiler_breeder_ross308_eu_f_4stage_starter_1_v1",
+            "f_4stage_starter_2": "poultry_broiler_breeder_ross308_eu_f_4stage_starter_2_v1",
+            "f_4stage_grower": "poultry_broiler_breeder_ross308_eu_f_4stage_grower_v1",
+            "f_4stage_pre_breeder": "poultry_broiler_breeder_ross308_eu_f_4stage_pre_breeder_v1",
+            "f_4stage_breeder_1": "poultry_broiler_breeder_ross308_eu_f_4stage_breeder_1_v1",
+            "f_4stage_breeder_2": "poultry_broiler_breeder_ross308_eu_f_4stage_breeder_2_v1",
+            "f_4stage_breeder_3": "poultry_broiler_breeder_ross308_eu_f_4stage_breeder_3_v1",
+            "f_5stage_starter_1": "poultry_broiler_breeder_ross308_eu_f_5stage_starter_1_v1",
+            "f_5stage_starter_2": "poultry_broiler_breeder_ross308_eu_f_5stage_starter_2_v1",
+            "f_5stage_grower": "poultry_broiler_breeder_ross308_eu_f_5stage_grower_v1",
+            "f_5stage_developer": "poultry_broiler_breeder_ross308_eu_f_5stage_developer_v1",
+            "f_5stage_pre_breeder": "poultry_broiler_breeder_ross308_eu_f_5stage_pre_breeder_v1",
+            "f_5stage_breeder_1": "poultry_broiler_breeder_ross308_eu_f_5stage_breeder_1_v1",
+            "f_5stage_breeder_2": "poultry_broiler_breeder_ross308_eu_f_5stage_breeder_2_v1",
+            "f_5stage_breeder_3": "poultry_broiler_breeder_ross308_eu_f_5stage_breeder_3_v1",
+            "m_male_male_diet_after_175_days": "poultry_broiler_breeder_ross308_eu_m_male_male_diet_after_175_days_v1"
+          }
+        },
+        "ross708": {
+          "phases": {
+            "f_2stage_starter": "poultry_broiler_breeder_ross708_f_2stage_starter_v1",
+            "f_2stage_grower": "poultry_broiler_breeder_ross708_f_2stage_grower_v1",
+            "f_2stage_breeder_1": "poultry_broiler_breeder_ross708_f_2stage_breeder_1_v1",
+            "f_2stage_breeder_2": "poultry_broiler_breeder_ross708_f_2stage_breeder_2_v1",
+            "f_3stage_starter": "poultry_broiler_breeder_ross708_f_3stage_starter_v1",
+            "f_3stage_grower": "poultry_broiler_breeder_ross708_f_3stage_grower_v1",
+            "f_3stage_pre_breeder": "poultry_broiler_breeder_ross708_f_3stage_pre_breeder_v1",
+            "f_3stage_breeder_1": "poultry_broiler_breeder_ross708_f_3stage_breeder_1_v1",
+            "f_3stage_breeder_2": "poultry_broiler_breeder_ross708_f_3stage_breeder_2_v1",
+            "f_3stage_breeder_3": "poultry_broiler_breeder_ross708_f_3stage_breeder_3_v1",
+            "m_male_male_diet_after_175_days": "poultry_broiler_breeder_ross708_m_male_male_diet_after_175_days_v1"
+          }
+        }
+      }
+    }
+  }
+}

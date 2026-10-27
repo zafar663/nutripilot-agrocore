@@ -1,0 +1,1093 @@
+{
+  "_LOCK": {
+    "version": "v1",
+    "mode": "option_b_requirements_library",
+    "note": "Broiler meat requirements library (Option-B). Cobb500 seeds generic. Cobb700 populated from Cobb700 Broiler Supplement (Recommended Nutrient Levels). Cobb800 populated from Cobb800 Broiler Performance & Nutrition (2-11-2026) using Starter, avg(Grower,Grower2), Finisher1, and Finisher2 as Withdrawal; Na/Cl/K ranges from Electrolyte Balance section. Ross 308 populated from Ross Broiler Nutrition Specifications 2022 (EN), Table 2 (2.0–3.5 kg); index maps Ross withdrawal -> finisher per your decision. AA/IR inherit generic (supplements lack full numeric nutrient table for our key set)."
+  },
+  "profiles": {
+    "poultry_broiler_generic_starter_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3000,
+        "cp_pct": 22.0,
+        "ca_pct": 0.95,
+        "avp_pct": 0.47,
+        "na_pct": {
+          "min": 0.16,
+          "target": 0.195,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.16,
+          "target": 0.23,
+          "max": 0.3
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.775,
+          "max": 0.95
+        },
+        "sid_lys_pct": 1.26,
+        "sid_met_pct": 0.58,
+        "sid_metcys_pct": 0.92,
+        "sid_thr_pct": 0.81,
+        "sid_trp_pct": 0.2,
+        "sid_arg_pct": 1.32,
+        "sid_val_pct": 0.91,
+        "sid_ile_pct": 0.81,
+        "sid_leu_pct": 1.41
+      },
+      "doc_meta": {
+        "source_pdf": "2022-Cobb500-Broiler-Performance-Nutrition-Supplement.pdf",
+        "table": "Recommended Nutrient Levels",
+        "basis_note": "Generic seeded from Cobb 500 recommended nutrient levels (Starter). Na/Cl/K are ranges in the document."
+      }
+    },
+    "poultry_broiler_generic_grower_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3075,
+        "cp_pct": 19.0,
+        "ca_pct": 0.8,
+        "avp_pct": 0.395,
+        "na_pct": {
+          "min": 0.16,
+          "target": 0.195,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.16,
+          "target": 0.23,
+          "max": 0.3
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.775,
+          "max": 0.95
+        },
+        "sid_lys_pct": 1.075,
+        "sid_met_pct": 0.475,
+        "sid_metcys_pct": 0.775,
+        "sid_thr_pct": 0.685,
+        "sid_trp_pct": 0.165,
+        "sid_arg_pct": 1.145,
+        "sid_val_pct": 0.775,
+        "sid_ile_pct": 0.695,
+        "sid_leu_pct": 1.235
+      },
+      "doc_meta": {
+        "source_pdf": "2022-Cobb500-Broiler-Performance-Nutrition-Supplement.pdf",
+        "table": "Recommended Nutrient Levels",
+        "basis_note": "Grower is avg(Grower1,Grower2) from Cobb 500. Na/Cl/K are ranges in the document."
+      }
+    },
+    "poultry_broiler_generic_finisher_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3150,
+        "cp_pct": 17.0,
+        "ca_pct": 0.68,
+        "avp_pct": 0.33,
+        "na_pct": {
+          "min": 0.16,
+          "target": 0.195,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.16,
+          "target": 0.23,
+          "max": 0.3
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.775,
+          "max": 0.95
+        },
+        "sid_lys_pct": 0.91,
+        "sid_met_pct": 0.4,
+        "sid_metcys_pct": 0.66,
+        "sid_thr_pct": 0.58,
+        "sid_trp_pct": 0.14,
+        "sid_arg_pct": 0.99,
+        "sid_val_pct": 0.66,
+        "sid_ile_pct": 0.59,
+        "sid_leu_pct": 1.08
+      },
+      "doc_meta": {
+        "source_pdf": "2022-Cobb500-Broiler-Performance-Nutrition-Supplement.pdf",
+        "table": "Recommended Nutrient Levels",
+        "basis_note": "Generic finisher seeded from Cobb 500 Finisher1. Na/Cl/K are ranges in the document."
+      }
+    },
+    "poultry_broiler_generic_withdrawal_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3200,
+        "cp_pct": 16.0,
+        "ca_pct": 0.63,
+        "avp_pct": 0.31,
+        "na_pct": {
+          "min": 0.16,
+          "target": 0.195,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.16,
+          "target": 0.23,
+          "max": 0.3
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.775,
+          "max": 0.95
+        },
+        "sid_lys_pct": 0.81,
+        "sid_met_pct": 0.36,
+        "sid_metcys_pct": 0.6,
+        "sid_thr_pct": 0.52,
+        "sid_trp_pct": 0.12,
+        "sid_arg_pct": 0.89,
+        "sid_val_pct": 0.6,
+        "sid_ile_pct": 0.53,
+        "sid_leu_pct": 0.98
+      },
+      "doc_meta": {
+        "source_pdf": "2022-Cobb500-Broiler-Performance-Nutrition-Supplement.pdf",
+        "table": "Recommended Nutrient Levels",
+        "basis_note": "Generic withdrawal seeded from Cobb 500 Finisher2. Na/Cl/K are ranges in the document."
+      }
+    },
+    "poultry_broiler_cobb500_starter_v1": {
+      "inherits": "poultry_broiler_generic_starter_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 2925,
+        "cp_pct": 22.0,
+        "ca_pct": 0.96,
+        "avp_pct": 0.48,
+        "na_pct": 0.22,
+        "cl_pct": 0.22,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.44,
+        "sid_lys_pct": 1.32,
+        "total_met": 0.56,
+        "sid_met_pct": 0.51,
+        "total_metcys": 1.04,
+        "sid_metcys_pct": 0.95,
+        "total_thr": 0.94,
+        "sid_thr_pct": 0.86,
+        "total_trp": 0.23,
+        "sid_trp_pct": 0.21,
+        "total_arg": 1.46,
+        "sid_arg_pct": 1.35,
+        "total_val": 1.02,
+        "sid_val_pct": 0.93,
+        "total_ile": 0.85,
+        "sid_ile_pct": 0.76,
+        "total_leu": 1.5,
+        "sid_leu_pct": 1.38
+      },
+      "doc_meta": {
+        "source": "Cobb 500 Performance & Nutrition Supplement 2022 - Cobb-Vantress",
+        "basis_note": "Starter 0-10 days"
+      }
+    },
+    "poultry_broiler_cobb500_grower_v1": {
+      "inherits": "poultry_broiler_generic_grower_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3000,
+        "cp_pct": 20.0,
+        "ca_pct": 0.85,
+        "avp_pct": 0.42,
+        "na_pct": 0.2,
+        "cl_pct": 0.2,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.3,
+        "sid_lys_pct": 1.19,
+        "total_met": 0.51,
+        "sid_met_pct": 0.46,
+        "total_metcys": 0.95,
+        "sid_metcys_pct": 0.87,
+        "total_thr": 0.85,
+        "sid_thr_pct": 0.78,
+        "total_trp": 0.21,
+        "sid_trp_pct": 0.19,
+        "total_arg": 1.32,
+        "sid_arg_pct": 1.22,
+        "total_val": 0.92,
+        "sid_val_pct": 0.84,
+        "total_ile": 0.77,
+        "sid_ile_pct": 0.69,
+        "total_leu": 1.36,
+        "sid_leu_pct": 1.25
+      },
+      "doc_meta": {
+        "source": "Cobb 500 Performance & Nutrition Supplement 2022 - Cobb-Vantress",
+        "basis_note": "Grower 11-24 days"
+      }
+    },
+    "poultry_broiler_cobb500_finisher_v1": {
+      "inherits": "poultry_broiler_generic_finisher_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3075,
+        "cp_pct": 18.0,
+        "ca_pct": 0.75,
+        "avp_pct": 0.37,
+        "na_pct": 0.19,
+        "cl_pct": 0.19,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.12,
+        "sid_lys_pct": 1.02,
+        "total_met": 0.44,
+        "sid_met_pct": 0.4,
+        "total_metcys": 0.82,
+        "sid_metcys_pct": 0.75,
+        "total_thr": 0.74,
+        "sid_thr_pct": 0.68,
+        "total_trp": 0.18,
+        "sid_trp_pct": 0.16,
+        "total_arg": 1.14,
+        "sid_arg_pct": 1.05,
+        "total_val": 0.8,
+        "sid_val_pct": 0.73,
+        "total_ile": 0.67,
+        "sid_ile_pct": 0.6,
+        "total_leu": 1.18,
+        "sid_leu_pct": 1.08
+      },
+      "doc_meta": {
+        "source": "Cobb 500 Performance & Nutrition Supplement 2022 - Cobb-Vantress",
+        "basis_note": "Finisher 25-38 days"
+      }
+    },
+    "poultry_broiler_cobb500_withdrawal_v1": {
+      "inherits": "poultry_broiler_generic_withdrawal_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3100,
+        "cp_pct": 17.0,
+        "ca_pct": 0.72,
+        "avp_pct": 0.35,
+        "na_pct": 0.18,
+        "cl_pct": 0.18,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.05,
+        "sid_lys_pct": 0.96,
+        "total_met": 0.41,
+        "sid_met_pct": 0.37,
+        "total_metcys": 0.77,
+        "sid_metcys_pct": 0.7,
+        "total_thr": 0.69,
+        "sid_thr_pct": 0.63,
+        "total_trp": 0.17,
+        "sid_trp_pct": 0.15,
+        "total_arg": 1.07,
+        "sid_arg_pct": 0.99,
+        "total_val": 0.75,
+        "sid_val_pct": 0.68,
+        "total_ile": 0.63,
+        "sid_ile_pct": 0.56,
+        "total_leu": 1.1,
+        "sid_leu_pct": 1.01
+      },
+      "doc_meta": {
+        "source": "Cobb 500 Performance & Nutrition Supplement 2022 - Cobb-Vantress",
+        "basis_note": "Withdrawal 39+ days"
+      }
+    },
+    "poultry_broiler_cobb700_starter_v1": {
+      "inherits": "poultry_broiler_generic_starter_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 2977,
+        "cp_pct": 21.0,
+        "ca_pct": 0.95,
+        "avp_pct": 0.48,
+        "sid_lys_pct": 1.26,
+        "sid_met_pct": 0.49,
+        "sid_metcys_pct": 0.94,
+        "sid_thr_pct": 0.86,
+        "sid_trp_pct": 0.21,
+        "sid_arg_pct": 1.32,
+        "sid_val_pct": 0.93,
+        "sid_ile_pct": 0.83,
+        "sid_leu_pct": 1.42,
+        "na_pct": {
+          "min": 0.15,
+          "target": 0.195,
+          "max": 0.24
+        },
+        "cl_pct": {
+          "min": 0.15,
+          "target": 0.215,
+          "max": 0.28
+        },
+        "k_pct": 0.6
+      },
+      "doc_meta": {
+        "source_pdf": "Cobb700_Broiler_Supplement.pdf",
+        "table": "Recommended Nutrient Levels (Digestible Amino Acids)",
+        "phase": "starter",
+        "basis_note": "Starter column (0–14 d). Digestible AA treated as SID keys. Na/Cl are ranges; K listed as 0.60."
+      }
+    },
+    "poultry_broiler_cobb700_grower_v1": {
+      "inherits": "poultry_broiler_generic_grower_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3032,
+        "cp_pct": 20.0,
+        "ca_pct": 0.88,
+        "avp_pct": 0.43,
+        "sid_lys_pct": 1.16,
+        "sid_met_pct": 0.46,
+        "sid_metcys_pct": 0.87,
+        "sid_thr_pct": 0.79,
+        "sid_trp_pct": 0.19,
+        "sid_arg_pct": 1.22,
+        "sid_val_pct": 0.87,
+        "sid_ile_pct": 0.78,
+        "sid_leu_pct": 1.33,
+        "na_pct": {
+          "min": 0.15,
+          "target": 0.195,
+          "max": 0.24
+        },
+        "cl_pct": {
+          "min": 0.15,
+          "target": 0.215,
+          "max": 0.28
+        },
+        "k_pct": 0.6
+      },
+      "doc_meta": {
+        "source_pdf": "Cobb700_Broiler_Supplement.pdf",
+        "table": "Recommended Nutrient Levels (Digestible Amino Acids)",
+        "phase": "grower",
+        "basis_note": "Grower column (15–27 d). Digestible AA treated as SID keys. Na/Cl are ranges; K listed as 0.60."
+      }
+    },
+    "poultry_broiler_cobb700_finisher_v1": {
+      "inherits": "poultry_broiler_generic_finisher_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3164,
+        "cp_pct": 18.0,
+        "ca_pct": 0.65,
+        "avp_pct": 0.33,
+        "sid_lys_pct": 1.0,
+        "sid_met_pct": 0.42,
+        "sid_metcys_pct": 0.78,
+        "sid_thr_pct": 0.69,
+        "sid_trp_pct": 0.17,
+        "sid_arg_pct": 1.05,
+        "sid_val_pct": 0.78,
+        "sid_ile_pct": 0.68,
+        "sid_leu_pct": 1.18,
+        "na_pct": {
+          "min": 0.15,
+          "target": 0.195,
+          "max": 0.24
+        },
+        "cl_pct": {
+          "min": 0.15,
+          "target": 0.215,
+          "max": 0.28
+        },
+        "k_pct": 0.6
+      },
+      "doc_meta": {
+        "source_pdf": "Cobb700_Broiler_Supplement.pdf",
+        "table": "Recommended Nutrient Levels (Digestible Amino Acids)",
+        "phase": "finisher",
+        "basis_note": "Finisher2 column (39–51d) used as Finisher for 5-phase mapping."
+      }
+    },
+    "poultry_broiler_cobb700_withdrawal_v1": {
+      "inherits": "poultry_broiler_generic_withdrawal_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3197,
+        "cp_pct": 17.0,
+        "ca_pct": 0.63,
+        "avp_pct": 0.35,
+        "sid_lys_pct": 0.94,
+        "sid_met_pct": 0.4,
+        "sid_metcys_pct": 0.74,
+        "sid_thr_pct": 0.65,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 0.99,
+        "sid_val_pct": 0.73,
+        "sid_ile_pct": 0.64,
+        "sid_leu_pct": 1.11,
+        "na_pct": {
+          "min": 0.15,
+          "target": 0.195,
+          "max": 0.24
+        },
+        "cl_pct": {
+          "min": 0.15,
+          "target": 0.215,
+          "max": 0.28
+        },
+        "k_pct": 0.6
+      },
+      "doc_meta": {
+        "source_pdf": "Cobb700_Broiler_Supplement.pdf",
+        "table": "Recommended Nutrient Levels (Digestible Amino Acids)",
+        "phase": "withdrawal",
+        "basis_note": "Finisher3 column (52–market) used as Withdrawal for 5-phase mapping. Guide note: withdrawal feed may use same finisher specification."
+      }
+    },
+    "poultry_broiler_cobb800_starter_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3010,
+        "cp_pct": 22.0,
+        "ca_pct": 0.96,
+        "avp_pct": 0.58,
+        "sid_lys_pct": 1.32,
+        "sid_met_pct": 0.55,
+        "sid_metcys_pct": 1.0,
+        "sid_thr_pct": 0.88,
+        "sid_trp_pct": 0.21,
+        "sid_arg_pct": 1.43,
+        "sid_val_pct": 1.0,
+        "sid_ile_pct": 0.88,
+        "sid_leu_pct": 1.45,
+        "na_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.18,
+          "target": 0.24,
+          "max": 0.3
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.775,
+          "max": 0.95
+        }
+      },
+      "doc_meta": {
+        "source_pdf": "Cobb800_Broiler_Performance-and-Nutrition-2-11-2026.pdf",
+        "table": "Nutrition Recommendations",
+        "phase": "starter",
+        "basis_note": "Cobb 800 Nutrition Recommendations. Electrolytes are ranges."
+      }
+    },
+    "poultry_broiler_cobb800_grower_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3076.0,
+        "cp_pct": 18.5,
+        "ca_pct": 0.77,
+        "avp_pct": 0.385,
+        "sid_lys_pct": 1.165,
+        "sid_met_pct": 0.49,
+        "sid_metcys_pct": 0.905,
+        "sid_thr_pct": 0.78,
+        "sid_trp_pct": 0.19,
+        "sid_arg_pct": 1.275,
+        "sid_val_pct": 0.905,
+        "sid_ile_pct": 0.7849999999999999,
+        "sid_leu_pct": 1.28,
+        "na_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.18,
+          "target": 0.24,
+          "max": 0.3
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.775,
+          "max": 0.95
+        }
+      },
+      "doc_meta": {
+        "source_pdf": "Cobb800_Broiler_Performance-and-Nutrition-2-11-2026.pdf",
+        "table": "Nutrition Recommendations",
+        "phase": "grower",
+        "basis_note": "Grower profile is avg(Grower,Grower2) from Cobb 800 Nutrition Recommendations (CP 19 and 18; AMEn 3054 and 3098). Electrolytes are ranges."
+      }
+    },
+    "poultry_broiler_cobb800_finisher_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3119,
+        "cp_pct": 17.0,
+        "ca_pct": 0.68,
+        "avp_pct": 0.34,
+        "sid_lys_pct": 0.98,
+        "sid_met_pct": 0.42,
+        "sid_metcys_pct": 0.77,
+        "sid_thr_pct": 0.66,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 1.09,
+        "sid_val_pct": 0.77,
+        "sid_ile_pct": 0.68,
+        "sid_leu_pct": 1.08,
+        "na_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.18,
+          "target": 0.24,
+          "max": 0.3
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.775,
+          "max": 0.95
+        }
+      },
+      "doc_meta": {
+        "source_pdf": "Cobb800_Broiler_Performance-and-Nutrition-2-11-2026.pdf",
+        "table": "Nutrition Recommendations",
+        "phase": "finisher",
+        "basis_note": "Cobb 800 Nutrition Recommendations. Electrolytes are ranges."
+      }
+    },
+    "poultry_broiler_cobb800_withdrawal_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3130,
+        "cp_pct": 16.0,
+        "ca_pct": 0.64,
+        "avp_pct": 0.32,
+        "sid_lys_pct": 0.84,
+        "sid_met_pct": 0.37,
+        "sid_metcys_pct": 0.66,
+        "sid_thr_pct": 0.56,
+        "sid_trp_pct": 0.13,
+        "sid_arg_pct": 0.94,
+        "sid_val_pct": 0.67,
+        "sid_ile_pct": 0.58,
+        "sid_leu_pct": 0.92,
+        "na_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.18,
+          "target": 0.24,
+          "max": 0.3
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.775,
+          "max": 0.95
+        }
+      },
+      "doc_meta": {
+        "source_pdf": "Cobb800_Broiler_Performance-and-Nutrition-2-11-2026.pdf",
+        "table": "Nutrition Recommendations",
+        "phase": "withdrawal",
+        "basis_note": "Cobb 800 Nutrition Recommendations. Electrolytes are ranges."
+      }
+    },
+    "poultry_broiler_hubbard_starter_v1": {
+      "inherits": "poultry_broiler_generic_starter_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3000,
+        "cp_pct": 22.8,
+        "ca_pct": 1.005,
+        "avp_pct": 0.49,
+        "na_pct": 0.195,
+        "cl_pct": 0.2,
+        "sid_lys_pct": 1.27,
+        "sid_met_pct": 0.51,
+        "sid_metcys_pct": 0.95,
+        "sid_thr_pct": 0.83,
+        "sid_trp_pct": 0.2,
+        "sid_arg_pct": 1.33,
+        "sid_val_pct": 0.96,
+        "sid_ile_pct": 0.83
+      },
+      "doc_meta": {
+        "source_pdf": "broiler_guide_efficiency_plus_en_imp_20220120_ld.pdf",
+        "basis_note": "Appendix 3 example diet specs (digestible AA used as SID)."
+      }
+    },
+    "poultry_broiler_hubbard_grower_v1": {
+      "inherits": "poultry_broiler_generic_grower_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3100,
+        "cp_pct": 20.8,
+        "ca_pct": 0.915,
+        "avp_pct": 0.46,
+        "na_pct": 0.18,
+        "cl_pct": 0.19,
+        "sid_lys_pct": 1.15,
+        "sid_met_pct": 0.47,
+        "sid_metcys_pct": 0.87,
+        "sid_thr_pct": 0.76,
+        "sid_trp_pct": 0.18,
+        "sid_arg_pct": 1.21,
+        "sid_val_pct": 0.88,
+        "sid_ile_pct": 0.76
+      },
+      "doc_meta": {
+        "source_pdf": "broiler_guide_efficiency_plus_en_imp_20220120_ld.pdf",
+        "basis_note": "Appendix 3 example diet specs."
+      }
+    },
+    "poultry_broiler_hubbard_finisher_v1": {
+      "inherits": "poultry_broiler_generic_finisher_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3150,
+        "cp_pct": 19.2,
+        "ca_pct": 0.81,
+        "avp_pct": 0.4,
+        "na_pct": 0.165,
+        "cl_pct": 0.19,
+        "sid_lys_pct": 1.01,
+        "sid_met_pct": 0.42,
+        "sid_metcys_pct": 0.78,
+        "sid_thr_pct": 0.68,
+        "sid_trp_pct": 0.17,
+        "sid_arg_pct": 1.08,
+        "sid_val_pct": 0.79,
+        "sid_ile_pct": 0.68
+      },
+      "doc_meta": {
+        "source_pdf": "broiler_guide_efficiency_plus_en_imp_20220120_ld.pdf",
+        "basis_note": "Appendix 3 example diet specs."
+      }
+    },
+    "poultry_broiler_hubbard_withdrawal_v1": {
+      "inherits": "poultry_broiler_generic_withdrawal_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3200,
+        "cp_pct": 18.8,
+        "ca_pct": 0.76,
+        "avp_pct": 0.375,
+        "na_pct": 0.165,
+        "cl_pct": 0.19,
+        "sid_lys_pct": 0.96,
+        "sid_met_pct": 0.41,
+        "sid_metcys_pct": 0.75,
+        "sid_thr_pct": 0.65,
+        "sid_trp_pct": 0.16,
+        "sid_arg_pct": 1.04,
+        "sid_val_pct": 0.76,
+        "sid_ile_pct": 0.65
+      },
+      "doc_meta": {
+        "source_pdf": "broiler_guide_efficiency_plus_en_imp_20220120_ld.pdf",
+        "basis_note": "Appendix 3 example diet specs; Finisher2 used as withdrawal."
+      }
+    },
+    "poultry_broiler_ross308_starter_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 2975,
+        "cp_pct": 23.0,
+        "ca_pct": 0.95,
+        "avp_pct": 0.5,
+        "na_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.75,
+          "max": 0.9
+        },
+        "sid_lys_pct": 1.32,
+        "sid_met_pct": 0.55,
+        "sid_metcys_pct": 1.0,
+        "sid_thr_pct": 0.88,
+        "sid_trp_pct": 0.21,
+        "sid_arg_pct": 1.4,
+        "sid_val_pct": 1.0,
+        "sid_ile_pct": 0.88,
+        "sid_leu_pct": 1.45
+      },
+      "doc_meta": {
+        "source_pdf": "Ross-BroilerNutritionSpecifications2022-EN.pdf",
+        "table": "Table 2",
+        "live_weight_band": "2.0–3.5 kg",
+        "age_days": "0–10",
+        "basis_note": "Ross 308 Nutrition Specifications 2022 (EN). Digestible AA treated as SID keys. Na/Cl/K are ranges in the document."
+      }
+    },
+    "poultry_broiler_ross308_grower_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3050,
+        "cp_pct": 21.5,
+        "ca_pct": 0.75,
+        "avp_pct": 0.42,
+        "na_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.75,
+          "max": 0.9
+        },
+        "sid_lys_pct": 1.18,
+        "sid_met_pct": 0.51,
+        "sid_metcys_pct": 0.92,
+        "sid_thr_pct": 0.79,
+        "sid_trp_pct": 0.19,
+        "sid_arg_pct": 1.27,
+        "sid_val_pct": 0.91,
+        "sid_ile_pct": 0.8,
+        "sid_leu_pct": 1.3
+      },
+      "doc_meta": {
+        "source_pdf": "Ross-BroilerNutritionSpecifications2022-EN.pdf",
+        "table": "Table 2",
+        "live_weight_band": "2.0–3.5 kg",
+        "age_days": "11–24",
+        "basis_note": "Ross 308. Na/Cl/K are ranges in the document."
+      }
+    },
+    "poultry_broiler_ross308_finisher_v1": {
+      "inherits": null,
+      "targets_override": {
+        "me_kcal_per_kg": 3100,
+        "cp_pct": 19.5,
+        "ca_pct": 0.65,
+        "avp_pct": 0.36,
+        "na_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "cl_pct": {
+          "min": 0.18,
+          "target": 0.205,
+          "max": 0.23
+        },
+        "k_pct": {
+          "min": 0.6,
+          "target": 0.75,
+          "max": 0.9
+        },
+        "sid_lys_pct": 1.08,
+        "sid_met_pct": 0.48,
+        "sid_metcys_pct": 0.86,
+        "sid_thr_pct": 0.72,
+        "sid_trp_pct": 0.17,
+        "sid_arg_pct": 1.17,
+        "sid_val_pct": 0.84,
+        "sid_ile_pct": 0.75,
+        "sid_leu_pct": 1.19
+      },
+      "doc_meta": {
+        "source_pdf": "Ross-BroilerNutritionSpecifications2022-EN.pdf",
+        "table": "Table 2",
+        "live_weight_band": "2.0–3.5 kg",
+        "age_days": "25–39",
+        "basis_note": "Ross 308. Na/Cl/K are ranges in the document."
+      }
+    },
+    "poultry_broiler_ross308_withdrawal_v1": {
+      "inherits": "poultry_broiler_ross308_finisher_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3175,
+        "cp_pct": 17.0,
+        "ca_pct": 0.68,
+        "avp_pct": 0.34,
+        "na_pct": 0.16,
+        "cl_pct": 0.16,
+        "linoleic_acid_pct": 1.0,
+        "total_lys": 1.05,
+        "sid_lys_pct": 0.96,
+        "total_met": 0.4,
+        "sid_met_pct": 0.36,
+        "total_metcys": 0.74,
+        "sid_metcys_pct": 0.68,
+        "total_thr": 0.7,
+        "sid_thr_pct": 0.64,
+        "total_trp": 0.17,
+        "sid_trp_pct": 0.15,
+        "total_arg": 1.07,
+        "sid_arg_pct": 0.99,
+        "total_val": 0.78,
+        "sid_val_pct": 0.71,
+        "total_ile": 0.66,
+        "sid_ile_pct": 0.59
+      },
+      "doc_meta": {
+        "source": "Aviagen Ross 308 Broiler Nutrition Supplement 2022",
+        "basis_note": "Withdrawal 39+ days"
+      }
+    },
+    "poultry_broiler_aa_starter_v1": {
+      "inherits": "poultry_broiler_generic_starter_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 2925,
+        "cp_pct": 22.0,
+        "ca_pct": 0.96,
+        "avp_pct": 0.48,
+        "na_pct": 0.22,
+        "cl_pct": 0.22,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.44,
+        "sid_lys_pct": 1.32,
+        "total_met": 0.56,
+        "sid_met_pct": 0.51,
+        "total_metcys": 1.04,
+        "sid_metcys_pct": 0.95,
+        "total_thr": 0.94,
+        "sid_thr_pct": 0.86,
+        "total_trp": 0.23,
+        "sid_trp_pct": 0.21,
+        "total_arg": 1.46,
+        "sid_arg_pct": 1.35,
+        "total_val": 1.02,
+        "sid_val_pct": 0.93,
+        "total_ile": 0.85,
+        "sid_ile_pct": 0.76
+      },
+      "doc_meta": {
+        "source": "Aviagen Arbor Acres Plus Broiler Nutrition Supplement 2022",
+        "basis_note": "Starter 0-10 days"
+      }
+    },
+    "poultry_broiler_aa_grower_v1": {
+      "inherits": "poultry_broiler_generic_grower_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3000,
+        "cp_pct": 20.0,
+        "ca_pct": 0.84,
+        "avp_pct": 0.42,
+        "na_pct": 0.2,
+        "cl_pct": 0.2,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.28,
+        "sid_lys_pct": 1.17,
+        "total_met": 0.5,
+        "sid_met_pct": 0.45,
+        "total_metcys": 0.93,
+        "sid_metcys_pct": 0.85,
+        "total_thr": 0.84,
+        "sid_thr_pct": 0.77,
+        "total_trp": 0.2,
+        "sid_trp_pct": 0.18,
+        "total_arg": 1.3,
+        "sid_arg_pct": 1.2,
+        "total_val": 0.9,
+        "sid_val_pct": 0.82,
+        "total_ile": 0.76,
+        "sid_ile_pct": 0.68
+      },
+      "doc_meta": {
+        "source": "Aviagen Arbor Acres Plus Broiler Nutrition Supplement 2022",
+        "basis_note": "Grower 11-24 days"
+      }
+    },
+    "poultry_broiler_aa_finisher_v1": {
+      "inherits": "poultry_broiler_generic_finisher_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3075,
+        "cp_pct": 18.5,
+        "ca_pct": 0.75,
+        "avp_pct": 0.37,
+        "na_pct": 0.19,
+        "cl_pct": 0.19,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.1,
+        "sid_lys_pct": 1.0,
+        "total_met": 0.43,
+        "sid_met_pct": 0.39,
+        "total_metcys": 0.8,
+        "sid_metcys_pct": 0.73,
+        "total_thr": 0.72,
+        "sid_thr_pct": 0.66,
+        "total_trp": 0.18,
+        "sid_trp_pct": 0.16,
+        "total_arg": 1.12,
+        "sid_arg_pct": 1.03,
+        "total_val": 0.78,
+        "sid_val_pct": 0.71,
+        "total_ile": 0.66,
+        "sid_ile_pct": 0.59
+      },
+      "doc_meta": {
+        "source": "Aviagen Arbor Acres Plus Broiler Nutrition Supplement 2022",
+        "basis_note": "Finisher 25-38 days"
+      }
+    },
+    "poultry_broiler_aa_withdrawal_v1": {
+      "inherits": "poultry_broiler_generic_withdrawal_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3100,
+        "cp_pct": 17.0,
+        "ca_pct": 0.68,
+        "avp_pct": 0.34,
+        "na_pct": 0.18,
+        "cl_pct": 0.18,
+        "linoleic_acid_pct": 1.0,
+        "total_lys": 1.03,
+        "sid_lys_pct": 0.94,
+        "total_met": 0.4,
+        "sid_met_pct": 0.36,
+        "total_metcys": 0.74,
+        "sid_metcys_pct": 0.68,
+        "total_thr": 0.68,
+        "sid_thr_pct": 0.62,
+        "total_trp": 0.17,
+        "sid_trp_pct": 0.15,
+        "total_arg": 1.05,
+        "sid_arg_pct": 0.97,
+        "total_val": 0.74,
+        "sid_val_pct": 0.67,
+        "total_ile": 0.63,
+        "sid_ile_pct": 0.56
+      },
+      "doc_meta": {
+        "source": "Aviagen Arbor Acres Plus Broiler Nutrition Supplement 2022",
+        "basis_note": "Withdrawal 39+ days"
+      }
+    },
+    "poultry_broiler_ir_starter_v1": {
+      "inherits": "poultry_broiler_generic_starter_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 2900,
+        "cp_pct": 22.0,
+        "ca_pct": 0.95,
+        "avp_pct": 0.47,
+        "na_pct": 0.22,
+        "cl_pct": 0.22,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.42,
+        "sid_lys_pct": 1.3,
+        "total_met": 0.55,
+        "sid_met_pct": 0.5,
+        "total_metcys": 1.02,
+        "sid_metcys_pct": 0.93,
+        "total_thr": 0.92,
+        "sid_thr_pct": 0.84,
+        "total_trp": 0.22,
+        "sid_trp_pct": 0.2,
+        "total_arg": 1.44,
+        "sid_arg_pct": 1.33,
+        "total_val": 1.0,
+        "sid_val_pct": 0.91,
+        "total_ile": 0.84,
+        "sid_ile_pct": 0.75
+      },
+      "doc_meta": {
+        "source": "Aviagen Indian River Broiler Nutrition Supplement 2022",
+        "basis_note": "Starter 0-10 days"
+      }
+    },
+    "poultry_broiler_ir_grower_v1": {
+      "inherits": "poultry_broiler_generic_grower_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 2975,
+        "cp_pct": 20.0,
+        "ca_pct": 0.83,
+        "avp_pct": 0.41,
+        "na_pct": 0.2,
+        "cl_pct": 0.2,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.26,
+        "sid_lys_pct": 1.15,
+        "total_met": 0.49,
+        "sid_met_pct": 0.44,
+        "total_metcys": 0.91,
+        "sid_metcys_pct": 0.83,
+        "total_thr": 0.82,
+        "sid_thr_pct": 0.75,
+        "total_trp": 0.2,
+        "sid_trp_pct": 0.18,
+        "total_arg": 1.28,
+        "sid_arg_pct": 1.18,
+        "total_val": 0.88,
+        "sid_val_pct": 0.8,
+        "total_ile": 0.75,
+        "sid_ile_pct": 0.67
+      },
+      "doc_meta": {
+        "source": "Aviagen Indian River Broiler Nutrition Supplement 2022",
+        "basis_note": "Grower 11-24 days"
+      }
+    },
+    "poultry_broiler_ir_finisher_v1": {
+      "inherits": "poultry_broiler_generic_finisher_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3050,
+        "cp_pct": 18.5,
+        "ca_pct": 0.73,
+        "avp_pct": 0.36,
+        "na_pct": 0.19,
+        "cl_pct": 0.19,
+        "linoleic_acid_pct": 1.25,
+        "total_lys": 1.08,
+        "sid_lys_pct": 0.98,
+        "total_met": 0.42,
+        "sid_met_pct": 0.38,
+        "total_metcys": 0.78,
+        "sid_metcys_pct": 0.71,
+        "total_thr": 0.71,
+        "sid_thr_pct": 0.65,
+        "total_trp": 0.17,
+        "sid_trp_pct": 0.15,
+        "total_arg": 1.1,
+        "sid_arg_pct": 1.01,
+        "total_val": 0.77,
+        "sid_val_pct": 0.7,
+        "total_ile": 0.65,
+        "sid_ile_pct": 0.58
+      },
+      "doc_meta": {
+        "source": "Aviagen Indian River Broiler Nutrition Supplement 2022",
+        "basis_note": "Finisher 25-38 days"
+      }
+    },
+    "poultry_broiler_ir_withdrawal_v1": {
+      "inherits": "poultry_broiler_generic_withdrawal_v1",
+      "targets_override": {
+        "me_kcal_per_kg": 3075,
+        "cp_pct": 17.0,
+        "ca_pct": 0.66,
+        "avp_pct": 0.33,
+        "na_pct": 0.18,
+        "cl_pct": 0.18,
+        "linoleic_acid_pct": 1.0,
+        "total_lys": 1.01,
+        "sid_lys_pct": 0.92,
+        "total_met": 0.39,
+        "sid_met_pct": 0.35,
+        "total_metcys": 0.72,
+        "sid_metcys_pct": 0.66,
+        "total_thr": 0.67,
+        "sid_thr_pct": 0.61,
+        "total_trp": 0.16,
+        "sid_trp_pct": 0.14,
+        "total_arg": 1.03,
+        "sid_arg_pct": 0.95,
+        "total_val": 0.72,
+        "sid_val_pct": 0.65,
+        "total_ile": 0.61,
+        "sid_ile_pct": 0.54
+      },
+      "doc_meta": {
+        "source": "Aviagen Indian River Broiler Nutrition Supplement 2022",
+        "basis_note": "Withdrawal 39+ days"
+      }
+    }
+  }
+}

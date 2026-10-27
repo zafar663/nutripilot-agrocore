@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "breed": "cobb_800",
+    "species": "poultry",
+    "production": "broiler",
+    "age_unit": "day",
+    "source": "Cobb 800 Broiler Performance Guide 2023",
+    "version": "v2025",
+    "note": "Heavy broiler strain â€” longer grow-out, higher final weight"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "age": 7,  "body_wt_g": 195,  "fcr": 0.905, "adg_g": 26.0, "feed_per_bird_g": 24,  "mortality_pct_max": 0.5 },
+    { "age": 14, "body_wt_g": 470,  "fcr": 1.120, "adg_g": 39.3, "feed_per_bird_g": 48,  "mortality_pct_max": 1.0 },
+    { "age": 21, "body_wt_g": 920,  "fcr": 1.295, "adg_g": 64.3, "feed_per_bird_g": 88,  "mortality_pct_max": 1.5 },
+    { "age": 28, "body_wt_g": 1620, "fcr": 1.465, "adg_g": 100,  "feed_per_bird_g": 150, "mortality_pct_max": 2.0 },
+    { "age": 35, "body_wt_g": 2450, "fcr": 1.640, "adg_g": 119,  "feed_per_bird_g": 210, "mortality_pct_max": 2.5 },
+    { "age": 42, "body_wt_g": 3250, "fcr": 1.810, "adg_g": 114,  "feed_per_bird_g": 265, "mortality_pct_max": 3.5 },
+    { "age": 49, "body_wt_g": 3980, "fcr": 1.960, "adg_g": 104,  "feed_per_bird_g": 290, "mortality_pct_max": 4.5 }
+  ],
+  "phases": {
+    "starter":  { "days": "1-10",  "energy_kcal": 3000 },
+    "grower":   { "days": "11-24", "energy_kcal": 3100 },
+    "finisher": { "days": "25-49", "energy_kcal": 3150 }
+  }
+}

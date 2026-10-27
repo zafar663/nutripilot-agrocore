@@ -1,228 +1,776 @@
 ﻿{
-  "_meta": {
-    "version": "v2.0",
-    "engine": "AgroCore/NutriPilot",
-    "description": "Master nutrient registry (maximum coverage): energy systems, proximate, carbohydrate/fiber fractions, fatty acids, macro/trace minerals, electrolytes, Total AA + SID AA + SID coefficients. Units canonicalized.",
-    "internal_unit_standard": "as-fed default; % for composition; kcal/kg for energy; mg/kg for trace minerals; meq/kg for DEB; coefficients unitless",
-    "created_by": "NutriPilot",
-    "locked": true
-  },
-  "nutrients": [
-    {
-      "id": "energy.me_kcal_kg",
-      "display_name": "ME",
-      "category": "energy",
-      "unit_canonical": "kcal/kg",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "protein.cp_pct",
-      "display_name": "CP",
-      "category": "protein",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_lys_pct",
-      "display_name": "SID Lys",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_met_pct",
-      "display_name": "SID Met",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_met_cys_pct",
-      "display_name": "SID Met+Cys",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_thr_pct",
-      "display_name": "SID Thr",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_trp_pct",
-      "display_name": "SID Trp",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_arg_pct",
-      "display_name": "SID Arg",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_ile_pct",
-      "display_name": "SID Ile",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_leu_pct",
-      "display_name": "SID Leu",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "aa.sid_val_pct",
-      "display_name": "SID Val",
-      "category": "aa_sid",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "min.ca_pct",
-      "display_name": "Ca",
-      "category": "min_macro",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "min.p_avail_pct",
-      "display_name": "Available P",
-      "category": "min_macro",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "min.na_pct",
-      "display_name": "Na",
-      "category": "min_macro",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "min.k_pct",
-      "display_name": "K",
-      "category": "min_macro",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "min.cl_pct",
-      "display_name": "Cl",
-      "category": "min_macro",
-      "unit_canonical": "%",
-      "basis": "as_fed",
-      "derived": false
-    },
-    {
-      "id": "elec.deb_meq_kg",
-      "display_name": "DEB",
-      "category": "electrolytes",
-      "unit_canonical": "meq/kg",
-      "basis": "as_fed",
-      "derived": true
-    },
-
-    { "id": "prox.dm_pct", "display_name": "Dry Matter", "category": "proximate", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "prox.moisture_pct", "display_name": "Moisture", "category": "proximate", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "prox.om_pct", "display_name": "Organic Matter", "category": "proximate", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "prox.ash_pct", "display_name": "Ash", "category": "proximate", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "prox.ee_pct", "display_name": "Ether Extract", "category": "proximate", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "prox.cf_pct", "display_name": "Crude Fiber", "category": "proximate", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "carb.starch_pct", "display_name": "Starch", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "carb.sugars_pct", "display_name": "Sugars", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "carb.nfe_pct", "display_name": "NFE", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-
-    { "id": "fiber.ndf_pct", "display_name": "NDF", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fiber.adf_pct", "display_name": "ADF", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fiber.lignin_pct", "display_name": "Lignin", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fiber.nsp_total_pct", "display_name": "NSP Total", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fiber.nsp_sol_pct", "display_name": "NSP Soluble", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fiber.nsp_insol_pct", "display_name": "NSP Insoluble", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fiber.arabinoxylans_pct", "display_name": "Arabinoxylans", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fiber.beta_glucans_pct", "display_name": "Beta-glucans", "category": "carb_fiber", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-
-    { "id": "energy.ge_kcal_kg", "display_name": "Gross Energy", "category": "energy", "unit_canonical": "kcal/kg", "basis": "as_fed", "derived": false },
-    { "id": "energy.de_kcal_kg", "display_name": "DE", "category": "energy", "unit_canonical": "kcal/kg", "basis": "as_fed", "derived": false },
-    { "id": "energy.me_swine_kcal_kg", "display_name": "ME (Swine)", "category": "energy", "unit_canonical": "kcal/kg", "basis": "as_fed", "derived": false },
-    { "id": "energy.ne_kcal_kg", "display_name": "NE", "category": "energy", "unit_canonical": "kcal/kg", "basis": "as_fed", "derived": false },
-    { "id": "energy.ame_kcal_kg", "display_name": "AME", "category": "energy", "unit_canonical": "kcal/kg", "basis": "as_fed", "derived": false },
-    { "id": "energy.amen_kcal_kg", "display_name": "AMEn", "category": "energy", "unit_canonical": "kcal/kg", "basis": "as_fed", "derived": false },
-    { "id": "energy.me_hens_kcal_kg", "display_name": "ME (Hens)", "category": "energy", "unit_canonical": "kcal/kg", "basis": "as_fed", "derived": false },
-
-    { "id": "fat.linoleic_pct", "display_name": "Linoleic", "category": "fatty_acids", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fat.linolenic_pct", "display_name": "Linolenic", "category": "fatty_acids", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fat.oleic_pct", "display_name": "Oleic", "category": "fatty_acids", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fat.sfa_pct", "display_name": "SFA", "category": "fatty_acids", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "fat.ufa_pct", "display_name": "UFA", "category": "fatty_acids", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-
-    { "id": "min.p_total_pct", "display_name": "Total P", "category": "min_macro", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "min.p_phytate_pct", "display_name": "Phytate P", "category": "min_macro", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "min.mg_pct", "display_name": "Mg", "category": "min_macro", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "min.s_pct", "display_name": "S", "category": "min_macro", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "min.npp_pct", "display_name": "Non-phytate P", "category": "min_macro", "unit_canonical": "%", "basis": "as_fed", "derived": true },
-
-    { "id": "trace.mn_mg_kg", "display_name": "Mn", "category": "min_trace", "unit_canonical": "mg/kg", "basis": "as_fed", "derived": false },
-    { "id": "trace.fe_mg_kg", "display_name": "Fe", "category": "min_trace", "unit_canonical": "mg/kg", "basis": "as_fed", "derived": false },
-    { "id": "trace.cu_mg_kg", "display_name": "Cu", "category": "min_trace", "unit_canonical": "mg/kg", "basis": "as_fed", "derived": false },
-    { "id": "trace.zn_mg_kg", "display_name": "Zn", "category": "min_trace", "unit_canonical": "mg/kg", "basis": "as_fed", "derived": false },
-    { "id": "trace.se_mg_kg", "display_name": "Se", "category": "min_trace", "unit_canonical": "mg/kg", "basis": "as_fed", "derived": false },
-    { "id": "trace.i_mg_kg", "display_name": "I", "category": "min_trace", "unit_canonical": "mg/kg", "basis": "as_fed", "derived": false },
-
-    { "id": "aa.total_lys_pct", "display_name": "Total Lys", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_met_pct", "display_name": "Total Met", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_cys_pct", "display_name": "Total Cys", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_met_cys_pct", "display_name": "Total Met+Cys", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_thr_pct", "display_name": "Total Thr", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_trp_pct", "display_name": "Total Trp", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_arg_pct", "display_name": "Total Arg", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_ile_pct", "display_name": "Total Ile", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_leu_pct", "display_name": "Total Leu", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_val_pct", "display_name": "Total Val", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_his_pct", "display_name": "Total His", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_phe_pct", "display_name": "Total Phe", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_tyr_pct", "display_name": "Total Tyr", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_phe_tyr_pct", "display_name": "Total Phe+Tyr", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_gly_pct", "display_name": "Total Gly", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_ser_pct", "display_name": "Total Ser", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_ala_pct", "display_name": "Total Ala", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_pro_pct", "display_name": "Total Pro", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_asp_pct", "display_name": "Total Asp", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-    { "id": "aa.total_glu_pct", "display_name": "Total Glu", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-
-    { "id": "aa.total_gly_ser_pct", "display_name": "Total Gly+Ser", "category": "aa_total", "unit_canonical": "%", "basis": "as_fed", "derived": false },
-
-    { "id": "digcoef.aa_sid_lys", "display_name": "SID coef Lys", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_met", "display_name": "SID coef Met", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_met_cys", "display_name": "SID coef Met+Cys", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_thr", "display_name": "SID coef Thr", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_trp", "display_name": "SID coef Trp", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_arg", "display_name": "SID coef Arg", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_ile", "display_name": "SID coef Ile", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_val", "display_name": "SID coef Val", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_leu", "display_name": "SID coef Leu", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false },
-    { "id": "digcoef.aa_sid_his", "display_name": "SID coef His", "category": "digestibility", "unit_canonical": "coef", "basis": "as_fed", "derived": false }
-  ]
+    "_meta":  {
+                  "version":  "v2.0",
+                  "engine":  "AgroCore/NutriPilot",
+                  "description":  "Master nutrient registry (maximum coverage): energy systems, proximate, carbohydrate/fiber fractions, fatty acids, macro/trace minerals, electrolytes, Total AA + SID AA + SID coefficients. Units canonicalized.",
+                  "internal_unit_standard":  "as-fed default; % for composition; kcal/kg for energy; mg/kg for trace minerals; meq/kg for DEB; coefficients unitless",
+                  "created_by":  "NutriPilot",
+                  "locked":  true
+              },
+    "nutrients":  [
+                      {
+                          "id":  "energy.me_kcal_kg",
+                          "display_name":  "ME",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "protein.cp_pct",
+                          "display_name":  "CP",
+                          "category":  "protein",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_lys_pct",
+                          "display_name":  "SID Lys",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_met_pct",
+                          "display_name":  "SID Met",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_met_cys_pct",
+                          "display_name":  "SID Met+Cys",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_thr_pct",
+                          "display_name":  "SID Thr",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_trp_pct",
+                          "display_name":  "SID Trp",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_arg_pct",
+                          "display_name":  "SID Arg",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_ile_pct",
+                          "display_name":  "SID Ile",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_leu_pct",
+                          "display_name":  "SID Leu",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.sid_val_pct",
+                          "display_name":  "SID Val",
+                          "category":  "aa_sid",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.ca_pct",
+                          "display_name":  "Ca",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.p_avail_pct",
+                          "display_name":  "Available P",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.na_pct",
+                          "display_name":  "Na",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.k_pct",
+                          "display_name":  "K",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.cl_pct",
+                          "display_name":  "Cl",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "elec.deb_meq_kg",
+                          "display_name":  "DEB",
+                          "category":  "electrolytes",
+                          "unit_canonical":  "meq/kg",
+                          "basis":  "as_fed",
+                          "derived":  true
+                      },
+                      {
+                          "id":  "prox.dm_pct",
+                          "display_name":  "Dry Matter",
+                          "category":  "proximate",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "prox.moisture_pct",
+                          "display_name":  "Moisture",
+                          "category":  "proximate",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "prox.om_pct",
+                          "display_name":  "Organic Matter",
+                          "category":  "proximate",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "prox.ash_pct",
+                          "display_name":  "Ash",
+                          "category":  "proximate",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "prox.ee_pct",
+                          "display_name":  "Ether Extract",
+                          "category":  "proximate",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "prox.cf_pct",
+                          "display_name":  "Crude Fiber",
+                          "category":  "proximate",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "carb.starch_pct",
+                          "display_name":  "Starch",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "carb.sugars_pct",
+                          "display_name":  "Sugars",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "carb.nfe_pct",
+                          "display_name":  "NFE",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fiber.ndf_pct",
+                          "display_name":  "NDF",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fiber.adf_pct",
+                          "display_name":  "ADF",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fiber.lignin_pct",
+                          "display_name":  "Lignin",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fiber.nsp_total_pct",
+                          "display_name":  "NSP Total",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fiber.nsp_sol_pct",
+                          "display_name":  "NSP Soluble",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fiber.nsp_insol_pct",
+                          "display_name":  "NSP Insoluble",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fiber.arabinoxylans_pct",
+                          "display_name":  "Arabinoxylans",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fiber.beta_glucans_pct",
+                          "display_name":  "Beta-glucans",
+                          "category":  "carb_fiber",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "energy.ge_kcal_kg",
+                          "display_name":  "Gross Energy",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "energy.de_kcal_kg",
+                          "display_name":  "DE",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "energy.me_swine_kcal_kg",
+                          "display_name":  "ME (Swine)",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "energy.ne_kcal_kg",
+                          "display_name":  "NE",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "energy.ame_kcal_kg",
+                          "display_name":  "AME",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "energy.amen_kcal_kg",
+                          "display_name":  "AMEn",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "energy.me_hens_kcal_kg",
+                          "display_name":  "ME (Hens)",
+                          "category":  "energy",
+                          "unit_canonical":  "kcal/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fat.linoleic_pct",
+                          "display_name":  "Linoleic",
+                          "category":  "fatty_acids",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fat.linolenic_pct",
+                          "display_name":  "Linolenic",
+                          "category":  "fatty_acids",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fat.oleic_pct",
+                          "display_name":  "Oleic",
+                          "category":  "fatty_acids",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fat.sfa_pct",
+                          "display_name":  "SFA",
+                          "category":  "fatty_acids",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "fat.ufa_pct",
+                          "display_name":  "UFA",
+                          "category":  "fatty_acids",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.p_total_pct",
+                          "display_name":  "Total P",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.p_phytate_pct",
+                          "display_name":  "Phytate P",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.mg_pct",
+                          "display_name":  "Mg",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.s_pct",
+                          "display_name":  "S",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "min.npp_pct",
+                          "display_name":  "Non-phytate P",
+                          "category":  "min_macro",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  true
+                      },
+                      {
+                          "id":  "trace.mn_mg_kg",
+                          "display_name":  "Mn",
+                          "category":  "min_trace",
+                          "unit_canonical":  "mg/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "trace.fe_mg_kg",
+                          "display_name":  "Fe",
+                          "category":  "min_trace",
+                          "unit_canonical":  "mg/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "trace.cu_mg_kg",
+                          "display_name":  "Cu",
+                          "category":  "min_trace",
+                          "unit_canonical":  "mg/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "trace.zn_mg_kg",
+                          "display_name":  "Zn",
+                          "category":  "min_trace",
+                          "unit_canonical":  "mg/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "trace.se_mg_kg",
+                          "display_name":  "Se",
+                          "category":  "min_trace",
+                          "unit_canonical":  "mg/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "trace.i_mg_kg",
+                          "display_name":  "I",
+                          "category":  "min_trace",
+                          "unit_canonical":  "mg/kg",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_lys_pct",
+                          "display_name":  "Total Lys",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_met_pct",
+                          "display_name":  "Total Met",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_cys_pct",
+                          "display_name":  "Total Cys",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_met_cys_pct",
+                          "display_name":  "Total Met+Cys",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_thr_pct",
+                          "display_name":  "Total Thr",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_trp_pct",
+                          "display_name":  "Total Trp",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_arg_pct",
+                          "display_name":  "Total Arg",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_ile_pct",
+                          "display_name":  "Total Ile",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_leu_pct",
+                          "display_name":  "Total Leu",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_val_pct",
+                          "display_name":  "Total Val",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_his_pct",
+                          "display_name":  "Total His",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_phe_pct",
+                          "display_name":  "Total Phe",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_tyr_pct",
+                          "display_name":  "Total Tyr",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_phe_tyr_pct",
+                          "display_name":  "Total Phe+Tyr",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_gly_pct",
+                          "display_name":  "Total Gly",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_ser_pct",
+                          "display_name":  "Total Ser",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_ala_pct",
+                          "display_name":  "Total Ala",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_pro_pct",
+                          "display_name":  "Total Pro",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_asp_pct",
+                          "display_name":  "Total Asp",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_glu_pct",
+                          "display_name":  "Total Glu",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "aa.total_gly_ser_pct",
+                          "display_name":  "Total Gly+Ser",
+                          "category":  "aa_total",
+                          "unit_canonical":  "%",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_lys",
+                          "display_name":  "SID coef Lys",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_met",
+                          "display_name":  "SID coef Met",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_met_cys",
+                          "display_name":  "SID coef Met+Cys",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_thr",
+                          "display_name":  "SID coef Thr",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_trp",
+                          "display_name":  "SID coef Trp",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_arg",
+                          "display_name":  "SID coef Arg",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_ile",
+                          "display_name":  "SID coef Ile",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_val",
+                          "display_name":  "SID coef Val",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_leu",
+                          "display_name":  "SID coef Leu",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "id":  "digcoef.aa_sid_his",
+                          "display_name":  "SID coef His",
+                          "category":  "digestibility",
+                          "unit_canonical":  "coef",
+                          "basis":  "as_fed",
+                          "derived":  false
+                      },
+                      {
+                          "key":  "total_lys"
+                      },
+                      {
+                          "key":  "total_met"
+                      },
+                      {
+                          "key":  "total_cys"
+                      },
+                      {
+                          "key":  "total_metcys"
+                      },
+                      {
+                          "key":  "total_thr"
+                      },
+                      {
+                          "key":  "total_trp"
+                      },
+                      {
+                          "key":  "total_arg"
+                      },
+                      {
+                          "key":  "total_val"
+                      },
+                      {
+                          "key":  "total_ile"
+                      },
+                      {
+                          "key":  "total_leu"
+                      },
+                      {
+                          "key":  "sid_lys"
+                      },
+                      {
+                          "key":  "sid_met"
+                      },
+                      {
+                          "key":  "sid_cys"
+                      },
+                      {
+                          "key":  "sid_metcys"
+                      },
+                      {
+                          "key":  "sid_thr"
+                      },
+                      {
+                          "key":  "sid_trp"
+                      },
+                      {
+                          "key":  "sid_arg"
+                      },
+                      {
+                          "key":  "sid_val"
+                      },
+                      {
+                          "key":  "sid_ile"
+                      },
+                      {
+                          "key":  "sid_leu"
+                      }
+                  ]
 }

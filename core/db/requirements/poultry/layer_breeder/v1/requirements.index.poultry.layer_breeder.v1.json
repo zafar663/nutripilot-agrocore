@@ -1,17 +1,193 @@
-﻿{
-  "species": "poultry",
-  "type": "layer_breeder",
-  "version": "v1",
-  "_meta": {
-    "kind": "requirements_option_b_wrapper",
-    "description": "Routes production to Option-B index+library for poultry/layer_breeder (chicken). breeder_type=layer_line.",
-    "created_utc": "2026-02-23T00:00:00Z",
-    "locked": false
+{
+  "_LOCK": {
+    "version": "v1",
+    "mode": "option_b_production_index",
+    "note": "Auto-generated breeder requirements index (production->breed->phase->reqKey).",
+    "meta": {
+      "type": "layer_breeder",
+      "production_key": "breeder",
+      "generated_utc": "2026-03-05T16:50:28.388102+00:00"
+    }
+  },
+  "defaults": {
+    "production": "breeder",
+    "breed": "hyline_brown",
+    "phase": "f_prod_conc_110g"
+  },
+  "region_defaults": {
+    "us": "us",
+    "global": "global",
+    "eu": "eu"
+  },
+  "phases": [
+    "f_prod_conc_110g",
+    "f_prod_conc_111g",
+    "f_rear_developer",
+    "f_rear_grower",
+    "f_rear_pre_lay",
+    "f_rear_starter_1",
+    "f_rear_starter_2"
+  ],
+  "production_aliases": {
+    "breeder": "breeder",
+    "parent_stock": "breeder",
+    "ps": "breeder"
+  },
+  "breed_aliases": {
+    "hyline_brown_f_rear": "hyline_brown",
+    "hyline_w36_f_rear": "hyline_w36",
+    "hyline_pink_f_rear": "hyline_pink",
+    "hyline_silver_brown_f_rear": "hyline_silver_brown",
+    "lohmann_lsl_f_rear": "lohmann_lsl",
+    "lohmann_brown_f_rear": "lohmann_brown",
+    "bovans_white_f_rear": "bovans_white",
+    "bovans_brown_f_rear": "bovans_brown",
+    "dekalb_white_f_rear": "dekalb_white",
+    "dekalb_brown_f_rear": "dekalb_brown",
+    "hyline_w80_ps": "hyline_w80",
+    "lohmann_lsl_classic_ps": "lohmann_lsl",
+    "lohmann_sandra_ps": "lohmann_brown",
+    "isa_brown_ps": "bovans_brown",
+    "novogen_brown_ps": "bovans_brown",
+    "novogen_white_ps": "bovans_white",
+    "shaver_brown_ps": "bovans_brown",
+    "hisex_brown_ps": "bovans_brown",
+    "hisex_white_ps": "bovans_white",
+    "brown_nick_ps": "lohmann_brown",
+    "nick_chick_ps": "lohmann_lsl",
+    "babcock_bv380_ps": "bovans_brown",
+    "babcock_bv300_ps": "bovans_white"
+  },
+  "phase_aliases": {
+    "starter": "f_rear_starter_1",
+    "starter_1": "f_rear_starter_1",
+    "starter_2": "f_rear_starter_2",
+    "grower": "f_rear_grower",
+    "developer": "f_rear_developer",
+    "pre_lay": "f_rear_pre_lay",
+    "prelay": "f_rear_pre_lay",
+    "lay_peak": "f_prod_conc_110g",
+    "lay_mid": "f_prod_conc_110g",
+    "lay_late": "f_prod_conc_110g",
+    "production": "f_prod_conc_110g",
+    "prod_110g": "f_prod_conc_110g",
+    "prod_111g": "f_prod_conc_111g"
   },
   "productions": {
     "breeder": {
-      "index_file": "..\\\\breeder\\\\index.poultry_layer_breeder_breeder.v1.json",
-      "library_file": "..\\\\breeder\\\\library.poultry_layer_breeder_breeder.v1.json"
+      "breeds": {
+        "hyline_brown": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_hyline_brown_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_hyline_brown_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_hyline_brown_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_hyline_brown_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_hyline_brown_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_hyline_brown_f_prod_conc_110g_v1"
+          }
+        },
+        "hyline_w36": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_hyline_w36_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_hyline_w36_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_hyline_w36_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_hyline_w36_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_hyline_w36_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_hyline_w36_f_prod_conc_110g_v1"
+          }
+        },
+        "hyline_pink": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_hyline_pink_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_hyline_pink_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_hyline_pink_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_hyline_pink_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_hyline_pink_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_hyline_pink_f_prod_conc_110g_v1"
+          }
+        },
+        "hyline_silver_brown": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_hyline_silver_brown_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_hyline_silver_brown_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_hyline_silver_brown_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_hyline_silver_brown_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_hyline_silver_brown_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_hyline_silver_brown_f_prod_conc_111g_v1",
+            "f_prod_conc_111g": "poultry_layer_breeder_hyline_silver_brown_f_prod_conc_111g_v1"
+          }
+        },
+        "lohmann_lsl": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_lohmann_lsl_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_lohmann_lsl_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_lohmann_lsl_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_lohmann_lsl_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_lohmann_lsl_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_lohmann_lsl_f_prod_conc_110g_v1"
+          }
+        },
+        "lohmann_brown": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_lohmann_brown_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_lohmann_brown_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_lohmann_brown_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_lohmann_brown_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_lohmann_brown_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_lohmann_brown_f_prod_conc_110g_v1"
+          }
+        },
+        "bovans_white": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_bovans_white_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_bovans_white_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_bovans_white_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_bovans_white_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_bovans_white_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_bovans_white_f_prod_conc_110g_v1"
+          }
+        },
+        "bovans_brown": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_bovans_brown_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_bovans_brown_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_bovans_brown_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_bovans_brown_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_bovans_brown_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_bovans_brown_f_prod_conc_110g_v1"
+          }
+        },
+        "dekalb_white": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_dekalb_white_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_dekalb_white_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_dekalb_white_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_dekalb_white_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_dekalb_white_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_dekalb_white_f_prod_conc_110g_v1"
+          }
+        },
+        "dekalb_brown": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_dekalb_brown_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_dekalb_brown_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_dekalb_brown_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_dekalb_brown_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_dekalb_brown_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_dekalb_brown_f_prod_conc_110g_v1"
+          }
+        },
+        "hyline_w80": {
+          "phases": {
+            "f_rear_starter_1": "poultry_layer_breeder_hyline_w80_f_rear_starter_1_v1",
+            "f_rear_starter_2": "poultry_layer_breeder_hyline_w80_f_rear_starter_2_v1",
+            "f_rear_grower": "poultry_layer_breeder_hyline_w80_f_rear_grower_v1",
+            "f_rear_developer": "poultry_layer_breeder_hyline_w80_f_rear_developer_v1",
+            "f_rear_pre_lay": "poultry_layer_breeder_hyline_w80_f_rear_pre_lay_v1",
+            "f_prod_conc_110g": "poultry_layer_breeder_hyline_w80_f_prod_conc_110g_v1"
+          }
+        }
+      }
     }
   }
 }

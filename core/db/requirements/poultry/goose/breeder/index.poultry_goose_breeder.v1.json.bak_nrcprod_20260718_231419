@@ -1,0 +1,49 @@
+{
+    "map":  {
+                "embden":  {
+                               "late":  "poultry_goose_breeder_embden_late_v1",
+                               "prebreed":  "poultry_goose_breeder_embden_prebreed_v1",
+                               "postpeak":  "poultry_goose_breeder_embden_postpeak_v1",
+                               "starter":  "poultry_goose_breeder_embden_starter_v1",
+                               "grower":  "poultry_goose_breeder_embden_grower_v1",
+                               "peak":  "poultry_goose_breeder_embden_peak_v1",
+                               "developer":  "poultry_goose_breeder_embden_developer_v1"
+                           },
+                "generic":  {
+                                "late":  "poultry_goose_breeder_generic_late_v1",
+                                "prebreed":  "poultry_goose_breeder_generic_prebreed_v1",
+                                "postpeak":  "poultry_goose_breeder_generic_postpeak_v1",
+                                "starter":  "poultry_goose_breeder_generic_starter_v1",
+                                "grower":  "poultry_goose_breeder_generic_grower_v1",
+                                "peak":  "poultry_goose_breeder_generic_peak_v1",
+                                "developer":  "poultry_goose_breeder_generic_developer_v1"
+                            },
+                "toulouse":  {
+                                 "late":  "poultry_goose_breeder_toulouse_late_v1",
+                                 "prebreed":  "poultry_goose_breeder_toulouse_prebreed_v1",
+                                 "postpeak":  "poultry_goose_breeder_toulouse_postpeak_v1",
+                                 "starter":  "poultry_goose_breeder_toulouse_starter_v1",
+                                 "grower":  "poultry_goose_breeder_toulouse_grower_v1",
+                                 "peak":  "poultry_goose_breeder_toulouse_peak_v1",
+                                 "developer":  "poultry_goose_breeder_toulouse_developer_v1"
+                             },
+                "african":  {
+                                "late":  "poultry_goose_breeder_african_late_v1",
+                                "prebreed":  "poultry_goose_breeder_african_prebreed_v1",
+                                "postpeak":  "poultry_goose_breeder_african_postpeak_v1",
+                                "starter":  "poultry_goose_breeder_african_starter_v1",
+                                "grower":  "poultry_goose_breeder_african_grower_v1",
+                                "peak":  "poultry_goose_breeder_african_peak_v1",
+                                "developer":  "poultry_goose_breeder_african_developer_v1"
+                            }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "breeder",
+                  "type":  "goose",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

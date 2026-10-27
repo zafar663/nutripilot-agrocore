@@ -1,0 +1,325 @@
+{
+  "_meta": {
+    "species": "equine",
+    "region": "us",
+    "version": "v1",
+    "basis": "as_fed",
+    "energy_system": "DE_NRC2007_Horses",
+    "energy_units": "Mcal_per_kg",
+    "sources": ["NRC_2007_Horses", "Pagan_1998_Horse_Nutrition"]
+  },
+  "ingredients": {
+    "timothy_hay_equine": {
+      "display_name": "Timothy Hay, Mid Bloom",
+      "category": "forage_grass",
+      "dm": 89.0, "cp_pct": 8.9, "ee_pct": 2.3, "ndf_pct": 56.0, "adf_pct": 33.0, "starch_pct": 1.5, "nsc_pct": 11.0, "ash_pct": 5.5, "cf_pct": 29.0,
+      "de_mcal_kg": 1.97,
+      "ca_pct": 0.43, "p_pct": 0.20, "mg_pct": 0.14, "k_pct": 1.83, "na_pct": 0.04,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "timothy_hay_late_equine": {
+      "display_name": "Timothy Hay, Late / Mature",
+      "category": "forage_grass",
+      "dm": 91.0, "cp_pct": 7.5, "ee_pct": 2.0, "ndf_pct": 62.0, "adf_pct": 38.0, "starch_pct": 1.0, "nsc_pct": 9.5, "ash_pct": 5.0, "cf_pct": 34.0,
+      "de_mcal_kg": 1.85,
+      "ca_pct": 0.37, "p_pct": 0.16, "mg_pct": 0.11, "k_pct": 1.60, "na_pct": 0.03,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_early_equine": {
+      "display_name": "Alfalfa Hay, Early Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp_pct": 20.0, "ee_pct": 2.5, "ndf_pct": 38.0, "adf_pct": 28.0, "starch_pct": 2.0, "nsc_pct": 12.0, "ash_pct": 9.5, "cf_pct": 24.0,
+      "de_mcal_kg": 2.33,
+      "ca_pct": 1.41, "p_pct": 0.27, "mg_pct": 0.30, "k_pct": 2.69, "na_pct": 0.11,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_mid_equine": {
+      "display_name": "Alfalfa Hay, Mid Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp_pct": 17.5, "ee_pct": 2.3, "ndf_pct": 43.0, "adf_pct": 34.0, "starch_pct": 1.5, "nsc_pct": 10.0, "ash_pct": 9.0, "cf_pct": 29.0,
+      "de_mcal_kg": 2.19,
+      "ca_pct": 1.29, "p_pct": 0.25, "mg_pct": 0.28, "k_pct": 2.44, "na_pct": 0.09,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_late_equine": {
+      "display_name": "Alfalfa Hay, Late / Full Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp_pct": 15.0, "ee_pct": 2.0, "ndf_pct": 50.0, "adf_pct": 40.0, "starch_pct": 1.0, "nsc_pct": 9.0, "ash_pct": 8.5, "cf_pct": 34.0,
+      "de_mcal_kg": 1.98,
+      "ca_pct": 1.10, "p_pct": 0.23, "mg_pct": 0.25, "k_pct": 2.00, "na_pct": 0.08,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "orchard_grass_hay_equine": {
+      "display_name": "Orchard Grass Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp_pct": 11.5, "ee_pct": 2.8, "ndf_pct": 58.0, "adf_pct": 36.0, "starch_pct": 1.5, "nsc_pct": 12.5, "ash_pct": 7.0, "cf_pct": 30.0,
+      "de_mcal_kg": 2.03,
+      "ca_pct": 0.35, "p_pct": 0.25, "mg_pct": 0.18, "k_pct": 2.27, "na_pct": 0.03,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "bermuda_hay_equine": {
+      "display_name": "Bermuda Grass Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp_pct": 9.5, "ee_pct": 2.0, "ndf_pct": 69.0, "adf_pct": 35.0, "starch_pct": 1.0, "nsc_pct": 8.5, "ash_pct": 6.5, "cf_pct": 29.0,
+      "de_mcal_kg": 1.88,
+      "ca_pct": 0.47, "p_pct": 0.18, "mg_pct": 0.15, "k_pct": 1.70, "na_pct": 0.04,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "grass_hay_mixed_equine": {
+      "display_name": "Grass Hay, Mixed",
+      "category": "forage_grass",
+      "dm": 89.0, "cp_pct": 10.0, "ee_pct": 2.3, "ndf_pct": 60.0, "adf_pct": 37.0, "starch_pct": 1.0, "nsc_pct": 10.0, "ash_pct": 6.5, "cf_pct": 31.0,
+      "de_mcal_kg": 1.90,
+      "ca_pct": 0.39, "p_pct": 0.22, "mg_pct": 0.16, "k_pct": 1.95, "na_pct": 0.03,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "tall_fescue_hay_equine": {
+      "display_name": "Tall Fescue Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp_pct": 11.0, "ee_pct": 2.5, "ndf_pct": 58.0, "adf_pct": 36.0, "starch_pct": 1.5, "nsc_pct": 11.5, "ash_pct": 7.0, "cf_pct": 30.0,
+      "de_mcal_kg": 1.95,
+      "ca_pct": 0.42, "p_pct": 0.22, "mg_pct": 0.18, "k_pct": 2.22, "na_pct": 0.04,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "wheat_straw_equine": {
+      "display_name": "Wheat Straw (Low-Cal Roughage)",
+      "category": "forage_straw",
+      "dm": 91.0, "cp_pct": 3.5, "ee_pct": 1.3, "ndf_pct": 78.0, "adf_pct": 49.0, "starch_pct": 0.5, "nsc_pct": 5.0, "ash_pct": 7.5, "cf_pct": 43.0,
+      "de_mcal_kg": 1.48,
+      "ca_pct": 0.24, "p_pct": 0.08, "mg_pct": 0.12, "k_pct": 1.31, "na_pct": 0.02,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "oat_hay_equine": {
+      "display_name": "Oat Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp_pct": 9.5, "ee_pct": 2.3, "ndf_pct": 56.0, "adf_pct": 34.0, "starch_pct": 4.0, "nsc_pct": 16.0, "ash_pct": 7.0, "cf_pct": 28.0,
+      "de_mcal_kg": 1.98,
+      "ca_pct": 0.31, "p_pct": 0.22, "mg_pct": 0.14, "k_pct": 1.90, "na_pct": 0.04,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "oats_grain_equine": {
+      "display_name": "Oats, Grain (Whole / Crimped)",
+      "category": "cereal_grain",
+      "dm": 89.0, "cp_pct": 11.5, "ee_pct": 4.5, "ndf_pct": 28.0, "adf_pct": 13.0, "starch_pct": 38.0, "nsc_pct": 44.0, "ash_pct": 3.2, "cf_pct": 11.5,
+      "de_mcal_kg": 3.00,
+      "ca_pct": 0.08, "p_pct": 0.33, "mg_pct": 0.13, "k_pct": 0.44, "na_pct": 0.02,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "corn_grain_equine": {
+      "display_name": "Corn, Grain (Cracked / Steam Flaked)",
+      "category": "cereal_grain",
+      "dm": 88.0, "cp_pct": 8.5, "ee_pct": 3.6, "ndf_pct": 9.5, "adf_pct": 3.5, "starch_pct": 65.0, "nsc_pct": 71.0, "ash_pct": 1.3, "cf_pct": 2.2,
+      "de_mcal_kg": 3.48,
+      "ca_pct": 0.02, "p_pct": 0.28, "mg_pct": 0.11, "k_pct": 0.33, "na_pct": 0.01,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "barley_grain_equine": {
+      "display_name": "Barley, Grain (Rolled)",
+      "category": "cereal_grain",
+      "dm": 89.0, "cp_pct": 12.0, "ee_pct": 2.0, "ndf_pct": 17.0, "adf_pct": 7.0, "starch_pct": 55.0, "nsc_pct": 61.0, "ash_pct": 2.5, "cf_pct": 5.0,
+      "de_mcal_kg": 3.25,
+      "ca_pct": 0.07, "p_pct": 0.38, "mg_pct": 0.12, "k_pct": 0.52, "na_pct": 0.02,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "beet_pulp_equine": {
+      "display_name": "Beet Pulp, Dried Shredded (Low Sugar)",
+      "category": "by_product_fiber",
+      "dm": 91.0, "cp_pct": 9.5, "ee_pct": 0.7, "ndf_pct": 44.0, "adf_pct": 24.0, "starch_pct": 1.0, "nsc_pct": 14.0, "ash_pct": 5.5, "cf_pct": 19.0,
+      "de_mcal_kg": 2.72,
+      "ca_pct": 0.68, "p_pct": 0.10, "mg_pct": 0.16, "k_pct": 0.73, "na_pct": 0.36,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "rice_bran_equine": {
+      "display_name": "Rice Bran, Stabilized",
+      "category": "by_product_energy",
+      "dm": 91.0, "cp_pct": 13.5, "ee_pct": 18.0, "ndf_pct": 27.0, "adf_pct": 11.0, "starch_pct": 24.0, "nsc_pct": 28.0, "ash_pct": 10.5, "cf_pct": 9.0,
+      "de_mcal_kg": 3.60,
+      "ca_pct": 0.06, "p_pct": 1.70, "mg_pct": 0.90, "k_pct": 1.57, "na_pct": 0.01,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "wheat_bran_equine": {
+      "display_name": "Wheat Bran",
+      "category": "by_product_fiber",
+      "dm": 88.0, "cp_pct": 15.5, "ee_pct": 4.0, "ndf_pct": 43.0, "adf_pct": 12.0, "starch_pct": 17.0, "nsc_pct": 22.0, "ash_pct": 5.5, "cf_pct": 10.0,
+      "de_mcal_kg": 2.38,
+      "ca_pct": 0.13, "p_pct": 1.20, "mg_pct": 0.52, "k_pct": 1.17, "na_pct": 0.03,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "soybean_meal_44_equine": {
+      "display_name": "Soybean Meal, 44% CP",
+      "category": "protein",
+      "dm": 89.0, "cp_pct": 44.0, "ee_pct": 1.5, "ndf_pct": 12.0, "adf_pct": 8.5, "starch_pct": 1.0, "nsc_pct": 9.0, "ash_pct": 6.5, "cf_pct": 6.5,
+      "de_mcal_kg": 3.60,
+      "ca_pct": 0.33, "p_pct": 0.61, "mg_pct": 0.29, "k_pct": 2.00, "na_pct": 0.02,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "canola_meal_equine": {
+      "display_name": "Canola Meal",
+      "category": "protein",
+      "dm": 90.0, "cp_pct": 37.0, "ee_pct": 3.8, "ndf_pct": 26.0, "adf_pct": 20.0, "starch_pct": 3.0, "nsc_pct": 8.0, "ash_pct": 7.5, "cf_pct": 14.0,
+      "de_mcal_kg": 3.15,
+      "ca_pct": 0.67, "p_pct": 1.07, "mg_pct": 0.45, "k_pct": 1.33, "na_pct": 0.03,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "flaxseed_equine": {
+      "display_name": "Flaxseed (Linseed), Whole",
+      "category": "fat_supplement",
+      "dm": 93.0, "cp_pct": 21.5, "ee_pct": 37.0, "ndf_pct": 25.0, "adf_pct": 12.0, "starch_pct": 0.5, "nsc_pct": 5.5, "ash_pct": 4.5, "cf_pct": 6.0,
+      "de_mcal_kg": 5.30,
+      "ca_pct": 0.25, "p_pct": 0.65, "mg_pct": 0.40, "k_pct": 0.81, "na_pct": 0.04,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "sunflower_seeds_equine": {
+      "display_name": "Sunflower Seeds, Whole (Black Oil)",
+      "category": "fat_supplement",
+      "dm": 93.0, "cp_pct": 16.5, "ee_pct": 44.0, "ndf_pct": 32.0, "adf_pct": 23.0, "starch_pct": 0.5, "nsc_pct": 5.0, "ash_pct": 4.0, "cf_pct": 22.0,
+      "de_mcal_kg": 5.50,
+      "ca_pct": 0.30, "p_pct": 0.56, "mg_pct": 0.33, "k_pct": 0.72, "na_pct": 0.02,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "soybean_oil_equine": {
+      "display_name": "Soybean Oil",
+      "category": "fat_supplement",
+      "dm": 99.0, "cp_pct": 0.0, "ee_pct": 99.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 0.1, "cf_pct": 0.0,
+      "de_mcal_kg": 8.50,
+      "ca_pct": 0.0, "p_pct": 0.0, "mg_pct": 0.0, "k_pct": 0.0, "na_pct": 0.0,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "corn_oil_equine": {
+      "display_name": "Corn Oil",
+      "category": "fat_supplement",
+      "dm": 99.0, "cp_pct": 0.0, "ee_pct": 99.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 0.1, "cf_pct": 0.0,
+      "de_mcal_kg": 8.50,
+      "ca_pct": 0.0, "p_pct": 0.0, "mg_pct": 0.0, "k_pct": 0.0, "na_pct": 0.0,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "beet_pulp_molasses_equine": {
+      "display_name": "Beet Pulp with Molasses",
+      "category": "by_product_fiber",
+      "dm": 91.0, "cp_pct": 9.0, "ee_pct": 0.6, "ndf_pct": 40.0, "adf_pct": 22.0, "starch_pct": 1.0, "nsc_pct": 20.0, "ash_pct": 7.5, "cf_pct": 17.0,
+      "de_mcal_kg": 2.80,
+      "ca_pct": 0.73, "p_pct": 0.09, "mg_pct": 0.20, "k_pct": 1.20, "na_pct": 0.22,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_cubes_equine": {
+      "display_name": "Alfalfa Cubes / Pellets",
+      "category": "forage_legume",
+      "dm": 90.0, "cp_pct": 17.5, "ee_pct": 2.3, "ndf_pct": 42.0, "adf_pct": 33.0, "starch_pct": 1.5, "nsc_pct": 10.5, "ash_pct": 9.2, "cf_pct": 28.0,
+      "de_mcal_kg": 2.20,
+      "ca_pct": 1.31, "p_pct": 0.26, "mg_pct": 0.29, "k_pct": 2.50, "na_pct": 0.10,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "grass_pellets_equine": {
+      "display_name": "Grass Hay Pellets, Mixed",
+      "category": "forage_grass",
+      "dm": 90.0, "cp_pct": 10.5, "ee_pct": 2.2, "ndf_pct": 58.0, "adf_pct": 36.0, "starch_pct": 1.0, "nsc_pct": 10.5, "ash_pct": 6.8, "cf_pct": 30.0,
+      "de_mcal_kg": 1.95,
+      "ca_pct": 0.40, "p_pct": 0.22, "mg_pct": 0.16, "k_pct": 1.92, "na_pct": 0.03,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "corn_ddgs_equine": {
+      "display_name": "Corn DDGS",
+      "category": "by_product_energy_protein",
+      "dm": 88.0, "cp_pct": 27.0, "ee_pct": 10.5, "ndf_pct": 38.0, "adf_pct": 17.0, "starch_pct": 4.0, "nsc_pct": 9.0, "ash_pct": 5.0, "cf_pct": 9.0,
+      "de_mcal_kg": 3.80,
+      "ca_pct": 0.06, "p_pct": 0.75, "mg_pct": 0.28, "k_pct": 0.98, "na_pct": 0.35,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "soybean_hulls_equine": {
+      "display_name": "Soybean Hulls",
+      "category": "by_product_fiber",
+      "dm": 90.0, "cp_pct": 12.0, "ee_pct": 2.2, "ndf_pct": 61.0, "adf_pct": 45.0, "starch_pct": 1.0, "nsc_pct": 8.0, "ash_pct": 4.5, "cf_pct": 38.0,
+      "de_mcal_kg": 2.55,
+      "ca_pct": 0.48, "p_pct": 0.18, "mg_pct": 0.18, "k_pct": 1.34, "na_pct": 0.01,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "molasses_equine": {
+      "display_name": "Molasses, Sugarcane (Palatability)",
+      "category": "palatability",
+      "dm": 73.0, "cp_pct": 4.0, "ee_pct": 0.1, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 50.0, "ash_pct": 10.5, "cf_pct": 0.0,
+      "de_mcal_kg": 2.80,
+      "ca_pct": 0.80, "p_pct": 0.09, "mg_pct": 0.40, "k_pct": 2.50, "na_pct": 0.17,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "fish_meal_equine": {
+      "display_name": "Fish Meal, 65% CP",
+      "category": "animal_protein",
+      "dm": 92.0, "cp_pct": 65.0, "ee_pct": 10.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 14.0, "cf_pct": 0.5,
+      "de_mcal_kg": 3.55,
+      "ca_pct": 5.50, "p_pct": 3.30, "mg_pct": 0.21, "k_pct": 0.98, "na_pct": 0.80,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "yeast_equine": {
+      "display_name": "Brewer's Yeast / Yeast Culture",
+      "category": "additive",
+      "dm": 93.0, "cp_pct": 42.0, "ee_pct": 2.5, "ndf_pct": 5.0, "adf_pct": 2.0, "starch_pct": 10.0, "nsc_pct": 14.0, "ash_pct": 8.0, "cf_pct": 2.0,
+      "de_mcal_kg": 3.30,
+      "ca_pct": 0.11, "p_pct": 1.30, "mg_pct": 0.25, "k_pct": 1.65, "na_pct": 0.04,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "pelleted_complete_equine": {
+      "display_name": "Pelleted Complete Feed (Low NSC)",
+      "category": "commercial_feed",
+      "dm": 90.0, "cp_pct": 14.0, "ee_pct": 5.0, "ndf_pct": 35.0, "adf_pct": 20.0, "starch_pct": 12.0, "nsc_pct": 18.0, "ash_pct": 7.0, "cf_pct": 12.0,
+      "de_mcal_kg": 2.85,
+      "ca_pct": 1.00, "p_pct": 0.60, "mg_pct": 0.20, "k_pct": 1.00, "na_pct": 0.30,
+      "source_ref": "Industry", "nutrient_basis": "as_fed"
+    },
+    "sweet_feed_equine": {
+      "display_name": "Sweet Feed, Textured (Oats/Corn/Molasses)",
+      "category": "commercial_feed",
+      "dm": 88.0, "cp_pct": 12.0, "ee_pct": 4.0, "ndf_pct": 25.0, "adf_pct": 12.0, "starch_pct": 32.0, "nsc_pct": 42.0, "ash_pct": 5.0, "cf_pct": 8.0,
+      "de_mcal_kg": 3.15,
+      "ca_pct": 0.80, "p_pct": 0.55, "mg_pct": 0.15, "k_pct": 0.85, "na_pct": 0.25,
+      "source_ref": "Industry", "nutrient_basis": "as_fed"
+    },
+    "limestone_equine": {
+      "display_name": "Limestone",
+      "category": "mineral",
+      "dm": 99.0, "cp_pct": 0.0, "ee_pct": 0.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 99.0, "cf_pct": 0.0,
+      "de_mcal_kg": 0.0,
+      "ca_pct": 38.5, "p_pct": 0.02, "mg_pct": 0.33, "k_pct": 0.04, "na_pct": 0.06,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "dicalcium_phosphate_equine": {
+      "display_name": "Dicalcium Phosphate (DCP)",
+      "category": "mineral",
+      "dm": 97.0, "cp_pct": 0.0, "ee_pct": 0.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 97.0, "cf_pct": 0.0,
+      "de_mcal_kg": 0.0,
+      "ca_pct": 21.0, "p_pct": 18.5, "mg_pct": 0.0, "k_pct": 0.0, "na_pct": 0.0,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "salt_equine": {
+      "display_name": "Salt (NaCl)",
+      "category": "mineral",
+      "dm": 99.0, "cp_pct": 0.0, "ee_pct": 0.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 99.0, "cf_pct": 0.0,
+      "de_mcal_kg": 0.0,
+      "ca_pct": 0.0, "p_pct": 0.0, "mg_pct": 0.0, "k_pct": 0.0, "na_pct": 39.3,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "magnesium_oxide_equine": {
+      "display_name": "Magnesium Oxide (54% Mg)",
+      "category": "mineral",
+      "dm": 99.0, "cp_pct": 0.0, "ee_pct": 0.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 99.0, "cf_pct": 0.0,
+      "de_mcal_kg": 0.0,
+      "ca_pct": 0.0, "p_pct": 0.0, "mg_pct": 54.0, "k_pct": 0.0, "na_pct": 0.0,
+      "source_ref": "NRC_2007_Horses", "nutrient_basis": "as_fed"
+    },
+    "vit_min_premix_equine": {
+      "display_name": "Vitamin-Mineral Premix, Equine",
+      "category": "premix",
+      "dm": 97.0, "cp_pct": 0.0, "ee_pct": 0.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 55.0, "cf_pct": 0.0,
+      "de_mcal_kg": 0.0,
+      "ca_pct": 6.0, "p_pct": 2.5, "mg_pct": 1.5, "k_pct": 0.5, "na_pct": 0.5,
+      "source_ref": "Industry", "nutrient_basis": "as_fed"
+    },
+    "electrolyte_equine": {
+      "display_name": "Electrolyte Supplement (Na/K/Cl)",
+      "category": "additive",
+      "dm": 99.0, "cp_pct": 0.0, "ee_pct": 0.0, "ndf_pct": 0.0, "adf_pct": 0.0, "starch_pct": 0.0, "nsc_pct": 0.0, "ash_pct": 99.0, "cf_pct": 0.0,
+      "de_mcal_kg": 0.0,
+      "ca_pct": 0.0, "p_pct": 0.0, "mg_pct": 0.5, "k_pct": 15.0, "na_pct": 12.0,
+      "source_ref": "Industry", "nutrient_basis": "as_fed"
+    }
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "_meta": {
+    "description": "Camelid production performance standards — Old World camels and South American camelids",
+    "version": "v2025",
+    "created_utc": "2026-08-09T00:00:00Z",
+    "sources": [
+      "Wardeh 1989 — FAO Animal Production and Health Paper 76",
+      "Faye & Bengoumi 2018 — Camel Practical Handbook",
+      "Gahlot 2000 — The Camel",
+      "Al-Saiady 2012 — Camel milk production — Saudi Arabia",
+      "Van Saun 2006 — Nutritional diseases of camelids",
+      "NRC 2007 Table 16-1 — Nutrient requirements of small ruminants (SAC section)",
+      "Fowler 2010 — Medicine and Surgery of Camelids 3rd Ed",
+      "FAO 2011 — Investigating the role of camels in West Africa"
+    ],
+    "notes": "Body weights in kg. Milk yield in L/lactation. Fleece in kg greasy/year."
+  },
+  "camelid": {
+    "dromedary": {
+      "_meta": {
+        "species": "Camelus dromedarius",
+        "common_name": "Dromedary Camel (Arabian / One-hump)",
+        "origin": "Arabian Peninsula, Horn of Africa, South Asia",
+        "mature_bw_kg_male": 500,
+        "mature_bw_kg_female": 420,
+        "birth_wt_kg": 28,
+        "milk_yield_L_lactation": 3500,
+        "lactation_days": 330,
+        "gestation_days": 390,
+        "adg_early_g_day": 750,
+        "adg_growing_g_day": 480,
+        "draft_km_day": 30,
+        "data_quality": "research",
+        "source": "Wardeh 1989 FAO + Faye & Bengoumi 2018"
+      },
+      "warn_threshold_pct": 15,
+      "alert_threshold_pct": 25,
+      "phases": {
+        "neonatal": { "months": "0-3", "target_bw_kg": 75 },
+        "weaning": { "months": "3-12", "target_bw_kg": 180 },
+        "growing": { "months": "12-36", "target_bw_kg": 360 },
+        "mature": { "months": "48+", "target_bw_kg": 480 }
+      },
+      "curve": [
+        { "month": 0,  "body_wt_kg": 28,  "adg_g_day": null, "notes": "birth" },
+        { "month": 3,  "body_wt_kg": 75,  "adg_g_day": 750,  "notes": "rapid neonatal growth" },
+        { "month": 6,  "body_wt_kg": 120, "adg_g_day": 500,  "notes": "pre-weaning" },
+        { "month": 12, "body_wt_kg": 180, "adg_g_day": 330,  "notes": "weaned" },
+        { "month": 18, "body_wt_kg": 240, "adg_g_day": 330,  "notes": "growing" },
+        { "month": 24, "body_wt_kg": 300, "adg_g_day": 330,  "notes": "growing" },
+        { "month": 36, "body_wt_kg": 380, "adg_g_day": 220,  "notes": "sub-adult" },
+        { "month": 48, "body_wt_kg": 440, "adg_g_day": 165,  "notes": "approaching maturity" },
+        { "month": 60, "body_wt_kg": 480, "adg_g_day": 110,  "notes": "mature" }
+      ],
+      "milk_performance": {
+        "peak_yield_L_day": 12,
+        "peak_week": 6,
+        "total_lactation_L": 3500,
+        "dairy_breed_potential_L": 5000,
+        "fat_pct": 3.5,
+        "protein_pct": 3.2
+      },
+      "draft_performance": {
+        "load_kg": 200,
+        "speed_km_h": 4.5,
+        "daily_distance_km": 30,
+        "max_distance_km_day": 50
+      }
+    },
+    "bactrian": {
+      "_meta": {
+        "species": "Camelus bactrianus",
+        "common_name": "Bactrian Camel (Two-hump)",
+        "origin": "Central Asia — Mongolia, China, Kazakhstan",
+        "mature_bw_kg_male": 600,
+        "mature_bw_kg_female": 500,
+        "birth_wt_kg": 38,
+        "milk_yield_L_lactation": 1000,
+        "lactation_days": 365,
+        "gestation_days": 406,
+        "adg_early_g_day": 800,
+        "adg_growing_g_day": 500,
+        "data_quality": "research",
+        "source": "Faye & Bengoumi 2018 + FAO 2011 Central Asia camel report"
+      },
+      "warn_threshold_pct": 15,
+      "alert_threshold_pct": 25,
+      "phases": {
+        "neonatal": { "months": "0-3", "target_bw_kg": 90 },
+        "weaning": { "months": "3-12", "target_bw_kg": 220 },
+        "growing": { "months": "12-36", "target_bw_kg": 430 },
+        "mature": { "months": "48+", "target_bw_kg": 560 }
+      },
+      "curve": [
+        { "month": 0,  "body_wt_kg": 38,  "adg_g_day": null, "notes": "birth" },
+        { "month": 3,  "body_wt_kg": 90,  "adg_g_day": 800,  "notes": "rapid neonatal growth" },
+        { "month": 6,  "body_wt_kg": 145, "adg_g_day": 610,  "notes": "pre-weaning" },
+        { "month": 12, "body_wt_kg": 220, "adg_g_day": 415,  "notes": "weaned" },
+        { "month": 18, "body_wt_kg": 300, "adg_g_day": 440,  "notes": "growing" },
+        { "month": 24, "body_wt_kg": 370, "adg_g_day": 385,  "notes": "growing" },
+        { "month": 36, "body_wt_kg": 460, "adg_g_day": 247,  "notes": "sub-adult" },
+        { "month": 48, "body_wt_kg": 530, "adg_g_day": 192,  "notes": "approaching maturity" },
+        { "month": 60, "body_wt_kg": 580, "adg_g_day": 137,  "notes": "mature" }
+      ],
+      "milk_performance": {
+        "peak_yield_L_day": 4,
+        "peak_week": 8,
+        "total_lactation_L": 1000,
+        "fat_pct": 5.2,
+        "protein_pct": 3.8
+      },
+      "fiber_performance": {
+        "annual_fleece_kg": 5.5,
+        "fiber_diameter_micron": 22,
+        "undercoat_pct": 70
+      }
+    },
+    "alpaca_huacaya": {
+      "_meta": {
+        "species": "Vicugna pacos",
+        "type": "Huacaya",
+        "common_name": "Huacaya Alpaca",
+        "origin": "Andes — Peru, Bolivia, Chile",
+        "mature_bw_kg": 68,
+        "birth_wt_kg": 7,
+        "weaning_age_months": 6,
+        "fleece_kg_year": 3.2,
+        "fiber_diameter_micron": 22,
+        "gestation_days": 342,
+        "cu_max_mg_kg_dm": 15,
+        "data_quality": "research",
+        "source": "Van Saun 2006 + NRC 2007 + Fowler 2010"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "cria": { "months": "0-6", "target_bw_kg": 28 },
+        "weanling": { "months": "6-18", "target_bw_kg": 52 },
+        "yearling": { "months": "18-30", "target_bw_kg": 62 },
+        "mature": { "months": "30+", "target_bw_kg": 68 }
+      },
+      "curve": [
+        { "month": 0,  "body_wt_kg": 7,  "adg_g_day": null, "notes": "birth (cria)" },
+        { "month": 3,  "body_wt_kg": 18, "adg_g_day": 120,  "notes": "nursing cria" },
+        { "month": 6,  "body_wt_kg": 28, "adg_g_day": 110,  "notes": "weaning" },
+        { "month": 12, "body_wt_kg": 44, "adg_g_day": 88,   "notes": "weanling" },
+        { "month": 18, "body_wt_kg": 55, "adg_g_day": 61,   "notes": "yearling" },
+        { "month": 24, "body_wt_kg": 62, "adg_g_day": 38,   "notes": "sub-adult" },
+        { "month": 36, "body_wt_kg": 68, "adg_g_day": 16,   "notes": "mature" }
+      ],
+      "fiber_performance": {
+        "first_shearing_age_months": 12,
+        "annual_fleece_kg_greasy": 3.2,
+        "fiber_diameter_micron": 22,
+        "staple_length_cm": 12,
+        "vegetable_matter_pct": 2
+      }
+    },
+    "alpaca_suri": {
+      "_meta": {
+        "species": "Vicugna pacos",
+        "type": "Suri",
+        "common_name": "Suri Alpaca",
+        "origin": "Andes — Peru, Bolivia",
+        "mature_bw_kg": 65,
+        "birth_wt_kg": 7,
+        "weaning_age_months": 6,
+        "fleece_kg_year": 2.8,
+        "fiber_diameter_micron": 19,
+        "gestation_days": 342,
+        "cu_max_mg_kg_dm": 15,
+        "data_quality": "research",
+        "source": "Van Saun 2006 + Fowler 2010"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "cria": { "months": "0-6", "target_bw_kg": 27 },
+        "weanling": { "months": "6-18", "target_bw_kg": 50 },
+        "yearling": { "months": "18-30", "target_bw_kg": 60 },
+        "mature": { "months": "30+", "target_bw_kg": 65 }
+      },
+      "curve": [
+        { "month": 0,  "body_wt_kg": 7,  "adg_g_day": null, "notes": "birth" },
+        { "month": 3,  "body_wt_kg": 17, "adg_g_day": 111,  "notes": "nursing" },
+        { "month": 6,  "body_wt_kg": 27, "adg_g_day": 111,  "notes": "weaning" },
+        { "month": 12, "body_wt_kg": 42, "adg_g_day": 83,   "notes": "weanling" },
+        { "month": 18, "body_wt_kg": 53, "adg_g_day": 61,   "notes": "yearling" },
+        { "month": 24, "body_wt_kg": 60, "adg_g_day": 38,   "notes": "sub-adult" },
+        { "month": 36, "body_wt_kg": 65, "adg_g_day": 14,   "notes": "mature" }
+      ],
+      "fiber_performance": {
+        "first_shearing_age_months": 12,
+        "annual_fleece_kg_greasy": 2.8,
+        "fiber_diameter_micron": 19,
+        "staple_length_cm": 18,
+        "lock_style": "pencil_lock"
+      }
+    },
+    "llama": {
+      "_meta": {
+        "species": "Lama glama",
+        "common_name": "Llama",
+        "origin": "Andes — Peru, Bolivia, Argentina",
+        "mature_bw_kg_male": 150,
+        "mature_bw_kg_female": 120,
+        "birth_wt_kg": 11,
+        "weaning_age_months": 6,
+        "pack_load_kg": 30,
+        "gestation_days": 350,
+        "cu_max_mg_kg_dm": 15,
+        "data_quality": "research",
+        "source": "Van Saun 2006 + NRC 2007 + Fowler 2010"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "cria": { "months": "0-6", "target_bw_kg": 50 },
+        "weanling": { "months": "6-18", "target_bw_kg": 90 },
+        "yearling": { "months": "18-30", "target_bw_kg": 110 },
+        "mature": { "months": "30+", "target_bw_kg": 130 }
+      },
+      "curve": [
+        { "month": 0,  "body_wt_kg": 11,  "adg_g_day": null, "notes": "birth (cria)" },
+        { "month": 3,  "body_wt_kg": 32,  "adg_g_day": 233,  "notes": "nursing cria" },
+        { "month": 6,  "body_wt_kg": 50,  "adg_g_day": 200,  "notes": "weaning" },
+        { "month": 12, "body_wt_kg": 80,  "adg_g_day": 165,  "notes": "weanling" },
+        { "month": 18, "body_wt_kg": 100, "adg_g_day": 110,  "notes": "yearling" },
+        { "month": 24, "body_wt_kg": 115, "adg_g_day": 83,   "notes": "sub-adult" },
+        { "month": 36, "body_wt_kg": 130, "adg_g_day": 41,   "notes": "mature" }
+      ],
+      "pack_performance": {
+        "recommended_load_kg": 30,
+        "max_load_kg": 50,
+        "daily_trek_km": 20,
+        "training_age_months": 24
+      },
+      "fiber_performance": {
+        "annual_fleece_kg_greasy": 3.0,
+        "fiber_diameter_micron": 28,
+        "staple_length_cm": 10
+      }
+    }
+  }
+}

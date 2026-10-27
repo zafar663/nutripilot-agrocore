@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "breed": "coturnix_japonica_meat",
+    "species": "poultry",
+    "production": "quail_meat",
+    "age_unit": "day",
+    "source": "Japanese Quail Meat Production Standards 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "age": 7,  "body_wt_g": 55,  "fcr": 1.50, "adg_g": 7.1, "mortality_pct_max": 1.0 },
+    { "age": 14, "body_wt_g": 115, "fcr": 1.75, "adg_g": 8.6, "mortality_pct_max": 1.5 },
+    { "age": 21, "body_wt_g": 165, "fcr": 2.00, "adg_g": 7.1, "mortality_pct_max": 2.0 },
+    { "age": 35, "body_wt_g": 220, "fcr": 2.30, "adg_g": 3.9, "mortality_pct_max": 3.0 },
+    { "age": 42, "body_wt_g": 240, "fcr": 2.50, "adg_g": 2.9, "mortality_pct_max": 3.5 }
+  ]
+}

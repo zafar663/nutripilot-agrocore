@@ -1,0 +1,37 @@
+﻿{
+    "map":  {
+                "embden":  {
+                               "peak":  "poultry_goose_layer_embden_peak_v1",
+                               "late":  "poultry_goose_layer_embden_late_v1",
+                               "prelay":  "poultry_goose_layer_embden_prelay_v1",
+                               "early":  "poultry_goose_layer_embden_early_v1"
+                           },
+                "generic":  {
+                                "peak":  "poultry_goose_layer_generic_peak_v1",
+                                "late":  "poultry_goose_layer_generic_late_v1",
+                                "prelay":  "poultry_goose_layer_generic_prelay_v1",
+                                "early":  "poultry_goose_layer_generic_early_v1"
+                            },
+                "toulouse":  {
+                                 "peak":  "poultry_goose_layer_toulouse_peak_v1",
+                                 "late":  "poultry_goose_layer_toulouse_late_v1",
+                                 "prelay":  "poultry_goose_layer_toulouse_prelay_v1",
+                                 "early":  "poultry_goose_layer_toulouse_early_v1"
+                             }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "layer",
+                  "type":  "goose",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T00:42:13Z",
+                  "mode":  "option_b_inheritance_ready"
+              },
+    "phases":  {
+                   "peak":  "poultry_goose_layer_generic_peak_v1",
+                   "late":  "poultry_goose_layer_generic_late_v1",
+                   "prelay":  "poultry_goose_layer_generic_prelay_v1",
+                   "early":  "poultry_goose_layer_generic_early_v1"
+               }
+}

@@ -1,0 +1,37 @@
+{
+    "map":  {
+                "embden":  {
+                               "grower":  "poultry_goose_meat_embden_grower_v1",
+                               "finisher":  "poultry_goose_meat_embden_finisher_v1",
+                               "withdrawal":  "poultry_goose_meat_embden_withdrawal_v1",
+                               "starter":  "poultry_goose_meat_embden_starter_v1"
+                           },
+                "generic":  {
+                                "grower":  "poultry_goose_meat_generic_grower_v1",
+                                "finisher":  "poultry_goose_meat_generic_finisher_v1",
+                                "withdrawal":  "poultry_goose_meat_generic_withdrawal_v1",
+                                "starter":  "poultry_goose_meat_generic_starter_v1"
+                            },
+                "toulouse":  {
+                                 "grower":  "poultry_goose_meat_toulouse_grower_v1",
+                                 "finisher":  "poultry_goose_meat_toulouse_finisher_v1",
+                                 "withdrawal":  "poultry_goose_meat_toulouse_withdrawal_v1",
+                                 "starter":  "poultry_goose_meat_toulouse_starter_v1"
+                             },
+                "african":  {
+                                "grower":  "poultry_goose_meat_african_grower_v1",
+                                "finisher":  "poultry_goose_meat_african_finisher_v1",
+                                "withdrawal":  "poultry_goose_meat_african_withdrawal_v1",
+                                "starter":  "poultry_goose_meat_african_starter_v1"
+                            }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "meat",
+                  "type":  "goose",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

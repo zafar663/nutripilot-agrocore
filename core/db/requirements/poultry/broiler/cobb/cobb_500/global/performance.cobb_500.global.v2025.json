@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "breed": "cobb_500",
+    "species": "poultry",
+    "production": "broiler",
+    "age_unit": "day",
+    "source": "Cobb 500 Broiler Performance & Nutrition Supplement 2023",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "age": 7,  "body_wt_g": 188,  "fcr": 0.889, "adg_g": 24.9, "feed_per_bird_g": 22,  "water_feed_ratio": 1.80, "mortality_pct_max": 0.5 },
+    { "age": 14, "body_wt_g": 450,  "fcr": 1.107, "adg_g": 37.4, "feed_per_bird_g": 46,  "water_feed_ratio": 1.85, "mortality_pct_max": 1.0 },
+    { "age": 21, "body_wt_g": 875,  "fcr": 1.275, "adg_g": 60.7, "feed_per_bird_g": 84,  "water_feed_ratio": 1.90, "mortality_pct_max": 1.5 },
+    { "age": 28, "body_wt_g": 1530, "fcr": 1.445, "adg_g": 93.6, "feed_per_bird_g": 143, "water_feed_ratio": 1.95, "mortality_pct_max": 2.0 },
+    { "age": 35, "body_wt_g": 2310, "fcr": 1.615, "adg_g": 111,  "feed_per_bird_g": 200, "water_feed_ratio": 2.00, "mortality_pct_max": 2.5 },
+    { "age": 42, "body_wt_g": 3090, "fcr": 1.775, "adg_g": 111,  "feed_per_bird_g": 253, "water_feed_ratio": 2.00, "mortality_pct_max": 3.5 }
+  ],
+  "phases": {
+    "starter":  { "days": "1-10",  "energy_kcal": 3000 },
+    "grower":   { "days": "11-24", "energy_kcal": 3100 },
+    "finisher": { "days": "25-42", "energy_kcal": 3150 }
+  }
+}

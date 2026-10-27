@@ -1,0 +1,15 @@
+{
+  "policy_id": "equine_optimizer_policy_v1",
+  "species": "equine",
+  "energy_system": "DE",
+  "amino_acid_system": "TOTAL",
+  "practical_limits": {
+    "starch_pct_max_default": 20,
+    "nsc_pct_max_default": 25,
+    "fat_pct_max_default": 10,
+    "ca_p_ratio_min": 1.2,
+    "ca_p_ratio_max": 2.5,
+    "forage_dependency_note": "Equine formulation must consider total diet including forage. Concentrate-only balancing is not a complete ration unless forage assumptions are included."
+  },
+  "status": "skeleton"
+}

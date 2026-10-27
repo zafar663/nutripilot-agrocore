@@ -1,0 +1,5194 @@
+{
+  "_meta": {
+    "description": "Donkey performance standards library — 13 breeds/types, individual animal tracking",
+    "version": "v2025.1",
+    "species": "Equus asinus",
+    "age_unit": "months",
+    "created_utc": "2026-05-21T00:00:00Z",
+    "energy_note": "Donkey DE requirements = ~75% of horse at equivalent BW (NRC 2007 — donkeys are more feed-efficient than horses)",
+    "data_quality_notes": {
+      "official_research": [
+        "dezhou_wutou (ScienceDirect 2022 Brody model R²=0.991)",
+        "dezhou_sanfen (same study)"
+      ],
+      "nrc_2007_donkey_chapter": [
+        "standard_donkey"
+      ],
+      "fao_literature": [
+        "nubian",
+        "somali"
+      ],
+      "nrc_fallback": [
+        "guanzhong",
+        "jinnan",
+        "poitou",
+        "mammoth_jackstock",
+        "baluchi_donkey",
+        "kathiawari_donkey",
+        "moroccan_donkey",
+        "miniature_donkey"
+      ]
+    },
+    "reproductive_schema": {
+      "_schema_version": "v1",
+      "fields": {
+        "sex": [
+          "jenny",
+          "jack",
+          "gelding"
+        ],
+        "cycle_date": "ISO date — last observed estrus (jennies cycle every 23 days)",
+        "breeding_date": "ISO date",
+        "breeding_type": [
+          "natural",
+          "ai"
+        ],
+        "jack_id": "donkey_id reference — optional",
+        "pregnancy_confirmed": "boolean",
+        "pregnancy_confirmed_date": "ISO date",
+        "expected_foaling_date": "auto: breeding_date + gestation_days",
+        "actual_foaling_date": "ISO date",
+        "foal_outcome": [
+          "live",
+          "stillborn",
+          "abortion"
+        ],
+        "foal_id": "donkey_id of resulting foal",
+        "notes": "free text"
+      },
+      "gestation_standard_days": 365,
+      "gestation_range_days": {
+        "min": 350,
+        "max": 380
+      },
+      "estrus_cycle_days": 23,
+      "note": "Donkey gestation ~365 days vs horse 340 days"
+    },
+    "total_breeds": 13
+  },
+  "dezhou_wutou": {
+    "_meta": {
+      "breed": "dezhou_wutou",
+      "name": "Dezhou Wutou Donkey",
+      "category": "large_chinese",
+      "mature_bw_kg": 310,
+      "data_source": "ScienceDirect 2022 — Brody model R²=0.991, Shandong Province breeding farms",
+      "data_quality": "official_research",
+      "gestation_days": 365,
+      "use": [
+        "meat",
+        "milk",
+        "hide",
+        "draught"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 28,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.8,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.4,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 54,
+        "adg_kg": 0.86,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.5,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 73,
+        "adg_kg": 0.62,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 88,
+        "adg_kg": 0.49,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 102,
+        "adg_kg": 0.46,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 5.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 115,
+        "adg_kg": 0.43,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 5.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 120,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.0,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 138,
+        "adg_kg": 0.59,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 147,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.7,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 7.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 155,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 7.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 163,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 4.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 8.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 170,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 4.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 8.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 195,
+        "adg_kg": 0.82,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 4.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 9.8,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 186,
+        "adg_kg": -0.15,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 4.1,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 9.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 195,
+        "adg_kg": 0.15,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 4.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 9.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 248,
+        "adg_kg": 0.87,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 5.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 12.4,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 209,
+        "adg_kg": -0.64,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 4.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 10.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 215,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 4.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 10.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 280,
+        "adg_kg": 1.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.7,
+        "feed_kg_day": 5.6,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 14.0,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 236,
+        "adg_kg": -0.24,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 4.7,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 11.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 310,
+        "adg_kg": 0.41,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 5.0,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 15.5,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 288,
+        "adg_kg": -0.06,
+        "bcs_target": 5,
+        "de_mcal_day": 1.7,
+        "feed_kg_day": 4.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 14.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 304,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 4.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 15.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 310,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 5.0,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 15.5,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 310,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 5.0,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 15.5,
+        "cp_g_day": 335
+      },
+      "light": {
+        "body_wt_kg": 310,
+        "bcs_target": 5,
+        "de_mcal_day": 2.2,
+        "feed_kg_day": 5.6,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 17.8,
+        "cp_g_day": 335
+      },
+      "moderate": {
+        "body_wt_kg": 310,
+        "bcs_target": 5,
+        "de_mcal_day": 2.5,
+        "feed_kg_day": 6.2,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 20.2,
+        "cp_g_day": 335
+      },
+      "heavy": {
+        "body_wt_kg": 310,
+        "bcs_target": 5,
+        "de_mcal_day": 2.9,
+        "feed_kg_day": 6.8,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 22.5,
+        "cp_g_day": 335
+      },
+      "very_heavy": {
+        "body_wt_kg": 310,
+        "bcs_target": 5,
+        "de_mcal_day": 3.4,
+        "feed_kg_day": 7.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 24.8,
+        "cp_g_day": 335
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 326,
+        "bcs_target": 5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 5.9,
+        "water_l_day": 17.1,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 347,
+        "bcs_target": 5.5,
+        "de_mcal_day": 2.2,
+        "feed_kg_day": 6.9,
+        "water_l_day": 18.6,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 310,
+        "bcs_target": 4.5,
+        "de_mcal_day": 2.9,
+        "feed_kg_day": 8.1,
+        "water_l_day": 21.7,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 310,
+        "bcs_target": 5.0,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 6.8,
+        "water_l_day": 18.6,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "dezhou_sanfen": {
+    "_meta": {
+      "breed": "dezhou_sanfen",
+      "name": "Dezhou Sanfen Donkey",
+      "category": "large_chinese",
+      "mature_bw_kg": 260,
+      "data_source": "ScienceDirect 2022 — same Brody model study, Sanfen strain smaller than Wutou",
+      "data_quality": "official_research",
+      "gestation_days": 365,
+      "use": [
+        "meat",
+        "milk",
+        "hide"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 24,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.2,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 46,
+        "adg_kg": 0.72,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 61,
+        "adg_kg": 0.49,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 74,
+        "adg_kg": 0.43,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 86,
+        "adg_kg": 0.39,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 96,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 100,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.0,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 116,
+        "adg_kg": 0.53,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 124,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 130,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 136,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 142,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 7.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 165,
+        "adg_kg": 0.76,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.2,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 156,
+        "adg_kg": -0.15,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 163,
+        "adg_kg": 0.12,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 210,
+        "adg_kg": 0.77,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 4.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 10.5,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 175,
+        "adg_kg": -0.58,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 3.9,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 180,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 4.0,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 9.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 238,
+        "adg_kg": 0.95,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 4.8,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 11.9,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 198,
+        "adg_kg": -0.22,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 4.0,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 9.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 260,
+        "adg_kg": 0.34,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.2,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 13.0,
+        "bw_source": "breed_specific"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 242,
+        "adg_kg": -0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 12.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 255,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.1,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 12.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 260,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.2,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 13.0,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 260,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.2,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 13.0,
+        "cp_g_day": 281
+      },
+      "light": {
+        "body_wt_kg": 260,
+        "bcs_target": 5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 4.7,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 14.9,
+        "cp_g_day": 281
+      },
+      "moderate": {
+        "body_wt_kg": 260,
+        "bcs_target": 5,
+        "de_mcal_day": 2.2,
+        "feed_kg_day": 5.2,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 16.9,
+        "cp_g_day": 281
+      },
+      "heavy": {
+        "body_wt_kg": 260,
+        "bcs_target": 5,
+        "de_mcal_day": 2.6,
+        "feed_kg_day": 5.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 18.8,
+        "cp_g_day": 281
+      },
+      "very_heavy": {
+        "body_wt_kg": 260,
+        "bcs_target": 5,
+        "de_mcal_day": 3.0,
+        "feed_kg_day": 6.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 20.8,
+        "cp_g_day": 281
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 273,
+        "bcs_target": 5,
+        "de_mcal_day": 1.7,
+        "feed_kg_day": 4.9,
+        "water_l_day": 14.3,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 291,
+        "bcs_target": 5.5,
+        "de_mcal_day": 2.0,
+        "feed_kg_day": 5.8,
+        "water_l_day": 15.6,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 260,
+        "bcs_target": 4.5,
+        "de_mcal_day": 2.6,
+        "feed_kg_day": 6.8,
+        "water_l_day": 18.2,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 260,
+        "bcs_target": 5.0,
+        "de_mcal_day": 2.2,
+        "feed_kg_day": 5.7,
+        "water_l_day": 15.6,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "guanzhong": {
+    "_meta": {
+      "breed": "guanzhong",
+      "name": "Guanzhong Donkey",
+      "category": "large_chinese",
+      "mature_bw_kg": 250,
+      "data_source": "Chinese livestock records — large breed, Shaanxi Province",
+      "data_quality": "nrc_fallback",
+      "gestation_days": 365,
+      "use": [
+        "draught",
+        "meat"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 26,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 44,
+        "adg_kg": 0.59,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 59,
+        "adg_kg": 0.49,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 71,
+        "adg_kg": 0.39,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 82,
+        "adg_kg": 0.36,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.3,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 92,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.6,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 102,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 111,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 119,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 125,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 131,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.3,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 137,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 142,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.1,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 150,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 157,
+        "adg_kg": 0.12,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 163,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 168,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 3.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 173,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 3.8,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 178,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 8.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 190,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 3.8,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 9.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 208,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 3.3,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 10.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 232,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.7,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 11.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 245,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 12.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 250,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.0,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 12.5,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 250,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.0,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 12.5,
+        "cp_g_day": 270
+      },
+      "light": {
+        "body_wt_kg": 250,
+        "bcs_target": 5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 4.5,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 14.4,
+        "cp_g_day": 270
+      },
+      "moderate": {
+        "body_wt_kg": 250,
+        "bcs_target": 5,
+        "de_mcal_day": 2.2,
+        "feed_kg_day": 5.0,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 16.2,
+        "cp_g_day": 270
+      },
+      "heavy": {
+        "body_wt_kg": 250,
+        "bcs_target": 5,
+        "de_mcal_day": 2.6,
+        "feed_kg_day": 5.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 18.1,
+        "cp_g_day": 270
+      },
+      "very_heavy": {
+        "body_wt_kg": 250,
+        "bcs_target": 5,
+        "de_mcal_day": 3.0,
+        "feed_kg_day": 6.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 20.0,
+        "cp_g_day": 270
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 262,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.7,
+        "water_l_day": 13.8,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 280,
+        "bcs_target": 5.5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 5.6,
+        "water_l_day": 15.0,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 250,
+        "bcs_target": 4.5,
+        "de_mcal_day": 2.6,
+        "feed_kg_day": 6.5,
+        "water_l_day": 17.5,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 250,
+        "bcs_target": 5.0,
+        "de_mcal_day": 2.2,
+        "feed_kg_day": 5.5,
+        "water_l_day": 15.0,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "jinnan": {
+    "_meta": {
+      "breed": "jinnan",
+      "name": "Jinnan Donkey",
+      "category": "large_chinese",
+      "mature_bw_kg": 245,
+      "data_source": "Chinese livestock records — large breed, Shanxi Province",
+      "data_quality": "nrc_fallback",
+      "gestation_days": 365,
+      "use": [
+        "draught",
+        "meat"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 26,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 43,
+        "adg_kg": 0.56,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 58,
+        "adg_kg": 0.49,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 70,
+        "adg_kg": 0.39,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 81,
+        "adg_kg": 0.36,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.3,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 91,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 100,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 109,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.7,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 116,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 122,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 129,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 134,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 139,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.1,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 147,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 154,
+        "adg_kg": 0.12,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 160,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 165,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 170,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 3.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 174,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 3.5,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 8.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 186,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 3.7,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 9.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 203,
+        "adg_kg": 0.09,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 10.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 228,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 11.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 240,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.8,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 12.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 245,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 12.2,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 245,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 12.2,
+        "cp_g_day": 265
+      },
+      "light": {
+        "body_wt_kg": 245,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 4.4,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 14.1,
+        "cp_g_day": 265
+      },
+      "moderate": {
+        "body_wt_kg": 245,
+        "bcs_target": 5,
+        "de_mcal_day": 2.1,
+        "feed_kg_day": 4.9,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 15.9,
+        "cp_g_day": 265
+      },
+      "heavy": {
+        "body_wt_kg": 245,
+        "bcs_target": 5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 5.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 17.8,
+        "cp_g_day": 265
+      },
+      "very_heavy": {
+        "body_wt_kg": 245,
+        "bcs_target": 5,
+        "de_mcal_day": 2.8,
+        "feed_kg_day": 6.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 19.6,
+        "cp_g_day": 265
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 257,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.6,
+        "water_l_day": 13.5,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 274,
+        "bcs_target": 5.5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 5.5,
+        "water_l_day": 14.7,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 245,
+        "bcs_target": 4.5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 6.4,
+        "water_l_day": 17.2,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 245,
+        "bcs_target": 5.0,
+        "de_mcal_day": 2.0,
+        "feed_kg_day": 5.4,
+        "water_l_day": 14.7,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "poitou": {
+    "_meta": {
+      "breed": "poitou",
+      "name": "Poitou (Baudet du Poitou)",
+      "category": "large_european",
+      "mature_bw_kg": 350,
+      "data_source": "French breed registry — endangered large breed, primarily used for mule production",
+      "data_quality": "nrc_fallback",
+      "gestation_days": 365,
+      "use": [
+        "mule_production"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 37,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.0,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 61,
+        "adg_kg": 0.79,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 82,
+        "adg_kg": 0.69,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.3,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 100,
+        "adg_kg": 0.59,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.8,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 5.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 116,
+        "adg_kg": 0.53,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 5.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 130,
+        "adg_kg": 0.46,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 6.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 144,
+        "adg_kg": 0.46,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 7.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 156,
+        "adg_kg": 0.39,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 7.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 166,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 4.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 8.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 175,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 4.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 8.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 184,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 4.6,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 9.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 192,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 4.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 9.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 199,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 4.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 10.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 210,
+        "adg_kg": 0.18,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 4.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 10.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 220,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 4.8,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 11.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 228,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 5.0,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 11.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 236,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 5.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 11.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 242,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 5.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 12.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 248,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 5.0,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 12.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 266,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 5.3,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 13.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 290,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 4.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 14.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 326,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 5.2,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 16.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 343,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 2.0,
+        "feed_kg_day": 5.5,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 17.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 350,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 2.0,
+        "feed_kg_day": 5.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 17.5,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 350,
+        "bcs_target": 5,
+        "de_mcal_day": 2.0,
+        "feed_kg_day": 5.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 17.5,
+        "cp_g_day": 378
+      },
+      "light": {
+        "body_wt_kg": 350,
+        "bcs_target": 5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 6.3,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 20.1,
+        "cp_g_day": 378
+      },
+      "moderate": {
+        "body_wt_kg": 350,
+        "bcs_target": 5,
+        "de_mcal_day": 2.8,
+        "feed_kg_day": 7.0,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 22.8,
+        "cp_g_day": 378
+      },
+      "heavy": {
+        "body_wt_kg": 350,
+        "bcs_target": 5,
+        "de_mcal_day": 3.2,
+        "feed_kg_day": 7.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 25.4,
+        "cp_g_day": 378
+      },
+      "very_heavy": {
+        "body_wt_kg": 350,
+        "bcs_target": 5,
+        "de_mcal_day": 3.8,
+        "feed_kg_day": 8.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 28.0,
+        "cp_g_day": 378
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 368,
+        "bcs_target": 5,
+        "de_mcal_day": 2.1,
+        "feed_kg_day": 6.6,
+        "water_l_day": 19.2,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 392,
+        "bcs_target": 5.5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 7.8,
+        "water_l_day": 21.0,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 350,
+        "bcs_target": 4.5,
+        "de_mcal_day": 3.2,
+        "feed_kg_day": 9.1,
+        "water_l_day": 24.5,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 350,
+        "bcs_target": 5.0,
+        "de_mcal_day": 2.7,
+        "feed_kg_day": 7.7,
+        "water_l_day": 21.0,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "mammoth_jackstock": {
+    "_meta": {
+      "breed": "mammoth_jackstock",
+      "name": "American Mammoth Jackstock",
+      "category": "large_american",
+      "mature_bw_kg": 430,
+      "data_source": "American Mammoth Jackstock Registry — NRC 2007 fallback large donkey class",
+      "data_quality": "nrc_fallback",
+      "gestation_days": 365,
+      "use": [
+        "mule_production",
+        "draught"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 45,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 75,
+        "adg_kg": 0.99,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 101,
+        "adg_kg": 0.86,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.8,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 5.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 123,
+        "adg_kg": 0.72,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 6.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 142,
+        "adg_kg": 0.62,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 4.0,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 7.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 159,
+        "adg_kg": 0.56,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 4.5,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 8.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 176,
+        "adg_kg": 0.56,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 4.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 8.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 191,
+        "adg_kg": 0.49,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 4.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 9.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 204,
+        "adg_kg": 0.43,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 5.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 10.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 215,
+        "adg_kg": 0.36,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 5.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 10.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 226,
+        "adg_kg": 0.36,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 5.7,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 11.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 236,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 5.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 11.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 244,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 5.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 12.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 258,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 5.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 12.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 270,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 1.7,
+        "feed_kg_day": 5.9,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 13.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 280,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 1.7,
+        "feed_kg_day": 6.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 14.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 289,
+        "adg_kg": 0.15,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 6.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 14.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 298,
+        "adg_kg": 0.15,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 6.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 14.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 305,
+        "adg_kg": 0.12,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 6.1,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 15.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 327,
+        "adg_kg": 0.12,
+        "bcs_target": 5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 6.5,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 16.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 357,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 2.1,
+        "feed_kg_day": 5.7,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 17.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 400,
+        "adg_kg": 0.12,
+        "bcs_target": 5,
+        "de_mcal_day": 2.2,
+        "feed_kg_day": 6.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 20.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 421,
+        "adg_kg": 0.06,
+        "bcs_target": 5,
+        "de_mcal_day": 2.3,
+        "feed_kg_day": 6.7,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 21.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 430,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 6.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 21.5,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 430,
+        "bcs_target": 5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 6.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 21.5,
+        "cp_g_day": 464
+      },
+      "light": {
+        "body_wt_kg": 430,
+        "bcs_target": 5,
+        "de_mcal_day": 2.9,
+        "feed_kg_day": 7.7,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 24.7,
+        "cp_g_day": 464
+      },
+      "moderate": {
+        "body_wt_kg": 430,
+        "bcs_target": 5,
+        "de_mcal_day": 3.4,
+        "feed_kg_day": 8.6,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 27.9,
+        "cp_g_day": 464
+      },
+      "heavy": {
+        "body_wt_kg": 430,
+        "bcs_target": 5,
+        "de_mcal_day": 3.8,
+        "feed_kg_day": 9.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 31.2,
+        "cp_g_day": 464
+      },
+      "very_heavy": {
+        "body_wt_kg": 430,
+        "bcs_target": 5,
+        "de_mcal_day": 4.6,
+        "feed_kg_day": 10.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 34.4,
+        "cp_g_day": 464
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 452,
+        "bcs_target": 5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 8.1,
+        "water_l_day": 23.6,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 482,
+        "bcs_target": 5.5,
+        "de_mcal_day": 2.9,
+        "feed_kg_day": 9.6,
+        "water_l_day": 25.8,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 430,
+        "bcs_target": 4.5,
+        "de_mcal_day": 3.8,
+        "feed_kg_day": 11.2,
+        "water_l_day": 30.1,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 430,
+        "bcs_target": 5.0,
+        "de_mcal_day": 3.2,
+        "feed_kg_day": 9.5,
+        "water_l_day": 25.8,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "standard_donkey": {
+    "_meta": {
+      "breed": "standard_donkey",
+      "name": "Standard Donkey (Generic)",
+      "category": "medium_generic",
+      "mature_bw_kg": 230,
+      "data_source": "NRC 2007 Chapter — Donkeys and Other Equids; general medium donkey standard",
+      "data_quality": "nrc_2007_donkey_chapter",
+      "gestation_days": 365,
+      "use": [
+        "draught",
+        "pack",
+        "companion"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 24,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 40,
+        "adg_kg": 0.53,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.1,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 54,
+        "adg_kg": 0.46,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.5,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 66,
+        "adg_kg": 0.39,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 76,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 85,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 4.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 94,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 102,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 109,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.7,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 115,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 121,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 126,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 3.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 6.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 131,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 6.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 138,
+        "adg_kg": 0.12,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.0,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 6.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 144,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 150,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 155,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 7.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 159,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 163,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 3.3,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 8.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 175,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 3.5,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 8.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 191,
+        "adg_kg": 0.09,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 3.1,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 9.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 214,
+        "adg_kg": 0.06,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 3.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 10.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 225,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 11.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 230,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.7,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 11.5,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 230,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.7,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 11.5,
+        "cp_g_day": 248
+      },
+      "light": {
+        "body_wt_kg": 230,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 4.1,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 13.2,
+        "cp_g_day": 248
+      },
+      "moderate": {
+        "body_wt_kg": 230,
+        "bcs_target": 5,
+        "de_mcal_day": 2.1,
+        "feed_kg_day": 4.6,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 15.0,
+        "cp_g_day": 248
+      },
+      "heavy": {
+        "body_wt_kg": 230,
+        "bcs_target": 5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 5.1,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 16.7,
+        "cp_g_day": 248
+      },
+      "very_heavy": {
+        "body_wt_kg": 230,
+        "bcs_target": 5,
+        "de_mcal_day": 2.8,
+        "feed_kg_day": 5.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 18.4,
+        "cp_g_day": 248
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 242,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 4.3,
+        "water_l_day": 12.7,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 258,
+        "bcs_target": 5.5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 5.2,
+        "water_l_day": 13.8,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 230,
+        "bcs_target": 4.5,
+        "de_mcal_day": 2.4,
+        "feed_kg_day": 6.0,
+        "water_l_day": 16.1,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 230,
+        "bcs_target": 5.0,
+        "de_mcal_day": 2.0,
+        "feed_kg_day": 5.1,
+        "water_l_day": 13.8,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "nubian": {
+    "_meta": {
+      "breed": "nubian",
+      "name": "Nubian Donkey",
+      "category": "medium_african",
+      "mature_bw_kg": 130,
+      "data_source": "FAO Animal Production Paper — East African donkey, Sudan/Ethiopia",
+      "data_quality": "fao_literature",
+      "gestation_days": 360,
+      "use": [
+        "draught",
+        "pack",
+        "milk"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 14,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.2,
+        "feed_kg_day": 0.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 0.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 23,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.6,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 31,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.9,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 37,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.0,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 43,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 48,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 53,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 58,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 62,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 65,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 68,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 71,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 74,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 78,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 82,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 85,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 87,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 90,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 92,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 4.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 99,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 5.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 108,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 5.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 121,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 6.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 127,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 6.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 130,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 6.5,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 130,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 6.5,
+        "cp_g_day": 140
+      },
+      "light": {
+        "body_wt_kg": 130,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 2.3,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 7.5,
+        "cp_g_day": 140
+      },
+      "moderate": {
+        "body_wt_kg": 130,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 2.6,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 8.5,
+        "cp_g_day": 140
+      },
+      "heavy": {
+        "body_wt_kg": 130,
+        "bcs_target": 5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 9.4,
+        "cp_g_day": 140
+      },
+      "very_heavy": {
+        "body_wt_kg": 130,
+        "bcs_target": 5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 10.4,
+        "cp_g_day": 140
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 136,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 2.5,
+        "water_l_day": 7.2,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 146,
+        "bcs_target": 5.5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.9,
+        "water_l_day": 7.8,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 130,
+        "bcs_target": 4.5,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 3.4,
+        "water_l_day": 9.1,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 130,
+        "bcs_target": 5.0,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 2.9,
+        "water_l_day": 7.8,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "somali": {
+    "_meta": {
+      "breed": "somali",
+      "name": "Somali Wild Donkey (Domestic)",
+      "category": "small_african",
+      "mature_bw_kg": 90,
+      "data_source": "FAO Animal Production Paper — smallest domesticated donkey",
+      "data_quality": "fao_literature",
+      "gestation_days": 360,
+      "use": [
+        "pack"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 9,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.1,
+        "feed_kg_day": 0.3,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 0.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 16,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 0.2,
+        "feed_kg_day": 0.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 0.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 21,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.2,
+        "feed_kg_day": 0.6,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 26,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 30,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.8,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 33,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.9,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 37,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 0.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 1.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 40,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 43,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 45,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 47,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 49,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 51,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.1,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 2.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 54,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 2.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 57,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 2.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 59,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 61,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 62,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 64,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 3.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 68,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 3.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 75,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 3.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 84,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 4.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 88,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 4.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 90,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 4.5,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 90,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 4.5,
+        "cp_g_day": 97
+      },
+      "light": {
+        "body_wt_kg": 90,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 5.2,
+        "cp_g_day": 97
+      },
+      "moderate": {
+        "body_wt_kg": 90,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 5.9,
+        "cp_g_day": 97
+      },
+      "heavy": {
+        "body_wt_kg": 90,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 6.5,
+        "cp_g_day": 97
+      },
+      "very_heavy": {
+        "body_wt_kg": 90,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 7.2,
+        "cp_g_day": 97
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 94,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 1.7,
+        "water_l_day": 5.0,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 101,
+        "bcs_target": 5.5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.0,
+        "water_l_day": 5.4,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 90,
+        "bcs_target": 4.5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.3,
+        "water_l_day": 6.3,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 90,
+        "bcs_target": 5.0,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.0,
+        "water_l_day": 5.4,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "baluchi_donkey": {
+    "_meta": {
+      "breed": "baluchi_donkey",
+      "name": "Baluchi / Sindhi Donkey",
+      "category": "medium_south_asian",
+      "mature_bw_kg": 150,
+      "data_source": "NRC 2007 fallback — medium donkey class; common Pakistan/India working donkey",
+      "data_quality": "nrc_fallback",
+      "gestation_days": 365,
+      "use": [
+        "draught",
+        "pack"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 16,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.2,
+        "feed_kg_day": 0.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 0.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 26,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 35,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.0,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 43,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 50,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 56,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 61,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 67,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 71,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 75,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 79,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 82,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 85,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 90,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 94,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 98,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 101,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 104,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 106,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 5.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 114,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.3,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 5.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 124,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 6.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 140,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 7.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 147,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 7.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 150,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 7.5,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 150,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 7.5,
+        "cp_g_day": 162
+      },
+      "light": {
+        "body_wt_kg": 150,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 2.7,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 8.6,
+        "cp_g_day": 162
+      },
+      "moderate": {
+        "body_wt_kg": 150,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.0,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 9.8,
+        "cp_g_day": 162
+      },
+      "heavy": {
+        "body_wt_kg": 150,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 3.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 10.9,
+        "cp_g_day": 162
+      },
+      "very_heavy": {
+        "body_wt_kg": 150,
+        "bcs_target": 5,
+        "de_mcal_day": 2.1,
+        "feed_kg_day": 3.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 12.0,
+        "cp_g_day": 162
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 158,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.8,
+        "water_l_day": 8.2,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 168,
+        "bcs_target": 5.5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 3.4,
+        "water_l_day": 9.0,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 150,
+        "bcs_target": 4.5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 3.9,
+        "water_l_day": 10.5,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 150,
+        "bcs_target": 5.0,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.3,
+        "water_l_day": 9.0,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "kathiawari_donkey": {
+    "_meta": {
+      "breed": "kathiawari_donkey",
+      "name": "Kathiawari Donkey",
+      "category": "medium_south_asian",
+      "mature_bw_kg": 160,
+      "data_source": "NRC 2007 fallback — medium donkey Gujarat/Rajasthan India",
+      "data_quality": "nrc_fallback",
+      "gestation_days": 365,
+      "use": [
+        "draught",
+        "pack"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 17,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.2,
+        "feed_kg_day": 0.5,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 0.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 28,
+        "adg_kg": 0.36,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.8,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 38,
+        "adg_kg": 0.33,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.1,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 46,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 53,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.5,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 59,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 66,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 71,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 76,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 80,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 84,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 88,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 91,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 96,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 100,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 104,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.3,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 108,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 111,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 114,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.3,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 5.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 122,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 6.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 133,
+        "adg_kg": 0.06,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 6.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 149,
+        "adg_kg": 0.04,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 7.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 157,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 7.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 160,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 8.0,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 160,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 8.0,
+        "cp_g_day": 173
+      },
+      "light": {
+        "body_wt_kg": 160,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 9.2,
+        "cp_g_day": 173
+      },
+      "moderate": {
+        "body_wt_kg": 160,
+        "bcs_target": 5,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 10.4,
+        "cp_g_day": 173
+      },
+      "heavy": {
+        "body_wt_kg": 160,
+        "bcs_target": 5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 3.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 11.6,
+        "cp_g_day": 173
+      },
+      "very_heavy": {
+        "body_wt_kg": 160,
+        "bcs_target": 5,
+        "de_mcal_day": 2.1,
+        "feed_kg_day": 4.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 12.8,
+        "cp_g_day": 173
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 168,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 3.0,
+        "water_l_day": 8.8,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 179,
+        "bcs_target": 5.5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 3.6,
+        "water_l_day": 9.6,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 160,
+        "bcs_target": 4.5,
+        "de_mcal_day": 1.8,
+        "feed_kg_day": 4.2,
+        "water_l_day": 11.2,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 160,
+        "bcs_target": 5.0,
+        "de_mcal_day": 1.5,
+        "feed_kg_day": 3.5,
+        "water_l_day": 9.6,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "moroccan_donkey": {
+    "_meta": {
+      "breed": "moroccan_donkey",
+      "name": "Moroccan Donkey",
+      "category": "medium_north_african",
+      "mature_bw_kg": 120,
+      "data_source": "NRC 2007 fallback — North African working donkey",
+      "data_quality": "nrc_fallback",
+      "gestation_days": 365,
+      "use": [
+        "draught",
+        "pack"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 13,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.2,
+        "feed_kg_day": 0.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 0.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 21,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.2,
+        "feed_kg_day": 0.6,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 28,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.8,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 34,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.0,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 40,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.1,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 44,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 49,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 53,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.3,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 57,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 2.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 60,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 63,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 66,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 68,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 72,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 75,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 78,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 3.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 81,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 83,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 4.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 85,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 4.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 91,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 4.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 100,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 1.6,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 5.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 112,
+        "adg_kg": 0.03,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 1.8,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 5.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 118,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 5.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 120,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 6.0,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 120,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 6.0,
+        "cp_g_day": 130
+      },
+      "light": {
+        "body_wt_kg": 120,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 6.9,
+        "cp_g_day": 130
+      },
+      "moderate": {
+        "body_wt_kg": 120,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 7.8,
+        "cp_g_day": 130
+      },
+      "heavy": {
+        "body_wt_kg": 120,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 2.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 8.7,
+        "cp_g_day": 130
+      },
+      "very_heavy": {
+        "body_wt_kg": 120,
+        "bcs_target": 5,
+        "de_mcal_day": 1.7,
+        "feed_kg_day": 3.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 9.6,
+        "cp_g_day": 130
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 126,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.3,
+        "water_l_day": 6.6,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 134,
+        "bcs_target": 5.5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.7,
+        "water_l_day": 7.2,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 120,
+        "bcs_target": 4.5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 3.1,
+        "water_l_day": 8.4,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 120,
+        "bcs_target": 5.0,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 2.6,
+        "water_l_day": 7.2,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  },
+  "miniature_donkey": {
+    "_meta": {
+      "breed": "miniature_donkey",
+      "name": "Miniature Mediterranean Donkey",
+      "category": "miniature",
+      "mature_bw_kg": 180,
+      "data_source": "American Miniature Donkey Registry — max height 36 inches, mature BW 100-230kg",
+      "data_quality": "nrc_fallback",
+      "gestation_days": 365,
+      "use": [
+        "companion",
+        "therapy"
+      ],
+      "parentage": null,
+      "entry_frequency": "weekly"
+    },
+    "warn_threshold_pct": 5,
+    "alert_threshold_pct": 10,
+    "growth_curve": [
+      {
+        "age_months": 0,
+        "stage": "foal",
+        "body_wt_kg": 19,
+        "adg_kg": null,
+        "bcs_target": 5,
+        "de_mcal_day": 0.2,
+        "feed_kg_day": 0.5,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 1,
+        "stage": "foal",
+        "body_wt_kg": 31,
+        "adg_kg": 0.39,
+        "bcs_target": 5,
+        "de_mcal_day": 0.3,
+        "feed_kg_day": 0.9,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 1.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 2,
+        "stage": "foal",
+        "body_wt_kg": 42,
+        "adg_kg": 0.36,
+        "bcs_target": 5,
+        "de_mcal_day": 0.4,
+        "feed_kg_day": 1.2,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 3,
+        "stage": "foal",
+        "body_wt_kg": 51,
+        "adg_kg": 0.3,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.4,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 2.6,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 4,
+        "stage": "foal",
+        "body_wt_kg": 59,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.5,
+        "feed_kg_day": 1.7,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 5,
+        "stage": "foal",
+        "body_wt_kg": 67,
+        "adg_kg": 0.26,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 2.8,
+        "water_l_day": 3.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 6,
+        "stage": "weanling",
+        "body_wt_kg": 74,
+        "adg_kg": 0.23,
+        "bcs_target": 5,
+        "de_mcal_day": 0.6,
+        "feed_kg_day": 1.9,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 3.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 7,
+        "stage": "weanling",
+        "body_wt_kg": 80,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.0,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 8,
+        "stage": "weanling",
+        "body_wt_kg": 86,
+        "adg_kg": 0.2,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.1,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 9,
+        "stage": "weanling",
+        "body_wt_kg": 90,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.7,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 10,
+        "stage": "weanling",
+        "body_wt_kg": 94,
+        "adg_kg": 0.13,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 4.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 11,
+        "stage": "weanling",
+        "body_wt_kg": 99,
+        "adg_kg": 0.16,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 5.0,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 12,
+        "stage": "yearling",
+        "body_wt_kg": 102,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.2,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 14,
+        "stage": "yearling",
+        "body_wt_kg": 108,
+        "adg_kg": 0.1,
+        "bcs_target": 5,
+        "de_mcal_day": 0.8,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 16,
+        "stage": "yearling",
+        "body_wt_kg": 113,
+        "adg_kg": 0.08,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.5,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.7,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 18,
+        "stage": "yearling",
+        "body_wt_kg": 117,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.6,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 5.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 20,
+        "stage": "yearling",
+        "body_wt_kg": 121,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.7,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 6.1,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 22,
+        "stage": "yearling",
+        "body_wt_kg": 125,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 0.9,
+        "feed_kg_day": 2.8,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 6.2,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 24,
+        "stage": "2yr",
+        "body_wt_kg": 128,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 2.6,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 6.4,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 30,
+        "stage": "2yr",
+        "body_wt_kg": 137,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 1.0,
+        "feed_kg_day": 2.7,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 6.9,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 36,
+        "stage": "adult",
+        "body_wt_kg": 149,
+        "adg_kg": 0.07,
+        "bcs_target": 5,
+        "de_mcal_day": 1.1,
+        "feed_kg_day": 2.4,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 7.5,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 48,
+        "stage": "adult",
+        "body_wt_kg": 167,
+        "adg_kg": 0.05,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 2.7,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 8.3,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 60,
+        "stage": "adult",
+        "body_wt_kg": 176,
+        "adg_kg": 0.02,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 2.8,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 8.8,
+        "bw_source": "nrc_2007"
+      },
+      {
+        "age_months": 72,
+        "stage": "adult",
+        "body_wt_kg": 180,
+        "adg_kg": 0.01,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 9.0,
+        "bw_source": "nrc_2007"
+      }
+    ],
+    "adult_workload_standards": {
+      "maintenance": {
+        "body_wt_kg": 180,
+        "bcs_target": 5,
+        "de_mcal_day": 1.2,
+        "feed_kg_day": 2.9,
+        "feed_pct_bw": 1.6,
+        "water_l_day": 9.0,
+        "cp_g_day": 194
+      },
+      "light": {
+        "body_wt_kg": 180,
+        "bcs_target": 5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 3.2,
+        "feed_pct_bw": 1.8,
+        "water_l_day": 10.3,
+        "cp_g_day": 194
+      },
+      "moderate": {
+        "body_wt_kg": 180,
+        "bcs_target": 5,
+        "de_mcal_day": 1.7,
+        "feed_kg_day": 3.6,
+        "feed_pct_bw": 2.0,
+        "water_l_day": 11.7,
+        "cp_g_day": 194
+      },
+      "heavy": {
+        "body_wt_kg": 180,
+        "bcs_target": 5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 4.0,
+        "feed_pct_bw": 2.2,
+        "water_l_day": 13.0,
+        "cp_g_day": 194
+      },
+      "very_heavy": {
+        "body_wt_kg": 180,
+        "bcs_target": 5,
+        "de_mcal_day": 2.3,
+        "feed_kg_day": 4.5,
+        "feed_pct_bw": 2.5,
+        "water_l_day": 14.4,
+        "cp_g_day": 194
+      }
+    },
+    "reproductive_standards": {
+      "pregnant_early": {
+        "stage": "months 1-8",
+        "body_wt_kg": 189,
+        "bcs_target": 5,
+        "de_mcal_day": 1.3,
+        "feed_kg_day": 3.4,
+        "water_l_day": 9.9,
+        "note": "Minimal extra requirements months 1-8"
+      },
+      "pregnant_late": {
+        "stage": "months 9-12",
+        "body_wt_kg": 202,
+        "bcs_target": 5.5,
+        "de_mcal_day": 1.4,
+        "feed_kg_day": 4.0,
+        "water_l_day": 10.8,
+        "note": "10% increase in DE — NRC 2007"
+      },
+      "lactating_early": {
+        "stage": "months 1-3 postpartum",
+        "body_wt_kg": 180,
+        "bcs_target": 4.5,
+        "de_mcal_day": 1.9,
+        "feed_kg_day": 4.7,
+        "water_l_day": 12.6,
+        "note": "60% increase in DE — peak lactation"
+      },
+      "lactating_late": {
+        "stage": "months 4-6 postpartum",
+        "body_wt_kg": 180,
+        "bcs_target": 5.0,
+        "de_mcal_day": 1.6,
+        "feed_kg_day": 4.0,
+        "water_l_day": 10.8,
+        "note": "35% increase in DE — declining milk"
+      }
+    }
+  }
+}

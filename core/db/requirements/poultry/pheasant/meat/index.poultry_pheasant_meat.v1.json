@@ -1,0 +1,43 @@
+{
+  "map": {
+    "nrc2026": {
+      "starter": "poultry_pheasant_meat_nrc2026_wk_0_4_v1",
+      "grower": "poultry_pheasant_meat_nrc2026_wk_4_8_v1",
+      "finisher": "poultry_pheasant_meat_nrc2026_wk_9_17_v1",
+      "withdrawal": "poultry_pheasant_meat_nrc2026_wk_9_17_v1"
+    },
+    "generic": {
+      "starter": "poultry_pheasant_meat_generic_starter_v1",
+      "grower": "poultry_pheasant_meat_generic_grower_v1",
+      "finisher": "poultry_pheasant_meat_generic_finisher_v1",
+      "withdrawal": "poultry_pheasant_meat_generic_withdrawal_v1"
+    },
+    "ring_necked": {
+      "starter": "poultry_pheasant_meat_ring_necked_starter_v1",
+      "grower": "poultry_pheasant_meat_ring_necked_grower_v1",
+      "finisher": "poultry_pheasant_meat_ring_necked_finisher_v1",
+      "withdrawal": "poultry_pheasant_meat_ring_necked_withdrawal_v1"
+    },
+    "melanistic": {
+      "starter": "poultry_pheasant_meat_melanistic_starter_v1",
+      "grower": "poultry_pheasant_meat_melanistic_grower_v1",
+      "finisher": "poultry_pheasant_meat_melanistic_finisher_v1",
+      "withdrawal": "poultry_pheasant_meat_melanistic_withdrawal_v1"
+    }
+  },
+  "_LOCK": {
+    "species": "poultry",
+    "version": "v1",
+    "production": "meat",
+    "type": "pheasant",
+    "kind": "requirements_index",
+    "created_utc": "2026-07-18T00:00:00Z",
+    "mode": "option_b_inheritance_ready"
+  },
+  "phases": {
+    "starter": "poultry_pheasant_meat_generic_starter_v1",
+    "grower": "poultry_pheasant_meat_generic_grower_v1",
+    "finisher": "poultry_pheasant_meat_generic_finisher_v1",
+    "withdrawal": "poultry_pheasant_meat_generic_withdrawal_v1"
+  }
+}

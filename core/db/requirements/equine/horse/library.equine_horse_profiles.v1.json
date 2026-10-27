@@ -1,0 +1,84 @@
+{
+  "library_id": "equine_horse_future_proof_profiles_v1",
+  "species": "equine",
+  "type": "horse",
+  "status": "metadata_profiles_only_targets_generated_by_nrc_engine",
+  "profiles": {
+    "equine_horse_maintenance_adult_500kg_v1": {
+      "production": "maintenance",
+      "class": "adult",
+      "body_weight_kg_default": 500,
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_growth_foal_v1": {
+      "production": "growth",
+      "class": "foal",
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_growth_weanling_v1": {
+      "production": "growth",
+      "class": "weanling",
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_growth_yearling_v1": {
+      "production": "growth",
+      "class": "yearling",
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_reproduction_pregnant_mare_v1": {
+      "production": "reproduction",
+      "class": "pregnant_mare",
+      "inputs_required": ["body_weight_kg", "gestation_month"],
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_lactation_mare_v1": {
+      "production": "lactation",
+      "class": "lactating_mare",
+      "inputs_required": ["body_weight_kg", "lactation_month"],
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_performance_light_work_v1": {
+      "production": "performance",
+      "work_level": "light",
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_performance_moderate_work_v1": {
+      "production": "performance",
+      "work_level": "moderate",
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_performance_heavy_work_v1": {
+      "production": "performance",
+      "work_level": "heavy",
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_performance_very_heavy_work_v1": {
+      "production": "performance",
+      "work_level": "very_heavy",
+      "engine": "nrc2007",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_senior_maintenance_v1": {
+      "production": "senior",
+      "class": "senior",
+      "engine": "nrc2007_plus_practical_adjustment",
+      "targets_mode": "dynamic"
+    },
+    "equine_horse_metabolic_low_nsc_v1": {
+      "production": "metabolic",
+      "class": "low_nsc",
+      "engine": "nrc2007_plus_practical_limits",
+      "targets_mode": "dynamic",
+      "safety_focus": ["nsc_pct", "starch_pct", "sugar_pct"]
+    }
+  }
+}

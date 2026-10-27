@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "breed": "arbor_acres_plus",
+    "species": "poultry",
+    "production": "broiler",
+    "age_unit": "day",
+    "source": "Aviagen Arbor Acres Plus Broiler Performance Objectives 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "age": 7,  "body_wt_g": 185,  "fcr": 0.900, "adg_g": 24.5, "feed_per_bird_g": 22,  "mortality_pct_max": 0.5 },
+    { "age": 14, "body_wt_g": 445,  "fcr": 1.120, "adg_g": 37.1, "feed_per_bird_g": 46,  "mortality_pct_max": 1.0 },
+    { "age": 21, "body_wt_g": 860,  "fcr": 1.295, "adg_g": 59.3, "feed_per_bird_g": 84,  "mortality_pct_max": 1.5 },
+    { "age": 28, "body_wt_g": 1490, "fcr": 1.465, "adg_g": 90.0, "feed_per_bird_g": 139, "mortality_pct_max": 2.0 },
+    { "age": 35, "body_wt_g": 2230, "fcr": 1.640, "adg_g": 105,  "feed_per_bird_g": 194, "mortality_pct_max": 2.5 },
+    { "age": 42, "body_wt_g": 2960, "fcr": 1.800, "adg_g": 104,  "feed_per_bird_g": 247, "mortality_pct_max": 3.5 }
+  ],
+  "phases": {
+    "starter":  { "days": "1-10",  "energy_kcal": 3050 },
+    "grower":   { "days": "11-24", "energy_kcal": 3150 },
+    "finisher": { "days": "25-42", "energy_kcal": 3200 }
+  }
+}

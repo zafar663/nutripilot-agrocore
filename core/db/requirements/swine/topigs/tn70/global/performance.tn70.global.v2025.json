@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "breed": "topigs_tn70",
+    "species": "swine",
+    "production": "sow",
+    "age_unit": "parity",
+    "source": "Topigs Norsvin TN70 Sow Performance Guide 2022",
+    "version": "v2025",
+    "note": "Per parity targets. Born alive is key KPI."
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "parity": 1, "total_born": 15.8, "born_alive": 14.5, "stillbirth_rate_pct": 8.2, "weaned_pigs": 13.0, "pre_weaning_mortality_pct": 10.3, "piglet_birth_wt_kg": 1.45, "litter_wt_weaning_kg": 91.0,  "wean_to_service_days": 5, "farrowing_rate_pct": 88, "mortality_pct_max": 5 },
+    { "parity": 2, "total_born": 17.0, "born_alive": 15.5, "stillbirth_rate_pct": 8.8, "weaned_pigs": 14.0, "pre_weaning_mortality_pct": 9.7,  "piglet_birth_wt_kg": 1.42, "litter_wt_weaning_kg": 98.0,  "wean_to_service_days": 5, "farrowing_rate_pct": 90, "mortality_pct_max": 5 },
+    { "parity": 3, "total_born": 18.0, "born_alive": 16.5, "stillbirth_rate_pct": 8.3, "weaned_pigs": 14.8, "pre_weaning_mortality_pct": 10.3, "piglet_birth_wt_kg": 1.40, "litter_wt_weaning_kg": 103.6, "wean_to_service_days": 5, "farrowing_rate_pct": 91, "mortality_pct_max": 5 },
+    { "parity": 4, "total_born": 18.0, "born_alive": 16.5, "stillbirth_rate_pct": 8.3, "weaned_pigs": 14.8, "pre_weaning_mortality_pct": 10.3, "piglet_birth_wt_kg": 1.40, "litter_wt_weaning_kg": 103.6, "wean_to_service_days": 5, "farrowing_rate_pct": 91, "mortality_pct_max": 5 },
+    { "parity": 5, "total_born": 17.5, "born_alive": 16.0, "stillbirth_rate_pct": 8.6, "weaned_pigs": 14.5, "pre_weaning_mortality_pct": 9.4,  "piglet_birth_wt_kg": 1.38, "litter_wt_weaning_kg": 101.5, "wean_to_service_days": 5, "farrowing_rate_pct": 90, "mortality_pct_max": 6 }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+    "map":  {
+                "hybrid_converter":  {
+                                         "grower1":  "poultry_turkey_meat_hybrid_converter_grower1_v1",
+                                         "finisher1":  "poultry_turkey_meat_hybrid_converter_finisher1_v1",
+                                         "prestarter":  "poultry_turkey_meat_hybrid_converter_prestarter_v1",
+                                         "finisher2":  "poultry_turkey_meat_hybrid_converter_finisher2_v1",
+                                         "starter":  "poultry_turkey_meat_hybrid_converter_starter_v1",
+                                         "withdrawal":  "poultry_turkey_meat_hybrid_converter_withdrawal_v1",
+                                         "grower2":  "poultry_turkey_meat_hybrid_converter_grower2_v1"
+                                     },
+                "generic":  {
+                                "grower1":  "poultry_turkey_meat_generic_grower1_v1",
+                                "finisher1":  "poultry_turkey_meat_generic_finisher1_v1",
+                                "prestarter":  "poultry_turkey_meat_generic_prestarter_v1",
+                                "finisher2":  "poultry_turkey_meat_generic_finisher2_v1",
+                                "starter":  "poultry_turkey_meat_generic_starter_v1",
+                                "withdrawal":  "poultry_turkey_meat_generic_withdrawal_v1",
+                                "grower2":  "poultry_turkey_meat_generic_grower2_v1"
+                            },
+                "nicholas":  {
+                                 "grower1":  "poultry_turkey_meat_nicholas_grower1_v1",
+                                 "finisher1":  "poultry_turkey_meat_nicholas_finisher1_v1",
+                                 "prestarter":  "poultry_turkey_meat_nicholas_prestarter_v1",
+                                 "finisher2":  "poultry_turkey_meat_nicholas_finisher2_v1",
+                                 "starter":  "poultry_turkey_meat_nicholas_starter_v1",
+                                 "withdrawal":  "poultry_turkey_meat_nicholas_withdrawal_v1",
+                                 "grower2":  "poultry_turkey_meat_nicholas_grower2_v1"
+                             },
+                "aviagen":  {
+                                "grower1":  "poultry_turkey_meat_aviagen_grower1_v1",
+                                "finisher1":  "poultry_turkey_meat_aviagen_finisher1_v1",
+                                "prestarter":  "poultry_turkey_meat_aviagen_prestarter_v1",
+                                "finisher2":  "poultry_turkey_meat_aviagen_finisher2_v1",
+                                "starter":  "poultry_turkey_meat_aviagen_starter_v1",
+                                "withdrawal":  "poultry_turkey_meat_aviagen_withdrawal_v1",
+                                "grower2":  "poultry_turkey_meat_aviagen_grower2_v1"
+                            },
+                "but6":  {
+                             "grower1":  "poultry_turkey_meat_but6_grower1_v1",
+                             "finisher1":  "poultry_turkey_meat_but6_finisher1_v1",
+                             "prestarter":  "poultry_turkey_meat_but6_prestarter_v1",
+                             "finisher2":  "poultry_turkey_meat_but6_finisher2_v1",
+                             "starter":  "poultry_turkey_meat_but6_starter_v1",
+                             "withdrawal":  "poultry_turkey_meat_but6_withdrawal_v1",
+                             "grower2":  "poultry_turkey_meat_but6_grower2_v1"
+                         }
+            },
+    "_LOCK":  {
+                  "species":  "poultry",
+                  "version":  "v1",
+                  "production":  "meat",
+                  "type":  "turkey",
+                  "kind":  "requirements_index",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready"
+              }
+}

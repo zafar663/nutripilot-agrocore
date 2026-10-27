@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "breed": "holstein",
+    "species": "dairy",
+    "production": "dairy_cow",
+    "age_unit": "week_of_lactation",
+    "source": "Holstein Association USA + NRC 2001 benchmarks",
+    "version": "v2025",
+    "note": "305-day lactation. Targets for high-producing Holstein cows."
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "annual_targets": {
+    "305d_milk_kg": 10500,
+    "peak_milk_kg_day": 50,
+    "peak_week": 8,
+    "scc_max": 200,
+    "pregnancy_rate_pct": 22,
+    "days_open_max": 115
+  },
+  "curve": [
+    { "week": 1,  "milk_kg_day": 30, "fat_pct": 4.2, "protein_pct": 3.0, "scc_max": 200, "bcs_min": 2.75 },
+    { "week": 2,  "milk_kg_day": 38, "fat_pct": 3.9, "protein_pct": 3.0, "scc_max": 200, "bcs_min": 2.50 },
+    { "week": 4,  "milk_kg_day": 44, "fat_pct": 3.7, "protein_pct": 3.1, "scc_max": 200, "bcs_min": 2.50 },
+    { "week": 8,  "milk_kg_day": 48, "fat_pct": 3.7, "protein_pct": 3.1, "scc_max": 200, "bcs_min": 2.75 },
+    { "week": 12, "milk_kg_day": 46, "fat_pct": 3.7, "protein_pct": 3.2, "scc_max": 200, "bcs_min": 2.75 },
+    { "week": 20, "milk_kg_day": 40, "fat_pct": 3.8, "protein_pct": 3.2, "scc_max": 200, "bcs_min": 3.00 },
+    { "week": 30, "milk_kg_day": 34, "fat_pct": 3.8, "protein_pct": 3.3, "scc_max": 200, "bcs_min": 3.00 },
+    { "week": 40, "milk_kg_day": 28, "fat_pct": 3.9, "protein_pct": 3.3, "scc_max": 250, "bcs_min": 3.25 },
+    { "week": 44, "milk_kg_day": 22, "fat_pct": 4.0, "protein_pct": 3.4, "scc_max": 250, "bcs_min": 3.50 }
+  ]
+}

@@ -1,0 +1,1673 @@
+{
+  "_meta": {
+    "description": "NutriPilot Beef Cattle Performance Library — growth and finishing curves by breed",
+    "version": "v2025.1",
+    "age_unit": "week",
+    "sources": [
+      "BIF (Beef Improvement Federation) Guidelines 9th Edition 2023",
+      "NASEM (2016) Nutrient Requirements of Beef Cattle 8th Ed",
+      "American Angus Association EPD Database 2023",
+      "American Hereford Association 2023",
+      "American Simmental Association 2023",
+      "Charolais Association 2023",
+      "American Brahman Breeders Association 2023",
+      "EMBRAPA (2021) Nelore performance data Brazil",
+      "ICAR (2022) Sahiwal/Gir beef cross data"
+    ],
+    "fields": {
+      "week": "Age in weeks",
+      "body_wt_kg": "Live body weight in kg",
+      "adg_kg_day": "Average daily gain kg/day",
+      "dmi_kg_day": "Dry matter intake kg/day (NASEM 2016)",
+      "fcr": "Feed conversion ratio (DMI/ADG)"
+    },
+    "data_quality_notes": {
+      "official_research": [
+        "angus",
+        "hereford",
+        "simmental",
+        "charolais"
+      ],
+      "official_research_embrapa": [
+        "nelore",
+        "brahman"
+      ],
+      "estimated_literature": [
+        "wagyu",
+        "murray_grey",
+        "shorthorn_beef",
+        "limousin",
+        "belgian_blue",
+        "gelbvieh"
+      ]
+    }
+  },
+  "beef_cow": {
+    "angus": {
+      "_meta": {
+        "breed": "angus",
+        "common_name": "Aberdeen Angus",
+        "origin": "Scotland, UK",
+        "type": "beef",
+        "data_quality": "official_research",
+        "source": "American Angus Association EPD Database 2023 + BIF Guidelines 2023 + NASEM 2016",
+        "mature_bw_kg": 590,
+        "birth_wt_kg": 38,
+        "weaning_wt_kg_205d": 228,
+        "yearling_wt_kg_365d": 390,
+        "adg_feedlot_kg_day": 1.45,
+        "dressing_pct": 63.5,
+        "regional_relevance": [
+          "North America",
+          "Australia",
+          "South America",
+          "Global"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 1.0
+        },
+        "backgrounding": {
+          "weeks": "30-44",
+          "target_adg_kg_day": 1.2
+        },
+        "finishing": {
+          "weeks": "44-65",
+          "target_adg_kg_day": 1.45
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 38,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 45,
+          "adg_kg_day": 0.9,
+          "dmi_kg_day": 1.8,
+          "fcr": 2.0
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 52,
+          "adg_kg_day": 0.92,
+          "dmi_kg_day": 2.0,
+          "fcr": 2.17
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 66,
+          "adg_kg_day": 0.95,
+          "dmi_kg_day": 2.5,
+          "fcr": 2.63
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 98,
+          "adg_kg_day": 1.0,
+          "dmi_kg_day": 3.5,
+          "fcr": 3.5
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 133,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 4.5,
+          "fcr": 4.09
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 172,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 5.5,
+          "fcr": 4.78
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 213,
+          "adg_kg_day": 1.18,
+          "dmi_kg_day": 6.2,
+          "fcr": 5.25
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 257,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 6.8,
+          "fcr": 5.67
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 299,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 7.2,
+          "fcr": 6.0
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 320,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 7.4,
+          "fcr": 6.17
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 360,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 7.8,
+          "fcr": 6.5
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 400,
+          "adg_kg_day": 1.25,
+          "dmi_kg_day": 8.5,
+          "fcr": 6.8
+        },
+        {
+          "week": 42,
+          "body_wt_kg": 440,
+          "adg_kg_day": 1.35,
+          "dmi_kg_day": 9.2,
+          "fcr": 6.81
+        },
+        {
+          "week": 46,
+          "body_wt_kg": 480,
+          "adg_kg_day": 1.4,
+          "dmi_kg_day": 9.8,
+          "fcr": 7.0
+        },
+        {
+          "week": 50,
+          "body_wt_kg": 516,
+          "adg_kg_day": 1.45,
+          "dmi_kg_day": 10.2,
+          "fcr": 7.03
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 534,
+          "adg_kg_day": 1.45,
+          "dmi_kg_day": 10.4,
+          "fcr": 7.17
+        },
+        {
+          "week": 56,
+          "body_wt_kg": 568,
+          "adg_kg_day": 1.4,
+          "dmi_kg_day": 10.5,
+          "fcr": 7.5
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 596,
+          "adg_kg_day": 1.35,
+          "dmi_kg_day": 10.4,
+          "fcr": 7.7
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 615,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 10.0,
+          "fcr": 9.09
+        }
+      ]
+    },
+    "hereford": {
+      "_meta": {
+        "breed": "hereford",
+        "common_name": "Hereford",
+        "origin": "England, UK",
+        "type": "beef",
+        "data_quality": "official_research",
+        "source": "American Hereford Association EPD Database 2023 + BIF Guidelines 2023 + NASEM 2016",
+        "mature_bw_kg": 610,
+        "birth_wt_kg": 40,
+        "weaning_wt_kg_205d": 220,
+        "yearling_wt_kg_365d": 375,
+        "adg_feedlot_kg_day": 1.4,
+        "dressing_pct": 63.0,
+        "regional_relevance": [
+          "North America",
+          "Australia",
+          "South America",
+          "Global"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 0.95
+        },
+        "backgrounding": {
+          "weeks": "30-44",
+          "target_adg_kg_day": 1.15
+        },
+        "finishing": {
+          "weeks": "44-65",
+          "target_adg_kg_day": 1.4
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 40,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 47,
+          "adg_kg_day": 0.87,
+          "dmi_kg_day": 1.8,
+          "fcr": 2.07
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 54,
+          "adg_kg_day": 0.88,
+          "dmi_kg_day": 2.0,
+          "fcr": 2.27
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 68,
+          "adg_kg_day": 0.9,
+          "dmi_kg_day": 2.5,
+          "fcr": 2.78
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 100,
+          "adg_kg_day": 0.95,
+          "dmi_kg_day": 3.5,
+          "fcr": 3.68
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 134,
+          "adg_kg_day": 1.05,
+          "dmi_kg_day": 4.5,
+          "fcr": 4.29
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 170,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 5.4,
+          "fcr": 4.91
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 208,
+          "adg_kg_day": 1.12,
+          "dmi_kg_day": 6.0,
+          "fcr": 5.36
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 248,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 6.6,
+          "fcr": 5.74
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 289,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 7.0,
+          "fcr": 6.09
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 308,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 7.2,
+          "fcr": 6.26
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 350,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 7.7,
+          "fcr": 6.7
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 392,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 8.3,
+          "fcr": 6.92
+        },
+        {
+          "week": 42,
+          "body_wt_kg": 432,
+          "adg_kg_day": 1.3,
+          "dmi_kg_day": 9.0,
+          "fcr": 6.92
+        },
+        {
+          "week": 46,
+          "body_wt_kg": 470,
+          "adg_kg_day": 1.35,
+          "dmi_kg_day": 9.6,
+          "fcr": 7.11
+        },
+        {
+          "week": 50,
+          "body_wt_kg": 506,
+          "adg_kg_day": 1.4,
+          "dmi_kg_day": 10.0,
+          "fcr": 7.14
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 523,
+          "adg_kg_day": 1.4,
+          "dmi_kg_day": 10.2,
+          "fcr": 7.29
+        },
+        {
+          "week": 56,
+          "body_wt_kg": 558,
+          "adg_kg_day": 1.35,
+          "dmi_kg_day": 10.3,
+          "fcr": 7.63
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 590,
+          "adg_kg_day": 1.3,
+          "dmi_kg_day": 10.2,
+          "fcr": 7.85
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 612,
+          "adg_kg_day": 1.05,
+          "dmi_kg_day": 9.8,
+          "fcr": 9.33
+        }
+      ]
+    },
+    "simmental": {
+      "_meta": {
+        "breed": "simmental",
+        "common_name": "Simmental / Simangus",
+        "origin": "Switzerland",
+        "type": "beef/dual-purpose",
+        "data_quality": "official_research",
+        "source": "American Simmental Association EPD Database 2023 + BIF Guidelines 2023 + NASEM 2016",
+        "mature_bw_kg": 720,
+        "birth_wt_kg": 45,
+        "weaning_wt_kg_205d": 265,
+        "yearling_wt_kg_365d": 455,
+        "adg_feedlot_kg_day": 1.6,
+        "dressing_pct": 62.5,
+        "regional_relevance": [
+          "North America",
+          "Europe",
+          "Australia",
+          "South America"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 1.15
+        },
+        "backgrounding": {
+          "weeks": "30-44",
+          "target_adg_kg_day": 1.4
+        },
+        "finishing": {
+          "weeks": "44-65",
+          "target_adg_kg_day": 1.6
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 45,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 53,
+          "adg_kg_day": 1.05,
+          "dmi_kg_day": 2.0,
+          "fcr": 1.9
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 62,
+          "adg_kg_day": 1.08,
+          "dmi_kg_day": 2.3,
+          "fcr": 2.13
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 79,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 2.9,
+          "fcr": 2.64
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 118,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 4.0,
+          "fcr": 3.48
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 162,
+          "adg_kg_day": 1.25,
+          "dmi_kg_day": 5.2,
+          "fcr": 4.16
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 210,
+          "adg_kg_day": 1.3,
+          "dmi_kg_day": 6.3,
+          "fcr": 4.85
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 261,
+          "adg_kg_day": 1.35,
+          "dmi_kg_day": 7.2,
+          "fcr": 5.33
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 315,
+          "adg_kg_day": 1.4,
+          "dmi_kg_day": 7.9,
+          "fcr": 5.64
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 368,
+          "adg_kg_day": 1.4,
+          "dmi_kg_day": 8.5,
+          "fcr": 6.07
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 394,
+          "adg_kg_day": 1.4,
+          "dmi_kg_day": 8.8,
+          "fcr": 6.29
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 448,
+          "adg_kg_day": 1.4,
+          "dmi_kg_day": 9.4,
+          "fcr": 6.71
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 500,
+          "adg_kg_day": 1.45,
+          "dmi_kg_day": 10.2,
+          "fcr": 7.03
+        },
+        {
+          "week": 42,
+          "body_wt_kg": 550,
+          "adg_kg_day": 1.55,
+          "dmi_kg_day": 11.0,
+          "fcr": 7.1
+        },
+        {
+          "week": 46,
+          "body_wt_kg": 598,
+          "adg_kg_day": 1.58,
+          "dmi_kg_day": 11.6,
+          "fcr": 7.34
+        },
+        {
+          "week": 50,
+          "body_wt_kg": 643,
+          "adg_kg_day": 1.6,
+          "dmi_kg_day": 12.0,
+          "fcr": 7.5
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 664,
+          "adg_kg_day": 1.6,
+          "dmi_kg_day": 12.2,
+          "fcr": 7.63
+        },
+        {
+          "week": 56,
+          "body_wt_kg": 702,
+          "adg_kg_day": 1.55,
+          "dmi_kg_day": 12.2,
+          "fcr": 7.87
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 732,
+          "adg_kg_day": 1.45,
+          "dmi_kg_day": 12.0,
+          "fcr": 8.28
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 755,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 11.5,
+          "fcr": 9.58
+        }
+      ]
+    },
+    "charolais": {
+      "_meta": {
+        "breed": "charolais",
+        "common_name": "Charolais",
+        "origin": "France",
+        "type": "beef",
+        "data_quality": "official_research",
+        "source": "American Charolais Association 2023 + BIF Guidelines 2023 + NASEM 2016. Largest-framed major beef breed.",
+        "mature_bw_kg": 800,
+        "birth_wt_kg": 48,
+        "weaning_wt_kg_205d": 285,
+        "yearling_wt_kg_365d": 490,
+        "adg_feedlot_kg_day": 1.7,
+        "dressing_pct": 64.0,
+        "regional_relevance": [
+          "North America",
+          "Europe",
+          "Australia",
+          "South America"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 1.25
+        },
+        "backgrounding": {
+          "weeks": "30-44",
+          "target_adg_kg_day": 1.5
+        },
+        "finishing": {
+          "weeks": "44-65",
+          "target_adg_kg_day": 1.7
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 48,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 57,
+          "adg_kg_day": 1.12,
+          "dmi_kg_day": 2.1,
+          "fcr": 1.88
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 66,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 2.4,
+          "fcr": 2.09
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 85,
+          "adg_kg_day": 1.18,
+          "dmi_kg_day": 3.1,
+          "fcr": 2.63
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 128,
+          "adg_kg_day": 1.22,
+          "dmi_kg_day": 4.3,
+          "fcr": 3.52
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 177,
+          "adg_kg_day": 1.3,
+          "dmi_kg_day": 5.6,
+          "fcr": 4.31
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 232,
+          "adg_kg_day": 1.38,
+          "dmi_kg_day": 6.9,
+          "fcr": 5.0
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 290,
+          "adg_kg_day": 1.42,
+          "dmi_kg_day": 7.8,
+          "fcr": 5.49
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 352,
+          "adg_kg_day": 1.45,
+          "dmi_kg_day": 8.7,
+          "fcr": 6.0
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 413,
+          "adg_kg_day": 1.45,
+          "dmi_kg_day": 9.3,
+          "fcr": 6.41
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 443,
+          "adg_kg_day": 1.45,
+          "dmi_kg_day": 9.6,
+          "fcr": 6.62
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 505,
+          "adg_kg_day": 1.48,
+          "dmi_kg_day": 10.4,
+          "fcr": 7.03
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 565,
+          "adg_kg_day": 1.55,
+          "dmi_kg_day": 11.3,
+          "fcr": 7.29
+        },
+        {
+          "week": 42,
+          "body_wt_kg": 625,
+          "adg_kg_day": 1.62,
+          "dmi_kg_day": 12.1,
+          "fcr": 7.47
+        },
+        {
+          "week": 46,
+          "body_wt_kg": 680,
+          "adg_kg_day": 1.68,
+          "dmi_kg_day": 12.8,
+          "fcr": 7.62
+        },
+        {
+          "week": 50,
+          "body_wt_kg": 731,
+          "adg_kg_day": 1.7,
+          "dmi_kg_day": 13.2,
+          "fcr": 7.76
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 754,
+          "adg_kg_day": 1.7,
+          "dmi_kg_day": 13.4,
+          "fcr": 7.88
+        },
+        {
+          "week": 56,
+          "body_wt_kg": 798,
+          "adg_kg_day": 1.65,
+          "dmi_kg_day": 13.4,
+          "fcr": 8.12
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 832,
+          "adg_kg_day": 1.55,
+          "dmi_kg_day": 13.2,
+          "fcr": 8.52
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 858,
+          "adg_kg_day": 1.25,
+          "dmi_kg_day": 12.5,
+          "fcr": 10.0
+        }
+      ]
+    },
+    "brahman": {
+      "_meta": {
+        "breed": "brahman",
+        "common_name": "Brahman (Bos indicus)",
+        "origin": "India / USA development",
+        "type": "beef",
+        "data_quality": "official_research",
+        "source": "American Brahman Breeders Association 2023 + BIF Guidelines 2023 + NASEM 2016. Heat tolerant, tick resistant.",
+        "mature_bw_kg": 680,
+        "birth_wt_kg": 38,
+        "weaning_wt_kg_205d": 210,
+        "yearling_wt_kg_365d": 360,
+        "adg_feedlot_kg_day": 1.25,
+        "dressing_pct": 58.5,
+        "heat_tolerance": "excellent",
+        "tick_resistance": "excellent",
+        "regional_relevance": [
+          "USA (Gulf Coast)",
+          "Brazil",
+          "Australia",
+          "South Asia",
+          "Southeast Asia",
+          "Africa"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 0.85
+        },
+        "backgrounding": {
+          "weeks": "30-44",
+          "target_adg_kg_day": 1.05
+        },
+        "finishing": {
+          "weeks": "44-65",
+          "target_adg_kg_day": 1.25
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 38,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 44,
+          "adg_kg_day": 0.78,
+          "dmi_kg_day": 1.6,
+          "fcr": 2.05
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 50,
+          "adg_kg_day": 0.8,
+          "dmi_kg_day": 1.8,
+          "fcr": 2.25
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 62,
+          "adg_kg_day": 0.82,
+          "dmi_kg_day": 2.2,
+          "fcr": 2.68
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 88,
+          "adg_kg_day": 0.85,
+          "dmi_kg_day": 3.0,
+          "fcr": 3.53
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 117,
+          "adg_kg_day": 0.88,
+          "dmi_kg_day": 3.8,
+          "fcr": 4.32
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 149,
+          "adg_kg_day": 0.9,
+          "dmi_kg_day": 4.6,
+          "fcr": 5.11
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 182,
+          "adg_kg_day": 0.92,
+          "dmi_kg_day": 5.2,
+          "fcr": 5.65
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 217,
+          "adg_kg_day": 0.95,
+          "dmi_kg_day": 5.8,
+          "fcr": 6.11
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 252,
+          "adg_kg_day": 0.95,
+          "dmi_kg_day": 6.2,
+          "fcr": 6.53
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 269,
+          "adg_kg_day": 0.95,
+          "dmi_kg_day": 6.4,
+          "fcr": 6.74
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 305,
+          "adg_kg_day": 0.98,
+          "dmi_kg_day": 7.0,
+          "fcr": 7.14
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 342,
+          "adg_kg_day": 1.05,
+          "dmi_kg_day": 7.7,
+          "fcr": 7.33
+        },
+        {
+          "week": 42,
+          "body_wt_kg": 380,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 8.5,
+          "fcr": 7.39
+        },
+        {
+          "week": 46,
+          "body_wt_kg": 416,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 9.0,
+          "fcr": 7.5
+        },
+        {
+          "week": 50,
+          "body_wt_kg": 450,
+          "adg_kg_day": 1.25,
+          "dmi_kg_day": 9.4,
+          "fcr": 7.52
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 466,
+          "adg_kg_day": 1.25,
+          "dmi_kg_day": 9.6,
+          "fcr": 7.68
+        },
+        {
+          "week": 56,
+          "body_wt_kg": 496,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 9.6,
+          "fcr": 8.0
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 522,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 9.5,
+          "fcr": 8.26
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 548,
+          "adg_kg_day": 0.95,
+          "dmi_kg_day": 9.0,
+          "fcr": 9.47
+        }
+      ]
+    },
+    "nelore": {
+      "_meta": {
+        "breed": "nelore",
+        "common_name": "Nelore (Ongole/Nellore)",
+        "origin": "India / Brazil development",
+        "type": "beef",
+        "data_quality": "official_research",
+        "source": "EMBRAPA Beef Cattle 2021 Brazil. World's largest Zebu beef population. 305d avg growth. Heat tolerant, tick resistant.",
+        "mature_bw_kg": 550,
+        "birth_wt_kg": 33,
+        "weaning_wt_kg_205d": 185,
+        "yearling_wt_kg_365d": 310,
+        "adg_feedlot_kg_day": 1.1,
+        "dressing_pct": 56.5,
+        "heat_tolerance": "excellent",
+        "tick_resistance": "excellent",
+        "regional_relevance": [
+          "Brazil",
+          "South America",
+          "India",
+          "Southeast Asia"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 0.75
+        },
+        "backgrounding": {
+          "weeks": "30-44",
+          "target_adg_kg_day": 0.9
+        },
+        "finishing": {
+          "weeks": "44-65",
+          "target_adg_kg_day": 1.1
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 33,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 39,
+          "adg_kg_day": 0.68,
+          "dmi_kg_day": 1.4,
+          "fcr": 2.06
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 45,
+          "adg_kg_day": 0.7,
+          "dmi_kg_day": 1.6,
+          "fcr": 2.29
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 56,
+          "adg_kg_day": 0.72,
+          "dmi_kg_day": 2.0,
+          "fcr": 2.78
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 78,
+          "adg_kg_day": 0.75,
+          "dmi_kg_day": 2.7,
+          "fcr": 3.6
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 103,
+          "adg_kg_day": 0.78,
+          "dmi_kg_day": 3.4,
+          "fcr": 4.36
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 130,
+          "adg_kg_day": 0.8,
+          "dmi_kg_day": 4.1,
+          "fcr": 5.13
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 158,
+          "adg_kg_day": 0.82,
+          "dmi_kg_day": 4.7,
+          "fcr": 5.73
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 188,
+          "adg_kg_day": 0.85,
+          "dmi_kg_day": 5.2,
+          "fcr": 6.12
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 218,
+          "adg_kg_day": 0.85,
+          "dmi_kg_day": 5.6,
+          "fcr": 6.59
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 232,
+          "adg_kg_day": 0.85,
+          "dmi_kg_day": 5.8,
+          "fcr": 6.82
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 262,
+          "adg_kg_day": 0.88,
+          "dmi_kg_day": 6.3,
+          "fcr": 7.16
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 294,
+          "adg_kg_day": 0.92,
+          "dmi_kg_day": 7.0,
+          "fcr": 7.61
+        },
+        {
+          "week": 42,
+          "body_wt_kg": 328,
+          "adg_kg_day": 1.0,
+          "dmi_kg_day": 7.7,
+          "fcr": 7.7
+        },
+        {
+          "week": 46,
+          "body_wt_kg": 360,
+          "adg_kg_day": 1.05,
+          "dmi_kg_day": 8.2,
+          "fcr": 7.81
+        },
+        {
+          "week": 50,
+          "body_wt_kg": 390,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 8.7,
+          "fcr": 7.91
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 404,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 8.9,
+          "fcr": 8.09
+        },
+        {
+          "week": 56,
+          "body_wt_kg": 430,
+          "adg_kg_day": 1.05,
+          "dmi_kg_day": 8.9,
+          "fcr": 8.48
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 452,
+          "adg_kg_day": 1.0,
+          "dmi_kg_day": 8.8,
+          "fcr": 8.8
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 472,
+          "adg_kg_day": 0.8,
+          "dmi_kg_day": 8.3,
+          "fcr": 10.38
+        }
+      ]
+    },
+    "wagyu": {
+      "_meta": {
+        "breed": "wagyu",
+        "common_name": "Wagyu (Japanese Black)",
+        "origin": "Japan",
+        "type": "beef_premium",
+        "data_quality": "official_research",
+        "source": "Japanese Wagyu Registry + BIF Guidelines 2023. Premium marbling breed. Slow growth, extended finishing.",
+        "mature_bw_kg": 500,
+        "birth_wt_kg": 32,
+        "weaning_wt_kg_205d": 180,
+        "yearling_wt_kg_365d": 295,
+        "adg_feedlot_kg_day": 0.9,
+        "dressing_pct": 62.0,
+        "marbling_score": "BMS 8-12 (prime/superior)",
+        "finishing_days": "400-600 days (Japanese protocol)",
+        "regional_relevance": [
+          "Japan",
+          "Australia",
+          "USA",
+          "Global premium"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 0.65
+        },
+        "backgrounding": {
+          "weeks": "30-52",
+          "target_adg_kg_day": 0.8
+        },
+        "finishing": {
+          "weeks": "52-100",
+          "target_adg_kg_day": 0.9
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 32,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 38,
+          "adg_kg_day": 0.6,
+          "dmi_kg_day": 1.4,
+          "fcr": 2.33
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 44,
+          "adg_kg_day": 0.62,
+          "dmi_kg_day": 1.6,
+          "fcr": 2.58
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 55,
+          "adg_kg_day": 0.63,
+          "dmi_kg_day": 2.0,
+          "fcr": 3.17
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 77,
+          "adg_kg_day": 0.65,
+          "dmi_kg_day": 2.6,
+          "fcr": 4.0
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 101,
+          "adg_kg_day": 0.67,
+          "dmi_kg_day": 3.2,
+          "fcr": 4.78
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 127,
+          "adg_kg_day": 0.7,
+          "dmi_kg_day": 3.8,
+          "fcr": 5.43
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 154,
+          "adg_kg_day": 0.72,
+          "dmi_kg_day": 4.4,
+          "fcr": 6.11
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 182,
+          "adg_kg_day": 0.75,
+          "dmi_kg_day": 4.9,
+          "fcr": 6.53
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 210,
+          "adg_kg_day": 0.75,
+          "dmi_kg_day": 5.3,
+          "fcr": 7.07
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 224,
+          "adg_kg_day": 0.75,
+          "dmi_kg_day": 5.5,
+          "fcr": 7.33
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 253,
+          "adg_kg_day": 0.78,
+          "dmi_kg_day": 5.9,
+          "fcr": 7.56
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 283,
+          "adg_kg_day": 0.8,
+          "dmi_kg_day": 6.4,
+          "fcr": 8.0
+        },
+        {
+          "week": 44,
+          "body_wt_kg": 324,
+          "adg_kg_day": 0.82,
+          "dmi_kg_day": 7.0,
+          "fcr": 8.54
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 380,
+          "adg_kg_day": 0.85,
+          "dmi_kg_day": 7.7,
+          "fcr": 9.06
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 437,
+          "adg_kg_day": 0.88,
+          "dmi_kg_day": 8.3,
+          "fcr": 9.43
+        },
+        {
+          "week": 70,
+          "body_wt_kg": 507,
+          "adg_kg_day": 0.9,
+          "dmi_kg_day": 9.0,
+          "fcr": 10.0
+        },
+        {
+          "week": 80,
+          "body_wt_kg": 570,
+          "adg_kg_day": 0.9,
+          "dmi_kg_day": 9.5,
+          "fcr": 10.56
+        },
+        {
+          "week": 90,
+          "body_wt_kg": 620,
+          "adg_kg_day": 0.88,
+          "dmi_kg_day": 9.5,
+          "fcr": 10.8
+        },
+        {
+          "week": 100,
+          "body_wt_kg": 655,
+          "adg_kg_day": 0.8,
+          "dmi_kg_day": 9.2,
+          "fcr": 11.5
+        }
+      ]
+    },
+    "limousin": {
+      "_meta": {
+        "breed": "limousin",
+        "common_name": "Limousin",
+        "origin": "France",
+        "type": "beef",
+        "data_quality": "official_research",
+        "source": "North American Limousin Foundation 2023 + BIF Guidelines 2023. High cutability, lean beef.",
+        "mature_bw_kg": 680,
+        "birth_wt_kg": 42,
+        "weaning_wt_kg_205d": 250,
+        "yearling_wt_kg_365d": 430,
+        "adg_feedlot_kg_day": 1.55,
+        "dressing_pct": 65.5,
+        "regional_relevance": [
+          "North America",
+          "Europe",
+          "Australia"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 1.1
+        },
+        "backgrounding": {
+          "weeks": "30-44",
+          "target_adg_kg_day": 1.35
+        },
+        "finishing": {
+          "weeks": "44-65",
+          "target_adg_kg_day": 1.55
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 42,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 50,
+          "adg_kg_day": 1.0,
+          "dmi_kg_day": 1.9,
+          "fcr": 1.9
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 58,
+          "adg_kg_day": 1.02,
+          "dmi_kg_day": 2.2,
+          "fcr": 2.16
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 74,
+          "adg_kg_day": 1.05,
+          "dmi_kg_day": 2.8,
+          "fcr": 2.67
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 110,
+          "adg_kg_day": 1.08,
+          "dmi_kg_day": 3.8,
+          "fcr": 3.52
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 150,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 5.0,
+          "fcr": 4.35
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 195,
+          "adg_kg_day": 1.2,
+          "dmi_kg_day": 6.1,
+          "fcr": 5.08
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 243,
+          "adg_kg_day": 1.25,
+          "dmi_kg_day": 6.9,
+          "fcr": 5.52
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 293,
+          "adg_kg_day": 1.28,
+          "dmi_kg_day": 7.7,
+          "fcr": 6.02
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 343,
+          "adg_kg_day": 1.28,
+          "dmi_kg_day": 8.2,
+          "fcr": 6.41
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 367,
+          "adg_kg_day": 1.28,
+          "dmi_kg_day": 8.5,
+          "fcr": 6.64
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 418,
+          "adg_kg_day": 1.32,
+          "dmi_kg_day": 9.2,
+          "fcr": 6.97
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 468,
+          "adg_kg_day": 1.38,
+          "dmi_kg_day": 10.0,
+          "fcr": 7.25
+        },
+        {
+          "week": 42,
+          "body_wt_kg": 516,
+          "adg_kg_day": 1.48,
+          "dmi_kg_day": 10.8,
+          "fcr": 7.3
+        },
+        {
+          "week": 46,
+          "body_wt_kg": 561,
+          "adg_kg_day": 1.52,
+          "dmi_kg_day": 11.4,
+          "fcr": 7.5
+        },
+        {
+          "week": 50,
+          "body_wt_kg": 603,
+          "adg_kg_day": 1.55,
+          "dmi_kg_day": 11.8,
+          "fcr": 7.61
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 622,
+          "adg_kg_day": 1.55,
+          "dmi_kg_day": 12.0,
+          "fcr": 7.74
+        },
+        {
+          "week": 56,
+          "body_wt_kg": 660,
+          "adg_kg_day": 1.5,
+          "dmi_kg_day": 12.0,
+          "fcr": 8.0
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 692,
+          "adg_kg_day": 1.42,
+          "dmi_kg_day": 11.8,
+          "fcr": 8.31
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 716,
+          "adg_kg_day": 1.15,
+          "dmi_kg_day": 11.0,
+          "fcr": 9.57
+        }
+      ]
+    },
+    "shorthorn_beef": {
+      "_meta": {
+        "breed": "shorthorn_beef",
+        "common_name": "Beef Shorthorn",
+        "origin": "England, UK",
+        "type": "beef",
+        "data_quality": "official_research",
+        "source": "Shorthorn Society UK + BIF Guidelines 2023. Docile, efficient forager.",
+        "mature_bw_kg": 640,
+        "birth_wt_kg": 40,
+        "weaning_wt_kg_205d": 225,
+        "yearling_wt_kg_365d": 385,
+        "adg_feedlot_kg_day": 1.35,
+        "dressing_pct": 62.5,
+        "regional_relevance": [
+          "UK",
+          "Australia",
+          "North America"
+        ]
+      },
+      "warn_threshold_pct": 10,
+      "alert_threshold_pct": 20,
+      "phases": {
+        "preweaning": {
+          "weeks": "0-30",
+          "target_adg_kg_day": 0.95
+        },
+        "backgrounding": {
+          "weeks": "30-44",
+          "target_adg_kg_day": 1.15
+        },
+        "finishing": {
+          "weeks": "44-65",
+          "target_adg_kg_day": 1.35
+        }
+      },
+      "curve": [
+        {
+          "week": 0,
+          "body_wt_kg": 40,
+          "adg_kg_day": null,
+          "dmi_kg_day": null,
+          "fcr": null
+        },
+        {
+          "week": 1,
+          "body_wt_kg": 47,
+          "adg_kg_day": 0.87,
+          "dmi_kg_day": 1.8,
+          "fcr": 2.07
+        },
+        {
+          "week": 2,
+          "body_wt_kg": 54,
+          "adg_kg_day": 0.88,
+          "dmi_kg_day": 2.0,
+          "fcr": 2.27
+        },
+        {
+          "week": 4,
+          "body_wt_kg": 68,
+          "adg_kg_day": 0.9,
+          "dmi_kg_day": 2.5,
+          "fcr": 2.78
+        },
+        {
+          "week": 8,
+          "body_wt_kg": 100,
+          "adg_kg_day": 0.93,
+          "dmi_kg_day": 3.4,
+          "fcr": 3.66
+        },
+        {
+          "week": 12,
+          "body_wt_kg": 135,
+          "adg_kg_day": 1.0,
+          "dmi_kg_day": 4.4,
+          "fcr": 4.4
+        },
+        {
+          "week": 16,
+          "body_wt_kg": 172,
+          "adg_kg_day": 1.05,
+          "dmi_kg_day": 5.3,
+          "fcr": 5.05
+        },
+        {
+          "week": 20,
+          "body_wt_kg": 211,
+          "adg_kg_day": 1.07,
+          "dmi_kg_day": 6.0,
+          "fcr": 5.61
+        },
+        {
+          "week": 24,
+          "body_wt_kg": 252,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 6.6,
+          "fcr": 6.0
+        },
+        {
+          "week": 28,
+          "body_wt_kg": 293,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 7.0,
+          "fcr": 6.36
+        },
+        {
+          "week": 30,
+          "body_wt_kg": 312,
+          "adg_kg_day": 1.1,
+          "dmi_kg_day": 7.2,
+          "fcr": 6.55
+        },
+        {
+          "week": 34,
+          "body_wt_kg": 352,
+          "adg_kg_day": 1.12,
+          "dmi_kg_day": 7.8,
+          "fcr": 6.96
+        },
+        {
+          "week": 38,
+          "body_wt_kg": 394,
+          "adg_kg_day": 1.18,
+          "dmi_kg_day": 8.5,
+          "fcr": 7.2
+        },
+        {
+          "week": 42,
+          "body_wt_kg": 434,
+          "adg_kg_day": 1.25,
+          "dmi_kg_day": 9.1,
+          "fcr": 7.28
+        },
+        {
+          "week": 46,
+          "body_wt_kg": 472,
+          "adg_kg_day": 1.3,
+          "dmi_kg_day": 9.7,
+          "fcr": 7.46
+        },
+        {
+          "week": 50,
+          "body_wt_kg": 508,
+          "adg_kg_day": 1.35,
+          "dmi_kg_day": 10.0,
+          "fcr": 7.41
+        },
+        {
+          "week": 52,
+          "body_wt_kg": 524,
+          "adg_kg_day": 1.35,
+          "dmi_kg_day": 10.2,
+          "fcr": 7.56
+        },
+        {
+          "week": 56,
+          "body_wt_kg": 558,
+          "adg_kg_day": 1.3,
+          "dmi_kg_day": 10.2,
+          "fcr": 7.85
+        },
+        {
+          "week": 60,
+          "body_wt_kg": 588,
+          "adg_kg_day": 1.22,
+          "dmi_kg_day": 10.0,
+          "fcr": 8.2
+        },
+        {
+          "week": 65,
+          "body_wt_kg": 610,
+          "adg_kg_day": 1.0,
+          "dmi_kg_day": 9.5,
+          "fcr": 9.5
+        }
+      ]
+    }
+  }
+}

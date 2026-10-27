@@ -1,0 +1,3822 @@
+{
+  "_meta": {
+    "description": "Complete feed mill library — formulation guidelines, process parameters, QC targets and troubleshooting",
+    "version": "v2025.2",
+    "created_utc": "2026-05-22T00:00:00Z",
+    "sources": [
+      "NRC 1994 Nutrient Requirements of Poultry",
+      "NRC 2012 Nutrient Requirements of Swine",
+      "NRC 2001/NASEM 2021 Nutrient Requirements of Dairy Cattle",
+      "Aviagen Broiler Nutrition Specifications 2022",
+      "Cobb Broiler Nutrition Specifications 2022",
+      "Lohmann Layer Nutrition Recommendations 2023",
+      "INRA 2018 Equine Nutrition",
+      "FEDNA 2023 Feed Ingredient Tables"
+    ],
+    "units": {
+      "energy": "kcal/kg ME (poultry/swine) or MJ/kg NE (equine) or Mcal/kg NEL (dairy)",
+      "protein": "% crude protein",
+      "amino_acids": "% digestible",
+      "minerals": "% or mg/kg",
+      "inclusion_rates": "% of total diet"
+    },
+    "sections": [
+      "poultry",
+      "swine",
+      "dairy",
+      "equine",
+      "sheep",
+      "goat",
+      "beef",
+      "ingredient_notes",
+      "mill_operations",
+      "mill_troubleshooting"
+    ]
+  },
+  "poultry": {
+    "broiler": {
+      "phases": {
+        "starter": {
+          "age_days": "1-10",
+          "feed_form": "crumble",
+          "pellet_size_mm": null,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 2900,
+              "max": 3050,
+              "target": 2950
+            },
+            "crude_protein_pct": {
+              "min": 22.0,
+              "max": 24.0,
+              "target": 23.0
+            },
+            "dig_lysine_pct": {
+              "min": 1.18,
+              "max": 1.35,
+              "target": 1.25
+            },
+            "dig_methionine_pct": {
+              "min": 0.5,
+              "max": 0.58,
+              "target": 0.54
+            },
+            "dig_met_cys_pct": {
+              "min": 0.88,
+              "max": 1.0,
+              "target": 0.94
+            },
+            "dig_threonine_pct": {
+              "min": 0.76,
+              "max": 0.86,
+              "target": 0.81
+            },
+            "dig_tryptophan_pct": {
+              "min": 0.2,
+              "max": 0.24,
+              "target": 0.22
+            },
+            "dig_valine_pct": {
+              "min": 0.88,
+              "max": 1.0,
+              "target": 0.94
+            },
+            "calcium_pct": {
+              "min": 0.92,
+              "max": 1.05,
+              "target": 0.98
+            },
+            "available_phosphorus_pct": {
+              "min": 0.45,
+              "max": 0.5,
+              "target": 0.48
+            },
+            "sodium_pct": {
+              "min": 0.16,
+              "max": 0.2,
+              "target": 0.18
+            },
+            "chloride_pct": {
+              "min": 0.16,
+              "max": 0.2,
+              "target": 0.18
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 40,
+              "max": 65,
+              "typical": 55
+            },
+            "wheat": {
+              "min": 0,
+              "max": 40,
+              "typical": 20
+            },
+            "sorghum": {
+              "min": 0,
+              "max": 30,
+              "typical": 0
+            },
+            "soybean_meal_48": {
+              "min": 20,
+              "max": 35,
+              "typical": 28
+            },
+            "full_fat_soya": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "sunflower_meal": {
+              "min": 0,
+              "max": 5,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 5,
+              "typical": 0
+            },
+            "fish_meal": {
+              "min": 0,
+              "max": 5,
+              "typical": 2
+            },
+            "meat_bone_meal": {
+              "min": 0,
+              "max": 5,
+              "typical": 0
+            },
+            "limestone": {
+              "min": 0.5,
+              "max": 1.5,
+              "typical": 1.0
+            },
+            "dicalcium_phosphate": {
+              "min": 1.0,
+              "max": 2.0,
+              "typical": 1.5
+            },
+            "salt": {
+              "min": 0.2,
+              "max": 0.4,
+              "typical": 0.3
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 4,
+              "typical": 1.5
+            },
+            "poultry_fat": {
+              "min": 0,
+              "max": 4,
+              "typical": 0
+            }
+          },
+          "anti_nutritional_limits": {
+            "gossypol_mg_kg": {
+              "max": 100
+            },
+            "glucosinolates_mmol_kg": {
+              "max": 1.0
+            },
+            "tannins_pct": {
+              "max": 0.3
+            },
+            "erucic_acid_pct": {
+              "max": 0.5
+            },
+            "aflatoxin_ppb": {
+              "max": 10
+            },
+            "vomitoxin_ppm": {
+              "max": 1.0
+            }
+          }
+        },
+        "grower": {
+          "age_days": "11-22",
+          "feed_form": "pellet",
+          "pellet_size_mm": 3,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 2950,
+              "max": 3100,
+              "target": 3025
+            },
+            "crude_protein_pct": {
+              "min": 20.0,
+              "max": 22.0,
+              "target": 21.0
+            },
+            "dig_lysine_pct": {
+              "min": 1.05,
+              "max": 1.2,
+              "target": 1.12
+            },
+            "dig_methionine_pct": {
+              "min": 0.44,
+              "max": 0.52,
+              "target": 0.48
+            },
+            "dig_met_cys_pct": {
+              "min": 0.8,
+              "max": 0.92,
+              "target": 0.86
+            },
+            "dig_threonine_pct": {
+              "min": 0.68,
+              "max": 0.78,
+              "target": 0.73
+            },
+            "dig_tryptophan_pct": {
+              "min": 0.18,
+              "max": 0.22,
+              "target": 0.2
+            },
+            "calcium_pct": {
+              "min": 0.88,
+              "max": 1.0,
+              "target": 0.94
+            },
+            "available_phosphorus_pct": {
+              "min": 0.42,
+              "max": 0.48,
+              "target": 0.45
+            },
+            "sodium_pct": {
+              "min": 0.16,
+              "max": 0.2,
+              "target": 0.18
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 40,
+              "max": 68,
+              "typical": 58
+            },
+            "wheat": {
+              "min": 0,
+              "max": 45,
+              "typical": 20
+            },
+            "sorghum": {
+              "min": 0,
+              "max": 35,
+              "typical": 0
+            },
+            "soybean_meal_48": {
+              "min": 18,
+              "max": 30,
+              "typical": 24
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "sunflower_meal": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "fish_meal": {
+              "min": 0,
+              "max": 3,
+              "typical": 0
+            },
+            "meat_bone_meal": {
+              "min": 0,
+              "max": 5,
+              "typical": 0
+            },
+            "limestone": {
+              "min": 0.5,
+              "max": 1.5,
+              "typical": 1.0
+            },
+            "dicalcium_phosphate": {
+              "min": 0.8,
+              "max": 1.8,
+              "typical": 1.3
+            },
+            "salt": {
+              "min": 0.2,
+              "max": 0.4,
+              "typical": 0.3
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 5,
+              "typical": 2.0
+            },
+            "poultry_fat": {
+              "min": 0,
+              "max": 5,
+              "typical": 0
+            }
+          },
+          "anti_nutritional_limits": {
+            "gossypol_mg_kg": {
+              "max": 100
+            },
+            "glucosinolates_mmol_kg": {
+              "max": 1.0
+            },
+            "tannins_pct": {
+              "max": 0.3
+            },
+            "aflatoxin_ppb": {
+              "max": 10
+            }
+          }
+        },
+        "finisher": {
+          "age_days": "23-42",
+          "feed_form": "pellet",
+          "pellet_size_mm": 4,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 3050,
+              "max": 3200,
+              "target": 3100
+            },
+            "crude_protein_pct": {
+              "min": 18.0,
+              "max": 20.0,
+              "target": 19.0
+            },
+            "dig_lysine_pct": {
+              "min": 0.95,
+              "max": 1.08,
+              "target": 1.01
+            },
+            "dig_methionine_pct": {
+              "min": 0.38,
+              "max": 0.46,
+              "target": 0.42
+            },
+            "dig_met_cys_pct": {
+              "min": 0.72,
+              "max": 0.84,
+              "target": 0.78
+            },
+            "dig_threonine_pct": {
+              "min": 0.63,
+              "max": 0.73,
+              "target": 0.68
+            },
+            "dig_tryptophan_pct": {
+              "min": 0.17,
+              "max": 0.21,
+              "target": 0.19
+            },
+            "calcium_pct": {
+              "min": 0.84,
+              "max": 0.96,
+              "target": 0.9
+            },
+            "available_phosphorus_pct": {
+              "min": 0.38,
+              "max": 0.44,
+              "target": 0.41
+            },
+            "sodium_pct": {
+              "min": 0.16,
+              "max": 0.2,
+              "target": 0.18
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 45,
+              "max": 72,
+              "typical": 62
+            },
+            "wheat": {
+              "min": 0,
+              "max": 50,
+              "typical": 20
+            },
+            "sorghum": {
+              "min": 0,
+              "max": 40,
+              "typical": 0
+            },
+            "soybean_meal_48": {
+              "min": 15,
+              "max": 26,
+              "typical": 20
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 12,
+              "typical": 0
+            },
+            "sunflower_meal": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 15,
+              "typical": 5
+            },
+            "meat_bone_meal": {
+              "min": 0,
+              "max": 5,
+              "typical": 0
+            },
+            "limestone": {
+              "min": 0.5,
+              "max": 1.5,
+              "typical": 1.0
+            },
+            "dicalcium_phosphate": {
+              "min": 0.6,
+              "max": 1.5,
+              "typical": 1.0
+            },
+            "salt": {
+              "min": 0.2,
+              "max": 0.4,
+              "typical": 0.3
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 6,
+              "typical": 2.5
+            },
+            "poultry_fat": {
+              "min": 0,
+              "max": 6,
+              "typical": 2.0
+            }
+          },
+          "anti_nutritional_limits": {
+            "gossypol_mg_kg": {
+              "max": 100
+            },
+            "glucosinolates_mmol_kg": {
+              "max": 1.5
+            },
+            "tannins_pct": {
+              "max": 0.5
+            },
+            "aflatoxin_ppb": {
+              "max": 10
+            }
+          }
+        }
+      }
+    },
+    "layer": {
+      "phases": {
+        "pre_lay": {
+          "age_weeks": "14-17",
+          "feed_form": "mash or pellet",
+          "pellet_size_mm": 3,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 2700,
+              "max": 2800,
+              "target": 2750
+            },
+            "crude_protein_pct": {
+              "min": 15.0,
+              "max": 17.0,
+              "target": 16.0
+            },
+            "dig_lysine_pct": {
+              "min": 0.68,
+              "max": 0.78,
+              "target": 0.73
+            },
+            "dig_methionine_pct": {
+              "min": 0.32,
+              "max": 0.38,
+              "target": 0.35
+            },
+            "calcium_pct": {
+              "min": 2.0,
+              "max": 2.5,
+              "target": 2.25
+            },
+            "available_phosphorus_pct": {
+              "min": 0.35,
+              "max": 0.42,
+              "target": 0.38
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 45,
+              "max": 65,
+              "typical": 55
+            },
+            "wheat": {
+              "min": 0,
+              "max": 40,
+              "typical": 15
+            },
+            "soybean_meal_48": {
+              "min": 15,
+              "max": 25,
+              "typical": 20
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "sunflower_meal": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "limestone": {
+              "min": 4.0,
+              "max": 7.0,
+              "typical": 5.5
+            },
+            "dicalcium_phosphate": {
+              "min": 0.5,
+              "max": 1.2,
+              "typical": 0.8
+            },
+            "salt": {
+              "min": 0.2,
+              "max": 0.4,
+              "typical": 0.3
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 3,
+              "typical": 1.0
+            }
+          },
+          "anti_nutritional_limits": {
+            "gossypol_mg_kg": {
+              "max": 50
+            },
+            "glucosinolates_mmol_kg": {
+              "max": 0.5
+            },
+            "tannins_pct": {
+              "max": 0.2
+            },
+            "aflatoxin_ppb": {
+              "max": 5
+            }
+          }
+        },
+        "peak": {
+          "age_weeks": "18-45",
+          "feed_form": "mash or pellet",
+          "pellet_size_mm": 3,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 2750,
+              "max": 2850,
+              "target": 2800
+            },
+            "crude_protein_pct": {
+              "min": 16.0,
+              "max": 18.0,
+              "target": 17.0
+            },
+            "dig_lysine_pct": {
+              "min": 0.76,
+              "max": 0.88,
+              "target": 0.82
+            },
+            "dig_methionine_pct": {
+              "min": 0.36,
+              "max": 0.44,
+              "target": 0.4
+            },
+            "dig_met_cys_pct": {
+              "min": 0.62,
+              "max": 0.72,
+              "target": 0.67
+            },
+            "dig_threonine_pct": {
+              "min": 0.54,
+              "max": 0.64,
+              "target": 0.59
+            },
+            "calcium_pct": {
+              "min": 3.8,
+              "max": 4.2,
+              "target": 4.0
+            },
+            "available_phosphorus_pct": {
+              "min": 0.32,
+              "max": 0.4,
+              "target": 0.36
+            },
+            "sodium_pct": {
+              "min": 0.15,
+              "max": 0.2,
+              "target": 0.18
+            },
+            "linoleic_acid_pct": {
+              "min": 1.25,
+              "max": 2.0,
+              "target": 1.5
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 40,
+              "max": 65,
+              "typical": 55
+            },
+            "wheat": {
+              "min": 0,
+              "max": 40,
+              "typical": 15
+            },
+            "sorghum": {
+              "min": 0,
+              "max": 25,
+              "typical": 0
+            },
+            "soybean_meal_48": {
+              "min": 15,
+              "max": 28,
+              "typical": 22
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "sunflower_meal": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "limestone": {
+              "min": 7.0,
+              "max": 9.5,
+              "typical": 8.5
+            },
+            "oyster_shell": {
+              "min": 0,
+              "max": 4.0,
+              "typical": 1.5
+            },
+            "dicalcium_phosphate": {
+              "min": 0.3,
+              "max": 1.0,
+              "typical": 0.6
+            },
+            "salt": {
+              "min": 0.2,
+              "max": 0.4,
+              "typical": 0.3
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 4,
+              "typical": 1.5
+            }
+          },
+          "anti_nutritional_limits": {
+            "gossypol_mg_kg": {
+              "max": 50
+            },
+            "glucosinolates_mmol_kg": {
+              "max": 0.5
+            },
+            "tannins_pct": {
+              "max": 0.2
+            },
+            "aflatoxin_ppb": {
+              "max": 5
+            },
+            "free_gossypol_mg_kg": {
+              "max": 20
+            }
+          }
+        },
+        "late": {
+          "age_weeks": "46-80",
+          "feed_form": "mash or pellet",
+          "pellet_size_mm": 3,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 2720,
+              "max": 2820,
+              "target": 2770
+            },
+            "crude_protein_pct": {
+              "min": 15.0,
+              "max": 17.0,
+              "target": 16.0
+            },
+            "dig_lysine_pct": {
+              "min": 0.7,
+              "max": 0.82,
+              "target": 0.76
+            },
+            "dig_methionine_pct": {
+              "min": 0.34,
+              "max": 0.42,
+              "target": 0.38
+            },
+            "calcium_pct": {
+              "min": 4.0,
+              "max": 4.5,
+              "target": 4.2
+            },
+            "available_phosphorus_pct": {
+              "min": 0.3,
+              "max": 0.38,
+              "target": 0.34
+            },
+            "sodium_pct": {
+              "min": 0.15,
+              "max": 0.2,
+              "target": 0.18
+            },
+            "vitamin_d3_iu_kg": {
+              "min": 3000,
+              "max": 5000,
+              "target": 4000
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 40,
+              "max": 65,
+              "typical": 52
+            },
+            "wheat": {
+              "min": 0,
+              "max": 40,
+              "typical": 15
+            },
+            "soybean_meal_48": {
+              "min": 12,
+              "max": 24,
+              "typical": 18
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 12,
+              "typical": 3
+            },
+            "sunflower_meal": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 10,
+              "typical": 3
+            },
+            "limestone": {
+              "min": 8.0,
+              "max": 10.5,
+              "typical": 9.0
+            },
+            "oyster_shell": {
+              "min": 0,
+              "max": 5.0,
+              "typical": 2.0
+            },
+            "dicalcium_phosphate": {
+              "min": 0.2,
+              "max": 0.8,
+              "typical": 0.5
+            },
+            "salt": {
+              "min": 0.2,
+              "max": 0.4,
+              "typical": 0.3
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 4,
+              "typical": 1.5
+            }
+          },
+          "anti_nutritional_limits": {
+            "gossypol_mg_kg": {
+              "max": 50
+            },
+            "aflatoxin_ppb": {
+              "max": 5
+            }
+          }
+        }
+      }
+    },
+    "turkey": {
+      "phases": {
+        "starter": {
+          "age_weeks": "0-4",
+          "feed_form": "crumble",
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 2800,
+              "max": 2950,
+              "target": 2870
+            },
+            "crude_protein_pct": {
+              "min": 26.0,
+              "max": 28.0,
+              "target": 27.0
+            },
+            "dig_lysine_pct": {
+              "min": 1.55,
+              "max": 1.75,
+              "target": 1.65
+            },
+            "dig_methionine_pct": {
+              "min": 0.6,
+              "max": 0.72,
+              "target": 0.66
+            },
+            "calcium_pct": {
+              "min": 1.2,
+              "max": 1.4,
+              "target": 1.3
+            },
+            "available_phosphorus_pct": {
+              "min": 0.6,
+              "max": 0.7,
+              "target": 0.65
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 35,
+              "max": 55,
+              "typical": 45
+            },
+            "soybean_meal_48": {
+              "min": 30,
+              "max": 45,
+              "typical": 38
+            },
+            "fish_meal": {
+              "min": 0,
+              "max": 8,
+              "typical": 4
+            },
+            "meat_bone_meal": {
+              "min": 0,
+              "max": 5,
+              "typical": 0
+            },
+            "limestone": {
+              "min": 1.0,
+              "max": 2.0,
+              "typical": 1.5
+            },
+            "dicalcium_phosphate": {
+              "min": 1.5,
+              "max": 2.5,
+              "typical": 2.0
+            },
+            "salt": {
+              "min": 0.2,
+              "max": 0.4,
+              "typical": 0.3
+            }
+          }
+        },
+        "grower": {
+          "age_weeks": "5-11",
+          "feed_form": "pellet",
+          "pellet_size_mm": 4,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 2900,
+              "max": 3050,
+              "target": 2970
+            },
+            "crude_protein_pct": {
+              "min": 22.0,
+              "max": 24.0,
+              "target": 23.0
+            },
+            "dig_lysine_pct": {
+              "min": 1.3,
+              "max": 1.5,
+              "target": 1.4
+            },
+            "dig_methionine_pct": {
+              "min": 0.5,
+              "max": 0.62,
+              "target": 0.56
+            },
+            "calcium_pct": {
+              "min": 1.1,
+              "max": 1.3,
+              "target": 1.2
+            },
+            "available_phosphorus_pct": {
+              "min": 0.55,
+              "max": 0.65,
+              "target": 0.6
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 40,
+              "max": 62,
+              "typical": 52
+            },
+            "soybean_meal_48": {
+              "min": 25,
+              "max": 38,
+              "typical": 30
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "limestone": {
+              "min": 0.8,
+              "max": 1.8,
+              "typical": 1.3
+            },
+            "dicalcium_phosphate": {
+              "min": 1.2,
+              "max": 2.2,
+              "typical": 1.7
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 4,
+              "typical": 2.0
+            }
+          }
+        },
+        "finisher": {
+          "age_weeks": "12-18",
+          "feed_form": "pellet",
+          "pellet_size_mm": 5,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 3000,
+              "max": 3150,
+              "target": 3075
+            },
+            "crude_protein_pct": {
+              "min": 18.0,
+              "max": 20.0,
+              "target": 19.0
+            },
+            "dig_lysine_pct": {
+              "min": 1.05,
+              "max": 1.2,
+              "target": 1.12
+            },
+            "dig_methionine_pct": {
+              "min": 0.4,
+              "max": 0.5,
+              "target": 0.45
+            },
+            "calcium_pct": {
+              "min": 0.9,
+              "max": 1.1,
+              "target": 1.0
+            },
+            "available_phosphorus_pct": {
+              "min": 0.45,
+              "max": 0.55,
+              "target": 0.5
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 45,
+              "max": 68,
+              "typical": 58
+            },
+            "soybean_meal_48": {
+              "min": 18,
+              "max": 28,
+              "typical": 22
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 12,
+              "typical": 3
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 12,
+              "typical": 5
+            },
+            "limestone": {
+              "min": 0.6,
+              "max": 1.4,
+              "typical": 1.0
+            },
+            "dicalcium_phosphate": {
+              "min": 1.0,
+              "max": 1.8,
+              "typical": 1.4
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 5,
+              "typical": 2.5
+            },
+            "poultry_fat": {
+              "min": 0,
+              "max": 5,
+              "typical": 2.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "swine": {
+    "piglet": {
+      "phases": {
+        "phase1": {
+          "age_days": "0-14 post weaning",
+          "feed_form": "pellet or meal",
+          "pellet_size_mm": 2.5,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 3300,
+              "max": 3500,
+              "target": 3400
+            },
+            "crude_protein_pct": {
+              "min": 20.0,
+              "max": 23.0,
+              "target": 21.5
+            },
+            "dig_lysine_pct": {
+              "min": 1.35,
+              "max": 1.55,
+              "target": 1.45
+            },
+            "dig_methionine_pct": {
+              "min": 0.4,
+              "max": 0.5,
+              "target": 0.45
+            },
+            "dig_threonine_pct": {
+              "min": 0.85,
+              "max": 1.0,
+              "target": 0.92
+            },
+            "dig_tryptophan_pct": {
+              "min": 0.25,
+              "max": 0.32,
+              "target": 0.28
+            },
+            "calcium_pct": {
+              "min": 0.8,
+              "max": 0.95,
+              "target": 0.85
+            },
+            "total_phosphorus_pct": {
+              "min": 0.65,
+              "max": 0.8,
+              "target": 0.7
+            },
+            "dig_phosphorus_pct": {
+              "min": 0.4,
+              "max": 0.5,
+              "target": 0.45
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 30,
+              "max": 55,
+              "typical": 42
+            },
+            "wheat": {
+              "min": 0,
+              "max": 30,
+              "typical": 15
+            },
+            "soybean_meal_48": {
+              "min": 15,
+              "max": 30,
+              "typical": 22
+            },
+            "whey_powder": {
+              "min": 0,
+              "max": 15,
+              "typical": 8
+            },
+            "fish_meal": {
+              "min": 0,
+              "max": 6,
+              "typical": 3
+            },
+            "plasma_protein": {
+              "min": 0,
+              "max": 4,
+              "typical": 2
+            },
+            "lactose": {
+              "min": 0,
+              "max": 10,
+              "typical": 5
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 5,
+              "typical": 2
+            },
+            "limestone": {
+              "min": 0.5,
+              "max": 1.0,
+              "typical": 0.7
+            },
+            "dicalcium_phosphate": {
+              "min": 1.5,
+              "max": 2.5,
+              "typical": 2.0
+            },
+            "salt": {
+              "min": 0.2,
+              "max": 0.4,
+              "typical": 0.3
+            }
+          },
+          "anti_nutritional_limits": {
+            "soybean_antigen_pct": {
+              "max": 0.2,
+              "note": "Use heated/extracted SBM only"
+            },
+            "aflatoxin_ppb": {
+              "max": 10
+            },
+            "deoxynivalenol_ppm": {
+              "max": 0.9
+            },
+            "zearalenone_ppb": {
+              "max": 100
+            }
+          }
+        },
+        "phase2": {
+          "age_days": "15-35 post weaning",
+          "feed_form": "pellet",
+          "pellet_size_mm": 3,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 3200,
+              "max": 3350,
+              "target": 3275
+            },
+            "crude_protein_pct": {
+              "min": 18.0,
+              "max": 21.0,
+              "target": 19.5
+            },
+            "dig_lysine_pct": {
+              "min": 1.2,
+              "max": 1.4,
+              "target": 1.3
+            },
+            "dig_methionine_pct": {
+              "min": 0.36,
+              "max": 0.46,
+              "target": 0.41
+            },
+            "dig_threonine_pct": {
+              "min": 0.75,
+              "max": 0.9,
+              "target": 0.82
+            },
+            "calcium_pct": {
+              "min": 0.75,
+              "max": 0.9,
+              "target": 0.82
+            },
+            "dig_phosphorus_pct": {
+              "min": 0.36,
+              "max": 0.46,
+              "target": 0.41
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 35,
+              "max": 60,
+              "typical": 48
+            },
+            "wheat": {
+              "min": 0,
+              "max": 35,
+              "typical": 15
+            },
+            "soybean_meal_48": {
+              "min": 18,
+              "max": 32,
+              "typical": 25
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "whey_powder": {
+              "min": 0,
+              "max": 8,
+              "typical": 3
+            },
+            "fish_meal": {
+              "min": 0,
+              "max": 4,
+              "typical": 0
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 5,
+              "typical": 2
+            },
+            "limestone": {
+              "min": 0.6,
+              "max": 1.2,
+              "typical": 0.9
+            },
+            "dicalcium_phosphate": {
+              "min": 1.2,
+              "max": 2.0,
+              "typical": 1.6
+            },
+            "salt": {
+              "min": 0.3,
+              "max": 0.5,
+              "typical": 0.4
+            }
+          }
+        }
+      }
+    },
+    "grower_finisher": {
+      "phases": {
+        "grower": {
+          "weight_kg": "25-60",
+          "feed_form": "pellet",
+          "pellet_size_mm": 4,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 3200,
+              "max": 3350,
+              "target": 3275
+            },
+            "crude_protein_pct": {
+              "min": 16.0,
+              "max": 18.5,
+              "target": 17.0
+            },
+            "dig_lysine_pct": {
+              "min": 0.9,
+              "max": 1.05,
+              "target": 0.97
+            },
+            "dig_methionine_pct": {
+              "min": 0.27,
+              "max": 0.34,
+              "target": 0.3
+            },
+            "dig_threonine_pct": {
+              "min": 0.58,
+              "max": 0.7,
+              "target": 0.64
+            },
+            "dig_tryptophan_pct": {
+              "min": 0.17,
+              "max": 0.22,
+              "target": 0.19
+            },
+            "calcium_pct": {
+              "min": 0.65,
+              "max": 0.8,
+              "target": 0.72
+            },
+            "dig_phosphorus_pct": {
+              "min": 0.28,
+              "max": 0.36,
+              "target": 0.32
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 40,
+              "max": 70,
+              "typical": 58
+            },
+            "wheat": {
+              "min": 0,
+              "max": 40,
+              "typical": 15
+            },
+            "sorghum": {
+              "min": 0,
+              "max": 30,
+              "typical": 0
+            },
+            "soybean_meal_48": {
+              "min": 12,
+              "max": 25,
+              "typical": 18
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 15,
+              "typical": 5
+            },
+            "sunflower_meal": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 20,
+              "typical": 8
+            },
+            "wheat_bran": {
+              "min": 0,
+              "max": 10,
+              "typical": 0
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 4,
+              "typical": 1.5
+            },
+            "limestone": {
+              "min": 0.8,
+              "max": 1.4,
+              "typical": 1.1
+            },
+            "dicalcium_phosphate": {
+              "min": 0.8,
+              "max": 1.5,
+              "typical": 1.1
+            },
+            "salt": {
+              "min": 0.3,
+              "max": 0.5,
+              "typical": 0.4
+            }
+          },
+          "anti_nutritional_limits": {
+            "aflatoxin_ppb": {
+              "max": 20
+            },
+            "deoxynivalenol_ppm": {
+              "max": 0.9
+            },
+            "zearalenone_ppb": {
+              "max": 100
+            },
+            "gossypol_mg_kg": {
+              "max": 400
+            }
+          }
+        },
+        "finisher": {
+          "weight_kg": "60-120",
+          "feed_form": "pellet",
+          "pellet_size_mm": 5,
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 3200,
+              "max": 3350,
+              "target": 3275
+            },
+            "crude_protein_pct": {
+              "min": 14.0,
+              "max": 16.5,
+              "target": 15.0
+            },
+            "dig_lysine_pct": {
+              "min": 0.72,
+              "max": 0.86,
+              "target": 0.79
+            },
+            "dig_methionine_pct": {
+              "min": 0.22,
+              "max": 0.28,
+              "target": 0.25
+            },
+            "dig_threonine_pct": {
+              "min": 0.47,
+              "max": 0.58,
+              "target": 0.52
+            },
+            "calcium_pct": {
+              "min": 0.55,
+              "max": 0.7,
+              "target": 0.62
+            },
+            "dig_phosphorus_pct": {
+              "min": 0.22,
+              "max": 0.3,
+              "target": 0.26
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 45,
+              "max": 75,
+              "typical": 62
+            },
+            "wheat": {
+              "min": 0,
+              "max": 45,
+              "typical": 15
+            },
+            "sorghum": {
+              "min": 0,
+              "max": 35,
+              "typical": 0
+            },
+            "soybean_meal_48": {
+              "min": 8,
+              "max": 20,
+              "typical": 13
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 18,
+              "typical": 5
+            },
+            "sunflower_meal": {
+              "min": 0,
+              "max": 12,
+              "typical": 0
+            },
+            "ddgs": {
+              "min": 0,
+              "max": 25,
+              "typical": 10
+            },
+            "wheat_bran": {
+              "min": 0,
+              "max": 15,
+              "typical": 5
+            },
+            "vegetable_oil": {
+              "min": 0,
+              "max": 4,
+              "typical": 1.5
+            },
+            "limestone": {
+              "min": 0.7,
+              "max": 1.2,
+              "typical": 0.9
+            },
+            "dicalcium_phosphate": {
+              "min": 0.5,
+              "max": 1.2,
+              "typical": 0.8
+            },
+            "salt": {
+              "min": 0.3,
+              "max": 0.5,
+              "typical": 0.4
+            }
+          }
+        }
+      }
+    },
+    "sow": {
+      "phases": {
+        "gestation": {
+          "feed_form": "pellet or meal",
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 3000,
+              "max": 3200,
+              "target": 3100
+            },
+            "crude_protein_pct": {
+              "min": 13.0,
+              "max": 16.0,
+              "target": 14.5
+            },
+            "dig_lysine_pct": {
+              "min": 0.55,
+              "max": 0.7,
+              "target": 0.62
+            },
+            "calcium_pct": {
+              "min": 0.8,
+              "max": 1.0,
+              "target": 0.9
+            },
+            "dig_phosphorus_pct": {
+              "min": 0.3,
+              "max": 0.4,
+              "target": 0.35
+            },
+            "crude_fibre_pct": {
+              "min": 5.0,
+              "max": 10.0,
+              "target": 7.0,
+              "note": "High fibre for satiety"
+            },
+            "folic_acid_mg_kg": {
+              "min": 2.5,
+              "max": 5.0,
+              "target": 3.0
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 30,
+              "max": 60,
+              "typical": 45
+            },
+            "wheat": {
+              "min": 0,
+              "max": 35,
+              "typical": 15
+            },
+            "soybean_meal_48": {
+              "min": 8,
+              "max": 20,
+              "typical": 13
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 15,
+              "typical": 5
+            },
+            "wheat_bran": {
+              "min": 5,
+              "max": 20,
+              "typical": 12,
+              "note": "Fibre source for satiety"
+            },
+            "sugar_beet_pulp": {
+              "min": 0,
+              "max": 10,
+              "typical": 5
+            },
+            "alfalfa_meal": {
+              "min": 0,
+              "max": 8,
+              "typical": 0
+            },
+            "limestone": {
+              "min": 1.0,
+              "max": 1.8,
+              "typical": 1.3
+            },
+            "dicalcium_phosphate": {
+              "min": 0.8,
+              "max": 1.5,
+              "typical": 1.1
+            },
+            "salt": {
+              "min": 0.3,
+              "max": 0.5,
+              "typical": 0.4
+            }
+          }
+        },
+        "lactation": {
+          "feed_form": "pellet or meal",
+          "nutrient_specs": {
+            "me_kcal_kg": {
+              "min": 3200,
+              "max": 3400,
+              "target": 3300
+            },
+            "crude_protein_pct": {
+              "min": 17.0,
+              "max": 20.0,
+              "target": 18.5
+            },
+            "dig_lysine_pct": {
+              "min": 0.95,
+              "max": 1.15,
+              "target": 1.05
+            },
+            "dig_methionine_pct": {
+              "min": 0.28,
+              "max": 0.36,
+              "target": 0.32
+            },
+            "dig_threonine_pct": {
+              "min": 0.62,
+              "max": 0.76,
+              "target": 0.69
+            },
+            "calcium_pct": {
+              "min": 0.9,
+              "max": 1.1,
+              "target": 1.0
+            },
+            "dig_phosphorus_pct": {
+              "min": 0.38,
+              "max": 0.48,
+              "target": 0.43
+            },
+            "crude_fibre_pct": {
+              "min": 2.0,
+              "max": 5.0,
+              "target": 3.5
+            }
+          },
+          "ingredient_inclusion_rates": {
+            "maize": {
+              "min": 35,
+              "max": 62,
+              "typical": 50
+            },
+            "wheat": {
+              "min": 0,
+              "max": 35,
+              "typical": 15
+            },
+            "soybean_meal_48": {
+              "min": 18,
+              "max": 30,
+              "typical": 24
+            },
+            "canola_meal": {
+              "min": 0,
+              "max": 10,
+              "typical": 3
+            },
+            "fish_meal": {
+              "min": 0,
+              "max": 4,
+              "typical": 0
+            },
+            "vegetable_oil": {
+              "min": 2,
+              "max": 6,
+              "typical": 4,
+              "note": "High energy for milk production"
+            },
+            "limestone": {
+              "min": 1.2,
+              "max": 2.0,
+              "typical": 1.5
+            },
+            "dicalcium_phosphate": {
+              "min": 1.0,
+              "max": 1.8,
+              "typical": 1.4
+            },
+            "salt": {
+              "min": 0.3,
+              "max": 0.5,
+              "typical": 0.4
+            }
+          }
+        }
+      }
+    }
+  },
+  "dairy": {
+    "phases": {
+      "early_lactation": {
+        "dim": "0-100",
+        "feed_form": "TMR (Total Mixed Ration)",
+        "nutrient_specs": {
+          "nel_mcal_kg_dm": {
+            "min": 1.65,
+            "max": 1.8,
+            "target": 1.72
+          },
+          "crude_protein_pct_dm": {
+            "min": 17.0,
+            "max": 19.0,
+            "target": 18.0
+          },
+          "rumen_undegradable_protein_pct_cp": {
+            "min": 38,
+            "max": 42,
+            "target": 40
+          },
+          "ndf_pct_dm": {
+            "min": 28,
+            "max": 33,
+            "target": 30
+          },
+          "adf_pct_dm": {
+            "min": 19,
+            "max": 22,
+            "target": 20
+          },
+          "starch_pct_dm": {
+            "min": 24,
+            "max": 28,
+            "target": 26
+          },
+          "ether_extract_pct_dm": {
+            "min": 3.5,
+            "max": 5.0,
+            "target": 4.5
+          },
+          "calcium_pct_dm": {
+            "min": 0.9,
+            "max": 1.1,
+            "target": 1.0
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.38,
+            "max": 0.48,
+            "target": 0.42
+          },
+          "magnesium_pct_dm": {
+            "min": 0.25,
+            "max": 0.35,
+            "target": 0.3
+          },
+          "potassium_pct_dm": {
+            "min": 1.0,
+            "max": 1.5,
+            "target": 1.2
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "maize_silage": {
+            "min": 25,
+            "max": 45,
+            "typical": 35,
+            "note": "DM basis"
+          },
+          "grass_silage": {
+            "min": 0,
+            "max": 30,
+            "typical": 15
+          },
+          "hay_alfalfa": {
+            "min": 0,
+            "max": 15,
+            "typical": 5
+          },
+          "maize_grain": {
+            "min": 10,
+            "max": 25,
+            "typical": 18
+          },
+          "barley": {
+            "min": 0,
+            "max": 20,
+            "typical": 8
+          },
+          "soybean_meal_48": {
+            "min": 5,
+            "max": 15,
+            "typical": 10
+          },
+          "canola_meal": {
+            "min": 0,
+            "max": 10,
+            "typical": 4
+          },
+          "distillers_grain_wet": {
+            "min": 0,
+            "max": 15,
+            "typical": 8
+          },
+          "cottonseed_whole": {
+            "min": 0,
+            "max": 8,
+            "typical": 0
+          },
+          "calcium_salts_fat": {
+            "min": 0,
+            "max": 3,
+            "typical": 1.5
+          },
+          "sodium_bicarbonate": {
+            "min": 0.5,
+            "max": 1.5,
+            "typical": 0.8
+          }
+        },
+        "anti_nutritional_limits": {
+          "aflatoxin_ppb": {
+            "max": 10,
+            "note": "Milk aflatoxin M1 limit 0.5ppb = ~10ppb feed"
+          },
+          "nitrates_ppm": {
+            "max": 1000
+          },
+          "gossypol_g_day": {
+            "max": 6,
+            "note": "Whole cottonseed limit"
+          }
+        }
+      },
+      "mid_lactation": {
+        "dim": "101-200",
+        "feed_form": "TMR",
+        "nutrient_specs": {
+          "nel_mcal_kg_dm": {
+            "min": 1.55,
+            "max": 1.7,
+            "target": 1.62
+          },
+          "crude_protein_pct_dm": {
+            "min": 16.0,
+            "max": 17.5,
+            "target": 16.8
+          },
+          "ndf_pct_dm": {
+            "min": 30,
+            "max": 35,
+            "target": 32
+          },
+          "starch_pct_dm": {
+            "min": 20,
+            "max": 26,
+            "target": 23
+          },
+          "calcium_pct_dm": {
+            "min": 0.75,
+            "max": 0.95,
+            "target": 0.85
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.34,
+            "max": 0.44,
+            "target": 0.38
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "maize_silage": {
+            "min": 25,
+            "max": 45,
+            "typical": 35
+          },
+          "grass_silage": {
+            "min": 0,
+            "max": 35,
+            "typical": 20
+          },
+          "maize_grain": {
+            "min": 8,
+            "max": 22,
+            "typical": 15
+          },
+          "barley": {
+            "min": 0,
+            "max": 20,
+            "typical": 10
+          },
+          "soybean_meal_48": {
+            "min": 3,
+            "max": 12,
+            "typical": 7
+          },
+          "canola_meal": {
+            "min": 0,
+            "max": 12,
+            "typical": 5
+          },
+          "distillers_grain_wet": {
+            "min": 0,
+            "max": 18,
+            "typical": 10
+          }
+        }
+      },
+      "dry_cow": {
+        "dim": "Dry period 45-60 days",
+        "feed_form": "TMR or component feeding",
+        "nutrient_specs": {
+          "nel_mcal_kg_dm": {
+            "min": 1.2,
+            "max": 1.4,
+            "target": 1.3
+          },
+          "crude_protein_pct_dm": {
+            "min": 12.0,
+            "max": 14.0,
+            "target": 13.0
+          },
+          "ndf_pct_dm": {
+            "min": 40,
+            "max": 50,
+            "target": 45
+          },
+          "starch_pct_dm": {
+            "min": 8,
+            "max": 15,
+            "target": 10
+          },
+          "calcium_pct_dm": {
+            "min": 0.5,
+            "max": 0.7,
+            "target": 0.6,
+            "note": "Low Ca pre-calving to prevent milk fever"
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.25,
+            "max": 0.35,
+            "target": 0.3
+          },
+          "dcad_meq_kg": {
+            "min": -100,
+            "max": -50,
+            "target": -75,
+            "note": "Anionic diet pre-calving"
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "straw": {
+            "min": 10,
+            "max": 30,
+            "typical": 20,
+            "note": "High fibre, limits energy density"
+          },
+          "grass_silage": {
+            "min": 20,
+            "max": 50,
+            "typical": 35
+          },
+          "hay_alfalfa": {
+            "min": 0,
+            "max": 20,
+            "typical": 10
+          },
+          "maize_grain": {
+            "min": 0,
+            "max": 10,
+            "typical": 3
+          },
+          "soybean_meal_48": {
+            "min": 2,
+            "max": 8,
+            "typical": 4
+          },
+          "anionic_salts": {
+            "min": 0.5,
+            "max": 2.0,
+            "typical": 1.0
+          }
+        }
+      }
+    }
+  },
+  "equine": {
+    "phases": {
+      "maintenance": {
+        "workload": "no work",
+        "feed_form": "forage based + concentrate",
+        "nutrient_specs": {
+          "de_mcal_day": {
+            "note": "NRC 2007 — 0.0333 × BW^0.75 Mcal/day"
+          },
+          "crude_protein_pct": {
+            "min": 8.0,
+            "max": 10.0,
+            "target": 8.5
+          },
+          "calcium_pct": {
+            "min": 0.3,
+            "max": 0.5,
+            "target": 0.4
+          },
+          "phosphorus_pct": {
+            "min": 0.2,
+            "max": 0.35,
+            "target": 0.28
+          },
+          "ca_p_ratio": {
+            "min": 1.5,
+            "max": 3.0,
+            "target": 2.0
+          },
+          "nsc_pct": {
+            "max": 20,
+            "note": "Non-structural carbohydrates — critical for insulin-resistant horses"
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "hay_grass": {
+            "min": 60,
+            "max": 100,
+            "typical": 80,
+            "note": "% of diet DM"
+          },
+          "hay_alfalfa": {
+            "min": 0,
+            "max": 50,
+            "typical": 20
+          },
+          "oats": {
+            "min": 0,
+            "max": 30,
+            "typical": 10
+          },
+          "barley": {
+            "min": 0,
+            "max": 25,
+            "typical": 0
+          },
+          "maize": {
+            "min": 0,
+            "max": 20,
+            "typical": 0,
+            "note": "High starch — use sparingly"
+          },
+          "soybean_meal": {
+            "min": 0,
+            "max": 5,
+            "typical": 0
+          },
+          "beet_pulp": {
+            "min": 0,
+            "max": 15,
+            "typical": 5
+          },
+          "vegetable_oil": {
+            "min": 0,
+            "max": 10,
+            "typical": 0
+          }
+        },
+        "anti_nutritional_limits": {
+          "nitrates_ppm": {
+            "max": 1000
+          },
+          "blister_beetles": {
+            "max": 0,
+            "note": "Zero tolerance — cantharidin toxicity"
+          },
+          "nsc_pct": {
+            "max": 20,
+            "note": "EMS/IR horses max 10%"
+          },
+          "aflatoxin_ppb": {
+            "max": 20
+          }
+        }
+      },
+      "performance": {
+        "workload": "moderate to heavy",
+        "feed_form": "forage + concentrate",
+        "nutrient_specs": {
+          "de_mcal_day": {
+            "note": "1.4-1.9x maintenance DE depending on workload intensity"
+          },
+          "crude_protein_pct": {
+            "min": 10.0,
+            "max": 12.5,
+            "target": 11.5
+          },
+          "calcium_pct": {
+            "min": 0.35,
+            "max": 0.55,
+            "target": 0.45
+          },
+          "phosphorus_pct": {
+            "min": 0.25,
+            "max": 0.4,
+            "target": 0.32
+          },
+          "electrolytes": {
+            "note": "Sodium, potassium, chloride supplementation required for heavy sweat loss"
+          },
+          "vit_e_iu_day": {
+            "min": 500,
+            "max": 1000,
+            "target": 800,
+            "note": "Antioxidant for muscle function"
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "hay_grass": {
+            "min": 40,
+            "max": 70,
+            "typical": 55
+          },
+          "hay_alfalfa": {
+            "min": 0,
+            "max": 40,
+            "typical": 15
+          },
+          "oats": {
+            "min": 0,
+            "max": 40,
+            "typical": 20
+          },
+          "barley": {
+            "min": 0,
+            "max": 30,
+            "typical": 10
+          },
+          "maize": {
+            "min": 0,
+            "max": 25,
+            "typical": 5
+          },
+          "beet_pulp": {
+            "min": 0,
+            "max": 15,
+            "typical": 8
+          },
+          "vegetable_oil": {
+            "min": 0,
+            "max": 10,
+            "typical": 5,
+            "note": "Slow release energy — cool fuel"
+          }
+        }
+      },
+      "growing": {
+        "age": "weanling to 2 years",
+        "feed_form": "forage + concentrate",
+        "nutrient_specs": {
+          "crude_protein_pct": {
+            "min": 14.0,
+            "max": 16.0,
+            "target": 15.0
+          },
+          "lysine_pct": {
+            "min": 0.65,
+            "max": 0.8,
+            "target": 0.7
+          },
+          "calcium_pct": {
+            "min": 0.55,
+            "max": 0.8,
+            "target": 0.7
+          },
+          "phosphorus_pct": {
+            "min": 0.35,
+            "max": 0.55,
+            "target": 0.45
+          },
+          "ca_p_ratio": {
+            "min": 1.5,
+            "max": 2.0,
+            "target": 1.7
+          },
+          "copper_mg_kg": {
+            "min": 30,
+            "max": 50,
+            "target": 40,
+            "note": "Critical for osteochondrosis prevention"
+          },
+          "zinc_mg_kg": {
+            "min": 80,
+            "max": 120,
+            "target": 100
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "hay_grass": {
+            "min": 40,
+            "max": 70,
+            "typical": 55
+          },
+          "hay_alfalfa": {
+            "min": 10,
+            "max": 40,
+            "typical": 25
+          },
+          "oats": {
+            "min": 0,
+            "max": 30,
+            "typical": 15
+          },
+          "barley": {
+            "min": 0,
+            "max": 25,
+            "typical": 8
+          },
+          "soybean_meal": {
+            "min": 0,
+            "max": 8,
+            "typical": 3
+          },
+          "beet_pulp": {
+            "min": 0,
+            "max": 10,
+            "typical": 5
+          }
+        }
+      },
+      "lactating_mare": {
+        "feed_form": "forage + concentrate",
+        "nutrient_specs": {
+          "de_mcal_day": {
+            "note": "1.7x maintenance — peak lactation months 1-3"
+          },
+          "crude_protein_pct": {
+            "min": 13.0,
+            "max": 15.0,
+            "target": 14.0
+          },
+          "calcium_pct": {
+            "min": 0.5,
+            "max": 0.8,
+            "target": 0.65
+          },
+          "phosphorus_pct": {
+            "min": 0.35,
+            "max": 0.55,
+            "target": 0.45
+          },
+          "lysine_pct": {
+            "min": 0.6,
+            "max": 0.75,
+            "target": 0.65
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "hay_grass": {
+            "min": 40,
+            "max": 65,
+            "typical": 50
+          },
+          "hay_alfalfa": {
+            "min": 10,
+            "max": 40,
+            "typical": 25
+          },
+          "oats": {
+            "min": 0,
+            "max": 30,
+            "typical": 15
+          },
+          "barley": {
+            "min": 0,
+            "max": 25,
+            "typical": 8
+          },
+          "soybean_meal": {
+            "min": 0,
+            "max": 8,
+            "typical": 4
+          },
+          "beet_pulp": {
+            "min": 0,
+            "max": 12,
+            "typical": 6
+          },
+          "vegetable_oil": {
+            "min": 0,
+            "max": 8,
+            "typical": 3
+          }
+        }
+      }
+    }
+  },
+  "sheep": {
+    "phases": {
+      "maintenance": {
+        "feed_form": "forage based",
+        "nutrient_specs": {
+          "me_mj_kg_dm": {
+            "min": 8.0,
+            "max": 9.5,
+            "target": 8.8
+          },
+          "crude_protein_pct_dm": {
+            "min": 8.0,
+            "max": 10.0,
+            "target": 9.0
+          },
+          "calcium_pct_dm": {
+            "min": 0.25,
+            "max": 0.45,
+            "target": 0.35
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.18,
+            "max": 0.3,
+            "target": 0.24
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "hay_grass": {
+            "min": 50,
+            "max": 90,
+            "typical": 70
+          },
+          "hay_alfalfa": {
+            "min": 0,
+            "max": 30,
+            "typical": 10
+          },
+          "barley": {
+            "min": 0,
+            "max": 20,
+            "typical": 5
+          },
+          "maize": {
+            "min": 0,
+            "max": 15,
+            "typical": 0
+          },
+          "sugar_beet_pulp": {
+            "min": 0,
+            "max": 15,
+            "typical": 5
+          }
+        }
+      },
+      "finishing": {
+        "feed_form": "concentrate + forage",
+        "nutrient_specs": {
+          "me_mj_kg_dm": {
+            "min": 11.0,
+            "max": 12.5,
+            "target": 11.8
+          },
+          "crude_protein_pct_dm": {
+            "min": 14.0,
+            "max": 16.0,
+            "target": 15.0
+          },
+          "calcium_pct_dm": {
+            "min": 0.4,
+            "max": 0.6,
+            "target": 0.5
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.28,
+            "max": 0.4,
+            "target": 0.34
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "barley": {
+            "min": 20,
+            "max": 50,
+            "typical": 35
+          },
+          "maize": {
+            "min": 0,
+            "max": 30,
+            "typical": 10
+          },
+          "wheat": {
+            "min": 0,
+            "max": 25,
+            "typical": 10
+          },
+          "soybean_meal_48": {
+            "min": 5,
+            "max": 15,
+            "typical": 8
+          },
+          "canola_meal": {
+            "min": 0,
+            "max": 10,
+            "typical": 3
+          },
+          "hay_grass": {
+            "min": 10,
+            "max": 30,
+            "typical": 20
+          },
+          "sugar_beet_pulp": {
+            "min": 0,
+            "max": 15,
+            "typical": 5
+          },
+          "limestone": {
+            "min": 0.5,
+            "max": 1.2,
+            "typical": 0.8
+          },
+          "dicalcium_phosphate": {
+            "min": 0.3,
+            "max": 0.8,
+            "typical": 0.5
+          }
+        },
+        "anti_nutritional_limits": {
+          "sulphur_pct_dm": {
+            "max": 0.4,
+            "note": "Polioencephalomalacia risk above 0.4%"
+          },
+          "copper_mg_kg": {
+            "max": 15,
+            "note": "Sheep very sensitive to copper toxicity"
+          },
+          "nitrates_ppm": {
+            "max": 1500
+          }
+        }
+      },
+      "lactation": {
+        "feed_form": "concentrate + forage",
+        "nutrient_specs": {
+          "me_mj_kg_dm": {
+            "min": 11.5,
+            "max": 13.0,
+            "target": 12.2
+          },
+          "crude_protein_pct_dm": {
+            "min": 16.0,
+            "max": 18.0,
+            "target": 17.0
+          },
+          "calcium_pct_dm": {
+            "min": 0.55,
+            "max": 0.75,
+            "target": 0.65
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.35,
+            "max": 0.5,
+            "target": 0.42
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "barley": {
+            "min": 25,
+            "max": 50,
+            "typical": 38
+          },
+          "maize": {
+            "min": 0,
+            "max": 20,
+            "typical": 8
+          },
+          "soybean_meal_48": {
+            "min": 8,
+            "max": 18,
+            "typical": 12
+          },
+          "hay_alfalfa": {
+            "min": 10,
+            "max": 30,
+            "typical": 20
+          },
+          "hay_grass": {
+            "min": 10,
+            "max": 30,
+            "typical": 18
+          },
+          "limestone": {
+            "min": 0.8,
+            "max": 1.5,
+            "typical": 1.1
+          }
+        }
+      }
+    }
+  },
+  "goat": {
+    "phases": {
+      "dairy_lactation": {
+        "feed_form": "concentrate + forage",
+        "nutrient_specs": {
+          "me_mj_kg_dm": {
+            "min": 11.0,
+            "max": 12.5,
+            "target": 11.8
+          },
+          "crude_protein_pct_dm": {
+            "min": 15.0,
+            "max": 17.0,
+            "target": 16.0
+          },
+          "ndf_pct_dm": {
+            "min": 30,
+            "max": 38,
+            "target": 34
+          },
+          "calcium_pct_dm": {
+            "min": 0.5,
+            "max": 0.7,
+            "target": 0.6
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.32,
+            "max": 0.45,
+            "target": 0.38
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "hay_alfalfa": {
+            "min": 15,
+            "max": 40,
+            "typical": 25
+          },
+          "hay_grass": {
+            "min": 10,
+            "max": 35,
+            "typical": 20
+          },
+          "barley": {
+            "min": 10,
+            "max": 35,
+            "typical": 22
+          },
+          "maize": {
+            "min": 0,
+            "max": 25,
+            "typical": 10
+          },
+          "soybean_meal_48": {
+            "min": 5,
+            "max": 15,
+            "typical": 9
+          },
+          "canola_meal": {
+            "min": 0,
+            "max": 10,
+            "typical": 3
+          },
+          "sugar_beet_pulp": {
+            "min": 0,
+            "max": 10,
+            "typical": 5
+          },
+          "limestone": {
+            "min": 0.6,
+            "max": 1.2,
+            "typical": 0.9
+          },
+          "dicalcium_phosphate": {
+            "min": 0.3,
+            "max": 0.8,
+            "typical": 0.5
+          }
+        },
+        "anti_nutritional_limits": {
+          "copper_mg_kg": {
+            "max": 25,
+            "note": "Goats more tolerant than sheep but still sensitive"
+          },
+          "nitrates_ppm": {
+            "max": 1500
+          }
+        }
+      },
+      "meat_finishing": {
+        "feed_form": "concentrate + forage",
+        "nutrient_specs": {
+          "me_mj_kg_dm": {
+            "min": 10.5,
+            "max": 12.0,
+            "target": 11.2
+          },
+          "crude_protein_pct_dm": {
+            "min": 13.0,
+            "max": 15.0,
+            "target": 14.0
+          },
+          "calcium_pct_dm": {
+            "min": 0.4,
+            "max": 0.6,
+            "target": 0.5
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.25,
+            "max": 0.38,
+            "target": 0.32
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "barley": {
+            "min": 20,
+            "max": 45,
+            "typical": 32
+          },
+          "maize": {
+            "min": 0,
+            "max": 25,
+            "typical": 8
+          },
+          "soybean_meal_48": {
+            "min": 5,
+            "max": 12,
+            "typical": 7
+          },
+          "hay_grass": {
+            "min": 20,
+            "max": 40,
+            "typical": 30
+          },
+          "sugar_beet_pulp": {
+            "min": 0,
+            "max": 12,
+            "typical": 5
+          }
+        }
+      }
+    }
+  },
+  "beef": {
+    "phases": {
+      "backgrounder": {
+        "weight_kg": "200-350",
+        "feed_form": "forage + supplement",
+        "nutrient_specs": {
+          "me_mj_kg_dm": {
+            "min": 10.0,
+            "max": 11.5,
+            "target": 10.8
+          },
+          "crude_protein_pct_dm": {
+            "min": 12.0,
+            "max": 14.0,
+            "target": 13.0
+          },
+          "calcium_pct_dm": {
+            "min": 0.4,
+            "max": 0.6,
+            "target": 0.5
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.25,
+            "max": 0.38,
+            "target": 0.3
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "grass_silage": {
+            "min": 40,
+            "max": 75,
+            "typical": 60
+          },
+          "maize_silage": {
+            "min": 0,
+            "max": 40,
+            "typical": 15
+          },
+          "barley": {
+            "min": 0,
+            "max": 20,
+            "typical": 8
+          },
+          "soybean_meal_48": {
+            "min": 0,
+            "max": 8,
+            "typical": 3
+          },
+          "canola_meal": {
+            "min": 0,
+            "max": 8,
+            "typical": 2
+          },
+          "limestone": {
+            "min": 0.3,
+            "max": 0.8,
+            "typical": 0.5
+          }
+        }
+      },
+      "finisher": {
+        "weight_kg": "350-600",
+        "feed_form": "high concentrate TMR",
+        "nutrient_specs": {
+          "me_mj_kg_dm": {
+            "min": 12.0,
+            "max": 13.5,
+            "target": 12.8
+          },
+          "crude_protein_pct_dm": {
+            "min": 12.0,
+            "max": 14.0,
+            "target": 13.0
+          },
+          "ndf_pct_dm": {
+            "min": 25,
+            "max": 35,
+            "target": 30,
+            "note": "Minimum for rumen health"
+          },
+          "starch_pct_dm": {
+            "min": 25,
+            "max": 40,
+            "target": 32
+          },
+          "calcium_pct_dm": {
+            "min": 0.4,
+            "max": 0.6,
+            "target": 0.5
+          },
+          "phosphorus_pct_dm": {
+            "min": 0.25,
+            "max": 0.35,
+            "target": 0.3
+          },
+          "sulphur_pct_dm": {
+            "max": 0.4,
+            "note": "Polioencephalomalacia risk"
+          }
+        },
+        "ingredient_inclusion_rates": {
+          "maize_grain": {
+            "min": 30,
+            "max": 60,
+            "typical": 45
+          },
+          "barley": {
+            "min": 0,
+            "max": 40,
+            "typical": 15
+          },
+          "maize_silage": {
+            "min": 10,
+            "max": 35,
+            "typical": 20
+          },
+          "grass_silage": {
+            "min": 0,
+            "max": 20,
+            "typical": 8
+          },
+          "ddgs": {
+            "min": 0,
+            "max": 20,
+            "typical": 8
+          },
+          "soybean_meal_48": {
+            "min": 0,
+            "max": 10,
+            "typical": 3
+          },
+          "canola_meal": {
+            "min": 0,
+            "max": 10,
+            "typical": 3
+          },
+          "straw": {
+            "min": 3,
+            "max": 10,
+            "typical": 5,
+            "note": "Rumen buffer"
+          },
+          "limestone": {
+            "min": 0.5,
+            "max": 1.0,
+            "typical": 0.7
+          }
+        },
+        "anti_nutritional_limits": {
+          "aflatoxin_ppb": {
+            "max": 20
+          },
+          "nitrates_ppm": {
+            "max": 2000
+          },
+          "sulphur_pct_dm": {
+            "max": 0.4
+          },
+          "ionophore_mg_day": {
+            "max": 360,
+            "note": "Monensin/Lasalocid — bloat and efficiency"
+          }
+        }
+      }
+    }
+  },
+  "ingredient_notes": {
+    "ddgs": {
+      "full_name": "Distillers Dried Grains with Solubles",
+      "protein_pct": "25-28",
+      "me_kcal_kg": "3200-3400",
+      "variability": "HIGH — nutrient content varies by source and processing",
+      "key_limits": {
+        "poultry": "Max 15% finisher, 8% starter/grower — high sulphur and variability",
+        "swine": "Max 25% finisher, 20% grower — reduce lysine digestibility adjustment",
+        "dairy": "Max 15-20% DM — watch sulphur and mycotoxins",
+        "beef": "Max 20% — excellent rumen escape protein"
+      },
+      "watch_for": [
+        "mycotoxins",
+        "high sulphur (0.6-0.8%)",
+        "variable lysine digestibility",
+        "variable fat content"
+      ]
+    },
+    "canola_meal": {
+      "full_name": "Canola/Rapeseed Meal (00 variety)",
+      "protein_pct": "36-38",
+      "me_kcal_kg_poultry": "1850-2050",
+      "key_limits": {
+        "poultry": "Max 12% finisher, 8% starter — glucosinolates in non-00 varieties",
+        "swine": "Max 15-18% — palatability and glucosinolates limit",
+        "dairy": "Excellent bypass protein source — up to 15% DM",
+        "beef": "Good protein source up to 12% DM"
+      },
+      "watch_for": [
+        "glucosinolates in non-00 varieties",
+        "erucic acid",
+        "reduced palatability at high levels"
+      ]
+    },
+    "cottonseed_meal": {
+      "protein_pct": "41-44",
+      "key_limits": {
+        "poultry": "Max 5% — free gossypol limit 100mg/kg",
+        "swine": "Avoid in breeding stock — gossypol reproductive effects",
+        "dairy": "Max 15% but watch free gossypol <400mg/day",
+        "beef": "Max 15% — gossypol tolerance higher than monogastrics"
+      },
+      "watch_for": [
+        "free gossypol",
+        "cyclopropenoid fatty acids in layers",
+        "aflatoxin contamination"
+      ]
+    },
+    "meat_bone_meal": {
+      "protein_pct": "45-55",
+      "key_limits": {
+        "poultry": "Max 5% — digestibility variation, salmonella risk",
+        "swine": "Max 5% — banned in EU for ruminants",
+        "ruminants": "BANNED in most countries for BSE risk"
+      },
+      "watch_for": [
+        "BSE regulations",
+        "salmonella",
+        "high variability",
+        "banned in ruminant feed in most countries"
+      ]
+    },
+    "fish_meal": {
+      "protein_pct": "60-72",
+      "key_limits": {
+        "poultry": "Max 5% starter, 3% grower/finisher — tainting risk above 3%",
+        "swine": "Max 6% early weaner, 3% grower — taint and cost",
+        "dairy": "Avoid — fish taint in milk",
+        "equine": "Not recommended — palatability"
+      },
+      "watch_for": [
+        "fishy taint in eggs/meat/milk",
+        "biogenic amines",
+        "oxidation/rancidity",
+        "gizzard erosion in poultry"
+      ]
+    }
+  },
+  "mill_operations": {
+    "_meta": {
+      "description": "Feed mill process parameters, equipment settings and QC targets",
+      "sources": [
+        "AFMA Feed Milling Manual",
+        "FEFAC Pellet Quality Guidelines",
+        "CPM/Andritz Technical Guides",
+        "Bühler Pelleting Technology Handbook"
+      ]
+    },
+    "receiving_and_storage": {
+      "grain_moisture_max_pct": {
+        "maize": 14.0,
+        "wheat": 14.0,
+        "sorghum": 13.5,
+        "barley": 14.0,
+        "note": "Above these levels — dry before storage or risk of mould"
+      },
+      "storage_temperature_max_c": 25,
+      "aeration_target_temp_c": {
+        "winter": 5,
+        "summer": 15
+      },
+      "fumigation_intervals_months": 3,
+      "aflatoxin_screening": "Every load from high-risk origins (Africa, South Asia, South America during wet seasons)",
+      "mycotoxin_screening_frequency": "Weekly composite samples minimum"
+    },
+    "grinding": {
+      "hammer_mill": {
+        "screen_sizes_mm": {
+          "broiler_starter": {
+            "target": 0.6,
+            "range": "0.5-0.8"
+          },
+          "broiler_grower": {
+            "target": 0.8,
+            "range": "0.6-1.0"
+          },
+          "broiler_finisher": {
+            "target": 1.0,
+            "range": "0.8-1.2"
+          },
+          "layer": {
+            "target": 1.0,
+            "range": "0.8-1.2"
+          },
+          "swine_starter": {
+            "target": 0.4,
+            "range": "0.3-0.5",
+            "note": "Fine grind for young pigs"
+          },
+          "swine_grower": {
+            "target": 0.6,
+            "range": "0.5-0.8"
+          },
+          "swine_finisher": {
+            "target": 0.8,
+            "range": "0.6-1.0"
+          },
+          "dairy_concentrate": {
+            "target": 2.0,
+            "range": "1.5-3.0"
+          },
+          "equine": {
+            "target": 3.0,
+            "range": "2.5-4.0",
+            "note": "Coarse grind — horses need texture"
+          }
+        },
+        "tip_speed_m_s": {
+          "min": 80,
+          "max": 120,
+          "optimal": 100
+        },
+        "screen_wear_check_interval_hours": 200,
+        "hammer_replacement_interval_hours": 800,
+        "particle_size_target_microns": {
+          "poultry": {
+            "min": 600,
+            "max": 900,
+            "optimal": 700
+          },
+          "swine": {
+            "min": 400,
+            "max": 700,
+            "optimal": 550
+          },
+          "dairy": {
+            "min": 1500,
+            "max": 3000,
+            "optimal": 2000
+          }
+        }
+      },
+      "roller_mill": {
+        "gap_mm": {
+          "maize_coarse": 1.5,
+          "maize_fine": 0.8,
+          "wheat": 0.5,
+          "barley": 1.0
+        },
+        "preferred_for": [
+          "wheat",
+          "barley",
+          "swine feeds — better starch gelatinisation"
+        ],
+        "note": "Roller mills produce more uniform particle size than hammer mills — preferred for swine"
+      }
+    },
+    "batching_and_mixing": {
+      "batch_sizes_typical_kg": [
+        500,
+        1000,
+        2000,
+        3000
+      ],
+      "mixing_time_seconds": {
+        "ribbon_mixer": {
+          "min": 120,
+          "max": 180,
+          "typical": 150
+        },
+        "paddle_mixer": {
+          "min": 90,
+          "max": 150,
+          "typical": 120
+        },
+        "twin_shaft": {
+          "min": 60,
+          "max": 90,
+          "typical": 75
+        }
+      },
+      "mixing_uniformity_target_cv_pct": {
+        "excellent": 5,
+        "acceptable": 10,
+        "poor": 15
+      },
+      "micro_ingredient_addition": {
+        "premix_min_inclusion_kg_per_tonne": 1.0,
+        "liquid_addition_max_pct": 3.0,
+        "note": "Micro ingredients must be pre-mixed or added via premix — never add direct at <0.1% inclusion"
+      },
+      "overfill_max_pct": 80,
+      "sequence": "Add dry ingredients → mix 30s → add liquids → mix to target time → discharge",
+      "cross_contamination_flush_kg": {
+        "between_species": 500,
+        "between_medicated_nonmedicated": 1000
+      }
+    },
+    "pelleting": {
+      "conditioning": {
+        "temperature_c": {
+          "poultry": {
+            "min": 75,
+            "max": 85,
+            "target": 82
+          },
+          "swine": {
+            "min": 75,
+            "max": 85,
+            "target": 80
+          },
+          "dairy": {
+            "min": 70,
+            "max": 80,
+            "target": 75
+          },
+          "equine": {
+            "min": 70,
+            "max": 80,
+            "target": 75
+          },
+          "sheep_goat": {
+            "min": 70,
+            "max": 80,
+            "target": 75
+          }
+        },
+        "retention_time_seconds": {
+          "min": 20,
+          "max": 45,
+          "target": 30
+        },
+        "moisture_addition_pct": {
+          "min": 1.0,
+          "max": 4.0,
+          "typical": 2.5
+        },
+        "steam_pressure_bar": {
+          "min": 2.5,
+          "max": 4.0,
+          "target": 3.5
+        },
+        "note": "Higher temperature = better pellet quality but destroys heat-sensitive additives (vitamins, enzymes, probiotics)"
+      },
+      "die_specifications": {
+        "pellet_diameter_mm": {
+          "broiler_starter": 2.0,
+          "broiler_grower": 3.0,
+          "broiler_finisher": 4.0,
+          "layer": 3.5,
+          "turkey_starter": 3.0,
+          "turkey_grower": 4.0,
+          "turkey_finisher": 5.0,
+          "swine_starter": 2.5,
+          "swine_grower": 4.0,
+          "swine_finisher": 5.0,
+          "dairy_concentrate": 6.0,
+          "equine": 8.0,
+          "sheep_goat": 4.0,
+          "beef_concentrate": 6.0
+        },
+        "length_to_diameter_ratio": {
+          "poultry": {
+            "min": 8,
+            "max": 12,
+            "typical": 10
+          },
+          "swine": {
+            "min": 10,
+            "max": 14,
+            "typical": 12
+          },
+          "ruminant": {
+            "min": 6,
+            "max": 10,
+            "typical": 8
+          }
+        },
+        "die_compression_ratio": {
+          "low_energy_diet": {
+            "min": 6,
+            "max": 8
+          },
+          "standard": {
+            "min": 8,
+            "max": 10
+          },
+          "high_energy_diet": {
+            "min": 10,
+            "max": 14
+          }
+        },
+        "die_material": "X46Cr13 stainless for standard; X90CrMoV18 for abrasive ingredients",
+        "die_replacement_interval_tonnes": {
+          "min": 3000,
+          "max": 8000,
+          "typical": 5000
+        }
+      },
+      "pellet_quality_targets": {
+        "pellet_durability_index_pct": {
+          "poultry": {
+            "min": 80,
+            "acceptable": 85,
+            "good": 90,
+            "excellent": 95
+          },
+          "swine": {
+            "min": 85,
+            "acceptable": 88,
+            "good": 92,
+            "excellent": 96
+          },
+          "ruminant": {
+            "min": 75,
+            "acceptable": 80,
+            "good": 85,
+            "excellent": 90
+          }
+        },
+        "fines_pct_max": {
+          "poultry": 5,
+          "swine": 3,
+          "ruminant": 8
+        },
+        "moisture_out_pct": {
+          "min": 11.0,
+          "max": 13.0,
+          "target": 12.0
+        },
+        "temperature_out_c": {
+          "max_above_ambient": 8,
+          "note": "Pellet temp at discharge should be ≤8°C above ambient"
+        }
+      }
+    },
+    "cooling": {
+      "counter_flow_cooler": {
+        "cooling_time_minutes": {
+          "min": 5,
+          "max": 12,
+          "typical": 8
+        },
+        "target_temp_c_above_ambient": {
+          "max": 8
+        },
+        "target_moisture_drop_pct": {
+          "min": 1.0,
+          "max": 2.5
+        },
+        "airflow_m3_per_tonne": {
+          "min": 60,
+          "max": 100,
+          "typical": 80
+        }
+      },
+      "note": "Insufficient cooling = moisture condensation = mould risk. Over-cooling = excessive moisture loss = shrinkage"
+    },
+    "crumbling": {
+      "for_species": [
+        "broiler_starter",
+        "broiler_grower",
+        "turkey_starter",
+        "swine_piglet"
+      ],
+      "roll_gap_mm": {
+        "broiler_starter": {
+          "min": 0.8,
+          "max": 1.5,
+          "target": 1.0
+        },
+        "broiler_grower": {
+          "min": 1.5,
+          "max": 2.5,
+          "target": 2.0
+        },
+        "turkey_starter": {
+          "min": 1.0,
+          "max": 2.0,
+          "target": 1.5
+        }
+      },
+      "fines_target_pct_max": 15,
+      "note": "Crumble after cooling — never before. Check roll wear weekly"
+    },
+    "sieving": {
+      "oversize_return_to": "pellet mill or grinder",
+      "fines_return_to": "conditioner or mixer",
+      "screen_sizes_mm": {
+        "broiler_starter_crumble": [
+          0.5,
+          2.5
+        ],
+        "broiler_grower_crumble": [
+          1.5,
+          3.5
+        ],
+        "pellet_3mm": [
+          2.0,
+          4.0
+        ],
+        "pellet_4mm": [
+          3.0,
+          5.5
+        ],
+        "pellet_5mm": [
+          4.0,
+          6.5
+        ]
+      }
+    },
+    "qc_targets": {
+      "sampling_frequency": {
+        "incoming_raw_materials": "Every load — moisture, visual, mycotoxin screening",
+        "in_process": "Every 2 hours during production",
+        "finished_feed": "Every batch — moisture, pellet quality, weight",
+        "quarterly": "Full nutrient analysis vs formulation target"
+      },
+      "moisture_limits_pct": {
+        "raw_grains": {
+          "max": 14.0
+        },
+        "finished_mash": {
+          "min": 11.0,
+          "max": 13.5
+        },
+        "finished_pellet": {
+          "min": 11.0,
+          "max": 13.0
+        },
+        "note": "Below 11% = excessive dry matter loss (cost). Above 13.5% = mould risk"
+      },
+      "nutrient_analysis_tolerance": {
+        "crude_protein_pct": 0.5,
+        "crude_fat_pct": 0.3,
+        "crude_fibre_pct": 0.3,
+        "moisture_pct": 0.5,
+        "calcium_pct": 0.1,
+        "phosphorus_pct": 0.05,
+        "note": "Finished feed analysis should be within these tolerances of the formulation target"
+      },
+      "pellet_length_uniformity": {
+        "target_length_mm": "1.5-2.5x diameter",
+        "long_pellets_pct_max": 10,
+        "note": "Oversized pellets cause feed wastage in poultry — adjust knife settings"
+      }
+    },
+    "bagging_and_dispatch": {
+      "bag_weight_tolerance_kg": 0.1,
+      "batch_traceability": "Batch number, date, formulation code, raw material lot numbers — minimum 12 month retention",
+      "temperature_before_bagging_max_above_ambient_c": 8,
+      "dispatch_moisture_check": "Every truck load"
+    }
+  },
+  "mill_troubleshooting": {
+    "_meta": {
+      "description": "Feed mill troubleshooting guide — symptom to causes to solutions",
+      "use": "Match user-reported symptom to closest entry. Provide top 3 causes and solutions."
+    },
+    "pellet_quality": {
+      "poor_pellet_durability": {
+        "symptom": "PDI below target, pellets break easily, crumble on handling",
+        "causes": [
+          {
+            "cause": "Conditioning temperature too low",
+            "probability": "HIGH",
+            "detail": "Below 75°C — insufficient starch gelatinisation"
+          },
+          {
+            "cause": "Insufficient conditioning time",
+            "probability": "HIGH",
+            "detail": "Less than 20 seconds retention — steam not penetrating"
+          },
+          {
+            "cause": "High fat in formulation",
+            "probability": "MEDIUM",
+            "detail": "Fat >5% acts as lubricant — reduces pellet binding"
+          },
+          {
+            "cause": "Wrong die L/D ratio",
+            "probability": "MEDIUM",
+            "detail": "Low L/D = insufficient compression = weak pellets"
+          },
+          {
+            "cause": "Worn die holes",
+            "probability": "MEDIUM",
+            "detail": "Worn/enlarged holes reduce compression"
+          },
+          {
+            "cause": "Coarse particle size",
+            "probability": "MEDIUM",
+            "detail": "Large particles create weak points in pellet matrix"
+          },
+          {
+            "cause": "Low starch ingredients",
+            "probability": "LOW",
+            "detail": "High fibre/protein formulations bind poorly"
+          },
+          {
+            "cause": "Low moisture in conditioner",
+            "probability": "LOW",
+            "detail": "Insufficient steam addition"
+          }
+        ],
+        "solutions": [
+          "Increase conditioning temperature to 80-85°C",
+          "Increase steam pressure to 3.5-4.0 bar",
+          "Increase retention time in conditioner — reduce throughput",
+          "Add pellet binder (lignosulphonate 0.5-1.0%, bentonite 1-2%)",
+          "Check and replace worn die",
+          "Reduce fat addition — move fat to post-pellet application",
+          "Reduce hammer mill screen size for finer grind",
+          "Check steam quality — ensure dry saturated steam not wet steam"
+        ]
+      },
+      "high_fines": {
+        "symptom": "Excessive fines/dust in finished pellet, fines >5% poultry or >3% swine",
+        "causes": [
+          {
+            "cause": "Poor pellet durability at press",
+            "probability": "HIGH",
+            "detail": "See poor_pellet_durability entry"
+          },
+          {
+            "cause": "Over-aggressive crumbling",
+            "probability": "HIGH",
+            "detail": "Roll gap too tight for crumbled products"
+          },
+          {
+            "cause": "Worn crumbler rolls",
+            "probability": "HIGH",
+            "detail": "Smooth rolls cannot grip pellets — crush rather than crumble"
+          },
+          {
+            "cause": "Mechanical damage in conveying",
+            "probability": "MEDIUM",
+            "detail": "Too many transfer points, bucket elevators, pneumatic conveying"
+          },
+          {
+            "cause": "Cooling too aggressive",
+            "probability": "MEDIUM",
+            "detail": "Rapid cooling creates surface micro-cracks"
+          },
+          {
+            "cause": "Sieve screen damage or wrong size",
+            "probability": "MEDIUM",
+            "detail": "Fines not being removed before bagging"
+          },
+          {
+            "cause": "Pellet too hot when conveyed",
+            "probability": "LOW",
+            "detail": "Hot pellets soft — mechanical damage during conveying"
+          }
+        ],
+        "solutions": [
+          "Address root pellet quality issues first",
+          "Increase crumbler roll gap — reduce aggression",
+          "Replace worn crumbler rolls",
+          "Minimize conveying distances and transfer points",
+          "Check and repair sieve screens",
+          "Ensure pellets cooled to ≤8°C above ambient before conveying",
+          "Apply molasses or liquid fat post-pellet (1-2%) to bind fines",
+          "Recycle fines back to conditioner — max 5% of batch"
+        ]
+      },
+      "pellets_too_long": {
+        "symptom": "Inconsistent pellet length, many oversized pellets",
+        "causes": [
+          {
+            "cause": "Knife not cutting correctly",
+            "probability": "HIGH",
+            "detail": "Blunt knife or wrong knife angle"
+          },
+          {
+            "cause": "Knife gap too wide",
+            "probability": "HIGH",
+            "detail": "Pellet extrudes too far before cutting"
+          },
+          {
+            "cause": "Die speed too high",
+            "probability": "MEDIUM",
+            "detail": "Fast extrusion before knife can cut"
+          },
+          {
+            "cause": "Soft/wet pellets bending before cut",
+            "probability": "MEDIUM",
+            "detail": "Insufficient conditioning or formulation issue"
+          }
+        ],
+        "solutions": [
+          "Sharpen or replace cutting knife",
+          "Adjust knife gap — 1-2mm from die face",
+          "Reduce die speed if variable",
+          "Check conditioning — improve pellet hardness at exit"
+        ]
+      }
+    },
+    "production_efficiency": {
+      "low_throughput": {
+        "symptom": "Mill producing below rated capacity, slow production rate",
+        "causes": [
+          {
+            "cause": "Die blocked or worn",
+            "probability": "HIGH",
+            "detail": "Blocked holes reduce effective die area"
+          },
+          {
+            "cause": "Rolls worn or misaligned",
+            "probability": "HIGH",
+            "detail": "Poor roll-to-die contact"
+          },
+          {
+            "cause": "Formulation too difficult to pellet",
+            "probability": "HIGH",
+            "detail": "High fibre, low starch, high fat formulation"
+          },
+          {
+            "cause": "Conditioning not optimal",
+            "probability": "MEDIUM",
+            "detail": "Steam pressure too low or temperature too low"
+          },
+          {
+            "cause": "Feed rate to conditioner not matched to press",
+            "probability": "MEDIUM",
+            "detail": "Inconsistent feed flow"
+          },
+          {
+            "cause": "Motor amperage limit reached",
+            "probability": "MEDIUM",
+            "detail": "Drive motor at maximum — reduce feed rate"
+          }
+        ],
+        "solutions": [
+          "Check and clean blocked die holes",
+          "Adjust roll-to-die gap — typically 0.1-0.3mm",
+          "Review formulation — reduce fat, increase starch",
+          "Increase steam pressure and conditioning temperature",
+          "Calibrate feeder for consistent flow rate",
+          "Check main drive motor and gearbox condition",
+          "Consider die with larger hole count or different L/D ratio"
+        ]
+      },
+      "press_blockage": {
+        "symptom": "Pellet press chokes and stops, feed builds up",
+        "causes": [
+          {
+            "cause": "Wet steam / condensation in conditioner",
+            "probability": "HIGH",
+            "detail": "Wet feed masses and blocks die"
+          },
+          {
+            "cause": "Too much moisture added",
+            "probability": "HIGH",
+            "detail": "Feed too wet to pass through die"
+          },
+          {
+            "cause": "Die too cold at startup",
+            "probability": "HIGH",
+            "detail": "Cold die — fat congeals and blocks holes"
+          },
+          {
+            "cause": "Foreign material in feed",
+            "probability": "MEDIUM",
+            "detail": "Metal, stones, string blocking die holes"
+          },
+          {
+            "cause": "Sudden change in formulation",
+            "probability": "MEDIUM",
+            "detail": "Different pelleting characteristics without die adjustment"
+          }
+        ],
+        "solutions": [
+          "Check steam trap — ensure dry saturated steam",
+          "Reduce moisture addition — check steam pressure",
+          "Pre-warm die with oilseed meal before pelleting",
+          "Check and repair magnets and stone traps",
+          "Never overfill conditioner — control feed rate",
+          "When restarting after blockage — use oilseed meal to clear die",
+          "Install pressure relief on conditioner"
+        ]
+      },
+      "high_energy_consumption": {
+        "symptom": "Power consumption per tonne above normal (>35 kWh/tonne typical pellet)",
+        "causes": [
+          {
+            "cause": "Worn die requiring more pressure",
+            "probability": "HIGH",
+            "detail": "Worn die holes increase resistance"
+          },
+          {
+            "cause": "Wrong roll-to-die gap",
+            "probability": "HIGH",
+            "detail": "Too tight gap increases friction"
+          },
+          {
+            "cause": "High fibre formulation",
+            "probability": "MEDIUM",
+            "detail": "Fibrous ingredients require more energy to pellet"
+          },
+          {
+            "cause": "Low conditioning temperature",
+            "probability": "MEDIUM",
+            "detail": "Un-gelatinised starch harder to compress"
+          },
+          {
+            "cause": "Worn rolls",
+            "probability": "MEDIUM",
+            "detail": "Slipping rolls waste energy"
+          }
+        ],
+        "solutions": [
+          "Replace worn die and rolls",
+          "Optimise roll gap — 0.1-0.3mm from die",
+          "Improve conditioning — more steam, higher temperature",
+          "Review formulation — high fibre increases energy demand",
+          "Check and tighten drive belts/couplings"
+        ]
+      }
+    },
+    "moisture_and_shrinkage": {
+      "high_shrinkage": {
+        "symptom": "Finished product weight significantly less than raw material input, shrinkage >1.5% above expected",
+        "causes": [
+          {
+            "cause": "Raw material moisture too high",
+            "probability": "HIGH",
+            "detail": "Grain/ingredients above 14% moisture — more water to evaporate"
+          },
+          {
+            "cause": "Over-drying in cooler",
+            "probability": "HIGH",
+            "detail": "Cooler running too long or too much airflow — excessive moisture loss"
+          },
+          {
+            "cause": "High moisture addition in conditioner losing in cooler",
+            "probability": "MEDIUM",
+            "detail": "Steam moisture added then removed in cooling — net loss"
+          },
+          {
+            "cause": "Long cooling time",
+            "probability": "MEDIUM",
+            "detail": "Counter-flow cooler set too slow — over-cooling"
+          },
+          {
+            "cause": "Low ambient humidity",
+            "probability": "LOW",
+            "detail": "Dry weather increases evaporation from product"
+          }
+        ],
+        "solutions": [
+          "Monitor and control incoming grain moisture — reject above 14%",
+          "Calibrate cooler airflow — target ≤8°C above ambient at exit",
+          "Measure shrinkage by weighing batches — track daily",
+          "Reduce cooler retention time if over-drying",
+          "Add moisture post-cooling if legal and within specification",
+          "Target finished product moisture 11.5-12.5% to minimise shrinkage while maintaining safety"
+        ]
+      },
+      "high_moisture_finished_product": {
+        "symptom": "Finished feed moisture above 13.5% — mould risk, rejected loads",
+        "causes": [
+          {
+            "cause": "Insufficient cooling time",
+            "probability": "HIGH",
+            "detail": "Pellets not cooled enough before bagging"
+          },
+          {
+            "cause": "Cooler airflow too low",
+            "probability": "HIGH",
+            "detail": "Insufficient air volume to remove moisture"
+          },
+          {
+            "cause": "High ambient humidity",
+            "probability": "MEDIUM",
+            "detail": "Humid weather — cooling air itself humid"
+          },
+          {
+            "cause": "Bagging hot product",
+            "probability": "MEDIUM",
+            "detail": "Condensation inside bags"
+          },
+          {
+            "cause": "Too much moisture added in conditioning",
+            "probability": "MEDIUM",
+            "detail": "Steam addition too high for cooler capacity"
+          },
+          {
+            "cause": "Cooler overloaded",
+            "probability": "LOW",
+            "detail": "Production rate exceeds cooler capacity"
+          }
+        ],
+        "solutions": [
+          "Increase cooler retention time — reduce production rate",
+          "Check cooler fan and airflow — clean filters",
+          "Check discharge temperature — must be ≤8°C above ambient",
+          "Do not bag product above specification — recycle through cooler",
+          "Reduce steam addition in conditioner",
+          "In humid weather — run cooler longer or reduce throughput"
+        ]
+      }
+    },
+    "feed_quality": {
+      "mould_in_finished_feed": {
+        "symptom": "Visible mould growth, musty smell, customer complaints",
+        "causes": [
+          {
+            "cause": "Finished product moisture too high",
+            "probability": "HIGH",
+            "detail": "Above 13.5% — supports mould growth"
+          },
+          {
+            "cause": "Hot product bagged before cooling",
+            "probability": "HIGH",
+            "detail": "Condensation in bags"
+          },
+          {
+            "cause": "Contaminated raw materials",
+            "probability": "HIGH",
+            "detail": "Mouldy grain in — mouldy feed out"
+          },
+          {
+            "cause": "Storage conditions poor",
+            "probability": "MEDIUM",
+            "detail": "High humidity or temperature in warehouse"
+          },
+          {
+            "cause": "Insufficient mould inhibitor",
+            "probability": "MEDIUM",
+            "detail": "Propionic acid/organic acid below effective level"
+          }
+        ],
+        "solutions": [
+          "Check and correct finished feed moisture immediately",
+          "Screen all incoming raw materials — reject mouldy lots",
+          "Add mould inhibitor — propionic acid 0.1-0.3%, or organic acid blend",
+          "Check warehouse conditions — max 15°C, max 65% RH",
+          "Implement FIFO — first in first out stock rotation",
+          "Clean bins and silos regularly — mould biofilms persist",
+          "Check mycotoxin levels in suspect materials"
+        ]
+      },
+      "feed_segregation": {
+        "symptom": "Fine particles and coarse particles separate in bins/feeders — inconsistent nutrient delivery",
+        "causes": [
+          {
+            "cause": "Wide particle size distribution in mash",
+            "probability": "HIGH",
+            "detail": "Mix of very fine and very coarse particles"
+          },
+          {
+            "cause": "Vibration during transport or bin filling",
+            "probability": "HIGH",
+            "detail": "Fines migrate to centre, coarse to edge"
+          },
+          {
+            "cause": "Free-flowing minerals/salt not premixed",
+            "probability": "MEDIUM",
+            "detail": "Dense minerals settle to bottom"
+          },
+          {
+            "cause": "Pellets mixed with mash",
+            "probability": "MEDIUM",
+            "detail": "Different particle sizes and densities"
+          }
+        ],
+        "solutions": [
+          "Pellet instead of mash to eliminate segregation",
+          "Reduce particle size variation — tighter hammer mill screen specification",
+          "Ensure premix properly incorporated — adequate mixing time",
+          "Add molasses 0.5-1.0% as binder to reduce dust and segregation",
+          "Review bin design — mass flow vs funnel flow"
+        ]
+      },
+      "poor_feed_palatability": {
+        "symptom": "Animals refusing feed, reduced intake, lower than expected performance",
+        "causes": [
+          {
+            "cause": "Rancid fat — oxidation",
+            "probability": "HIGH",
+            "detail": "Fat/oil added without antioxidant — especially in hot climates"
+          },
+          {
+            "cause": "Mould or mycotoxins",
+            "probability": "HIGH",
+            "detail": "Even sub-visible mould reduces palatability"
+          },
+          {
+            "cause": "High inclusion of bitter ingredients",
+            "probability": "MEDIUM",
+            "detail": "Canola >15%, cottonseed, rapeseed above limits"
+          },
+          {
+            "cause": "Salt level incorrect",
+            "probability": "MEDIUM",
+            "detail": "Too high or too low sodium"
+          },
+          {
+            "cause": "Burnt/overheated feed",
+            "probability": "MEDIUM",
+            "detail": "Maillard reaction from excessive conditioning temp"
+          },
+          {
+            "cause": "Off-flavours from fish meal",
+            "probability": "LOW",
+            "detail": "Fish meal above 3% — fishy taint"
+          },
+          {
+            "cause": "Wrong feed for species/age",
+            "probability": "LOW",
+            "detail": "Particle size or texture not appropriate"
+          }
+        ],
+        "solutions": [
+          "Add antioxidant to all fat-containing feeds — BHT/BHA 100-200g/tonne or vitamin E",
+          "Screen raw materials for mycotoxins — add mycotoxin binder",
+          "Check ingredient inclusion rates — reduce bitter ingredients",
+          "Verify salt level against formulation",
+          "Reduce conditioning temperature if >90°C",
+          "Reduce fish meal inclusion or switch to white fish meal",
+          "Add flavour enhancer for problem cases — butyric acid, betaine, molasses"
+        ]
+      }
+    },
+    "equipment_maintenance": {
+      "die_maintenance": {
+        "new_die_startup": "Run oilseed meal (soya/canola) through new die first — conditions die holes and prevents blocking",
+        "shutdown_procedure": "Always push through oilseed meal at end of production — prevents fat congealing in holes",
+        "cleaning_blocked_die": [
+          "Soak in diesel/solvent 24 hours",
+          "Use drill to clear individual holes",
+          "Never use water — rust"
+        ],
+        "inspection_interval_hours": 200,
+        "replacement_triggers": [
+          "Throughput drop >15%",
+          "PDI drop >5 points",
+          "Hole diameter wear >0.3mm",
+          "Visible cracking"
+        ]
+      },
+      "roll_maintenance": {
+        "roll_gap_check_frequency": "Every shift",
+        "replacement_triggers": [
+          "Roll surface worn smooth",
+          "Throughput drop",
+          "Increased power consumption"
+        ],
+        "roll_types": {
+          "corrugated": "Standard — most common, good grip",
+          "slotted": "Higher capacity, lower PDI",
+          "diamond": "Very high PDI, lower throughput"
+        }
+      },
+      "conditioner_maintenance": {
+        "paddle_check_interval_hours": 500,
+        "steam_trap_check_frequency": "Weekly",
+        "temperature_sensor_calibration": "Monthly",
+        "common_issues": [
+          "Worn paddles reduce mixing",
+          "Blocked steam injection points",
+          "Faulty temperature sensor — false readings"
+        ]
+      },
+      "magnet_maintenance": {
+        "cleaning_frequency": "Every 4 hours during production",
+        "placement": [
+          "After hammer mill",
+          "Before pellet press",
+          "After pellet press"
+        ],
+        "strength_check_interval_months": 6
+      }
+    }
+  }
+}

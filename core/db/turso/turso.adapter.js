@@ -15,7 +15,9 @@ import { createClient } from '@libsql/client';
 import Database        from 'better-sqlite3';
 import { getNutrixDb } from '../nutrix/nutrix.db.js';
 import crypto          from 'crypto';
-import { join }        from 'path';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const { getMillDb } = require('../mill/mill.db.cjs');
 
 // ── Encryption helpers for stored Turso credentials ───────────────────────────
 const ENC_KEY = process.env.TURSO_ENC_KEY || 'nutripilot-turso-key-2026-change-me';
@@ -157,7 +159,8 @@ export function getUserMillDb(req) {
   if (req.tursoClient) {
     return new NpDb({ type: 'turso', client: req.tursoClient });
   }
-  const millDbPath = join(process.cwd(), 'data', 'mill.db');
-  const localDb = new Database(millDbPath);
+  const user = req.nutrixUser || req.headers?.['x-nutrix-user'];
+  if (!user) throw new Error('Mill database requires a signed-in user');
+  const localDb = getMillDb(String(user).toLowerCase());
   return new NpDb({ type: 'local', db: localDb });
 }

@@ -1,0 +1,325 @@
+{
+  "_meta": {
+    "species": "goat",
+    "region": "us",
+    "version": "v1",
+    "basis": "as_fed",
+    "energy_system": "TDN_ME_NRC2007",
+    "energy_units": "Mcal_per_kg_DM",
+    "sources": ["NRC_2007_Small_Ruminants", "INRA_2018_Goat_Ref"]
+  },
+  "ingredients": {
+    "corn_grain_goat": {
+      "display_name": "Corn, Grain (Dry)",
+      "category": "cereal_grain",
+      "dm": 88.0, "cp": 8.5, "ee": 3.6, "ndf": 9.5, "adf": 3.5, "starch": 72.0, "ash": 1.3, "cf": 2.2,
+      "tdn": 87.0, "me_ruminant": 3.04, "nem": 1.98, "neg": 1.26,
+      "rdp_pct": 63.0, "rup_pct": 37.0,
+      "ca": 0.02, "total_p": 0.28, "mg": 0.11, "k": 0.33, "na": 0.01, "s": 0.10,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "wheat_grain_goat": {
+      "display_name": "Wheat, Grain",
+      "category": "cereal_grain",
+      "dm": 88.0, "cp": 13.0, "ee": 1.8, "ndf": 12.0, "adf": 3.5, "starch": 62.0, "ash": 1.7, "cf": 2.6,
+      "tdn": 85.0, "me_ruminant": 2.98, "nem": 1.92, "neg": 1.22,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 0.05, "total_p": 0.36, "mg": 0.13, "k": 0.42, "na": 0.01, "s": 0.13,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "barley_grain_goat": {
+      "display_name": "Barley, Grain",
+      "category": "cereal_grain",
+      "dm": 89.0, "cp": 12.0, "ee": 2.0, "ndf": 17.0, "adf": 7.0, "starch": 57.0, "ash": 2.5, "cf": 5.0,
+      "tdn": 82.0, "me_ruminant": 2.87, "nem": 1.82, "neg": 1.14,
+      "rdp_pct": 73.0, "rup_pct": 27.0,
+      "ca": 0.07, "total_p": 0.38, "mg": 0.12, "k": 0.52, "na": 0.02, "s": 0.12,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "oats_goat": {
+      "display_name": "Oats, Grain",
+      "category": "cereal_grain",
+      "dm": 89.0, "cp": 11.5, "ee": 4.5, "ndf": 28.0, "adf": 13.0, "starch": 40.0, "ash": 3.2, "cf": 11.5,
+      "tdn": 76.0, "me_ruminant": 2.66, "nem": 1.65, "neg": 1.00,
+      "rdp_pct": 73.0, "rup_pct": 27.0,
+      "ca": 0.08, "total_p": 0.33, "mg": 0.13, "k": 0.44, "na": 0.02, "s": 0.10,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "sorghum_grain_goat": {
+      "display_name": "Sorghum, Grain",
+      "category": "cereal_grain",
+      "dm": 88.0, "cp": 9.0, "ee": 2.8, "ndf": 9.0, "adf": 5.5, "starch": 70.0, "ash": 1.7, "cf": 2.5,
+      "tdn": 81.0, "me_ruminant": 2.84, "nem": 1.80, "neg": 1.12,
+      "rdp_pct": 63.0, "rup_pct": 37.0,
+      "ca": 0.03, "total_p": 0.30, "mg": 0.16, "k": 0.35, "na": 0.01, "s": 0.11,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_early_goat": {
+      "display_name": "Alfalfa Hay, Early Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp": 20.0, "ee": 2.5, "ndf": 38.0, "adf": 28.0, "starch": 2.0, "ash": 9.5, "cf": 24.0,
+      "tdn": 63.0, "me_ruminant": 2.21, "nem": 1.33, "neg": 0.75,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 1.41, "total_p": 0.27, "mg": 0.30, "k": 2.69, "na": 0.11, "s": 0.29,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_mid_goat": {
+      "display_name": "Alfalfa Hay, Mid Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp": 17.5, "ee": 2.3, "ndf": 43.0, "adf": 34.0, "starch": 1.5, "ash": 9.0, "cf": 29.0,
+      "tdn": 56.0, "me_ruminant": 1.96, "nem": 1.15, "neg": 0.61,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 1.29, "total_p": 0.25, "mg": 0.28, "k": 2.44, "na": 0.09, "s": 0.27,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_hay_late_goat": {
+      "display_name": "Alfalfa Hay, Full Bloom",
+      "category": "forage_legume",
+      "dm": 88.0, "cp": 15.0, "ee": 2.0, "ndf": 50.0, "adf": 40.0, "starch": 1.0, "ash": 8.5, "cf": 34.0,
+      "tdn": 50.0, "me_ruminant": 1.75, "nem": 1.00, "neg": 0.50,
+      "rdp_pct": 73.0, "rup_pct": 27.0,
+      "ca": 1.10, "total_p": 0.23, "mg": 0.25, "k": 2.00, "na": 0.08, "s": 0.24,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "grass_hay_goat": {
+      "display_name": "Grass Hay, Mixed (Medium Quality)",
+      "category": "forage_grass",
+      "dm": 89.0, "cp": 10.0, "ee": 2.3, "ndf": 60.0, "adf": 37.0, "starch": 1.0, "ash": 6.5, "cf": 31.0,
+      "tdn": 53.0, "me_ruminant": 1.86, "nem": 1.08, "neg": 0.54,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 0.39, "total_p": 0.22, "mg": 0.16, "k": 1.95, "na": 0.03, "s": 0.18,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "timothy_hay_goat": {
+      "display_name": "Timothy Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp": 10.0, "ee": 2.5, "ndf": 56.0, "adf": 33.0, "starch": 1.0, "ash": 5.5, "cf": 29.0,
+      "tdn": 55.0, "me_ruminant": 1.93, "nem": 1.13, "neg": 0.58,
+      "rdp_pct": 73.0, "rup_pct": 27.0,
+      "ca": 0.43, "total_p": 0.20, "mg": 0.14, "k": 1.83, "na": 0.04, "s": 0.18,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "bermuda_hay_goat": {
+      "display_name": "Bermuda Grass Hay",
+      "category": "forage_grass",
+      "dm": 89.0, "cp": 9.5, "ee": 2.0, "ndf": 69.0, "adf": 35.0, "starch": 1.0, "ash": 6.5, "cf": 29.0,
+      "tdn": 52.0, "me_ruminant": 1.82, "nem": 1.04, "neg": 0.51,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.47, "total_p": 0.18, "mg": 0.15, "k": 1.70, "na": 0.04, "s": 0.19,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "browse_mixed_goat": {
+      "display_name": "Browse/Shrub Mix (Oak, Mesquite, Cedar)",
+      "category": "forage_browse",
+      "dm": 50.0, "cp": 9.5, "ee": 2.2, "ndf": 40.0, "adf": 28.0, "starch": 1.0, "ash": 7.0, "cf": 22.0,
+      "tdn": 55.0, "me_ruminant": 1.93, "nem": 1.13, "neg": 0.58,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.80, "total_p": 0.15, "mg": 0.20, "k": 1.50, "na": 0.03, "s": 0.15,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "corn_silage_goat": {
+      "display_name": "Corn Silage",
+      "category": "forage_silage",
+      "dm": 35.0, "cp": 2.8, "ee": 1.1, "ndf": 16.5, "adf": 9.8, "starch": 10.9, "ash": 1.4, "cf": 7.5,
+      "tdn": 68.0, "me_ruminant": 2.38, "nem": 1.44, "neg": 0.84,
+      "rdp_pct": 55.0, "rup_pct": 45.0,
+      "ca": 0.09, "total_p": 0.07, "mg": 0.05, "k": 0.35, "na": 0.01, "s": 0.05,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "alfalfa_silage_goat": {
+      "display_name": "Alfalfa Silage (Haylage)",
+      "category": "forage_legume_silage",
+      "dm": 40.0, "cp": 7.2, "ee": 1.0, "ndf": 16.8, "adf": 13.2, "starch": 0.6, "ash": 3.8, "cf": 10.0,
+      "tdn": 60.0, "me_ruminant": 2.10, "nem": 1.24, "neg": 0.66,
+      "rdp_pct": 75.0, "rup_pct": 25.0,
+      "ca": 0.56, "total_p": 0.10, "mg": 0.11, "k": 1.04, "na": 0.05, "s": 0.11,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "wheat_straw_goat": {
+      "display_name": "Wheat Straw",
+      "category": "forage_straw",
+      "dm": 91.0, "cp": 3.5, "ee": 1.3, "ndf": 78.0, "adf": 49.0, "starch": 0.5, "ash": 7.5, "cf": 43.0,
+      "tdn": 44.0, "me_ruminant": 1.54, "nem": 0.82, "neg": 0.36,
+      "rdp_pct": 68.0, "rup_pct": 32.0,
+      "ca": 0.24, "total_p": 0.08, "mg": 0.12, "k": 1.31, "na": 0.02, "s": 0.20,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "soybean_meal_44_goat": {
+      "display_name": "Soybean Meal, 44% CP",
+      "category": "protein",
+      "dm": 89.0, "cp": 44.0, "ee": 1.5, "ndf": 12.0, "adf": 8.5, "starch": 1.0, "ash": 6.5, "cf": 6.5,
+      "tdn": 80.0, "me_ruminant": 2.80, "nem": 1.72, "neg": 1.05,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.33, "total_p": 0.61, "mg": 0.29, "k": 2.00, "na": 0.02, "s": 0.34,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "canola_meal_goat": {
+      "display_name": "Canola Meal",
+      "category": "protein",
+      "dm": 90.0, "cp": 37.0, "ee": 3.8, "ndf": 26.0, "adf": 20.0, "starch": 3.0, "ash": 7.5, "cf": 14.0,
+      "tdn": 72.0, "me_ruminant": 2.52, "nem": 1.52, "neg": 0.90,
+      "rdp_pct": 65.0, "rup_pct": 35.0,
+      "ca": 0.67, "total_p": 1.07, "mg": 0.45, "k": 1.33, "na": 0.03, "s": 0.67,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "cottonseed_meal_goat": {
+      "display_name": "Cottonseed Meal, 41% CP",
+      "category": "protein",
+      "dm": 91.0, "cp": 41.0, "ee": 1.8, "ndf": 26.0, "adf": 18.0, "starch": 0.5, "ash": 7.0, "cf": 13.0,
+      "tdn": 70.0, "me_ruminant": 2.45, "nem": 1.47, "neg": 0.85,
+      "rdp_pct": 45.0, "rup_pct": 55.0,
+      "ca": 0.17, "total_p": 1.08, "mg": 0.55, "k": 1.39, "na": 0.02, "s": 0.40,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "corn_gluten_meal_60_goat": {
+      "display_name": "Corn Gluten Meal, 60% CP",
+      "category": "by_product_protein",
+      "dm": 90.0, "cp": 60.0, "ee": 2.5, "ndf": 4.0, "adf": 2.0, "starch": 1.0, "ash": 2.0, "cf": 1.0,
+      "tdn": 82.0, "me_ruminant": 2.87, "nem": 1.78, "neg": 1.11,
+      "rdp_pct": 22.0, "rup_pct": 78.0,
+      "ca": 0.03, "total_p": 0.47, "mg": 0.05, "k": 0.28, "na": 0.02, "s": 0.71,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "urea_goat": {
+      "display_name": "Urea (281% CP equivalent)",
+      "category": "npn",
+      "dm": 99.0, "cp": 281.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 0.0, "cf": 0.0,
+      "tdn": 0.0, "me_ruminant": 0.0, "nem": 0.0, "neg": 0.0,
+      "rdp_pct": 100.0, "rup_pct": 0.0,
+      "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "corn_ddgs_goat": {
+      "display_name": "Corn DDGS",
+      "category": "by_product_energy_protein",
+      "dm": 88.0, "cp": 27.0, "ee": 10.5, "ndf": 38.0, "adf": 17.0, "starch": 4.0, "ash": 5.0, "cf": 9.0,
+      "tdn": 87.0, "me_ruminant": 3.05, "nem": 1.90, "neg": 1.20,
+      "rdp_pct": 40.0, "rup_pct": 60.0,
+      "ca": 0.06, "total_p": 0.75, "mg": 0.28, "k": 0.98, "na": 0.35, "s": 0.37,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "beet_pulp_goat": {
+      "display_name": "Beet Pulp, Dried",
+      "category": "by_product_fiber",
+      "dm": 91.0, "cp": 9.5, "ee": 0.7, "ndf": 44.0, "adf": 24.0, "starch": 1.0, "ash": 5.5, "cf": 19.0,
+      "tdn": 74.0, "me_ruminant": 2.59, "nem": 1.56, "neg": 0.94,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 0.68, "total_p": 0.10, "mg": 0.16, "k": 0.73, "na": 0.36, "s": 0.18,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "soybean_hulls_goat": {
+      "display_name": "Soybean Hulls",
+      "category": "by_product_fiber",
+      "dm": 90.0, "cp": 12.0, "ee": 2.2, "ndf": 61.0, "adf": 45.0, "starch": 1.0, "ash": 4.5, "cf": 38.0,
+      "tdn": 75.0, "me_ruminant": 2.63, "nem": 1.58, "neg": 0.96,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 0.48, "total_p": 0.18, "mg": 0.18, "k": 1.34, "na": 0.01, "s": 0.16,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "wheat_bran_goat": {
+      "display_name": "Wheat Bran",
+      "category": "by_product_fiber",
+      "dm": 88.0, "cp": 15.5, "ee": 4.0, "ndf": 43.0, "adf": 12.0, "starch": 15.0, "ash": 5.5, "cf": 10.0,
+      "tdn": 65.0, "me_ruminant": 2.28, "nem": 1.34, "neg": 0.74,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 0.13, "total_p": 1.20, "mg": 0.52, "k": 1.17, "na": 0.03, "s": 0.17,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "soybean_oil_goat": {
+      "display_name": "Soybean Oil",
+      "category": "fat_supplement",
+      "dm": 99.0, "cp": 0.0, "ee": 99.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 0.1, "cf": 0.0,
+      "tdn": 195.0, "me_ruminant": 6.84, "nem": 4.64, "neg": 3.38,
+      "rdp_pct": 0.0, "rup_pct": 0.0,
+      "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "molasses_goat": {
+      "display_name": "Molasses, Sugarcane",
+      "category": "energy",
+      "dm": 73.0, "cp": 4.0, "ee": 0.1, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 10.5, "cf": 0.0,
+      "tdn": 70.0, "me_ruminant": 2.45, "nem": 1.45, "neg": 0.83,
+      "rdp_pct": 75.0, "rup_pct": 25.0,
+      "ca": 0.80, "total_p": 0.09, "mg": 0.40, "k": 2.50, "na": 0.17, "s": 0.43,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "fish_meal_goat": {
+      "display_name": "Fish Meal, 65% CP",
+      "category": "animal_protein",
+      "dm": 92.0, "cp": 65.0, "ee": 10.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 14.0, "cf": 0.5,
+      "tdn": 71.0, "me_ruminant": 2.49, "nem": 1.52, "neg": 0.90,
+      "rdp_pct": 30.0, "rup_pct": 70.0,
+      "ca": 5.50, "total_p": 3.30, "mg": 0.21, "k": 0.98, "na": 0.80, "s": 0.55,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "sunflower_meal_goat": {
+      "display_name": "Sunflower Meal, Solvent",
+      "category": "protein",
+      "dm": 91.0, "cp": 36.0, "ee": 1.5, "ndf": 38.0, "adf": 29.0, "starch": 1.0, "ash": 7.0, "cf": 26.0,
+      "tdn": 63.0, "me_ruminant": 2.21, "nem": 1.30, "neg": 0.71,
+      "rdp_pct": 60.0, "rup_pct": 40.0,
+      "ca": 0.35, "total_p": 1.02, "mg": 0.38, "k": 1.18, "na": 0.05, "s": 0.37,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "limestone_goat": { "display_name": "Limestone", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "me_ruminant": 0.0, "nem": 0.0, "neg": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 38.5, "total_p": 0.02, "mg": 0.33, "k": 0.04, "na": 0.06, "s": 0.05, "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed" },
+    "dicalcium_phosphate_goat": { "display_name": "Dicalcium Phosphate (DCP)", "category": "mineral", "dm": 97.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 97.0, "cf": 0.0, "tdn": 0.0, "me_ruminant": 0.0, "nem": 0.0, "neg": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 21.0, "total_p": 18.5, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0, "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed" },
+    "salt_goat": { "display_name": "Salt (NaCl)", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "me_ruminant": 0.0, "nem": 0.0, "neg": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 39.3, "s": 0.0, "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed" },
+    "magnesium_oxide_goat": { "display_name": "Magnesium Oxide (54% Mg)", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "me_ruminant": 0.0, "nem": 0.0, "neg": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 0.0, "total_p": 0.0, "mg": 54.0, "k": 0.0, "na": 0.0, "s": 0.0, "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed" },
+    "sodium_bicarbonate_goat": { "display_name": "Sodium Bicarbonate", "category": "mineral", "dm": 99.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 99.0, "cf": 0.0, "tdn": 0.0, "me_ruminant": 0.0, "nem": 0.0, "neg": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 27.4, "s": 0.0, "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed" },
+    "vit_min_premix_goat": { "display_name": "Vitamin-Mineral Premix, Goat", "category": "premix", "dm": 97.0, "cp": 0.0, "ee": 0.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 55.0, "cf": 0.0, "tdn": 0.0, "me_ruminant": 0.0, "nem": 0.0, "neg": 0.0, "rdp_pct": 0.0, "rup_pct": 0.0, "ca": 6.0, "total_p": 2.5, "mg": 1.5, "k": 0.5, "na": 0.5, "s": 0.3, "source_ref": "Industry", "nutrient_basis": "as_fed" },
+    "peanut_meal_goat": {
+      "display_name": "Peanut Meal, Solvent",
+      "category": "protein",
+      "dm": 91.0, "cp": 45.0, "ee": 1.5, "ndf": 15.0, "adf": 9.0, "starch": 5.0, "ash": 5.5, "cf": 8.0,
+      "tdn": 78.0, "me_ruminant": 2.73, "nem": 1.65, "neg": 1.00,
+      "rdp_pct": 72.0, "rup_pct": 28.0,
+      "ca": 0.21, "total_p": 0.56, "mg": 0.20, "k": 1.23, "na": 0.03, "s": 0.22,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "cassava_goat": {
+      "display_name": "Cassava Meal (Tapioca)",
+      "category": "cereal_grain",
+      "dm": 87.0, "cp": 2.5, "ee": 0.5, "ndf": 8.0, "adf": 5.0, "starch": 72.0, "ash": 3.0, "cf": 4.0,
+      "tdn": 82.0, "me_ruminant": 2.87, "nem": 1.75, "neg": 1.08,
+      "rdp_pct": 60.0, "rup_pct": 40.0,
+      "ca": 0.20, "total_p": 0.09, "mg": 0.07, "k": 0.85, "na": 0.02, "s": 0.08,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "corn_gluten_feed_goat": {
+      "display_name": "Corn Gluten Feed",
+      "category": "by_product_energy_protein",
+      "dm": 89.0, "cp": 21.0, "ee": 3.0, "ndf": 37.0, "adf": 11.0, "starch": 10.0, "ash": 6.0, "cf": 9.0,
+      "tdn": 74.0, "me_ruminant": 2.59, "nem": 1.55, "neg": 0.93,
+      "rdp_pct": 58.0, "rup_pct": 42.0,
+      "ca": 0.25, "total_p": 0.82, "mg": 0.20, "k": 0.98, "na": 0.24, "s": 0.29,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "palm_kernel_meal_goat": {
+      "display_name": "Palm Kernel Meal",
+      "category": "protein",
+      "dm": 90.0, "cp": 16.5, "ee": 8.0, "ndf": 58.0, "adf": 39.0, "starch": 3.0, "ash": 4.5, "cf": 18.0,
+      "tdn": 63.0, "me_ruminant": 2.21, "nem": 1.30, "neg": 0.71,
+      "rdp_pct": 55.0, "rup_pct": 45.0,
+      "ca": 0.30, "total_p": 0.65, "mg": 0.28, "k": 0.65, "na": 0.02, "s": 0.20,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "citrus_pulp_goat": {
+      "display_name": "Citrus Pulp, Dried",
+      "category": "by_product_fiber",
+      "dm": 91.0, "cp": 6.5, "ee": 3.5, "ndf": 23.0, "adf": 21.0, "starch": 1.0, "ash": 6.5, "cf": 14.0,
+      "tdn": 74.0, "me_ruminant": 2.59, "nem": 1.55, "neg": 0.93,
+      "rdp_pct": 70.0, "rup_pct": 30.0,
+      "ca": 1.91, "total_p": 0.12, "mg": 0.12, "k": 1.00, "na": 0.05, "s": 0.09,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    },
+    "tallow_goat": {
+      "display_name": "Tallow (Animal Fat)",
+      "category": "fat_supplement",
+      "dm": 99.0, "cp": 0.0, "ee": 99.0, "ndf": 0.0, "adf": 0.0, "starch": 0.0, "ash": 0.5, "cf": 0.0,
+      "tdn": 171.0, "me_ruminant": 5.99, "nem": 4.06, "neg": 2.99,
+      "rdp_pct": 0.0, "rup_pct": 0.0,
+      "ca": 0.0, "total_p": 0.0, "mg": 0.0, "k": 0.0, "na": 0.0, "s": 0.0,
+      "source_ref": "NRC_2007_SR", "nutrient_basis": "as_fed"
+    }
+  }
+}

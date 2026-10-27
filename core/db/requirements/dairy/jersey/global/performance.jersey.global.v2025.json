@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "breed": "jersey",
+    "species": "dairy",
+    "production": "dairy_cow",
+    "age_unit": "week_of_lactation",
+    "source": "American Jersey Cattle Association benchmarks 2022",
+    "version": "v2025",
+    "note": "Lower volume, higher components than Holstein"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "annual_targets": {
+    "305d_milk_kg": 7500,
+    "peak_milk_kg_day": 35,
+    "peak_week": 8,
+    "scc_max": 200
+  },
+  "curve": [
+    { "week": 4,  "milk_kg_day": 28, "fat_pct": 5.0, "protein_pct": 3.7, "scc_max": 200 },
+    { "week": 8,  "milk_kg_day": 34, "fat_pct": 5.0, "protein_pct": 3.7, "scc_max": 200 },
+    { "week": 20, "milk_kg_day": 29, "fat_pct": 5.1, "protein_pct": 3.8, "scc_max": 200 },
+    { "week": 40, "milk_kg_day": 20, "fat_pct": 5.2, "protein_pct": 3.9, "scc_max": 250 }
+  ]
+}

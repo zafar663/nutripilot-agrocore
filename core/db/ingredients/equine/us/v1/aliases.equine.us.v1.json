@@ -1,0 +1,9 @@
+{
+  "corn": "corn_grain",
+  "maize": "corn_grain",
+  "soybean meal": "soybean_meal_44_cp",
+  "sbm": "soybean_meal_44_cp",
+  "soyabean meal": "soybean_meal_44_cp",
+  "alfalfa meal": "alfalfa_meal",
+  "alfalfa": "alfalfa_meal"
+}

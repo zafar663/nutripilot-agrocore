@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "breed": "hyline_w36",
+    "species": "poultry",
+    "production": "layer",
+    "age_unit": "week",
+    "source": "Hy-Line W-36 Commercial Management Guide 2022",
+    "version": "v2025",
+    "note": "White egg strain. Peak production typically 95%+"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "week": 18, "body_wt_g": 1350, "egg_prod_pct": 10, "egg_wt_g": 47.0, "feed_per_bird_g": 88,  "fcr": null, "mortality_pct_max": 0.3 },
+    { "week": 20, "body_wt_g": 1430, "egg_prod_pct": 78, "egg_wt_g": 53.0, "feed_per_bird_g": 97,  "fcr": null, "mortality_pct_max": 0.5 },
+    { "week": 22, "body_wt_g": 1480, "egg_prod_pct": 90, "egg_wt_g": 55.5, "feed_per_bird_g": 100, "fcr": null, "mortality_pct_max": 0.6 },
+    { "week": 25, "body_wt_g": 1510, "egg_prod_pct": 94, "egg_wt_g": 57.5, "feed_per_bird_g": 103, "fcr": null, "mortality_pct_max": 0.8 },
+    { "week": 28, "body_wt_g": 1520, "egg_prod_pct": 95, "egg_wt_g": 59.0, "feed_per_bird_g": 105, "fcr": 2.00, "mortality_pct_max": 1.0 },
+    { "week": 35, "body_wt_g": 1540, "egg_prod_pct": 93, "egg_wt_g": 60.5, "feed_per_bird_g": 106, "fcr": 2.08, "mortality_pct_max": 1.5 },
+    { "week": 45, "body_wt_g": 1555, "egg_prod_pct": 90, "egg_wt_g": 61.0, "feed_per_bird_g": 105, "fcr": 2.15, "mortality_pct_max": 2.0 },
+    { "week": 50, "body_wt_g": 1560, "egg_prod_pct": 88, "egg_wt_g": 61.5, "feed_per_bird_g": 104, "fcr": 2.20, "mortality_pct_max": 2.5 },
+    { "week": 60, "body_wt_g": 1575, "egg_prod_pct": 84, "egg_wt_g": 61.5, "feed_per_bird_g": 102, "fcr": 2.32, "mortality_pct_max": 3.5 },
+    { "week": 70, "body_wt_g": 1585, "egg_prod_pct": 78, "egg_wt_g": 61.0, "feed_per_bird_g": 99,  "fcr": 2.48, "mortality_pct_max": 5.0 },
+    { "week": 80, "body_wt_g": 1595, "egg_prod_pct": 70, "egg_wt_g": 60.5, "feed_per_bird_g": 96,  "fcr": 2.68, "mortality_pct_max": 7.0 }
+  ],
+  "phases": {
+    "pre_lay":  { "weeks": "18-21" },
+    "peak_lay": { "weeks": "22-35" },
+    "mid_lay":  { "weeks": "36-60" },
+    "late_lay": { "weeks": "61-80" }
+  }
+}

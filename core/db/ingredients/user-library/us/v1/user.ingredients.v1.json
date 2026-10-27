@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "description": "User-managed ingredient library — editable by nutritionists via the Library UI",
+    "region": "us",
+    "version": "v1",
+    "note": "Entries here override base library values. Add, edit, or delete via the Library tab in NutriPilot."
+  },
+  "ingredients": {}
+}

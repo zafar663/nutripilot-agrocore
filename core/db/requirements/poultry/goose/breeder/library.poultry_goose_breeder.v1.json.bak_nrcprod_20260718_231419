@@ -1,0 +1,183 @@
+{
+    "profiles":  {
+                     "embden":  {
+                                    "targets_override":  {
+
+                                                         },
+                                    "inherits":  "generic"
+                                },
+                     "generic":  {
+                                     "targets_by_phase":  {
+                                                              "grower":  {
+                                                                             "cp":  19,
+                                                                             "sid_trp":  0.2,
+                                                                             "sid_met":  0.4,
+                                                                             "me":  3000,
+                                                                             "sid_thr":  0.62,
+                                                                             "na":  0.18,
+                                                                             "cl":  0.18,
+                                                                             "ca":  0.9,
+                                                                             "k":  0.85,
+                                                                             "sid_metcys":  0.72,
+                                                                             "sid_lys":  0.95,
+                                                                             "deb":  240,
+                                                                             "sid_arg":  1.05,
+                                                                             "avp":  0.45
+                                                                         },
+                                                              "finisher":  {
+                                                                               "cp":  17.5,
+                                                                               "sid_trp":  0.2,
+                                                                               "sid_met":  0.36,
+                                                                               "me":  3100,
+                                                                               "sid_thr":  0.56,
+                                                                               "na":  0.18,
+                                                                               "cl":  0.18,
+                                                                               "ca":  0.9,
+                                                                               "k":  0.85,
+                                                                               "sid_metcys":  0.65,
+                                                                               "sid_lys":  0.85,
+                                                                               "deb":  230,
+                                                                               "sid_arg":  0.95,
+                                                                               "avp":  0.45
+                                                                           },
+                                                              "withdrawal":  {
+                                                                                 "cp":  17,
+                                                                                 "sid_trp":  0.2,
+                                                                                 "sid_met":  0.34,
+                                                                                 "me":  3050,
+                                                                                 "sid_thr":  0.54,
+                                                                                 "na":  0.18,
+                                                                                 "cl":  0.18,
+                                                                                 "ca":  0.9,
+                                                                                 "k":  0.85,
+                                                                                 "sid_metcys":  0.62,
+                                                                                 "sid_lys":  0.82,
+                                                                                 "deb":  225,
+                                                                                 "sid_arg":  0.92,
+                                                                                 "avp":  0.45
+                                                                             },
+                                                              "starter":  {
+                                                                              "cp":  20.5,
+                                                                              "sid_trp":  0.2,
+                                                                              "sid_met":  0.45,
+                                                                              "me":  2900,
+                                                                              "sid_thr":  0.68,
+                                                                              "na":  0.18,
+                                                                              "cl":  0.18,
+                                                                              "ca":  0.9,
+                                                                              "k":  0.85,
+                                                                              "sid_metcys":  0.8,
+                                                                              "sid_lys":  1.05,
+                                                                              "deb":  250,
+                                                                              "sid_arg":  1.15,
+                                                                              "avp":  0.45
+                                                                          },
+                                                              "peak":  {
+                                                                           "me":  2600,
+                                                                           "cp":  15.5,
+                                                                           "ca":  3,
+                                                                           "avp":  0.4,
+                                                                           "na":  0.16,
+                                                                           "sid_lys":  0.65,
+                                                                           "sid_met":  0.3,
+                                                                           "sid_metcys":  0.55,
+                                                                           "sid_thr":  0.46,
+                                                                           "sid_trp":  0.15,
+                                                                           "sid_arg":  0.8
+                                                                       },
+                                                              "developer":  {
+                                                                                "cp":  19,
+                                                                                "sid_trp":  0.2,
+                                                                                "sid_met":  0.4,
+                                                                                "me":  3000,
+                                                                                "sid_thr":  0.62,
+                                                                                "na":  0.18,
+                                                                                "cl":  0.18,
+                                                                                "ca":  0.9,
+                                                                                "k":  0.85,
+                                                                                "sid_metcys":  0.72,
+                                                                                "sid_lys":  0.95,
+                                                                                "deb":  240,
+                                                                                "sid_arg":  1.05,
+                                                                                "avp":  0.45
+                                                                            },
+                                                              "prebreed":  {
+                                                                               "cp":  19,
+                                                                               "sid_trp":  0.2,
+                                                                               "sid_met":  0.4,
+                                                                               "me":  3000,
+                                                                               "sid_thr":  0.62,
+                                                                               "na":  0.18,
+                                                                               "cl":  0.18,
+                                                                               "ca":  0.9,
+                                                                               "k":  0.85,
+                                                                               "sid_metcys":  0.72,
+                                                                               "sid_lys":  0.95,
+                                                                               "deb":  240,
+                                                                               "sid_arg":  1.05,
+                                                                               "avp":  0.45
+                                                                           },
+                                                              "postpeak":  {
+                                                                               "cp":  19,
+                                                                               "sid_trp":  0.2,
+                                                                               "sid_met":  0.4,
+                                                                               "me":  3000,
+                                                                               "sid_thr":  0.62,
+                                                                               "na":  0.18,
+                                                                               "cl":  0.18,
+                                                                               "ca":  0.9,
+                                                                               "k":  0.85,
+                                                                               "sid_metcys":  0.72,
+                                                                               "sid_lys":  0.95,
+                                                                               "deb":  240,
+                                                                               "sid_arg":  1.05,
+                                                                               "avp":  0.45
+                                                                           },
+                                                              "late":  {
+                                                                           "cp":  19,
+                                                                           "sid_trp":  0.2,
+                                                                           "sid_met":  0.4,
+                                                                           "me":  3000,
+                                                                           "sid_thr":  0.62,
+                                                                           "na":  0.18,
+                                                                           "cl":  0.18,
+                                                                           "ca":  0.9,
+                                                                           "k":  0.85,
+                                                                           "sid_metcys":  0.72,
+                                                                           "sid_lys":  0.95,
+                                                                           "deb":  240,
+                                                                           "sid_arg":  1.05,
+                                                                           "avp":  0.45
+                                                                       }
+                                                          },
+                                     "targets_override":  {
+
+                                                          },
+                                     "mode":  "baseline_generic_v1"
+                                 },
+                     "toulouse":  {
+                                      "targets_override":  {
+
+                                                           },
+                                      "inherits":  "generic"
+                                  },
+                     "african":  {
+                                     "targets_override":  {
+
+                                                          },
+                                     "inherits":  "generic"
+                                 }
+                 },
+    "_LOCK":  {
+                  "version":  "v1",
+                  "production":  "meat",
+                  "species":  "poultry",
+                  "type":  "goose",
+                  "kind":  "requirements_library",
+                  "created_utc":  "2026-02-19T01:39:53Z",
+                  "mode":  "option_b_inheritance_ready",
+                  "note":  "PLACEHOLDER numeric targets (NON-ZERO). Replace with finalized commercial tables.",
+                  "migration_note":  "2026-02-19: migrated targets_by_phase from *_pct/me_kcal_per_kg schema to canonical (me,cp,ca,avp,na,k,cl,deb,sid_*)",
+                  "migration_note2":  "2026-02-19: added missing goose breeder tokens (developer/prebreed/postpeak/late) cloned from grower placeholder"
+              }
+}

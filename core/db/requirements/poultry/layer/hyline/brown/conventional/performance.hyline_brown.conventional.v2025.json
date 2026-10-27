@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "breed": "hyline_brown",
+    "species": "poultry",
+    "production": "layer",
+    "age_unit": "week",
+    "source": "Hy-Line Brown Commercial Management Guide 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    { "week": 18, "body_wt_g": 1550, "egg_prod_pct": 10, "egg_wt_g": 49.0, "feed_per_bird_g": 92,  "fcr": null, "mortality_pct_max": 0.3 },
+    { "week": 20, "body_wt_g": 1680, "egg_prod_pct": 72, "egg_wt_g": 55.0, "feed_per_bird_g": 106, "fcr": null, "mortality_pct_max": 0.5 },
+    { "week": 25, "body_wt_g": 1790, "egg_prod_pct": 93, "egg_wt_g": 60.0, "feed_per_bird_g": 113, "fcr": null, "mortality_pct_max": 0.8 },
+    { "week": 27, "body_wt_g": 1815, "egg_prod_pct": 95, "egg_wt_g": 61.0, "feed_per_bird_g": 115, "fcr": null, "mortality_pct_max": 1.0 },
+    { "week": 30, "body_wt_g": 1840, "egg_prod_pct": 94, "egg_wt_g": 62.5, "feed_per_bird_g": 116, "fcr": 2.02, "mortality_pct_max": 1.2 },
+    { "week": 40, "body_wt_g": 1880, "egg_prod_pct": 91, "egg_wt_g": 63.5, "feed_per_bird_g": 115, "fcr": 2.15, "mortality_pct_max": 2.0 },
+    { "week": 50, "body_wt_g": 1910, "egg_prod_pct": 88, "egg_wt_g": 64.0, "feed_per_bird_g": 113, "fcr": 2.25, "mortality_pct_max": 2.8 },
+    { "week": 60, "body_wt_g": 1930, "egg_prod_pct": 84, "egg_wt_g": 64.5, "feed_per_bird_g": 111, "fcr": 2.38, "mortality_pct_max": 4.0 },
+    { "week": 70, "body_wt_g": 1945, "egg_prod_pct": 79, "egg_wt_g": 65.0, "feed_per_bird_g": 109, "fcr": 2.52, "mortality_pct_max": 5.5 },
+    { "week": 80, "body_wt_g": 1960, "egg_prod_pct": 72, "egg_wt_g": 65.0, "feed_per_bird_g": 107, "fcr": 2.72, "mortality_pct_max": 7.5 }
+  ],
+  "phases": {
+    "pre_lay":  { "weeks": "18-20" },
+    "peak_lay": { "weeks": "21-35" },
+    "mid_lay":  { "weeks": "36-60" },
+    "late_lay": { "weeks": "61-80" }
+  }
+}

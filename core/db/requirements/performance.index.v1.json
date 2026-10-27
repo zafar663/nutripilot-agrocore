@@ -1,0 +1,346 @@
+{
+  "_meta": {
+    "description": "Master index of all breed performance standard files",
+    "version": "v2",
+    "created_utc": "2026-05-15T00:00:00Z",
+    "note": "Entries prefixed with 'library:' are loaded from performance.library.all_breeds.v2025.json or performance.library.dairy.v2025.json"
+  },
+  "poultry": {
+    "broiler": {
+      "ross_308": "poultry/broiler/ross/ross_308/global/performance.ross_308.global.v2025.json",
+      "ross_308_eu": "library:poultry_broiler.ross_308_eu",
+      "ross_308_ap": "library:poultry_broiler.ross_308_ap",
+      "ross_708": "library:poultry_broiler.ross_708",
+      "cobb_500": "library:poultry_broiler.cobb_500",
+      "cobb_700": "library:poultry_broiler.cobb_700",
+      "cobb_800": "poultry/broiler/cobb/cobb_800/global/performance.cobb_800.global.v2025.json",
+      "hubbard_edge": "library:poultry_broiler.hubbard_edge",
+      "hubbard_efficiency_plus": "poultry/broiler/hubbard/efficiency_plus/global/performance.hubbard_efficiency_plus.global.v2025.json",
+      "arbor_acres_plus": "library:poultry_broiler.arbor_acres_plus"
+    },
+    "layer": {
+      "lohmann_brown": "poultry/layer/lohmann/brown/global/performance.lohmann_brown.global.v2025.json",
+      "lohmann_brown_classic": "library:poultry_layer.lohmann_brown_classic",
+      "lohmann_brown_extra": "library:poultry_layer.lohmann_brown_extra",
+      "lohmann_brown_lite": "library:poultry_layer.lohmann_brown_lite",
+      "lohmann_brown_lite_na": "library:poultry_layer.lohmann_brown_lite",
+      "lohmann_lsl": "library:poultry_layer.lohmann_lsl_classic",
+      "lohmann_lsl_classic": "library:poultry_layer.lohmann_lsl_classic",
+      "lohmann_lsl_extra": "library:poultry_layer.lohmann_lsl_extra",
+      "lohmann_lsl_lite": "library:poultry_layer.lohmann_lsl_lite",
+      "lohmann_lsl_lite_na": "library:poultry_layer.lohmann_lsl_lite",
+      "lohmann_lsl_ultra_lite": "library:poultry_layer.lohmann_lsl_lite",
+      "lohmann_pink": "library:poultry_layer.lohmann_pink",
+      "lohmann_sandy": "library:poultry_layer.lohmann_sandy",
+      "lohmann_silver": "library:poultry_layer.lohmann_silver",
+      "lohmann_tradition": "library:poultry_layer.lohmann_tradition",
+      "hyline_brown": "library:poultry_layer.hyline_brown",
+      "hyline_w36": "library:poultry_layer.hyline_w36",
+      "hyline_pink": "library:poultry_layer.hyline_pink",
+      "hyline_silver_brown": "library:poultry_layer.hyline_silver_brown",
+      "hyline_w80": "library:poultry_layer.hyline_w80",
+      "hyline_w80_plus": "library:poultry_layer.hyline_w80_plus",
+      "hyline_w80_pro": "library:poultry_layer.hyline_w80_pro",
+      "dekalb_white": "library:poultry_layer.dekalb_white",
+      "dekalb_brown": "library:poultry_layer.dekalb_brown",
+      "bovans_brown": "library:poultry_layer.bovans_brown",
+      "bovans_white": "library:poultry_layer.bovans_white",
+      "isa_brown": "library:poultry_layer.isa_brown",
+      "shaver_white": "library:poultry_layer.shaver_white",
+      "babcock_b300": "library:poultry_layer.babcock_b300"
+    },
+    "breeder": {
+      "ross_308_ps": "library:poultry_breeder.ross_308_ps",
+      "ross_308_ap_ps": "library:poultry_breeder.ross_308_ap_ps",
+      "ross_708_ps": "library:poultry_breeder.ross_708_ps",
+      "arbor_acres_ps": "library:poultry_breeder.arbor_acres_ps",
+      "cobb_500_ff": "library:poultry_breeder.cobb_500_ff",
+      "cobb_500_sf": "library:poultry_breeder.cobb_500_sf",
+      "hubbard_ps_conventional": "library:poultry_breeder.hubbard_ps_conventional",
+      "hyline_brown_ps": "library:poultry_breeder.hyline_brown_ps",
+      "lohmann_brown_classic_ps": "library:poultry_breeder.lohmann_brown_classic_ps",
+      "cobb_700_ps": "library:poultry_breeder.cobb_700_ps",
+      "cobb_800_ps": "library:poultry_breeder.cobb_800_ps"
+    },
+    "turkey": {
+      "but_commercial": "library:poultry_turkey.but_commercial",
+      "but_premium_male": "library:poultry_turkey.but_premium_male",
+      "but_premium_female": "library:poultry_turkey.but_premium_female",
+      "but_6": "library:poultry_turkey.but_6",
+      "but_9": "library:poultry_turkey.but_9",
+      "nicholas_select": "library:poultry_turkey.nicholas_select",
+      "hybrid_commercial": "library:poultry_turkey.hybrid_commercial",
+      "hybrid_converter": "library:poultry_turkey.hybrid_converter",
+      "hybrid_grade_maker": "library:poultry_turkey.hybrid_grade_maker",
+      "hybrid_xl": "library:poultry_turkey.hybrid_xl"
+    },
+    "duck": {
+      "cherry_valley_meat": "poultry/duck/cherry_valley/commercial/global/performance.cherry_valley.commercial.global.v2025.json",
+      "cherry_valley_layer": "poultry/duck/cherry_valley/layer/global/performance.cherry_valley.layer.global.v2025.json",
+      "cherry_valley_breeder": "library:poultry_duck.cherry_valley_breeder",
+      "cherry_valley_sm3": "library:poultry_duck.cherry_valley_sm3",
+      "duck_meat": "library:poultry_duck.duck_meat_generic",
+      "duck_layer": "poultry/duck/cherry_valley/layer/global/performance.cherry_valley.layer.global.v2025.json",
+      "duck_breeder": "library:poultry_duck.cherry_valley_breeder"
+    },
+    "quail": {
+      "coturnix_layer": "library:poultry_quail.coturnix_japonica_layer",
+      "coturnix_meat": "library:poultry_quail.coturnix_japonica_meat",
+      "coturnix_breeder": "library:poultry_quail.coturnix_japonica_breeder",
+      "coturnix_japonica_meat": "library:poultry_quail.coturnix_japonica_meat",
+      "coturnix_japonica_layer": "library:poultry_quail.coturnix_japonica_layer",
+      "coturnix_japonica_breeder": "library:poultry_quail.coturnix_japonica_breeder"
+    },
+    "goose": {
+      "goose_meat": "library:poultry_goose.goose_meat_generic",
+      "goose_layer": "library:poultry_goose.goose_layer_generic",
+      "goose_breeder": "library:poultry_goose.goose_breeder"
+    },
+    "layer_breeder": {
+      "hyline_brown_breeder": "library:poultry_layer_breeder.hyline_brown_breeder",
+      "hyline_pink_breeder": "library:poultry_layer_breeder.hyline_pink_breeder",
+      "hyline_silver_brown_breeder": "library:poultry_layer_breeder.hyline_silver_brown_breeder",
+      "hyline_w36_breeder": "library:poultry_layer_breeder.hyline_w36_breeder",
+      "lohmann_brown_breeder": "library:poultry_layer_breeder.lohmann_brown_breeder",
+      "lohmann_lsl_breeder": "library:poultry_layer_breeder.lohmann_lsl_breeder"
+    }
+  },
+  "swine": {
+    "grower_finisher": {
+      "pic_337": "swine/pic/pic_337/global/performance.pic_337.global.v2025.json",
+      "danbred": "swine/danbred/global/performance.danbred.global.v2025.json"
+    },
+    "sow": {
+      "topigs_tn70": "swine/topigs/tn70/global/performance.tn70.global.v2025.json"
+    },
+    "gilt": {
+      "gilt_development": "library:swine_gilt.gilt_development"
+    }
+  },
+  "dairy": {
+    "cow": {
+      "holstein": "library:dairy_cow.holstein",
+      "jersey": "library:dairy_cow.jersey",
+      "brown_swiss": "library:dairy_cow.brown_swiss",
+      "ayrshire": "library:dairy_cow.ayrshire",
+      "guernsey": "library:dairy_cow.guernsey",
+      "milking_shorthorn": "library:dairy_cow.milking_shorthorn",
+      "sahiwal": "library:dairy_cow.sahiwal",
+      "gir": "library:dairy_cow.gir"
+    },
+    "buffalo": {
+      "murrah_buffalo": "library:dairy_buffalo.murrah_buffalo",
+      "nili_ravi_buffalo": "library:dairy_buffalo.nili_ravi_buffalo"
+    }
+  },
+  "beef": {
+    "cow": {
+      "angus": "library:beef_cow.angus",
+      "hereford": "library:beef_cow.hereford",
+      "simmental": "library:beef_cow.simmental",
+      "charolais": "library:beef_cow.charolais",
+      "brahman": "library:beef_cow.brahman",
+      "nelore": "library:beef_cow.nelore",
+      "wagyu": "library:beef_cow.wagyu",
+      "limousin": "library:beef_cow.limousin",
+      "shorthorn_beef": "library:beef_cow.shorthorn_beef"
+    }
+  },
+  "goat": {
+    "meat": {
+      "boer": "library:goat_meat.boer",
+      "kiko": "library:goat_meat.kiko",
+      "spanish": "library:goat_meat.spanish",
+      "kalahari_red": "library:goat_meat.kalahari_red",
+      "savanna": "library:goat_meat.savanna",
+      "myotonic": "library:goat_meat.myotonic",
+      "black_bengal": "library:goat_meat.black_bengal"
+    },
+    "dairy": {
+      "saanen": "library:goat_dairy.saanen",
+      "alpine": "library:goat_dairy.alpine",
+      "nubian": "library:goat_dairy.nubian",
+      "toggenburg": "library:goat_dairy.toggenburg",
+      "lamancha": "library:goat_dairy.lamancha",
+      "oberhasli": "library:goat_dairy.oberhasli",
+      "beetal_dairy": "library:goat_dairy.beetal_dairy"
+    },
+    "dual": {
+      "beetal": "library:goat_dual.beetal",
+      "barbari": "library:goat_dual.barbari"
+    },
+    "fiber": {
+      "angora": "library:goat_fiber.angora",
+      "cashmere": "library:goat_fiber.cashmere"
+    }
+  },
+  "sheep": {
+    "meat": {
+      "merino": "library:sheep_meat.merino",
+      "suffolk": "library:sheep_meat.suffolk",
+      "texel": "library:sheep_meat.texel",
+      "dorper": "library:sheep_meat.dorper",
+      "awassi": "library:sheep_meat.awassi",
+      "kajli": "library:sheep_meat.kajli",
+      "nali": "library:sheep_meat.nali"
+    },
+    "dairy": {
+      "lacaune": "library:sheep_dairy.lacaune",
+      "awassi_dairy": "library:sheep_dairy.awassi_dairy"
+    }
+  },
+  "aquaculture": {
+    "fish": {
+      "atlantic_salmon": "library:aquaculture.atlantic_salmon",
+      "nile_tilapia": "library:aquaculture.nile_tilapia_gift",
+      "tilapia_gift": "library:aquaculture.nile_tilapia_gift",
+      "common_carp": "library:aquaculture.common_carp",
+      "carp": "library:aquaculture.common_carp",
+      "channel_catfish": "library:aquaculture.channel_catfish",
+      "catfish": "library:aquaculture.channel_catfish",
+      "milkfish": "library:aquaculture.milkfish",
+      "bangus": "library:aquaculture.milkfish",
+      "pangasius": "library:aquaculture.pangasius",
+      "basa": "library:aquaculture.pangasius",
+      "swai": "library:aquaculture.pangasius",
+      "european_seabass": "library:aquaculture.european_seabass",
+      "seabass": "library:aquaculture.european_seabass",
+      "branzino": "library:aquaculture.european_seabass",
+      "gilthead_seabream": "library:aquaculture.gilthead_seabream",
+      "seabream": "library:aquaculture.gilthead_seabream"
+    },
+    "shrimp": {
+      "vannamei_shrimp": "library:aquaculture.vannamei_shrimp",
+      "whiteleg_shrimp": "library:aquaculture.vannamei_shrimp",
+      "pacific_white_shrimp": "library:aquaculture.vannamei_shrimp"
+    }
+  },
+  "camelid": {
+    "old_world": {
+      "dromedary": "library:camelid.dromedary",
+      "arabian_camel": "library:camelid.dromedary",
+      "bactrian": "library:camelid.bactrian",
+      "bactrian_camel": "library:camelid.bactrian"
+    },
+    "south_american": {
+      "alpaca_huacaya": "library:camelid.alpaca_huacaya",
+      "huacaya": "library:camelid.alpaca_huacaya",
+      "alpaca": "library:camelid.alpaca_huacaya",
+      "alpaca_suri": "library:camelid.alpaca_suri",
+      "suri": "library:camelid.alpaca_suri",
+      "llama": "library:camelid.llama"
+    }
+  },
+  "companion": {
+    "dog": {
+      "toy_breed": "library:companion_dog.toy_breed",
+      "small_breed": "library:companion_dog.small_breed",
+      "medium_breed": "library:companion_dog.medium_breed",
+      "large_breed": "library:companion_dog.large_breed",
+      "giant_breed": "library:companion_dog.giant_breed",
+      "chihuahua": "library:companion_dog.toy_breed",
+      "yorkshire_terrier": "library:companion_dog.toy_breed",
+      "beagle": "library:companion_dog.small_breed",
+      "border_collie": "library:companion_dog.medium_breed",
+      "labrador": "library:companion_dog.large_breed",
+      "labrador_retriever": "library:companion_dog.large_breed",
+      "golden_retriever": "library:companion_dog.large_breed",
+      "german_shepherd": "library:companion_dog.large_breed",
+      "great_dane": "library:companion_dog.giant_breed",
+      "saint_bernard": "library:companion_dog.giant_breed"
+    },
+    "cat": {
+      "domestic_shorthair": "library:companion_cat.domestic_shorthair",
+      "domestic_longhair": "library:companion_cat.domestic_shorthair",
+      "cat": "library:companion_cat.domestic_shorthair",
+      "maine_coon": "library:companion_cat.maine_coon"
+    }
+  },
+  "rabbit": {
+    "meat": {
+      "new_zealand_white": "library:rabbit.new_zealand_white",
+      "nzw": "library:rabbit.new_zealand_white",
+      "californian": "library:rabbit.californian"
+    },
+    "dual": {
+      "rex": "library:rabbit.rex"
+    },
+    "fiber": {
+      "english_angora": "library:rabbit.english_angora",
+      "angora": "library:rabbit.english_angora"
+    }
+  },
+  "equine": {
+    "horse": {
+      "thoroughbred": "library:equine.thoroughbred",
+      "arabian": "library:equine.arabian",
+      "quarter_horse": "library:equine.quarter_horse",
+      "standardbred": "library:equine.standardbred",
+      "akhal_teke": "library:equine.akhal_teke",
+      "hanoverian": "library:equine.hanoverian",
+      "kwpn": "library:equine.kwpn",
+      "selle_francais": "library:equine.selle_francais",
+      "oldenburg": "library:equine.oldenburg",
+      "trakehner": "library:equine.trakehner",
+      "belgian_warmblood": "library:equine.belgian_warmblood",
+      "danish_warmblood": "library:equine.danish_warmblood",
+      "swedish_warmblood": "library:equine.swedish_warmblood",
+      "czech_warmblood": "library:equine.czech_warmblood",
+      "lusitano": "library:equine.lusitano",
+      "andalusian": "library:equine.andalusian",
+      "lipizzaner": "library:equine.lipizzaner",
+      "paint_horse": "library:equine.paint_horse",
+      "appaloosa": "library:equine.appaloosa",
+      "morgan": "library:equine.morgan",
+      "tennessee_walking": "library:equine.tennessee_walking",
+      "clydesdale": "library:equine.clydesdale",
+      "percheron": "library:equine.percheron",
+      "belgian_draft": "library:equine.belgian_draft",
+      "shire": "library:equine.shire",
+      "suffolk_punch": "library:equine.suffolk_punch",
+      "marwari": "library:equine.marwari",
+      "kathiawari": "library:equine.kathiawari",
+      "sindhi_baluchi": "library:equine.sindhi_baluchi",
+      "nukra": "library:equine.nukra",
+      "manipuri": "library:equine.manipuri",
+      "zanskari": "library:equine.zanskari",
+      "caspian": "library:equine.caspian",
+      "turkoman": "library:equine.turkoman",
+      "mongolian": "library:equine.mongolian",
+      "yili": "library:equine.yili",
+      "jeju": "library:equine.jeju",
+      "noma": "library:equine.noma",
+      "haflinger": "library:equine.haflinger",
+      "fjord": "library:equine.fjord",
+      "icelandic": "library:equine.icelandic",
+      "welsh_pony": "library:equine.welsh_pony",
+      "shetland_pony": "library:equine.shetland_pony",
+      "connemara": "library:equine.connemara",
+      "new_forest": "library:equine.new_forest",
+      "dartmoor": "library:equine.dartmoor"
+    },
+    "donkey": {
+      "dezhou_wutou": "library:equine_donkey.dezhou_wutou",
+      "dezhou_sanfen": "library:equine_donkey.dezhou_sanfen",
+      "guanzhong": "library:equine_donkey.guanzhong",
+      "jinnan": "library:equine_donkey.jinnan",
+      "poitou": "library:equine_donkey.poitou",
+      "mammoth_jackstock": "library:equine_donkey.mammoth_jackstock",
+      "standard_donkey": "library:equine_donkey.standard_donkey",
+      "nubian": "library:equine_donkey.nubian",
+      "somali": "library:equine_donkey.somali",
+      "baluchi_donkey": "library:equine_donkey.baluchi_donkey",
+      "kathiawari_donkey": "library:equine_donkey.kathiawari_donkey",
+      "moroccan_donkey": "library:equine_donkey.moroccan_donkey",
+      "miniature_donkey": "library:equine_donkey.miniature_donkey"
+    },
+    "mule": {
+      "draft_mule": "library:equine_mule.draft_mule",
+      "pack_mule": "library:equine_mule.pack_mule",
+      "farm_mule": "library:equine_mule.farm_mule",
+      "saddle_mule": "library:equine_mule.saddle_mule",
+      "miniature_mule": "library:equine_mule.miniature_mule",
+      "hinny": "library:equine_mule.hinny"
+    }
+  }
+}

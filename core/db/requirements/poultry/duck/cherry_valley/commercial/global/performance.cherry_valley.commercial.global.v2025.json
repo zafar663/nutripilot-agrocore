@@ -1,0 +1,68 @@
+{
+  "_meta": {
+    "breed": "cherry_valley",
+    "species": "poultry",
+    "production": "duck_meat",
+    "age_unit": "day",
+    "source": "Cherry Valley Duck Commercial Performance Guide 2022",
+    "version": "v2025"
+  },
+  "warn_threshold_pct": 5,
+  "alert_threshold_pct": 10,
+  "curve": [
+    {
+      "age": 7,
+      "body_wt_g": 310,
+      "fcr": 1.35,
+      "adg_g": 39,
+      "feed_per_bird_g": 52,
+      "mortality_pct_max": 0.5,
+      "cum_feed_g": 419
+    },
+    {
+      "age": 14,
+      "body_wt_g": 850,
+      "fcr": 1.58,
+      "adg_g": 77,
+      "feed_per_bird_g": 122,
+      "mortality_pct_max": 1,
+      "cum_feed_g": 1343
+    },
+    {
+      "age": 21,
+      "body_wt_g": 1700,
+      "fcr": 1.78,
+      "adg_g": 121,
+      "feed_per_bird_g": 216,
+      "mortality_pct_max": 1.5,
+      "cum_feed_g": 3026
+    },
+    {
+      "age": 28,
+      "body_wt_g": 2550,
+      "fcr": 1.95,
+      "adg_g": 121,
+      "feed_per_bird_g": 236,
+      "mortality_pct_max": 2,
+      "cum_feed_g": 4973
+    },
+    {
+      "age": 35,
+      "body_wt_g": 3100,
+      "fcr": 2.08,
+      "adg_g": 79,
+      "feed_per_bird_g": 164,
+      "mortality_pct_max": 2.5,
+      "cum_feed_g": 6448
+    },
+    {
+      "age": 42,
+      "body_wt_g": 3500,
+      "fcr": 2.2,
+      "adg_g": 57,
+      "feed_per_bird_g": 125,
+      "mortality_pct_max": 3,
+      "cum_feed_g": 7700
+    }
+  ]
+}

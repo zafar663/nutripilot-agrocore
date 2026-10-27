@@ -1,0 +1,247 @@
+{
+  "_meta": {
+    "description": "Companion animal growth and body weight standards — dog (by size class) and cat",
+    "version": "v2025",
+    "created_utc": "2026-08-09T00:00:00Z",
+    "sources": [
+      "AAFCO 2023 — Dog and Cat Food Nutrient Profiles",
+      "NRC 2006 — Nutrient Requirements of Dogs and Cats",
+      "Mawby et al. 2004 — Body composition of neutered and intact dogs",
+      "Scarlett et al. 1998 — Overweight cats: prevalence and risk factors",
+      "Royal Canin Growth Charts — breed size classes 2022",
+      "Purina Life Stage Charts 2022",
+      "Hawthorne et al. 2004 — Body-weight changes during growth in puppies of different breeds"
+    ],
+    "notes": "Body weights in kg. Age in weeks. Targets are breed-size medians; individual breeds vary ±20%."
+  },
+  "companion_dog": {
+    "toy_breed": {
+      "_meta": {
+        "size_class": "toy",
+        "adult_bw_range_kg": "1-5",
+        "adult_bw_target_kg": 3.5,
+        "examples": "Chihuahua, Yorkshire Terrier, Pomeranian, Maltese, Toy Poodle",
+        "mature_age_weeks": 36,
+        "data_quality": "commercial_benchmark",
+        "source": "Royal Canin 2022 + Hawthorne et al. 2004"
+      },
+      "warn_threshold_pct": 15,
+      "alert_threshold_pct": 25,
+      "phases": {
+        "neonatal": { "weeks": "0-2", "target_bw_kg": 0.2 },
+        "socialization": { "weeks": "2-8", "target_bw_kg": 0.6 },
+        "rapid_growth": { "weeks": "8-20", "target_bw_kg": 2.0 },
+        "finishing": { "weeks": "20-36", "target_bw_kg": 3.5 }
+      },
+      "curve": [
+        { "week": 0,  "body_wt_kg": 0.12, "adg_g_day": null },
+        { "week": 2,  "body_wt_kg": 0.22, "adg_g_day": 7 },
+        { "week": 4,  "body_wt_kg": 0.38, "adg_g_day": 11 },
+        { "week": 8,  "body_wt_kg": 0.62, "adg_g_day": 17 },
+        { "week": 12, "body_wt_kg": 1.0,  "adg_g_day": 27 },
+        { "week": 16, "body_wt_kg": 1.6,  "adg_g_day": 43 },
+        { "week": 20, "body_wt_kg": 2.2,  "adg_g_day": 43 },
+        { "week": 24, "body_wt_kg": 2.8,  "adg_g_day": 43 },
+        { "week": 30, "body_wt_kg": 3.3,  "adg_g_day": 24 },
+        { "week": 36, "body_wt_kg": 3.5,  "adg_g_day": 10 }
+      ]
+    },
+    "small_breed": {
+      "_meta": {
+        "size_class": "small",
+        "adult_bw_range_kg": "5-10",
+        "adult_bw_target_kg": 7.5,
+        "examples": "Beagle, Miniature Schnauzer, Miniature Poodle, Shih Tzu, Cavalier King Charles",
+        "mature_age_weeks": 44,
+        "data_quality": "commercial_benchmark",
+        "source": "Royal Canin 2022 + NRC 2006"
+      },
+      "warn_threshold_pct": 15,
+      "alert_threshold_pct": 25,
+      "phases": {
+        "neonatal": { "weeks": "0-2", "target_bw_kg": 0.35 },
+        "socialization": { "weeks": "2-8", "target_bw_kg": 1.2 },
+        "rapid_growth": { "weeks": "8-24", "target_bw_kg": 5.0 },
+        "finishing": { "weeks": "24-44", "target_bw_kg": 7.5 }
+      },
+      "curve": [
+        { "week": 0,  "body_wt_kg": 0.25, "adg_g_day": null },
+        { "week": 2,  "body_wt_kg": 0.45, "adg_g_day": 14 },
+        { "week": 4,  "body_wt_kg": 0.75, "adg_g_day": 21 },
+        { "week": 8,  "body_wt_kg": 1.3,  "adg_g_day": 39 },
+        { "week": 12, "body_wt_kg": 2.2,  "adg_g_day": 64 },
+        { "week": 16, "body_wt_kg": 3.2,  "adg_g_day": 71 },
+        { "week": 20, "body_wt_kg": 4.2,  "adg_g_day": 71 },
+        { "week": 24, "body_wt_kg": 5.2,  "adg_g_day": 71 },
+        { "week": 32, "body_wt_kg": 6.5,  "adg_g_day": 46 },
+        { "week": 44, "body_wt_kg": 7.5,  "adg_g_day": 30 }
+      ]
+    },
+    "medium_breed": {
+      "_meta": {
+        "size_class": "medium",
+        "adult_bw_range_kg": "10-25",
+        "adult_bw_target_kg": 20,
+        "examples": "Border Collie, Springer Spaniel, Australian Shepherd, Whippet, Standard Poodle",
+        "mature_age_weeks": 52,
+        "data_quality": "commercial_benchmark",
+        "source": "Royal Canin 2022 + Hawthorne et al. 2004"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "neonatal": { "weeks": "0-2", "target_bw_kg": 0.55 },
+        "socialization": { "weeks": "2-8", "target_bw_kg": 2.5 },
+        "rapid_growth": { "weeks": "8-24", "target_bw_kg": 12.0 },
+        "finishing": { "weeks": "24-52", "target_bw_kg": 20.0 }
+      },
+      "curve": [
+        { "week": 0,  "body_wt_kg": 0.45, "adg_g_day": null },
+        { "week": 2,  "body_wt_kg": 0.85, "adg_g_day": 29 },
+        { "week": 4,  "body_wt_kg": 1.5,  "adg_g_day": 46 },
+        { "week": 8,  "body_wt_kg": 2.8,  "adg_g_day": 93 },
+        { "week": 12, "body_wt_kg": 5.0,  "adg_g_day": 157 },
+        { "week": 16, "body_wt_kg": 7.5,  "adg_g_day": 179 },
+        { "week": 20, "body_wt_kg": 10.0, "adg_g_day": 179 },
+        { "week": 24, "body_wt_kg": 12.5, "adg_g_day": 179 },
+        { "week": 36, "body_wt_kg": 16.5, "adg_g_day": 119 },
+        { "week": 44, "body_wt_kg": 18.5, "adg_g_day": 89 },
+        { "week": 52, "body_wt_kg": 20.0, "adg_g_day": 54 }
+      ]
+    },
+    "large_breed": {
+      "_meta": {
+        "size_class": "large",
+        "adult_bw_range_kg": "25-45",
+        "adult_bw_target_kg": 33,
+        "examples": "German Shepherd, Labrador Retriever, Golden Retriever, Dobermann, Rottweiler",
+        "mature_age_weeks": 65,
+        "data_quality": "commercial_benchmark",
+        "source": "Royal Canin 2022 + Hawthorne et al. 2004 + NRC 2006"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "neonatal": { "weeks": "0-2", "target_bw_kg": 0.7 },
+        "socialization": { "weeks": "2-8", "target_bw_kg": 3.5 },
+        "rapid_growth": { "weeks": "8-24", "target_bw_kg": 18.0 },
+        "finishing": { "weeks": "24-65", "target_bw_kg": 33.0 }
+      },
+      "curve": [
+        { "week": 0,  "body_wt_kg": 0.55, "adg_g_day": null },
+        { "week": 2,  "body_wt_kg": 1.0,  "adg_g_day": 32 },
+        { "week": 4,  "body_wt_kg": 2.0,  "adg_g_day": 71 },
+        { "week": 8,  "body_wt_kg": 4.0,  "adg_g_day": 143 },
+        { "week": 12, "body_wt_kg": 7.5,  "adg_g_day": 250 },
+        { "week": 16, "body_wt_kg": 11.5, "adg_g_day": 286 },
+        { "week": 20, "body_wt_kg": 15.5, "adg_g_day": 286 },
+        { "week": 24, "body_wt_kg": 19.0, "adg_g_day": 250 },
+        { "week": 36, "body_wt_kg": 25.5, "adg_g_day": 179 },
+        { "week": 52, "body_wt_kg": 30.5, "adg_g_day": 134 },
+        { "week": 65, "body_wt_kg": 33.0, "adg_g_day": 62 }
+      ]
+    },
+    "giant_breed": {
+      "_meta": {
+        "size_class": "giant",
+        "adult_bw_range_kg": "45-100",
+        "adult_bw_target_kg": 60,
+        "examples": "Great Dane, Saint Bernard, Newfoundland, Irish Wolfhound, Mastiff",
+        "mature_age_weeks": 84,
+        "data_quality": "commercial_benchmark",
+        "source": "Royal Canin 2022 + Hawthorne et al. 2004"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "neonatal": { "weeks": "0-2", "target_bw_kg": 1.1 },
+        "socialization": { "weeks": "2-8", "target_bw_kg": 6.0 },
+        "rapid_growth": { "weeks": "8-32", "target_bw_kg": 35.0 },
+        "finishing": { "weeks": "32-84", "target_bw_kg": 60.0 }
+      },
+      "curve": [
+        { "week": 0,  "body_wt_kg": 0.8,  "adg_g_day": null },
+        { "week": 2,  "body_wt_kg": 1.6,  "adg_g_day": 57 },
+        { "week": 4,  "body_wt_kg": 3.0,  "adg_g_day": 100 },
+        { "week": 8,  "body_wt_kg": 6.5,  "adg_g_day": 250 },
+        { "week": 12, "body_wt_kg": 12.0, "adg_g_day": 393 },
+        { "week": 16, "body_wt_kg": 18.5, "adg_g_day": 464 },
+        { "week": 20, "body_wt_kg": 25.0, "adg_g_day": 464 },
+        { "week": 24, "body_wt_kg": 30.5, "adg_g_day": 393 },
+        { "week": 32, "body_wt_kg": 38.5, "adg_g_day": 357 },
+        { "week": 44, "body_wt_kg": 48.0, "adg_g_day": 274 },
+        { "week": 60, "body_wt_kg": 56.0, "adg_g_day": 143 },
+        { "week": 84, "body_wt_kg": 60.0, "adg_g_day": 48 }
+      ]
+    }
+  },
+  "companion_cat": {
+    "domestic_shorthair": {
+      "_meta": {
+        "species": "Felis catus",
+        "common_name": "Domestic Shorthair / Longhair Cat",
+        "adult_bw_kg_male": 4.5,
+        "adult_bw_kg_female": 3.8,
+        "birth_wt_g": 100,
+        "mature_age_weeks": 52,
+        "data_quality": "research",
+        "source": "NRC 2006 + AAFCO 2023 + Scarlett et al. 1998"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "neonatal": { "weeks": "0-4", "target_bw_kg": 0.4 },
+        "weaning": { "weeks": "4-8", "target_bw_kg": 0.8 },
+        "kitten_growth": { "weeks": "8-32", "target_bw_kg": 3.2 },
+        "adult": { "weeks": "52+", "target_bw_kg": 4.0 }
+      },
+      "curve": [
+        { "week": 0,  "body_wt_kg": 0.10, "adg_g_day": null },
+        { "week": 2,  "body_wt_kg": 0.22, "adg_g_day": 8.6 },
+        { "week": 4,  "body_wt_kg": 0.40, "adg_g_day": 12.9 },
+        { "week": 6,  "body_wt_kg": 0.60, "adg_g_day": 14.3 },
+        { "week": 8,  "body_wt_kg": 0.82, "adg_g_day": 15.7 },
+        { "week": 12, "body_wt_kg": 1.20, "adg_g_day": 27.1 },
+        { "week": 16, "body_wt_kg": 1.70, "adg_g_day": 35.7 },
+        { "week": 20, "body_wt_kg": 2.20, "adg_g_day": 35.7 },
+        { "week": 24, "body_wt_kg": 2.70, "adg_g_day": 35.7 },
+        { "week": 32, "body_wt_kg": 3.40, "adg_g_day": 25.0 },
+        { "week": 40, "body_wt_kg": 3.80, "adg_g_day": 14.3 },
+        { "week": 52, "body_wt_kg": 4.00, "adg_g_day": 7.1 }
+      ]
+    },
+    "maine_coon": {
+      "_meta": {
+        "species": "Felis catus",
+        "common_name": "Maine Coon",
+        "adult_bw_kg_male": 7.5,
+        "adult_bw_kg_female": 5.5,
+        "birth_wt_g": 120,
+        "mature_age_weeks": 156,
+        "notes": "Slow-maturing giant breed — full size at 3-4 years",
+        "data_quality": "research",
+        "source": "Feline breed standards + NRC 2006"
+      },
+      "warn_threshold_pct": 12,
+      "alert_threshold_pct": 22,
+      "phases": {
+        "neonatal": { "weeks": "0-4", "target_bw_kg": 0.5 },
+        "weaning": { "weeks": "4-10", "target_bw_kg": 1.1 },
+        "kitten_growth": { "weeks": "10-52", "target_bw_kg": 4.5 },
+        "junior": { "weeks": "52-104", "target_bw_kg": 6.5 },
+        "adult": { "weeks": "104+", "target_bw_kg": 7.0 }
+      },
+      "curve": [
+        { "week": 0,   "body_wt_kg": 0.12, "adg_g_day": null },
+        { "week": 4,   "body_wt_kg": 0.50, "adg_g_day": 27.1 },
+        { "week": 8,   "body_wt_kg": 1.0,  "adg_g_day": 35.7 },
+        { "week": 16,  "body_wt_kg": 2.2,  "adg_g_day": 85.7 },
+        { "week": 24,  "body_wt_kg": 3.2,  "adg_g_day": 71.4 },
+        { "week": 36,  "body_wt_kg": 4.3,  "adg_g_day": 52.4 },
+        { "week": 52,  "body_wt_kg": 5.2,  "adg_g_day": 32.1 },
+        { "week": 78,  "body_wt_kg": 6.3,  "adg_g_day": 25.0 },
+        { "week": 104, "body_wt_kg": 7.0,  "adg_g_day": 13.5 }
+      ]
+    }
+  }
+}
