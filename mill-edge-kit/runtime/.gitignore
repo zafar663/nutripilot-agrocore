@@ -1,0 +1,8 @@
+node.exe
+bin/
+lib/
+include/
+share/
+CHANGELOG.md
+LICENSE
+README.md
