@@ -1343,15 +1343,18 @@ function resolveIngredientRecord(db, requestedId, requestedDisplayName = "") {
 
 // Load all cidb_*.json files for a user and return a flat name/id/code index.
 // This is the user's active ingredient database (FACT DB) — primary nutrient source.
-function loadUserFactDb(username) {
+function loadUserFactDb(username, activeDbId) {
   const index = {};
   if (!username) return index;
   const safeUser = username.replace(/@/g, '_').replace(/\./g, '_');
   const dataDir = path.join(__dirname, '..', '..', '..', 'data', 'custom_ingredient_dbs', 'lite_' + safeUser);
   if (!fs.existsSync(dataDir)) return index;
   let files;
-  try { files = fs.readdirSync(dataDir).filter(f => f.startsWith('cidb_') && f.endsWith('.json')); }
-  catch { return index; }
+  try {
+    const all = fs.readdirSync(dataDir).filter(f => f.startsWith('cidb_') && f.endsWith('.json'));
+    // Only load the active database; never merge inactive ones
+    files = activeDbId ? all.filter(f => f === activeDbId + '.json') : all;
+  } catch { return index; }
   for (const file of files) {
     try {
       const raw = JSON.parse(fs.readFileSync(path.join(dataDir, file), 'utf8'));
@@ -4368,7 +4371,7 @@ router.post("/v1/optimize", async (req, res) => {
     const loaderResult = loadIngredientDbForContext(context);
     const ingredientDb = loaderResult.db || {};
     // Load user's FACT DB — primary nutrient source for custom ingredients.
-    const userFactDb = loadUserFactDb(req.nutrixUser || '');
+    const userFactDb = loadUserFactDb(req.nutrixUser || '', body.active_db_id || null);
     const requestedNutrientKeys = constraintsAll.map(x => x.key);
     // Ensure source nutrients for ratio constraints are in the matrix even if not in breed std
     for (const rc of trueRatioConstraints) {
